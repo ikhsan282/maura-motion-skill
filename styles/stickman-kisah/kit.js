@@ -6049,21 +6049,16 @@
         x: w * 0.5, y: floorY + 4, width: w * 0.72, height: 15, zIndex: 5,
         props: { slots: 5 }
       });
-      const motorColors = ["#E74C3C", "#2E86C1", "#27AE60"];
-      [0.22, 0.42, 0.62].forEach((fx, i) => kit.addObject({
-        id: `ghp_motor${i}`, type: "motor",
-        x: w * fx, y: floorY, width: w * 0.13, height: h * 0.062, zIndex: 10,
-        props: {}, color: motorColors[i]
+      const carColors = ["#5D6D7E", "#2E86C1", "#27AE60"];
+      [0.10, 0.34, 0.58].forEach((fx, i) => kit.addObject({
+        id: `ghp_mobil${i}`, type: "mobil",
+        x: w * fx, y: floorY, width: w * 0.20, height: h * 0.068, zIndex: 9,
+        props: {}, color: carColors[i]
       }));
-      const motorJatuh = kit.addObject({
-        id: "ghp_motor_jatuh", type: "motor",
-        x: w * 0.80, y: floorY + 6, width: w * 0.13, height: h * 0.062, zIndex: 10,
+      const mobilKorban = kit.addObject({
+        id: "ghp_mobil_korban", type: "mobil",
+        x: w * 0.80, y: floorY, width: w * 0.20, height: h * 0.068, zIndex: 9,
         rotation: 0, props: {}, color: "#F39C12"
-      });
-      kit.addObject({
-        id: "ghp_mobil", type: "mobil",
-        x: w * 0.08, y: floorY, width: w * 0.20, height: h * 0.068, zIndex: 9,
-        props: {}, color: "#5D6D7E"
       });
       const speechBubble = kit.addObject({
         id: "ghp_speech_bubble", type: "speechBubble",
@@ -6099,19 +6094,20 @@
       tl.add(saksi, "reprimandPoint", { start: 7.8, duration: 1.2, fromX: w * 0.74, toX: w * 0.74, facing: 1 });
       tl.add(saksi, "happy", { start: 10.5, duration: 1.8, fromX: w * 0.74, toX: w * 0.74, facing: -1 });
       tl.add(tukang, "serveCounter", { start: 0, duration: 12.3, fromX: w * 0.12, toX: w * 0.12 });
-      tl.addObjectTrack(motorJatuh, { start: 0, duration: 12.3,
+      tl.addObjectTrack(mobilKorban, { start: 0, duration: 12.3,
         onUpdate(obj, p, t) {
-          if (t < 2.8) obj.rotation = 0;
-          else if (t < 3.4) obj.rotation = -68 * Math.min(1, (t - 2.8) / 0.6);
-          else if (t < 6.2) obj.rotation = -68;
-          else if (t < 7.0) obj.rotation = -68 * (1 - (t - 6.2) / 0.8);
-          else obj.rotation = 0;
+          const bx = w * 0.80;
+          if (t < 2.8) obj.x = bx;
+          else if (t < 3.4) obj.x = bx + (w * 0.02) * Math.min(1, (t - 2.8) / 0.6);
+          else if (t < 6.2) obj.x = bx + w * 0.02;
+          else if (t < 7.0) obj.x = bx + w * 0.02 * (1 - (t - 6.2) / 0.8);
+          else obj.x = bx;
           if (t >= 2.5 && t < 3.6) { speechBubble.visible = true; speechBubble.props.text = T.bub1; }
           else if (t >= 3.6 && t < 4.6) { speechBubble.visible = true; speechBubble.props.text = T.bub2; }
           else speechBubble.visible = false;
           moralTitle.props.progress = t < 8.5 ? 0 : Math.min(1, (t - 8.5) / 1.4);
         } });
-      return { penabrak, korban, saksi, tukang, motorJatuh, speechBubble, moralTitle };
+      return { penabrak, korban, saksi, tukang, mobilKorban, speechBubble, moralTitle };
     }
   }
 

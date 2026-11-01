@@ -4,15 +4,15 @@
  "lines": [
   {
    "id": "hook",
-   "text": "Motor disenggol sampai jatuh di parkiran mal, pelakunya malah kabur. Satu orang melihat semuanya dari ujung lorong."
+   "text": "Pintu mobil disenggol sampai penyok di parkiran mal, pelakunya malah kabur. Satu orang melihat semuanya."
   },
   {
    "id": "a1",
-   "text": "Sabtu sore parkiran mal itu penuh. Motor berjejer rapat sampai ke lorong, mobil antre masuk, semua orang buru-buru."
+   "text": "Sabtu sore parkiran mal itu penuh. Mobil berjejer rapat sampai ke lorong, semua orang buru-buru."
   },
   {
    "id": "a2",
-   "text": "Seorang pria menerobos lorong sempit sambil menelepon. Bahunya menyenggol spion motor kuning sampai motor itu oleng dan jatuh menimpa motor sebelahnya."
+   "text": "Seorang pria membuka pintu mobilnya terlalu lebar sambil menelepon. Pintunya menghantam mobil kuning sebelah sampai penyok dan bergeser."
   },
   {
    "id": "a3",
@@ -20,19 +20,19 @@
   },
   {
    "id": "a4",
-   "text": "Lima menit kemudian pemilik motor datang membawa belanjaan. Wajahnya langsung pucat melihat motor kesayangannya tergolek di lantai."
+   "text": "Lima menit kemudian pemilik mobil datang membawa belanjaan. Wajahnya langsung pucat melihat pintu mobil kesayangannya penyok."
   },
   {
    "id": "a5",
-   "text": "Dari ujung lorong, saksi yang melihat semuanya berjalan mendekat. Bersama tukang parkir, mereka menegakkan motor itu dan memeriksa kerusakannya."
+   "text": "Dari ujung lorong, saksi yang melihat semuanya berjalan mendekat. Bersama tukang parkir, mereka memfoto kerusakan dan mencatat kejadiannya."
   },
   {
    "id": "a6",
-   "text": "Spion lecet, bodi baret. Tapi saksi mencatat pelat nomor penabrak dan menyerahkannya ke pos keamanan. Sabar itu bukan soal menang, soal menahan diri."
+   "text": "Pintu penyok, cat terkelupas. Tapi saksi mencatat pelat nomor penabrak dan menyerahkannya ke pos keamanan. Sabar itu bukan soal menang, soal menahan diri."
   },
   {
    "id": "closing",
-   "text": "Pemilik motor berterima kasih berkali-kali. Kebaikan kecil di parkiran, ingatannya bisa bertahun-tahun."
+   "text": "Pemilik mobil berterima kasih berkali-kali. Kebaikan kecil di parkiran, ingatannya bisa bertahun-tahun."
   }
  ],
  "music": {
@@ -44,6 +44,6 @@
  "speed": 1.0,
  "style": "stickman-kisah",
  "tail": 1.0,
- "title": "Kisah Parkiran",
+ "title": "Kisah Parkir Mobil",
  "voice": "el-id-m"
 }
