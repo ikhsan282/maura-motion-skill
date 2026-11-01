@@ -922,5 +922,19 @@
   "story": "Begadang vs Tidur Cukup",
   "hook": "Jam dua belas malam. Satu tidur, satu masih main HP.",
   "concept": "Split-screen monokrom dua kamar: kasur+bantal+selimut, nakas+HP, sajadah, kalender HARI 1-40 sobek, jam digital, jendela malam, pantulan lantai. Timeline Day 1->Day 40: tidur presisi di atas kasur, bangun, takbir-ruku-sujud. Kontras disiplin vs tidak dalam 13 detik."
+ },
+ {
+  "no": 67,
+  "id": "stickman-pelukis",
+  "name": "Stickman Pelukis",
+  "source": "custom:perfectionist-vs-action-taker",
+  "family": "craft",
+  "tech": "canvas2d",
+  "voice": "el-id-m",
+  "music": "lofi",
+  "captions": "clean",
+  "story": "Sempurna vs Gerak Cepat",
+  "hook": "Satu kanvas dalam dua minggu, atau enam belas kanvas dalam dua minggu?",
+  "concept": "Studio lukis gelap split-screen: lampu gantung sorot hangat, kabinet tengah (kiri rapi kanan cipratan), 2 easel kayu, tumpukan kanvas #1-16, lukisan 3 tier. Kiri paintCareful teliti vs kanan paintFast cepat + tossCanvas. Counter kabinet + cipratan progres."
  }
 ]

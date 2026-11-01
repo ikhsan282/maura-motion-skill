@@ -1,6 +1,6 @@
 # Maura Motion: daftar gaya
 
-66 gaya. Sebut gaya dengan nama atau nomornya ("gaya 11", "wayang kulit"). Setiap gaya punya `styles/<id>/STYLE.md` (ciri khas, gerak, rumus hook, API kit) dan contoh video di `styles/<id>/demo/out/`.
+67 gaya. Sebut gaya dengan nama atau nomornya ("gaya 11", "wayang kulit"). Setiap gaya punya `styles/<id>/STYLE.md` (ciri khas, gerak, rumus hook, API kit) dan contoh video di `styles/<id>/demo/out/`.
 
 Sumber: **D** = 25 gaya di Drive, **SA** = Shorts Animator (oil/watercolour/gouache/pastel/ink), **GH** = gaya visual dari 703 prompt *awesome-opus5-5-videos*.
 
