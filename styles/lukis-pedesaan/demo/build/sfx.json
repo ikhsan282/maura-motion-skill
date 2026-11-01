@@ -1,0 +1,48 @@
+[
+ {
+  "type": "bird",
+  "t": 0.1,
+  "gain": 0.35
+ },
+ {
+  "type": "sparkle",
+  "t": 3.465,
+  "gain": 0.35
+ },
+ {
+  "type": "bubble",
+  "t": 6.106,
+  "gain": 0.35
+ },
+ {
+  "type": "magic",
+  "t": 7.031,
+  "gain": 0.35
+ },
+ {
+  "type": "wind",
+  "t": 10.038,
+  "gain": 0.35
+ },
+ {
+  "type": "swoosh_up",
+  "t": 12.529,
+  "gain": 0.3
+ },
+ {
+  "type": "swoosh_up",
+  "t": 12.937,
+  "gain": 0.25,
+  "pitch": 1.2
+ },
+ {
+  "type": "chime",
+  "t": 14.569,
+  "gain": 0.4
+ },
+ {
+  "type": "ding",
+  "t": 19.451,
+  "gain": 0.3
+ }
+]

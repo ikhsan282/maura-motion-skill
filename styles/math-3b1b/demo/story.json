@@ -1,0 +1,42 @@
+{
+ "title": "Kenapa Luas Lingkaran itu Pi r Kuadrat",
+ "slug": "49_math-3b1b",
+ "style": "math-3b1b",
+ "lang": "id",
+ "voice": "id-m",
+ "music": {
+  "preset": "ambient",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "speed": 1.18,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Potong pizza jadi 32 bagian... dan ia jadi persegi panjang.",
+   "pause": 0.25
+  },
+  {
+   "id": "susun",
+   "text": "Susun selang-seling. Makin banyak potongan, makin lurus."
+  },
+  {
+   "id": "ukur",
+   "text": "Tingginya jari-jari, r. Lebarnya setengah keliling: pi r.",
+   "say": "Tingginya jari-jari, er. Lebarnya setengah keliling: pi er."
+  },
+  {
+   "id": "luas",
+   "text": "Luasnya: pi r kali r.",
+   "say": "Luasnya: pi er kali er.",
+   "pause": 0.25
+  },
+  {
+   "id": "hasil",
+   "text": "Pi r kuadrat. Cuma lingkaran yang disusun ulang.",
+   "say": "Pi er kuadrat. Cuma lingkaran yang disusun ulang."
+  }
+ ]
+}

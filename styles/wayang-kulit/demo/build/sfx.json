@@ -1,0 +1,57 @@
+[
+ {
+  "type": "gong",
+  "t": 0.02,
+  "gain": 0.55
+ },
+ {
+  "type": "keprak",
+  "t": 0.05,
+  "gain": 0.5
+ },
+ {
+  "type": "keprak",
+  "t": 1.883,
+  "gain": 0.45
+ },
+ {
+  "type": "keprak",
+  "t": 3.765,
+  "gain": 0.45
+ },
+ {
+  "type": "whoosh",
+  "t": 6.922,
+  "gain": 0.35
+ },
+ {
+  "type": "gong",
+  "t": 9.413,
+  "gain": 0.6
+ },
+ {
+  "type": "riser",
+  "t": 9.713,
+  "gain": 0.3
+ },
+ {
+  "type": "magic",
+  "t": 11.454,
+  "gain": 0.35
+ },
+ {
+  "type": "swoosh_up",
+  "t": 12.412,
+  "gain": 0.35
+ },
+ {
+  "type": "chime",
+  "t": 13.037,
+  "gain": 0.3
+ },
+ {
+  "type": "gong",
+  "t": 16.028,
+  "gain": 0.6
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "type": "chalk",
+  "t": 0,
+  "gain": 0.45
+ },
+ {
+  "type": "chalk",
+  "t": 3.892,
+  "gain": 0.45,
+  "pitch": 1.1
+ },
+ {
+  "type": "pop",
+  "t": 4.116,
+  "gain": 0.3
+ },
+ {
+  "type": "chalk",
+  "t": 5.956,
+  "gain": 0.35
+ },
+ {
+  "type": "swoosh_up",
+  "t": 7.022,
+  "gain": 0.3,
+  "pitch": 0.7
+ },
+ {
+  "type": "sparkle",
+  "t": 8.604,
+  "gain": 0.3
+ },
+ {
+  "type": "ding",
+  "t": 11.904,
+  "gain": 0.4
+ },
+ {
+  "type": "crowd",
+  "t": 11.904,
+  "gain": 0.25
+ }
+]

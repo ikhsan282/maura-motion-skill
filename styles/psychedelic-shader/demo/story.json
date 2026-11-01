@@ -1,0 +1,42 @@
+{
+ "title": "Satu Rumus, Gambar Tanpa Akhir",
+ "slug": "48_psychedelic-shader",
+ "style": "psychedelic-shader",
+ "lang": "id",
+ "voice": "id-f",
+ "music": {
+  "preset": "ambient",
+  "db": -15
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Rumus sependek ini menyimpan gambar yang tak pernah habis.",
+   "pause": 0.25
+  },
+  {
+   "id": "rumus",
+   "text": "z = z² + c. Ulangi terus.",
+   "say": "zet sama dengan zet kuadrat ditambah ce. Ulangi terus."
+  },
+  {
+   "id": "himpunan",
+   "text": "Titik yang tidak kabur ke tak hingga, itulah himpunan Mandelbrot."
+  },
+  {
+   "id": "zoom",
+   "text": "Perbesar tepinya. Seribu kali. Sejuta kali."
+  },
+  {
+   "id": "turn",
+   "text": "Lalu, jauh di dalam... bentuk awalnya muncul lagi."
+  },
+  {
+   "id": "akhir",
+   "text": "Gambar tanpa akhir, dari satu baris rumus."
+  }
+ ]
+}

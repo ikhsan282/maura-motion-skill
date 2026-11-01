@@ -1,0 +1,40 @@
+{
+ "title": "Aturan Dua Menit",
+ "slug": "33_kinetic-type",
+ "style": "kinetic-type",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "hype",
+  "db": -16
+ },
+ "captions": false,
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Kamu tidak butuh motivasi. Kamu butuh dua menit.",
+   "pause": 0.25
+  },
+  {
+   "id": "aturan",
+   "text": "Aturan dua menit, dari James Clear.",
+   "say": "Aturan dua menit, dari Jems Klir."
+  },
+  {
+   "id": "contoh",
+   "text": "Mau rajin membaca? Baca satu halaman. Mau lari? Ikat tali sepatumu."
+  },
+  {
+   "id": "tapi",
+   "text": "Terlalu kecil? Justru itu intinya. Yang berat cuma mulai."
+  },
+  {
+   "id": "akhir",
+   "text": "Jangan tunggu semangat. Pasang dua menit. Mulai sekarang."
+  }
+ ]
+}

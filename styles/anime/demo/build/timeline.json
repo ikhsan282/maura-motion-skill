@@ -1,0 +1,261 @@
+{
+ "key": "bccc981c5fda3b59",
+ "voice": "id-f",
+ "duration": 19.19,
+ "lead": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Ia mengejar kereta terakhir, membawa satu janji untuk ibunya.",
+   "start": 0.3,
+   "end": 4.171,
+   "words": [
+    {
+     "w": "Ia",
+     "start": 0.3,
+     "end": 0.497
+    },
+    {
+     "w": "mengejar",
+     "start": 0.497,
+     "end": 0.985
+    },
+    {
+     "w": "kereta",
+     "start": 0.985,
+     "end": 1.474
+    },
+    {
+     "w": "terakhir,",
+     "start": 1.474,
+     "end": 1.962
+    },
+    {
+     "w": "membawa",
+     "start": 2.035,
+     "end": 2.524
+    },
+    {
+     "w": "satu",
+     "start": 2.524,
+     "end": 2.866
+    },
+    {
+     "w": "janji",
+     "start": 2.866,
+     "end": 3.209
+    },
+    {
+     "w": "untuk",
+     "start": 3.209,
+     "end": 3.551
+    },
+    {
+     "w": "ibunya.",
+     "start": 3.551,
+     "end": 4.04
+    }
+   ]
+  },
+  {
+   "id": "lompat",
+   "text": "Pintu menutup. Laras melompat, dan berhasil.",
+   "start": 4.421,
+   "end": 7.093,
+   "words": [
+    {
+     "w": "Pintu",
+     "start": 4.421,
+     "end": 4.762
+    },
+    {
+     "w": "menutup.",
+     "start": 4.762,
+     "end": 5.249
+    },
+    {
+     "w": "Laras",
+     "start": 5.379,
+     "end": 5.721
+    },
+    {
+     "w": "melompat,",
+     "start": 5.721,
+     "end": 6.207
+    },
+    {
+     "w": "dan",
+     "start": 6.28,
+     "end": 6.476
+    },
+    {
+     "w": "berhasil.",
+     "start": 6.476,
+     "end": 6.962
+    }
+   ]
+  },
+  {
+   "id": "janji",
+   "text": "Tiga Lebaran ia ingkar janji: aku pulang, Bu.",
+   "start": 7.293,
+   "end": 10.016,
+   "words": [
+    {
+     "w": "Tiga",
+     "start": 7.293,
+     "end": 7.618
+    },
+    {
+     "w": "Lebaran",
+     "start": 7.618,
+     "end": 8.081
+    },
+    {
+     "w": "ia",
+     "start": 8.081,
+     "end": 8.267
+    },
+    {
+     "w": "ingkar",
+     "start": 8.267,
+     "end": 8.592
+    },
+    {
+     "w": "janji:",
+     "start": 8.592,
+     "end": 8.917
+    },
+    {
+     "w": "aku",
+     "start": 8.986,
+     "end": 9.311
+    },
+    {
+     "w": "pulang,",
+     "start": 9.311,
+     "end": 9.636
+    },
+    {
+     "w": "Bu.",
+     "start": 9.705,
+     "end": 9.892
+    }
+   ]
+  },
+  {
+   "id": "tertahan",
+   "text": "Tapi kereta tertahan. Matahari tenggelam.",
+   "start": 10.216,
+   "end": 12.579,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 10.216,
+     "end": 10.515
+    },
+    {
+     "w": "kereta",
+     "start": 10.515,
+     "end": 10.942
+    },
+    {
+     "w": "tertahan.",
+     "start": 10.942,
+     "end": 11.369
+    },
+    {
+     "w": "Matahari",
+     "start": 11.483,
+     "end": 12.038
+    },
+    {
+     "w": "tenggelam.",
+     "start": 12.038,
+     "end": 12.464
+    }
+   ]
+  },
+  {
+   "id": "takbir",
+   "text": "Saat takbir berkumandang, ibunya menunggu di depan pintu.",
+   "start": 12.779,
+   "end": 16.038,
+   "words": [
+    {
+     "w": "Saat",
+     "start": 12.779,
+     "end": 12.977
+    },
+    {
+     "w": "takbir",
+     "start": 12.977,
+     "end": 13.322
+    },
+    {
+     "w": "berkumandang,",
+     "start": 13.322,
+     "end": 13.961
+    },
+    {
+     "w": "ibunya",
+     "start": 14.034,
+     "end": 14.526
+    },
+    {
+     "w": "menunggu",
+     "start": 14.526,
+     "end": 15.018
+    },
+    {
+     "w": "di",
+     "start": 15.018,
+     "end": 15.216
+    },
+    {
+     "w": "depan",
+     "start": 15.216,
+     "end": 15.561
+    },
+    {
+     "w": "pintu.",
+     "start": 15.561,
+     "end": 15.906
+    }
+   ]
+  },
+  {
+   "id": "akhir",
+   "text": "Selalu ada yang menunggumu pulang.",
+   "start": 16.238,
+   "end": 17.99,
+   "words": [
+    {
+     "w": "Selalu",
+     "start": 16.238,
+     "end": 16.639
+    },
+    {
+     "w": "ada",
+     "start": 16.639,
+     "end": 16.92
+    },
+    {
+     "w": "yang",
+     "start": 16.92,
+     "end": 17.081
+    },
+    {
+     "w": "menunggumu",
+     "start": 17.081,
+     "end": 17.601
+    },
+    {
+     "w": "pulang.",
+     "start": 17.601,
+     "end": 17.882
+    }
+   ]
+  }
+ ]
+}

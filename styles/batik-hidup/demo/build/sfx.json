@@ -1,0 +1,46 @@
+[
+ {
+  "type": "pencil",
+  "t": 0.05,
+  "gain": 0.35
+ },
+ {
+  "type": "bubble",
+  "t": 1.883,
+  "gain": 0.4,
+  "pitch": 0.7
+ },
+ {
+  "type": "gong",
+  "t": 3.157,
+  "gain": 0.5
+ },
+ {
+  "type": "whoosh",
+  "t": 6.264,
+  "gain": 0.45,
+  "pitch": 0.7
+ },
+ {
+  "type": "pencil",
+  "t": 7.431,
+  "gain": 0.3
+ },
+ {
+  "type": "bubble",
+  "t": 10.596,
+  "gain": 0.35,
+  "pitch": 0.6
+ },
+ {
+  "type": "gong",
+  "t": 13.037,
+  "gain": 0.45,
+  "pitch": 1.1
+ },
+ {
+  "type": "chime",
+  "t": 18.335,
+  "gain": 0.3
+ }
+]

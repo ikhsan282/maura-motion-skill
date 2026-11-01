@@ -1,0 +1,50 @@
+[
+ {
+  "type": "riser",
+  "t": 0,
+  "gain": 0.3
+ },
+ {
+  "type": "boom",
+  "t": 0.35,
+  "gain": 0.4,
+  "pitch": 0.8
+ },
+ {
+  "type": "swoosh_up",
+  "t": 3.207,
+  "gain": 0.25
+ },
+ {
+  "type": "thud",
+  "t": 4.89,
+  "gain": 0.5,
+  "pitch": 0.8
+ },
+ {
+  "type": "whoosh",
+  "t": 5.698,
+  "gain": 0.3
+ },
+ {
+  "type": "thunder",
+  "t": 8.047,
+  "gain": 0.4
+ },
+ {
+  "type": "ding",
+  "t": 10.13,
+  "gain": 0.3
+ },
+ {
+  "type": "chime",
+  "t": 12.112,
+  "gain": 0.35
+ },
+ {
+  "type": "impact",
+  "t": 15.728,
+  "gain": 0.45,
+  "pitch": 0.7
+ }
+]

@@ -1,0 +1,45 @@
+[
+ {
+  "type": "page_flip",
+  "t": 0,
+  "gain": 0.5
+ },
+ {
+  "type": "page_flip",
+  "t": 0.9,
+  "gain": 0.35,
+  "pitch": 1.2
+ },
+ {
+  "type": "pencil",
+  "t": 4.373,
+  "gain": 0.35
+ },
+ {
+  "type": "page_flip",
+  "t": 5.498,
+  "gain": 0.45,
+  "pitch": 0.8
+ },
+ {
+  "type": "page_flip",
+  "t": 7.181,
+  "gain": 0.5,
+  "pitch": 1.1
+ },
+ {
+  "type": "sparkle",
+  "t": 8.755,
+  "gain": 0.35
+ },
+ {
+  "type": "stamp",
+  "t": 12.929,
+  "gain": 0.5
+ },
+ {
+  "type": "ding",
+  "t": 17.618,
+  "gain": 0.35
+ }
+]

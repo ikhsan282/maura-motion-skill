@@ -1,0 +1,43 @@
+[
+ {
+  "type": "paper",
+  "t": 0.05,
+  "gain": 0.4
+ },
+ {
+  "type": "stamp",
+  "t": 1.524,
+  "gain": 0.5
+ },
+ {
+  "type": "stamp",
+  "t": 6.772,
+  "gain": 0.45
+ },
+ {
+  "type": "thud",
+  "t": 7.531,
+  "gain": 0.5,
+  "pitch": 0.7
+ },
+ {
+  "type": "typewriter",
+  "t": 9.571,
+  "gain": 0.3
+ },
+ {
+  "type": "swoosh_up",
+  "t": 10.738,
+  "gain": 0.35
+ },
+ {
+  "type": "crowd",
+  "t": 13.737,
+  "gain": 0.3
+ },
+ {
+  "type": "stamp",
+  "t": 16.086,
+  "gain": 0.45
+ }
+]

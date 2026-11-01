@@ -1,0 +1,38 @@
+{
+ "title": "Kancil Mencuri Timun",
+ "slug": "10_kartun-jadul",
+ "style": "kartun-jadul",
+ "lang": "id",
+ "voice": "id-m",
+ "music": {
+  "preset": "ragtime",
+  "db": -15
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Seekor kancil, kebun timun, dan petani yang habis sabar.",
+   "pause": 0.25
+  },
+  {
+   "id": "lengket",
+   "text": "Pak Tani memasang orang-orangan bergetah. Plak! Lengket!"
+  },
+  {
+   "id": "bohong",
+   "text": "Dikurung, Kancil membujuk anjing: aku mau dinikahkan, gantikan aku!"
+  },
+  {
+   "id": "kabur",
+   "text": "Anjing masuk. Kancil kabur!"
+  },
+  {
+   "id": "pesan",
+   "text": "Cerdik boleh, mencuri jangan."
+  }
+ ],
+ "speed": 1.18
+}

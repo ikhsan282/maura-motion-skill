@@ -1,0 +1,42 @@
+{
+ "title": "Perjalanan Paketmu dari Gudang ke Pintu",
+ "slug": "58_isometrik",
+ "style": "isometrik",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "tech",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 0.9,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Paketmu berpindah tangan berkali-kali, tanpa pernah dibuka.",
+   "pause": 0.3
+  },
+  {
+   "id": "gudang",
+   "text": "Di gudang: diambil, dikemas, dipindai."
+  },
+  {
+   "id": "sortir",
+   "text": "Mesin sortir membaca labelnya, lalu memilih truk."
+  },
+  {
+   "id": "truk",
+   "text": "Semalaman, truk melaju ke kotamu."
+  },
+  {
+   "id": "kurir",
+   "text": "Kurir motor mengantar. Pindaian terakhir: pintumu."
+  },
+  {
+   "id": "akhir",
+   "text": "Semua tahu lokasinya. Tak ada yang tahu isinya."
+  }
+ ]
+}

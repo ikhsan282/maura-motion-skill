@@ -1,0 +1,43 @@
+[
+ {
+  "type": "magic",
+  "t": 0.95,
+  "gain": 0.4
+ },
+ {
+  "type": "impact",
+  "t": 2.391,
+  "gain": 0.5
+ },
+ {
+  "type": "boom",
+  "t": 3.187,
+  "gain": 0.55
+ },
+ {
+  "type": "pop",
+  "t": 4.223,
+  "gain": 0.45
+ },
+ {
+  "type": "drum_hit",
+  "t": 4.432,
+  "gain": 0.55
+ },
+ {
+  "type": "bird",
+  "t": 12.979,
+  "gain": 0.45,
+  "pitch": 0.75
+ },
+ {
+  "type": "impact",
+  "t": 15.499,
+  "gain": 0.6
+ },
+ {
+  "type": "boom",
+  "t": 15.728,
+  "gain": 0.55
+ }
+]

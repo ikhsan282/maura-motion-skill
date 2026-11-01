@@ -1,0 +1,41 @@
+{
+ "title": "Ribuan Burung Terbang Tanpa Pemimpin",
+ "slug": "56_partikel",
+ "style": "partikel",
+ "lang": "id",
+ "voice": "id-f",
+ "music": {
+  "preset": "dreamy",
+  "db": -15
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Ribuan burung terbang bersama, tapi tak satu pun memimpin.",
+   "pause": 0.25
+  },
+  {
+   "id": "jalak",
+   "text": "Ini murmurasi burung jalak."
+  },
+  {
+   "id": "tujuh",
+   "text": "Rahasianya: tiap burung hanya memperhatikan sekitar tujuh tetangga terdekat."
+  },
+  {
+   "id": "aturan",
+   "text": "Jaga jarak. Ikuti arah. Tetap dekat."
+  },
+  {
+   "id": "elang",
+   "text": "Saat elang menyergap, satu belokan menjalar ke seluruh kawanan."
+  },
+  {
+   "id": "akhir",
+   "text": "Aturan sekecil itu melahirkan sesuatu seindah ini."
+  }
+ ]
+}

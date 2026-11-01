@@ -1,0 +1,42 @@
+{
+ "title": "Timun Mas & Buto Ijo",
+ "slug": "05_clay-stop-motion",
+ "style": "clay-stop-motion",
+ "lang": "id",
+ "voice": "id-f",
+ "music": {
+  "preset": "playful",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 0.9,
+ "pause": 0.15,
+ "speed": 1.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Raksasa hijau ini menagih janji: Timun Mas harus diserahkan!",
+   "pause": 0.2
+  },
+  {
+   "id": "lari",
+   "text": "Timun Mas lari, membawa kantong ajaib."
+  },
+  {
+   "id": "biji",
+   "text": "Biji timun jadi ladang. Jarum jadi hutan bambu."
+  },
+  {
+   "id": "garam",
+   "text": "Garam jadi lautan. Tapi raksasa itu terus mengejar!"
+  },
+  {
+   "id": "terasi",
+   "text": "Terakhir, terasi jadi lumpur mendidih. Buto Ijo tenggelam."
+  },
+  {
+   "id": "akhir",
+   "text": "Timun Mas pulang dengan selamat."
+  }
+ ]
+}

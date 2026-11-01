@@ -1,0 +1,43 @@
+[
+ {
+  "type": "pop",
+  "t": 0.9,
+  "gain": 0.5
+ },
+ {
+  "type": "swoosh_up",
+  "t": 3.703,
+  "gain": 0.35
+ },
+ {
+  "type": "magic",
+  "t": 6.306,
+  "gain": 0.4
+ },
+ {
+  "type": "boing",
+  "t": 7.201,
+  "gain": 0.5
+ },
+ {
+  "type": "riser",
+  "t": 10.138,
+  "gain": 0.3
+ },
+ {
+  "type": "sparkle",
+  "t": 13.495,
+  "gain": 0.5
+ },
+ {
+  "type": "ding",
+  "t": 16.402,
+  "gain": 0.4,
+  "pitch": 1.2
+ },
+ {
+  "type": "chime",
+  "t": 18.435,
+  "gain": 0.45
+ }
+]

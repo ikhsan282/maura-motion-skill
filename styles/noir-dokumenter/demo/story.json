@@ -1,0 +1,37 @@
+{
+ "title": "Krakatau 1883: Suara Paling Keras dalam Sejarah",
+ "slug": "37_noir-dokumenter",
+ "style": "noir-dokumenter",
+ "lang": "id",
+ "voice": "id-m",
+ "music": {
+  "preset": "noir",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 0.9,
+ "pause": 0.15,
+ "speed": 1.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Ledakan ini terdengar sampai 4.800 kilometer."
+  },
+  {
+   "id": "meriam",
+   "text": "Orang di seberang samudra mengira itu meriam."
+  },
+  {
+   "id": "bumi",
+   "text": "Gelombang kejutnya mengitari bumi berkali-kali."
+  },
+  {
+   "id": "korban",
+   "text": "Tsunaminya menelan 36.000 jiwa lebih."
+  },
+  {
+   "id": "aktif",
+   "text": "Kasusnya belum ditutup: Anak Krakatau masih aktif."
+  }
+ ]
+}

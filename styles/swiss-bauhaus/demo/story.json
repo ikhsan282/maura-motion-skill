@@ -1,0 +1,46 @@
+{
+ "title": "Bauhaus: Sekolah 14 Tahun",
+ "slug": "34_swiss-bauhaus",
+ "style": "swiss-bauhaus",
+ "lang": "id",
+ "voice": "id-f",
+ "speed": 1.2,
+ "music": {
+  "preset": "tech",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.18,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Kursi, logo, aplikasi HP-mu... meniru sekolah yang hidup 14 tahun.",
+   "say": "Kursi, logo, aplikasi hape-mu... meniru sekolah yang hidup empat belas tahun.",
+   "pause": 0.2
+  },
+  {
+   "id": "bauhaus",
+   "text": "Bauhaus. Jerman, 1919.",
+   "say": "Bauhaus. Jerman, sembilan belas sembilan belas."
+  },
+  {
+   "id": "aturan",
+   "text": "Aturannya: buang hiasan. Pakai lingkaran, segitiga, persegi."
+  },
+  {
+   "id": "karya",
+   "text": "Lahir lampu kaca dan kursi pipa baja."
+  },
+  {
+   "id": "tutup",
+   "text": "1933: Nazi memaksanya tutup.",
+   "say": "Sembilan belas tiga puluh tiga: Nazi memaksanya tutup."
+  },
+  {
+   "id": "akhir",
+   "text": "Tapi idenya menyebar, sampai ke layar HP-mu.",
+   "say": "Tapi idenya menyebar, sampai ke layar hape-mu."
+  }
+ ]
+}

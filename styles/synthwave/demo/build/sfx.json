@@ -1,0 +1,45 @@
+[
+ {
+  "type": "drum_hit",
+  "t": 0.12,
+  "gain": 0.55
+ },
+ {
+  "type": "drum_hit",
+  "t": 2.749,
+  "gain": 0.5,
+  "pitch": 0.9
+ },
+ {
+  "type": "drum_hit",
+  "t": 4.323,
+  "gain": 0.4,
+  "pitch": 1.15
+ },
+ {
+  "type": "boom",
+  "t": 9.163,
+  "gain": 0.6
+ },
+ {
+  "type": "drum_hit",
+  "t": 10.954,
+  "gain": 0.45
+ },
+ {
+  "type": "glitch",
+  "t": 11.554,
+  "gain": 0.4
+ },
+ {
+  "type": "drum_hit",
+  "t": 13.537,
+  "gain": 0.5
+ },
+ {
+  "type": "drum_hit",
+  "t": 15.169,
+  "gain": 0.5,
+  "pitch": 1.1
+ }
+]

@@ -1,0 +1,20 @@
+{
+ "title": "Kura-kura dan Monyet Menanam Pisang",
+ "slug": "06_boneka-rajut",
+ "style": "boneka-rajut",
+ "lang": "id",
+ "voice": "id-f",
+ "speed": 1.17,
+ "music": { "preset": "musicbox", "db": -16 },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  { "id": "hook", "text": "Monyet memilih bagian atas pohon pisang. Pilihan yang ia sesali.", "pause": 0.3 },
+  { "id": "bawah", "text": "Kura-kura dapat sisanya: batang dan akar." },
+  { "id": "tumbuh", "text": "Tanaman Monyet layu. Punya Kura-kura berbuah lebat!" },
+  { "id": "makan", "text": "Monyet memanjat, lalu makan semua pisangnya." },
+  { "id": "duri", "text": "Diam-diam, Kura-kura menaruh duri di bawah pohon." },
+  { "id": "aduh", "text": "Monyet melompat turun... aduh! Yang curang, kena batunya.", "pause": 0.2 }
+ ]
+}

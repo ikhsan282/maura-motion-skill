@@ -1,0 +1,39 @@
+{
+ "title": "Sinyal Wow! 1977",
+ "slug": "38_vhs-arsip",
+ "style": "vhs-arsip",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "ambient",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Tahun 1977, sebuah teleskop menangkap sinyal misterius.",
+   "say": "Tahun sembilan belas tujuh puluh tujuh, sebuah teleskop menangkap sinyal misterius."
+  },
+  {
+   "id": "kode",
+   "text": "Astronom Jerry Ehman melihat kodenya: 6EQUJ5.",
+   "say": "Astronom Jeri Eman melihat kodenya: enam, e, ki, u, je, lima."
+  },
+  {
+   "id": "wow",
+   "text": "Ia melingkarinya, lalu menulis: Wow!"
+  },
+  {
+   "id": "sunyi",
+   "text": "Tapi sinyal itu tak pernah terdengar lagi."
+  },
+  {
+   "id": "akhir",
+   "text": "Jawaban kita sampai hari ini: hanya Wow."
+  }
+ ]
+}

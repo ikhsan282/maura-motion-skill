@@ -1,0 +1,41 @@
+{
+ "title": "Pasar Terapung Lok Baintan",
+ "slug": "55_diorama-miniatur",
+ "style": "diorama-miniatur",
+ "lang": "id",
+ "voice": "id-f",
+ "music": {
+  "preset": "folk",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Di sini, pasar tidak buka di daratan. Pasarnya mengapung di sungai.",
+   "pause": 0.3
+  },
+  {
+   "id": "subuh",
+   "text": "Lok Baintan, Kalimantan Selatan. Buka selepas subuh."
+  },
+  {
+   "id": "acil",
+   "text": "Para acil mendayung jukung, menjual pisang, jeruk, dan sayur."
+  },
+  {
+   "id": "barter",
+   "text": "Antarpedagang, barter masih berlaku."
+  },
+  {
+   "id": "bubar",
+   "text": "Tapi sekitar pukul sembilan, pasar pun bubar."
+  },
+  {
+   "id": "besok",
+   "text": "Besok subuh, sungai ini jadi pasar lagi."
+  }
+ ]
+}

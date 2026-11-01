@@ -1,0 +1,46 @@
+{
+ "title": "Bawang Merah Bawang Putih",
+ "slug": "27_gouache-dongeng",
+ "style": "gouache-dongeng",
+ "lang": "id",
+ "voice": "id-f",
+ "music": {
+  "preset": "musicbox",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.15,
+ "speed": 1.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Dua labu dari nenek misterius: satu berisi emas, satu berisi ular.",
+   "pause": 0.2
+  },
+  {
+   "id": "hanyut",
+   "text": "Kain cucian Bawang Putih hanyut sampai ke rumah seorang nenek."
+  },
+  {
+   "id": "putih",
+   "text": "Ia menolong si nenek, lalu memilih labu kecil."
+  },
+  {
+   "id": "emas",
+   "text": "Isinya: emas!"
+  },
+  {
+   "id": "merah",
+   "text": "Bawang Merah yang serakah meniru, dan memilih labu besar."
+  },
+  {
+   "id": "ular",
+   "text": "Isinya ular dan kalajengking."
+  },
+  {
+   "id": "moral",
+   "text": "Kebaikan tak bisa dipalsukan."
+  }
+ ]
+}

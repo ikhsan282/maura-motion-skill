@@ -1,0 +1,39 @@
+{
+ "title": "Virus yang Mencantumkan Alamat Pembuatnya",
+ "slug": "25_terminal-ascii",
+ "style": "terminal-ascii",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "darksynth",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Dua bersaudara menulis virus... berisi alamat mereka sendiri."
+  },
+  {
+   "id": "brain",
+   "text": "Namanya Brain: dianggap virus PC pertama.",
+   "say": "Namanya Brein: dianggap virus pi si pertama."
+  },
+  {
+   "id": "pesan",
+   "text": "Kodenya memuat nama, alamat di Lahore, dan nomor telepon.",
+   "say": "Kodenya memuat nama, alamat di Lahor, dan nomor telepon."
+  },
+  {
+   "id": "sebar",
+   "text": "Disket bajakan membawanya keliling dunia."
+  },
+  {
+   "id": "masih",
+   "text": "Seperempat abad kemudian, alamat itu diketuk. Mereka masih di sana."
+  }
+ ]
+}

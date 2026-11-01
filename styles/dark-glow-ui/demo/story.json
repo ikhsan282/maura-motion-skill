@@ -1,0 +1,40 @@
+{
+ "title": "Apa yang Terjadi Saat Kamu Menekan Kirim",
+ "slug": "31_dark-glow-ui",
+ "style": "dark-glow-ui",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "synthwave",
+  "db": -18
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "'Aku sayang kamu' ini diacak jadi kode, sebelum keluar dari HP-mu.",
+   "say": "Aku sayang kamu ini, diacak jadi kode, sebelum keluar dari ha pe mu.",
+   "pause": 0.3
+  },
+  {
+   "id": "kunci",
+   "text": "Dikunci gembok milik si dia. Server cuma lihat huruf acak."
+  },
+  {
+   "id": "buka",
+   "text": "Hanya kunci di HP si dia yang bisa membukanya.",
+   "say": "Hanya kunci di ha pe si dia yang bisa membukanya."
+  },
+  {
+   "id": "tapi",
+   "text": "Dibobol? Ada sepuluh pangkat tujuh puluh tujuh kemungkinan."
+  },
+  {
+   "id": "akhir",
+   "text": "Pesan itu hanya untuk satu orang."
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "title": "Rafflesia, Bunga Raksasa Berbau Bangkai",
+ "slug": "20_kolase-daun-bunga",
+ "style": "kolase-daun-bunga",
+ "lang": "id",
+ "voice": "id-f",
+ "speed": 1.15,
+ "music": { "preset": "folk", "db": -17 },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  { "id": "hook", "text": "Bunga terbesar di dunia ini... baunya seperti bangkai.", "pause": 0.3 },
+  { "id": "tanpa", "text": "Rafflesia tak punya daun, batang, maupun akar.", "say": "Raflesia tak punya daun, batang, maupun akar." },
+  { "id": "mekar", "text": "Ia menumpang di tumbuhan merambat, lalu mekar hingga satu meter!" },
+  { "id": "lalat", "text": "Bau busuknya memanggil lalat, si pembawa serbuk sari." },
+  { "id": "layu", "text": "Tapi mekarnya cuma beberapa hari, lalu membusuk." },
+  { "id": "akhir", "text": "Bunga paling bau ini adalah puspa langka Indonesia." }
+ ]
+}

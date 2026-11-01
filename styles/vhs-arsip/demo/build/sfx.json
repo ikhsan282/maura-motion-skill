@@ -1,0 +1,39 @@
+[
+ {
+  "type": "click",
+  "t": 0.05,
+  "gain": 0.4
+ },
+ {
+  "type": "heartbeat",
+  "t": 2.341,
+  "gain": 0.35
+ },
+ {
+  "type": "typewriter",
+  "t": 3.707,
+  "gain": 0.3
+ },
+ {
+  "type": "pencil",
+  "t": 6.406,
+  "gain": 0.45
+ },
+ {
+  "type": "pencil",
+  "t": 7.939,
+  "gain": 0.45,
+  "pitch": 1.2
+ },
+ {
+  "type": "scratch",
+  "t": 8.597,
+  "gain": 0.35
+ },
+ {
+  "type": "click",
+  "t": 15.511,
+  "gain": 0.4,
+  "pitch": 0.8
+ }
+]

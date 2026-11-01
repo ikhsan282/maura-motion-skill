@@ -1,0 +1,47 @@
+{
+ "title": "Perang Aplikasi di Baterai 1 Persen",
+ "slug": "40_kartun-outline-tebal",
+ "style": "kartun-outline-tebal",
+ "lang": "id",
+ "voice": "id-m",
+ "music": {
+  "preset": "playful",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Baterai HP-ku satu persen, dan aplikasiku mulai perang.",
+   "say": "Baterai hape-ku satu persen, dan aplikasiku mulai perang.",
+   "pause": 0.25
+  },
+  {
+   "id": "kamera",
+   "text": "Kamera: satu foto lagi! Chat: tiga ratus pesan!",
+   "say": "Kamera: satu foto lagi! Cet: tiga ratus pesan!"
+  },
+  {
+   "id": "game",
+   "text": "Game: satu ronde lagi, sumpah!",
+   "say": "Gem: satu ronde lagi, sumpah!"
+  },
+  {
+   "id": "redup",
+   "text": "Layar meredup. Semua terdiam.",
+   "pause": 0.3
+  },
+  {
+   "id": "charger",
+   "text": "Klik! Sang Charger datang, dan baterai bangkit lagi!",
+   "say": "Klik! Sang Carjer datang, dan baterai bangkit lagi!"
+  },
+  {
+   "id": "akhir",
+   "text": "Tips: redupkan layar, nyalakan hemat daya."
+  }
+ ],
+ "speed": 1.16
+}

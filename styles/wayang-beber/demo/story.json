@@ -1,0 +1,39 @@
+{
+ "title": "Panji & Dewi Sekartaji",
+ "slug": "16_wayang-beber",
+ "style": "wayang-beber",
+ "lang": "id",
+ "voice": "id-m",
+ "music": {
+  "preset": "gamelan-pelog",
+  "db": -15
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.18,
+ "speed": 1.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Adegan terakhir kisah cinta ini... tak boleh dibuka.",
+   "pause": 0.25
+  },
+  {
+   "id": "kabur",
+   "text": "Dewi Sekartaji kabur dari istana, menolak dijodohkan."
+  },
+  {
+   "id": "sayembara",
+   "text": "Raja bersayembara: penemunya boleh menikahinya."
+  },
+  {
+   "id": "jaka",
+   "text": "Jaka Kembang Kuning menemukannya, menyamar jadi pengamen."
+  },
+  {
+   "id": "akhir",
+   "text": "Mereka menikah. Tapi adegan ke-24 tetap tergulung.",
+   "say": "Mereka menikah. Tapi adegan ke dua puluh empat tetap tergulung."
+  }
+ ]
+}

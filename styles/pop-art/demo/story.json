@@ -1,0 +1,45 @@
+{
+ "title": "Kenapa Harga Selalu Berakhir 99?",
+ "slug": "57_pop-art",
+ "style": "pop-art",
+ "lang": "id",
+ "voice": "id-f",
+ "music": {
+  "preset": "hype",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 0.9,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Kenapa harga selalu Rp99.000, bukan seratus ribu?",
+   "say": "Kenapa harga selalu sembilan puluh sembilan ribu, bukan seratus ribu?",
+   "pause": 0.25
+  },
+  {
+   "id": "kiri",
+   "text": "Otakmu membaca digit paling kiri dulu."
+  },
+  {
+   "id": "baca",
+   "text": "Lihat sembilan, rasanya sembilan puluhan. Padahal hampir seratus!",
+   "pause": 0.2
+  },
+  {
+   "id": "nama",
+   "text": "Namanya efek digit kiri.",
+   "say": "Namanya efek dijit kiri."
+  },
+  {
+   "id": "lawan",
+   "text": "Triknya: bulatkan ke atas sebelum membayar."
+  },
+  {
+   "id": "akhir",
+   "text": "Seribu rupiah itu bukan diskon. Itu trik."
+  }
+ ],
+ "speed": 1.13
+}

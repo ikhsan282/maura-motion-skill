@@ -1,0 +1,42 @@
+{
+ "title": "Dewi Sri, Asal Mula Padi",
+ "slug": "03_lukis-pedesaan",
+ "style": "lukis-pedesaan",
+ "lang": "id",
+ "voice": "id-f",
+ "music": {
+  "preset": "folk",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.15,
+ "speed": 1.1,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Setiap butir nasimu, konon, berasal dari tubuh seorang dewi.",
+   "pause": 0.2
+  },
+  {
+   "id": "lahir",
+   "text": "Dewi Sri lahir dari air mata naga Antaboga."
+  },
+  {
+   "id": "racun",
+   "text": "Para dewa cemas akan pesonanya, lalu meracunnya."
+  },
+  {
+   "id": "tumbuh",
+   "text": "Tapi dari kuburnya tumbuh kelapa, bambu... dan dari pusarnya, padi."
+  },
+  {
+   "id": "panen",
+   "text": "Petani masih menyambutnya di setiap panen."
+  },
+  {
+   "id": "moral",
+   "text": "Jadi, jangan sisakan nasimu."
+  }
+ ]
+}

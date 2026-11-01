@@ -1,0 +1,42 @@
+{
+ "title": "Lukisan Balasan Raden Saleh",
+ "slug": "22_lukisan-minyak",
+ "style": "lukisan-minyak",
+ "lang": "id",
+ "voice": "id-m",
+ "music": {
+  "preset": "cinematic",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 0.9,
+ "pause": 0.15,
+ "speed": 1.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Lukisan ini jawaban pelukis Jawa untuk Belanda.",
+   "pause": 0.15
+  },
+  {
+   "id": "tunduk",
+   "text": "Belanda melukis Diponegoro: tertunduk, kalah."
+  },
+  {
+   "id": "tegak",
+   "text": "Raden Saleh melukis ulang: Diponegoro tegak, marah."
+  },
+  {
+   "id": "kepala",
+   "text": "Kepala perwira Belanda? Dibuat kebesaran."
+  },
+  {
+   "id": "diri",
+   "text": "Ia melukis dirinya di antara pengikut."
+  },
+  {
+   "id": "moral",
+   "text": "Sejarah milik pemenang. Tapi kuas bisa melawan."
+  }
+ ]
+}

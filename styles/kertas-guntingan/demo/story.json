@@ -1,0 +1,43 @@
+{
+ "title": "Legenda Danau Toba",
+ "slug": "08_kertas-guntingan",
+ "style": "kertas-guntingan",
+ "lang": "id",
+ "voice": "id-f",
+ "music": {
+  "preset": "folk",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.18,
+ "speed": 1.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Satu kalimat terlarang menenggelamkan lembah jadi danau raksasa.",
+   "pause": 0.25
+  },
+  {
+   "id": "ikan",
+   "text": "Petani Toba menangkap ikan emas yang berubah jadi putri."
+  },
+  {
+   "id": "janji",
+   "text": "Syaratnya: jangan pernah ungkit asal-usulnya."
+  },
+  {
+   "id": "marah",
+   "text": "Tapi Toba memaki anaknya: Dasar anak ikan!",
+   "pause": 0.25
+  },
+  {
+   "id": "danau",
+   "text": "Langit pecah. Lembah itu jadi Danau Toba."
+  },
+  {
+   "id": "moral",
+   "text": "Janji yang diucapkan, harus dijaga."
+  }
+ ]
+}

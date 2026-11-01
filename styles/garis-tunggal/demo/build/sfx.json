@@ -1,0 +1,42 @@
+[
+ {
+  "type": "pencil",
+  "t": 0,
+  "gain": 0.3,
+  "pitch": 1.4
+ },
+ {
+  "type": "pop",
+  "t": 4.632,
+  "gain": 0.45,
+  "pitch": 1.2
+ },
+ {
+  "type": "swoosh_up",
+  "t": 6.576,
+  "gain": 0.2,
+  "pitch": 1.5
+ },
+ {
+  "type": "chime",
+  "t": 8.004,
+  "gain": 0.35
+ },
+ {
+  "type": "whoosh",
+  "t": 8.347,
+  "gain": 0.2,
+  "pitch": 0.8
+ },
+ {
+  "type": "pencil",
+  "t": 10.983,
+  "gain": 0.25,
+  "pitch": 1.2
+ },
+ {
+  "type": "ding",
+  "t": 14.353,
+  "gain": 0.3
+ }
+]

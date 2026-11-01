@@ -1,0 +1,56 @@
+[
+ {
+  "type": "whoosh",
+  "t": 0.05,
+  "gain": 0.45
+ },
+ {
+  "type": "ding",
+  "t": 2.816,
+  "gain": 0.3,
+  "pitch": 1.2
+ },
+ {
+  "type": "whoosh",
+  "t": 5.471,
+  "gain": 0.5,
+  "pitch": 1.2
+ },
+ {
+  "type": "impact",
+  "t": 6.191,
+  "gain": 0.45
+ },
+ {
+  "type": "chime",
+  "t": 9.311,
+  "gain": 0.3
+ },
+ {
+  "type": "tick",
+  "t": 10.416,
+  "gain": 0.35
+ },
+ {
+  "type": "tick",
+  "t": 11.416,
+  "gain": 0.35
+ },
+ {
+  "type": "drum_hit",
+  "t": 12.977,
+  "gain": 0.55,
+  "pitch": 0.7
+ },
+ {
+  "type": "drum_hit",
+  "t": 13.427,
+  "gain": 0.45,
+  "pitch": 0.7
+ },
+ {
+  "type": "sparkle",
+  "t": 16.538,
+  "gain": 0.35
+ }
+]
