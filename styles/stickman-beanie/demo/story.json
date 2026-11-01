@@ -1,0 +1,37 @@
+{
+ "title": "Demo stickman-beanie",
+ "slug": "demo_stickman_beanie",
+ "style": "stickman-beanie",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "lofi",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Kamu bukan pemalas, katamu sambil pakai kupluk."
+  },
+  {
+   "id": "alasan",
+   "text": "Otakmu cuma kabur dari rasa tidak enak."
+  },
+  {
+   "id": "jebakan",
+   "text": "Buka HP sebentar, eh malah sejam."
+  },
+  {
+   "id": "trik",
+   "text": "Triknya: bilang lima menit aja, langsung mulai."
+  },
+  {
+   "id": "moral",
+   "text": "Begitu jalan, beratnya mengecil sendiri."
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "title": "Demo stickman-cinematic",
+ "slug": "demo_stickman_cinematic",
+ "style": "stickman-cinematic",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "lofi",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Kota tidur, tapi mimpimu belum selesai."
+  },
+  {
+   "id": "alasan",
+   "text": "Satu langkah kecil malam ini mengubah besok."
+  },
+  {
+   "id": "jebakan",
+   "text": "Semua orang lelah, yang menang yang tetap jalan."
+  },
+  {
+   "id": "trik",
+   "text": "Fokus satu hal, biarkan sisanya kabur."
+  },
+  {
+   "id": "moral",
+   "text": "Besok kamu berterima kasih pada dirimu malam ini."
+  }
+ ]
+}
