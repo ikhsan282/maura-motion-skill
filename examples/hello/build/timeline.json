@@ -1,0 +1,228 @@
+{
+ "key": "471afda6ae454e57",
+ "voice": "el-id-m",
+ "duration": 18.233,
+ "lead": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Satu gaya, satu naskah, jadi video.",
+   "start": 0.3,
+   "end": 2.775,
+   "words": [
+    {
+     "w": "Satu",
+     "start": 0.3,
+     "end": 0.688
+    },
+    {
+     "w": "gaya,",
+     "start": 0.688,
+     "end": 0.911
+    },
+    {
+     "w": "satu",
+     "start": 0.993,
+     "end": 1.381
+    },
+    {
+     "w": "naskah,",
+     "start": 1.381,
+     "end": 1.769
+    },
+    {
+     "w": "jadi",
+     "start": 1.851,
+     "end": 2.239
+    },
+    {
+     "w": "video.",
+     "start": 2.239,
+     "end": 2.627
+    }
+   ]
+  },
+  {
+   "id": "pilih",
+   "text": "Pilih dari 65 gaya: anime, wayang, flat vector, dan lainnya.",
+   "start": 3.025,
+   "end": 8.051,
+   "words": [
+    {
+     "w": "Pilih",
+     "start": 3.025,
+     "end": 3.552
+    },
+    {
+     "w": "dari",
+     "start": 3.552,
+     "end": 4.08
+    },
+    {
+     "w": "65",
+     "start": 4.08,
+     "end": 4.383
+    },
+    {
+     "w": "gaya:",
+     "start": 4.383,
+     "end": 4.686
+    },
+    {
+     "w": "anime,",
+     "start": 4.798,
+     "end": 5.55
+    },
+    {
+     "w": "wayang,",
+     "start": 5.662,
+     "end": 5.965
+    },
+    {
+     "w": "flat",
+     "start": 6.077,
+     "end": 6.38
+    },
+    {
+     "w": "vector,",
+     "start": 6.38,
+     "end": 6.907
+    },
+    {
+     "w": "dan",
+     "start": 7.019,
+     "end": 7.322
+    },
+    {
+     "w": "lainnya.",
+     "start": 7.322,
+     "end": 7.85
+    }
+   ]
+  },
+  {
+   "id": "tengah",
+   "text": "Tulis ceritamu, mesin yang menggambar setiap adegan.",
+   "start": 8.301,
+   "end": 11.294,
+   "words": [
+    {
+     "w": "Tulis",
+     "start": 8.301,
+     "end": 8.639
+    },
+    {
+     "w": "ceritamu,",
+     "start": 8.639,
+     "end": 9.263
+    },
+    {
+     "w": "mesin",
+     "start": 9.335,
+     "end": 9.672
+    },
+    {
+     "w": "yang",
+     "start": 9.672,
+     "end": 9.866
+    },
+    {
+     "w": "menggambar",
+     "start": 9.866,
+     "end": 10.346
+    },
+    {
+     "w": "setiap",
+     "start": 10.346,
+     "end": 10.684
+    },
+    {
+     "w": "adegan.",
+     "start": 10.684,
+     "end": 11.164
+    }
+   ]
+  },
+  {
+   "id": "suara",
+   "text": "Narasi otomatis, musik dan caption ikut jadi.",
+   "start": 11.544,
+   "end": 14.133,
+   "words": [
+    {
+     "w": "Narasi",
+     "start": 11.544,
+     "end": 11.981
+    },
+    {
+     "w": "otomatis,",
+     "start": 11.981,
+     "end": 12.548
+    },
+    {
+     "w": "musik",
+     "start": 12.613,
+     "end": 12.92
+    },
+    {
+     "w": "dan",
+     "start": 12.92,
+     "end": 13.096
+    },
+    {
+     "w": "caption",
+     "start": 13.096,
+     "end": 13.403
+    },
+    {
+     "w": "ikut",
+     "start": 13.403,
+     "end": 13.709
+    },
+    {
+     "w": "jadi.",
+     "start": 13.709,
+     "end": 14.016
+    }
+   ]
+  },
+  {
+   "id": "akhir",
+   "text": "Maura Motion: idemu, tayang hari ini.",
+   "start": 14.383,
+   "end": 16.933,
+   "words": [
+    {
+     "w": "Maura",
+     "start": 14.383,
+     "end": 14.758
+    },
+    {
+     "w": "Motion:",
+     "start": 14.758,
+     "end": 15.132
+    },
+    {
+     "w": "idemu,",
+     "start": 15.212,
+     "end": 15.746
+    },
+    {
+     "w": "tayang",
+     "start": 15.826,
+     "end": 16.041
+    },
+    {
+     "w": "hari",
+     "start": 16.041,
+     "end": 16.415
+    },
+    {
+     "w": "ini.",
+     "start": 16.415,
+     "end": 16.79
+    }
+   ]
+  }
+ ]
+}
