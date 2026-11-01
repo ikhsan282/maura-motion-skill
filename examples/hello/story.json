@@ -1,1 +1,41 @@
-{"lang":"id","lead":0.3,"lines":[{"id":"hook","pause":0.25,"text":"Satu gaya, satu naskah, jadi video."},{"id":"pilih","pause":0.25,"text":"Pilih dari 65 gaya: anime, wayang, flat vector, dan lainnya."},{"id":"tengah","pause":0.25,"text":"Tulis ceritamu, mesin yang menggambar setiap adegan."},{"id":"suara","pause":0.25,"text":"Narasi otomatis, musik dan caption ikut jadi."},{"id":"akhir","text":"Maura Motion: idemu, tayang hari ini."}],"music":{"db":-16,"preset":"ambient"},"pause":0.3,"slug":"hello","speed":1.2,"style":"flat-vector","tail":1.0,"title":"Halo Maura Motion","voice":"el-id-f"}
+{
+ "lang": "id",
+ "lead": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "pause": 0.25,
+   "text": "Satu gaya, satu naskah, jadi video."
+  },
+  {
+   "id": "pilih",
+   "pause": 0.25,
+   "text": "Pilih dari 65 gaya: anime, wayang, flat vector, dan lainnya."
+  },
+  {
+   "id": "tengah",
+   "pause": 0.25,
+   "text": "Tulis ceritamu, mesin yang menggambar setiap adegan."
+  },
+  {
+   "id": "suara",
+   "pause": 0.25,
+   "text": "Narasi otomatis, musik dan caption ikut jadi."
+  },
+  {
+   "id": "akhir",
+   "text": "Maura Motion: idemu, tayang hari ini."
+  }
+ ],
+ "music": {
+  "db": -16,
+  "preset": "ambient"
+ },
+ "pause": 0.3,
+ "slug": "hello",
+ "speed": 1.2,
+ "style": "flat-vector",
+ "tail": 1.0,
+ "title": "Halo Maura Motion",
+ "voice": "el-id-m"
+}

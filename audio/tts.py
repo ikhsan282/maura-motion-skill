@@ -16,11 +16,11 @@ SR = 24000
 
 # Default voice per language — ganti di sini kalau mau suara lain jadi standar.
 # el-id-f = Alice (ElevenLabs, natural, butuh API key). Alternatif gratis offline: id-f.
-DEFAULT_VOICE = {'id': 'el-id-f', 'en': 'en-m'}
+DEFAULT_VOICE = {'id': 'el-id-m', 'en': 'en-m'}
 
 VOICES = {
     # ElevenLabs (cloud, natural) — needs ELEVENLABS_API_KEY in ~/.hermes/elevenlabs.env
-    'el-id-m': {'engine': 'elevenlabs', 'voice': 'pNInz6obpgDQGcFmaJgB', 'model': 'eleven_multilingual_v2', 'desc': 'Pria Indonesia, natural (ElevenLabs)'},
+    'el-id-m': {'engine': 'elevenlabs', 'voice': 'JBFqnCBsd6RMkjVDRZzb', 'model': 'eleven_multilingual_v2', 'desc': 'George, pria hangat storyteller (ElevenLabs)'},
     'el-id-f': {'engine': 'elevenlabs', 'voice': 'Xb7hH8MSUJpSbSDYk0k2', 'model': 'eleven_multilingual_v2', 'desc': 'Wanita Indonesia, natural (ElevenLabs)'},
     # Indonesian (espeak 'id' phonemes into Kokoro voices that pronounce them most clearly)
     'id-m':  {'engine': 'kokoro', 'voice': 'hm_omega', 'phon': 'id', 'speed': 1.12,  'desc': 'Pria, hangat & jelas (default)'},
