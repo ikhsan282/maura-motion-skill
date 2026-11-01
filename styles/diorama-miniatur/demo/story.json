@@ -18,24 +18,53 @@
    "pause": 0.3
   },
   {
+   "id": "lokasi",
+   "text": "Lok Baintan, Kalimantan Selatan. Pasar di atas Sungai Martapura."
+  },
+  {
    "id": "subuh",
-   "text": "Lok Baintan, Kalimantan Selatan. Buka selepas subuh."
+   "text": "Buka selepas subuh, sekitar jam enam pagi."
   },
   {
    "id": "acil",
-   "text": "Para acil mendayung jukung, menjual pisang, jeruk, dan sayur."
+   "text": "Para acil mendayung jukung. Kebanyakan perempuan."
+  },
+  {
+   "id": "jukung",
+   "text": "Jukung, perahu kayu khas Banjar, jadi lapak mereka."
+  },
+  {
+   "id": "tanggui",
+   "text": "Tanggui, topi anyaman lebar, melindungi dari matahari pagi."
+  },
+  {
+   "id": "dagangan",
+   "text": "Pisang, jeruk, sayur, dan kue dijajakan dari perahu."
   },
   {
    "id": "barter",
-   "text": "Antarpedagang, barter masih berlaku."
+   "text": "Antarpedagang, barter masih berlaku. Bapanduk namanya."
+  },
+  {
+   "id": "sejarah",
+   "text": "Tradisi ini sudah ratusan tahun, warisan sungai Banjar."
+  },
+  {
+   "id": "batas",
+   "text": "Tapi pasar ini punya batas waktu yang ketat."
   },
   {
    "id": "bubar",
-   "text": "Tapi sekitar pukul sembilan, pasar pun bubar."
+   "text": "Sekitar pukul sembilan, perahu-perahu pun bubar."
+  },
+  {
+   "id": "sepi",
+   "text": "Sungai kembali sepi, hanya riak air yang tersisa."
   },
   {
    "id": "besok",
    "text": "Besok subuh, sungai ini jadi pasar lagi."
   }
- ]
+ ],
+ "speed": 1.2
 }
