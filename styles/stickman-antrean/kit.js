@@ -5721,19 +5721,7 @@
         props: { activeRatio: 1.0 }
       });
 
-      // 5. Watermark "G A R I S   H I D U P"
-      kit.addObject({
-        id: "gh_watermark",
-        type: "text",
-        x: w * 0.45,
-        y: floorY + h * 0.042,
-        color: "rgba(255, 255, 255, 0.34)",
-        zIndex: 5,
-        props: {
-          text: "G A R I S   H I D U P",
-          font: `bold ${Math.round(w * 0.017)}px sans-serif`
-        }
-      });
+      // 5. (dihapus: watermark teks — bersih tanpa tulisan merek)
 
       // 6. Speech Bubble ("BENTAR DOANG" / "BURU-BURU")
       const speechBubble = kit.addObject({

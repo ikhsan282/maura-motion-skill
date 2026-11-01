@@ -7,7 +7,7 @@ export async function setup(AM) {
   StickmanKit.createAntreanScene(kit, {});
 }
 export function render(t) {
-  kit.timeline.seek(Math.min(12.3, Math.max(0, t)), 1 / 30);
+  kit.timeline.seek(t % 12.3, 1 / 30); // loop 12.3 dtk selama narasi
   kit.render();
   ctx.drawImage(kit.canvas, 0, 0, 1080, 1920);
 }
