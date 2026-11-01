@@ -3086,6 +3086,12 @@
         case "mobil":
           this._renderMobil(ctx);
           break;
+        case "amplop":
+          this._renderAmplop(ctx);
+          break;
+        case "meja":
+          this._renderMeja(ctx);
+          break;
         case "markaParkir":
           this._renderMarkaParkir(ctx);
           break;
@@ -4040,6 +4046,44 @@
       // lampu
       ctx.fillStyle = "#F9E79F";
       ctx.fillRect(w*0.5-8, -h*0.42, 8, 12);
+    }
+
+    _renderAmplop(ctx) {
+      const w = this.width || 160;
+      const h = this.height || 110;
+      ctx.fillStyle = "rgba(0,0,0,0.35)";
+      ctx.beginPath(); ctx.ellipse(0, 4, w*0.48, 8, 0, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = this.color || "#F5B041";
+      ctx.strokeStyle = "#7E5109";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.roundRect(-w*0.5, -h*0.5, w, h, 8);
+      ctx.fill(); ctx.stroke();
+      // tutup segitiga + segel
+      ctx.beginPath();
+      ctx.moveTo(-w*0.5, -h*0.5); ctx.lineTo(0, h*0.05); ctx.lineTo(w*0.5, -h*0.5);
+      ctx.closePath();
+      ctx.fillStyle = "rgba(0,0,0,0.12)"; ctx.fill(); ctx.stroke();
+      ctx.fillStyle = "#C0392B";
+      ctx.beginPath(); ctx.arc(0, h*0.02, 9, 0, Math.PI*2); ctx.fill();
+    }
+
+    _renderMeja(ctx) {
+      const w = this.width || 320;
+      const h = this.height || 110;
+      ctx.fillStyle = "rgba(0,0,0,0.4)";
+      ctx.beginPath(); ctx.ellipse(0, 4, w*0.48, 8, 0, 0, Math.PI*2); ctx.fill();
+      // daun meja
+      ctx.fillStyle = "#6E4A2F";
+      ctx.strokeStyle = "#3E2A1A";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.roundRect(-w*0.5, -h*0.55, w, h*0.22, 6);
+      ctx.fill(); ctx.stroke();
+      // 2 kaki
+      ctx.fillStyle = "#4A3220";
+      ctx.fillRect(-w*0.38, -h*0.33, 12, h*0.33);
+      ctx.fillRect(w*0.38 - 12, -h*0.33, 12, h*0.33);
     }
 
     _renderMarkaParkir(ctx) {
@@ -5725,11 +5769,17 @@
       const T = theme === "parkir"
         ? { sign1: "PARKIR", sign2: "SABAR", bub1: "SEBENTAR", bub2: "KEBEBURU",
             w1: ["Sabar", "itu", "bukan", "soal", "menang."], w2: "menahan diri." }
+        : theme === "utang"
+        ? { sign1: "UTANG", sign2: "JANJI", bub1: "NANTI AJA", bub2: "MBOK JADI",
+            w1: ["Utang", "bukan", "soal", "uang.", "soal", "hormat."], w2: "Jangan lupa." }
         : { sign1: "LOKET", sign2: "ANTREAN", bub1: "BENTAR DOANG", bub2: "BURU-BURU",
             w1: ["Antre", "itu", "bukan", "soal", "waktu."], w2: "menghargai." };
       const __line1 = ["Antre", "itu", "bukan", "soal", "waktu."];
       if (theme === "parkir") {
         return StickmanKit._buildParkirScene(kit, options, T);
+      }
+      if (theme === "utang") {
+        return StickmanKit._buildUtangScene(kit, options, T);
       }
       const w = kit.width;
       const h = kit.height;
@@ -6026,6 +6076,90 @@
         speechBubble,
         moralTitle
       };
+    }
+
+    static _buildUtangScene(kit, options, T) {
+      const w = kit.width;
+      const h = kit.height;
+      const floorY = Math.round(h * 0.685);
+      const ceilingY = Math.round(h * 0.305);
+      kit.activeScene.background = {
+        stops: [[0.0, "#1A1C23"], [0.5, "#2B2D36"], [1.0, "#0F1114"]]
+      };
+      kit.activeScene.floorY = null;
+      kit.activeScene.reflection.enabled = false;
+      // papan UTANG gantung
+      kit.addObject({
+        id: "ghp_sign_utang", type: "hangingSign",
+        x: w * 0.5, y: ceilingY + h * 0.055, width: w * 0.28, height: h * 0.038,
+        color: "#EAE6DF", strokeColor: "#1C2228", zIndex: 4,
+        props: { text: "UTANG", textColor: "#14181C", wireLength: h * 0.033, leftArrow: false }
+      });
+      // meja kecil polos
+      kit.addObject({
+        id: "ghp_meja", type: "meja",
+        x: w * 0.50, y: floorY + 2, width: w * 0.30, height: h * 0.055, zIndex: 3,
+        props: {}
+      });
+      // amplop uang di atas meja
+      const amplop = kit.addObject({
+        id: "ghp_amplop", type: "amplop",
+        x: w * 0.50, y: floorY - h * 0.015, width: w * 0.11, height: h * 0.045,
+        zIndex: 6, props: {}, color: "#F5B041"
+      });
+      // bubble + judul moral
+      const speechBubble = kit.addObject({
+        id: "ghp_speech_bubble", type: "speechBubble",
+        x: w * 0.50, y: floorY - h * 0.20, width: w * 0.24, height: h * 0.032,
+        visible: false, zIndex: 25, props: { text: T.bub1, tailOffsetX: 12 }
+      });
+      const moralTitle = kit.addObject({
+        id: "ghp_moral_title", type: "highlightedTitle",
+        x: w * 0.5, y: h * 0.20, zIndex: 25,
+        props: { fontSize: Math.round(w * 0.041), progress: 0, words1: T.w1, words2: T.w2 }
+      });
+      // 2 karakter: peminjam (menunggak) + pemberi (menagih)
+      const bs = (h / 1920) * 1.48;
+      const mk = (id, fx, col, glow) => kit.addStickman(Object.assign({
+        id, x: w * fx, y: floorY, scale: bs * 0.96, color: col,
+        backLimbColor: "#5A626A", style: "garishidup", facing: -1, zIndex: 14
+      }, glow ? { color: "#F7F5E8", backLimbColor: "#D5D2C4", glowColor: "rgba(255,248,215,0.38)", glowBlur: 24, scale: bs * 1.04, zIndex: 15 } : {}));
+      const peminjam = mk("ghp_peminjam", 0.20, "#7E878F");
+      const pemberi = mk("ghp_pemberi", 0.80, null, true);
+      const tl = kit.timeline;
+      tl.clear();
+      // A0 0-8: peminjam di depan meja, ragu — pemberi diam di pojok
+      tl.add(peminjam, "think", { start: 0, duration: 3.0, fromX: w * 0.20, toX: w * 0.20 });
+      tl.add(peminjam, "waitQueue", { start: 3.0, duration: 3.0, fromX: w * 0.20, toX: w * 0.20 });
+      tl.add(peminjam, "sad", { start: 6.0, duration: 2.0, fromX: w * 0.20, toX: w * 0.20 });
+      tl.add(pemberi, "waitQueue", { start: 0, duration: 8.0, fromX: w * 0.80, toX: w * 0.80, facing: 1 });
+      // A1 8-16: pemberi mendekat, minta uang (talk)
+      tl.add(pemberi, "walk", { start: 8.0, duration: 3.0, fromX: w * 0.80, toX: w * 0.65, facing: -1 });
+      tl.add(pemberi, "talk", { start: 11.0, duration: 3.0, fromX: w * 0.65, toX: w * 0.65, facing: -1 });
+      // A2 16-24: peminjam pura-pura tidak punya, menoleh
+      tl.add(peminjam, "talk", { start: 14.0, duration: 3.0, fromX: w * 0.20, toX: w * 0.20 });
+      tl.add(peminjam, "lookAround", { start: 17.0, duration: 2.0, fromX: w * 0.20, toX: w * 0.20 });
+      tl.add(peminjam, "sad", { start: 19.0, duration: 2.0, fromX: w * 0.20, toX: w * 0.20 });
+      // A3 24-32: pemberi marah, tunjuk amplop
+      tl.add(pemberi, "reprimandPoint", { start: 24.0, duration: 2.5, fromX: w * 0.65, toX: w * 0.65, facing: -1 });
+      tl.add(pemberi, "angry", { start: 26.5, duration: 2.5, fromX: w * 0.65, toX: w * 0.65, facing: -1 });
+      tl.add(pemberi, "point", { start: 29.0, duration: 2.0, fromX: w * 0.65, toX: w * 0.65, facing: -1 });
+      // A4 32-40: peminjam mundur, lari
+      tl.add(peminjam, "walk", { start: 32.0, duration: 2.0, fromX: w * 0.20, toX: w * 0.10, facing: -1 });
+      tl.add(peminjam, "run", { start: 34.0, duration: 3.0, fromX: w * 0.10, toX: -w * 0.10, facing: -1 });
+      // A5 40-50: amplop diambil pemberi, moral
+      tl.addObjectTrack(amplop, { start: 0, duration: 60, onUpdate(obj, p, t) {
+        if (t < 40) obj.x = w * 0.50;
+        else obj.x = w * 0.65;
+        if (t >= 40 && t < 46) { speechBubble.visible = true; speechBubble.props.text = T.bub2; }
+        else speechBubble.visible = false;
+        moralTitle.props.progress = t < 42 ? 0 : Math.min(1, (t - 42) / 2.0);
+      } });
+      // closing 50-60: pemberi sendirian, moral
+      tl.add(pemberi, "sad", { start: 50.0, duration: 3.0, fromX: w * 0.65, toX: w * 0.65, facing: -1 });
+      tl.add(pemberi, "lookAround", { start: 53.0, duration: 3.0, fromX: w * 0.65, toX: w * 0.65, facing: -1 });
+      tl.add(pemberi, "sad", { start: 56.0, duration: 4.0, fromX: w * 0.65, toX: w * 0.65, facing: -1 });
+      return { peminjam, pemberi, amplop, speechBubble, moralTitle };
     }
 
     static _buildParkirScene(kit, options, T) {
