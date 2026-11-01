@@ -1,11 +1,11 @@
 ---
 name: maura-motion-skill
-description: Maura Motion — library 65 gaya animasi untuk video narasi vertikal (TikTok, Reels, Shorts) yang digambar full pakai kode. Pilih gaya (anime, wayang kulit, flat vector, kinetic typography, blueprint, synthwave, dll), kasih topik/naskah, jadi MP4 + narasi Indonesia/Inggris + caption + musik. Dipakai untuk "bikin video animasi", "pakai gaya X", "maura motion", "video explainer", "faceless video".
+description: Maura Motion — library 66 gaya animasi untuk video narasi vertikal (TikTok, Reels, Shorts) yang digambar full pakai kode. Pilih gaya (anime, wayang kulit, flat vector, kinetic typography, blueprint, synthwave, dll), kasih topik/naskah, jadi MP4 + narasi Indonesia/Inggris + caption + musik. Dipakai untuk "bikin video animasi", "pakai gaya X", "maura motion", "video explainer", "faceless video".
 ---
 
 # Maura Motion Skill
 
-65 gaya animasi dalam satu tempat, tiap gaya punya drawing kit + demo yang sudah jadi. Sumber: 25 gaya Drive (Anime … Terminal ASCII), paint looks Shorts Animator (oil, watercolour, gouache, pastel, ink — di `engine/sa/`), dan gaya visual dari 703 prompt *awesome-opus5-5-videos*.
+66 gaya animasi dalam satu tempat, tiap gaya punya drawing kit + demo yang sudah jadi. Sumber: 25 gaya Drive (Anime … Terminal ASCII), paint looks Shorts Animator (oil, watercolour, gouache, pastel, ink — di `engine/sa/`), dan gaya visual dari 703 prompt *awesome-opus5-5-videos*.
 
 ```
 topik / naskah + gaya ─► story.json (naskah hook-first, suara, musik) + scene.js (adegan pakai styles/<id>/kit.js)
@@ -59,7 +59,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 
 ## File
 
-- `STYLES.md` — 65 gaya sekilas; `catalog.json` — sama, machine-readable.
+- `STYLES.md` — 66 gaya sekilas; `catalog.json` — sama, machine-readable.
 - `styles/<id>/` — STYLE.md, kit.js, demo/ (story.json, scene.js, out/<slug>.mp4).
 - `engine/` — runtime (AM API), renderer, caption, font, three.js, `sa/` (Shorts Animator paint pass + kit + looks).
 - `audio/` — tts.py (voices: ElevenLabs cloud + Kokoro/Piper offline), music.py (19 preset), sfx.py (45 efek), mix.py (ducking, −14 LUFS).
