@@ -11,40 +11,40 @@
  },
  {
   "type": "whoosh",
-  "t": 4.94,
+  "t": 4.264,
   "gain": 0.3,
   "pitch": 0.8
  },
  {
   "type": "swoosh_up",
-  "t": 9.88,
+  "t": 8.951,
   "gain": 0.35,
   "pitch": 0.7
  },
  {
   "type": "heartbeat",
-  "t": 14.311,
+  "t": 12.797,
   "gain": 0.45
  },
  {
   "type": "thunder",
-  "t": 16.96,
+  "t": 15.047,
   "gain": 0.65
  },
  {
   "type": "rain",
-  "t": 17.11,
+  "t": 15.197,
   "gain": 0.35
  },
  {
   "type": "impact",
-  "t": 17.927,
+  "t": 16.002,
   "gain": 0.45,
   "pitch": 0.7
  },
  {
   "type": "chime",
-  "t": 20.067,
+  "t": 17.778,
   "gain": 0.3
  }
 ]
