@@ -15,6 +15,9 @@ MODELS = os.environ.get('AM_MODELS', os.path.join(os.path.expanduser('~'), '.cac
 SR = 24000
 
 VOICES = {
+    # ElevenLabs (cloud, natural) — needs ELEVENLABS_API_KEY in ~/.hermes/elevenlabs.env
+    'el-id-m': {'engine': 'elevenlabs', 'voice': 'pNInz6obpgDQGcFmaJgB', 'model': 'eleven_multilingual_v2', 'desc': 'Pria Indonesia, natural (ElevenLabs)'},
+    'el-id-f': {'engine': 'elevenlabs', 'voice': 'Xb7hH8MSUJpSbSDYk0k2', 'model': 'eleven_multilingual_v2', 'desc': 'Wanita Indonesia, natural (ElevenLabs)'},
     # Indonesian (espeak 'id' phonemes into Kokoro voices that pronounce them most clearly)
     'id-m':  {'engine': 'kokoro', 'voice': 'hm_omega', 'phon': 'id', 'speed': 1.12,  'desc': 'Pria, hangat & jelas (default)'},
     'id-f':  {'engine': 'kokoro', 'voice': 'hf_beta',  'phon': 'id', 'speed': 1.1,  'desc': 'Wanita, jernih'},
@@ -96,6 +99,39 @@ def synth_piper(text, v, speed):
     a = np.concatenate(chunks) if chunks else np.zeros(1000, np.float32)
     return a, pv.config.sample_rate
 
+_eleven = None
+def synth_elevenlabs(text, v, speed):
+    import urllib.request
+    key = None
+    for p in [os.path.expanduser('~/.hermes/elevenlabs.env'), os.path.expanduser('~/.hermes/elevenlabs.env')]:
+        if os.path.exists(p):
+            for ln in open(p):
+                if ln.strip().startswith('ELEVENLABS_API_KEY'):
+                    key = ln.split('=', 1)[1].strip().strip('"').strip("'")
+    key = key or os.environ.get('ELEVENLABS_API_KEY')
+    if not key: sys.exit('ElevenLabs voice needs ELEVENLABS_API_KEY in ~/.hermes/elevenlabs.env')
+    url = f"https://api.elevenlabs.io/v1/text-to-speech/{v['voice']}"
+    body = json.dumps({'text': text, 'model_id': v.get('model', 'eleven_multilingual_v2')}).encode()
+    req = urllib.request.Request(url, data=body, headers={'xi-api-key': key, 'Content-Type': 'application/json'})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            data = r.read()
+    except Exception as e:
+        sys.exit(f'ElevenLabs error: {e}')
+    import io
+    try:
+        a, sr = sf.read(io.BytesIO(data))
+    except Exception:
+        # ElevenLabs returns mp3 by default — decode via ffmpeg
+        import subprocess, tempfile
+        with tempfile.NamedTemporaryFile(suffix='.mp3', delete=False) as f: f.write(data); mp = f.name
+        wp = mp + '.wav'
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', mp, '-ar', str(SR), '-ac', '1', wp], check=True)
+        a, sr = sf.read(wp)
+        os.unlink(mp); os.unlink(wp)
+    if getattr(a, 'ndim', 1) > 1: a = a.mean(axis=1)
+    return np.asarray(a, dtype=np.float32), sr
+
 def resample(a, sr, to=SR):
     if sr == to: return a
     from scipy.signal import resample_poly
@@ -171,6 +207,7 @@ def main():
         say = normalize_id(say) if lang == 'id' else normalize_en(say)
         sp = speed * float(line.get('speed', 1.0))
         if v['engine'] == 'kokoro': audio, sr = synth_kokoro(say, v, sp)
+        elif v['engine'] == 'elevenlabs': audio, sr = synth_elevenlabs(say, v, sp)
         else: audio, sr = synth_piper(say, v, sp)
         audio = trim(resample(audio, sr))
         dur = len(audio) / SR
