@@ -3685,9 +3685,14 @@
         if (!showMenghargai) {
           ctx.fillText("Soal", 0, y2);
         } else {
-          ctx.fillText("Soal ", -fontSize * 2.55, y2);
+          const part1 = "Soal ";
+          const part2 = "menghargai.";
+          const w1 = ctx.measureText(part1).width;
+          const w2 = ctx.measureText(part2).width;
+          const x0 = -(w1 + w2) / 2;
+          ctx.fillText(part1, x0 + w1 / 2, y2);
           ctx.fillStyle = "#F5B041";
-          ctx.fillText("menghargai.", fontSize * 0.95, y2);
+          ctx.fillText(part2, x0 + w1 + w2 / 2, y2);
         }
       }
     }
