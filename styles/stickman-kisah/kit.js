@@ -6081,31 +6081,63 @@
       const tukang = mk("ghp_tukang", 0.12, "#7E878F");
       const tl = kit.timeline;
       tl.clear();
-      tl.add(penabrak, "walk", { start: 0.5, duration: 2.0, fromX: w * 1.05, toX: w * 0.80, facing: -1 });
-      tl.add(penabrak, "push", { start: 2.5, duration: 1.0, fromX: w * 0.80, toX: w * 0.80, facing: -1 });
-      tl.add(penabrak, "run", { start: 3.5, duration: 1.6, fromX: w * 0.80, toX: w * 1.15, facing: 1 });
-      tl.add(korban, "walk", { start: 4.2, duration: 1.6, fromX: w * 1.05, toX: w * 0.80, facing: -1 });
-      tl.add(korban, "surprised", { start: 5.8, duration: 1.0, fromX: w * 0.80, toX: w * 0.80 });
-      tl.add(korban, "sad", { start: 6.8, duration: 2.5, fromX: w * 0.80, toX: w * 0.80 });
-      tl.add(korban, "happy", { start: 10.5, duration: 1.8, fromX: w * 0.80, toX: w * 0.80 });
-      tl.add(saksi, "waitQueue", { start: 0, duration: 5.0, fromX: w * 0.50, toX: w * 0.50, facing: 1 });
-      tl.add(saksi, "walk", { start: 5.0, duration: 1.2, fromX: w * 0.50, toX: w * 0.72, facing: 1 });
-      tl.add(saksi, "push", { start: 6.2, duration: 1.6, fromX: w * 0.72, toX: w * 0.74, facing: 1 });
-      tl.add(saksi, "reprimandPoint", { start: 7.8, duration: 1.2, fromX: w * 0.74, toX: w * 0.74, facing: 1 });
-      tl.add(saksi, "happy", { start: 10.5, duration: 1.8, fromX: w * 0.74, toX: w * 0.74, facing: -1 });
-      tl.add(tukang, "serveCounter", { start: 0, duration: 12.3, fromX: w * 0.12, toX: w * 0.12 });
-      tl.addObjectTrack(mobilKorban, { start: 0, duration: 12.3,
+      // A0 hook 0-7: suasana parkir — variasi idle biar hidup, bukan 1 motion diulang
+      tl.add(saksi, "waitQueue", { start: 0, duration: 2.5, fromX: w * 0.50, toX: w * 0.50, facing: 1 });
+      tl.add(saksi, "lookAround", { start: 2.5, duration: 2.0, fromX: w * 0.50, toX: w * 0.50, facing: 1 });
+      tl.add(saksi, "waitQueue", { start: 4.5, duration: 2.5, fromX: w * 0.50, toX: w * 0.50, facing: 1 });
+      tl.add(tukang, "serveCounter", { start: 0, duration: 3.0, fromX: w * 0.12, toX: w * 0.12 });
+      tl.add(tukang, "wave", { start: 3.0, duration: 2.0, fromX: w * 0.12, toX: w * 0.12, facing: 1 });
+      tl.add(tukang, "serveCounter", { start: 5.0, duration: 3.0, fromX: w * 0.12, toX: w * 0.12 });
+      tl.add(tukang, "lookAround", { start: 8.0, duration: 2.5, fromX: w * 0.12, toX: w * 0.12 });
+      tl.add(tukang, "serveCounter", { start: 10.5, duration: 2.5, fromX: w * 0.12, toX: w * 0.12 });
+      tl.add(korban, "waitQueue", { start: 0, duration: 28.0, fromX: w * 1.15, toX: w * 1.15, facing: -1 });
+      // A1 7-13: penabrak masuk sambil menelepon (jalan 2 tahap + jeda tengok)
+      tl.add(penabrak, "walk", { start: 7.0, duration: 2.5, fromX: w * 1.05, toX: w * 0.93, facing: -1 });
+      tl.add(penabrak, "talk", { start: 9.5, duration: 2.0, fromX: w * 0.93, toX: w * 0.93, facing: -1 });
+      tl.add(penabrak, "walk", { start: 11.5, duration: 2.0, fromX: w * 0.93, toX: w * 0.80, facing: -1 });
+      // A2 13-21: buka pintu lebar -> senggol -> panik sebentar
+      tl.add(penabrak, "push", { start: 13.5, duration: 1.5, fromX: w * 0.80, toX: w * 0.80, facing: -1 });
+      tl.add(penabrak, "surprised", { start: 15.0, duration: 1.2, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(penabrak, "lookAround", { start: 16.2, duration: 1.8, fromX: w * 0.80, toX: w * 0.80, facing: -1 });
+      tl.add(penabrak, "talk", { start: 18.0, duration: 2.0, fromX: w * 0.80, toX: w * 0.80, facing: -1 });
+      tl.add(korban, "waitQueue", { start: 28.0, duration: 1.0, fromX: w * 1.15, toX: w * 1.15, facing: -1 });
+      // A3 21-29: kabur
+      tl.add(penabrak, "run", { start: 21.5, duration: 3.0, fromX: w * 0.80, toX: w * 1.20, facing: 1 });
+      // A4 29-37: korban datang (2 tahap), kaget, sedih, jongkok periksa
+      tl.add(korban, "walk", { start: 29.0, duration: 2.5, fromX: w * 1.15, toX: w * 0.95, facing: -1 });
+      tl.add(korban, "walk", { start: 31.5, duration: 1.5, fromX: w * 0.95, toX: w * 0.80, facing: -1 });
+      tl.add(korban, "surprised", { start: 33.0, duration: 1.5, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(korban, "sad", { start: 34.5, duration: 3.0, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(korban, "sit", { start: 37.5, duration: 3.0, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(korban, "sad", { start: 40.5, duration: 2.0, fromX: w * 0.80, toX: w * 0.80 });
+      // A5 37-45: saksi + tukang mendekat menolong
+      tl.add(saksi, "walk", { start: 37.0, duration: 2.5, fromX: w * 0.50, toX: w * 0.68, facing: 1 });
+      tl.add(saksi, "push", { start: 39.5, duration: 2.5, fromX: w * 0.68, toX: w * 0.70, facing: 1 });
+      tl.add(tukang, "walk", { start: 37.0, duration: 3.0, fromX: w * 0.12, toX: w * 0.30, facing: 1 });
+      tl.add(tukang, "point", { start: 40.0, duration: 3.0, fromX: w * 0.30, toX: w * 0.30, facing: 1 });
+      // A6 45-55: tunjuk pelat, catat (tengok-tengok), sampaikan ke korban, moral muncul
+      tl.add(saksi, "reprimandPoint", { start: 45.0, duration: 2.0, fromX: w * 0.70, toX: w * 0.70, facing: 1 });
+      tl.add(saksi, "lookAround", { start: 47.0, duration: 1.5, fromX: w * 0.70, toX: w * 0.70, facing: 1 });
+      tl.add(saksi, "talk", { start: 48.5, duration: 2.0, fromX: w * 0.70, toX: w * 0.70, facing: -1 });
+      tl.add(saksi, "point", { start: 50.5, duration: 2.0, fromX: w * 0.70, toX: w * 0.70, facing: -1 });
+      // closing 55-62: jabat tangan + senang bareng
+      tl.add(korban, "happy", { start: 55.0, duration: 2.5, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(korban, "clap", { start: 57.5, duration: 2.0, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(korban, "happy", { start: 59.5, duration: 2.5, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(saksi, "wave", { start: 55.0, duration: 2.0, fromX: w * 0.70, toX: w * 0.70, facing: -1 });
+      tl.add(saksi, "happy", { start: 57.0, duration: 5.0, fromX: w * 0.70, toX: w * 0.70, facing: -1 });
+      tl.add(tukang, "wave", { start: 55.0, duration: 2.0, fromX: w * 0.30, toX: w * 0.30, facing: 1 });
+      tl.add(tukang, "happy", { start: 57.0, duration: 5.0, fromX: w * 0.30, toX: w * 0.30, facing: 1 });
+      tl.addObjectTrack(mobilKorban, { start: 0, duration: 62,
         onUpdate(obj, p, t) {
           const bx = w * 0.80;
-          if (t < 2.8) obj.x = bx;
-          else if (t < 3.4) obj.x = bx + (w * 0.02) * Math.min(1, (t - 2.8) / 0.6);
-          else if (t < 6.2) obj.x = bx + w * 0.02;
-          else if (t < 7.0) obj.x = bx + w * 0.02 * (1 - (t - 6.2) / 0.8);
-          else obj.x = bx;
-          if (t >= 2.5 && t < 3.6) { speechBubble.visible = true; speechBubble.props.text = T.bub1; }
-          else if (t >= 3.6 && t < 4.6) { speechBubble.visible = true; speechBubble.props.text = T.bub2; }
+          if (t < 14.5) obj.x = bx;
+          else if (t < 16.0) obj.x = bx + (w * 0.02) * Math.min(1, (t - 14.5) / 1.5);
+          else obj.x = bx + w * 0.02;
+          if (t >= 14.0 && t < 17.0) { speechBubble.visible = true; speechBubble.props.text = T.bub1; }
+          else if (t >= 21.5 && t < 25.0) { speechBubble.visible = true; speechBubble.props.text = T.bub2; }
           else speechBubble.visible = false;
-          moralTitle.props.progress = t < 8.5 ? 0 : Math.min(1, (t - 8.5) / 1.4);
+          moralTitle.props.progress = t < 45 ? 0 : Math.min(1, (t - 45) / 2.0);
         } });
       return { penabrak, korban, saksi, tukang, mobilKorban, speechBubble, moralTitle };
     }
