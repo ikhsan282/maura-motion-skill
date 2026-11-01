@@ -62,9 +62,6 @@ function loadPlaywright() {
     () => createRequire(path.join(SKILL, 'package.json'))('playwright-core'),
     () => createRequire(path.join(os.homedir(), '.cache', 'maura-motion', 'node', 'package.json'))('playwright-core'),
     () => createRequire(path.join(os.homedir(), '.cache', 'maura-motion', 'node', 'package.json'))('playwright'),
-    // ponytail: legacy cache path before rename — remove once setup.mjs re-runs on all machines
-    () => createRequire(path.join(os.homedir(), '.cache', 'animasters', 'node', 'package.json'))('playwright-core'),
-    () => createRequire(path.join(os.homedir(), '.cache', 'animasters', 'node', 'package.json'))('playwright'),
     () => createRequire('/opt/npm-tools/package.json')('playwright'),
   ];
   for (const t of tries) { try { return t(); } catch { /* next */ } }
