@@ -14,6 +14,10 @@ import soundfile as sf
 MODELS = os.environ.get('AM_MODELS', os.path.join(os.path.expanduser('~'), '.cache', 'maura-motion', 'models'))
 SR = 24000
 
+# Default voice per language — ganti di sini kalau mau suara lain jadi standar.
+# el-id-f = Alice (ElevenLabs, natural, butuh API key). Alternatif gratis offline: id-f.
+DEFAULT_VOICE = {'id': 'el-id-f', 'en': 'en-m'}
+
 VOICES = {
     # ElevenLabs (cloud, natural) — needs ELEVENLABS_API_KEY in ~/.hermes/elevenlabs.env
     'el-id-m': {'engine': 'elevenlabs', 'voice': 'pNInz6obpgDQGcFmaJgB', 'model': 'eleven_multilingual_v2', 'desc': 'Pria Indonesia, natural (ElevenLabs)'},
@@ -174,7 +178,7 @@ def main():
     a = ap.parse_args()
     proj = os.path.abspath(a.project)
     story = json.load(open(os.path.join(proj, 'story.json'), encoding='utf-8'))
-    vname = a.voice or story.get('voice') or ('id-m' if story.get('lang', 'id') == 'id' else 'en-m')
+    vname = a.voice or story.get('voice') or DEFAULT_VOICE.get(story.get('lang', 'id'), 'id-m')
     if vname not in VOICES: sys.exit(f'unknown voice {vname}. choose: {", ".join(VOICES)}')
     v = VOICES[vname]
     speed = a.speed or story.get('speed') or v.get('speed', 1.0)
