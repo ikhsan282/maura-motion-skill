@@ -1,0 +1,13 @@
+# runtime & cache
+node_tmp/
+node_modules/
+build/
+out/
+*.log
+
+# voice models & venv (diinstall via scripts/setup.mjs, jangan commit)
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
