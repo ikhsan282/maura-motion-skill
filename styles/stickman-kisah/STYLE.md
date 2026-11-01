@@ -1,6 +1,6 @@
 ---
-id: stickman-antrean
-name: Stickman Antrean
+id: stickman-kisah
+name: Stickman Kisah
 no: 68
 source: custom:garis-hidup-antrean
 family: social
@@ -30,7 +30,7 @@ vs `serveCounter` (petugas) vs `holdChildHand` (ibu gandeng anak).
 **Rumus hook:** "[X] nyerobot, [Y] berani menegur. Apa yang terjadi?" / "Antre itu bukan soal
 waktu. Soal menghargai."
 
-**Kit API (`styles/stickman-antrean/kit.js`):**
+**Kit API (`styles/stickman-kisah/kit.js`):**
 - `StickmanKit.createAntreanScene(kit, {})`: plafon, 2 papan, loket, strip, watermark,
   bubble, judul moral, 7 karakter + timeline 12,3 dtk. Header edisi Maura Motion.
 - Motion antrean: `waitQueue`, `cutQueueExcuse`, `reprimandPoint`, `walkShame`,
@@ -41,4 +41,4 @@ waktu. Soal menghargai."
 - `ponytail:` offsetY warisan 54 → 10 (8 titik sleep/wakeUp/fall/getUp/sujud); di scene
   antrean tak terpakai (semua berdiri), disamakan pola presisi kasur stickman-subuh.
 
-**Demo:** "Antrean", 5 baris ID, voice el-id-m (ElevenLabs George), musik lofi.
+**Demo:** "Kisah Antrean", 5 baris ID, voice el-id-m (ElevenLabs George), musik lofi.

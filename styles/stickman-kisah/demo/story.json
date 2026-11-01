@@ -28,10 +28,10 @@
   "preset": "lofi"
  },
  "pause": 0.2,
- "slug": "demo_stickman_antrean",
+ "slug": "demo_stickman_kisah",
  "speed": 1.15,
- "style": "stickman-antrean",
+ "style": "stickman-kisah",
  "tail": 1.0,
- "title": "Antrean",
+ "title": "Kisah Antrean",
  "voice": "el-id-m"
 }

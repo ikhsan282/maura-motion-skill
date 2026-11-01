@@ -3080,6 +3080,15 @@
         case "sparkle":
           this._renderSparkle(ctx);
           break;
+        case "motor":
+          this._renderMotor(ctx);
+          break;
+        case "mobil":
+          this._renderMobil(ctx);
+          break;
+        case "markaParkir":
+          this._renderMarkaParkir(ctx);
+          break;
         case "circle":
           ctx.fillStyle = this.color;
           ctx.beginPath();
@@ -3665,7 +3674,7 @@
       ctx.font = `bold ${fontSize}px sans-serif`;
       ctx.textBaseline = "middle";
 
-      const line1Words = ["Antre", "itu", "bukan", "soal", "waktu."];
+      const line1Words = this.props.words1 || ["Antre", "itu", "bukan", "soal", "waktu."];
       const totalSteps = 7;
       const currentStep = progress * totalSteps;
 
@@ -3686,7 +3695,7 @@
           ctx.fillText("Soal", 0, y2);
         } else {
           const part1 = "Soal ";
-          const part2 = "menghargai.";
+          const part2 = this.props.words2 || "menghargai.";
           const w1 = ctx.measureText(part1).width;
           const w2 = ctx.measureText(part2).width;
           const x0 = -(w1 + w2) / 2;
@@ -3975,6 +3984,79 @@
         ctx.stroke();
       });
       ctx.restore();
+    }
+
+    _renderMotor(ctx) {
+      const w = this.width || 200;
+      const h = this.height || 120;
+      ctx.save();
+      ctx.strokeStyle = "#C8CDD2";
+      ctx.fillStyle = "#2A2F36";
+      ctx.lineWidth = 7;
+      ctx.lineCap = "round";
+      // dua roda
+      [[-w*0.32,0],[w*0.32,0]].forEach(([rx,ry]) => {
+        ctx.beginPath(); ctx.arc(rx, ry, h*0.22, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+      });
+      // bodi
+      ctx.strokeStyle = this.color || "#E74C3C";
+      ctx.lineWidth = 9;
+      ctx.beginPath();
+      ctx.moveTo(-w*0.32, -h*0.1); ctx.lineTo(-w*0.05, -h*0.45);
+      ctx.lineTo(w*0.25, -h*0.42); ctx.lineTo(w*0.32, -h*0.05);
+      ctx.stroke();
+      // setang + jok
+      ctx.lineWidth = 6;
+      ctx.beginPath(); ctx.moveTo(w*0.25, -h*0.42); ctx.lineTo(w*0.30, -h*0.62); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(-w*0.18, -h*0.48); ctx.lineTo(w*0.05, -h*0.48); ctx.stroke();
+      // miring jika jatuh
+      ctx.restore();
+    }
+
+    _renderMobil(ctx) {
+      const w = this.width || 320;
+      const h = this.height || 130;
+      ctx.fillStyle = "rgba(0,0,0,0.4)";
+      ctx.beginPath(); ctx.ellipse(0, 4, w*0.48, 10, 0, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = this.color || "#5D6D7E";
+      ctx.strokeStyle = "#12161A";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.roundRect(-w*0.5, -h*0.55, w, h*0.55, 14);
+      ctx.fill(); ctx.stroke();
+      // kabin + kaca
+      ctx.fillStyle = "#1B2631";
+      ctx.beginPath();
+      ctx.roundRect(-w*0.28, -h*0.95, w*0.56, h*0.42, 12);
+      ctx.fill(); ctx.stroke();
+      // roda
+      ctx.fillStyle = "#15181C";
+      [[-w*0.32],[w*0.32]].forEach(([rx]) => {
+        ctx.beginPath(); ctx.arc(rx, 0, h*0.20, 0, Math.PI*2); ctx.fill();
+        ctx.fillStyle = "#7F8C8D";
+        ctx.beginPath(); ctx.arc(rx, 0, h*0.09, 0, Math.PI*2); ctx.fill();
+        ctx.fillStyle = "#15181C";
+      });
+      // lampu
+      ctx.fillStyle = "#F9E79F";
+      ctx.fillRect(w*0.5-8, -h*0.42, 8, 12);
+    }
+
+    _renderMarkaParkir(ctx) {
+      const w = this.width || 620;
+      const h = this.height || 16;
+      const n = this.props.slots || 5;
+      ctx.strokeStyle = "#F4F6F7";
+      ctx.lineWidth = 5;
+      ctx.globalAlpha *= 0.85;
+      // garis dasar
+      ctx.beginPath(); ctx.moveTo(-w*0.5, 0); ctx.lineTo(w*0.5, 0); ctx.stroke();
+      // sekat slot
+      for (let i = 0; i <= n; i++) {
+        const x = -w*0.5 + (w/n)*i;
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, -h*3.2); ctx.stroke();
+      }
+      ctx.globalAlpha /= 0.85;
     }
 
     /**
@@ -5639,6 +5721,16 @@
     // ------------------------------------------------------------------------
 
     static createAntreanScene(kit, options = {}) {
+      const theme = options.theme || "antrean";
+      const T = theme === "parkir"
+        ? { sign1: "PARKIR", sign2: "SABAR", bub1: "SEBENTAR", bub2: "KEBEBURU",
+            w1: ["Sabar", "itu", "bukan", "soal", "menang."], w2: "menahan diri." }
+        : { sign1: "LOKET", sign2: "ANTREAN", bub1: "BENTAR DOANG", bub2: "BURU-BURU",
+            w1: ["Antre", "itu", "bukan", "soal", "waktu."], w2: "menghargai." };
+      const __line1 = ["Antre", "itu", "bukan", "soal", "waktu."];
+      if (theme === "parkir") {
+        return StickmanKit._buildParkirScene(kit, options, T);
+      }
       const w = kit.width;
       const h = kit.height;
       const floorY = Math.round(h * 0.685);
@@ -5678,7 +5770,7 @@
         strokeColor: "#485F73",
         zIndex: 4,
         props: {
-          text: "LOKET",
+          text: T.sign1,
           textColor: "#EAECEE",
           wireLength: h * 0.072,
           leftArrow: false
@@ -5696,7 +5788,7 @@
         strokeColor: "#1C2228",
         zIndex: 4,
         props: {
-          text: "ANTREAN",
+          text: T.sign2,
           textColor: "#14181C",
           wireLength: h * 0.033,
           leftArrow: true
@@ -5738,7 +5830,7 @@
         height: h * 0.032,
         visible: false,
         zIndex: 25,
-        props: { text: "BENTAR DOANG", tailOffsetX: 12 }
+        props: { text: T.bub1, tailOffsetX: 12 }
       });
 
       // 7. Top Moral Narrative Title ("Antre itu bukan soal waktu. Soal menghargai.")
@@ -5750,7 +5842,9 @@
         zIndex: 25,
         props: {
           fontSize: Math.round(w * 0.041),
-          progress: 0
+          progress: 0,
+          words1: T.w1,
+          words2: T.w2
         }
       });
 
@@ -5891,11 +5985,11 @@
           if (t >= 3.6 && t < 4.7) {
             speechBubble.visible = true;
             speechBubble.x = w * 0.34;
-            speechBubble.props.text = "BENTAR DOANG";
+            speechBubble.props.text = T.bub1;
           } else if (t >= 4.7 && t < 5.8) {
             speechBubble.visible = true;
             speechBubble.x = w * 0.26;
-            speechBubble.props.text = "BURU-BURU";
+            speechBubble.props.text = T.bub2;
           } else {
             speechBubble.visible = false;
           }
@@ -5932,6 +6026,92 @@
         speechBubble,
         moralTitle
       };
+    }
+
+    static _buildParkirScene(kit, options, T) {
+      const w = kit.width;
+      const h = kit.height;
+      const floorY = Math.round(h * 0.685);
+      const ceilingY = Math.round(h * 0.305);
+      kit.activeScene.background = {
+        stops: [[0.0, "#2C1A3E"], [0.55, "#4A2C5A"], [1.0, "#14101C"]]
+      };
+      kit.activeScene.floorY = null;
+      kit.activeScene.reflection.enabled = false;
+      kit.addObject({
+        id: "ghp_sign_parkir", type: "hangingSign",
+        x: w * 0.5, y: ceilingY + h * 0.055, width: w * 0.30, height: h * 0.038,
+        color: "#EAE6DF", strokeColor: "#1C2228", zIndex: 4,
+        props: { text: "PARKIR", textColor: "#14181C", wireLength: h * 0.033, leftArrow: false }
+      });
+      kit.addObject({
+        id: "ghp_marka", type: "markaParkir",
+        x: w * 0.5, y: floorY + 4, width: w * 0.72, height: 15, zIndex: 5,
+        props: { slots: 5 }
+      });
+      const motorColors = ["#E74C3C", "#2E86C1", "#27AE60"];
+      [0.22, 0.42, 0.62].forEach((fx, i) => kit.addObject({
+        id: `ghp_motor${i}`, type: "motor",
+        x: w * fx, y: floorY, width: w * 0.13, height: h * 0.062, zIndex: 10,
+        props: {}, color: motorColors[i]
+      }));
+      const motorJatuh = kit.addObject({
+        id: "ghp_motor_jatuh", type: "motor",
+        x: w * 0.80, y: floorY + 6, width: w * 0.13, height: h * 0.062, zIndex: 10,
+        rotation: 0, props: {}, color: "#F39C12"
+      });
+      kit.addObject({
+        id: "ghp_mobil", type: "mobil",
+        x: w * 0.08, y: floorY, width: w * 0.20, height: h * 0.068, zIndex: 9,
+        props: {}, color: "#5D6D7E"
+      });
+      const speechBubble = kit.addObject({
+        id: "ghp_speech_bubble", type: "speechBubble",
+        x: w * 0.66, y: floorY - h * 0.19, width: w * 0.24, height: h * 0.032,
+        visible: false, zIndex: 25, props: { text: T.bub1, tailOffsetX: 12 }
+      });
+      const moralTitle = kit.addObject({
+        id: "ghp_moral_title", type: "highlightedTitle",
+        x: w * 0.5, y: h * 0.20, zIndex: 25,
+        props: { fontSize: Math.round(w * 0.041), progress: 0, words1: T.w1, words2: T.w2 }
+      });
+      const bs = (h / 1920) * 1.48;
+      const mk = (id, fx, col, glow) => kit.addStickman(Object.assign({
+        id, x: w * fx, y: floorY, scale: bs * 0.96, color: col,
+        backLimbColor: "#5A626A", style: "garishidup", facing: -1, zIndex: 14
+      }, glow ? { color: "#F7F5E8", backLimbColor: "#D5D2C4", glowColor: "rgba(255,248,215,0.38)", glowBlur: 24, scale: bs * 1.04, zIndex: 15 } : {}));
+      const penabrak = mk("ghp_penabrak", 1.05, "#7E878F");
+      const korban = mk("ghp_korban", 0.80, "#7E878F");
+      const saksi = mk("ghp_saksi", 0.50, null, true);
+      const tukang = mk("ghp_tukang", 0.12, "#7E878F");
+      const tl = kit.timeline;
+      tl.clear();
+      tl.add(penabrak, "walk", { start: 0.5, duration: 2.0, fromX: w * 1.05, toX: w * 0.80, facing: -1 });
+      tl.add(penabrak, "push", { start: 2.5, duration: 1.0, fromX: w * 0.80, toX: w * 0.80, facing: -1 });
+      tl.add(penabrak, "run", { start: 3.5, duration: 1.6, fromX: w * 0.80, toX: w * 1.15, facing: 1 });
+      tl.add(korban, "walk", { start: 4.2, duration: 1.6, fromX: w * 1.05, toX: w * 0.80, facing: -1 });
+      tl.add(korban, "surprised", { start: 5.8, duration: 1.0, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(korban, "sad", { start: 6.8, duration: 2.5, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(korban, "happy", { start: 10.5, duration: 1.8, fromX: w * 0.80, toX: w * 0.80 });
+      tl.add(saksi, "waitQueue", { start: 0, duration: 5.0, fromX: w * 0.50, toX: w * 0.50, facing: 1 });
+      tl.add(saksi, "walk", { start: 5.0, duration: 1.2, fromX: w * 0.50, toX: w * 0.72, facing: 1 });
+      tl.add(saksi, "push", { start: 6.2, duration: 1.6, fromX: w * 0.72, toX: w * 0.74, facing: 1 });
+      tl.add(saksi, "reprimandPoint", { start: 7.8, duration: 1.2, fromX: w * 0.74, toX: w * 0.74, facing: 1 });
+      tl.add(saksi, "happy", { start: 10.5, duration: 1.8, fromX: w * 0.74, toX: w * 0.74, facing: -1 });
+      tl.add(tukang, "serveCounter", { start: 0, duration: 12.3, fromX: w * 0.12, toX: w * 0.12 });
+      tl.addObjectTrack(motorJatuh, { start: 0, duration: 12.3,
+        onUpdate(obj, p, t) {
+          if (t < 2.8) obj.rotation = 0;
+          else if (t < 3.4) obj.rotation = -68 * Math.min(1, (t - 2.8) / 0.6);
+          else if (t < 6.2) obj.rotation = -68;
+          else if (t < 7.0) obj.rotation = -68 * (1 - (t - 6.2) / 0.8);
+          else obj.rotation = 0;
+          if (t >= 2.5 && t < 3.6) { speechBubble.visible = true; speechBubble.props.text = T.bub1; }
+          else if (t >= 3.6 && t < 4.6) { speechBubble.visible = true; speechBubble.props.text = T.bub2; }
+          else speechBubble.visible = false;
+          moralTitle.props.progress = t < 8.5 ? 0 : Math.min(1, (t - 8.5) / 1.4);
+        } });
+      return { penabrak, korban, saksi, tukang, motorJatuh, speechBubble, moralTitle };
     }
   }
 

@@ -1,0 +1,49 @@
+{
+ "lang": "id",
+ "lead": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Motor disenggol sampai jatuh di parkiran mal, pelakunya malah kabur. Satu orang melihat semuanya dari ujung lorong."
+  },
+  {
+   "id": "a1",
+   "text": "Sabtu sore parkiran mal itu penuh. Motor berjejer rapat sampai ke lorong, mobil antre masuk, semua orang buru-buru."
+  },
+  {
+   "id": "a2",
+   "text": "Seorang pria menerobos lorong sempit sambil menelepon. Bahunya menyenggol spion motor kuning sampai motor itu oleng dan jatuh menimpa motor sebelahnya."
+  },
+  {
+   "id": "a3",
+   "text": "Sebentar, katanya tanpa menoleh. Kebeburu, katanya sambil mempercepat langkah. Lalu hilang di keramaian begitu saja."
+  },
+  {
+   "id": "a4",
+   "text": "Lima menit kemudian pemilik motor datang membawa belanjaan. Wajahnya langsung pucat melihat motor kesayangannya tergolek di lantai."
+  },
+  {
+   "id": "a5",
+   "text": "Dari ujung lorong, saksi yang melihat semuanya berjalan mendekat. Bersama tukang parkir, mereka menegakkan motor itu dan memeriksa kerusakannya."
+  },
+  {
+   "id": "a6",
+   "text": "Spion lecet, bodi baret. Tapi saksi mencatat pelat nomor penabrak dan menyerahkannya ke pos keamanan. Sabar itu bukan soal menang, soal menahan diri."
+  },
+  {
+   "id": "closing",
+   "text": "Pemilik motor berterima kasih berkali-kali. Kebaikan kecil di parkiran, ingatannya bisa bertahun-tahun."
+  }
+ ],
+ "music": {
+  "db": -17,
+  "preset": "lofi"
+ },
+ "pause": 0.2,
+ "slug": "demo_stickman_kisah_parkir",
+ "speed": 1.0,
+ "style": "stickman-kisah",
+ "tail": 1.0,
+ "title": "Kisah Parkiran",
+ "voice": "el-id-m"
+}
