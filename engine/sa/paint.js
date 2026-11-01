@@ -1,6 +1,6 @@
 /*
  * THE PAINT PASS: a flat drawing in, a painted frame out.
- * (From Shorts Animator. AniMasters change: the stroke flow field is computed once per drawing into a
+ * (From Shorts Animator. Maura Motion change: the stroke flow field is computed once per drawing into a
  *  1/8-size texture, so each stroke reads it instead of recomputing it: same look, several times faster.)
  *
  * Every scene is first drawn flat (kit.js): clean shapes, no texture. This

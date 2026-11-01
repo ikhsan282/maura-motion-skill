@@ -1,4 +1,4 @@
-// AniMasters style kit: SYNTHWAVE NEON (1980s retro-future).
+// Maura Motion style kit: SYNTHWAVE NEON (1980s retro-future).
 // Black-purple sky, striped magenta-orange sun, neon grid floor scrolling to the horizon, wireframe mountains,
 // chrome type, neon line art (drummer, drum kit, mic, rack gear) and audio graphics (VU meters, oscilloscope
 // waveforms cut by a gate). Glow is cheap: every neon path is stroked 3 times (wide/faint -> thin/bright),

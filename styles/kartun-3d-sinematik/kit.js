@@ -1,4 +1,4 @@
-// AniMasters style kit: KARTUN 3D SINEMATIK (stylised 3D animated-film look, three.js).
+// Maura Motion style kit: KARTUN 3D SINEMATIK (stylised 3D animated-film look, three.js).
 // Soft toon shading (4-band ramp with soft edges) + warm/cool rim light + thin ink outlines that keep the
 // same pixel width at any distance, round chunky characters with big glossy eyes, painted sky domes,
 // fog for depth, blob contact shadows, and a 2D overlay for titles / nameplates / grain.

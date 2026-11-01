@@ -1,4 +1,4 @@
-// AniMasters style kit: DARK GLOW PRODUCT UI.
+// Maura Motion style kit: DARK GLOW PRODUCT UI.
 // Near-black navy stage with huge soft violet/blue glows (pre-rendered sprites), a faint grid and film noise;
 // glassmorphism cards with a 1px rim and top highlight; light trails; giant tabular numbers; mono micro-labels;
 // text that scrambles into cipher glyphs and decodes back. Motion: closed-form springs, blur-free "rise + glow-in".

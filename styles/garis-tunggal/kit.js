@@ -1,4 +1,4 @@
-// AniMasters style kit: GARIS TUNGGAL (one continuous line).
+// Maura Motion style kit: GARIS TUNGGAL (one continuous line).
 // Warm white paper, lots of air, a single thin black line that never lifts: it travels across the page and draws
 // every object in turn, flowing out of one picture into the next. A fine-liner leads the line, the camera follows
 // the tip, small spaced capitals label things, and one red accent marks what matters.

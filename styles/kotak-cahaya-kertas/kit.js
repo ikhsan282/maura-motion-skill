@@ -1,4 +1,4 @@
-// AniMasters style kit: KOTAK CAHAYA KERTAS (paper shadow-box / lightbox).
+// Maura Motion style kit: KOTAK CAHAYA KERTAS (paper shadow-box / lightbox).
 // A deep frame holds 5–7 sheets of cut paper, one behind the other, lit from BEHIND by a coloured LED panel.
 // The backlight is a gradient (blue / violet / orange); each sheet is a silhouette whose colour comes from how
 // much light passes through the sheets in front of it: far sheets are pale and hazy, near sheets almost black.

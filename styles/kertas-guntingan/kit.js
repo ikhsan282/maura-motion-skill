@@ -1,4 +1,4 @@
-// AniMasters style kit: KERTAS GUNTINGAN (layered cut paper).
+// Maura Motion style kit: KERTAS GUNTINGAN (layered cut paper).
 // A multi-plane paper diorama: every shape is a sheet of coloured paper with fibre texture, either cut with
 // scissors (clean edge) or torn by hand (ragged edge with a white fibrous core). Sheets sit at different
 // heights, so each one casts a real soft drop shadow on the sheets below. Characters are jointed paper

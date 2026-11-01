@@ -1,4 +1,4 @@
-// AniMasters runtime: loads a project (story.json + build/timeline.json + scene.js),
+// Maura Motion runtime: loads a project (story.json + build/timeline.json + scene.js),
 // exposes the AM API to the scene, and lets the renderer draw any frame by index.
 import * as core from './lib/core.js';
 import * as draw from './lib/draw.js';

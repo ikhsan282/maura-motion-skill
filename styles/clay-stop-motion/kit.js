@@ -1,4 +1,4 @@
-// AniMasters style kit: CLAY STOP MOTION (plasticine diorama, three.js).
+// Maura Motion style kit: CLAY STOP MOTION (plasticine diorama, three.js).
 // Matte plasticine (roughness ~0.8) with a fingerprint normal map and lumpy vertex displacement, soft studio
 // light + room reflections, characters and props built from rolled clay shapes (same rig as the cartoon kit),
 // a tabletop diorama with a painted paper backdrop, tilt-shift blur at the top and bottom of the frame,

@@ -1,4 +1,4 @@
-"""AniMasters sound effects, synthesised (no samples). Each returns a mono float32 array at 44.1 kHz.
+"""Maura Motion sound effects, synthesised (no samples). Each returns a mono float32 array at 44.1 kHz.
 Use from a scene with AM.sfx('whoosh', time) or from story.json "sfx": [{"at": "lineId", "type": "gong"}].
 """
 import numpy as np

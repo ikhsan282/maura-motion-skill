@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// AniMasters setup: checks Node/ffmpeg/Chrome, installs the renderer driver (playwright-core) and the offline
-// narrator (Python venv with kokoro-onnx + piper-tts, voice models) into ~/.cache/animasters. Safe to re-run.
+// Maura Motion setup: checks Node/ffmpeg/Chrome, installs the renderer driver (playwright-core) and the offline
+// narrator (Python venv with kokoro-onnx + piper-tts, voice models) into ~/.cache/maura-motion. Safe to re-run.
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -10,21 +10,21 @@ import { fileURLToPath } from 'node:url';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const SKILL = path.resolve(here, '..');
-const CACHE = path.join(os.homedir(), '.cache', 'animasters');
+const CACHE = path.join(os.homedir(), '.cache', 'maura-motion');
 const MODELS = path.join(CACHE, 'models');
 const win = process.platform === 'win32';
 const ok = (m) => console.log('  ✓ ' + m), bad = (m) => console.log('  !! ' + m);
 let failed = false;
 
 const has = (bin, args = ['-version']) => spawnSync(bin, args, { encoding: 'utf8' }).status === 0;
-console.log('AniMasters setup\n');
+console.log('Maura Motion setup\n');
 if (+process.versions.node.split('.')[0] < 22) { bad(`Node ${process.versions.node}: need 22+ (https://nodejs.org)`); failed = true; } else ok(`Node ${process.versions.node}`);
 if (has('ffmpeg')) ok('ffmpeg'); else { bad('ffmpeg not found: ' + (win ? 'winget install Gyan.FFmpeg' : process.platform === 'darwin' ? 'brew install ffmpeg' : 'sudo apt install ffmpeg')); failed = true; }
 
 // renderer driver
 const nodeDir = path.join(CACHE, 'node'); fs.mkdirSync(nodeDir, { recursive: true });
 if (!fs.existsSync(path.join(nodeDir, 'node_modules', 'playwright-core'))) {
-  if (!fs.existsSync(path.join(nodeDir, 'package.json'))) fs.writeFileSync(path.join(nodeDir, 'package.json'), '{"name":"animasters-node","private":true}');
+  if (!fs.existsSync(path.join(nodeDir, 'package.json'))) fs.writeFileSync(path.join(nodeDir, 'package.json'), '{"name":"maura-motion-node","private":true}');
   const r = spawnSync(win ? 'npm.cmd' : 'npm', ['install', '--silent', 'playwright-core@1.49.1'], { cwd: nodeDir, stdio: 'inherit', shell: win });
   if (r.status !== 0) { bad('npm install playwright-core failed'); failed = true; }
 }
@@ -51,7 +51,7 @@ if (fs.existsSync(py)) {
 }
 fs.mkdirSync(MODELS, { recursive: true });
 const get = (url, dest) => new Promise((res, rej) => {
-  const go = (u, n = 0) => https.get(u, { headers: { 'user-agent': 'animasters' } }, (r) => {
+  const go = (u, n = 0) => https.get(u, { headers: { 'user-agent': 'maura-motion' } }, (r) => {
     if (r.statusCode >= 300 && r.statusCode < 400 && r.headers.location && n < 6) { r.resume(); return go(new URL(r.headers.location, u).toString(), n + 1); }
     if (r.statusCode !== 200) { r.resume(); return rej(new Error(`${r.statusCode} ${u}`)); }
     const tmp = dest + '.part', f = fs.createWriteStream(tmp);
@@ -75,10 +75,10 @@ ok('voice models in ' + MODELS);
 
 if (failed) { console.log('\nFix the lines marked !! and run this again.'); process.exit(1); }
 // smoke test: narrate + 2 stills of the wayang demo into a temp copy
-const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'animasters-'));
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'maura-motion-'));
 fs.cpSync(path.join(SKILL, 'styles', 'wayang-kulit', 'demo', 'story.json'), path.join(tmp, 'story.json'));
 fs.cpSync(path.join(SKILL, 'styles', 'wayang-kulit', 'demo', 'scene.js'), path.join(tmp, 'scene.js'));
 const r1 = spawnSync(py, [path.join(SKILL, 'audio', 'tts.py'), tmp], { stdio: 'inherit' });
 const r2 = spawnSync(process.execPath, [path.join(SKILL, 'engine', 'render.mjs'), tmp, '--stills', '3,40'], { stdio: 'inherit' });
-if (r1.status === 0 && r2.status === 0) console.log(`\nAniMasters is ready. Test stills: ${path.join(tmp, 'build', 'stills', 'sheet.png')}`);
+if (r1.status === 0 && r2.status === 0) console.log(`\nMaura Motion is ready. Test stills: ${path.join(tmp, 'build', 'stills', 'sheet.png')}`);
 else { console.log('\nSetup finished but the smoke test failed (see above).'); process.exit(1); }

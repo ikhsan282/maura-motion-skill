@@ -77,7 +77,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | gejala | solusi |
 |---|---|
 | `Playwright not found` / no Chrome | `node $SK/scripts/setup.mjs`; atau set `CHROME_PATH` |
-| narasi gagal | `node $SK/scripts/setup.mjs` (venv + model di ~/.cache/animasters); `AM_PYTHON` untuk Python lain |
+| narasi gagal | `node $SK/scripts/setup.mjs` (venv + model di ~/.cache/maura-motion); `AM_PYTHON` untuk Python lain |
 | kata salah diucap | tambah `"say"` dengan ejaan fonetik di line itu |
 | render lambat | painterly/3D tanpa GPU: turunkan `scale` di `AM.painter`, `hold: 3`; gaya 2D ~10 fps |
 | "cue not found" | scene pakai line id yang tidak ada di story.json |

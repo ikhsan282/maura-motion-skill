@@ -1,4 +1,4 @@
-// AniMasters style kit: BONEKA RAJUT (knitted amigurumi world on felt).
+// Maura Motion style kit: BONEKA RAJUT (knitted amigurumi world on felt).
 // Every surface is a material: knitted yarn (V stitches laid on ellipsoids and tubes, lit as 3D, fuzzy edges),
 // felt (fibre texture, thick cut edges, drop shadows), embroidery (running stitch, backstitch, satin letters),
 // buttons (glossy, two holes, cross thread). Everything is baked once into cached sprites; a frame only stamps them.

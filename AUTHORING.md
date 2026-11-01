@@ -1,4 +1,4 @@
-# Authoring an AniMasters style
+# Authoring an Maura Motion style
 
 A style is a reusable look **plus** a demo short that proves it. Everything is drawn by code, frame by
 frame, in headless Chrome; narration, music and sound effects are made offline. No image models, no stock,
@@ -21,7 +21,7 @@ shows the shot table, cue timing, hand-held props, camera, titles, SFX and the p
 ## 1. Commands
 
 ```bash
-SK=/home/claude/animasters            # the skill root (on a user's machine: ~/.claude/skills/animasters)
+SK=/home/claude/maura-motion            # the skill root (on a user's machine: ~/.claude/skills/maura-motion)
 python3 $SK/audio/tts.py <demo>        # narrate story.json -> build/narration.wav + build/timeline.json (cue times)
 node $SK/engine/render.mjs <demo> --stills 0.5,3,7.2,12    # PNG stills + build/stills/sheet.png (look at it!)
 node $SK/engine/render.mjs <demo> --range 10:14            # render a few seconds of motion -> build/video.mp4

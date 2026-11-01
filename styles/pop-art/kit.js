@@ -1,4 +1,4 @@
-// AniMasters style kit: POP ART SUNBURST (loud pop poster).
+// Maura Motion style kit: POP ART SUNBURST (loud pop poster).
 // Acid palette, continuously rotating sunbursts, Ben-Day/halftone dots, tilted die-cut stickers with white borders and
 // hard drop shadows, thick black outlines, extra-condensed type. Characters: an original pop-comic shopper and price
 // tags with faces. Signature moves: sticker slap (overshoot + squash), colour flood between scenes, slow 1.03–1.07 push.

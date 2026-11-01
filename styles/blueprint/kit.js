@@ -1,4 +1,4 @@
-// AniMasters style kit: BLUEPRINT (technical drawing in three inks).
+// Maura Motion style kit: BLUEPRINT (technical drawing in three inks).
 //   'pencil' : graphite on cream grid paper, double-pass wobbly strokes
 //   'blue'   : Prussian-blue blueprint, white hairlines, dashed hidden edges, hatching
 //   'holo'   : black with cyan glowing lines and scanlines (the final reveal)

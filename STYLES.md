@@ -1,4 +1,4 @@
-# AniMasters: daftar gaya
+# Maura Motion: daftar gaya
 
 65 gaya. Sebut gaya dengan nama atau nomornya ("gaya 11", "wayang kulit"). Setiap gaya punya `styles/<id>/STYLE.md` (ciri khas, gerak, rumus hook, API kit) dan contoh video di `styles/<id>/demo/out/`.
 

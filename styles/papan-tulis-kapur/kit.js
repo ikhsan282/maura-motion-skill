@@ -1,4 +1,4 @@
-// AniMasters style kit: PAPAN TULIS KAPUR (chalk on a green slate board).
+// Maura Motion style kit: PAPAN TULIS KAPUR (chalk on a green slate board).
 // Chalk text and diagrams write themselves live (stroke-on, broken dry-chalk texture, a soft dust halo), a real
 // stick of chalk follows the line and sheds dust, a felt duster wipes the board leaving cloudy ghosts, and chalk
 // stick figures (teacher with a pointer, students) react with faces and poses. Yellow chalk is the accent.

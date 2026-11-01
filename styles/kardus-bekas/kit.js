@@ -1,4 +1,4 @@
-// AniMasters style kit: KARDUS BEKAS (cardboard craft).
+// Maura Motion style kit: KARDUS BEKAS (cardboard craft).
 // Science-explainer illustration: no outlines, flat fills with soft two-stop gradients, cached glows,
 // deep navy space, warm light accents, round dot-eyed characters that squash and stretch.
 // Signature moves: the cutaway that opens (a wedge cut out of a planet / star), the zoom-through

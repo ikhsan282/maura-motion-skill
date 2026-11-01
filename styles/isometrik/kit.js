@@ -1,4 +1,4 @@
-// AniMasters style kit: ISOMETRIK (2:1 isometric diorama).
+// Maura Motion style kit: ISOMETRIK (2:1 isometric diorama).
 // Tiny low-detail blocks on a dark navy base, three-tone shading (light top, mid left, dark right), floating
 // numbered labels, things that travel along paths (parcels, trucks, couriers), day/night switch, a camera that
 // glides over the grid and follows the hero object. Painter's order = sort by (gx + gy).

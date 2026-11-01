@@ -1,4 +1,4 @@
-// AniMasters style kit: CAT AIR (watercolour, moving).
+// Maura Motion style kit: CAT AIR (watercolour, moving).
 // Soft transparent washes on cold-press paper: colour bleeds past the drawing, pools darker at the edge of each
 // wash, granulates in the paper tooth, and leaves white paper for light. Drawn FLAT in light, mid values (dark
 // only where it counts) in design px (1080x1920), then painted by the watercolor paint pass.

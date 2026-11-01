@@ -1,4 +1,4 @@
-// AniMasters 2D drawing helpers shared by every style kit.
+// Maura Motion 2D drawing helpers shared by every style kit.
 import { clamp, lerp, hrand, mulberry32, noise, TAU, rgba } from './core.js';
 
 export function makeCanvas(w, h) {

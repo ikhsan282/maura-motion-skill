@@ -1,4 +1,4 @@
-// AniMasters style kit: ANIME (film anime look: clean lineart, 2-tone cel shading, painted golden-hour skies).
+// Maura Motion style kit: ANIME (film anime look: clean lineart, 2-tone cel shading, painted golden-hour skies).
 // Signature: towering cumulus lit from below by a low sun, lens flare and light glints, rim-lit characters whose
 // hair and clothes move in the wind, huge glossy eyes in close-up, parallax backgrounds (station, train, village).
 // Everything is vector-drawn per frame with Path2D; static art (sky, clouds, glow sprites) is cached.

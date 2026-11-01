@@ -1,4 +1,4 @@
-// AniMasters style kit: STICKMAN DOODLE (black marker on a lined notebook page).
+// Maura Motion style kit: STICKMAN DOODLE (black marker on a lined notebook page).
 // Everything is drawn live with a felt-tip marker and keeps boiling (the line re-wobbles 12 times a second),
 // expressive stick figures act with faces and poses, sweat drops fly, motion lines trail, speech bubbles pop,
 // labels are handwritten. Two accents only: red and blue marker.

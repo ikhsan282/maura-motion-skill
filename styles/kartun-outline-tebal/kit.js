@@ -1,4 +1,4 @@
-// AniMasters style kit: KARTUN OUTLINE TEBAL (thick-outline cartoon / sticker cartoon).
+// Maura Motion style kit: KARTUN OUTLINE TEBAL (thick-outline cartoon / sticker cartoon).
 // Chunky near-black outlines, saturated flat fills with ONE hard cel shade, bean characters with huge eyes,
 // white die-cut sticker borders, rotating sunbursts, squash & stretch with overshoot, smear lines and pop-in stickers.
 // Characters are generic objects (battery, camera, chat bubble, game pad, map pin, music note, charger plug) — no logos.

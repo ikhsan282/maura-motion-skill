@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Word aligner for kinetic-type styles (AniMasters).
+"""Word aligner for kinetic-type styles (Maura Motion).
 
 tts.py estimates word times from syllable counts. Kinetic type needs the real ones, so this listens to
 build/narration.wav with faster-whisper (offline, model 'small' or whatever is cached) line by line and

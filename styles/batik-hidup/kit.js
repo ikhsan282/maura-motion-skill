@@ -1,4 +1,4 @@
-// AniMasters style kit: BATIK HIDUP (living batik).
+// Maura Motion style kit: BATIK HIDUP (living batik).
 // Everything is cloth: a white mori cotton with a fine weave. The canting (copper bowl + bamboo handle) draws hot
 // wax lines that glow amber; then the cloth is dyed (soga brown / indigo) and the waxed lines stay cream; the
 // wax cracks and the dye seeps in as fine veins (remukan). Motifs are drawn with their real geometry:

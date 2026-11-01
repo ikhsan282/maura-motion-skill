@@ -1,4 +1,4 @@
-// AniMasters style kit: TERMINAL ASCII (green-phosphor CRT).
+// Maura Motion style kit: TERMINAL ASCII (green-phosphor CRT).
 // A character-grid terminal drawn into a half-resolution "phosphor" canvas, then shown through a CRT:
 // cheap bloom (a 1/8-size copy stretched underneath the sharp text), barrel curvature (horizontal strips,
 // each pinched by its distance from the centre), cached scanlines + bezel + vignette, flicker, a rolling

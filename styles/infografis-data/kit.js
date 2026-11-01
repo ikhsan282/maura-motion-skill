@@ -1,4 +1,4 @@
-// AniMasters style kit: INFOGRAFIS DATA (dark data dashboard).
+// Maura Motion style kit: INFOGRAFIS DATA (dark data dashboard).
 // Near-black navy dashboard, thin axes and gridlines, HUD corner ticks, tabular-number counters that roll,
 // person pictograms that light up and physically regroup into a waffle chart, bars that grow, a ranked
 // bar list, a 100% stacked bar, and a mono source line. Everything eases with no overshoot except pops.

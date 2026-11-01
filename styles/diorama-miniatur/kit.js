@@ -1,4 +1,4 @@
-// AniMasters style kit: DIORAMA MINIATUR (tilt-shift miniature world, three.js).
+// Maura Motion style kit: DIORAMA MINIATUR (tilt-shift miniature world, three.js).
 // A toy-scale world built from primitives (vertex-coloured, baked into a few meshes), lit by one low golden
 // sun with long soft shadows, golden haze and drifting mist, then photographed "with a tilt-shift lens":
 // the top and bottom of the frame are blurred on a 2D layer from a downscaled copy of the 3D frame.

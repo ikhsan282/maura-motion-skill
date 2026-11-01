@@ -1,4 +1,4 @@
-// AniMasters style kit: MATH EXPLAINER GELAP (Manim-like math animation, original design).
+// Maura Motion style kit: MATH EXPLAINER GELAP (Manim-like math animation, original design).
 // Near-black ground, a small strict palette (blue, yellow, teal, red), crisp 4px strokes over translucent
 // fills, formulas that WRITE themselves on (outline first, then fill), shapes that physically rearrange.
 // Signature move: a circle cut into sectors that splits, unrolls into two combs and interleaves into a

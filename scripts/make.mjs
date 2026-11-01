@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// AniMasters: one command from a project folder (story.json + scene.js) to a finished, narrated MP4.
+// Maura Motion: one command from a project folder (story.json + scene.js) to a finished, narrated MP4.
 //
 //   node scripts/make.mjs <project>                 narrate -> render -> score -> mix -> <project>/out/<slug>.mp4
 //   node scripts/make.mjs <project> --stills 1,5,9  narrate, then just PNG stills + sheet (check before rendering)
@@ -27,7 +27,7 @@ if (!fs.existsSync(path.join(proj, 'story.json'))) { console.error(`no story.jso
 
 function python() {
   if (process.env.AM_PYTHON) return process.env.AM_PYTHON;
-  const venv = path.join(os.homedir(), '.cache', 'animasters', 'venv');
+  const venv = path.join(os.homedir(), '.cache', 'maura-motion', 'venv');
   const cand = process.platform === 'win32' ? path.join(venv, 'Scripts', 'python.exe') : path.join(venv, 'bin', 'python');
   if (fs.existsSync(cand)) return cand;
   return process.platform === 'win32' ? 'python' : 'python3';

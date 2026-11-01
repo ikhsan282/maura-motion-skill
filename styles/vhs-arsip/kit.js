@@ -1,4 +1,4 @@
-// AniMasters style kit: VHS & ARSIP CRT (archival videotape).
+// Maura Motion style kit: VHS & ARSIP CRT (archival videotape).
 // Scenes are drawn in normal 1080x1920 coordinates onto a 360x640 "tape" buffer (VHS resolution), then a
 // per-pixel VHS pass runs on that small buffer only: chroma blurred and shifted right (colour bleed), luma
 // softened, per-line tracking wobble, rolling tracking-noise bands, head-switching noise at the bottom, tape

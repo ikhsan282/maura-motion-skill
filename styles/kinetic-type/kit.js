@@ -1,4 +1,4 @@
-// AniMasters style kit: KINETIC TYPE (colour-block kinetic typography).
+// Maura Motion style kit: KINETIC TYPE (colour-block kinetic typography).
 // Giant condensed type that fills the column, 1-4 words per beat, each word landing on the frame it is spoken.
 // Full-bleed flat fields (tomato, cobalt, sunflower, ink, paper) flip on beats; words slam with a spring,
 // rise through a mask line, drop letter by letter, get struck through, boxed, echoed in outline.

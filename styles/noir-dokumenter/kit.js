@@ -1,4 +1,4 @@
-// AniMasters style kit: NOIR DOKUMENTER (redacted case file).
+// Maura Motion style kit: NOIR DOKUMENTER (redacted case file).
 // Sepia/black-and-white archive: typewritten paper, black redaction bars that slide off to reveal facts,
 // distressed red rubber stamps, engraving-style illustrations (line hatching, waterlined maps), a map with
 // pins and red string, heavy grain, gate weave, flicker and a hard vignette.

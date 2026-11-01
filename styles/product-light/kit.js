@@ -1,4 +1,4 @@
-// AniMasters style kit: PRODUCT FILM LIGHT (Apple-style launch film).
+// Maura Motion style kit: PRODUCT FILM LIGHT (Apple-style launch film).
 // Warm white stage washed with soft pastel blobs, floating white UI cards and a phone mockup with layered soft
 // shadows, an oversized pointer that taps, a "Screen Studio" camera that zooms into the UI, counting numbers and
 // one italic serif accent word per headline. Everything moves on closed-form springs (pure functions of time).

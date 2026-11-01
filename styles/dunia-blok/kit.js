@@ -1,4 +1,4 @@
-// AniMasters style kit: DUNIA BLOK (voxel world, three.js).
+// Maura Motion style kit: DUNIA BLOK (voxel world, three.js).
 // Everything is cubes with 16x16 pixel textures (nearest filter, dark block borders = fake AO), warm sun with
 // voxel shadows, fog to a sky gradient, and blocks that DROP IN and LOCK with a bounce. Big flat areas are single
 // boxes whose UVs repeat once per world unit, so a 40x40 slab still looks like 1600 blocks but costs 12 triangles.

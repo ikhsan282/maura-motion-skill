@@ -1,4 +1,4 @@
-// AniMasters style kit: NEO-BRUTALIST BENTO.
+// Maura Motion style kit: NEO-BRUTALIST BENTO.
 // A bento grid of saturated flat tiles (lime, coral, cobalt, yellow, lavender) with thick black outlines and hard
 // offset shadows, diagonal hatching that scrolls, pill labels, chunky numbers that roll, bars that fill, and a
 // cup character. Motion: tiles snap in with hard spring overshoot and reflow between layouts; punchy, a bit jittery.

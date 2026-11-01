@@ -25,7 +25,7 @@ def dur(id_, no):
     except ValueError: return None
 
 FAM = {'2D': '2D', '3D': '3D', 'craft': 'Kriya', 'painterly': 'Lukis', 'retro-digital': 'Retro digital', 'typography': 'Tipografi', 'data': 'Data/explainer', 'shader': 'Shader'}
-lines = ['# AniMasters: daftar gaya', '',
+lines = ['# Maura Motion: daftar gaya', '',
          f'{len(cat)} gaya. Sebut gaya dengan nama atau nomornya ("gaya 11", "wayang kulit"). Setiap gaya punya `styles/<id>/STYLE.md` (ciri khas, gerak, rumus hook, API kit) dan contoh video di `styles/<id>/demo/out/`.', '',
          'Sumber: **D** = 25 gaya di Drive, **SA** = Shorts Animator (oil/watercolour/gouache/pastel/ink), **GH** = gaya visual dari 703 prompt *awesome-opus5-5-videos*.', '',
          '| No | Gaya | id | Sumber | Jenis | Paling cocok untuk | Contoh demo | Musik · Suara |', '|---|---|---|---|---|---|---|---|']

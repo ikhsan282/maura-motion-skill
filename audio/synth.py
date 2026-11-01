@@ -1,4 +1,4 @@
-"""AniMasters synth: small offline instrument kit in numpy for scores and sound effects.
+"""Maura Motion synth: small offline instrument kit in numpy for scores and sound effects.
 Every instrument returns a mono float32 array for one note. Notes are cached, so repeated
 patterns cost almost nothing to render.
 """

@@ -1,4 +1,4 @@
-// AniMasters style kit: ONE-SHAPE UI MORPH.
+// Maura Motion style kit: ONE-SHAPE UI MORPH.
 // Warm light-grey stage, ONE black rounded shape that never cuts: it morphs (size, radius, position, colour) on
 // closed-form springs into every UI state, content swaps roll in/out, a macOS-like pointer drives it, and the soft
 // layered shadow grows with elevation. No gradients on chrome, no glows, no particles: precision is the look.

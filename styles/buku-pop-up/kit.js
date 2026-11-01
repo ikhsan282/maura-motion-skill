@@ -1,4 +1,4 @@
-// AniMasters style kit: BUKU POP-UP (a real pop-up book on a wooden table).
+// Maura Motion style kit: BUKU POP-UP (a real pop-up book on a wooden table).
 // The book stands open at 90°: a vertical back leaf (printed backdrop) and a flat floor leaf. Pop-up pieces are
 // printed card cut-outs hinged to the floor; they stay parallel to the back leaf (parallel-fold mechanism), so
 // when a page turns they fold flat and the next spread's pieces rise. Everything is a planar quad projected

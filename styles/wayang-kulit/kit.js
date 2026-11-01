@@ -1,4 +1,4 @@
-// AniMasters style kit: WAYANG KULIT (Javanese shadow puppets).
+// Maura Motion style kit: WAYANG KULIT (Javanese shadow puppets).
 // Shadows of perforated leather puppets on a cotton screen (kelir) lit by an oil lamp (blencong).
 // Signature moves: flickering lamp, light through the carved holes (tatahan), the gunungan opening/closing
 // the scene, puppets gliding on rods (tuding), turning around in one flip, and a shadow that grows huge and

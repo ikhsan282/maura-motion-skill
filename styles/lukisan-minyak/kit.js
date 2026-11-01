@@ -1,4 +1,4 @@
-// AniMasters style kit: LUKISAN MINYAK BERGERAK (moving oil painting).
+// Maura Motion style kit: LUKISAN MINYAK BERGERAK (moving oil painting).
 // Every frame is drawn FLAT in design pixels (1080x1920) with modelled light (gradients that turn into tonal
 // strokes), then repainted by the oil paint pass (AM.painter): swirling impasto strokes, deep colour, canvas
 // weave, and a slow shimmer because a share of the strokes is laid again on every drawing.

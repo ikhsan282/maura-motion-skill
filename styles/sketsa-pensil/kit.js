@@ -1,4 +1,4 @@
-// AniMasters style kit: SKETSA PENSIL (graphite pencil on paper).
+// Maura Motion style kit: SKETSA PENSIL (graphite pencil on paper).
 // Lines draw themselves with pressure (thin ends, dark middle), under a real pencil that follows the stroke;
 // blue construction lines come first, then graphite; hatching and cross-hatching sweep in; handwritten notes;
 // a clear ruler slides in for straight lines; an eraser rubs things out leaving a smudge and crumbs.

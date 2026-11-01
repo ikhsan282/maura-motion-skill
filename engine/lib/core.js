@@ -1,4 +1,4 @@
-// AniMasters core helpers: math, easing, seeded randomness, noise, timing.
+// Maura Motion core helpers: math, easing, seeded randomness, noise, timing.
 // Everything here is deterministic so any frame can be rendered on its own.
 
 export const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));

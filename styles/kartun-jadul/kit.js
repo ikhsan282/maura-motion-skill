@@ -1,4 +1,4 @@
-// AniMasters style kit: KARTUN JADUL (1920s–30s black-and-white rubber-hose cartoon).
+// Maura Motion style kit: KARTUN JADUL (1920s–30s black-and-white rubber-hose cartoon).
 // Signature: noodle (rubber-hose) limbs with white gloves, pie-cut eyes, everything bouncing to the ragtime beat,
 // film grain + flicker + gate weave + scratches, art-deco title cards, smear frames and the iris-out ending.
 // Original characters: Kancil (mouse-deer, pointed ears, long snout), Pak Tani (round farmer with a caping hat and a

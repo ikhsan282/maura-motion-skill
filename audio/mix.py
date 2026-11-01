@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AniMasters mix: narration + music (ducked under the voice) + sound effects -> build/mix.wav at -14 LUFS.
+"""Maura Motion mix: narration + music (ducked under the voice) + sound effects -> build/mix.wav at -14 LUFS.
 
   python mix.py <projectDir> [--music-db -16] [--lufs -14]
 """

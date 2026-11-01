@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AniMasters narration: story.json lines -> build/narration.wav + build/timeline.json.
+"""Maura Motion narration: story.json lines -> build/narration.wav + build/timeline.json.
 
 Voices run offline:
   Kokoro-82M (Apache-2.0) via kokoro-onnx; Indonesian is spoken by feeding espeak-ng 'id' phonemes.
@@ -11,7 +11,7 @@ import json, os, sys, re, hashlib, argparse
 import numpy as np
 import soundfile as sf
 
-MODELS = os.environ.get('AM_MODELS', os.path.join(os.path.expanduser('~'), '.cache', 'animasters', 'models'))
+MODELS = os.environ.get('AM_MODELS', os.path.join(os.path.expanduser('~'), '.cache', 'maura-motion', 'models'))
 SR = 24000
 
 VOICES = {
@@ -161,7 +161,7 @@ def main():
     lockf = None
     try:
         import fcntl, tempfile
-        lockf = open(os.path.join(tempfile.gettempdir(), 'animasters-tts.lock'), 'w'); fcntl.flock(lockf, fcntl.LOCK_EX)
+        lockf = open(os.path.join(tempfile.gettempdir(), 'maura-motion-tts.lock'), 'w'); fcntl.flock(lockf, fcntl.LOCK_EX)
     except Exception: pass
     pieces = [np.zeros(int(lead * SR), np.float32)]
     t = lead; lines = []

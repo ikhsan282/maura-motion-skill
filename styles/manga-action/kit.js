@@ -1,4 +1,4 @@
-// AniMasters style kit: MANGA ACTION (black-and-white shonen manga page brought to life).
+// Maura Motion style kit: MANGA ACTION (black-and-white shonen manga page brought to life).
 // Signature: panels that slide in / shatter, screentone dot shading, radial focus lines, ink splatter, huge
 // onomatopoeia, impact frames (black/white inversion), intense eye close-ups. Original characters only.
 import { clamp, lerp, ease, hrand, noise, mulberry32, TAU } from '/engine/lib/core.js';

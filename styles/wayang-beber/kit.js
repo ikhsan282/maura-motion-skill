@@ -1,4 +1,4 @@
-// AniMasters style kit: WAYANG BEBER (painted scroll storytelling, Java, 16th–17th c. tradition).
+// Maura Motion style kit: WAYANG BEBER (painted scroll storytelling, Java, 16th–17th c. tradition).
 // A long scroll of daluwang (bark paper) is unrolled between two wooden rollers, one scene (jagong) at a time,
 // lit by a hanging oil lamp (blencong) while the dalang points at the figures with a stick (tuding).
 // The paintings: flat profile figures in classical Javanese wayang proportions (long pointed noses, almond eyes,

@@ -1,4 +1,4 @@
-// AniMasters style kit: ORIGAMI (folded-paper 3D, three.js).
+// Maura Motion style kit: ORIGAMI (folded-paper 3D, three.js).
 // A diorama where everything is folded washi: crisp creases, flat-shaded facets, fibre texture, two-tone
 // paper (pattern outside, white inside), soft morning light with crisp paper shadows.
 // Signature moves: a square sheet folding into a crane on screen, cranes flapping in flocks, garlands

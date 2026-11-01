@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AniMasters score: composes a soft original soundtrack for each short, offline, in numpy.
+"""Maura Motion score: composes a soft original soundtrack for each short, offline, in numpy.
 
   python music.py <projectDir> [--preset gamelan] [--seed 3]
 

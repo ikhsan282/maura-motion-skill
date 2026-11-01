@@ -1,4 +1,4 @@
-// AniMasters style kit: FLIPBOOK (a spiral notebook riffled under the thumb).
+// Maura Motion style kit: FLIPBOOK (a spiral notebook riffled under the thumb).
 // Top-down on a wooden desk: a small notebook held by two hands; the right thumb lifts the bottom corner and the
 // pages flip up towards the spiral binding, one page per drawing (12 per second, the choppy flipbook rhythm).
 // Every page is drawn by hand in blue ballpoint, so each page's line wobbles a little differently; the page

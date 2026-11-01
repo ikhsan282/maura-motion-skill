@@ -1,4 +1,4 @@
-// AniMasters style kit: PIXEL RETRO (16-bit side-scroller).
+// Maura Motion style kit: PIXEL RETRO (16-bit side-scroller).
 // Everything is drawn into a 135x240 buffer with integer coordinates and fillRect only (no anti-aliasing),
 // then presented x8 with nearest-neighbour. Limited palette, Bayer dithering, rigged sprites with an
 // automatic 1px outline, 2-4 frame cycles, parallax layers, HUD, bitmap text, mosaic/iris transitions.

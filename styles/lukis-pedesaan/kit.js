@@ -1,4 +1,4 @@
-// AniMasters style kit: LUKIS PEDESAAN (impressionist countryside, moving).
+// Maura Motion style kit: LUKIS PEDESAAN (impressionist countryside, moving).
 // Bright plein-air painting: short broken dabs of pure colour (no swirl), airy morning light, green-gold rice
 // terraces, mist between the hills. Drawn FLAT with soft light gradients in design px (1080x1920), then painted by
 // a custom paint pass (base oil, short dabs). Signature moves: morning mist drifting through the terraces, rice

@@ -1,4 +1,4 @@
-// AniMasters style kit: RISOGRAPH HALFTONE (zine / gig-poster print).
+// Maura Motion style kit: RISOGRAPH HALFTONE (zine / gig-poster print).
 // Spot inks (fluoro pink, blue, yellow) overprint with multiply on a half-resolution "print" canvas
 // (540x960: multiply there costs a quarter of full-screen), then the print is shown x2 with cached paper
 // grain and photocopy specks on top (plain source-over). Each ink has its own misregistration offset that

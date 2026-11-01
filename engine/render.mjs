@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// AniMasters renderer: paints every frame of a project in headless Chrome and encodes an MP4.
+// Maura Motion renderer: paints every frame of a project in headless Chrome and encodes an MP4.
 //
 //   node engine/render.mjs <projectDir>                    full silent video -> <project>/build/video.mp4
 //   node engine/render.mjs <projectDir> --stills 0.5,4,9    PNG stills + contact sheet in build/stills/
@@ -60,8 +60,8 @@ function loadPlaywright() {
     () => createRequire(import.meta.url)('playwright'),
     () => createRequire(import.meta.url)('playwright-core'),
     () => createRequire(path.join(SKILL, 'package.json'))('playwright-core'),
-    () => createRequire(path.join(os.homedir(), '.cache', 'animasters', 'node', 'package.json'))('playwright-core'),
-    () => createRequire(path.join(os.homedir(), '.cache', 'animasters', 'node', 'package.json'))('playwright'),
+    () => createRequire(path.join(os.homedir(), '.cache', 'maura-motion', 'node', 'package.json'))('playwright-core'),
+    () => createRequire(path.join(os.homedir(), '.cache', 'maura-motion', 'node', 'package.json'))('playwright'),
     () => createRequire('/opt/npm-tools/package.json')('playwright'),
   ];
   for (const t of tries) { try { return t(); } catch { /* next */ } }
@@ -79,7 +79,7 @@ function chromePath() {
 
 // ---------- render slots (limit concurrent full renders on small machines) ----------
 async function acquireSlot(pool = 'render', n = parseInt(process.env.AM_RENDER_SLOTS || '2', 10)) {
-  const dir = path.join(os.tmpdir(), 'animasters-slots-' + pool); fs.mkdirSync(dir, { recursive: true });
+  const dir = path.join(os.tmpdir(), 'maura-motion-slots-' + pool); fs.mkdirSync(dir, { recursive: true });
   for (;;) {
     for (let k = 0; k < n; k++) {
       const f = path.join(dir, `slot${k}`);
