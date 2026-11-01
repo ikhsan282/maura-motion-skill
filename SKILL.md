@@ -49,7 +49,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 
 | user bilang | lakukan |
 |---|---|
-| "suara cewek" / "suara lebih berat" / "English" | `voice`: `id-f`, `id-m2`, `en-m`/`en-f`/`en-story` (+ `lang: "en"`, tulis ulang lines) |
+| "suara cewek" / "suara lebih berat" / "English" | `voice`: `el-id-f` (Alice), `el-id-m` (George, default), offline `id-f`/`id-m`, English `en-m`/`en-f`/`en-story` (+ `lang: "en"`, tulis ulang lines) |
 | "lebih cepat/lambat" | `speed` 1.15 / 0.95 (top level), atau pendekkan lines |
 | "musiknya ganti" / "tanpa musik" | `music.preset` (19 preset, `python3 audio/music.py x --list`) / `"none"`; `music.db` untuk level |
 | "caption lebih besar" / "tanpa caption" | `meta.captions.size` / `"captions": false` |
@@ -62,7 +62,8 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - `STYLES.md` — 65 gaya sekilas; `catalog.json` — sama, machine-readable.
 - `styles/<id>/` — STYLE.md, kit.js, demo/ (story.json, scene.js, out/<slug>.mp4).
 - `engine/` — runtime (AM API), renderer, caption, font, three.js, `sa/` (Shorts Animator paint pass + kit + looks).
-- `audio/` — tts.py (voices), music.py (19 preset), sfx.py (45 efek), mix.py (ducking, −14 LUFS).
+- `audio/` — tts.py (voices: ElevenLabs cloud + Kokoro/Piper offline), music.py (19 preset), sfx.py (45 efek), mix.py (ducking, −14 LUFS).
+- **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id`. Butuh `ELEVENLABS_API_KEY` di env — jangan commit key. Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
 ## Status gaya (audit 1 Nov 2026)
