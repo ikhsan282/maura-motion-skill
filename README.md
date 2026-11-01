@@ -50,4 +50,4 @@ Node 22+, ffmpeg, Chrome/Chromium, Python 3.10+. Narasi offline (tidak perlu API
 
 ## Lisensi
 
-Proprietary — Maura Group internal.
+MIT — bebas dipakai, ubah, dan sebar. Lihat LICENSE.

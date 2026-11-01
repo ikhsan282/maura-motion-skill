@@ -1,0 +1,17 @@
+{
+ "title": "Halo Maura Motion",
+ "slug": "hello",
+ "style": "flat-vector",
+ "lang": "id",
+ "voice": "el-id-f",
+ "speed": 1.2,
+ "music": { "preset": "ambient", "db": -16 },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.3,
+ "lines": [
+  { "id": "hook", "text": "Satu gaya, satu naskah, jadi video." },
+  { "id": "tengah", "text": "Tulis ceritamu, mesin yang menggambar." },
+  { "id": "akhir", "text": "Maura Motion: idemu, tayang hari ini." }
+ ]
+}
