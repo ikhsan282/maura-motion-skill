@@ -1,0 +1,37 @@
+{
+ "lang": "id",
+ "lead": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Dua orang nyerobot antrean, satu orang berani menegur. Apa yang terjadi?"
+  },
+  {
+   "id": "day1",
+   "text": "Antrean loket tertib. Petugas melayani, ibu menggandeng anaknya."
+  },
+  {
+   "id": "day20",
+   "text": "Dua orang nyelonong ke depan. Bentar doang, katanya. Buru-buru, katanya."
+  },
+  {
+   "id": "day40",
+   "text": "Satu orang menunjuk ke belakang: antre itu soal menghargai. Penyerobot jalan malu ke belakang."
+  },
+  {
+   "id": "closing",
+   "text": "Antrean tertib lagi. Satu teguran sopan lebih kuat dari seribu keluhan."
+  }
+ ],
+ "music": {
+  "db": -17,
+  "preset": "lofi"
+ },
+ "pause": 0.2,
+ "slug": "demo_stickman_antrean",
+ "speed": 1.15,
+ "style": "stickman-antrean",
+ "tail": 1.0,
+ "title": "Antrean",
+ "voice": "el-id-m"
+}

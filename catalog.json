@@ -936,5 +936,19 @@
   "story": "Sempurna vs Gerak Cepat",
   "hook": "Satu kanvas dalam dua minggu, atau enam belas kanvas dalam dua minggu?",
   "concept": "Studio lukis gelap split-screen: lampu gantung sorot hangat, kabinet tengah (kiri rapi kanan cipratan), 2 easel kayu, tumpukan kanvas #1-16, lukisan 3 tier. Kiri paintCareful teliti vs kanan paintFast cepat + tossCanvas. Counter kabinet + cipratan progres."
+ },
+ {
+  "no": 68,
+  "id": "stickman-antrean",
+  "name": "Stickman Antrean",
+  "source": "custom:garis-hidup-antrean",
+  "family": "social",
+  "tech": "canvas2d",
+  "voice": "el-id-m",
+  "music": "lofi",
+  "captions": "clean",
+  "story": "Antrean",
+  "hook": "Dua orang nyerobot antrean, satu orang berani menegur. Apa yang terjadi?",
+  "concept": "Aula loket malam split moral: plafon + papan LOKET/ANTREAN, loket + bel, strip lantai kuning (redup saat diserobot), watermark GARIS HIDUP, bubble BENTAR DOANG/BURU-BURU, judul moral. 7 karakter: petugas, pelanggan, protagonis glow, ibu+anak, 2 penyerobot. waitQueue vs cutQueueExcuse vs reprimandPoint vs walkShame."
  }
 ]
