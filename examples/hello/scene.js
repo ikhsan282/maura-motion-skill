@@ -1,4 +1,4 @@
-// Maura Motion hello: 3 beats, one simple scene per narration line.
+// Maura Motion hello: 5 beats, one simple scene per narration line.
 import * as K from '/styles/flat-vector/kit.js';
 const { clamp, lerp, ease, prog } = AM.lib;
 
@@ -12,8 +12,9 @@ export async function setup(AM) {
   ctx = AM.layer('world'); fx = AM.layer('fx');
   for (const line of AM.timeline.lines) C[line.id] = line;
   const start = id => C[id].start - 0.12;
-  B = { hook: [0, start('tengah')], tengah: [start('tengah'), start('akhir')], akhir: [start('akhir'), AM.duration + 1] };
+  B = { hook: [0, start('pilih')], pilih: [start('pilih'), start('tengah')], tengah: [start('tengah'), start('suara')], suara: [start('suara'), start('akhir')], akhir: [start('akhir'), AM.duration + 1] };
   AM.sfx('pop', 0.5, { gain: 0.4 });
+  AM.sfx('swoosh_up', B.pilih[1] - 0.3, { gain: 0.3 });
   AM.sfx('chime', W('akhir', 'hari'), { gain: 0.35 });
 }
 const reset = () => ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -36,6 +37,26 @@ shot('hook', (t, a, b) => {
   K.badge(ctx, 'satu naskah, jadi video', 540, 570, { p: K.pop(t, a + 0.55, 0.45), size: 42 });
 });
 
+shot('pilih', (t, a, b) => {
+  background(t);
+  const styles = ['ANIME', 'WAYANG', 'FLAT VECTOR'];
+  styles.forEach((s, i) => {
+    const y = 700 + i * 170;
+    const pp = K.pop(t, a + 0.15 + i * 0.2, 0.4);
+    if (pp > 0) {
+      ctx.save(); ctx.translate(540, y); ctx.scale(pp, pp);
+      ctx.fillStyle = i === 2 ? 'rgba(63,214,198,.9)' : 'rgba(255,255,255,.14)';
+      AM.lib.roundRect(ctx, -330, -60, 660, 120, 60); ctx.fill();
+      ctx.fillStyle = i === 2 ? '#06231f' : '#fff';
+      ctx.font = '800 52px Poppins, sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText(s, 0, 18);
+      ctx.restore();
+    }
+  });
+  reset();
+  K.badge(ctx, '65 gaya siap pakai', 540, 420, { p: K.pop(t, a + 0.1, 0.4), size: 42 });
+});
+
 shot('tengah', (t, a, b) => {
   background(t);
   const p = K.pop(t, a + 0.1, 0.5);
@@ -45,6 +66,22 @@ shot('tengah', (t, a, b) => {
   reset();
   K.badge(ctx, 'TULIS CERITAMU', 540, 420, { p, size: 58, bg: 'rgba(63,214,198,.9)', fg: '#06231f' });
   K.badge(ctx, 'mesin yang menggambar', 540, 570, { p: K.pop(t, a + 0.45, 0.5), size: 42 });
+});
+
+shot('suara', (t, a, b) => {
+  background(t);
+  // sound waves from center
+  for (let i = 0; i < 3; i++) {
+    const ph = ((t * 0.8 + i / 3) % 1);
+    ctx.save(); ctx.globalAlpha = 1 - ph;
+    ctx.strokeStyle = '#ffd65e'; ctx.lineWidth = 8;
+    ctx.beginPath(); ctx.arc(540, 900, 80 + ph * 260, 0, Math.PI * 2); ctx.stroke();
+    ctx.restore();
+  }
+  K.photon(ctx, 540, 900, { r: 100, t, vx: 0, vy: 0, heat: 0.5, mood: 'happy', look: [0, 0] });
+  reset();
+  K.badge(ctx, 'NARASI + MUSIK + CAPTION', 540, 420, { p: K.pop(t, a + 0.1, 0.4), size: 44, bg: 'rgba(255,214,94,.95)', fg: '#3a1c05' });
+  K.badge(ctx, 'otomatis ikut jadi', 540, 540, { p: K.pop(t, a + 0.4, 0.4), size: 38 });
 });
 
 shot('akhir', (t, a, b) => {
