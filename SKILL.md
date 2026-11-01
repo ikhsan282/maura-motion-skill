@@ -66,12 +66,11 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id`. Butuh `ELEVENLABS_API_KEY` di env — jangan commit key. Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (audit 1 Nov 2026)
+## Status gaya (audit 1 Nov 2026, update stills)
 
-- ✅ Lengkap siap pakai (26): anime, batik-hidup, blueprint, boneka-rajut, buku-pop-up, dark-glow-ui, flat-vector, garis-tunggal, isometrik, kartun-3d-sinematik, kartun-outline-tebal, kinetic-type, manga-action, noir-dokumenter, origami, pixel-retro, pop-art, riso-halftone, stickman-doodle, synthwave, terminal-ascii, vhs-arsip, wayang-kulit, cat-air, clay-stop-motion, sketsa-pensil.
-- ⚠️ Demo ada, belum ada still (14): dunia-blok, flipbook, infografis-data, kartun-jadul, kertas-guntingan, kotak-cahaya-kertas, lukisan-minyak, lukis-pedesaan, math-3b1b, neo-brutalist, papan-tulis-kapur, product-light, ui-morph, wayang-beber.
-- 🔧 Kit/sebagian (14): diorama-miniatur, kardus-bekas, gacha-3d, gouache-dongeng, kolase-daun-bunga, partikel, perkamen-ukiran, psychedelic-shader, scrapbook, skala-kosmik, sumi-e, swiss-bauhaus + 2 lainnya.
-- ❌ Kosong (11): chrome-y2k, cutaway-3d, dunia-3d-painterly, editorial-serif, hud-showreel, kaca-patri, lukisan-gua-purba, pastel-krayon, tinta-novel-grafis, trailer-gelap, vas-yunani.
+- ✅ Siap pakai (40): anime, batik-hidup, blueprint, boneka-rajut, buku-pop-up, cat-air, clay-stop-motion, dark-glow-ui, dunia-blok, flat-vector, flipbook, garis-tunggal, infografis-data, isometrik, kartun-3d-sinematik, kartun-jadul, kartun-outline-tebal, kertas-guntingan, kinetic-type, kotak-cahaya-kertas, lukisan-minyak, lukis-pedesaan, manga-action, math-3b1b, neo-brutalist, noir-dokumenter, origami, papan-tulis-kapur, pixel-retro, pop-art, product-light, riso-halftone, stickman-doodle, synthwave, terminal-ascii, ui-morph, vhs-arsip, wayang-beber, wayang-kulit, sketsa-pensil* (*still menyusul).
+- 🔧 Sebagian (12): diorama-miniatur, kardus-bekas, gacha-3d, gouache-dongeng, kolase-daun-bunga, partikel, perkamen-ukiran, psychedelic-shader, scrapbook, skala-kosmik, sumi-e, swiss-bauhaus.
+- ❌ Kosong (9): chrome-y2k, cutaway-3d, dunia-3d-painterly, editorial-serif, hud-showreel, kaca-patri, lukisan-gua-purba, pastel-krayon, tinta-novel-grafis, trailer-gelap, vas-yunani.
 
 ## Troubleshooting
 

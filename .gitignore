@@ -2,7 +2,6 @@
 node_tmp/
 node_modules/
 build/
-!examples/hello/build/
 out/
 *.log
 

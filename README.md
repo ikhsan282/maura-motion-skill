@@ -33,12 +33,13 @@ Detail lengkap: baca `SKILL.md`. Standar nulis cerita & gaya baru: `AUTHORING.md
 | `audio/` | TTS (Kokoro/Piper, offline), 19 preset musik, 45 SFX, mixing −14 LUFS |
 | `scripts/` | `setup.mjs`, `make.mjs`, `build_index.py` |
 
-## Status gaya (audit 1 Nov 2026)
+## Status gaya (audit 1 Nov 2026, update stills)
 
-- ✅ **Lengkap siap pakai (26):** anime, batik-hidup, blueprint, boneka-rajut, buku-pop-up, dark-glow-ui, flat-vector, garis-tunggal, isometrik, kartun-3d-sinematik, kartun-outline-tebal, kinetic-type, manga-action, noir-dokumenter, origami, pixel-retro, pop-art, riso-halftone, stickman-doodle, synthwave, terminal-ascii, vhs-arsip, wayang-kulit, cat-air, clay-stop-motion, sketsa-pensil
-- ⚠️ **Demo ada, belum ada still (14):** dunia-blok, flipbook, infografis-data, kartun-jadul, kertas-guntingan, kotak-cahaya-kertas, lukisan-minyak, lukis-pedesaan, math-3b1b, neo-brutalist, papan-tulis-kapur, product-light, ui-morph, wayang-beber
-- 🔧 **Kit/sebagian (14):** butuh develop lanjut sebelum dipakai produksi
-- ❌ **Kosong (11):** chrome-y2k, cutaway-3d, dunia-3d-painterly, editorial-serif, hud-showreel, kaca-patri, lukisan-gua-purba, pastel-krayon, tinta-novel-grafis, trailer-gelap, vas-yunani
+- ✅ **Siap pakai (40):** anime, batik-hidup, blueprint, boneka-rajut, buku-pop-up, cat-air, clay-stop-motion, dark-glow-ui, dunia-blok, flat-vector, flipbook, garis-tunggal, infografis-data, isometrik, kartun-3d-sinematik, kartun-jadul, kartun-outline-tebal, kertas-guntingan, kinetic-type, kotak-cahaya-kertas, lukisan-minyak, lukis-pedesaan, manga-action, math-3b1b, neo-brutalist, noir-dokumenter, origami, papan-tulis-kapur, pixel-retro, pop-art, product-light, riso-halftone, stickman-doodle, synthwave, terminal-ascii, ui-morph, vhs-arsip, wayang-beber, wayang-kulit, sketsa-pensil*
+- 🔧 **Sebagian (12):** diorama-miniatur, kardus-bekas, gacha-3d, gouache-dongeng, kolase-daun-bunga, partikel, perkamen-ukiran, psychedelic-shader, scrapbook, skala-kosmik, sumi-e, swiss-bauhaus
+- ❌ **Kosong (9):** chrome-y2k, cutaway-3d, dunia-3d-painterly, editorial-serif, hud-showreel, kaca-patri, lukisan-gua-purba, pastel-krayon, tinta-novel-grafis, trailer-gelap, vas-yunani
+
+*sketsa-pensil: demo ada, still menyusul.
 
 ## Contoh hasil
 
