@@ -939,16 +939,16 @@
  },
  {
   "no": 68,
-  "id": "stickman-antrean",
-  "name": "Stickman Antrean",
+  "id": "stickman-kisah",
+  "name": "Stickman Kisah",
   "source": "custom:garis-hidup-antrean",
   "family": "social",
   "tech": "canvas2d",
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "clean",
-  "story": "Antrean",
-  "hook": "Dua orang nyerobot antrean, satu orang berani menegur. Apa yang terjadi?",
-  "concept": "Aula loket malam split moral: plafon + papan LOKET/ANTREAN, loket + bel, strip lantai kuning (redup saat diserobot), watermark GARIS HIDUP, bubble BENTAR DOANG/BURU-BURU, judul moral. 7 karakter: petugas, pelanggan, protagonis glow, ibu+anak, 2 penyerobot. waitQueue vs cutQueueExcuse vs reprimandPoint vs walkShame."
+  "story": "Kisah Utang",
+  "hook": "Waktu pinjam uang janjinya manis, giliran ditagih orangnya hilang.",
+  "concept": "Ruangan gelap + papan UTANG, meja kayu + amplop cokelat, 2 karakter: peminjam vs pemberi (glow). think vs talk vs reprimandPoint vs angry vs run. Moral: utang bukan soal uang, soal hormat."
  }
 ]

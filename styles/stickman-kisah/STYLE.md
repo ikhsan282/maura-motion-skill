@@ -6,39 +6,39 @@ source: custom:garis-hidup-antrean
 family: social
 tech: canvas2d
 music: lofi   voice: el-id-m   captions: clean
-best_for: etika antre, menegur penyerobot, empati sosial, konten moral 1 menit
+best_for: konflik moral sehari-hari, utang, empati sosial, konten 1 menit
 ---
-# Stickman Antrean
+# Stickman Kisah
 
-**Ciri khas (look):** aula loket malam (#10171E→#1C2833), garis plafon + 2 papan gantung
-(LOKET biru kiri, ⬅ ANTREAN krem tengah), loket abu + bel, strip lantai kuning nyala
-(meredup saat diserobot, pulih setelah tertib), watermark GARIS HIDUP, bubble "BENTAR DOANG"/
-"BURU-BURU", judul moral "Antre itu bukan soal waktu. Soal menghargai."
+**Ciri khas (look):** format cerita moral 1 menit — papan judul gantung, props sesuai
+episode (meja + amplop, mobil + marka, loket + strip), bubble dialog, judul moral
+di ujung. Background gelap sinematik, 1 karakter glow sebagai suara hati.
 
-**Gerak (motion):** `waitQueue` (goyang santai) vs `cutQueueExcuse` (angguk + tangan menyepelekan)
-vs `reprimandPoint` (tegur + tunjuk belakang) vs `walkShame` (tertunduk + garuk kepala)
-vs `serveCounter` (petugas) vs `holdChildHand` (ibu gandeng anak).
+**Gerak (motion):** rangkaian pendek 2-3 dtk bervariasi (jalan, bicara, tengok, tunjuk,
+marah, lari, senang) — sekali jalan 60 dtk ngikutin naskah, anti-looping.
+Karakter: `waitQueue`, `talk`, `lookAround`, `reprimandPoint`, `angry`, `point`,
+`walk`, `run`, `surprised`, `sad`, `sit`, `happy`, `wave`, `clap` (+ 44 motion dasar).
 
-**Kenapa menarik:** 7 karakter 1 frame (petugas, pelanggan, protagonis putih glow, ibu+anak,
-2 penyerobot abu) — konflik kebaca tanpa dialog. Strip lantai = barometer ketertiban.
+**Kenapa menarik:** konflik universal (utang, senggolan, antrean) — kebaca tanpa
+dialog. 1 karakter glow = pembeda protagonis. Moral muncul sebagai judul di klimaks.
 
 **Cerita yang cocok:**
-- Menyerobot antrean: "Bentar doang" vs yang menunggu sejam.
-- Berani menegur sopan.
-- Menghargai waktu orang lain.
+- Utang vs janji: pinjam manis, ditagih ngilang.
+- Senggolan parkir: berani tanggung jawab vs kabur.
+- Antrean: menegur penyerobot dengan sopan.
 
-**Rumus hook:** "[X] nyerobot, [Y] berani menegur. Apa yang terjadi?" / "Antre itu bukan soal
-waktu. Soal menghargai."
+**Rumus hook:** "[X] manis di awal, [Y] pahit di akhir. Apa yang terjadi?" / moral
+1 kalimat: "Utang bukan soal uang, soal hormat."
 
 **Kit API (`styles/stickman-kisah/kit.js`):**
-- `StickmanKit.createAntreanScene(kit, {})`: plafon, 2 papan, loket, strip, watermark,
-  bubble, judul moral, 7 karakter + timeline 12,3 dtk. Header edisi Maura Motion.
-- Motion antrean: `waitQueue`, `cutQueueExcuse`, `reprimandPoint`, `walkShame`,
-  `serveCounter`, `holdChildHand` (+ 44 motion dasar: basic/emosi/aksi/interaksi/Fajr).
-- Props: `loketCounter`, `hangingSign` (text/leftArrow), `queueFloorStrip` (activeRatio),
-  `speechBubble`, `highlightedTitle` (progress).
+- `StickmanKit.createAntreanScene(kit, { theme })`: `utang` | `parkir` | default antrean.
+  Header edisi Maura Motion.
+- Builder: `_buildUtangScene` (meja + amplop + papan UTANG, 2 karakter, 60 dtk),
+  `_buildParkirScene` (4 mobil + marka + papan PARKIR, 4 karakter, 62 dtk).
+- Props: `mobil`, `motor`, `amplop`, `meja`, `markaParkir`, `loketCounter`,
+  `hangingSign`, `queueFloorStrip`, `speechBubble`, `highlightedTitle`.
 - Style `garishidup/capsule`: torso 1,65x + kepala gradient radial + glow.
-- `ponytail:` offsetY warisan 54 → 10 (8 titik sleep/wakeUp/fall/getUp/sujud); di scene
-  antrean tak terpakai (semua berdiri), disamakan pola presisi kasur stickman-subuh.
+- `ponytail:` offsetY warisan 54 → 10 (8 titik sleep/wakeUp/fall/getUp/sujud),
+  disamakan pola presisi kasur stickman-subuh.
 
-**Demo:** "Kisah Antrean", 5 baris ID, voice el-id-m (ElevenLabs George), musik lofi.
+**Demo:** "Kisah Utang", 8 baris ID, voice el-id-m (ElevenLabs George), musik lofi, 60 dtk.
