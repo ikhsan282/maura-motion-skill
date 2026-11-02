@@ -11,17 +11,17 @@ const W = (id, w) => AM.wordTime(id, w);
 
 // Data harga Pertalite (2015-2025), Rp/liter, dibulatkan
 const YEARS = [
-  { y: 2015, p: 7600, ev: null },
-  { y: 2016, p: 6550, ev: null },
+  { y: 2015, p: 7400, ev: null },
+  { y: 2016, p: 7400, ev: null },
   { y: 2017, p: 7400, ev: null },
   { y: 2018, p: 7800, ev: null },
-  { y: 2019, p: 8200, ev: null },
-  { y: 2020, p: 9000, ev: 'COVID' },
-  { y: 2021, p: 7800, ev: null },
+  { y: 2019, p: 7650, ev: null },
+  { y: 2020, p: 7650, ev: 'COVID' },
+  { y: 2021, p: 7650, ev: null },
   { y: 2022, p: 10000, ev: 'Subsidi naik' },
   { y: 2023, p: 10000, ev: null },
-  { y: 2024, p: 10300, ev: null },
-  { y: 2025, p: 10450, ev: 'Sekarang' },
+  { y: 2024, p: 10000, ev: null },
+  { y: 2025, p: 10000, ev: 'Sekarang' },
 ];
 const P_MIN = 6000, P_MAX = 11000;
 const CHART = { x0: 130, x1: 950, y0: 500, y1: 1100 };
@@ -146,9 +146,9 @@ export function render(t) {
   if (dpa > 0) {
     K.panel(ui, 90, 1200, 900, 110, { p: dpa });
     ui.save(); ui.globalAlpha *= dpa;
-    K.counter(ui, '+38%', 230, 1255, { size: 56, color: K.PAL.indo, align: 'left' });
+    K.counter(ui, '+35%', 230, 1255, { size: 56, color: K.PAL.indo, align: 'left' });
     K.label(ui, 'NAIK DALAM 10 TAHUN', 360, 1255, { size: 24, color: '#c5cee0', align: 'left', font: 'JetBrains Mono', spacing: 1 });
-    K.label(ui, 'Rp 7.600 → Rp 10.450', 870, 1255, { size: 24, color: K.PAL.dim, align: 'right', font: 'JetBrains Mono' });
+    K.label(ui, 'Rp 7.400 → Rp 10.000', 870, 1255, { size: 24, color: K.PAL.dim, align: 'right', font: 'JetBrains Mono' });
     ui.restore();
   }
 
