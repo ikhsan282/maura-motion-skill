@@ -38,7 +38,7 @@ function pie(t, upto) {
   });
   ctx.fillStyle = '#0b1230'; ctx.beginPath(); ctx.arc(540, 950, 90, 0, Math.PI * 2); ctx.fill();
   ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.font = '800 40px Poppins, sans-serif';
-  ctx.fillText('OTA', 540, 945); ctx.fillText('MACET', 540, 985);
+  ctx.fillText('OTAK', 540, 945); ctx.fillText('MACET', 540, 985);
 }
 function headOutline() {
   ctx.save(); ctx.strokeStyle = 'rgba(255,255,255,.5)'; ctx.lineWidth = 14;
