@@ -1,0 +1,19 @@
+{
+ "title": "Grid Desain",
+ "slug": "demo-grid",
+ "style": "swiss-bauhaus",
+ "lang": "id",
+ "voice": "george",
+ "speed": 1.0,
+ "music": { "preset": "tech", "db": -17 },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.18,
+ "lines": [
+  {"id": "hook", "text": "Kenapa desain rapi enak dilihat? Jawabannya: grid.", "say": "Kenapa desain rapi enak dilihat? Jawabannya: grid."},
+  {"id": "rapi", "text": "Grid menata kotak, lingkaran, segitiga pada jalurnya.", "pause": 0.2},
+  {"id": "sepertiga", "text": "Aturan sepertiga: taruh fokus di garis potong, bukan tengah.", "say": "Aturan sepertiga: taruh fokus di garis potong, bukan tengah."},
+  {"id": "margin", "text": "Margin konsisten memberi napas, semua sejajar rapi."},
+  {"id": "tutup", "text": "Pakai grid, desainmu langsung terlihat profesional."}
+ ]
+}
