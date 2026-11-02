@@ -1,226 +1,271 @@
 {
- "key": "471afda6ae454e57",
+ "key": "3e58f4df842c9eb9",
  "voice": "el-id-m",
- "duration": 18.233,
+ "duration": 23.409,
  "lead": 0.3,
  "lines": [
   {
    "id": "hook",
-   "text": "Satu gaya, satu naskah, jadi video.",
+   "text": "Satu naskah, jadi video animasi. Tanpa gambar manual, tanpa editor.",
    "start": 0.3,
-   "end": 2.775,
+   "end": 5.254,
    "words": [
     {
      "w": "Satu",
      "start": 0.3,
-     "end": 0.688
-    },
-    {
-     "w": "gaya,",
-     "start": 0.688,
-     "end": 0.911
-    },
-    {
-     "w": "satu",
-     "start": 0.993,
-     "end": 1.381
+     "end": 0.697
     },
     {
      "w": "naskah,",
-     "start": 1.381,
-     "end": 1.769
+     "start": 0.697,
+     "end": 1.095
     },
     {
      "w": "jadi",
-     "start": 1.851,
-     "end": 2.239
+     "start": 1.179,
+     "end": 1.576
     },
     {
-     "w": "video.",
-     "start": 2.239,
-     "end": 2.627
+     "w": "video",
+     "start": 1.576,
+     "end": 1.974
+    },
+    {
+     "w": "animasi.",
+     "start": 1.974,
+     "end": 2.709
+    },
+    {
+     "w": "Tanpa",
+     "start": 2.861,
+     "end": 3.259
+    },
+    {
+     "w": "gambar",
+     "start": 3.259,
+     "end": 3.656
+    },
+    {
+     "w": "manual,",
+     "start": 3.656,
+     "end": 4.053
+    },
+    {
+     "w": "tanpa",
+     "start": 4.138,
+     "end": 4.535
+    },
+    {
+     "w": "editor.",
+     "start": 4.535,
+     "end": 5.102
     }
    ]
   },
   {
    "id": "pilih",
-   "text": "Pilih dari 65 gaya: anime, wayang, flat vector, dan lainnya.",
-   "start": 3.025,
-   "end": 8.051,
+   "text": "Pilih dari 77 gaya: anime, wayang, flat vector, stickman kisah, dan lainnya.",
+   "start": 5.504,
+   "end": 11.879,
    "words": [
     {
      "w": "Pilih",
-     "start": 3.025,
-     "end": 3.552
+     "start": 5.504,
+     "end": 6.046
     },
     {
      "w": "dari",
-     "start": 3.552,
-     "end": 4.08
+     "start": 6.046,
+     "end": 6.589
     },
     {
-     "w": "65",
-     "start": 4.08,
-     "end": 4.383
+     "w": "77",
+     "start": 6.589,
+     "end": 6.901
     },
     {
      "w": "gaya:",
-     "start": 4.383,
-     "end": 4.686
+     "start": 6.901,
+     "end": 7.213
     },
     {
      "w": "anime,",
-     "start": 4.798,
-     "end": 5.55
+     "start": 7.328,
+     "end": 8.102
     },
     {
      "w": "wayang,",
-     "start": 5.662,
-     "end": 5.965
+     "start": 8.218,
+     "end": 8.529
     },
     {
      "w": "flat",
-     "start": 6.077,
-     "end": 6.38
+     "start": 8.645,
+     "end": 8.957
     },
     {
      "w": "vector,",
-     "start": 6.38,
-     "end": 6.907
+     "start": 8.957,
+     "end": 9.5
+    },
+    {
+     "w": "stickman",
+     "start": 9.615,
+     "end": 10.158
+    },
+    {
+     "w": "kisah,",
+     "start": 10.158,
+     "end": 10.701
     },
     {
      "w": "dan",
-     "start": 7.019,
-     "end": 7.322
+     "start": 10.816,
+     "end": 11.128
     },
     {
      "w": "lainnya.",
-     "start": 7.322,
-     "end": 7.85
+     "start": 11.128,
+     "end": 11.671
     }
    ]
   },
   {
    "id": "tengah",
-   "text": "Tulis ceritamu, mesin yang menggambar setiap adegan.",
-   "start": 8.301,
-   "end": 11.294,
+   "text": "Tulis ceritamu, mesin yang menggambar setiap adegan sampai jadi.",
+   "start": 12.129,
+   "end": 15.587,
    "words": [
     {
      "w": "Tulis",
-     "start": 8.301,
-     "end": 8.639
+     "start": 12.129,
+     "end": 12.447
     },
     {
      "w": "ceritamu,",
-     "start": 8.639,
-     "end": 9.263
+     "start": 12.447,
+     "end": 13.035
     },
     {
      "w": "mesin",
-     "start": 9.335,
-     "end": 9.672
+     "start": 13.103,
+     "end": 13.421
     },
     {
      "w": "yang",
-     "start": 9.672,
-     "end": 9.866
+     "start": 13.421,
+     "end": 13.604
     },
     {
      "w": "menggambar",
-     "start": 9.866,
-     "end": 10.346
+     "start": 13.604,
+     "end": 14.057
     },
     {
      "w": "setiap",
-     "start": 10.346,
-     "end": 10.684
+     "start": 14.057,
+     "end": 14.375
     },
     {
-     "w": "adegan.",
-     "start": 10.684,
-     "end": 11.164
+     "w": "adegan",
+     "start": 14.375,
+     "end": 14.829
+    },
+    {
+     "w": "sampai",
+     "start": 14.829,
+     "end": 15.147
+    },
+    {
+     "w": "jadi.",
+     "start": 15.147,
+     "end": 15.465
     }
    ]
   },
   {
    "id": "suara",
-   "text": "Narasi otomatis, musik dan caption ikut jadi.",
-   "start": 11.544,
-   "end": 14.133,
+   "text": "Narasi ElevenLabs, musik dan caption otomatis ikut jadi.",
+   "start": 15.837,
+   "end": 19.369,
    "words": [
     {
      "w": "Narasi",
-     "start": 11.544,
-     "end": 11.981
+     "start": 15.837,
+     "end": 16.326
     },
     {
-     "w": "otomatis,",
-     "start": 11.981,
-     "end": 12.548
+     "w": "ElevenLabs,",
+     "start": 16.326,
+     "end": 16.961
     },
     {
      "w": "musik",
-     "start": 12.613,
-     "end": 12.92
+     "start": 17.034,
+     "end": 17.377
     },
     {
      "w": "dan",
-     "start": 12.92,
-     "end": 13.096
+     "start": 17.377,
+     "end": 17.574
     },
     {
      "w": "caption",
-     "start": 13.096,
-     "end": 13.403
+     "start": 17.574,
+     "end": 17.917
+    },
+    {
+     "w": "otomatis",
+     "start": 17.917,
+     "end": 18.551
     },
     {
      "w": "ikut",
-     "start": 13.403,
-     "end": 13.709
+     "start": 18.551,
+     "end": 18.894
     },
     {
      "w": "jadi.",
-     "start": 13.709,
-     "end": 14.016
+     "start": 18.894,
+     "end": 19.237
     }
    ]
   },
   {
    "id": "akhir",
    "text": "Maura Motion: idemu, tayang hari ini.",
-   "start": 14.383,
-   "end": 16.933,
+   "start": 19.619,
+   "end": 22.109,
    "words": [
     {
      "w": "Maura",
-     "start": 14.383,
-     "end": 14.758
+     "start": 19.619,
+     "end": 19.984
     },
     {
      "w": "Motion:",
-     "start": 14.758,
-     "end": 15.132
+     "start": 19.984,
+     "end": 20.35
     },
     {
      "w": "idemu,",
-     "start": 15.212,
-     "end": 15.746
+     "start": 20.428,
+     "end": 20.949
     },
     {
      "w": "tayang",
-     "start": 15.826,
-     "end": 16.041
+     "start": 21.027,
+     "end": 21.237
     },
     {
      "w": "hari",
-     "start": 16.041,
-     "end": 16.415
+     "start": 21.237,
+     "end": 21.603
     },
     {
      "w": "ini.",
-     "start": 16.415,
-     "end": 16.79
+     "start": 21.603,
+     "end": 21.969
     }
    ]
   }
