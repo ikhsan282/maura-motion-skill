@@ -154,11 +154,11 @@ export function render(t) {
   const sqP = prog(t, T.sqShow, T.sqShow + 0.7);
 
   // a-square: below the horizontal leg (0,0)-(A,0)
-  const sqA = { cx: OX + A / 2, cy: OY + B / 2 + A / 2, nx: 0, ny: 1, s: A };
+  const sqA = { cx: OX + A / 2, cy: OY + A / 2, nx: 0, ny: 1, s: A };
   drawSquare(ctx, sqA, rgba(COL.a, 0.35), COL.a, 3, sqP);
 
   // b-square: left of the vertical leg (0,0)-(0,B)
-  const sqB = { cx: OX - B / 2 - A / 2, cy: OY + B / 2, nx: -1, ny: 0, s: B };
+  const sqB = { cx: OX - B / 2, cy: OY + B / 2, nx: -1, ny: 0, s: B };
   drawSquare(ctx, sqB, rgba(COL.b, 0.35), COL.b, 3, sqP);
 
   // c-square: on the hypotenuse, rotated
@@ -183,11 +183,11 @@ export function render(t) {
   // ---- Phase 4: area labels on squares
   const areaP = prog(t, T.sqA, T.sqA + 0.5);
   if (areaP > 0) {
-    K.math(ctx, 'a²', OX + A / 2, OY + B / 2 + A / 2, { size: 80, color: COL.a, alpha: areaP });
+    K.math(ctx, 'a²', OX + A / 2, OY + A / 2, { size: 80, color: COL.a, alpha: areaP });
   }
   const areaBP = prog(t, T.sqB, T.sqB + 0.5);
   if (areaBP > 0) {
-    K.math(ctx, 'b²', OX - B / 2 - A / 2, OY + B / 2, { size: 80, color: COL.b, alpha: areaBP });
+    K.math(ctx, 'b²', OX - B / 2, OY + B / 2, { size: 80, color: COL.b, alpha: areaBP });
   }
   const areaCP = prog(t, T.sqC, T.sqC + 0.5);
   if (areaCP > 0) {
@@ -260,8 +260,8 @@ export function render(t) {
     const p = prog(t, T.result, T.result + 0.8);
     K.dot(ctx, OX, OY, 10, K.PAL.yellow, p);
     K.line(ctx, OX, OY, OX + A, OY, p, { color: COL.a, w: 4 });
-    K.line(ctx, OX, OY, OX, OY - B, p, { color: COL.b, w: 4 });
-    K.line(ctx, OX + A, OY, OX, OY - B, p, { color: COL.c, w: 4 });
+    K.line(ctx, OX, OY, OX, OY + B, p, { color: COL.b, w: 4 });
+    K.line(ctx, OX + A, OY, OX, OY + B, p, { color: COL.c, w: 4 });
   }
 
   ctx.setTransform(1, 0, 0, 1, 0, 0);
