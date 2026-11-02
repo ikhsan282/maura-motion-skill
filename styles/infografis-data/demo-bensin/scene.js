@@ -146,9 +146,9 @@ export function render(t) {
   if (dpa > 0) {
     K.panel(ui, 90, 1200, 900, 110, { p: dpa });
     ui.save(); ui.globalAlpha *= dpa;
-    K.counter(ui, '+35%', 200, 1230, { size: 56, color: K.PAL.indo, align: 'left' });
-    K.label(ui, 'NAIK DALAM 10 TAHUN', 400, 1270, { size: 24, color: '#c5cee0', align: 'left', font: 'JetBrains Mono', spacing: 1 });
-    K.label(ui, 'Rp 7.400 → Rp 10.000', 870, 1270, { size: 24, color: K.PAL.dim, align: 'right', font: 'JetBrains Mono' });
+    K.counter(ui, '+35%', 200, 1248, { size: 56, color: K.PAL.indo, align: 'left' });
+    K.label(ui, 'NAIK DALAM 10 TAHUN', 200, 1290, { size: 22, color: '#c5cee0', align: 'left', font: 'JetBrains Mono', spacing: 1 });
+    K.label(ui, 'Rp 7.400 → Rp 10.000', 870, 1262, { size: 24, color: K.PAL.dim, align: 'right', font: 'JetBrains Mono' });
     ui.restore();
   }
 
