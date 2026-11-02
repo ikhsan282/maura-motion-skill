@@ -1,0 +1,19 @@
+{
+ "title": "Kota Neon 80-an Hidup Lagi",
+ "slug": "neon_kota",
+ "style": "synthwave",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": { "preset": "synthwave", "db": -18 },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {"id": "hook", "text": "Kota neon 80-an hidup lagi, di layar kita.", "say": "Kota neon delapan puluhan hidup lagi, di layar kita."},
+  {"id": "retro", "text": "Estetik retro booming lagi karena rindu masa sederhana.", "say": "Estetik retro buming lagi karena rindu masa sederhana."},
+  {"id": "vhs", "text": "Kaset VHS berderau, warnanya hangat dan jujur."},
+  {"id": "arcade", "text": "Arcade berisik, koin berdenting, skor tertinggi dikejar.", "say": "Arkeid berisik, koin berdenting, skor tertinggi dikejar."},
+  {"id": "akhir", "text": "Masa lalu tak kembali, tapi cahayanya masih menyala."}
+ ]
+}
