@@ -114,7 +114,8 @@ Sebagian gaya punya lebih dari 1 demo (tema berbeda, kit sama):
 
 ## Contoh hasil
 
-- Video "Mudik Nyaman Maura Trans" (flat-vector, full custom, 44 dtk) — bus MAURA TRANS, kursi empuk, rute Jakarta→Jawa, rating 4.9, CTA pesan kursi. Dibuat dengan skill ini: `story.json` 10 baris + `scene.js` 10 adegan.
+- "Ke Mana Perginya Rp100 Ribu?" (`styles/flat-vector/demo/`, 27 dtk) — pipa uang mengalir ke 4 kotak: bensin, jajan, parkir, hilang.
+- "Kirim Kucing ke Mana Aja" (`styles/infografis-data/demo-ongkir/`, 41 dtk) — bar chart tarif paket hewan Maura Trans (Bandung 230rb, Tasik 250rb, Ciamis 300rb).
 - `examples/hello/` — contoh minimal 5 baris, render 23 dtk (voice George).
 
 ## Butuh
