@@ -172,11 +172,11 @@ export async function setup(AM) {
 // ---------------------------------------------------------------- camera
 const SHOTS = [];
 const shot = (id, cam) => SHOTS.push({ id, cam });
-shot('hook', (t) => [lerp(960, 960, prog(t, C.hook.start, C.hook.end, ease.inOutSine)), 760 - t * 3, 1.0 + t * 0.005]);
-shot('deadline', (t) => { const u = prog(t, C.deadline.start, C.deadline.end, ease.inOutSine); return [lerp(960, 540, u), lerp(760, 700, u), lerp(1.0, 1.05, u)]; });
-shot('adrenalin', (t) => { const u = prog(t, C.adrenalin.start, C.adrenalin.end, ease.inOutSine); return [lerp(540, 700, u), lerp(700, 680, u), lerp(1.05, 1.1, u)]; });
-shot('fokus', (t) => { const u = prog(t, C.fokus.start, C.fokus.end, ease.inOutSine); return [lerp(700, 540, u), lerp(680, 700, u), lerp(1.1, 1.08, u)]; });
-shot('solusi', (t) => { const u = prog(t, C.solusi.start, C.solusi.end, ease.inOutSine); return [lerp(540, 700, u), lerp(700, 680, u), lerp(1.08, 1.12, u)]; });
+shot('hook', (t) => [lerp(960, 960, prog(t, C.hook.start, C.hook.end, ease.inOutSine)), 760 - t * 3, 0.90 + t * 0.004]);
+shot('deadline', (t) => { const u = prog(t, C.deadline.start, C.deadline.end, ease.inOutSine); return [lerp(960, 540, u), lerp(760, 700, u), lerp(0.90, 0.945, u)]; });
+shot('adrenalin', (t) => { const u = prog(t, C.adrenalin.start, C.adrenalin.end, ease.inOutSine); return [lerp(540, 700, u), lerp(700, 680, u), lerp(0.945, 0.99, u)]; });
+shot('fokus', (t) => { const u = prog(t, C.fokus.start, C.fokus.end, ease.inOutSine); return [lerp(700, 540, u), lerp(680, 700, u), lerp(0.99, 0.972, u)]; });
+shot('solusi', (t) => { const u = prog(t, C.solusi.start, C.solusi.end, ease.inOutSine); return [lerp(540, 700, u), lerp(700, 680, u), lerp(0.972, 1.008, u)]; });
 
 function camAt(t) {
   let k = 0;

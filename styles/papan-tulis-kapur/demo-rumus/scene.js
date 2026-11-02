@@ -149,13 +149,13 @@ export async function setup(AM) {
 // ---------------------------------------------------------------- shots (camera)
 const SHOTS = [];
 const shot = (id, cam) => SHOTS.push({ id, cam });
-shot('hook', (t) => [540 + Math.sin(t * 0.6) * 6, 760 - t * 4, 1.0 + t * 0.006]);
-shot('angkat', (t) => { const u = prog(t, C.angkat.start, C.angkat.end, ease.inOutSine); return [lerp(540, 540, u), lerp(740, 760, u), lerp(1.02, 1.06, u)]; });
-shot('kiri', (t) => { const u = prog(t, C.kiri.start, C.kiri.end, ease.inOutSine); return [lerp(540, 480, u), lerp(760, 800, u), lerp(1.06, 1.12, u)]; });
-shot('kanan', (t) => { const u = prog(t, C.kanan.start, C.kanan.end, ease.inOutSine); return [lerp(480, 620, u), lerp(800, 780, u), lerp(1.12, 1.08, u)]; });
+shot('hook', (t) => [540 + Math.sin(t * 0.6) * 6, 760 - t * 4, 0.90 + t * 0.004]);
+shot('angkat', (t) => { const u = prog(t, C.angkat.start, C.angkat.end, ease.inOutSine); return [lerp(540, 540, u), lerp(740, 760, u), lerp(0.918, 0.954, u)]; });
+shot('kiri', (t) => { const u = prog(t, C.kiri.start, C.kiri.end, ease.inOutSine); return [lerp(540, 480, u), lerp(760, 800, u), lerp(0.954, 1.008, u)]; });
+shot('kanan', (t) => { const u = prog(t, C.kanan.start, C.kanan.end, ease.inOutSine); return [lerp(480, 620, u), lerp(800, 780, u), lerp(1.008, 0.972, u)]; });
 shot('hasil', (t) => {
   const a = C.hasil.start, pan = prog(t, a, a + 0.8, ease.inOutCubic), out = prog(t, T('hasil', 0.82), T('hasil', 0.82) + 1.0, ease.inOutCubic);
-  const x = lerp(lerp(620, 1450, pan), 990, out), y = lerp(780, 830, out), z = Math.exp(lerp(Math.log(1.0), Math.log(0.555), out));
+  const x = lerp(lerp(620, 1450, pan), 990, out), y = lerp(780, 830, out), z = Math.exp(lerp(Math.log(1.0), Math.log(0.50), out));
   return [x, y, z];
 });
 function camAt(t) {
