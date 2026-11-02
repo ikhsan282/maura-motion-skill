@@ -6,7 +6,7 @@
  "voice": "el-id-m",
  "music": { "preset": "cinematic", "db": -17 },
  "lead": 0.5,
- "tail": 2.0,
+ "tail": 3.0,
  "pause": 0.4,
  "speed": 0.75,
  "lines": [
