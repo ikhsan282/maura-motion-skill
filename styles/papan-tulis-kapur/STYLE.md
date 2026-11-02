@@ -44,3 +44,5 @@ reaksi murid membuat paradoks terasa dramatis.
 "50%" dilingkari, murid kaget → hapus, kalender, "365 hari", murid: "Mustahil!" → penghapus menyapu papan, 23 titik
 melingkar dan 253 garis pasangan tergambar dengan penghitung → pasangan berkedip kuning, termometer naik ke 50% →
 kamera bergeser ke kurva peluang, 23→50%, 70→"99,9%" dilingkari → mundur ke seluruh papan, semua bersorak.
+- **Demo 2 — "Efek SKS"** (`demo-sks/`, 18 dtk): PR H-1, adrenalin, otak fokus satu target, solusi cicil harian. Voice el-id-m, zoom out 10%.
+- **Demo 3 — "Trik 9x Jari"** (`demo-rumus/`, 16 dtk): tekuk jari ke-7, 6 kiri + 3 kanan = 63. Voice el-id-m, zoom out 10%.
