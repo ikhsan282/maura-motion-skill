@@ -25,6 +25,50 @@ AM_MAX_DURATION=120 node scripts/make.mjs styles/stickman-kisah/demo
 
 Detail lengkap: baca `SKILL.md`. Standar nulis cerita & gaya baru: `AUTHORING.md`.
 
+## Dipakai dengan AI (Bahasa Indonesia)
+
+Skill ini dirancang untuk dijalankan **bareng AI coding agent**. Kamu cukup cerita maunya apa, AI yang menulis `story.json` + `scene.js` + render.
+
+**Contoh prompt (copy-paste, ganti topiknya):**
+
+> Buatkan video vertikal gaya `flat-vector` tentang "ke mana perginya Rp100 ribu".
+> Naskah 5 baris Bahasa Indonesia, hook di baris pertama.
+> Render MP4 + narasi + musik, lalu kirim videonya.
+
+**Pola prompt yang works:**
+
+| Mau apa | Bilang gini |
+|---|---|
+| Gaya tertentu | "pakai gaya `kinetic-type`" / "gaya 22" / "kayak lukisan minyak" |
+| Topik bebas | "buatkan video tentang mudik" (AI pilihkan gaya yang cocok) |
+| Video panjang | "buatkan 60 detik tentang ..." |
+| Revisi visual | "di detik 7 teksnya numpuk, benerin" |
+| Tambah demo | "jadikan demo resmi gaya ini" |
+
+### Pakai Hermes
+
+Hermes (gateway + kanban) bisa menjalankan skill ini sebagai worker. Cukup kirim prompt seperti di atas ke chat Hermes — Hermes yang akan baca `SKILL.md`, tulis naskah & scene, render, dan kirim MP4-nya ke chat.
+
+Catatan: Hermes butuh akses ke repo ini (`~/maura-motion-skill/`), Node 22+, ffmpeg, Chrome, dan Python 3.10+. Setup sekali: `node scripts/setup.mjs`. Untuk suara manusia (ElevenLabs), taruh key di `~/.hermes/elevenlabs.env`.
+
+### Pakai Claude Code
+
+Clone repo ini, lalu jalankan Claude Code dari dalam folder repo:
+
+```bash
+git clone https://github.com/ikhsan282/maura-motion-skill.git
+cd maura-motion-skill
+node scripts/setup.mjs
+claude  # atau: claude-code
+```
+
+Lalu prompt di dalam Claude Code (sama polanya):
+
+> Baca SKILL.md. Buatkan video gaya `infografis-data` tentang "harga bensin 10 tahun".
+> Naskah Bahasa Indonesia 8 baris, render MP4 + narasi ElevenLabs (George), kirim hasilnya.
+
+Claude Code (termasuk paket Pro) tinggal mengikuti `SKILL.md` + `AUTHORING.md` — tidak perlu plugin tambahan. Pastikan `ffmpeg`, Chrome, dan Python 3.10+ tersedia di mesin yang sama.
+
 ## Struktur
 
 | Path | Isi |
