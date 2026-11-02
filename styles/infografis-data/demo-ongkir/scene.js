@@ -11,30 +11,27 @@ const C = {};
 const W = (id, w) => AM.wordTime(id, w);
 
 const CITIES = [
-  { id: 'jkt', name: 'Jakarta',   km: 130, price: 15000, color: K.PAL.americas },
-  { id: 'bdg', name: 'Bandung',   km: 270, price: 25000, color: K.PAL.europe },
-  { id: 'solo', name: 'Solo',      km: 540, price: 40000, color: K.PAL.asia },
-  { id: 'sby', name: 'Surabaya',  km: 780, price: 60000, color: K.PAL.indo },
+  { id: 'bdg', name: 'Bandung', km: 140, price: 230000, color: K.PAL.europe },
+  { id: 'tsk', name: 'Tasikmalaya', km: 270, price: 250000, color: K.PAL.americas },
+  { id: 'cms', name: 'Ciamis', km: 300, price: 300000, color: K.PAL.asia },
 ];
-const P_MAX = 70000;
+const P_MAX = 350000;
 const BAR_X = 380, BAR_W = 520, BAR_H = 64, BAR_GAP = 36, BAR_Y0 = 530;
 
 let T = {};
 export async function setup(AM) {
   ctx = AM.layer('world'); ui = AM.layer('ui');
   for (const l of AM.timeline.lines) C[l.id] = l;
-  T.jkt = W('jkt', 'jakarta') - 0.1;
-  T.bdg = W('bdg', 'bandung') - 0.1;
-  T.solo = W('solo', 'solo') - 0.1;
-  T.sby = W('sby', 'surabaya') - 0.1;
+  T.bdg = W('jkt', 'bandung') - 0.1;
+  T.tsk = W('bdg', 'tasikmalaya') - 0.1;
+  T.cms = W('solo', 'ciamis') - 0.1;
   T.pola = W('pola', 'jelas') - 0.1;
   T.travel = W('travel', 'maura') - 0.1;
   T.tutup = C.tutup.start - 0.1;
   AM.sfx('whoosh', 0.05, { gain: 0.3 });
-  AM.sfx('pop', T.jkt + 0.1, { gain: 0.35 });
-  AM.sfx('pop', T.bdg + 0.1, { gain: 0.35, pitch: 1.1 });
-  AM.sfx('pop', T.solo + 0.1, { gain: 0.4, pitch: 1.2 });
-  AM.sfx('pop', T.sby + 0.1, { gain: 0.45, pitch: 1.3 });
+  AM.sfx('pop', T.bdg + 0.1, { gain: 0.35 });
+  AM.sfx('pop', T.tsk + 0.1, { gain: 0.4, pitch: 1.2 });
+  AM.sfx('pop', T.cms + 0.1, { gain: 0.45, pitch: 1.3 });
   AM.sfx('ding', T.pola + 0.1, { gain: 0.45 });
   AM.sfx('chime', T.travel + 0.1, { gain: 0.5 });
   AM.sfx('whoosh', T.tutup, { gain: 0.3, pitch: 0.9 });
@@ -53,7 +50,7 @@ export function render(t) {
   ctx.strokeStyle = K.PAL.line; ctx.lineWidth = 2;
   ctx.beginPath(); ctx.moveTo(BAR_X, BAR_Y0 - 20); ctx.lineTo(BAR_X, BAR_Y0 + CITIES.length * (BAR_H + BAR_GAP) - 20); ctx.stroke();
   ctx.font = "400 22px 'JetBrains Mono'"; ctx.fillStyle = K.PAL.dim; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
-  for (let v = 0; v <= P_MAX; v += 10000) {
+  for (let v = 0; v <= P_MAX; v += 50000) {
     const yy = BAR_Y0 + CITIES.length * (BAR_H + BAR_GAP) - 20 - (v / P_MAX) * (CITIES.length * (BAR_H + BAR_GAP) - 40);
     ctx.fillText(K.num(v), BAR_X - 16, yy);
     ctx.strokeStyle = K.PAL.grid; ctx.lineWidth = 1;
@@ -62,8 +59,9 @@ export function render(t) {
   ctx.restore();
 
   // ---- bars per city
+  const TC = [T.bdg, T.tsk, T.cms];
   CITIES.forEach((c, i) => {
-    const tc = T[c.id];
+    const tc = TC[i];
     const p = prog(t, tc, tc + 0.55, ease.outCubic);
     const y = BAR_Y0 + i * (BAR_H + BAR_GAP);
     const bw = BAR_W * (c.price / P_MAX);
@@ -83,7 +81,7 @@ export function render(t) {
     const priceA = clamp(p * 2 - 0.6);
     K.counter(ctx, 'Rp ' + K.num(c.price), BAR_X + bw + 18, y + BAR_H / 2, { size: 32, color: c.color, align: 'left', alpha: priceA });
     // per-kg sublabel
-    K.label(ctx, '/ kg', BAR_X + bw + 18 + (K.num(c.price).length * 18 + 110), y + BAR_H / 2 + 4, { size: 18, color: K.PAL.dim, alpha: priceA });
+    K.label(ctx, 'paket', BAR_X + bw + 18 + (K.num(c.price).length * 18 + 110), y + BAR_H / 2 + 4, { size: 18, color: K.PAL.dim, alpha: priceA });
   });
 
   // ---- pattern summary panel (bottom)
