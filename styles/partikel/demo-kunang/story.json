@@ -1,0 +1,16 @@
+{
+ "title": "Kunang-Kunang: Cahaya yang Bernyanyi Serentak",
+ "slug": "demo_kunang",
+ "style": "partikel",
+ "lang": "id",
+ "voice": "el-id-m",
+ "music": { "preset": "dreamy", "db": -15 },
+ "lead": 0.3, "tail": 1.0, "pause": 0.2,
+ "lines": [
+  {"id": "hook", "text": "Di malam paling gelap, ribuan kunang-kunang menyala serentak.", "pause": 0.25},
+  {"id": "sinyal", "text": "Tiap kedip adalah sinyal kimia, undangan untuk berkumpul dan mencari pasangan."},
+  {"id": "sinkron", "text": "Ajaibnya, mereka saling menyesuaikan ritme hingga berkedip dalam satu irama."},
+  {"id": "gelap", "text": "Makin gelap malamnya, makin terang cahaya mereka terlihat."},
+  {"id": "akhir", "text": "Cahaya kecil, saat kompak, mengalahkan gelap."}
+ ]
+}
