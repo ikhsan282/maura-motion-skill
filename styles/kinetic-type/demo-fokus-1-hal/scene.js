@@ -77,9 +77,7 @@ shot('setengah', 'fokus', (t) => {
     const k = ease.outExpo(clamp((t - tI) / 0.4));
     const spread = (i) => 1 - k * (i % 2 ? 1 : -1);
     const lay = S([{ text: 'SEMUA.', at: tI, fx: 'drop', color: PAL.sun, fit: 0.55 }], { cy: 900 });
-    for (let i = 0; i < 3; i++) {
-      ctx.save(); ctx.translate((i - 1) * 120 * k, 0); D(lay, t); ctx.restore();
-    }
+    ctx.save(); ctx.translate(0, 0); D(lay, t); ctx.restore();
     return;
   }
 });
