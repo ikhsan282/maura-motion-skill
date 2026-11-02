@@ -104,7 +104,7 @@ Sebagian gaya punya lebih dari 1 demo (tema berbeda, kit sama):
 | `kinetic-type` | 1. "Aturan Dua Menit" (bawaan, 20 dtk) · 2. "Fokus Satu Hal" (`demo-fokus-1-hal/`, 18 dtk) · 3. "Efek Hal Kecil" (`demo-efek-kecil/`, 18 dtk) |
 | `partikel` | 1. "Murmurasi Burung Jalak" (bawaan) · 2. "Kunang-kunang" (`demo-kunang/`, 20 dtk) · 3. "Hujan + Petrichor" (`demo-hujan/`, 23 dtk) |
 | `terminal-ascii` | 1. "Virus yang Mencantumkan Alamat" (bawaan, 20 dtk) · 2. "Password 123456" (`demo-password/`, 20 dtk, brute force + 2FA) · 3. "Backup 3-2-1" (`demo-backup/`, 19 dtk, foto skripsi Rani + cloud vs lokal) |
-| `synthwave` | 1. "Suara Drum 80-an" (bawaan, 20 dtk) · 2. "Laser & Grid" (`demo-laser-grid/`, 20 dtk, matahari bergaris + chrome) · 3. "Mudik Malam: Tol Neon" (`demo-neon-kota/`, 17 dtk, lampu tol + bulan neon + dashboard) |
+| `synthwave` | 1. "Suara Drum 80-an" (bawaan, 20 dtk) · 2. "Laser & Grid" (`demo-laser-grid/`, 20 dtk, matahari bergaris + chrome) |
 | `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
 
