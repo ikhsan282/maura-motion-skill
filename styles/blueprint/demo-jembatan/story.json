@@ -6,9 +6,9 @@
  "voice": "el-id-m",
  "music": { "preset": "cinematic", "db": -17 },
  "lead": 0.5,
- "tail": 1.5,
- "pause": 0.3,
- "speed": 0.85,
+ "tail": 2.0,
+ "pause": 0.4,
+ "speed": 0.75,
  "lines": [
   { "id": "kabel", "text": "Kabel utama menopang jembatan dari menara ke menara." },
   { "id": "menara", "text": "Menara menyalurkan beban ke tanah lewat dua kaki kokoh." },
