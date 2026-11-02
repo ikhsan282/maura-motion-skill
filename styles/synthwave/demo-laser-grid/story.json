@@ -1,0 +1,17 @@
+{
+ "title": "Laser dan Grid: Estetika Synthwave",
+ "slug": "synthwave_laser_grid",
+ "style": "synthwave",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": { "preset": "synthwave", "db": -18 },
+ "lead": 0.3, "tail": 1.0, "pause": 0.2,
+ "lines": [
+  {"id": "hook", "text": "Garis horizon menyala, grid neon membentang tanpa ujung.", "say": "Garis horizon menyala, grid neon membentang tanpa ujung."},
+  {"id": "matahari", "text": "Matahari bergaris terbit perlahan, simbol nostalgia delapan puluhan.", "say": "Matahari bergaris terbit perlahan, simbol nostalgia delapan puluhan."},
+  {"id": "lazer", "text": "Lazer memotong langit malam, merah dan magenta beradu.", "say": "Lezer memotong langit malam, merah dan magenta beradu."},
+  {"id": "gunung", "text": "Gunung kawat menyala di kejauhan, krom delapan puluhan berkilau.", "say": "Gunung kawat menyala di kejauhan, krom delapan puluhan berkilau."},
+  {"id": "akhir", "text": "Inilah synthwave: lazer dan grid, masa depan dari masa lalu.", "say": "Inilah sintwef: lezer dan grid, masa depan dari masa lalu."}
+ ]
+}
