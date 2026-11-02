@@ -33,3 +33,5 @@ best_for: statistik penduduk, ekonomi, perbandingan negara, survei, "jika dunia 
 - `hbar(ctx, x, y, w, h, p, color, {name, value, hi})`: bar peringkat; `stackBar(ctx, x, y, w, h, segs)`: bar 100%; `axis(...)`; `jar(ctx, x, y, w, h, n, color, {p})`: toples kelereng yang terisi.
 
 **Demo:** "Jika Dunia Hanya 100 Orang", 19,6 detik. 100 ikon muncul (counter 0 → 100, "1 orang ≈ 82 juta jiwa") → ikon menyala dan pindah ke waffle: Asia 59, Afrika 18, Eropa 9, Amerika 13, Oseania 1 (data PBB WPP 2024, dibulatkan) → kamera menyelam ke Asia, 3½ ikon merah "INDONESIA ≈ 3,5" → panel peringkat India 17,8 · Tiongkok 17,4 · AS 4,2 · Indonesia 3,5 → 29 ikon, satu merah: "1 : 29".
+- **Demo 2 — "Harga Bensin 10 Tahun"** (`demo-bensin/`, ~39 dtk): line chart Pertalite 2015–2025 Rp7.400 → Rp10.000 (+35%), counter besar, panel delta +35% stack vertikal. Data BPH Migas/Pertamina.
+- **Demo 3 — "Kirim Kucing ke Mana Aja"** (`demo-ongkir/`, ~41 dtk): bar chart tarif paket hewan Maura Trans — Bandung 230rb, Tasikmalaya 250rb, Ciamis 300rb. Data mauratransmandiri.com/layanan.
