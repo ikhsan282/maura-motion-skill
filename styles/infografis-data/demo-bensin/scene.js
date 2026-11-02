@@ -132,8 +132,8 @@ export function render(t) {
     }
   }
 
-  // ---- 2025 big counter (right side)
-  const c2025 = env(t, T.kini, T.tutup, 0.3, 0.3);
+  // ---- 2025 big counter (right side) — hilang pas panel delta masuk
+  const c2025 = env(t, T.kini, T.banding, 0.3, 0.3);
   if (c2025 > 0) {
     const target = YEARS[YEARS.length - 1].p;
     const v = Math.round(target * prog(t, T.kini, T.kini + 0.7, ease.outCubic));
