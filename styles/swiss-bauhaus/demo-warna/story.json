@@ -1,0 +1,17 @@
+{
+ "title": "3 Warna Primer",
+ "slug": "demo-warna",
+ "style": "swiss-bauhaus",
+ "lang": "id",
+ "voice": "id-f",
+ "speed": 1.2,
+ "music": { "preset": "tech", "db": -17 },
+ "lead": 0.3, "tail": 1.0, "pause": 0.18,
+ "lines": [
+  {"id": "hook", "text": "Merah, kuning, biru: tiga warna yang membangun semua warna.", "pause": 0.2},
+  {"id": "primer", "text": "Warna primer tidak bisa dicampur dari warna lain. Semua warna lahir dari ketiganya."},
+  {"id": "logo", "text": "Itulah kenapa logo besar pakai warna dasar: langsung dikenali, bahkan dari jauh."},
+  {"id": "psiko", "text": "Merah berani, kuning ceria, biru dipercaya. Psikologi warna bekerja sebelum kata dibaca."},
+  {"id": "tutup", "text": "Tiga warna, tanpa hiasan. Itulah Bauhaus.", "say": "Tiga warna, tanpa hiasan. Itulah Bauhaus."}
+ ]
+}
