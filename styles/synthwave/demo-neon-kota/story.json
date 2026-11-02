@@ -1,19 +1,17 @@
 {
- "title": "Kota Neon 80-an Hidup Lagi",
- "slug": "neon_kota",
+ "title": "Mudik Malam: Tol Neon Menuju Kampung",
+ "slug": "mudik_malam_tol",
  "style": "synthwave",
  "lang": "id",
  "voice": "id-m",
  "speed": 1.2,
  "music": { "preset": "synthwave", "db": -18 },
- "lead": 0.3,
- "tail": 1.0,
- "pause": 0.2,
+ "lead": 0.3, "tail": 1.0, "pause": 0.2,
  "lines": [
-  {"id": "hook", "text": "Kota neon 80-an hidup lagi, di layar kita.", "say": "Kota neon delapan puluhan hidup lagi, di layar kita."},
-  {"id": "retro", "text": "Estetik retro booming lagi karena rindu masa sederhana.", "say": "Estetik retro buming lagi karena rindu masa sederhana."},
-  {"id": "vhs", "text": "Kaset VHS berderau, warnanya hangat dan jujur."},
-  {"id": "arcade", "text": "Arcade berisik, koin berdenting, skor tertinggi dikejar.", "say": "Arkeid berisik, koin berdenting, skor tertinggi dikejar."},
-  {"id": "akhir", "text": "Masa lalu tak kembali, tapi cahayanya masih menyala."}
+  {"id": "hook", "text": "Lampu tol berderet, malam memanggil pulang.", "say": "Lampu tol berderet, malam memanggil pulang."},
+  {"id": "sepi", "text": "Aspal sepi berkilau, grid neon menuntun laju.", "say": "Aspal sepi berkilau, grid neon menuntun laju."},
+  {"id": "bulan", "text": "Matahari tenggelam, bulan neon menjaga dari atas.", "say": "Matahari tenggelam, bulan neon menjaga dari atas."},
+  {"id": "radio", "text": "Radio berdendang pelan, rindu menumpang gelombang.", "say": "Radio berdendang pelan, rindu menumpang gelombang."},
+  {"id": "akhir", "text": "Lampu kampung menyala, mudik malam sampai juga.", "say": "Lampu kampung menyala, mudik malam sampai juga."}
  ]
 }
