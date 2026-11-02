@@ -40,3 +40,5 @@ best_for: sains populer, astronomi, biologi, "bagaimana cara kerja", perbandinga
 - `icon(ctx, 'pyramid'|'wheat'|'cave'|'clock'|'face', x, y, s)`, `beam(...)`: berkas cahaya; `iris(...)`: transisi lingkaran.
 
 **Demo:** "Cahaya di Wajahmu Lebih Tua dari Peradaban", 19,6 detik, 8 beat. Foton meluncur di berkas cahaya pagi dan mendarat di pipi (piramida "±4.500 tahun lalu") → zoom-through ke Matahari yang terbelah, "INTI 15 juta °C" → lahir dari kilatan fusi lalu menabrak partikel → diserap dan dilepas ke arah acak, jejaknya makin kusut → kamera mundur, penghitung tahun 10.000 → 170.000 (perkiraan) → foton lolos dari permukaan → 08:20 menuju Bumi → kembali ke pipi, judul "LEBIH TUA DARI PERADABAN".
+- **Demo 2 — "Ke Mana Perginya Rp100 Ribu?"** (`demo/`, ~27 dtk): pipa uang mengalir ke 4 kotak — bensin, jajan, parkir, hilang. Voice el-id-m.
+- **Demo 3 — "Peta Isi Kepala pas Macet"** (`demo-kepala-macet/`, ~25 dtk): pie chart isi kepala — kerja, lapar, bensin, "OTAK MACET". Voice el-id-m.
