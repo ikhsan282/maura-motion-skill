@@ -1,0 +1,20 @@
+{
+ "title": "Efek Hal Kecil",
+ "slug": "34_kinetic-type",
+ "style": "kinetic-type",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": { "preset": "hype", "db": -16 },
+ "captions": false,
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {"id": "retak", "text": "Retakan kecil menenggelamkan kapal besar.", "pause": 0.25},
+  {"id": "persen", "text": "Satu persen lebih baik, setiap hari.", "say": "Satu persen lebih baik, setiap hari."},
+  {"id": "kecil", "text": "Kecil dikali konsisten sama dengan besar."},
+  {"id": "contoh", "text": "Satu halaman jadi satu buku. Satu langkah jadi satu maraton."},
+  {"id": "akhir", "text": "Jangan remehkan yang kecil. Mulai dari yang kecil."}
+ ]
+}
