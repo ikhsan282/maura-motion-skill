@@ -88,7 +88,7 @@ export function render(t) {
   // equation K/d = 3,14
   const ep = prog(t, T.bagi, T.bagi + 1.0, ease.linear);
   if (ep > 0) {
-    const fy = lerp(1420, 480, prog(t, T.hasil - 0.3, T.hasil + 0.8));
+    const fy = lerp(1150, 420, prog(t, T.hasil - 0.3, T.hasil + 0.8));
     const full = t > T.pi - 0.1;
     const str = full ? 'K/d=3,14' : 'K/d=?';
     K.math(ctx, str, 540, fy, { size: 110, p: ep, color: K.PAL.white, colors: { K: K.PAL.yellow, d: K.PAL.red, '3': K.PAL.teal, '1': K.PAL.teal, '4': K.PAL.teal } });
