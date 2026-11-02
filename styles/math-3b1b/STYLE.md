@@ -34,3 +34,5 @@ best_for: pembuktian matematika, rumus sekolah, fisika dasar, statistik, paradok
 - `label(ctx, text, x, y)`, `dot(ctx, x, y, r, color)`.
 
 **Demo:** "Kenapa Luas Lingkaran itu Pi r Kuadrat", 19,2 detik. Lingkaran 32 juring terbelah, membuka, dan menyusun diri jadi "≈ persegi panjang" → diulang dengan N = 8, 16, 32, 64 sampai sisinya lurus → kurawal "r" (tinggi) dan "½ × 2πr" → "πr" (lebar, busur atas menyala) → "L = πr × r" ditulis, r kedua naik jadi pangkat: "L = πr²" dikotaki → persegi panjang melipat kembali jadi lingkaran berjari-jari r.
+- **Demo 2 — "Phi: K ÷ d = 3,14"** (`demo-pitagoras/`, 20 dtk): tali keliling dibuka lurus, garis diameter, tick 3,14×, rumus K/d=3,14 + 3 lingkaran. Voice el-id-m.
+- **Demo 3 — "Setengah Tak Terhingga"** (`demo-setengah/`, 20 dtk): batang dibagi dua terus (½+¼+⅛=1), paradoks Zeno. Voice el-id-m.
