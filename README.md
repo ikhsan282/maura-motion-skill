@@ -103,6 +103,7 @@ Sebagian gaya punya lebih dari 1 demo (tema berbeda, kit sama):
 | `infografis-data` | 1. "Jika Dunia Hanya 100 Orang" (bawaan, 20 dtk) · 2. "Harga Bensin 10 Tahun" (`demo-bensin/`, 39 dtk, Pertalite Rp7.400→Rp10.000) · 3. "Kirim Kucing ke Mana Aja" (`demo-ongkir/`, 41 dtk, tarif paket hewan Maura Trans) |
 | `kinetic-type` | 1. "Aturan Dua Menit" (bawaan, 20 dtk) · 2. "Fokus Satu Hal" (`demo-fokus-1-hal/`, 18 dtk) · 3. "Efek Hal Kecil" (`demo-efek-kecil/`, 18 dtk) |
 | `partikel` | 1. "Murmurasi Burung Jalak" (bawaan) · 2. "Kunang-kunang" (`demo-kunang/`, 20 dtk) · 3. "Hujan + Petrichor" (`demo-hujan/`, 23 dtk) |
+| `terminal-ascii` | 1. "Virus yang Mencantumkan Alamat" (bawaan, 20 dtk) · 2. "Password 123456" (`demo-password/`, 20 dtk, brute force + 2FA) · 3. "Backup 3-2-1" (`demo-backup/`, 19 dtk, foto skripsi Rani + cloud vs lokal) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
 
 ## Status gaya (audit 1 Nov 2026, update stills)
