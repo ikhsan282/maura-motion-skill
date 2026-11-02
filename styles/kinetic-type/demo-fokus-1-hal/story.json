@@ -1,0 +1,39 @@
+{
+ "title": "Fokus Satu Hal",
+ "slug": "33b_fokus-satu-hal",
+ "style": "kinetic-type",
+ "lang": "id",
+ "voice": "el-id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "hype",
+  "db": -16
+ },
+ "captions": false,
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Multitasking itu mitos. Kamu tidak mengerjakan banyak hal.",
+   "pause": 0.25
+  },
+  {
+   "id": "setengah",
+   "text": "Kamu mengerjakan setengah-setengah semuanya. Tidak ada yang selesai."
+  },
+  {
+   "id": "fokus",
+   "text": "Fokus itu sederhana. Satu hal. Sampai selesai."
+  },
+  {
+   "id": "tutup",
+   "text": "Tutup yang lain. Satu layar. Satu tugas."
+  },
+  {
+   "id": "akhir",
+   "text": "Setengah semua, atau selesai satu. Pilih satu."
+  }
+ ]
+}
