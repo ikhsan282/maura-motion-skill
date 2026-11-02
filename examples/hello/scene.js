@@ -54,7 +54,7 @@ shot('pilih', (t, a, b) => {
     }
   });
   reset();
-  K.badge(ctx, '65 gaya siap pakai', 540, 420, { p: K.pop(t, a + 0.1, 0.4), size: 42 });
+  K.badge(ctx, '77 gaya siap pakai', 540, 420, { p: K.pop(t, a + 0.1, 0.4), size: 42 });
 });
 
 shot('tengah', (t, a, b) => {
