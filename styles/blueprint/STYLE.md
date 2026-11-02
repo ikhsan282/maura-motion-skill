@@ -33,3 +33,5 @@ best_for: cara membangun sesuatu, teknik kuno, penemuan, arsitektur, mesin, pros
 - Subjek: `pyramid(ctx, cx, by, w, h, p, mode, {courses})`, `block`, `sledge`, `worker(ctx, x, y, s, phase, mode, {dir, pour})`: figur penarik/penuang air, `wheel`, `crossOut`, `wirePyramid(ctx, cx, cy, size, yaw, p, mode, {pitch})`: piramida kawat 3D.
 
 **Demo:** "Bagaimana Piramida Giza Dibangun", 19,8 detik. Sketsa pensil piramida menggambar diri, "2.300.000 blok (perkiraan)", roda dan besi dicoret → scan line ke cetak biru: kereta luncur kayu ditarik tim, penuang air membasahi pasir, "≈ 2,5 t" → perbandingan pasir kering (8 penarik) vs basah (4 penarik, uji lab Univ. Amsterdam 2014) → tiga teori landai (lurus, zigzag, melingkar) dengan stempel TEORI → scan line ke hologram: piramida kawat berputar dan berhenti, "146 m", kompas U, "selisih ±0,06° dari utara sejati".
+- **Demo 2 — "Denah Rumah Tipe 36"** (`demo-rumah/`, 21 dtk): 6×6 m, ruang tamu + 2 kamar + dapur + KM, skala 1:200. Voice el-id-m.
+- **Demo 3 — "Jembatan Gantung"** (`demo-jembatan/`, 20 dtk): kabel utama, menara, dek, kabel catenary + 12 hanger. Voice el-id-m.
