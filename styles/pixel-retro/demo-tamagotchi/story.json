@@ -1,0 +1,41 @@
+{
+ "lang": "id",
+ "lead": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Tahun sembilan puluhan, peliharaan paling heboh muat di gantungan kunci."
+  },
+  {
+   "id": "makan",
+   "say": "Namanya Tamagoci. Tiap hari harus dikasih makan, kalau tidak lapar melulu.",
+   "text": "Namanya Tamagotchi. Tiap hari harus dikasih makan, kalau tidak lapar melulu."
+  },
+  {
+   "id": "lupa",
+   "say": "Lupa sehari saja, bunyi tit-tit, layarnya tinggal nisan.",
+   "text": "Lupa sehari saja, bunyi tit-tit, layarnya tinggal nisan."
+  },
+  {
+   "id": "main",
+   "say": "Makanya dibawa ke sekolah, disembunyikan di balik tas.",
+   "text": "Makanya dibawa ke sekolah, disembunyikan di balik tas."
+  },
+  {
+   "id": "akhir",
+   "say": "Sekarang main lagi di hape. Nostalgianya tetap sama: jangan sampai mati lagi.",
+   "text": "Sekarang main lagi di hape. Nostalgianya tetap sama: jangan sampai mati lagi."
+  }
+ ],
+ "music": {
+  "db": -17,
+  "preset": "chiptune"
+ },
+ "pause": 0.2,
+ "slug": "08_pixel-tamagotchi",
+ "speed": 1.2,
+ "style": "pixel-retro",
+ "tail": 1.0,
+ "title": "Tamagotchi: Jangan Sampai Mati",
+ "voice": "el-id-m"
+}
