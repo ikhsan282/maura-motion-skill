@@ -63,3 +63,5 @@ KAMU BUTUH DUA MENIT (stopwatch) → ATURAN DUA MENIT, buku *Atomic Habits*, JAM
 SATU HALAMAN (halaman dibalik) → LARI? IKAT TALI SEPATUMU (tali terikat) → "kecil?" mungil dilingkari →
 JUSTRU ITU INTINYA → YANG BERAT CUMA MULAI. → SEMANGAT dicoret → PASANG DUA MENIT → MULAI SEKARANG.
 dengan hitung mundur 01:59.
+- **Demo 2 — "Fokus Satu Hal"** (`demo-fokus-1-hal/`, ~18 dtk): multitasking = setengah semua vs fokus = selesai satu. Voice el-id-m.
+- **Demo 3 — "Efek Hal Kecil"** (`demo-efek-kecil/`, ~18 dtk): retakan kecil tenggelamkan kapal, 1% tiap hari, kecil × konsisten = besar. Voice el-id-m.
