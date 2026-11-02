@@ -49,3 +49,4 @@ KOMPRESOR, jarum mentok, BOOM! (layar bergetar, meter merah) → NOISE GATE: dua
 memotong ekor gema (engineer Hugh Padgham) → "GATED REVERB" chrome, kaset 1980-1989 terbang, "lahir dari
 mikrofon untuk ngobrol".
 - **Demo 2 — "Laser & Grid"** (`demo-laser-grid/`, 20 dtk): garis horizon menyala, matahari bergaris, lazer merah-magenta, gunung kawat + chrome 80-an. Voice el-id-m.
+- **Demo 3 — "Mudik Malam: Tol Neon"** (`demo-neon-kota/`, 17 dtk): lampu tol berderet, bulan neon, dashboard chrome, radio pelan sampai kampung. Voice el-id-m.
