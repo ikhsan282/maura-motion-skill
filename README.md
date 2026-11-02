@@ -1,6 +1,6 @@
 # Maura Motion Skill
 
-Library 77 gaya animasi untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode, bukan AI generate. Pilih gaya, kasih topik/naskah, jadi MP4 + narasi Indonesia/Inggris + caption + musik.
+Library **77 gaya animasi** untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode, bukan AI generate. Pilih gaya, kasih topik/naskah, jadi MP4 + narasi Indonesia/Inggris + caption + musik.
 
 Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa aja.
 
@@ -16,8 +16,11 @@ Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), t
 # setup pertama kali
 node scripts/setup.mjs
 
-# render (video panjang sampai 60 dtk)
-AM_MAX_DURATION=70 node scripts/make.mjs ./my-short
+# render pendek (maks 20 dtk)
+node scripts/make.mjs styles/anime/demo
+
+# render panjang (sampai 120 dtk)
+AM_MAX_DURATION=120 node scripts/make.mjs styles/stickman-kisah/demo
 ```
 
 Detail lengkap: baca `SKILL.md`. Standar nulis cerita & gaya baru: `AUTHORING.md`.
@@ -27,27 +30,52 @@ Detail lengkap: baca `SKILL.md`. Standar nulis cerita & gaya baru: `AUTHORING.md
 | Path | Isi |
 |---|---|
 | `SKILL.md` | Panduan pakai skill (pintu masuk agen) |
+| `AUTHORING.md` | Standar naskah & cara bikin gaya baru |
 | `STYLES.md` / `catalog.json` | Katalog 77 gaya + kecocokan topik |
 | `styles/<gaya>/` | `STYLE.md` + `kit.js` + `demo/` per gaya |
+| `examples/` | Contoh jadi: `hello`, `flat-uang100`, `flat-kepala-macet` |
 | `engine/` | Runtime + renderer (headless Chrome → MP4) |
-| `audio/` | TTS (Kokoro/Piper, offline), 19 preset musik, 45 SFX, mixing −14 LUFS |
+| `audio/` | TTS (Kokoro/Piper offline + ElevenLabs), musik, SFX, mixing −14 LUFS |
 | `scripts/` | `setup.mjs`, `make.mjs`, `build_index.py` |
+
+## Narasi suara
+
+Dua jalur, pilih sesuai kebutuhan:
+
+| Jalur | Suara | Kapan dipakai |
+|---|---|---|
+| Offline (default) | Kokoro/Piper, 19 preset, tanpa API key | Draft, iterasi cepat, tanpa internet |
+| ElevenLabs | George (`el-id-m`), Alice (`el-id-f`) + 2 lagi, model `eleven_multilingual_v2` | Hasil akhir — suara manusia, Bahasa Indonesia natural |
+
+Key ElevenLabs di `~/.hermes/elevenlabs.env` (jangan commit). Semua demo multi-baru pakai George.
+
+## Gaya dengan demo tambahan
+
+Sebagian gaya punya lebih dari 1 demo (tema berbeda, kit sama):
+
+| Gaya | Demo |
+|---|---|
+| `flat-vector` | 1. "Cahaya di Wajahmu" (bawaan, 20 dtk) · 2. "Ke Mana Perginya Rp100 Ribu?" (`demo/`, 27 dtk) · 3. "Peta Isi Kepala pas Macet" (`demo-kepala-macet/`, 25 dtk) |
+| `infografis-data` | 1. "Jika Dunia Hanya 100 Orang" (bawaan, 20 dtk) · 2. "Harga Bensin 10 Tahun" (`demo-bensin/`, 39 dtk, Pertalite Rp7.400→Rp10.000) · 3. "Kirim Kucing ke Mana Aja" (`demo-ongkir/`, 41 dtk, tarif paket hewan Maura Trans) |
+| `kinetic-type` | 1. "Aturan Dua Menit" (bawaan, 20 dtk) · 2. "Fokus Satu Hal" (`demo-fokus-1-hal/`, 18 dtk) · 3. "Efek Hal Kecil" (`demo-efek-kecil/`, 18 dtk) |
+| `partikel` | 1. "Murmurasi Burung Jalak" (bawaan) · 2. "Kunang-kunang" (`demo-kunang/`, 20 dtk) · 3. "Hujan + Petrichor" (`demo-hujan/`, 23 dtk) |
+| `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
 
 ## Status gaya (audit 1 Nov 2026, update stills)
 
 - ✅ **Siap pakai (73):** anime, batik-hidup, blueprint, boneka-rajut, buku-pop-up, cat-air, clay-stop-motion, dark-glow-ui, dunia-blok, flat-vector, flipbook, garis-tunggal, infografis-data, isometrik, kartun-3d-sinematik, kartun-jadul, kartun-outline-tebal, kertas-guntingan, kinetic-type, kotak-cahaya-kertas, lukisan-minyak, lukis-pedesaan, manga-action, math-3b1b, neo-brutalist, noir-dokumenter, origami, papan-tulis-kapur, pixel-retro, pop-art, product-light, riso-halftone, stickman-doodle, stickman-beanie, stickman-cinematic, stickman-duo, stickman-lecture, stickman-graffiti, stickman-3dworld, stickman-picturebook, stickman-caveman, stickman-minimal-dark, stickman-subuh, stickman-pelukis, stickman-kisah, synthwave, terminal-ascii, ui-morph, vhs-arsip, wayang-beber, wayang-kulit, diorama-miniatur, kardus-bekas, gacha-3d, gouache-dongeng, kolase-daun-bunga, partikel, perkamen-ukiran, psychedelic-shader, scrapbook, skala-kosmik, sumi-e, swiss-bauhaus, sketsa-pensil*
-- 🔧 **Sebagian (0):** —
 - ❌ **Kosong (11):** chrome-y2k, cutaway-3d, dunia-3d-painterly, editorial-serif, hud-showreel, kaca-patri, lukisan-gua-purba, pastel-krayon, tinta-novel-grafis, trailer-gelap, vas-yunani
 
 *sketsa-pensil: demo ada, still menyusul.
 
 ## Contoh hasil
 
-Video "Mudik Nyaman Maura Trans" (flat-vector, full custom, 44 dtk) — bus MAURA TRANS, kursi empuk, rute Jakarta→Jawa, rating 4.9, CTA pesan kursi. Dibuat dengan skill ini: `story.json` 10 baris + `scene.js` 10 adegan.
+- Video "Mudik Nyaman Maura Trans" (flat-vector, full custom, 44 dtk) — bus MAURA TRANS, kursi empuk, rute Jakarta→Jawa, rating 4.9, CTA pesan kursi. Dibuat dengan skill ini: `story.json` 10 baris + `scene.js` 10 adegan.
+- `examples/hello/` — contoh minimal 5 baris, render 23 dtk (voice George).
 
 ## Butuh
 
-Node 22+, ffmpeg, Chrome/Chromium, Python 3.10+. Narasi offline (tidak perlu API key).
+Node 22+, ffmpeg, Chrome/Chromium, Python 3.10+. Narasi offline (tidak perlu API key); ElevenLabs opsional untuk suara manusia.
 
 ## Lisensi
 
