@@ -111,6 +111,7 @@ Sebagian gaya punya lebih dari 1 demo (tema berbeda, kit sama):
 | `dark-glow-ui` | 1. "Cyberpunk Login" (bawaan, 20 dtk) · 2. "Notifikasi + FOMO" (`demo-notif/`, 19 dtk, layar HP + digital detox) · 3. "Dashboard Real-time" (`demo-dashboard/`, 15 dtk, chart + metrik + alert) |
 | `hud-showreel` | 1. "Radar Lock" (bawaan, 20 dtk) · 2. "HP Bar" (`demo-hp/`, 14 dtk, damage + heal + KO) · 3. "Skill Cooldown" (`demo-skill/`, 21 dtk, ulti + combo x3 + level up) |
 | `flipbook` | 1. "Lompat Katak" (bawaan, 18 dtk) · 2. "Bola Memantul" (`demo-bola/`, 12 dtk, squash + stretch + gravitasi) · 3. "Stickman Lari" (`demo-lari/`, 16 dtk, langkah + debu + garis gerak) |
+| `garis-tunggal` | 1. "Wajah Satu Garis" (bawaan, 18 dtk) · 2. "Burung Satu Garis" (`demo-burung/`, 20 dtk, paruh + sayap + terbang) · 3. "Tangan Satu Garis" (`demo-tangan/`, 19 dtk, jari + genggam + lambaian) |
 | `pixel-retro` | 1. "Si Pitung: Level Batavia" (bawaan, 19 dtk) · 2. "Kenapa Game Jadul Bikin Nagih" (`demo-nagih/`, 20 dtk, skor + 3 nyawa) · 3. "Tamagotchi 90-an" (`demo-tamagotchi/`, 23 dtk, kasih makan + nisan) |
 | `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |

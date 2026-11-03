@@ -41,3 +41,5 @@ terputus sendiri menjadi metafora (kebiasaan, hubungan, perjalanan).
 notifikasi merah "PEMICU" → jari meraih dan menggulir "RUTINITAS", wajah tersenyum dan hati merah "HADIAH", panah kembali
 ke ponsel → jari memudar, garis yang sama menggambar buku terbuka "BACA BUKU" → garis berbelok merah ke atas, kamera
 mundur memperlihatkan seluruh gambar.
+- **Demo 2 — "Burung Satu Garis"** (`demo-burung/`, 20 dtk): paruh + sayap flap + jalur terbang merah. Voice el-id-m.
+- **Demo 3 — "Tangan Satu Garis"** (`demo-tangan/`, 19 dtk): 5 jari + kepalan + lambaian. Voice el-id-m.
