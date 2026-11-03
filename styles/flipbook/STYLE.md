@@ -44,3 +44,5 @@ nostalgik; ritme 12 fps-nya langsung dikenali sebagai "buatan tangan".
 pulpen menggambar stickman di halaman 1, halaman dibalik pelan, halaman 2 dengan bayangan tembus → dibalik cepat,
 "Dia hidup!" dengan kilau → kartu paten "KINEOGRAF · John Barnes Linnett" meluncur, stempel "1868", "= gambar bergerak"
 → pita film bergulir di samping buku, catatan kuning menghitung sampai "24 bingkai / detik", halaman terakhir TAMAT.
+- **Demo 2 — "Bola Memantul"** (`demo-bola/`, 12 dtk): squash + stretch + gravitasi, 5 baris. Voice el-id-m.
+- **Demo 3 — "Stickman Lari"** (`demo-lari/`, 16 dtk): langkah, debu, garis gerak, napas. Voice el-id-m.
