@@ -50,3 +50,5 @@ gembok menutup di atasnya → terbang ke server (sinar pemindai gagal: "Isi: tid
 ke HP si dia (centang dua), kunci privat di HP itu membukanya → "Dibobol?" 10⁷⁷ kemungkinan kunci (AES-256,
 2²⁵⁶ ≈ 1,16×10⁷⁷) → seluruh perjalanan menyala: "Untuk satu orang." (Server tetap melihat metadata, jadi
 naskah hanya bilang server tak bisa membaca isinya.)
+- **Demo 2 — "Notifikasi + FOMO"** (`demo-notif/`, 19 dtk): layar HP, notifikasi masuk terus, digital detox. Voice el-id-m.
+- **Demo 3 — "Dashboard Real-time"** (`demo-dashboard/`, 15 dtk): chart garis naik, metrik, alert hijau. Voice el-id-m.

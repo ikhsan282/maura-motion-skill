@@ -108,6 +108,7 @@ Sebagian gaya punya lebih dari 1 demo (tema berbeda, kit sama):
 | `math-3b1b` | 1. "Luas Lingkaran = πr²" (bawaan, 19 dtk) · 2. "Phi: K ÷ d = 3,14" (`demo-pitagoras/`, 20 dtk, tali keliling + diameter) · 3. "Setengah Tak Terhingga" (`demo-setengah/`, 20 dtk, Zeno ½+¼+⅛=1) |
 | `papan-tulis-kapur` | 1. "Paradoks Ulang Tahun" (bawaan, 20 dtk) · 2. "Efek SKS" (`demo-sks/`, 20 dtk, deadline + adrenalin) · 3. "Trik 9x Jari" (`demo-rumus/`, 19 dtk, tekuk jari ke-7) |
 | `blueprint` | 1. "Piramida Giza" (bawaan, 20 dtk) · 2. "Denah Rumah 36" (`demo-rumah/`, 21 dtk, 5 ruang + skala) · 3. "Jembatan Gantung" (`demo-jembatan/`, 20 dtk, kabel + menara + dek) |
+| `dark-glow-ui` | 1. "Cyberpunk Login" (bawaan, 20 dtk) · 2. "Notifikasi + FOMO" (`demo-notif/`, 19 dtk, layar HP + digital detox) · 3. "Dashboard Real-time" (`demo-dashboard/`, 15 dtk, chart + metrik + alert) |
 | `pixel-retro` | 1. "Si Pitung: Level Batavia" (bawaan, 19 dtk) · 2. "Kenapa Game Jadul Bikin Nagih" (`demo-nagih/`, 20 dtk, skor + 3 nyawa) · 3. "Tamagotchi 90-an" (`demo-tamagotchi/`, 23 dtk, kasih makan + nisan) |
 | `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
