@@ -180,7 +180,7 @@ function numbers(g, t) {
   g.save(); K.rise(g, x, y, pop, { from: 0.7, dy: 0 });
   K.glow(g, x, y - 140, 560, R.violet, 0.4);
   K.label(g, String(e).replace(/\B(?=(\d{3})+(?!\d))/g, '.'), x, y + 60, { size: 220, weight: 700, align: 'center', spacing: -8 });
-  K.micro(g, 'pengguna aktif', x, y + 140, { align: 'center', size: 30, color: P.ink2 });
+  K.micro(g, 'pengguna aktif', x, y + 210, { align: 'center', size: 30, color: P.ink2 });
   g.restore();
   // three mini bars
   const bars = [[0.62, R.violet], [0.84, R.blue], [0.48, R.cyan]];
