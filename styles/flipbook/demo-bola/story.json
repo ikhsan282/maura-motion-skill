@@ -1,0 +1,37 @@
+{
+ "title": "Bola Memantul",
+ "slug": "24_demo-bola",
+ "style": "flipbook",
+ "lang": "id",
+ "voice": "el-id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "musicbox",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Bola memantul ke tanah — tapi bentuknya berubah."
+  },
+  {
+   "id": "squash",
+   "text": "Saat kena, dia pipih: squash."
+  },
+  {
+   "id": "stretch",
+   "text": "Saat naik, dia memanjang: stretch."
+  },
+  {
+   "id": "gravitasi",
+   "text": "Gravitasi selalu menariknya turun lagi."
+  },
+  {
+   "id": "loop",
+   "text": "Mantul lagi, sampai berhenti."
+  }
+ ]
+}
