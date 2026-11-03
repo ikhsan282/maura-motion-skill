@@ -1,0 +1,47 @@
+{
+ "title": "Ke Mana Perginya Rp100 Ribu?",
+ "slug": "papanfakta-100rb",
+ "style": "papan-tulis-kapur",
+ "lang": "id",
+ "voice": "el-id-m",
+ "speed": 1.15,
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.25,
+ "maxDuration": 45,
+ "music": {
+  "preset": "lofi",
+  "db": -17
+ },
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Seratus ribu di tangan berasa sultan, tiga hari kemudian tinggal struknya. Ke mana perginya?"
+  },
+  {
+   "id": "bensin",
+   "text": "Pertama, bensin full tank. Tiga puluh ribu melayang tanpa pamit."
+  },
+  {
+   "id": "jajan",
+   "text": "Lalu kopi dan gorengan. Dua puluh lima ribu hilang pelan-pelan."
+  },
+  {
+   "id": "parkir",
+   "text": "Parkir, tol, dan ongkos kecil. Lima belas ribu bocor halus."
+  },
+  {
+   "id": "habis",
+   "text": "Sisanya tiga puluh ribu entah ke mana. Dompet tinggal angin."
+  },
+  {
+   "id": "total",
+   "text": "Tiga puluh tambah dua lima tambah lima belas tambah tiga puluh. Pas seratus ribu, tanpa jejak."
+  },
+  {
+   "id": "tutup",
+   "text": "Mulai catat pengeluaranmu hari ini.",
+   "say": "Mulai catat pengeluaranmu hari ini!"
+  }
+ ]
+}

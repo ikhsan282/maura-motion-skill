@@ -1,0 +1,42 @@
+{
+ "lang": "id",
+ "lead": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Cahaya yang menyentuh wajahmu malam ini lebih tua dari peradaban manusia."
+  },
+  {
+   "id": "matahari",
+   "text": "Cahaya matahari saja butuh delapan menit dua puluh detik untuk sampai ke Bumi."
+  },
+  {
+   "id": "bintang",
+   "text": "Cahaya bintang yang kamu lihat butuh ratusan, bahkan ribuan tahun untuk tiba."
+  },
+  {
+   "id": "wajah",
+   "text": "Jadi wajah orang yang kamu lihat malam ini sebenarnya adalah wajah dari masa lalu."
+  },
+  {
+   "id": "renung",
+   "text": "Setiap tatapan matamu adalah perjalanan waktu melintasi ruang angkasa."
+  },
+  {
+   "id": "tanya",
+   "say": "Coba lihat langit malam ini, masa lalu apa yang kamu lihat?",
+   "text": "Coba lihat langit malam ini: masa lalu apa yang kamu lihat?"
+  }
+ ],
+ "music": {
+  "db": -17,
+  "preset": "lofi"
+ },
+ "pause": 0.2,
+ "slug": "cahaya_papan-tulis-kapur",
+ "speed": 1.0,
+ "style": "papan-tulis-kapur",
+ "tail": 3.0,
+ "title": "Cahaya Lebih Tua dari Peradaban",
+ "voice": "el-id-m"
+}

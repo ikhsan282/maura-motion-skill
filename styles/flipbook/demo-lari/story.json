@@ -1,0 +1,37 @@
+{
+ "title": "Stickman Lari",
+ "slug": "24_demo-lari",
+ "style": "flipbook",
+ "lang": "id",
+ "voice": "el-id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "musicbox",
+  "db": -17
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Satu langkah, lalu langkah lain: lari itu ritme."
+  },
+  {
+   "id": "debu",
+   "text": "Debu beterbangan di belakang setiap kaki yang menapak."
+  },
+  {
+   "id": "garis",
+   "text": "Garis gerak mengikuti arah, seperti jejak di kertas."
+  },
+  {
+   "id": "napas",
+   "text": "Tarik napas, buang: tubuh bergerak tanpa henti."
+  },
+  {
+   "id": "loop",
+   "text": "Lari terus sampai halaman terakhir: TAMAT."
+  }
+ ]
+}
