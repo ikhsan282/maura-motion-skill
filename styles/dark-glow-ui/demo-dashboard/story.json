@@ -1,0 +1,42 @@
+{
+ "title": "Dashboard: Data Hidup di Layar",
+ "slug": "31b_dark-glow-ui-dashboard",
+ "style": "dark-glow-ui",
+ "lang": "id",
+ "voice": "id-m",
+ "speed": 1.2,
+ "music": {
+  "preset": "synthwave",
+  "db": -18
+ },
+ "lead": 0.3,
+ "tail": 1.0,
+ "pause": 0.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Semua data pentingmu hidup di sini.",
+   "say": "Semua data penting mu, hidup di sini."
+  },
+  {
+   "id": "grafik",
+   "text": "Garis grafik naik terus, pertumbuhanku nyata.",
+   "say": "Garis grafik naik terus, pertumbuhanku nyata."
+  },
+  {
+   "id": "metrik",
+   "text": "Metrik utama: pengguna, pendapatan, konversi.",
+   "say": "Metrik utama: pengguna, pendapatan, konversi."
+  },
+  {
+   "id": "real",
+   "text": "Real-time, data selalu update setiap detik.",
+   "say": "Real time, data selalu update setiap detik."
+  },
+  {
+   "id": "akhir",
+   "text": "Hati-hati, alert hijau menandakan aman.",
+   "say": "Hati-hati, alert hijau menandakan aman."
+  }
+ ]
+}
