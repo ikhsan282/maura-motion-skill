@@ -1,0 +1,38 @@
+{
+ "title": "Burung Origami",
+ "slug": "19_origami-burung",
+ "style": "origami",
+ "lang": "id",
+ "voice": "el-id-m",
+ "music": {
+  "preset": "japanese",
+  "db": -16
+ },
+ "lead": 0.35,
+ "tail": 1.8,
+ "pause": 0.25,
+ "speed": 0.85,
+ "duration": 28,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Selembar kertas merah bisa jadi burung yang hidup."
+  },
+  {
+   "id": "lipat",
+   "text": "Lipat menjadi dua, lalu lagi, sampai sudutnya berdiri."
+  },
+  {
+   "id": "sayap",
+   "text": "Sayapnya dibuka lebar, dan lehernya menengadah."
+  },
+  {
+   "id": "terbang",
+   "text": "Sekali kepakan, dan ia terbang ke langit pagi."
+  },
+  {
+   "id": "moral",
+   "text": "Lipatlah sampai sayapmu cukup untuk terbang."
+  }
+ ]
+}
