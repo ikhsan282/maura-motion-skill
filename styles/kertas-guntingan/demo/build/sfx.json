@@ -1,0 +1,43 @@
+[
+ {
+  "type": "paper",
+  "t": 0.02,
+  "gain": 0.5
+ },
+ {
+  "type": "rain",
+  "t": 0.5,
+  "gain": 0.3
+ },
+ {
+  "type": "whoosh",
+  "t": 1.465,
+  "gain": 0.4,
+  "pitch": 0.8
+ },
+ {
+  "type": "swoosh_up",
+  "t": 4.993,
+  "gain": 0.4
+ },
+ {
+  "type": "magic",
+  "t": 6.082,
+  "gain": 0.4
+ },
+ {
+  "type": "drum_hit",
+  "t": 11.362,
+  "gain": 0.55
+ },
+ {
+  "type": "thunder",
+  "t": 12.795,
+  "gain": 0.6
+ },
+ {
+  "type": "chime",
+  "t": 16.806,
+  "gain": 0.32
+ }
+]

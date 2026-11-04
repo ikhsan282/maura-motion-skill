@@ -1,0 +1,49 @@
+[
+ {
+  "type": "pencil",
+  "t": 0,
+  "gain": 0.35,
+  "pitch": 0.8
+ },
+ {
+  "type": "scratch",
+  "t": 0.708,
+  "gain": 0.35
+ },
+ {
+  "type": "slide_whistle",
+  "t": 1.624,
+  "gain": 0.3
+ },
+ {
+  "type": "boing",
+  "t": 5.906,
+  "gain": 0.3
+ },
+ {
+  "type": "impact",
+  "t": 6.672,
+  "gain": 0.35,
+  "pitch": 1.4
+ },
+ {
+  "type": "rain",
+  "t": 9.988,
+  "gain": 0.18
+ },
+ {
+  "type": "tick",
+  "t": 13.387,
+  "gain": 0.35
+ },
+ {
+  "type": "tick",
+  "t": 14.387,
+  "gain": 0.35
+ },
+ {
+  "type": "ding",
+  "t": 16.786,
+  "gain": 0.4
+ }
+]

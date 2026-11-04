@@ -1,0 +1,49 @@
+[
+ {
+  "type": "page_flip",
+  "t": 4.182,
+  "gain": 0.55
+ },
+ {
+  "type": "page_flip",
+  "t": 7.797,
+  "gain": 0.55
+ },
+ {
+  "type": "page_flip",
+  "t": 11.412,
+  "gain": 0.55
+ },
+ {
+  "type": "page_flip",
+  "t": 15.436,
+  "gain": 0.55
+ },
+ {
+  "type": "pop",
+  "t": 0.05,
+  "gain": 0.4
+ },
+ {
+  "type": "thud",
+  "t": 13.087,
+  "gain": 0.4,
+  "pitch": 1.3
+ },
+ {
+  "type": "bird",
+  "t": 13.953,
+  "gain": 0.5,
+  "pitch": 0.8
+ },
+ {
+  "type": "gong",
+  "t": 17.468,
+  "gain": 0.5
+ },
+ {
+  "type": "chime",
+  "t": 18.743,
+  "gain": 0.3
+ }
+]

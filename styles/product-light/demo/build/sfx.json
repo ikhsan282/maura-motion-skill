@@ -1,0 +1,43 @@
+[
+ {
+  "type": "swoosh_up",
+  "t": 0,
+  "gain": 0.35
+ },
+ {
+  "type": "click",
+  "t": 1.465,
+  "gain": 0.45
+ },
+ {
+  "type": "pop",
+  "t": 1.755,
+  "gain": 0.4
+ },
+ {
+  "type": "whoosh",
+  "t": 4.417,
+  "gain": 0.3
+ },
+ {
+  "type": "stamp",
+  "t": 8.029,
+  "gain": 0.45
+ },
+ {
+  "type": "ding",
+  "t": 9.817,
+  "gain": 0.5
+ },
+ {
+  "type": "coin",
+  "t": 15.838,
+  "gain": 0.35,
+  "pitch": 1.1
+ },
+ {
+  "type": "chime",
+  "t": 18.235,
+  "gain": 0.45
+ }
+]
