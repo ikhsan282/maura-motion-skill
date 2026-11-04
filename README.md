@@ -99,12 +99,22 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 
 ## Gaya dengan demo tambahan
 
-Sebagian gaya memiliki beberapa variasi demo dengan cerita dan durasi berbeda:
+Gaya No. 1 sampai 7 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
+
+| No | Gaya | Demo 1 | Demo 2 | Demo 3 |
+|:---:|---|---|---|---|
+| 1 | `anime` | "Tiket Terakhir Mudik" (`demo1/`, 17 dtk) | "Surat di Ujung Peron" (`demo2/`, 52 dtk) | "Rantang Hangat di Peron Senja" (`demo3/`, 60 dtk) |
+| 2 | `kartun-3d-sinematik` | "Sangkuriang & Tangkuban Perahu" (`demo1/`, 48 dtk) | "Roro Jonggrang & Candi Sewu" (`demo2/`, 55 dtk) | "Legenda Danau Toba & Ikan Mas Ajaib" (`demo3/`, 55 dtk) |
+| 3 | `lukis-pedesaan` | "Dewi Sri, Asal Mula Padi" (`demo1/`, 48 dtk) | "Musim Tanam Sawah Terasering" (`demo2/`, 55 dtk) | "Pasar Terapung & Perahu Pagi" (`demo3/`, 55 dtk) |
+| 4 | `dunia-blok` | "Candi Borobudur: Megastruktur Voxel" (`demo1/`, 48 dtk) | "Letusan Krakatau 1883" (`demo2/`, 55 dtk) | "Monas: Lidah Api Emas di Puncak" (`demo3/`, 55 dtk) |
+| 5 | `clay-stop-motion` | "Timun Mas & Buto Ijo" (`demo1/`, 17 dtk) | "Sangkuriang & Perahu Terbalik" (`demo2/`, 57 dtk) | "Bawang Putih & Labu Emas" (`demo3/`, 62 dtk) |
+| 6 | `boneka-rajut` | "Kancil Mencuri Mentimun" (`demo1/`, 50 dtk) | "Kancil dan Barisan Buaya Sungai" (`demo2/`, 55 dtk) | "Balap Lari Kelinci Sombong & Kura-kura" (`demo3/`, 55 dtk) |
+| 7 | `pixel-retro` | "Si Pitung: Level Batavia" (`demo1/`, 48 dtk) | "Kenapa Game Jadul 16-Bit Bikin Nagih?" (`demo2/`, 55 dtk) | "Tamagotchi 90-an: Jangan Sampai Mati!" (`demo3/`, 55 dtk) |
+
+Selain gaya 1–7, sebagian gaya lain juga memiliki variasi demo tambahan:
 
 | Gaya | Demo |
 |---|---|
-| `anime` | 1. "Tiket Terakhir Mudik" (`demo1/`, 17 dtk) · 2. "Surat di Ujung Peron" (`demo2/`, 52 dtk) · 3. "Rantang Hangat di Peron Senja" (`demo3/`, 60 dtk) |
-| `clay-stop-motion` | 1. "Timun Mas & Buto Ijo" (`demo1/`, 17 dtk) · 2. "Sangkuriang & Perahu Terbalik" (`demo2/`, 57 dtk) · 3. "Bawang Putih & Labu Emas" (`demo3/`, 62 dtk) |
 | `flat-vector` | 1. "Cahaya di Wajahmu" (bawaan, 20 dtk) · 2. "Ke Mana Perginya Rp100 Ribu?" (`demo/`, 27 dtk) · 3. "Peta Isi Kepala pas Macet" (`demo-kepala-macet/`, 25 dtk) |
 | `infografis-data` | 1. "Jika Dunia Hanya 100 Orang" (bawaan, 20 dtk) · 2. "Harga Bensin 10 Tahun" (`demo-bensin/`, 39 dtk, Pertalite Rp7.400→Rp10.000) · 3. "Kirim Kucing ke Mana Aja" (`demo-ongkir/`, 41 dtk, tarif paket hewan Maura Trans) |
 | `kinetic-type` | 1. "Aturan Dua Menit" (bawaan, 20 dtk) · 2. "Fokus Satu Hal" (`demo-fokus-1-hal/`, 18 dtk) · 3. "Efek Hal Kecil" (`demo-efek-kecil/`, 18 dtk) |
@@ -118,7 +128,6 @@ Sebagian gaya memiliki beberapa variasi demo dengan cerita dan durasi berbeda:
 | `hud-showreel` | 1. "HP Bar" (`demo/` & `demo-hp/`, 14 dtk, damage + heal + KO) · 2. "Skill Cooldown" (`demo-skill/`, 21 dtk, ulti + combo x3 + level up) |
 | `flipbook` | 1. "Lompat Katak" (bawaan, 18 dtk) · 2. "Bola Memantul" (`demo-bola/`, 12 dtk, squash + stretch + gravitasi) · 3. "Stickman Lari" (`demo-lari/`, 16 dtk, langkah + debu + garis gerak) |
 | `garis-tunggal` | 1. "Wajah Satu Garis" (bawaan, 18 dtk) · 2. "Burung Satu Garis" (`demo-burung/`, 20 dtk, paruh + sayap + terbang) · 3. "Tangan Satu Garis" (`demo-tangan/`, 19 dtk, jari + genggam + lambaian) |
-| `pixel-retro` | 1. "Si Pitung: Level Batavia" (bawaan, 19 dtk) · 2. "Kenapa Game Jadul Bikin Nagih" (`demo-nagih/`, 20 dtk, skor + 3 nyawa) · 3. "Tamagotchi 90-an" (`demo-tamagotchi/`, 23 dtk, kasih makan + nisan) |
 | `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
 
@@ -127,12 +136,12 @@ Sebagian gaya memiliki beberapa variasi demo dengan cerita dan durasi berbeda:
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
 | 1 | **Anime** | anime | ✅ ([demo1](styles/anime/demo1/) · [demo2](styles/anime/demo2/) · [demo3](styles/anime/demo3/)) |
-| 2 | **Kartun 3D Sinematik** | kartun-3d-sinematik | ✅ ([styles/kartun-3d-sinematik](styles/kartun-3d-sinematik/)) |
-| 3 | **Lukis Pedesaan** | lukis-pedesaan | ✅ ([styles/lukis-pedesaan](styles/lukis-pedesaan/)) |
-| 4 | **Dunia Blok (Voxel)** | dunia-blok | ✅ ([styles/dunia-blok](styles/dunia-blok/)) |
+| 2 | **Kartun 3D Sinematik** | kartun-3d-sinematik | ✅ ([demo1](styles/kartun-3d-sinematik/demo1/) · [demo2](styles/kartun-3d-sinematik/demo2/) · [demo3](styles/kartun-3d-sinematik/demo3/)) |
+| 3 | **Lukis Pedesaan** | lukis-pedesaan | ✅ ([demo1](styles/lukis-pedesaan/demo1/) · [demo2](styles/lukis-pedesaan/demo2/) · [demo3](styles/lukis-pedesaan/demo3/)) |
+| 4 | **Dunia Blok (Voxel)** | dunia-blok | ✅ ([demo1](styles/dunia-blok/demo1/) · [demo2](styles/dunia-blok/demo2/) · [demo3](styles/dunia-blok/demo3/)) |
 | 5 | **Clay Stop Motion** | clay-stop-motion | ✅ ([demo1](styles/clay-stop-motion/demo1/) · [demo2](styles/clay-stop-motion/demo2/) · [demo3](styles/clay-stop-motion/demo3/)) |
-| 6 | **Boneka Rajut** | boneka-rajut | ✅ ([styles/boneka-rajut](styles/boneka-rajut/)) |
-| 7 | **Pixel Retro** | pixel-retro | ✅ ([styles/pixel-retro](styles/pixel-retro/)) |
+| 6 | **Boneka Rajut** | boneka-rajut | ✅ ([demo1](styles/boneka-rajut/demo1/) · [demo2](styles/boneka-rajut/demo2/) · [demo3](styles/boneka-rajut/demo3/)) |
+| 7 | **Pixel Retro** | pixel-retro | ✅ ([demo1](styles/pixel-retro/demo1/) · [demo2](styles/pixel-retro/demo2/) · [demo3](styles/pixel-retro/demo3/)) |
 | 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([styles/kertas-guntingan](styles/kertas-guntingan/)) |
 | 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([styles/sketsa-pensil](styles/sketsa-pensil/)) |
 | 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([styles/kartun-jadul](styles/kartun-jadul/)) |
