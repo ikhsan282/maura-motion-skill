@@ -1,0 +1,46 @@
+{
+  "title": "Kenapa Luas Lingkaran itu Pi r Kuadrat — Bukti Visual Potongan Juring",
+  "slug": "49_math-3b1b-luas-lingkaran",
+  "style": "math-3b1b",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Sejak sekolah dasar kita menghafal rumus luas lingkaran adalah pi r kuadrat, tetapi jarang melihat mengapa rumusnya begitu. Bayangkan kita potong sebuah pizza bundar menjadi 32 bagian juring yang sama besar, lalu kita buka dan satukan hingga ia berubah wujud menjadi hampir persegi panjang.",
+      "say": "Sejak sekolah dasar kita menghafal rumus luas lingkaran adalah pi er kuadrat, tetapi jarang melihat mengapa rumusnya begitu. Bayangkan kita potong sebuah pizza bundar menjadi tiga puluh dua bagian juring yang sama besar, lalu kita buka dan satukan hingga ia berubah wujud menjadi hampir persegi panjang.",
+      "pause": 0.25
+    },
+    {
+      "id": "susun",
+      "text": "Kita belah lingkaran menjadi dua setengah bagian, lalu kita susun juring-juringnya secara selang-seling seperti gigi sisir yang saling mengunci. Makin rapat dan banyak potongan juring yang kita buat, dari delapan menjadi enam belas hingga enam puluh empat, lengkungan tepinya makin rata dan lurus sempurna.",
+      "pause": 0.25
+    },
+    {
+      "id": "ukur",
+      "text": "Sekarang mari kita ukur dimensi bangun tersebut. Tingginya di sisi tegak persis sama dengan jari-jari lingkaran, yaitu r. Sedangkan Lebarnya di sisi mendatar berasal dari separuh busur keliling lingkaran di atas dan separuh di bawah, yakni setengah dari keliling dua pi r, atau cukup ditulis pi r.",
+      "say": "Sekarang mari kita ukur dimensi bangun tersebut. Tingginya di sisi tegak persis sama dengan jari-jari lingkaran, yaitu er. Sedangkan Lebarnya di sisi mendatar berasal dari separuh busur keliling lingkaran di atas dan separuh di bawah, yakni setengah dari keliling dua pi er, atau cukup ditulis pi er.",
+      "pause": 0.25
+    },
+    {
+      "id": "luas",
+      "text": "Karena luas persegi panjang adalah lebar dikali tinggi, maka Luasnya adalah pi r kali r tanpa ada satu remah pun yang hilang.",
+      "say": "Karena luas persegi panjang adalah lebar dikali tinggi, maka Luasnya adalah pi er kali er tanpa ada satu remah pun yang hilang.",
+      "pause": 0.25
+    },
+    {
+      "id": "hasil",
+      "text": "Kalikan kedua jari-jari itu, maka lahirlah rumus abadi Pi r kuadrat. Bukan sekadar hafalan angka di papan tulis, melainkan sebuah lingkaran utuh yang dibuka dan disusun ulang dengan elegan.",
+      "say": "Kalikan kedua jari-jari itu, maka lahirlah rumus abadi Pi er kuadrat. Bukan sekadar hafalan angka di papan tulis, melainkan sebuah lingkaran utuh yang dibuka dan disusun ulang dengan elegan."
+    }
+  ]
+}

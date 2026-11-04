@@ -5,7 +5,7 @@ no: 50
 source: github:data-viz-infographic
 family: data
 tech: canvas2d
-music: tech   voice: id-f   captions: clean (kotak gelap, garis cyan)
+music: tech   voice: el-id-m   captions: clean (kotak gelap, garis cyan)
 best_for: statistik penduduk, ekonomi, perbandingan negara, survei, "jika dunia 100 orang", data yang bisa dibagikan
 ---
 # Infografis Data
@@ -18,10 +18,10 @@ best_for: statistik penduduk, ekonomi, perbandingan negara, survei, "jika dunia 
 
 **Cerita yang cocok:**
 - "Kalau dunia hanya 100 orang... beginilah wajahnya."
+- Jejak kenaikan harga BBM / komoditas selama 10 tahun terakhir.
+- Komparasi tarif pengiriman / logistik antarkota berdasarkan jarak tempuh.
 - Ke mana gaji rata-rata orang Indonesia habis dalam sebulan (100 koin).
 - Berapa banyak air di bumi yang bisa diminum (1 toples kelereng).
-- Bahasa paling banyak dipakai di dunia (balapan bar).
-- Dari 100 anak SD, berapa yang sampai kuliah.
 
 **Rumus hook:** "Kalau [populasi besar] diperkecil jadi 100..." / "Dari setiap [N] [orang/rupiah], hanya [k] yang..." / "[Angka mengejutkan], dan [kelompok kita] ada di sini."
 
@@ -32,6 +32,7 @@ best_for: statistik penduduk, ekonomi, perbandingan negara, survei, "jika dunia 
 - `person(ctx, x, y, s, color, {alpha, frac, glow})`: ikon orang (frac = sebagian, mis. "setengah orang"); `gridPos`, `perm(n, seed)`.
 - `hbar(ctx, x, y, w, h, p, color, {name, value, hi})`: bar peringkat; `stackBar(ctx, x, y, w, h, segs)`: bar 100%; `axis(...)`; `jar(ctx, x, y, w, h, n, color, {p})`: toples kelereng yang terisi.
 
-**Demo:** "Jika Dunia Hanya 100 Orang", 19,6 detik. 100 ikon muncul (counter 0 → 100, "1 orang ≈ 82 juta jiwa") → ikon menyala dan pindah ke waffle: Asia 59, Afrika 18, Eropa 9, Amerika 13, Oseania 1 (data PBB WPP 2024, dibulatkan) → kamera menyelam ke Asia, 3½ ikon merah "INDONESIA ≈ 3,5" → panel peringkat India 17,8 · Tiongkok 17,4 · AS 4,2 · Indonesia 3,5 → 29 ikon, satu merah: "1 : 29".
-- **Demo 2 — "Harga Bensin 10 Tahun"** (`demo-bensin/`, ~39 dtk): line chart Pertalite 2015–2025 Rp7.400 → Rp10.000 (+35%), counter besar, panel delta +35% stack vertikal. Data BPH Migas/Pertamina.
-- **Demo 3 — "Kirim Kucing ke Mana Aja"** (`demo-ongkir/`, ~41 dtk): bar chart tarif paket hewan Maura Trans — Bandung 230rb, Tasikmalaya 250rb, Ciamis 300rb. Data mauratransmandiri.com/layanan.
+**Demo (3 variasi, 63–64 detik, voice `el-id-m`):**
+- **Demo 1 — "Jika Dunia Hanya 100 Orang — Di Mana Posisi Indonesia?"** (`demo1/`, ~63 dtk): 100 ikon muncul (counter 0 → 100, "1 orang ≈ 82 juta jiwa") → ikon menyala dan pindah ke waffle: Asia 59, Afrika 18, Eropa 9, Amerika 13, Oseania 1 (data PBB WPP 2024, dibulatkan) → kamera menyelam ke Asia, 3½ ikon merah "INDONESIA ≈ 3,5" → panel peringkat India 17,8 · Tiongkok 17,4 · AS 4,2 · Indonesia 3,5 → 29 ikon, satu merah: "1 : 29".
+- **Demo 2 — "Harga Bensin 10 Tahun Terakhir (2015–2025) — Jejak Kenaikan Pertalite di SPBU"** (`demo2/`, ~63 dtk): Line chart Pertalite 2015–2025 Rp 7.400 → Rp 10.000 (+35%), titik kejadian penting (Rilis 2015, COVID-19, Penyesuaian 2022, Sekarang), counter besar, dan panel delta +35%. Data BPH Migas/Pertamina.
+- **Demo 3 — "Kirim Kucing ke Mana Aja — Tarif dan Jarak Pengiriman Hewan Kesayangan"** (`demo3/`, ~64 dtk): Bar chart tarif paket hewan Maura Trans berdasarkan jarak tempuh — Bandung (140 km, Rp 230.000), Tasikmalaya (270 km, Rp 250.000), Ciamis (300 km, Rp 300.000). Data `mauratransmandiri.com/layanan`.

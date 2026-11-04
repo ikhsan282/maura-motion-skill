@@ -1,0 +1,42 @@
+{
+  "title": "Jika Dunia Hanya 100 Orang — Di Mana Posisi Indonesia?",
+  "slug": "50_infografis-data-100-orang",
+  "style": "infografis-data",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Populasi bumi kini telah menembus lebih dari delapan miliar jiwa, angka yang terlalu raksasa untuk dibayangkan di kepala kita. Tapi bagaimana kalau seluruh penduduk dunia diperkecil menjadi sebuah desa beranggotakan 100 orang saja, beginilah wajahnya.",
+      "pause": 0.25
+    },
+    {
+      "id": "asia",
+      "text": "Ketika seratus warga dunia itu dikelompokkan menurut benua tempat tinggalnya, mayoritas mutlak berkumpul di satu kawasan: sebanyak 59 orang tinggal di benua Asia, sementara 18 orang lainnya mendiami benua Afrika yang terus tumbuh pesat.",
+      "pause": 0.25
+    },
+    {
+      "id": "lain",
+      "text": "Sisanya tersebar di belahan bumi lain: benua Eropa dihuni oleh 9 orang, benua Amerika dari utara hingga selatan dihuni 13 orang, dan kepulauan Oseania diwakili oleh 1 orang saja.",
+      "pause": 0.25
+    },
+    {
+      "id": "indo",
+      "text": "Lalu di mana posisi Indonesia di dalam kerumunan Asia tersebut? Dari seratus penduduk bumi itu, sekitar 3 setengah orang adalah warga Indonesia, menjadikannya negara berpenduduk terbanyak keempat di dunia setelah India, Tiongkok, dan Amerika Serikat.",
+      "pause": 0.25
+    },
+    {
+      "id": "moral",
+      "text": "Jika kita hitung rasionya secara langsung, artinya 1 dari setiap 29 manusia yang bernapas di planet bumi hari ini adalah orang Indonesia."
+    }
+  ]
+}

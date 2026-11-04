@@ -1,0 +1,42 @@
+{
+  "title": "Setengah Tak Terhingga — Paradoks Zeno dan Deret Geometri yang Genap Menjadi Satu",
+  "slug": "49_math-3b1b-setengah",
+  "style": "math-3b1b",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.4,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bagaimana mungkin penjumlahan dari potongan angka yang jumlah sukunya tak terbatas justru menghasilkan angka yang sangat bulat dan sederhana? Bayangkan sebuah batang utuh sepanjang satu meter: Ambil setengah bagiannya dulu, lalu ambil setengah dari sisanya, dan lakukan terus begitu tanpa henti.",
+      "pause": 0.25
+    },
+    {
+      "id": "jumlah",
+      "text": "Jika kita tulis dalam deret matematika, kita sedang menjumlahkan Setengah tambah seperempat tambah seperdelapan, tambah seperenam belas, tambah sepertiga puluh dua, dan seterusnya sampai tak terhingga.",
+      "pause": 0.25
+    },
+    {
+      "id": "zeno",
+      "text": "Dua ribu empat ratus tahun lalu, filsuf Yunani bernama Zeno bilang bahwa karena selalu ada separuh jarak tersisa yang harus ditempuh, maka kau takkan pernah benar-benar sampai ke ujung batang.",
+      "pause": 0.25
+    },
+    {
+      "id": "batas",
+      "text": "Namun lihat apa yang terjadi pada gambar batang dan kotak satuan ini: setiap potongan baru persis menambal separuh celah yang tersisa. Tapi matematik modern melalui konsep limit membuktikan bahwa jumlahnya tepat satu, mengisi satu batang penuh tanpa lebih dan tanpa kurang.",
+      "pause": 0.25
+    },
+    {
+      "id": "hasil",
+      "text": "Celah kosongnya menyusut menuju nol seiring langkah yang melaju ke keabadian. Setengah yang dijumlahkan secara tak terhingga, pada akhirnya menyatu genap menjadi satu."
+    }
+  ]
+}

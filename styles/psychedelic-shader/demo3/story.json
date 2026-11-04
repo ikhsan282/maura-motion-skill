@@ -1,0 +1,60 @@
+{
+ "title": "Rumus di Balik Belang Zebra & Gelombang Kimia — Pola Turing & Reaksi Belousov",
+ "slug": "48_psychedelic-shader_demo3",
+ "style": "psychedelic-shader",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "ambient",
+  "db": -15
+ },
+ "lead": 0.35,
+ "tail": 1.5,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Bagaimana sel-sel kulit zebra tahu persis di mana harus menggambar garis hitam dan putih tanpa punya cetak biru penggaris? Jawabannya ditemukan oleh bapak komputer, Alan Turing.",
+   "pause": 0.35
+  },
+  {
+   "id": "turing",
+   "text": "Pada tahun seribu sembilan ratus lima puluh dua, Alan Turing menerbitkan makalah biologi matematika tentang bagaimana dua zat kimia yang saling bereaksi dan menyebar bisa menciptakan pola secara spontan.",
+   "pause": 0.35
+  },
+  {
+   "id": "aktivator",
+   "text": "Zat pertama adalah aktivator yang memicu warna namun bergerak lambat, sedangkan zat kedua adalah inhibitor yang menghambat warna tetapi menyebar jauh lebih cepat ke sekelilingnya.",
+   "pause": 0.35
+  },
+  {
+   "id": "belousov",
+   "text": "Di saat hampir bersamaan di Uni Soviet, kimiawan Boris Belousov menemukan cairan kimia yang berdenyut bolak-balik dan membentuk gelombang spiral hipnotis tanpa diaduk.",
+   "say": "Di saat hampir bersamaan di Uni Soviet, kimiawan Boris Belusof menemukan cairan kimia yang berdenyut bolak-balik dan membentuk gelombang spiral hipnotis tanpa diaduk.",
+   "pause": 0.35
+  },
+  {
+   "id": "ditolak",
+   "text": "Makalah Belousov sempat ditolak jurnal ilmiah karena dianggap melanggar hukum termodinamika, sebelum akhirnya dibuktikan secara terbuka oleh Anatol Zhabotinsky pada tahun 1961.",
+   "say": "Makalah Belusof sempat ditolak jurnal ilmiah karena dianggap melanggar hukum termodinamika, sebelum akhirnya dibuktikan secara terbuka oleh Anatol Zabotinski pada tahun sembilan belas enam puluh satu.",
+   "pause": 0.35
+  },
+  {
+   "id": "simulasi",
+   "text": "Saat persamaan reaksi-difusi ini dijalankan di dalam program shader modern, layar langsung menumbuhkan labirin karang, totol macan tutul, hingga pusaran psikedelik yang hidup.",
+   "pause": 0.35
+  },
+  {
+   "id": "alam",
+   "text": "Pada tahun 2012, para ahli biologi akhirnya membuktikan secara eksperimental bahwa tonjolan langit-langit mulut mamalia dan belang ikan zebra memang diatur oleh gelombang Turing.",
+   "say": "Pada tahun dua ribu dua belas, para ahli biologi akhirnya membuktikan secara eksperimental bahwa tonjolan langit-langit mulut mamalia dan belang ikan zebra memang diatur oleh gelombang Turing.",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Dari cawan petri laboratorium hingga corak eksotis makhluk hidup: alam melukis dirinya sendiri menggunakan tarian matematika reaksi dan difusi."
+  }
+ ]
+}
+

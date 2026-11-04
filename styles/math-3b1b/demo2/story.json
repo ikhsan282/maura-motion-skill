@@ -1,0 +1,45 @@
+{
+  "title": "Rahasia Angka Pi (3,14) — Mengapa Keliling Dibagi Diameter Selalu Sama?",
+  "slug": "49_math-3b1b-phi",
+  "style": "math-3b1b",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.4,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Dari mana datangnya angka misterius tiga koma satu empat yang selalu muncul setiap kali kita menghitung lingkaran? Coba lakukan eksperimen sederhana ini: Lingkari bibir gelas di mejamu dengan seutas tali secara rapat, lalu potong dan bentangkan talinya lurus di atas meja.",
+      "pause": 0.25
+    },
+    {
+      "id": "keliling",
+      "text": "Panjang tali yang baru saja kita luruskan itu adalah ukuran penuh dari keliling tepi lingkaran tersebut. Dalam bahasa geometri, mari kita sebut saja panjang bentangan tali itu dengan simbol huruf K.",
+      "say": "Panjang tali yang baru saja kita luruskan itu adalah ukuran penuh dari keliling tepi lingkaran tersebut. Dalam bahasa geometri, mari kita sebut saja panjang bentangan tali itu dengan simbol huruf Ka.",
+      "pause": 0.25
+    },
+    {
+      "id": "diameter",
+      "text": "Sekarang ambil penggaris dan ukur jarak lurus yang membelah tepat di titik tengah lingkaran dari ujung ke ujung. Garis tengah itulah yang kita sebut sebagai diameter, atau kita singkat dengan simbol huruf d.",
+      "say": "Sekarang ambil penggaris dan ukur jarak lurus yang membelah tepat di titik tengah lingkaran dari ujung ke ujung. Garis tengah itulah yang kita sebut sebagai diameter, atau kita singkat dengan simbol huruf de.",
+      "pause": 0.25
+    },
+    {
+      "id": "bagi",
+      "text": "Lalu sejajarkan garis tengah itu di sepanjang bentangan tali tadi: ternyata muat satu kali, dua kali, tiga kali penuh, ditambah sisa kecil nol koma satu empat. Bagi panjang keliling dengan diameter, dan hasilnya akan selalu tiga koma satu empat.",
+      "pause": 0.25
+    },
+    {
+      "id": "hasil",
+      "text": "Entah itu cincin mungil, gelas kopi, roda sepeda, hingga ekuator planet raksasa di tata surya, saat lingkaran membesar maka garis tengahnya ikut membesar secara sebanding. Lingkaran mana pun di alam semesta, rasionya selalu konstanta abadi pi.",
+      "say": "Entah itu cincin mungil, gelas kopi, roda sepeda, hingga ekuator planet raksasa di tata surya, saat lingkaran membesar maka garis tengahnya ikut membesar secara sebanding. Lingkaran mana pun di alam semesta, rasionya selalu konstanta abadi phi."
+    }
+  ]
+}

@@ -5,7 +5,7 @@ no: 49
 source: github:dark-data-viz + math-3b1b
 family: data
 tech: canvas2d
-music: ambient   voice: id-m   captions: clean
+music: ambient   voice: el-id-m   captions: clean
 best_for: pembuktian matematika, rumus sekolah, fisika dasar, statistik, paradoks logika, "kenapa rumusnya begitu"
 ---
 # Matematika Gelap
@@ -18,10 +18,10 @@ best_for: pembuktian matematika, rumus sekolah, fisika dasar, statistik, paradok
 
 **Cerita yang cocok:**
 - Luas lingkaran = πr²: "Potong pizza jadi 32 bagian... dan ia jadi persegi panjang."
+- Rasio keliling & diameter (π = 3,14): "Lingkari gelas dengan tali, lalu bentangkan lurus."
+- Paradoks Zeno & deret geometri (½ + ¼ + ⅛ + ... = 1): "Setengah yang dijumlahkan tak terhingga genap menjadi satu."
 - Pythagoras tanpa aljabar: "Tiga persegi, satu segitiga, dan rahasia 2.500 tahun."
-- 0,999... = 1: "Dua angka ini sama persis. Matematikawan serius."
 - Paradoks ulang tahun: "Cukup 23 orang untuk peluang 50%."
-- Jumlah 1+2+...+100: "Anak 9 tahun menghitungnya dalam 10 detik."
 
 **Rumus hook:** "[Aksi sederhana pada benda sehari-hari]... dan [bentuk/angka] berubah jadi [hal tak terduga]." / "Rumus [X] yang kamu hafal ternyata cuma [gambar sederhana]." / "[Pernyataan yang terdengar salah]. Dan bisa dibuktikan."
 
@@ -33,6 +33,7 @@ best_for: pembuktian matematika, rumus sekolah, fisika dasar, statistik, paradok
 - `math(ctx, 'L = πr²', x, y, {size, p, colors, align})`: rumus yang menulis diri; `layoutMath`, `piGlyph`.
 - `label(ctx, text, x, y)`, `dot(ctx, x, y, r, color)`.
 
-**Demo:** "Kenapa Luas Lingkaran itu Pi r Kuadrat", 19,2 detik. Lingkaran 32 juring terbelah, membuka, dan menyusun diri jadi "≈ persegi panjang" → diulang dengan N = 8, 16, 32, 64 sampai sisinya lurus → kurawal "r" (tinggi) dan "½ × 2πr" → "πr" (lebar, busur atas menyala) → "L = πr × r" ditulis, r kedua naik jadi pangkat: "L = πr²" dikotaki → persegi panjang melipat kembali jadi lingkaran berjari-jari r.
-- **Demo 2 — "Phi: K ÷ d = 3,14"** (`demo-pitagoras/`, 20 dtk): tali keliling dibuka lurus, garis diameter, tick 3,14×, rumus K/d=3,14 + 3 lingkaran. Voice el-id-m.
-- **Demo 3 — "Setengah Tak Terhingga"** (`demo-setengah/`, 20 dtk): batang dibagi dua terus (½+¼+⅛=1), paradoks Zeno. Voice el-id-m.
+**Demo (3 variasi, 62–63 detik, voice `el-id-m`):**
+- **Demo 1 — "Kenapa Luas Lingkaran itu Pi r Kuadrat — Bukti Visual Potongan Juring"** (`demo1/`, ~63 dtk): Lingkaran 32 juring terbelah, membuka, dan menyusun diri jadi "≈ persegi panjang" → diulang dengan N = 8, 16, 32, 64 sampai sisinya lurus → kurawal "r" (tinggi) dan "½ × 2πr" → "πr" (lebar, busur atas menyala) → "L = πr × r" ditulis, r kedua naik jadi pangkat: "L = πr²" dikotaki → persegi panjang melipat kembali jadi lingkaran berjari-jari r.
+- **Demo 2 — "Rahasia Angka Pi (3,14) — Mengapa Keliling Dibagi Diameter Selalu Sama?"** (`demo2/`, ~63 dtk): Tali keliling dibuka lurus, garis diameter diukur sepanjang bentangan tali (muat 3 kali + 0,14d), rumus K/d = 3,14 + perbandingan 3 lingkaran (gelas, roda, planet).
+- **Demo 3 — "Setengah Tak Terhingga — Paradoks Zeno dan Deret Geometri yang Genap Menjadi Satu"** (`demo3/`, ~63 dtk): Batang satuan dan bujursangkar satuan dibagi dua terus-menerus (½ + ¼ + ⅛ + 1/16 + ... = 1), paradoks Zeno vs konsep limit matematika.

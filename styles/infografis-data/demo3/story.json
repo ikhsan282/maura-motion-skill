@@ -1,0 +1,57 @@
+{
+  "title": "Kirim Kucing ke Mana Aja — Tarif dan Jarak Pengiriman Hewan Kesayangan",
+  "slug": "50_infografis-data-ongkir",
+  "style": "infografis-data",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mau kirim kucing kesayangan ke luar kota dengan aman tanpa harus ikut pergi sendiri? Tarifnya beda-beda tergantung jarak tempuh tiap kota. Ini rincian data tarif resmi pengiriman hewan Maura Trans.",
+      "pause": 0.22
+    },
+    {
+      "id": "jkt",
+      "text": "Untuk rute terdekat menuju Kota Bandung yang berjarak sekitar seratus empat puluh kilometer, tarif pengiriman paket hewan tercatat dua ratus tiga puluh ribu rupiah.",
+      "pause": 0.22
+    },
+    {
+      "id": "bdg",
+      "text": "Bergeser ke jalur selatan menuju Tasikmalaya yang berjarak dua ratus tujuh puluh kilometer, biayanya hanya selisih tipis di angka dua ratus lima puluh ribu rupiah.",
+      "pause": 0.22
+    },
+    {
+      "id": "solo",
+      "text": "Sementara untuk perjalanan lebih jauh ke Ciamis di ujung timur Jawa Barat sejauh tiga ratus kilometer, tarifnya tiga ratus ribu rupiah.",
+      "pause": 0.22
+    },
+    {
+      "id": "sby",
+      "text": "Seluruh kategori tarif ini dirancang khusus untuk pengiriman paket hewan peliharaan seperti kucing, burung kicau, maupun ikan hias kesayangan dengan sirkulasi udara kabin yang terjaga.",
+      "pause": 0.22
+    },
+    {
+      "id": "pola",
+      "text": "Dari grafik perbandingan ini, polanya terlihat jelas: makin jauh jarak kotanya maka makin menyesuaikan tarifnya, namun semua layanan sudah mencakup penjemputan door to door.",
+      "pause": 0.22
+    },
+    {
+      "id": "travel",
+      "text": "Armada Maura Trans melayani jadwal pengiriman hewan lintas kota setiap hari secara terjadwal, aman, dan terpercaya.",
+      "pause": 0.22
+    },
+    {
+      "id": "tutup",
+      "text": "Cek tabel tarif lengkapnya di Maura Trans Mandiri dot com slash layanan. Kucing aman sampai tujuan, hati pemilik pun tenang."
+    }
+  ]
+}

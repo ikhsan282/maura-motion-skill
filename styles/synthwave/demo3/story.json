@@ -1,0 +1,60 @@
+{
+ "title": "Roland TR-808 — Mesin Drum Gagal 1980 yang Menjadi Detak Jantung Musik Modern",
+ "slug": "47_synthwave_demo3",
+ "style": "synthwave",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": { "preset": "synthwave", "db": -18 },
+ "lead": 0.35,
+ "tail": 1.4,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Pada tahun seribu sembilan ratus delapan puluh, perusahaan Jepang Roland merilis sebuah mesin drum yang langsung diejek para kritikus musik karena suaranya sama sekali tidak mirip drum asli.",
+   "pause": 0.35
+  },
+  {
+   "id": "linn",
+   "text": "Kala itu, studio elit memilih komputer drum Linn LM-1 seharga lima ribu dolar yang memakai rekaman sampel digital, sementara Roland TR-808 hanya merakit osilator sirkuit analog.",
+   "say": "Kala itu, studio elit memilih komputer drum Lin el em satu seharga lima ribu dolar yang memakai rekaman sampel digital, sementara Roland te-er delapan nol delapan hanya merakit osilator sirkuit analog.",
+   "pause": 0.35
+  },
+  {
+   "id": "transistor",
+   "text": "Uniknya, insinyur Ikutaro Kakehashi sengaja membeli stok transistor cacat yang menghasilkan desis putih khas untuk membentuk suara snare dan simbal elektronik yang renyah.",
+   "say": "Uniknya, insinyur Ikutaro Kakehasyi sengaja membeli stok transistor cacat yang menghasilkan desis putih khas untuk membentuk suara sner dan simbal elektronik yang renyah.",
+   "pause": 0.35
+  },
+  {
+   "id": "gagal",
+   "text": "Karena dianggap terdengar seperti kaleng robot, TR-808 gagal secara komersial. Pabriknya dihentikan tahun 1983 setelah hanya memproduksi sekitar dua belas ribu unit.",
+   "say": "Karena dianggap terdengar seperti kaleng robot, te-er delapan nol delapan gagal secara komersial. Pabriknya dihentikan tahun sembilan belas delapan puluh tiga setelah hanya memproduksi sekitar dua belas ribu unit.",
+   "pause": 0.35
+  },
+  {
+   "id": "pegadaian",
+   "text": "Namun di situlah keajaiban terjadi: ribuan unit bekasnya menumpuk di toko pegadaian Amerika dengan harga obral sekitar seratus dolar, lalu diborong para musisi muda jalanan.",
+   "pause": 0.35
+  },
+  {
+   "id": "subbass",
+   "text": "Saat mereka memutar kenop Decay pada bass drum hingga mentok ke kanan, mesin itu memuntahkan gelombang sinus frekuensi rendah yang sanggup menggetarkan dinding klub malam!",
+   "say": "Saat mereka memutar kenop Dikei pada bas drum hingga mentok ke kanan, mesin itu memuntahkan gelombang sinus frekuensi rendah yang sanggup menggetarkan dinding klub malam!",
+   "pause": 0.35
+  },
+  {
+   "id": "planet",
+   "text": "Sejak lagu Planet Rock milik Afrika Bambaataa dan Sexual Healing milik Marvin Gaye meledak di tangga lagu, suara enam belas tombol warna-warni ini mengubah wajah musik selamanya.",
+   "say": "Sejak lagu Planet Rok milik Afrika Bambata dan Seksual Hiling milik Marvin Gei meledak di tangga lagu, suara enam belas tombol warna-warni ini mengubah wajah musik selamanya.",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Mesin yang dulu dibuang karena gagal meniru masa lalu, justru melahirkan suara masa depan bagi hip-hop, R&B, hingga pop modern.",
+   "say": "Mesin yang dulu dibuang karena gagal meniru masa lalu, justru melahirkan suara masa depan bagi hip-hop, ar en bi, hingga pop modern."
+  }
+ ]
+}
+

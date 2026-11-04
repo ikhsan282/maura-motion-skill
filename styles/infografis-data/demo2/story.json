@@ -1,0 +1,52 @@
+{
+  "title": "Harga Bensin 10 Tahun Terakhir (2015–2025) — Jejak Kenaikan Pertalite di SPBU",
+  "slug": "50_infografis-data-bensin",
+  "style": "infografis-data",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu mengingat berapa uang yang kita keluarkan saat mengisi tangki penuh satu dekade lalu? Sepuluh tahun terakhir, harga bahan bakar Pertalite naik bertahap. Mari kita lihat jejak angkanya.",
+      "pause": 0.22
+    },
+    {
+      "id": "awal",
+      "text": "Ketika pertama kali diperkenalkan secara luas pada tahun 2015, harga Pertalite masih berada di kisaran tujuh ribu empat ratus rupiah per liter di SPBU.",
+      "pause": 0.22
+    },
+    {
+      "id": "naik",
+      "text": "Lalu angkanya bergerak naik bertahap: sempat menyentuh tujuh ribu delapan ratus pada 2018, bertahan di tujuh ribu enam ratus lima puluh saat pandemi tahun 2020, hingga akhirnya pada tahun 2022 melonjak menembus sepuluh ribu rupiah.",
+      "pause": 0.22
+    },
+    {
+      "id": "sebab",
+      "text": "Gejolak harga minyak mentah dunia, nilai tukar kurs, serta penyesuaian beban subsidi energi negara membuat perubahan angka ini langsung terasa di setiap SPBU dekat rumah kita.",
+      "pause": 0.22
+    },
+    {
+      "id": "kini",
+      "text": "Kini di tahun 2025, harga satu liter Pertalite tetap bertahan di angka bulat sepuluh ribu rupiah pas.",
+      "pause": 0.22
+    },
+    {
+      "id": "banding",
+      "text": "Artinya, dalam rentang waktu sepuluh tahun penuh, harga per liternya telah mengalami kenaikan sekitar tiga puluh lima persen dibandingkan saat awal meluncur.",
+      "pause": 0.22
+    },
+    {
+      "id": "tutup",
+      "text": "Baik saat mengendarai motor harian maupun mobil keluarga, grafik pengeluaran bahan bakar ini adalah data ekonomi yang paling cepat dirasakan oleh dompet kita."
+    }
+  ]
+}

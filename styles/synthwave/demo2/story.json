@@ -1,17 +1,58 @@
 {
- "title": "Laser dan Grid: Estetika Synthwave",
+ "title": "Laser, Grid & Matahari Bergaris — Estetika Synthwave Masa Depan dari Masa Lalu",
  "slug": "synthwave_laser_grid",
  "style": "synthwave",
  "lang": "id",
- "voice": "id-m",
- "speed": 1.2,
+ "voice": "el-id-m",
+ "maxDuration": 90,
  "music": { "preset": "synthwave", "db": -18 },
- "lead": 0.3, "tail": 1.0, "pause": 0.2,
+ "lead": 0.35,
+ "tail": 1.4,
+ "pause": 0.3,
  "lines": [
-  {"id": "hook", "text": "Garis horizon menyala, grid neon membentang tanpa ujung.", "say": "Garis horizon menyala, grid neon membentang tanpa ujung."},
-  {"id": "matahari", "text": "Matahari bergaris terbit perlahan, simbol nostalgia delapan puluhan.", "say": "Matahari bergaris terbit perlahan, simbol nostalgia delapan puluhan."},
-  {"id": "lazer", "text": "Lazer memotong langit malam, merah dan magenta beradu.", "say": "Lezer memotong langit malam, merah dan magenta beradu."},
-  {"id": "gunung", "text": "Gunung kawat menyala di kejauhan, krom delapan puluhan berkilau.", "say": "Gunung kawat menyala di kejauhan, krom delapan puluhan berkilau."},
-  {"id": "akhir", "text": "Inilah synthwave: lazer dan grid, masa depan dari masa lalu.", "say": "Inilah sintwef: lezer dan grid, masa depan dari masa lalu."}
+  {
+   "id": "hook",
+   "text": "Garis horizon menyala merah muda, sementara lantai grid neon membentang tanpa ujung menuju matahari terbenam yang terbelah garis-garis horizontal.",
+   "pause": 0.35
+  },
+  {
+   "id": "tron",
+   "text": "Mengapa dunia masa depan versi era delapan puluhan selalu digambarkan seperti ini? Jawabannya berawal dari keterbatasan komputer grafis awal tahun seribu sembilan ratus delapan puluh dua.",
+   "pause": 0.35
+  },
+  {
+   "id": "gunung",
+   "text": "Saat itu, komputer belum sanggup merender permukaan padat yang rumit, sehingga para animator film Tron dan mesin arcade menampilkan dunia tiga dimensi menggunakan jaring kawat wireframe yang menyala.",
+   "say": "Saat itu, komputer belum sanggup merender permukaan padat yang rumit, sehingga para animator film Tron dan mesin arkeid menampilkan dunia tiga dimensi menggunakan jaring kawat wayer-freim yang menyala.",
+   "pause": 0.35
+  },
+  {
+   "id": "matahari",
+   "text": "Matahari bergaris kuning-magenta lahir dari desain sampul kaset kosong dan grafis vektor era delapan puluhan untuk memberi ilusi pantulan fatamorgana senja di layar tabung.",
+   "pause": 0.35
+  },
+  {
+   "id": "outrun",
+   "text": "Lalu pada tahun 1986, gim balap arcade OutRun memadukan jalan raya berkecepatan tinggi, mobil sport atap terbuka, dan alunan musik synthesizer analog yang melodius.",
+   "say": "Lalu pada tahun sembilan belas delapan puluh enam, gim balap arkeid Aut-Ran memadukan jalan raya berkecepatan tinggi, mobil sport atap terbuka, dan alunan musik sintesaizer analog yang melodius.",
+   "pause": 0.35
+  },
+  {
+   "id": "lazer",
+   "text": "Sementara itu, tipografi logam krom yang memantulkan garis cakrawala gurun diambil dari teknik ilustrasi airbrush sampul majalah fiksi ilmiah seperti Heavy Metal.",
+   "say": "Sementara itu, tipografi logam krom yang memantulkan garis cakrawala gurun diambil dari teknik ilustrasi er-bras sampul majalah fiksi ilmiah seperti Hevi Metal.",
+   "pause": 0.35
+  },
+  {
+   "id": "kebangkitan",
+   "text": "Uniknya, istilah Synthwave sendiri baru lahir di internet pada pertengahan tahun dua ribuan, ketika generasi muda merindukan optimisme teknologi masa lalu yang penuh warna.",
+   "say": "Uniknya, istilah Sint-weif sendiri baru lahir di internet pada pertengahan tahun dua ribuan, ketika generasi muda merindukan optimisme teknologi masa lalu yang penuh warna.",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Inilah estetika Synthwave: perpaduan laser, krom, dan grid neon yang mengabadikan masa depan impian yang tak pernah benar-benar terjadi.",
+   "say": "Inilah estetika Sint-weif: perpaduan lezer, krom, dan grid neon yang mengabadikan masa depan impian yang tak pernah benar-benar terjadi."
+  }
  ]
 }

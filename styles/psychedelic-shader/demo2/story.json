@@ -1,0 +1,59 @@
+{
+ "title": "Pantai yang Panjangnya Tak Terhingga — Paradoks Garis Pantai & Dimensi Fraktal Alam",
+ "slug": "48_psychedelic-shader_demo2",
+ "style": "psychedelic-shader",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "ambient",
+  "db": -15
+ },
+ "lead": 0.35,
+ "tail": 1.5,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Berapa panjang garis pantai sebuah pulau? Pertanyaan yang terdengar sepele ini ternyata menjebak para ahli geografi dalam paradoks matematika yang mencengangkan.",
+   "pause": 0.35
+  },
+  {
+   "id": "penggaris",
+   "text": "Jika kamu mengukur pantai memakai penggaris peta sepanjang seratus kilometer, teluk-teluk kecil akan terlompati. Namun jika penggarisnya diperkecil menjadi satu kilometer, hasil ukurnya melonjak drastis!",
+   "pause": 0.35
+  },
+  {
+   "id": "kerikil",
+   "text": "Bayangkan jika penggarisnya diperkecil lagi seukuran langkah kaki, lalu seukuran sebutir kerikil, hingga molekul batu: panjang garis pantainya akan terus bertambah menuju tak terhingga!",
+   "pause": 0.35
+  },
+  {
+   "id": "koch",
+   "text": "Fenomena ini dijelaskan lewat Kurva Kepingan Salju Koch: sebuah segitiga yang setiap sisinya terus ditumbuhi segitiga baru hingga kelilingnya tak terhingga di dalam ruang terbatas.",
+   "say": "Fenomena ini dijelaskan lewat Kurva Kepingan Salju Kokh: sebuah segitiga yang setiap sisinya terus ditumbuhi segitiga baru hingga kelilingnya tak terhingga di dalam ruang terbatas.",
+   "pause": 0.35
+  },
+  {
+   "id": "dimensi",
+   "text": "Pada tahun 1967, Benoit Mandelbrot mengungkap bahwa garis pantai bukanlah garis berdimensi satu, melainkan objek fraktal dengan dimensi pecahan satu koma dua puluh lima!",
+   "say": "Pada tahun sembilan belas enam puluh tujuh, Benwa Mandel-brot mengungkap bahwa garis pantai bukanlah garis berdimensi satu, melainkan objek fraktal dengan dimensi pecahan satu koma dua puluh lima!",
+   "pause": 0.35
+  },
+  {
+   "id": "paru",
+   "text": "Alam ternyata memakai trik fraktal ini di dalam tubuhmu sendiri: saluran bronkus paru-paru manusia bercabang dua puluh tiga kali mengikuti pola geometri serupa.",
+   "pause": 0.35
+  },
+  {
+   "id": "tenis",
+   "text": "Berkat lipatan fraktal itu, paru-parumu sanggup melipat luas permukaan penyerapan oksigen setara lapangan tenis seluas tujuh puluh meter persegi di dalam rongga dada!",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Dari lekuk tebing samudra, kilatan petir, hingga napas di dadamu: alam selalu memilih geometri fraktal untuk memuat ketakterhinggaan di dalam ruang yang sempit."
+  }
+ ]
+}
+

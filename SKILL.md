@@ -116,10 +116,10 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 44 | **Risograph Halftone** | riso-halftone | ✅ ([demo1](styles/riso-halftone/demo1/) · [demo2](styles/riso-halftone/demo2/) · [demo3](styles/riso-halftone/demo3/)) |
 | 45 | **Manga Action** | manga-action | ✅ ([demo1](styles/manga-action/demo1/) · [demo2](styles/manga-action/demo2/) · [demo3](styles/manga-action/demo3/)) |
 | 46 | **Sumi-e Tinta Timur** | sumi-e | ✅ ([demo1](styles/sumi-e/demo1/) · [demo2](styles/sumi-e/demo2/) · [demo3](styles/sumi-e/demo3/)) |
-| 47 | **Synthwave Neon** | synthwave | ✅ ([styles/synthwave](styles/synthwave/)) |
-| 48 | **Psychedelic Shader** | psychedelic-shader | ✅ ([styles/psychedelic-shader](styles/psychedelic-shader/)) |
-| 49 | **Math Explainer Gelap** | math-3b1b | ✅ ([styles/math-3b1b](styles/math-3b1b/)) |
-| 50 | **Infografis Data** | infografis-data | ✅ ([styles/infografis-data](styles/infografis-data/)) |
+| 47 | **Synthwave Neon** | synthwave | ✅ ([demo1](styles/synthwave/demo1/) · [demo2](styles/synthwave/demo2/) · [demo3](styles/synthwave/demo3/)) |
+| 48 | **Psychedelic Shader** | psychedelic-shader | ✅ ([demo1](styles/psychedelic-shader/demo1/) · [demo2](styles/psychedelic-shader/demo2/) · [demo3](styles/psychedelic-shader/demo3/)) |
+| 49 | **Math Explainer Gelap** | math-3b1b | ✅ ([demo1](styles/math-3b1b/demo1/) · [demo2](styles/math-3b1b/demo2/) · [demo3](styles/math-3b1b/demo3/)) |
+| 50 | **Infografis Data** | infografis-data | ✅ ([demo1](styles/infografis-data/demo1/) · [demo2](styles/infografis-data/demo2/) · [demo3](styles/infografis-data/demo3/)) |
 | 51 | **3D Cutaway Explainer** | cutaway-3d | ❌ (belum diimplementasi) |
 | 52 | **Blueprint** | blueprint | ✅ ([styles/blueprint](styles/blueprint/)) |
 | 53 | **Skala Kosmik** | skala-kosmik | ✅ ([styles/skala-kosmik](styles/skala-kosmik/)) |
