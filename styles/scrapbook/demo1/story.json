@@ -1,0 +1,44 @@
+{
+  "title": "Jurnal Wallace: Garis Tak Terlihat di Nusantara — Mengapa Hewan Bali dan Lombok Berbeda Benua?",
+  "slug": "43_scrapbook_demo1",
+  "style": "scrapbook",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Ada sebuah garis tak terlihat yang membelah kepulauan Indonesia menjadi dua dunia berbeda—dan selama jutaan tahun, hewan-hewan liar seolah tidak berani menyeberanginya.",
+      "pause": 0.35
+    },
+    {
+      "id": "wallace",
+      "text": "Misteri ini pertama kali dicatat dalam buku jurnal lapangan milik naturalis asal Inggris, Alfred Russel Wallace, yang menjelajahi Nusantara antara tahun 1854 hingga 1862.",
+      "say": "Misteri ini pertama kali dicatat dalam buku jurnal lapangan milik naturalis asal Inggris, Alfred Rasel Wolles, yang menjelajahi Nusantara antara tahun delapan belas lima puluh empat hingga delapan belas enam puluh dua."
+    },
+    {
+      "id": "koleksi",
+      "text": "Selama delapan tahun berlayar dari hutan Kalimantan hingga Papua, ia mengoleksi lebih dari seratus dua puluh lima ribu spesimen, termasuk orangutan, kupu-kupu sayap burung, dan burung cendrawasih."
+    },
+    {
+      "id": "seberang",
+      "text": "Keanehan terbesar ia temukan saat menyeberang dari Pulau Bali ke Pulau Lombok: meski jarak selatnya hanya sekitar tiga puluh lima kilometer, daftar hewannya berubah drastis bagaikan pindah benua."
+    },
+    {
+      "id": "hewan",
+      "text": "Di sisi barat seperti Bali dan Jawa hidup harimau, kera, dan burung pelatuk khas benua Asia; sedangkan begitu menginjak Lombok ke timur, yang menyambutnya adalah burung kakatua dan hewan berkantung kerabat Australia."
+    },
+    {
+      "id": "dalam",
+      "text": "Jawabannya tersembunyi di dasar laut: ketika Zaman Es membuat permukaan laut surut dan menyatukan Jawa serta Bali dengan daratan Asia, palung Selat Lombok yang sangat dalam tetap menjadi jurang air abadi yang memisahkan kedua dunia itu."
+    }
+  ]
+}

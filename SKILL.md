@@ -112,10 +112,10 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 40 | **Kartun Outline Tebal** | kartun-outline-tebal | ✅ ([demo1](styles/kartun-outline-tebal/demo1/) · [demo2](styles/kartun-outline-tebal/demo2/) · [demo3](styles/kartun-outline-tebal/demo3/)) |
 | 41 | **Neo-Brutalist Bento** | neo-brutalist | ✅ ([demo1](styles/neo-brutalist/demo1/) · [demo2](styles/neo-brutalist/demo2/) · [demo3](styles/neo-brutalist/demo3/)) |
 | 42 | **Vas Yunani Black-Figure** | vas-yunani | ✅ ([demo1](styles/vas-yunani/demo1/) · [demo2](styles/vas-yunani/demo2/) · [demo3](styles/vas-yunani/demo3/)) |
-| 43 | **Scrapbook Collage** | scrapbook | ✅ ([styles/scrapbook](styles/scrapbook/)) |
-| 44 | **Risograph Halftone** | riso-halftone | ✅ ([styles/riso-halftone](styles/riso-halftone/)) |
-| 45 | **Manga Action** | manga-action | ✅ ([styles/manga-action](styles/manga-action/)) |
-| 46 | **Sumi-e Tinta Timur** | sumi-e | ✅ ([styles/sumi-e](styles/sumi-e/)) |
+| 43 | **Scrapbook Collage** | scrapbook | ✅ ([demo1](styles/scrapbook/demo1/) · [demo2](styles/scrapbook/demo2/) · [demo3](styles/scrapbook/demo3/)) |
+| 44 | **Risograph Halftone** | riso-halftone | ✅ ([demo1](styles/riso-halftone/demo1/) · [demo2](styles/riso-halftone/demo2/) · [demo3](styles/riso-halftone/demo3/)) |
+| 45 | **Manga Action** | manga-action | ✅ ([demo1](styles/manga-action/demo1/) · [demo2](styles/manga-action/demo2/) · [demo3](styles/manga-action/demo3/)) |
+| 46 | **Sumi-e Tinta Timur** | sumi-e | ✅ ([demo1](styles/sumi-e/demo1/) · [demo2](styles/sumi-e/demo2/) · [demo3](styles/sumi-e/demo3/)) |
 | 47 | **Synthwave Neon** | synthwave | ✅ ([styles/synthwave](styles/synthwave/)) |
 | 48 | **Psychedelic Shader** | psychedelic-shader | ✅ ([styles/psychedelic-shader](styles/psychedelic-shader/)) |
 | 49 | **Math Explainer Gelap** | math-3b1b | ✅ ([styles/math-3b1b](styles/math-3b1b/)) |

@@ -1,0 +1,59 @@
+{
+    "title": "Filosofi Kintsugi & Ruang Kosong (Ma) — Mengapa Retakan Justru Dilapisi Emas?",
+    "slug": "46_sumi-e_demo2",
+    "style": "sumi-e",
+    "lang": "id",
+    "voice": "el-id-m",
+    "maxDuration": 90,
+    "music": {
+        "preset": "japanese",
+        "db": -16
+    },
+    "lead": 0.4,
+    "tail": 1.6,
+    "pause": 0.3,
+    "lines": [
+        {
+            "id": "hook",
+            "text": "Ketika sebuah mangkuk keramik berharga jatuh dan pecah berkeping-keping, sebagian besar orang akan membuangnya atau menyembunyikan bekas lemnya.",
+            "pause": 0.4
+        },
+        {
+            "id": "shogun",
+            "text": "Namun pada abad kelima belas di Kyoto, ketika mangkuk teh kesayangan Shogun Ashikaga Yoshimasa retak, lahirlah seni perbaikan yang mengubah cara dunia memandang luka.",
+            "say": "Namun pada abad kelima belas di Kyoto, ketika mangkuk teh kesayangan Syogun Asyikaga Yosyimasa retak, lahirlah seni perbaikan yang mengubah cara dunia memandang luka.",
+            "pause": 0.35
+        },
+        {
+            "id": "urushi",
+            "text": "Para perajin Jepang menolak kawat penjepit logam yang kasar. Mereka merekatkan kembali setiap kepingan porselen menggunakan getah pernis alami pohon urushi yang mengeras sekuat batu.",
+            "say": "Para perajin Jepang menolak kawat penjepit logam yang kasar. Mereka merekatkan kembali setiap kepingan porselen menggunakan getah pernis alami pohon urusyi yang mengeras sekuat batu.",
+            "pause": 0.35
+        },
+        {
+            "id": "emas",
+            "text": "Alih-alih disamarkan, jalur retakan yang masih basah itu justru ditaburi bubuk emas murni! Seni ini dinamakan Kintsugi, yang berarti sambungan emas.",
+            "say": "Alih-alih disamarkan, jalur retakan yang masih basah itu justru ditaburi bubuk emas murni! Seni ini dinamakan Kintsugi, yang berarti sambungan emas.",
+            "pause": 0.35
+        },
+        {
+            "id": "wabisabi",
+            "text": "Dalam estetika Wabi-Sabi, retakan bukanlah cacat yang memalukan, melainkan bukti sejarah bahwa mangkuk itu pernah hidup, bertahan dari benturan, dan menjadi semakin unik.",
+            "pause": 0.35
+        },
+        {
+            "id": "sumie",
+            "text": "Prinsip serupa hidup dalam lukisan tinta Sumi-e: sekali kuas menyentuh kertas beras yang menyerap, goresannya tidak bisa dihapus atau diulang.",
+            "pause": 0.35
+        },
+        {
+            "id": "ma",
+            "text": "Para pelukis Zen juga sengaja membiarkan sebagian besar kertas tetap putih bersih. Ruang kosong yang disebut Ma ini memberi napas agar satu goresan tinta tampak hidup.",
+            "pause": 0.35
+        },
+        {
+            "id": "akhir",
+            "text": "Baik urat emas Kintsugi maupun ruang hening Sumi-e mengajarkan hal yang sama: keindahan sejati tidak lahir dari kesempurnaan tanpa cela, melainkan dari keberanian merangkul ketidaksempurnaan."
+        }
+    ]
+}

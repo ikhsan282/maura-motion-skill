@@ -1,0 +1,47 @@
+{
+  "title": "Ekspedisi Franz Wilhelm Junghuhn — Sang Humboldt dari Jawa yang Membawa Pohon Kina Penyelamat Dunia",
+  "slug": "43_scrapbook_demo2",
+  "style": "scrapbook",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di abad kesembilan belas, ada seorang ilmuwan yang begitu jatuh cinta pada pegunungan Pulau Jawa sampai-sampai ia mendaki hampir seluruh puncaknya dan mengubah Bandung menjadi apotek malaria dunia.",
+      "pause": 0.35
+    },
+    {
+      "id": "junghuhn",
+      "text": "Namanya Franz Wilhelm Junghuhn, dokter dan ahli botani kelahiran Jerman yang dijuluki Sang Humboldt dari Jawa karena ketekunannya memetakan topografi, kawah gunung berapi, dan hutan Nusantara.",
+      "say": "Namanya Frans Vilhelm Yunghun, dokter dan ahli botani kelahiran Jerman yang dijuluki Sang Humbolt dari Jawa karena ketekunannya memetakan topografi, kawah gunung berapi, dan hutan Nusantara."
+    },
+    {
+      "id": "zona",
+      "text": "Dari catatan altimeternya, ia merumuskan pembagian empat zona iklim vertikal yang masih kita pelajari di sekolah: zona panas untuk kelapa dan padi, zona sedang untuk kopi, zona sejuk untuk teh dan kina, hingga zona dingin edelweis."
+    },
+    {
+      "id": "kina",
+      "text": "Tugas terbesarnya datang saat ia dipercaya membudidayakan bibit pohon Kina asal Pegunungan Andes yang nyaris gagal tumbuh; Junghuhn memindahkannya ke lereng sejuk Lembang dan Pengalengan yang bertanah vulkanik subur.",
+      "say": "Tugas terbesarnya datang saat ia dipercaya membudidayakan bibit pohon Kina asal Pegunungan Andes yang nyaris gagal tumbuh; Yunghun memindahkannya ke lereng sejuk Lembang dan Pengalengan yang bertanah vulkanik subur."
+    },
+    {
+      "id": "bandung",
+      "text": "Keputusan ilmiah itu membuahkan hasil luar biasa: kulit pohon kina Jawa menghasilkan zat kuinin terbaik, hingga pada awal abad kedua puluh Priangan menyuplai lebih dari sembilan puluh persen obat malaria dunia."
+    },
+    {
+      "id": "akhir",
+      "text": "Sebelum wafat di Lembang pada tahun 1864, ia meminta jendelanya dibuka agar dapat menatap Gunung Tangkuban Perahu untuk terakhir kalinya—meninggalkan warisan abadi di setiap buku geografi kita.",
+      "say": "Sebelum wafat di Lembang pada tahun delapan belas enam puluh empat, ia meminta jendelanya dibuka agar dapat menatap Gunung Tangkuban Perahu untuk terakhir kalinya, meninggalkan warisan abadi di setiap buku geografi kita."
+    }
+  ]
+}
+

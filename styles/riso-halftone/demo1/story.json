@@ -1,0 +1,43 @@
+{
+  "title": "Band yang Dipenjara karena Lagu — Kisah Koes Bersaudara di Penjara Glodok 1965",
+  "slug": "44_riso-halftone_demo1",
+  "style": "riso-halftone",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pada tanggal dua puluh sembilan Juni tahun 1965 di Jakarta, sebuah band muda Indonesia tiba-tiba ditangkap dan dipenjara hanya karena membawakan musik ngak-ngik-ngok di sebuah pesta malam.",
+      "say": "Pada tanggal dua puluh sembilan Juni tahun sembilan belas enam puluh lima di Jakarta, sebuah band muda Indonesia tiba-tiba ditangkap dan dipenjara hanya karena membawakan musik ngak ngik ngok di sebuah pesta malam."
+    },
+    {
+      "id": "koes",
+      "text": "Empat kakak beradik Tonny, Yon, Yok, dan Nomo yang tergabung dalam Koes Bersaudara dinilai melanggar manifesto politik karena menyanyikan lagu I Saw Her Standing There milik The Beatles yang saat itu dicap sebagai musik Barat terlarang.",
+      "say": "Empat kakak beradik Toni, Yon, Yok, dan Nomo yang tergabung dalam Kus Bersaudara dinilai melanggar manifesto politik karena menyanyikan lagu Ai Sow Her Standing Der milik De Bitels yang saat itu dicap sebagai musik Barat terlarang."
+    },
+    {
+      "id": "bui",
+      "text": "Selama sembilan puluh delapan hari mereka mendekam di balik jeruji besi Penjara Glodok tanpa pengadilan, menulis lagu-lagu perjuangan dan ketabahan dari dalam sel sempit.",
+      "say": "Selama sembilan puluh delapan hari mereka mendekam di balik jeruji besi Penjara Glodok tanpa pengadilan, menulis lagu-lagu perjuangan dan ketabahan dari dalam sel sempit."
+    },
+    {
+      "id": "plus",
+      "text": "Setelah akhirnya dibebaskan pada akhir September, semangat bermusik mereka justru semakin membara hingga bertransformasi menjadi grup legendaris Koes Plus bersama Murry pada tahun 1969.",
+      "say": "Setelah akhirnya dibebaskan pada akhir September, semangat bermusik mereka justru semakin membara hingga bertransformasi menjadi grup legendaris Kus Plus bersama Muri pada tahun sembilan belas enam puluh sembilan."
+    },
+    {
+      "id": "akhir",
+      "text": "Dari Kolam Susu, Bujangan, hingga Kembali ke Jakarta, mereka melahirkan ratusan karya abadi—band yang dulu pernah dipenjara karena lagu, kini selamanya dikenang lewat lagu.",
+      "say": "Dari Kolam Susu, Bujangan, hingga Kembali ke Jakarta, mereka melahirkan ratusan karya abadi, band yang dulu pernah dipenjara karena lagu, kini selamanya dikenang lewat lagu."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+ "title": "Laksamana Cheng Ho Singgah di Nusantara — Jejak Tujuh Pelayaran Samudra",
+ "slug": "46_sumi-e",
+ "style": "sumi-e",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": { "preset": "japanese", "db": -16 },
+ "lead": 0.4,
+ "tail": 1.6,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Armadanya berisi lebih dari tiga ratus kapal kayu raksasa, dan kapal pusaka utamanya konon lebih panjang daripada lapangan sepak bola modern.",
+   "pause": 0.4
+  },
+  {
+   "id": "chengho",
+   "text": "Dialah Laksamana Cheng Ho, seorang Muslim asal Yunnan yang dipercaya oleh Kaisar Yongle dari Dinasti Ming untuk memimpin ekspedisi maritim terbesar abad kelima belas.",
+   "say": "Dialah Laksamana Ceng Ho, seorang Muslim asal Yunan yang dipercaya oleh Kaisar Yongle dari Dinasti Ming untuk memimpin ekspedisi maritim terbesar abad kelima belas.",
+   "pause": 0.35
+  },
+  {
+   "id": "tujuh",
+   "text": "Sejak tahun 1405 hingga 1433, ia memimpin tujuh pelayaran samudra melintasi Asia Tenggara, India, Teluk Persia, hingga pesisir timur Afrika, membawa sekitar dua puluh tujuh ribu awak.",
+   "say": "Sejak tahun empat belas nol lima hingga empat belas tiga puluh tiga, ia memimpin tujuh pelayaran samudra melintasi Asia Tenggara, India, Teluk Persia, hingga pesisir timur Afrika, membawa sekitar dua puluh tujuh ribu awak.",
+   "pause": 0.35
+  },
+  {
+   "id": "nusantara",
+   "text": "Hampir di setiap pelayaran, armadanya selalu singgah di pelabuhan Nusantara: mulai dari Samudera Pasai, Palembang, Sunda Kelapa, hingga pesisir utara Jawa seperti Tuban dan Gresik.",
+   "pause": 0.35
+  },
+  {
+   "id": "palembang",
+   "text": "Di Selat Palembang tahun 1407, armada Cheng Ho bahkan menumpas kawanan bajak laut Chen Zuyi yang lama meneror jalur dagang Selat Malaka, lalu mengamankan jalur pelayaran.",
+   "say": "Di Selat Palembang tahun empat belas nol tujuh, armada Ceng Ho bahkan menumpas kawanan bajak laut Cen Cuyi yang lama meneror jalur dagang Selat Malaka, lalu mengamankan jalur pelayaran.",
+   "pause": 0.35
+  },
+  {
+   "id": "semarang",
+   "text": "Saat juru mudinya jatuh sakit di pesisir Simongan, mereka berlabuh di sebuah gua batu di Semarang yang kini berdiri megah sebagai Klenteng Agung Sam Poo Kong.",
+   "say": "Saat juru mudinya jatuh sakit di pesisir Simongan, mereka berlabuh di sebuah gua batu di Semarang yang kini berdiri megah sebagai Klenteng Agung Sam Po Kong.",
+   "pause": 0.35
+  },
+  {
+   "id": "kapal",
+   "text": "Catatan sejarah Ming menyebut kapal pusaka Baochuan miliknya mencapai seratus dua puluh tujuh meter, meski sejarawan teknik perkapalan modern memperkirakan ukuran strukturalnya sekitar tujuh puluh meter.",
+   "say": "Catatan sejarah Ming menyebut kapal pusaka Bao-cuan miliknya mencapai seratus dua puluh tujuh meter, meski sejarawan teknik perkapalan modern memperkirakan ukuran strukturalnya sekitar tujuh puluh meter.",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Berbeda dari ekspedisi kolonial Barat yang datang merampas rempah dengan meriam, armada Cheng Ho datang membawa keramik, sutra, dan warisan persaudaraan yang masih hidup di Nusantara."
+  }
+ ]
+}

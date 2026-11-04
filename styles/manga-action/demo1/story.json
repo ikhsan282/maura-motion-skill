@@ -1,0 +1,60 @@
+{
+ "title": "Smash 565 km/jam — Kok Bulu Tangkis yang Lebih Cepat dari Mobil F1",
+ "slug": "45_manga-action",
+ "style": "manga-action",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "hype",
+  "db": -17
+ },
+ "lead": 0.35,
+ "tail": 1.4,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Kok bulu tangkis seberat lima gram ini ternyata mampu melesat jauh lebih cepat dari mobil balap Formula Satu di lintasan lurus.",
+   "say": "Kok bulu tangkis seberat lima gram ini, ternyata mampu melesat jauh lebih cepat dari mobil balap Formula Satu di lintasan lurus.",
+   "pause": 0.35
+  },
+  {
+   "id": "f1",
+   "text": "Saat mobil F1 mencapai kecepatan puncak sekitar tiga ratus tujuh puluh delapan kilometer per jam, rekor proyektil olahraga tercepat di bumi justru lahir di lapangan badminton.",
+   "say": "Saat mobil ef wan mencapai kecepatan puncak sekitar tiga ratus tujuh puluh delapan kilometer per jam, rekor proyektil olahraga tercepat di bumi justru lahir di lapangan badminton.",
+   "pause": 0.35
+  },
+  {
+   "id": "lompat",
+   "text": "Rahasianya ada pada rantai kinetik tubuh atlet dalam sepersekian detik. Lompat tinggi ke udara. Tarik bahu seperti busur panah. Lalu Lecutkan pergelangan tangan dengan rotasi penuh!",
+   "pause": 0.35
+  },
+  {
+   "id": "rekor",
+   "text": "Duar! Lima ratus enam puluh lima kilometer per jam! Rekor dunia Guinness tahun 2023 ini dicetak oleh pebulu tangkis ganda putra India, Satwiksairaj Rankireddy.",
+   "say": "Duar! Lima ratus enam puluh lima kilometer per jam! Rekor dunia Gines tahun dua ribu dua puluh tiga ini dicetak oleh pebulu tangkis ganda putra India, Satwiksairaj Rankiredi.",
+   "pause": 0.35
+  },
+  {
+   "id": "satwik",
+   "text": "Angka itu bahkan melampaui rekor sepuluh tahun sebelumnya milik Tan Boon Heong sebesar empat ratus sembilan puluh tiga kilometer per jam berkat senar bertegangan tinggi.",
+   "say": "Angka itu bahkan melampaui rekor sepuluh tahun sebelumnya milik Tan Bun Heong sebesar empat ratus sembilan puluh tiga kilometer per jam, berkat senar bertegangan tinggi.",
+   "pause": 0.35
+  },
+  {
+   "id": "rahasia",
+   "text": "Tapi ada paradoks aerodinamika yang unik: enam belas helai bulu angsa di belakang gabus langsung mekar menjadi parasut pengerem begitu melintasi net menuju lawan.",
+   "pause": 0.35
+  },
+  {
+   "id": "drag",
+   "text": "Hambatan udara ekstrem memangkas kecepatannya secara drastis, sehingga saat tiba di bidang raket penerima, lajunya menyusut tinggal seperempat dari kecepatan awalnya.",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Karena kok menempuh jarak antar pemain kurang dari dua persepuluh detik, pemenangnya bukanlah yang menunggu bola datang, melainkan mata yang paling cepat membaca arah ayunan bahu lawan."
+  }
+ ]
+}

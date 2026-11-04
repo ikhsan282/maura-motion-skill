@@ -1,0 +1,44 @@
+{
+  "title": "Dara Puspita: Empat Gadis Surabaya yang Mengguncang Panggung Eropa Tahun 1968",
+  "slug": "44_riso-halftone_demo2",
+  "style": "riso-halftone",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jauh sebelum era internet, pada tahun 1968 empat gadis muda asal Surabaya terbang ke Eropa dengan gitar listrik dan drum, lalu mengguncang lebih dari dua ratus lima puluh panggung rock dunia.",
+      "say": "Jauh sebelum era internet, pada tahun sembilan belas enam puluh delapan empat gadis muda asal Surabaya terbang ke Eropa dengan gitar listrik dan drum, lalu mengguncang lebih dari dua ratus lima puluh panggung rock dunia."
+    },
+    {
+      "id": "band",
+      "text": "Mereka adalah Dara Puspita: Titiek Adji Rachman pada gitar melodi, Lies Adji Rachman pada gitar ritme, Titiek Hamzah pada bass dan vokal, serta Susy Nander yang menggebuk drum penuh energi.",
+      "say": "Mereka adalah Dara Puspita: Titik Aji Rahman pada gitar melodi, Lis Aji Rahman pada gitar ritme, Titik Hamzah pada bas dan vokal, serta Susi Nander yang menggebuk drum penuh energi."
+    },
+    {
+      "id": "surabaya",
+      "text": "Melalui album perdana Jang Pertama dan lagu ikonik Surabaya serta Mari-Mari, raungan gitar garage rock mereka mematahkan anggapan bahwa perempuan masa itu hanya boleh bernyanyi lembut.",
+      "say": "Melalui album perdana Yang Pertama dan lagu ikonik Surabaya serta Mari-Mari, raungan gitar garaj rok mereka mematahkan anggapan bahwa perempuan masa itu hanya boleh bernyanyi lembut."
+    },
+    {
+      "id": "eropa",
+      "text": "Selama tiga tahun lebih mereka menjelajahi Jerman Barat, Belanda, Inggris, Prancis, Spanyol, hingga Hungaria, bahkan berbagi panggung dengan grup-grup rock besar Eropa dan merilis piringan hitam di London.",
+      "say": "Selama tiga tahun lebih mereka menjelajahi Jerman Barat, Belanda, Inggris, Prancis, Spanyol, hingga Hungaria, bahkan berbagi panggung dengan grup-grup rok besar Eropa dan merilis piringan hitam di London."
+    },
+    {
+      "id": "akhir",
+      "text": "Hingga hari ini, rekaman piringan hitam Dara Puspita diburu kolektor musik lintas benua sebagai pionir sejati garage rock perempuan Asia Tenggara.",
+      "say": "Hingga hari ini, rekaman piringan hitam Dara Puspita diburu kolektor musik lintas benua sebagai pionir sejati garaj rok perempuan Asia Tenggara."
+    }
+  ]
+}
+

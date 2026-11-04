@@ -1,0 +1,62 @@
+{
+ "title": "Suara Drum 80-an Lahir dari Kecelakaan — Rahasia Gated Reverb Phil Collins",
+ "slug": "47_synthwave",
+ "style": "synthwave",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "synthwave",
+  "db": -18
+ },
+ "lead": 0.35,
+ "tail": 1.4,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Pernahkah kamu bertanya mengapa suara drum ikonik era 80-an terdengar begitu menggelegar namun berhenti mendadak? Teknik itu ternyata lahir dari kecelakaan di studio.",
+   "say": "Pernahkah kamu bertanya mengapa suara drum ikonik era delapan puluhan terdengar begitu menggelegar namun berhenti mendadak? Teknik itu ternyata lahir dari kecelakaan di studio.",
+   "pause": 0.35
+  },
+  {
+   "id": "studio",
+   "text": "Kejadiannya bermula di Townhouse Studio, London, tahun seribu sembilan ratus tujuh puluh sembilan, saat Peter Gabriel sedang merekam album ketiganya di ruangan berlantai batu.",
+   "pause": 0.35
+  },
+  {
+   "id": "mic",
+   "text": "Saat sesi latihan, Phil Collins mulai menabuh drum tanpa simbal tepat di bawah mikrofon gantung yang sebenarnya hanya dipasang teknisi untuk ngobrol dari ruang kontrol.",
+   "say": "Saat sesi latihan, Fil Kolins mulai menabuh drum tanpa simbal tepat di bawah mikrofon gantung yang sebenarnya hanya dipasang teknisi untuk ngobrol dari ruang kontrol.",
+   "pause": 0.35
+  },
+  {
+   "id": "ledak",
+   "text": "Karena mikrofon talkback di meja konsol Solid State Logic itu sudah dipasangi kompresor pembatas yang sangat ekstrem, pantulan suara ruangan langsung meledak menjadi raksasa!",
+   "say": "Karena mikrofon tokbek di meja konsol Solid Steit Lojik itu sudah dipasangi kompresor pembatas yang sangat ekstrem, pantulan suara ruangan langsung meledak menjadi raksasa!",
+   "pause": 0.35
+  },
+  {
+   "id": "gate",
+   "text": "Teknisi suara Hugh Padgham lalu mengaktifkan fitur noise gate yang memotong ekor gemanya secara mendadak sebelum sempat memudar alami.",
+   "say": "Teknisi suara Hyu Padgem lalu mengaktifkan fitur nois geit, yang memotong ekor gemanya secara mendadak sebelum sempat memudar alami.",
+   "pause": 0.35
+  },
+  {
+   "id": "ssl",
+   "text": "Hasilnya adalah anomali akustik yang belum pernah terdengar sebelumnya: pukulan snare yang sebesar gedung stadion, tetapi langsung hening total sepersekian detik kemudian.",
+   "pause": 0.35
+  },
+  {
+   "id": "in_the_air",
+   "text": "Dua tahun berselang, dentuman drum di lagu In the Air Tonight milik Phil Collins menjadikan efek tak sengaja ini fenomena global yang ditiru seluruh produser dunia.",
+   "say": "Dua tahun berselang, dentuman drum di lagu In de Er Tunait milik Fil Kolins menjadikan efek tak sengaja ini fenomena global yang ditiru seluruh produser dunia.",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Begitulah lahirnya teknik gated reverb: bukti bahwa identitas suara drum seluruh dekade 80-an berawal dari satu mikrofon kecil untuk ngobrol.",
+   "say": "Begitulah lahirnya teknik geited riverb: bukti bahwa identitas suara drum seluruh dekade delapan puluhan berawal dari satu mikrofon kecil untuk ngobrol."
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "title": "Tendangan Pisang Roberto Carlos 1997 — Fisika Efek Magnus yang Melengkung Mustahil",
+ "slug": "45_manga-action_demo3",
+ "style": "manga-action",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "hype",
+  "db": -17
+ },
+ "lead": 0.35,
+ "tail": 1.4,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Tiga Juni seribu sembilan ratus sembilan puluh tujuh di Lyon, Prancis. Dari jarak tiga puluh lima meter, lahir tendangan bebas paling mustahil dalam sejarah sepak bola.",
+   "pause": 0.35
+  },
+  {
+   "id": "ancang",
+   "text": "Roberto Carlos mengambil ancang-ancang ekstrem jauh ke belakang. Empat pemain pagar betis Prancis berdiri menghadang, sementara kiper Fabien Barthez bersiaga di tengah gawang.",
+   "say": "Roberto Karlos mengambil ancang-ancang ekstrem jauh ke belakang. Empat pemain pagar betis Prancis berdiri menghadang, sementara kiper Fabien Bartez bersiaga di tengah gawang.",
+   "pause": 0.35
+  },
+  {
+   "id": "sepak",
+   "text": "BUUUM! Ia menghantam sisi kanan bawah bola menggunakan tiga jari bagian luar kaki kirinya! Bola melesat seratus tiga puluh tujuh kilometer per jam dengan sepuluh putaran per detik!",
+   "say": "Bum! Ia menghantam sisi kanan bawah bola menggunakan tiga jari bagian luar kaki kirinya! Bola melesat seratus tiga puluh tujuh kilometer per jam dengan sepuluh putaran per detik!",
+   "pause": 0.35
+  },
+  {
+   "id": "melenceng",
+   "text": "Awalnya bola terbang lurus melebar lebih dari satu meter di sebelah kanan pagar betis. Bahkan anak gawang yang berdiri sepuluh meter dari tiang sempat menunduk ketakutan!",
+   "pause": 0.35
+  },
+  {
+   "id": "magnus",
+   "text": "Namun di tengah udara, fisika Efek Magnus bekerja! Putaran bola menyeret udara di satu sisi menjadi lebih cepat dan bertekanan rendah, sementara sisi lainnya bertekanan tinggi.",
+   "pause": 0.35
+  },
+  {
+   "id": "turbulen",
+   "text": "Saat laju bola sedikit melambat di paruh kedua lintasan, aliran udara di permukaannya beralih dari turbulen ke laminer, melipatgandakan gaya belok secara mendadak seperti bumerang!",
+   "pause": 0.35
+  },
+  {
+   "id": "gol",
+   "text": "KLANG! Bola menikung tajam ke kiri, menghantam sisi dalam tiang gawang, dan merobek jala! Fabien Barthez hanya terpaku mematung tanpa sempat melangkah satu senti pun!",
+   "say": "Klang! Bola menikung tajam ke kiri, menghantam sisi dalam tiang gawang, dan merobek jala! Fabien Bartez hanya terpaku mematung tanpa sempat melangkah satu senti pun!",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Para fisikawan menyebut lintasannya sebagai spiral cangkang keong di udara: bukti bahwa tendangan itu bukan kebetulan, melainkan mahakarya aerodinamika."
+  }
+ ]
+}
+

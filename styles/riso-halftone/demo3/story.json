@@ -1,0 +1,44 @@
+{
+  "title": "Studio Lokananta Solo 1956 — Pabrik Piringan Hitam Pertama yang Merekam Jiwa Nusantara",
+  "slug": "44_riso-halftone_demo3",
+  "style": "riso-halftone",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di sebuah bangunan tua di Kota Solo, tersimpan lebih dari empat puluh ribu keping piringan hitam dan lima ribu pita magnetik yang merekam suara asli kelahiran musik Indonesia sejak tahun 1956.",
+      "say": "Di sebuah bangunan tua di Kota Solo, tersimpan lebih dari empat puluh ribu keping piringan hitam dan lima ribu pita magnetik yang merekam suara asli kelahiran musik Indonesia sejak tahun sembilan belas lima puluh enam."
+    },
+    {
+      "id": "nama",
+      "text": "Tempat itu bernama Lokananta—diambil dari nama seperangkat gamelan kahyangan dalam pewayangan yang konon bisa berbunyi merdu dengan sendirinya tanpa ditabuh.",
+      "say": "Tempat itu bernama Lokananta, diambil dari nama seperangkat gamelan kahyangan dalam pewayangan yang konon bisa berbunyi merdu dengan sendirinya tanpa ditabuh."
+    },
+    {
+      "id": "piringan",
+      "text": "Didirikan oleh Raden Maladi dan Oetojo Soemowidjojo sebagai pabrik piringan hitam pertama milik negara, mesin kempa Lokananta awalnya mencetak gending karawitan dan lagu daerah untuk disiarkan RRI ke seluruh pelosok negeri.",
+      "say": "Didirikan oleh Raden Maladi dan Utoyo Sumowijoyo sebagai pabrik piringan hitam pertama milik negara, mesin kempa Lokananta awalnya mencetak gending karawitan dan lagu daerah untuk disiarkan R R I ke seluruh pelosok negeri."
+    },
+    {
+      "id": "legenda",
+      "text": "Di ruang studio kedap suaranya yang bersejarah, maestro Gesang merekam Bengawan Solo, Waldjinah melantunkan Walang Kekek, dan Bing Slamet hingga Sam Saimun mengukir karya emas musik populer Nusantara.",
+      "say": "Di ruang studio kedap suaranya yang bersejarah, maestro Gesang merekam Bengawan Solo, Waljinah melantunkan Walang Kekek, dan Bing Slamet hingga Sam Saimun mengukir karya emas musik populer Nusantara."
+    },
+    {
+      "id": "akhir",
+      "text": "Bahkan rekaman resmi lagu kebangsaan Indonesia Raya tiga stanza dan pidato Konferensi Asia Afrika tersimpan utuh di sana—menjadikan Lokananta titik nol memori suara bangsa Indonesia.",
+      "say": "Bahkan rekaman resmi lagu kebangsaan Indonesia Raya tiga stanza dan pidato Konferensi Asia Afrika tersimpan utuh di sana, menjadikan Lokananta titik nol memori suara bangsa Indonesia."
+    }
+  ]
+}
+

@@ -1,0 +1,54 @@
+{
+ "title": "Bambu dan Angin Topan — Rahasia Struktur Berongga yang Melengkung Tanpa Pernah Patah",
+ "slug": "46_sumi-e_demo3",
+ "style": "sumi-e",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": { "preset": "japanese", "db": -16 },
+ "lead": 0.4,
+ "tail": 1.6,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Saat angin topan menghantam hutan di Asia Timur, pohon-pohon kayu raksasa yang kaku justru tumbang tercabut, sementara rumpun bambu yang ramping tetap berdiri utuh.",
+   "pause": 0.4
+  },
+  {
+   "id": "pepatah",
+   "text": "Para pelukis tinta Sumi-e selama berabad-abad mengabadikan bambu sebagai simbol ketangguhan: melengkung rendah mengikuti terpaan badai, lalu bangkit tegak kembali.",
+   "pause": 0.35
+  },
+  {
+   "id": "rongga",
+   "text": "Namun di balik puisi itu tersembunyi rekayasa struktur tingkat tinggi. Rahasia pertamanya adalah batang silinder berongga yang memindahkan massa ke dinding terluar.",
+   "pause": 0.35
+  },
+  {
+   "id": "buku",
+   "text": "Jika pipa biasa ditekuk terlalu jauh, dindingnya akan penyok dan terlipat. Bambu mencegahnya lewat sekat cincin padat yang disebut buku bambu di sepanjang batangnya.",
+   "pause": 0.35
+  },
+  {
+   "id": "serat",
+   "text": "Jika dibelah di bawah mikroskop, bundel serat penguat bambu ternyata tersusun makin rapat ke arah kulit luar, tempat tegangan tarik dan tekan paling besar terjadi.",
+   "pause": 0.35
+  },
+  {
+   "id": "baja",
+   "text": "Hasilnya luar biasa: rasio kekuatan tarik terhadap berat bambu bahkan melampaui baja struktural, namun tetap lentur menyerap energi guncangan seperti pegas hidup.",
+   "pause": 0.35
+  },
+  {
+   "id": "gedung",
+   "text": "Prinsip buku dan silinder bambu inilah yang menginspirasi arsitek merancang gedung pencakar langit tahan gempa dan angin topan, seperti menara Taipei seratus satu.",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Bambu mengajarkan hukum fisika sekaligus kebijaksanaan hidup: yang kaku akan patah oleh beban, sedangkan yang lentur dan berakar kuat akan bertahan melewati badai."
+  }
+ ]
+}
+

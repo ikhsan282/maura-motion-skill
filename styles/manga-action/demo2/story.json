@@ -1,0 +1,59 @@
+{
+ "title": "Tinju Udang Mantis — Pukulan 80 km/jam di Bawah Air yang Memecahkan Kaca Akuarium",
+ "slug": "45_manga-action_demo2",
+ "style": "manga-action",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "hype",
+  "db": -17
+ },
+ "lead": 0.35,
+ "tail": 1.4,
+ "pause": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Di dasar terumbu karang hidup petinju paling mematikan di bumi yang panjang tubuhnya bahkan tak lebih besar dari jari telunjuk manusia.",
+   "pause": 0.35
+  },
+  {
+   "id": "udang",
+   "text": "Dialah udang mantis merak. Jangan pernah menaruhnya di akuarium kaca biasa, karena sekali ayunan gada depannya sanggup meremukkan dinding kaca hingga pecah.",
+   "pause": 0.35
+  },
+  {
+   "id": "pegas",
+   "text": "Otot biasa tidak mungkin bergerak secepat itu di dalam air yang padat. Rahasianya adalah struktur pelana pegas dari kitin yang dikunci rapat oleh kait biologis.",
+   "pause": 0.35
+  },
+  {
+   "id": "pukul",
+   "text": "Begitu kaitnya dilepas... BAAAM! Gadanya melesat delapan puluh kilometer per jam dengan percepatan setara peluru kaliber dua puluh dua!",
+   "say": "Begitu kaitnya dilepas... Bam! Gadanya melesat delapan puluh kilometer per jam, dengan percepatan setara peluru kaliber dua puluh dua!",
+   "pause": 0.35
+  },
+  {
+   "id": "kavitasi",
+   "text": "Saking cepatnya pukulan itu membelah air, tekanan di belakang tinjunya anjlok ekstrem hingga air mendidih seketika dan menciptakan gelembung hampa udara yang disebut kavitasi.",
+   "pause": 0.35
+  },
+  {
+   "id": "matahari",
+   "text": "Sepersekian milidetik kemudian, gelembung kavitasi itu runtuh meledak! Ledakannya melepaskan gelombang kejut kedua serta kilatan cahaya bersuhu empat ribu tujuh ratus derajat Celsius!",
+   "pause": 0.35
+  },
+  {
+   "id": "perisai",
+   "text": "Lalu mengapa tinjunya sendiri tidak ikut hancur? Karena lapisan luarnya tersusun dari mineral hidroksiapatit bermotif spiral Bouligand yang menyerap retakan mikro.",
+   "say": "Lalu mengapa tinjunya sendiri tidak ikut hancur? Karena lapisan luarnya tersusun dari mineral hidroksi-apatit bermotif spiral Buligan, yang menyerap retakan mikro.",
+   "pause": 0.35
+  },
+  {
+   "id": "akhir",
+   "text": "Satu makhluk mungil, dua hantaman beruntun: satu dari tinju fisiknya, dan satu lagi dari gelombang kejut air yang runtuh sepanas permukaan matahari."
+  }
+ ]
+}
+

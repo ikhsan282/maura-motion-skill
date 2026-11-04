@@ -1,0 +1,49 @@
+{
+  "title": "Herbarium Rumphius di Ambon — Buku Botani Raksasa yang Ditulis dalam Kebutaan",
+  "slug": "43_scrapbook_demo3",
+  "style": "scrapbook",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bayangkan menyusun ensiklopedia seribu dua ratus tanaman tropis lengkap dengan detail akar, daun, dan khasiatnya—ketika kedua matamu sudah tidak bisa melihat sama sekali.",
+      "pause": 0.35
+    },
+    {
+      "id": "ambon",
+      "text": "Itulah kisah nyata Georg Eberhard Rumphius, peneliti alam abad ketujuh belas yang menetap di Pulau Ambon untuk mendokumentasikan kekayaan flora dan biota laut Kepulauan Maluku.",
+      "say": "Itulah kisah nyata Georg Eberhard Rumfius, peneliti alam abad ketujuh belas yang menetap di Pulau Ambon untuk mendokumentasikan kekayaan flora dan biota laut Kepulauan Maluku."
+    },
+    {
+      "id": "buta",
+      "text": "Di usia empat puluh dua tahun, penyakit glaukoma merenggut penglihatannya hingga buta total, namun ia menolak berhenti dan mulai mengenali setiap spesimen tanaman lewat rabaan jari, aroma getah, dan rasa daun.",
+      "pause": 0.3
+    },
+    {
+      "id": "bencana",
+      "text": "Cobaan belum berhenti di situ: gempa bumi dahsyat dan tsunami di Ambon tahun 1674 merenggut nyawa istri serta putrinya, disusul kebakaran besar tiga belas tahun kemudian yang menghanguskan seluruh gambar asli miliknya.",
+      "say": "Cobaan belum berhenti di situ: gempa bumi dahsyat dan tsunami di Ambon tahun enam belas tujuh puluh empat merenggut nyawa istri serta putrinya, disusul kebakaran besar tiga belas tahun kemudian yang menghanguskan seluruh gambar asli miliknya."
+    },
+    {
+      "id": "dikte",
+      "text": "Tanpa menyerah pada keputusasaan, Rumphius mendiktekan ulang seluruh enam jilid bukunya kata demi kata dari ingatan tajamnya, sementara putranya, Paulus Augustus, menggambar ulang ratusan ilustrasi tanaman di sisinya.",
+      "say": "Tanpa menyerah pada keputusasaan, Rumfius mendiktekan ulang seluruh enam jilid bukunya kata demi kata dari ingatan tajamnya, sementara putranya, Paulus Agustus, menggambar ulang ratusan ilustrasi tanaman di sisinya."
+    },
+    {
+      "id": "warisan",
+      "text": "Mahakarya berjudul Herbarium Amboinense itu akhirnya terbit dan menjadi fondasi penamaan ilmiah tanaman Nusantara—membuktikan bahwa cahaya ilmu pengetahuan tidak pernah padam meski di tengah kegelapan.",
+      "say": "Mahakarya berjudul Herbarium Amboinense itu akhirnya terbit dan menjadi fondasi penamaan ilmiah tanaman Nusantara, membuktikan bahwa cahaya ilmu pengetahuan tidak pernah padam meski di tengah kegelapan."
+    }
+  ]
+}
+
