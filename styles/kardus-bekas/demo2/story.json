@@ -1,0 +1,51 @@
+{
+  "title": "Rahasia Kekuatan Kardus Bergelombang — Kenapa Kertas Tipis Sanggup Menahan Beban Berat?",
+  "slug": "kardus-bekas-demo2",
+  "style": "kardus-bekas",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "playful",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Selembar kertas biasa langsung lemas saat ditekan, tetapi ketika disusun menjadi kardus bergelombang, ia sanggup menahan tumpukan beban puluhan kilogram."
+    },
+    {
+      "id": "sejarah",
+      "text": "Penemuan cerdas ini berawal pada tahun seribu delapan ratus tujuh puluh satu di Inggris, awalnya dipakai sebagai pelapis bagian dalam topi tinggi agar tetap tegak."
+    },
+    {
+      "id": "struktur",
+      "text": "Kuncinya terletak pada rekayasa struktur sandwich tiga lapis: dua lembar kertas datar yang mengapit selembar kertas berliku-liku di bagian tengah."
+    },
+    {
+      "id": "lengkung",
+      "text": "Bentuk gelombang itu bekerja persis seperti deretan lengkungan jembatan batu Romawi yang menyebarkan gaya tekan vertikal secara merata ke samping."
+    },
+    {
+      "id": "udara",
+      "text": "Rongga-rongga di sela gelombang juga menjebak kantung udara diam, menjadikannya bantal peredam guncangan sekaligus penahan panas alami yang sangat ringan."
+    },
+    {
+      "id": "jenis",
+      "text": "Untuk pengiriman mesin berat, para insinyur bahkan menumpuk dua hingga tiga lapis gelombang sekaligus hingga sekuat peti kayu."
+    },
+    {
+      "id": "bencana",
+      "text": "Arsitek Jepang pemenang penghargaan Pritzker, Shigeru Ban, bahkan membangun sekolah, katedral, dan rumah darurat bencana menggunakan tabung-tabung kardus."
+    },
+    {
+      "id": "moral",
+      "text": "Kardus bergelombang mengajarkan satu hukum rekayasa yang mengagumkan: kekuatan sejati tidak selalu datang dari tebalnya bahan, melainkan dari cerdasnya bentuk."
+    }
+  ]
+}
+

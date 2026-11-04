@@ -1,0 +1,51 @@
+{
+  "title": "Imajinasi Tanpa Batas dari Kardus Bekas — Dari Kotak Sepatu Menjadi Roket Antariksa",
+  "slug": "kardus-bekas-demo3",
+  "style": "kardus-bekas",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "playful",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu memperhatikan mengapa anak kecil sering kali lebih tertarik bermain dengan kotak kardus pembungkusnya daripada mainan mahal di dalamnya?"
+    },
+    {
+      "id": "kanvas",
+      "text": "Mainan pabrik sudah menentukan satu cara bermain, sedangkan sebuah kardus kosong adalah kanvas tiga dimensi yang bebas diubah menjadi apa saja."
+    },
+    {
+      "id": "potong",
+      "text": "Berbekal gunting tumpul, selotip kertas, spidol hitam, dan paku klip kuningan sebagai engsel, lembar-lembar kardus mulai bergerak hidup."
+    },
+    {
+      "id": "robot",
+      "text": "Kotak sepatu dan tutup botol bekas seketika berubah menjadi kostum robot kardus lengkap dengan tombol kendali di dada dan tangan yang melambai."
+    },
+    {
+      "id": "kastil",
+      "text": "Gulungan tisu dan kardus mi instan disusun menjulang menjadi menara benteng kerajaan lengkap dengan gerbang jembatan gantung yang megah."
+    },
+    {
+      "id": "roket",
+      "text": "Bahkan di ruang tamu, sebuah kardus kulkas yang diberi sayap merah mampu meluncur menjadi roket antariksa yang menembus gugusan bintang kertas."
+    },
+    {
+      "id": "sains",
+      "text": "Psikolog perkembangan menyebut permainan kriya kardus ini sangat penting untuk melatih kecerdasan spasial, pemecahan masalah, dan rasa percaya diri anak."
+    },
+    {
+      "id": "moral",
+      "text": "Maka sebelum membuang kardus bekas hari ini, berikanlah sejenak kepada tangan-tangan kecil di rumah, karena dari sanalah mimpi besar masa depan dirakit."
+    }
+  ]
+}
+

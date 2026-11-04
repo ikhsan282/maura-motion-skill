@@ -1,0 +1,52 @@
+{
+  "title": "Kantong Semar Nusantara — Tumbuhan Pemangsa Serangga di Tanah Miskin Hara",
+  "slug": "kolase-daun-bunga-demo2",
+  "style": "kolase-daun-bunga",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jika biasanya serangga yang memakan daun tumbuhan, di hutan Kalimantan dan Sumatera justru tumbuhan inilah yang memangsa serangga."
+    },
+    {
+      "id": "tanah",
+      "text": "Kantong semar atau Nepenthes tumbuh di rawa gambut dan tebing kapur yang sangat miskin unsur nitrogen, memaksanya mencari nutrisi tambahan.",
+      "say": "Kantong semar atau Nepentes tumbuh di rawa gambut dan tebing kapur yang sangat miskin unsur nitrogen, memaksanya mencari nutrisi tambahan."
+    },
+    {
+      "id": "sulur",
+      "text": "Keajaiban dimulai dari ujung helai daunnya yang memanjang menjadi sulur melingkar, lalu menggembung di ujungnya membentuk piala berpenutup."
+    },
+    {
+      "id": "nektar",
+      "text": "Di bawah katup penutup dan di sepanjang bibir kantong yang bergaris merah, keluarlah tetesan nektar manis yang harum menggoda semut dan lalat."
+    },
+    {
+      "id": "perangkap",
+      "text": "Saat hujan atau embun membasahi bibir kantong, permukaannya berubah menjadi sangat licin sehingga serangga terpeleset jatuh ke dasar piala."
+    },
+    {
+      "id": "enzim",
+      "text": "Di dalam kantong bukanlah air biasa, melainkan cairan kental berenzim asam yang perlahan melarutkan serangga menjadi pupuk alami bagi tumbuhan."
+    },
+    {
+      "id": "simbiosis",
+      "text": "Uniknya, spesies kantong semar raksasa di pegunungan Kalimantan justru bersahabat dengan tupai gunung yang menukar nektar dengan kotoran kaya nitrogen."
+    },
+    {
+      "id": "moral",
+      "text": "Sebagai rumah bagi puluhan spesies kantong semar endemik, hutan tropis Nusantara menunjukkan betapa kreatifnya alam beradaptasi untuk bertahan hidup."
+    }
+  ]
+}
+

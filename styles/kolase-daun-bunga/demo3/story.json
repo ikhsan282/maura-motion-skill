@@ -1,0 +1,51 @@
+{
+  "title": "Seni Herbarium & Kolase Botani — Bagaimana Daun Kering Menyimpan Memori Hutan Tropis",
+  "slug": "kolase-daun-bunga-demo3",
+  "style": "kolase-daun-bunga",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Sehelai daun yang gugur di halaman mungkin tampak rapuh, namun ketika dikeringkan dengan benar, ia sanggup bertahan hingga ratusan tahun."
+    },
+    {
+      "id": "koleksi",
+      "text": "Seni merangkai daun dan kelopak bunga kering yang dikenal sebagai oshibana maupun kolase botani mengubah guguran alam menjadi lukisan bernyawa."
+    },
+    {
+      "id": "pres",
+      "text": "Daun dan mahkota bunga diselipkan di antara lembaran kertas penyerap, lalu ditekan dengan pemberat selama berminggu-minggu hingga seluruh kadar airnya hilang."
+    },
+    {
+      "id": "kupu",
+      "text": "Di tangan perajin kolase, dua helai daun kuning dan sebatang ranting kecil dapat menjelma menjadi kupu-kupu hutan yang mengepakkan sayapnya."
+    },
+    {
+      "id": "burung",
+      "text": "Perpaduan daun hijau, kelopak merah, dan biji kering bahkan mampu menyusun siluet burung kicau yang bertengger di dahan pohon."
+    },
+    {
+      "id": "bogor",
+      "text": "Dalam dunia sains, teknik serupa melahirkan Herbarium Bogoriense pada tahun seribu delapan ratus empat puluh satu yang menyimpan hampir satu juta spesimen tumbuhan."
+    },
+    {
+      "id": "iklim",
+      "text": "Dari lembaran daun kering berusia dua abad itulah para ilmuwan masa kini dapat membaca perubahan iklim dan melacak spesies hutan yang telah punah."
+    },
+    {
+      "id": "moral",
+      "text": "Baik sebagai karya seni kolase maupun arsip ilmu pengetahuan, selembar daun kering mengajarkan cara menghargai setiap jejak kehidupan alam."
+    }
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "title": "Rafflesia arnoldii — Bunga Raksasa Berbau Bangkai dari Hutan Bengkulu",
+  "slug": "kolase-daun-bunga-demo1",
+  "style": "kolase-daun-bunga",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di dasar hutan hujan Sumatera yang lembap, mekarlah bunga tunggal terbesar di dunia yang baunya justru menyengat seperti bangkai.",
+      "pause": 0.35
+    },
+    {
+      "id": "tanpa",
+      "text": "Berbeda dari tumbuhan biasa, Rafflesia arnoldii sama sekali tidak memiliki helai daun, tidak berbatang, bahkan tidak punya akar.",
+      "say": "Berbeda dari tumbuhan biasa, Raflesia arnoldi sama sekali tidak memiliki helai daun, tidak berbatang, bahkan tidak punya akar."
+    },
+    {
+      "id": "inang",
+      "text": "Ia hidup tersembunyi sebagai jaringan serat halus di dalam batang tumbuhan merambat Tetrastigma, menyerap sari makanan dari inangnya."
+    },
+    {
+      "id": "mekar",
+      "text": "Setelah sembilan bulan menanti sebagai kuncup bulat menyerupai kubis, lima kelopak tebalnya pun merekah lebar hingga berdiameter satu meter."
+    },
+    {
+      "id": "lalat",
+      "text": "Aroma busuk yang dikeluarkannya bukanlah tanpa alasan, melainkan undangan cerdik untuk memanggil lalat hutan agar membantu penyerbukan."
+    },
+    {
+      "id": "singkat",
+      "text": "Namun kemegahan itu berlangsung sangat singkat: bunga raksasa ini hanya mekar selama lima hingga tujuh hari sebelum menghitam dan layu."
+    },
+    {
+      "id": "perbedaan",
+      "text": "Banyak yang mengiranya sama dengan bunga bangkai Amorphophallus yang menjulang tinggi, padahal Rafflesia tumbuh melebar rata di atas tanah.",
+      "say": "Banyak yang mengiranya sama dengan bunga bangkai Amorfofalus yang menjulang tinggi, padahal Raflesia tumbuh melebar rata di atas tanah."
+    },
+    {
+      "id": "akhir",
+      "text": "Keajaiban botani dari hutan Bengkulu ini ditetapkan sebagai Puspa Langka nasional, pengingat betapa berharganya rimba tropis Indonesia."
+    }
+  ]
+}

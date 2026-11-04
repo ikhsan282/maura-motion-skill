@@ -1,0 +1,51 @@
+{
+  "title": "Perjalanan Kardus Paketmu — Bisa Lahir Kembali Sampai Tujuh Kali",
+  "slug": "kardus-bekas-demo1",
+  "style": "kardus-bekas",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "playful",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jangan buru-buru membuang kotak belanja daring di depan pintumu, karena kardus paketmu ini bisa lahir kembali sampai tujuh kali.",
+      "pause": 0.35
+    },
+    {
+      "id": "serat",
+      "text": "Perjalanannya dimulai dari serat selulosa kayu pinus yang panjang dan kuat, dipadatkan menjadi lembaran kertas cokelat kraft yang ulet."
+    },
+    {
+      "id": "gelombang",
+      "text": "Di antara dua lembar kertas datar, disisipkan lapisan kertas bergelombang yang disebut flute, memberikan daya tahan luar biasa terhadap benturan."
+    },
+    {
+      "id": "paket",
+      "text": "Setelah selesai mengantar barang belanjaan ke rumahmu, kardus bekas yang dikumpulkan pengepul akan dikirim kembali menuju pabrik daur ulang."
+    },
+    {
+      "id": "pulper",
+      "text": "Di dalam mesin pengaduk raksasa berisi air hangat, jutaan kardus bekas dilebur menjadi bubur kertas, sementara selotip dan staples dipisahkan."
+    },
+    {
+      "id": "batas",
+      "text": "Namun setiap kali dilebur dan digiling ulang, ikatan serat selulosa mikroskopis di dalamnya akan terpotong menjadi semakin pendek dan rapuh."
+    },
+    {
+      "id": "tujuh",
+      "text": "Setelah melewati sekitar lima hingga tujuh kali siklus daur ulang, serat yang tersisa akhirnya diubah menjadi wadah telur atau kertas tisu."
+    },
+    {
+      "id": "moral",
+      "text": "Dengan melipat rapi kardus bekasmu dan memisahkannya dari sampah basah, kamu telah membantu satu kotak kertas menjalani tujuh kehidupan penuh manfaat."
+    }
+  ]
+}

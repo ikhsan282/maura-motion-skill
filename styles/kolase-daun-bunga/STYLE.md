@@ -1,27 +1,22 @@
----
-id: kolase-daun-bunga
-name: Kolase Daun & Bunga
-no: 20
-source: drive:20_Kolase_Daun_Bunga
-family: craft
-tech: canvas2d
-music: folk   voice: id-f   captions: hand
-best_for: Kolase dari daun kering, kelopak bunga, ranting, biji di atas kertas krem (herbarium): karakter dan latar disusun dari daun
----
-# Kolase Daun & Bunga
+# Gaya: Kolase Daun & Bunga
 
-**Ciri khas (look):** Kolase dari daun kering, kelopak bunga, ranting, biji di atas kertas krem (herbarium): karakter dan latar disusun dari daun. Rafflesia arnoldii (Bengkulu): parasit tanpa daun/batang/akar, diameter hingga sekitar 1 meter, mekar beberapa hari, bau busuk menarik lalat penyerbuk. Daun-daun beterbangan menyusun gambar (assemble), kelopak membuka.
+Karya seni **herbarium hidup dan kolase botani (*pressed leaf & flower collage / oshibana*)** di atas lembaran kertas kapas krem: bunga raksasa, kantong semar, serangga, dan burung yang **seluruhnya disusun dari daun kering berurat, kelopak bunga pres, ranting kayu, dan biji-bijian** yang direkatkan menggunakan pita kertas herbarium (*mounting strips*).
 
-**Gerak (motion):** Transisi dan animasi mengikuti irama narasi per baris (`AM.cue`, `AM.wordTime`), dengan pergerakan kamera halus dan elemen visual khas gaya `kolase-daun-bunga`.
+## Ciri Visual
+- **Lembaran Kertas Herbarium (`bg`)**: Kertas kapas krem tua (`#efe6d2` → `#d6c5a3`) dengan garis bingkai ganda museum botani dan serat tumbuhan alami yang terpres di dalam kertas.
+- **Daun Berurat & Kelopak Pres**: Setiap helai daun (`leaf`) memiliki tulang daun tengah, urat samping, tangkai ranting, serta bayangan lembut di atas kertas; kelopak bunga (`flower`, `rafflesia`) tersusun melingkar dengan bintik dan benang sari.
+- **Pita Perekat & Kartu Spesimen (`herbariumTape`, `herbariumLabel`)**: Ranting dan daun ditempel dengan strip kertas kecil sebagaimana koleksi ilmiah di Herbarium Bogoriense, dilengkapi kartu spesimen bertuliskan nama ilmiah Latin.
 
-**Kenapa menarik:** Visual Kolase Daun & Bunga memberikan atmosfer khas yang langsung menghentikan scroll pada detik pertama.
+## Kit (`styles/kolase-daun-bunga/kit.js`)
+- `PAL`, `stepT(t, 12)`, `cam`, `pop`, `pr`, `bg(ctx, t)` — palet botani alami, kuantisasi waktu *stop-motion* halus, dan lembaran latar herbarium.
+- `leaf(ctx, x, y, len, wid, ang, col, opts)` — daun pres dengan urat daun dan pita perekat opsional (`tape: true`).
+- `flower(ctx, x, y, r, petal, core, opts)` — bunga kelopak pres yang dapat mekar (`open` 0→1).
+- `rafflesia(ctx, x, y, r, opts)` — *Rafflesia arnoldii* berkelopak lima merah bata dengan bintik kutil putih, cincin diafragma, dan gelombang aroma (`scent: true`).
+- `kantongSemar(ctx, x, y, s, opts)` — tumbuhan pemangsa serangga *Nepenthes* lengkap dengan daun, sulur melingkar, kantong bercorak merah, bibir licin (*peristome*), dan katup penutup (*operculum*).
+- `leafCreature(ctx, kind, opts)` — satwa yang dirangkai dari kepingan daun kering, kelopak bunga, ranting, dan biji (`'lalat'`, `'kupu'`, `'burung'`).
+- `twig`, `herbariumTape`, `herbariumLabel`, `title`, `caption` — ranting merambat, pita perekat spesimen, dan plakat kartu herbarium.
 
-**Cerita yang cocok:**
-- Rafflesia, Bunga Raksasa Berbau Bangkai: "Bunga terbesar di dunia ini... baunya seperti bangkai."
-
-**Rumus hook:** "Bunga terbesar di dunia ini... baunya seperti bangkai."
-
-**Kit API (`styles/kolase-daun-bunga/kit.js`):**
-- Exports: `PAL`, `cam`, `pop`, `pr`, `bg`, `title`, `caption`, `leaf`, `flower`, `rafflesia`.
-
-**Demo:** "Rafflesia, Bunga Raksasa Berbau Bangkai" — voice `id-f`, musik `folk`. Hook: "Bunga terbesar di dunia ini... baunya seperti bangkai."
+## Paket Demo (30–90 Detik)
+1. **`demo1` — *Rafflesia arnoldii — Bunga Raksasa Berbau Bangkai dari Hutan Bengkulu*** (`~55s`): Keunikan puspa langka Indonesia yang hidup sebagai parasit tanpa daun, batang, maupun akar pada sulur *Tetrastigma*, mekar hingga 1 meter, memikat lalat penyerbuk dengan bau bangkai, hingga perbedaannya dengan bunga bangkai *Amorphophallus titanum*.
+2. **`demo2` — *Kantong Semar Nusantara — Tumbuhan Pemangsa Serangga di Tanah Miskin Hara*** (`~55s`): Evolusi cerdas tumbuhan karnivora *Nepenthes* di hutan Kalimantan dan Sumatera: ujung daun yang memanjang menjadi kantong jebakan, nektar manis dan bibir kantong super licin, cairan enzim pencerna, hingga simbiosis unik dengan tupai gunung.
+3. **`demo3` — *Seni Herbarium & Kolase Botani — Bagaimana Daun Kering Menyimpan Memori Hutan Tropis*** (`~55s`): Perpaduan seni kolase daun kering (*oshibana*) yang merangkai kupu-kupu dan burung dari guguran daun, serta peran penting 950.000 spesimen kering di Herbarium Bogoriense dalam merekam sejarah iklim dan keanekaragaman hayati Nusantara.

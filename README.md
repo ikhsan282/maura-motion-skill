@@ -160,8 +160,8 @@ Selain gaya 1–15, sebagian gaya lain juga memiliki variasi demo tambahan:
 | 16 | **Wayang Beber** | wayang-beber | ✅ ([demo1](styles/wayang-beber/demo1/) · [demo2](styles/wayang-beber/demo2/) · [demo3](styles/wayang-beber/demo3/)) |
 | 17 | **Lukisan Gua Purba** | lukisan-gua-purba | ✅ ([demo1](styles/lukisan-gua-purba/demo1/) · [demo2](styles/lukisan-gua-purba/demo2/) · [demo3](styles/lukisan-gua-purba/demo3/)) |
 | 18 | **Origami** | origami | ✅ ([demo1](styles/origami/demo1/) · [demo2](styles/origami/demo2/) · [demo3](styles/origami/demo3/)) |
-| 19 | **Kardus Bekas** | kardus-bekas | ✅ ([styles/kardus-bekas](styles/kardus-bekas/)) |
-| 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([styles/kolase-daun-bunga](styles/kolase-daun-bunga/)) |
+| 19 | **Kardus Bekas** | kardus-bekas | ✅ ([demo1](styles/kardus-bekas/demo1/) · [demo2](styles/kardus-bekas/demo2/) · [demo3](styles/kardus-bekas/demo3/)) |
+| 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([demo1](styles/kolase-daun-bunga/demo1/) · [demo2](styles/kolase-daun-bunga/demo2/) · [demo3](styles/kolase-daun-bunga/demo3/)) |
 | 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([styles/kotak-cahaya-kertas](styles/kotak-cahaya-kertas/)) |
 | 22 | **Lukisan Minyak Bergerak** | lukisan-minyak | ✅ ([styles/lukisan-minyak](styles/lukisan-minyak/)) |
 | 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([styles/papan-tulis-kapur](styles/papan-tulis-kapur/)) |
