@@ -1,0 +1,59 @@
+{
+  "title": "Asal-Usul Nama Banyuwangi — Sumpah Suci Sri Tanjung di Tepi Sungai",
+  "style": "kertas-guntingan",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "tailOut": 1.1,
+  "defaultPause": 0.35,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu, nama kota Banyuwangi di ujung timur Pulau Jawa lahir dari legenda sumpah kesetiaan yang mengubah air sungai menjadi harum semerbak?",
+      "pause": 0.45
+    },
+    {
+      "id": "ksatria",
+      "text": "Dahulu kala di Kerajaan Sindurejo, hiduplah seorang patih gagah berani bernama Sidapaksa bersama istrinya yang berhati suci bernama Sri Tanjung.",
+      "pause": 0.4
+    },
+    {
+      "id": "tugas",
+      "text": "Sang Raja yang diam-diam iri hati sengaja mengutus Patih Sidapaksa pergi jauh ke puncak gunung terjal demi memisahkannya dari istana.",
+      "pause": 0.45
+    },
+    {
+      "id": "fitnah",
+      "text": "Saat sang patih tiada, Raja mencoba merayu Sri Tanjung namun ditolak tegas. Ketika Sidapaksa pulang, Raja pun meniupkan fitnah keji bahwa istrinya telah berkhianat.",
+      "pause": 0.45
+    },
+    {
+      "id": "murka",
+      "text": "Terbakar amarah buta tanpa memeriksa kebenaran, Sidapaksa membawa istrinya ke tepi sungai curam sambil menghunus keris pusakanya.",
+      "pause": 0.45
+    },
+    {
+      "id": "sumpah",
+      "text": "Di bibir tebing sungai, Sri Tanjung bersumpah tenang: Jika air sungai ini berbau harum wangi setelah kepergianku, maka aku suci tak berdosa!",
+      "pause": 0.5
+    },
+    {
+      "id": "harum",
+      "text": "Begitu Sri Tanjung terjun ke pusaran air, keajaiban pun terjadi! Sungai itu berkilau keemasan dan menebarkan aroma bunga yang harum ke seluruh lembah.",
+      "pause": 0.5
+    },
+    {
+      "id": "sesal",
+      "text": "Patih Sidapaksa tersungkur menyesali amarahnya yang terburu-buru dan berseru pilu di tepi sungai: Banyuwangi, air yang harum!",
+      "pause": 0.45
+    },
+    {
+      "id": "moral",
+      "text": "Legenda Banyuwangi mengajarkan kita agar selalu memeriksa kebenaran dengan kepala dingin sebelum mempercayai hasutan dan tuduhan.",
+      "pause": 0.8
+    }
+  ]
+}
+

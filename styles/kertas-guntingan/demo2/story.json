@@ -1,0 +1,59 @@
+{
+  "title": "Legenda Batu Menangis — Kutukan Air Mata di Bukit Kalimantan",
+  "style": "kertas-guntingan",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "tailOut": 1.1,
+  "defaultPause": 0.35,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di tepi bukit hijau Kalimantan Barat, berdiri sebongkah batu tua yang konon masih meneteskan air mata abadi karena kesombongan seorang anak.",
+      "pause": 0.45
+    },
+    {
+      "id": "desa",
+      "text": "Dahulu kala di sebuah desa terpencil, hiduplah seorang janda tua pekerja keras bersama putrinya yang berparas jelita bernama Darmi.",
+      "pause": 0.4
+    },
+    {
+      "id": "malas",
+      "text": "Setiap hari sang ibu membanting tulang mencangkul di ladang, sementara Darmi hanya duduk bermalas-malasan sambil bersolek di depan cermin emasnya.",
+      "pause": 0.45
+    },
+    {
+      "id": "pasar",
+      "text": "Suatu pagi yang cerah, Darmi mengajak ibunya pergi ke pasar desa dengan satu syarat kejam: sang ibu harus berjalan jauh di belakang sambil memikul keranjang layaknya pembantu.",
+      "pause": 0.45
+    },
+    {
+      "id": "tanya",
+      "text": "Di tengah keramaian pasar, seorang warga menyapa ramah dan bertanya siapa perempuan tua bersarung lusuh yang berjalan tertatih di belakangnya.",
+      "pause": 0.45
+    },
+    {
+      "id": "bantah",
+      "text": "Dengan dagu terangkat angkuh dan malu mengakui ibu kandungnya sendiri, Darmi berseru lantang: Bukan ibuku, dia cuma pembantu upahanku!",
+      "pause": 0.5
+    },
+    {
+      "id": "doa",
+      "text": "Hati sang ibu hancur berkeping-keping. Ia pun bersimpuh menangis di tanah berdebu dan berdoa menengadah ke langit agar anaknya diberi pelajaran.",
+      "pause": 0.5
+    },
+    {
+      "id": "batu",
+      "text": "Seketika langit gelap menyambar petir! Kaki Darmi mendadak kaku membatu dari bawah ke atas, sementara ia menjerit memohon ampun: Ibu, ampuni aku!",
+      "pause": 0.45
+    },
+    {
+      "id": "moral",
+      "text": "Tubuh Darmi akhirnya berubah menjadi batu utuh yang terus meneteskan air mata penyesalan. Ingatlah, kemuliaan hidup selalu berawal dari menghormati ibumu.",
+      "pause": 0.8
+    }
+  ]
+}
+

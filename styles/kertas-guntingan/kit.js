@@ -19,7 +19,7 @@ export const PAL = {
   gold: '#e9ad2c', goldHi: '#f8d368', goldDk: '#b97a17',
   skin: '#c88758', skinDk: '#a8673f', hair: '#2a211d', indigo: '#33476e', maroon: '#7c2a2a',
   storm: '#59627a', stormDk: '#3a4054', stormHi: '#7e889c', rain: '#c6dbe6', bolt: '#ffe27a',
-  brass: '#d6a845',
+  brass: '#d6a845', coral: '#d96552', teal: '#3b7a8c', foam: '#d9eef5', skyTop: '#a9d0dc', skyBot: '#d7ebe8',
 };
 
 // ---------------- camera ----------------
@@ -396,6 +396,11 @@ const RIGS = {
   toba: { skin: PAL.skin, hair: PAL.hair, band: PAL.red, shirt: PAL.indigo, sarong: PAL.maroon, ulos: PAL.red, scale: 1 },
   putri: { skin: '#d49a6c', skinDk: '#b77d52', hair: '#231a17', bun: true, ornament: true, long: true, top: PAL.gold, sarong: '#9b2f2b', ulos: PAL.goldDk, blush: '#e08a6c', scale: 0.96, woman: true },
   samosir: { skin: PAL.skin, hair: PAL.hair, child: true, shirt: null, sarong: PAL.red, ulos: PAL.indigo, scale: 0.8, belly: true },
+  darmi: { skin: '#d49a6c', skinDk: '#b77d52', hair: '#231a17', bun: true, ornament: true, long: true, top: PAL.coral, sarong: PAL.gold, ulos: PAL.red, blush: '#e08a6c', scale: 0.94, woman: true },
+  ibu: { skin: PAL.skin, skinDk: PAL.skinDk, hair: '#6b6560', bun: true, ornament: false, long: false, top: PAL.earthDk, sarong: PAL.mud, ulos: PAL.indigo, blush: '#b77d52', scale: 0.9, woman: true },
+  sidapaksa: { skin: PAL.skin, hair: PAL.hair, band: PAL.gold, shirt: PAL.teal, sarong: PAL.indigo, ulos: PAL.goldDk, scale: 1.02 },
+  sritanjung: { skin: '#d8a074', skinDk: '#b77d52', hair: '#231a17', bun: true, ornament: true, long: true, top: PAL.teal, sarong: PAL.gold, ulos: PAL.coral, blush: '#e08a6c', scale: 0.95, woman: true },
+  raja: { skin: PAL.skin, hair: PAL.hair, band: PAL.goldHi, ornament: true, shirt: PAL.maroon, sarong: PAL.goldDk, ulos: PAL.red, scale: 1.06, belly: true },
 };
 function bodySheets(name) {
   // coordinates relative to the hip pivot (0,0); shoulders at y=-190 (adult) / -144 (child)
@@ -554,6 +559,25 @@ export const PROPS = {
     { pts: [[-52, -10], [-10, -50], [30, -46], [56, -10], [0, -2]], fill: PAL.moss, edge: 'cut', seed: 2, lift: 1, detail: (g) => { g.strokeStyle = PAL.sage; g.lineWidth = 2; g.beginPath(); g.moveTo(-40, -14); g.lineTo(40, -30); g.stroke(); } },
   ]),
   rice: () => piece('rice', [{ pts: [[-60, 0], [-40, -50], [0, -70], [40, -50], [60, 0]], fill: PAL.white, edge: 'torn', seed: 5, amp: 2.6 }, { pts: [[-70, 0], [70, 0], [50, 30], [-50, 30]], fill: PAL.terracotta, edge: 'cut', seed: 6, lift: 1.2 }]),
+  mirror: () => piece('mirror', [
+    { pts: rectPts(-7, 0, 14, 72), fill: PAL.goldDk, edge: 'cut', seed: 7, lift: 0.5 },
+    { pts: ellipsePts(0, -48, 38, 48, 24), fill: PAL.gold, edge: 'cut', seed: 8, lift: 1 },
+    { pts: ellipsePts(0, -48, 27, 36, 20), fill: PAL.skyTop, edge: 'cut', seed: 9, lift: 0.4, detail: (g) => { g.strokeStyle = PAL.white; g.lineWidth = 4; g.beginPath(); g.moveTo(-14, -66); g.lineTo(12, -32); g.stroke(); } },
+  ]),
+  basket: () => piece('basket', [
+    { pts: [[-56, -8], [56, -8], [42, 62], [-42, 62]], fill: '#a97c42', edge: 'cut', seed: 10, lift: 0.8, detail: (g) => { g.strokeStyle = 'rgba(65,38,10,.55)'; g.lineWidth = 2.5; for (let x = -54; x <= 54; x += 12) { g.beginPath(); g.moveTo(x, -10); g.lineTo(x + 12, 64); g.stroke(); g.beginPath(); g.moveTo(x, 64); g.lineTo(x + 12, -10); g.stroke(); } } },
+    { pts: [[-48, -8], [-22, -38], [22, -36], [48, -8]], fill: PAL.moss, edge: 'torn', seed: 11, amp: 2, lift: 0.4 },
+  ]),
+  keris: () => piece('keris', [
+    { pts: rectPts(-10, -24, 20, 34), fill: PAL.goldDk, edge: 'cut', seed: 12, lift: 0.8 },
+    { pts: [[-24, 6], [24, 6], [14, 22], [-14, 22]], fill: PAL.gold, edge: 'cut', seed: 13, lift: 1 },
+    { pts: [[-9, 20], [9, 20], [12, 54], [-6, 86], [10, 118], [-4, 150], [0, 184], [-12, 150], [2, 118], [-14, 86], [4, 54]], fill: '#8d97a0', edge: 'cut', seed: 14, lift: 0.6 },
+  ]),
+  lotus: () => piece('lotus', [
+    { pts: [[-36, 6], [-18, -32], [0, -10], [18, -32], [36, 6], [0, 20]], fill: PAL.coral, edge: 'torn', seed: 15, amp: 1.6, lift: 0.6 },
+    { pts: [[-20, 8], [0, -40], [20, 8], [0, 18]], fill: PAL.white, edge: 'torn', seed: 16, amp: 1.4, lift: 1 },
+    { pts: ellipsePts(0, 4, 10, 8, 12), fill: PAL.gold, edge: 'cut', seed: 17, lift: 1.2 },
+  ]),
 };
 
 // ---------------- labels, titles, bubbles ----------------

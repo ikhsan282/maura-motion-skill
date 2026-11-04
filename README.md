@@ -99,7 +99,7 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 
 ## Gaya dengan demo tambahan
 
-Gaya No. 1 sampai 7 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
+Gaya No. 1 sampai 9 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
 
 | No | Gaya | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|---|---|
@@ -110,8 +110,10 @@ Gaya No. 1 sampai 7 kini sudah memiliki paket lengkap **3 demo per gaya**, denga
 | 5 | `clay-stop-motion` | "Timun Mas & Buto Ijo" (`demo1/`, 17 dtk) | "Sangkuriang & Perahu Terbalik" (`demo2/`, 57 dtk) | "Bawang Putih & Labu Emas" (`demo3/`, 62 dtk) |
 | 6 | `boneka-rajut` | "Kancil Mencuri Mentimun" (`demo1/`, 50 dtk) | "Kancil dan Barisan Buaya Sungai" (`demo2/`, 55 dtk) | "Balap Lari Kelinci Sombong & Kura-kura" (`demo3/`, 55 dtk) |
 | 7 | `pixel-retro` | "Si Pitung: Level Batavia" (`demo1/`, 48 dtk) | "Kenapa Game Jadul 16-Bit Bikin Nagih?" (`demo2/`, 55 dtk) | "Tamagotchi 90-an: Jangan Sampai Mati!" (`demo3/`, 55 dtk) |
+| 8 | `kertas-guntingan` | "Legenda Danau Toba" (`demo1/`, 62 dtk) | "Legenda Batu Menangis" (`demo2/`, 55 dtk) | "Asal-Usul Nama Banyuwangi" (`demo3/`, 55 dtk) |
+| 9 | `sketsa-pensil` | "Faktor Habibie: Retakan Sekecil Rambut" (`demo1/`, 58 dtk) | "Kenapa Kapal Baja Mengapung? Archimedes" (`demo2/`, 58 dtk) | "Rahasia Konstruksi Candi Borobudur" (`demo3/`, 55 dtk) |
 
-Selain gaya 1–7, sebagian gaya lain juga memiliki variasi demo tambahan:
+Selain gaya 1–9, sebagian gaya lain juga memiliki variasi demo tambahan:
 
 | Gaya | Demo |
 |---|---|
@@ -142,8 +144,8 @@ Selain gaya 1–7, sebagian gaya lain juga memiliki variasi demo tambahan:
 | 5 | **Clay Stop Motion** | clay-stop-motion | ✅ ([demo1](styles/clay-stop-motion/demo1/) · [demo2](styles/clay-stop-motion/demo2/) · [demo3](styles/clay-stop-motion/demo3/)) |
 | 6 | **Boneka Rajut** | boneka-rajut | ✅ ([demo1](styles/boneka-rajut/demo1/) · [demo2](styles/boneka-rajut/demo2/) · [demo3](styles/boneka-rajut/demo3/)) |
 | 7 | **Pixel Retro** | pixel-retro | ✅ ([demo1](styles/pixel-retro/demo1/) · [demo2](styles/pixel-retro/demo2/) · [demo3](styles/pixel-retro/demo3/)) |
-| 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([styles/kertas-guntingan](styles/kertas-guntingan/)) |
-| 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([styles/sketsa-pensil](styles/sketsa-pensil/)) |
+| 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([demo1](styles/kertas-guntingan/demo1/) · [demo2](styles/kertas-guntingan/demo2/) · [demo3](styles/kertas-guntingan/demo3/)) |
+| 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([demo1](styles/sketsa-pensil/demo1/) · [demo2](styles/sketsa-pensil/demo2/) · [demo3](styles/sketsa-pensil/demo3/)) |
 | 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([styles/kartun-jadul](styles/kartun-jadul/)) |
 | 11 | **Wayang Kulit** | wayang-kulit | ✅ ([styles/wayang-kulit](styles/wayang-kulit/)) |
 | 12 | **Low Poly** | low-poly | ❌ (belum diimplementasi) |

@@ -5,7 +5,7 @@ no: 9
 source: drive:09_Sketsa_Pensil + github:hand-drawn-sketch
 family: craft
 tech: canvas2d
-music: lofi   voice: id-m   captions: hand
+music: lofi   voice: el-id-m   captions: hand
 best_for: sejarah sains & teknik, biografi penemu, cara kerja mesin, "kenapa X bisa terjadi", catatan belajar
 ---
 # Sketsa Pensil
@@ -45,7 +45,7 @@ video AI yang licin. Proses menggambar itu sendiri bikin penasaran sampai gambar
 - `figure(pose)` / `figureDraw(ctx,pose,t,{reveal})` / `figureTip(pose,reveal)`: tokoh sketsa kartun (kepala bulat, kacamata, rambut diarsir, tangan-kaki bertabung; pose duduk/berdiri, ekspresi).
 - Properti: `pencil`, `ruler`, `eraser`, `smudge`; kertas: `sheet(ctx,rect)`, `paper`, `light`, `sheetMarks`; `cam`, `viewRect`, `note`, `leadPattern`, `paperPattern`.
 
-**Demo:** "Faktor Habibie: Retakan Sekecil Rambut", 19,8 detik, 6 shot. Jet digambar cepat dan menukik → zoom ke retakan merah
-"sekecil rambut" → "1954", Comet terbelah dua di udara → pelat logam ditebalkan dengan arsiran silang, pesawat keberatan
-→ "B.J. Habibie", insinyur di bangku menggambar kurva rambat retak, penggaris, garis batas bahaya → penghapus menipiskan
-pelat dan menghapus beban, pesawat terbang, "-10%" dilingkari merah → "Mr. Crack" dengan retakan merah, tokoh bersorak.
+**Koleksi Demo (`styles/sketsa-pensil/`):**
+- **`demo1` — "Faktor Habibie: Retakan Sekecil Rambut"** (~58 detik, 6 bagian): Jet digambar cepat dan menukik → zoom ke retakan merah `"sekecil rambut"` → `"1954"`, Comet terbelah dua di udara → pelat logam ditebalkan dengan arsiran silang, pesawat keberatan → `"B.J. Habibie"`, insinyur di bangku menggambar kurva rambat retak, penggaris, garis batas bahaya → penghapus menipiskan pelat dan menghapus beban, pesawat terbang, `"-10%"` dilingkari merah → `"Mr. Crack"` dengan retakan merah, tokoh bersorak.
+- **`demo2` — "Kenapa Kapal Baja Raksasa Bisa Mengapung? Hukum Archimedes"** (~58 detik, 8 bagian): Perbandingan paku besi 10g tenggelam vs kapal kargo baja 100.000 ton terapung → balok baja padat tenggelam (`W >> FA`) → Archimedes di bak mandi berseru `"EUREKA!"` saat air meluap → rumus `FA = ρ · g · V` digarisbawahi dengan penggaris → penghapus menggosok bagian tengah balok baja menjadi lambung cekung berongga → diagram 5 panah merah gaya apung raksasa → simbol Garis Plimsoll dan kesimpulan `"BENTUK MENCIPTAKAN GAYA APUNG!"`.
+- **`demo3` — "Rahasia Konstruksi Candi Borobudur Tanpa Semen"** (~55 detik, 7 bagian): Siluet berundak Candi Borobudur (`2.000.000 Batu Andesit — Tanpa Semen`) → simulasi tumpukan batu polos bergeser saat gempa → tokoh arsitek Gunadharma (abad ke-8) → detail penampang sambungan tanggam & kunci ekor burung (*dovetail*) merah yang mengunci geseran → pipa drainase tersembunyi & pancuran Makara (*Jaladwara*) → vektor distribusi beban piramida berundak mengikuti punggung bukit → kesimpulan `"MAHAKARYA TEKNIK NUSANTARA!"`.

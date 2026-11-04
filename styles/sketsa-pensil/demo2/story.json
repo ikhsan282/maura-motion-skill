@@ -1,0 +1,54 @@
+{
+  "title": "Kenapa Kapal Baja Raksasa Bisa Mengapung? — Sketsa Hukum Archimedes",
+  "style": "sketsa-pensil",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "maxDuration": 90,
+  "leadIn": 0.35,
+  "tailOut": 1.1,
+  "defaultPause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bingung, kenapa sebutir paku besi kecil langsung tenggelam di air, sedangkan kapal kargo baja seberat seratus ribu ton justru mengapung santai?",
+      "pause": 0.4
+    },
+    {
+      "id": "padat",
+      "text": "Jika baja seberat itu ditempa menjadi satu balok besi padat tanpa rongga, volumenya terlalu sempit sehingga beratnya langsung mengalahkan dorongan air.",
+      "pause": 0.4
+    },
+    {
+      "id": "archimedes",
+      "text": "Lebih dari dua ribu tahun silam di Yunani, Archimedes menemukan rahasianya saat masuk ke bak mandi dan melihat air meluap naik.",
+      "pause": 0.4
+    },
+    {
+      "id": "rumus",
+      "text": "Hukum Archimedes menyatakan bahwa setiap benda yang dicelupkan ke dalam cairan akan didorong ke atas oleh gaya apung sebesar berat air yang dipindahkannya.",
+      "pause": 0.4
+    },
+    {
+      "id": "rongga",
+      "text": "Di sinilah trik jenius para insinyur perkapalan: mereka menghapus bagian tengah balok baja itu dan membentuknya menjadi lambung cekung berongga lebar!",
+      "pause": 0.45
+    },
+    {
+      "id": "volume",
+      "text": "Karena lambung kapal menyimpan ruang udara yang sangat besar, kapal mendesak jutaan liter air laut ke samping dan menghasilkan gaya apung raksasa.",
+      "pause": 0.4
+    },
+    {
+      "id": "garis",
+      "text": "Selama massa jenis rata-rata kapal beserta udaranya lebih kecil dari air laut, kapal baja akan terus terapung aman di batas garis Plimsoll.",
+      "pause": 0.4
+    },
+    {
+      "id": "penutup",
+      "text": "Jadi bukan bahannya yang menentukan tenggelam atau terapung, melainkan bagaimana bentuknya mampu memindahkan air sebanyak mungkin!",
+      "pause": 0.8
+    }
+  ]
+}
+

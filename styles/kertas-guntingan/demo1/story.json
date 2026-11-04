@@ -1,0 +1,43 @@
+{
+  "title": "Legenda Danau Toba — Ketika Satu Janji yang Dilanggar Menenggelamkan Satu Lembah",
+  "style": "kertas-guntingan",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "tailOut": 1.1,
+  "defaultPause": 0.35,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu, konon ada satu janji suci yang dilanggar hingga menenggelamkan satu lembah hijau utuh dan menjadikannya sebuah danau raksasa di Sumatera Utara?",
+      "pause": 0.45
+    },
+    {
+      "id": "ikan",
+      "text": "Dahulu kala, hiduplah seorang pemuda petani jujur bernama Toba yang pergi memancing di sungai jernih dan menangkap seekor ikan emas berkilau, yang tiba-tiba berubah wujud menjadi seorang putri jelita.",
+      "pause": 0.4
+    },
+    {
+      "id": "janji",
+      "text": "Mereka pun menikah dan hidup bahagia di rumah adat lembah itu. Syaratnya hanya satu janji mutlak: jangan pernah sekali-kali mengungkit asal-usul sang istri dari sungai.",
+      "pause": 0.45
+    },
+    {
+      "id": "marah",
+      "text": "Tahun berlalu hingga suatu siang yang terik di ladang kering, anaknya Samosir memakan habis bekal makan siang ayahnya di jalan. Toba pun murka luar biasa dan berteriak lantang: Dasar anak ikan!",
+      "pause": 0.55
+    },
+    {
+      "id": "danau",
+      "text": "Seketika langit gelap gulita dan pecah disambar petir, mata air deras menyembur dari retakan tanah! Lembah luas itu tenggelam menjadi Danau Toba, dan bukit tempat sang anak berdiri menjadi Pulau Samosir.",
+      "pause": 0.45
+    },
+    {
+      "id": "moral",
+      "text": "Kisah rakyat Nusantara ini selalu mengingatkan kita bahwa setiap janji adalah amanah berharga untuk dijaga seumur hidup, bukan sekadar diucapkan di bibir saja.",
+      "pause": 0.8
+    }
+  ]
+}

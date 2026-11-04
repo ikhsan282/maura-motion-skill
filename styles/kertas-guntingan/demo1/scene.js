@@ -225,7 +225,7 @@ shot('marah', () => C.marah.start - 0.12, (t, a, b) => {
   K.tag(ctx, 'Samosir', 850, 760, { size: 52, rot: 0.05, alpha: prog(t, W('marah', 'anaknya') - 0.1, W('marah', 'anaknya') + 0.2), tape: '#b7c8e8' });
   ctx.save(); ctx.translate(560, 420);
   K.shoutBubble(ctx, 'DASAR', 0, -70, t, shout - 0.06, { size: 110, w: 860, h: 420, tail: [-200, 260] });
-  if (t > AM.wordTime('marah', 5) - 0.05) K.cutTitle(ctx, 'ANAK IKAN!', 0, 70, t, AM.wordTime('marah', 5) - 0.05, { size: 100, cols: [P.white], stagger: 0.03 });
+  if (t > W('marah', 'anak') - 0.05) K.cutTitle(ctx, 'ANAK IKAN!', 0, 70, t, W('marah', 'anak') - 0.05, { size: 100, cols: [P.white], stagger: 0.03 });
   ctx.restore();
   if (sh > 0.6) { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = `rgba(185,50,43,${(sh - 0.6) * 0.35})`; ctx.fillRect(0, 0, 1080, 1920); }
 });

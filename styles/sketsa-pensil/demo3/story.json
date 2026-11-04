@@ -1,0 +1,49 @@
+{
+  "title": "Rahasia Konstruksi Candi Borobudur Tanpa Semen — Sketsa Teknik Kuno",
+  "style": "sketsa-pensil",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "maxDuration": 90,
+  "leadIn": 0.35,
+  "tailOut": 1.1,
+  "defaultPause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bertanya, bagaimana Candi Borobudur yang disusun dari dua juta balok batu vulkanik sanggup berdiri kokoh lebih dari seribu dua ratus tahun tanpa setetes semen pun?",
+      "pause": 0.4
+    },
+    {
+      "id": "tumpuk",
+      "text": "Jika batu pahatan hanya ditumpuk polos begitu saja, guncangan gempa bumi dan tekanan tanah pasti sudah lama meruntuhkan seluruh dinding candi.",
+      "pause": 0.4
+    },
+    {
+      "id": "arsitek",
+      "text": "Pada abad kedelapan, sang perancang legendaris Gunadharma menerapkan teknik rekayasa sipil yang jauh melampaui zamannya di tanah Jawa.",
+      "pause": 0.4
+    },
+    {
+      "id": "tanggam",
+      "text": "Setiap balok batu andesit dipahat presisi membentuk sambungan tanggam dan kunci ekor burung yang saling mengunci rapat layaknya kepingan puzzle tiga dimensi.",
+      "pause": 0.45
+    },
+    {
+      "id": "drainase",
+      "text": "Tak hanya itu, di balik lorong candi tersembunyi ratusan saluran air dan seratus pancuran makara yang membuang curah hujan deras agar bukit di dalamnya tidak longsor.",
+      "pause": 0.4
+    },
+    {
+      "id": "pondasi",
+      "text": "Struktur teras berundak yang melebar di bagian kaki juga menyebarkan beban jutaan ton batu secara merata mengikuti lekuk bukit alami.",
+      "pause": 0.4
+    },
+    {
+      "id": "warisan",
+      "text": "Perpaduan kunci batu presisi dan tata air cerdas inilah yang membuat mahakarya Nusantara ini tetap tegak menantang zaman hingga hari ini.",
+      "pause": 0.8
+    }
+  ]
+}
+

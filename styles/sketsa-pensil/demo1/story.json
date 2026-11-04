@@ -1,0 +1,43 @@
+{
+  "title": "Faktor Habibie — Bagaimana Retakan Sekecil Rambut Membuat Pesawat Jatuh",
+  "style": "sketsa-pensil",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "maxDuration": 90,
+  "leadIn": 0.35,
+  "tailOut": 1.1,
+  "defaultPause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu, sebuah retakan mikroskopis sekecil sehelai rambut manusia di sayap logam ternyata sanggup membuat pesawat terbang raksasa jatuh berkeping-keping di udara?",
+      "pause": 0.4
+    },
+    {
+      "id": "comet",
+      "text": "Pada dekade seribu sembilan ratus lima puluhan, dunia penerbangan geger karena beberapa pesawat jet komersial tiba-tiba pecah di angkasa akibat kelelahan logam yang tak terlihat mata.",
+      "pause": 0.35
+    },
+    {
+      "id": "tebal",
+      "text": "Solusi para insinyur saat itu sangat kasar: tambahkan logam berkali-kali lipat lebih tebal! Aman memang untuk sementara, tapi pesawat menjadi terlampau berat dan boros bahan bakar.",
+      "pause": 0.4
+    },
+    {
+      "id": "habibie",
+      "text": "Lalu muncullah ilmuwan muda Indonesia di Jerman, B. J. Habibie, yang berhasil menurunkan rumus matematika presisi untuk menghitung rambatan retakan hingga ke tingkat atom.",
+      "pause": 0.35
+    },
+    {
+      "id": "ringan",
+      "text": "Rumus revolusioner yang dikenal dunia sebagai Faktor Habibie ini berhasil memangkas bobot kerangka sayap pesawat terbang hingga 10 persen lebih ringan tanpa mengorbankan kekuatan.",
+      "pause": 0.35
+    },
+    {
+      "id": "crack",
+      "text": "Sejak saat itu, para insinyur penerbangan tahu persis kapan sebuah retakan halus akan berhenti merambat, dan kapan ia menjadi berbahaya sebelum pesawat lepas landas.",
+      "pause": 0.8
+    }
+  ]
+}
