@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 65 siap pakai ✅, 12 belum diimplementasi ❌)
+## Status gaya (77 gaya: 66 siap pakai ✅, 11 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -81,7 +81,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([styles/sketsa-pensil](styles/sketsa-pensil/)) |
 | 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([styles/kartun-jadul](styles/kartun-jadul/)) |
 | 11 | **Wayang Kulit** | wayang-kulit | ✅ ([styles/wayang-kulit](styles/wayang-kulit/)) |
-| 12 | **Low Poly** | low-poly | ❌ (belum diimplementasi) |
+| 12 | **Low Poly** | low-poly | ✅ ([demo1](styles/low-poly/demo1/) · [demo2](styles/low-poly/demo2/) · [demo3](styles/low-poly/demo3/)) |
 | 13 | **Buku Pop-up** | buku-pop-up | ✅ ([styles/buku-pop-up](styles/buku-pop-up/)) |
 | 14 | **Batik Hidup** | batik-hidup | ✅ ([styles/batik-hidup](styles/batik-hidup/)) |
 | 15 | **Wayang Golek** | wayang-golek | ❌ (belum diimplementasi) |

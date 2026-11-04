@@ -1,0 +1,58 @@
+{
+  "style": "low-poly",
+  "voice": "el-id-m",
+  "speed": 1.04,
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.26,
+  "maxDuration": 90,
+  "music": { "preset": "cinematic", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bagaimana sebuah kapal kayu raksasa yang dirakit tanpa satu batang paku besi pun sanggup menaklukkan ganasnya samudra dunia?",
+      "pause": 0.35
+    },
+    {
+      "id": "phinisi",
+      "text": "Inilah Kapal Phinisi, mahakarya pelaut tangguh Bugis-Makassar dari pesisir Tanah Beru, Bulukumba, Sulawesi Selatan.",
+      "pause": 0.3
+    },
+    {
+      "id": "pasak",
+      "text": "Berbeda dengan kapal modern, papan lambung Phinisi disatukan lebih dulu menggunakan ribuan pasak kayu ulin sebelum kerangkanya dipasang!",
+      "pause": 0.35
+    },
+    {
+      "id": "layar",
+      "text": "Ciri khasnya yang gagah terletak pada dua tiang utama yang menjulang tinggi serta tujuh helai layar yang mengembang.",
+      "pause": 0.3
+    },
+    {
+      "id": "filosofi",
+      "text": "Bagi para pelaut Nusantara, dua tiang melambangkan dua kalimat syahadat, sedangkan tujuh layar melambangkan tujuh ayat Surah Al-Fatihah.",
+      "pause": 0.35
+    },
+    {
+      "id": "badai",
+      "text": "Saat diterjang gelombang tinggi di tengah samudra lepas, sambungan pasak kayu justru membuat lambung Phinisi lentur dan tidak mudah patah!",
+      "pause": 0.35
+    },
+    {
+      "id": "jelajah",
+      "text": "Dengan mengandalkan petunjuk bintang dan arah angin muson, armada Phinisi telah berlayar lintas benua hingga ke Madagaskar, Australia, dan Kanada.",
+      "pause": 0.35
+    },
+    {
+      "id": "unesco",
+      "text": "Karena kejeniusan teknik dan tradisi maritimnya, UNESCO resmi menetapkan seni pembuatan perahu Phinisi sebagai Warisan Budaya Takbenda Dunia.",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Kisah Phinisi membuktikan pada kita: nenek moyang bangsa Indonesia bukan sekadar penonton di tepi pantai, melainkan penguasa lautan yang disegani dunia!",
+      "pause": 0.6
+    }
+  ]
+}
+

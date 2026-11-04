@@ -1,0 +1,58 @@
+{
+  "style": "low-poly",
+  "voice": "el-id-m",
+  "speed": 1.04,
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.26,
+  "maxDuration": 90,
+  "music": { "preset": "cinematic", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Percayakah kamu, pulau mungil di Maluku ini dulu pernah ditukar langsung dengan Pulau Manhattan yang kini menjadi pusat kota New York?",
+      "pause": 0.35
+    },
+    {
+      "id": "banda",
+      "text": "Inilah Pulau Run di Kepulauan Banda, sebidang tanah karang sepanjang tiga kilometer yang dikelilingi laut biru Maluku.",
+      "pause": 0.3
+    },
+    {
+      "id": "pala",
+      "text": "Pada abad ke-17, Pulau Run adalah satu-satunya tempat di bumi yang menumbuhkan hutan pohon pala terbaik dalam jumlah melimpah.",
+      "pause": 0.3
+    },
+    {
+      "id": "emas",
+      "text": "Saat buah pala matang membelah, tampak biji harum berselimut fuli merah menyala yang harganya di pasar Eropa melebihi emas murni!",
+      "pause": 0.35
+    },
+    {
+      "id": "armada",
+      "text": "Demi menguasai rempah langka itu, armada kapal perang Inggris dan Belanda berlayar melintasi samudra dan saling mengepung Pulau Run.",
+      "pause": 0.35
+    },
+    {
+      "id": "benteng",
+      "text": "Benteng-benteng batu didirikan di puncak bukit Banda untuk menjaga monopoli perdagangan pala dari tangan bangsa lain.",
+      "pause": 0.3
+    },
+    {
+      "id": "breda",
+      "text": "Hingga akhirnya pada tahun seribu enam ratus enam puluh tujuh, kedua negara menandatangani Perjanjian Breda yang mengubah peta dunia.",
+      "pause": 0.35
+    },
+    {
+      "id": "manhattan",
+      "text": "Inggris rela menyerahkan Pulau Run kepada Belanda, asalkan mereka mendapatkan pulau koloni bernama New Amsterdam yang kini dikenal sebagai Manhattan!",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Sejarah Pulau Run mengingatkan kita: kekayaan alam Nusantara pernah menjadi poros utama yang menggerakkan ekonomi dan sejarah dunia.",
+      "pause": 0.6
+    }
+  ]
+}
+

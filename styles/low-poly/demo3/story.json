@@ -1,0 +1,58 @@
+{
+  "style": "low-poly",
+  "voice": "el-id-m",
+  "speed": 1.04,
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.26,
+  "maxDuration": 90,
+  "music": { "preset": "cinematic", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu kenapa Indonesia memiliki seratus dua puluh tujuh gunung berapi aktif, jumlah terbanyak di seluruh dunia?",
+      "pause": 0.35
+    },
+    {
+      "id": "cincin",
+      "text": "Kepulauan Nusantara berada tepat di jalur Cincin Api Pasifik, sabuk raksasa tempat bertemunya tiga lempeng benua sekaligus!",
+      "pause": 0.3
+    },
+    {
+      "id": "tumbukan",
+      "text": "Di dasar samudra, Lempeng Indo-Australia terus menghunjam ke bawah Lempeng Eurasia beberapa sentimeter setiap tahunnya.",
+      "pause": 0.35
+    },
+    {
+      "id": "magma",
+      "text": "Gesekan dahsyat di kedalaman bumi itu melelehkan batuan menjadi dapur magma panas yang mendesak naik ke permukaan laut.",
+      "pause": 0.35
+    },
+    {
+      "id": "pulau",
+      "text": "Selama jutaan tahun, letusan demi letusan di dasar laut menumpuk batuan beku hingga melahirkan barisan pulau dari Sumatra, Jawa, Bali, hingga Maluku!",
+      "pause": 0.35
+    },
+    {
+      "id": "erupsi",
+      "text": "Beberapa letusan gunung api di Nusantara bahkan tercatat mengubah iklim dunia, seperti letusan Tambora dan Krakatau.",
+      "pause": 0.35
+    },
+    {
+      "id": "subur",
+      "text": "Namun di balik ancamannya, abu vulkanik justru menaburkan mineral alami yang membuat tanah Indonesia menjadi salah satu yang paling subur di bumi!",
+      "pause": 0.35
+    },
+    {
+      "id": "hutan",
+      "text": "Lereng-lereng gunung berapi pun berubah menjadi hamparan sawah menghijau, hutan hujan tropis, dan sumber mata air jernih bagi jutaan jiwa.",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Hidup di atas Cincin Api mengajarkan kita: alam yang tampak ganas sesungguhnya adalah rahim yang melahirkan dan menghidupi tanah air kita.",
+      "pause": 0.6
+    }
+  ]
+}
+
