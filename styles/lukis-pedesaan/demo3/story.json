@@ -1,0 +1,60 @@
+{
+ "title": "Tradisi Wiwitan: Syukur Bumi Sebelum Panen",
+ "slug": "03_lukis-pedesaan_demo3",
+ "style": "lukis-pedesaan",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "folk",
+  "db": -16
+ },
+ "lead": 0.35,
+ "tail": 1.2,
+ "pause": 0.25,
+ "speed": 1.12,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Di desa-desa Jawa, petani tidak pernah langsung memetik padi yang menguning sebelum menggelar sebuah ritual syukur yang hening.",
+   "pause": 0.3
+  },
+  {
+   "id": "arti",
+   "text": "Tradisi kuno ini bernama Wiwitan, yang berarti permulaan: sebuah penghormatan tulus kepada bumi yang telah memberi kehidupan."
+  },
+  {
+   "id": "dapur",
+   "text": "Sejak subuh, para ibu di dapur desa menanak nasi tumpeng dan merangkai hasil bumi di atas lembaran daun pisang."
+  },
+  {
+   "id": "arak",
+   "text": "Saat kabut pagi masih menggantung di lereng gunung, warga berjalan beriringan menyusuri pematang menuju tengah sawah."
+  },
+  {
+   "id": "sungai",
+   "text": "Mereka menyeberangi aliran sungai desa yang jernih, sumber air yang berbulan-bulan menghidupi setiap petak tanaman padi."
+  },
+  {
+   "id": "gelar",
+   "text": "Di dekat gubuk dangau, tikar pandan digelar bersama tumpeng kuning, ingkung, dan bunga melati yang harum semerbak."
+  },
+  {
+   "id": "doa",
+   "text": "Tetua desa duduk bersila memanjatkan doa syukur kepada Tuhan dan menghormati alam semesta yang menjaga kesuburan tanah."
+  },
+  {
+   "id": "petik",
+   "text": "Barulah tangkai padi pertama dipetik dengan penuh kelembutan menggunakan ani-ani, menandai dimulainya masa panen raya."
+  },
+  {
+   "id": "makan",
+   "text": "Setelah itu, seluruh petani dan anak-anak duduk melingkar menikmati nasi wiwit bersama di tengah semilir angin sawah."
+  },
+  {
+   "id": "akhir",
+   "text": "Wiwitan mengajarkan kita bahwa manusia bukan penguasa alam, melainkan sahabat bumi yang hidup dari rasa syukur."
+  }
+ ]
+}
+

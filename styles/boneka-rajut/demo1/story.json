@@ -1,0 +1,33 @@
+{
+  "style": "boneka-rajut",
+  "voice": "el-id-m",
+  "fps": 30,
+  "maxDuration": 90,
+  "title": "Kura-kura dan Monyet Menanam Pisang",
+  "beats": [
+    {
+      "id": "temu",
+      "narration": "Suatu pagi di tepi sungai, Kura-kura dan Monyet menemukan sebatang pohon pisang yang hanyut. Mereka sepakat memotongnya menjadi dua untuk ditanam bersama."
+    },
+    {
+      "id": "bagi",
+      "narration": "Monyet yang licik langsung merebut bagian pucuk karena daunnya tampak hijau segar, lalu menyisakan bagian bonggol berakar yang kotor untuk Kura-kura."
+    },
+    {
+      "id": "tanam",
+      "narration": "Kura-kura menanam bonggolnya dengan sabar dan rajin menyiram setiap hari hingga tumbuh tinggi dan berbuah lebat. Sedangkan pucuk milik Monyet tanpa akar perlahan layu dan mengering."
+    },
+    {
+      "id": "panjat",
+      "narration": "Saat pisang menguning matang, Kura-kura tak sanggup memanjat pohonnya sendiri. Monyet menawarkan bantuan untuk memetikkan, tetapi di atas pohon ia justru melahap habis semua pisang sendirian."
+    },
+    {
+      "id": "kulit",
+      "narration": "Ketika Kura-kura meminta bagiannya dari bawah, Monyet yang serakah malah tertawa mengejek dan hanya melemparkan kulit-kulit pisang kosong ke kepala sahabatnya."
+    },
+    {
+      "id": "balas",
+      "narration": "Kura-kura pun menaruh semak berduri di bawah pohon lalu bersembunyi. Begitu Monyet yang kekenyangan melompat turun, ia jatuh tepat ke semak duri dan mengaduh kesakitan. Itulah balasan bagi sifat serakah yang mengkhianati teman."
+    }
+  ]
+}

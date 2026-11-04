@@ -1,0 +1,43 @@
+{
+ "title": "Sangkuriang & Tangkuban Perahu",
+ "slug": "02_kartun-3d-sinematik",
+ "style": "kartun-3d-sinematik",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "cinematic",
+  "db": -16
+ },
+ "lead": 0.3,
+ "tail": 0.9,
+ "pause": 0.15,
+ "speed": 1.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Gunung ini sebenarnya perahu yang ditendang hingga terbalik.",
+   "pause": 0.15
+  },
+  {
+   "id": "lamar",
+   "text": "Sangkuriang melamar ibunya sendiri, Dayang Sumbi."
+  },
+  {
+   "id": "syarat",
+   "text": "Syaratnya: danau dan perahu dalam semalam."
+  },
+  {
+   "id": "jin",
+   "text": "Para jin membantunya."
+  },
+  {
+   "id": "kain",
+   "text": "Tapi Dayang Sumbi memalsukan fajar. Ayam berkokok!"
+  },
+  {
+   "id": "tendang",
+   "text": "Sangkuriang murka dan menendangnya. Jadilah Tangkuban Perahu."
+  }
+ ]
+}

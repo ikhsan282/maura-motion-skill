@@ -511,7 +511,7 @@ export function figure(g, o) {
     const kk = kneel > 0.01;
     const sw = walk != null ? Math.sin(walk * TAU) * u * 0.22 : Math.sin(t * 1.3) * u * 0.04;
     const hem = kk ? -u * 0.1 : -u * 0.3;
-    upper(() => {});
+    upper(() => { });
     g.fillStyle = SH(g, C.robe, L, -u * 1.0, u * 1.0, 1.15);
     g.beginPath();
     g.moveTo(-u * 0.5, waistY - u * 0.2);
@@ -619,3 +619,120 @@ export function headPos(o) {
 
 
 export { ease, clamp, lerp, hrand, noise };
+
+// ---------------- additional countryside primitives ----------------
+/** Javanese water buffalo (kerbau) wading/walking in the paddy field, with curved horns and optional wooden plow yoke. */
+export function kerbau(g, x, y, s = 1, t = 0, { face = 1, walk = 0.5, plow = false, col = '#4e4844' } = {}) {
+  g.save(); g.translate(x, y); g.scale(face * s, s);
+  const bob = Math.sin(t * 2.8) * 6 * walk;
+  g.fillStyle = 'rgba(35,30,25,0.28)'; g.beginPath(); g.ellipse(-20, 8, 220, 26, 0, 0, TAU); g.fill();
+  g.lineCap = 'round';
+  for (const [lx, ph, dk] of [[-130, 0, 0.3], [-95, 0.5, 0.08], [75, 0.25, 0.3], [110, 0.75, 0.08]]) {
+    const sw = Math.sin((t * 1.2 + ph) * TAU) * 32 * walk;
+    g.strokeStyle = dark(col, dk); g.lineWidth = 34;
+    g.beginPath(); g.moveTo(lx, -135 + bob); g.quadraticCurveTo(lx + sw * 0.4, -65, lx + sw, 0); g.stroke();
+  }
+  g.fillStyle = shadeGrad(g, -200, 180, col, -1, 1.15);
+  g.beginPath(); g.ellipse(-15, -165 + bob, 175, 92, -0.04, 0, TAU); g.fill();
+  g.beginPath(); g.ellipse(95, -210 + bob, 68, 55, 0.25, 0, TAU); g.fill();
+  g.strokeStyle = lit(col, 0.35); g.lineWidth = 14;
+  g.beginPath(); g.moveTo(-165, -215 + bob); g.quadraticCurveTo(-10, -262 + bob, 130, -238 + bob); g.stroke();
+  g.strokeStyle = dark(col, 0.35); g.lineWidth = 12;
+  g.beginPath(); g.moveTo(-182, -175 + bob); g.quadraticCurveTo(-220, -110 + bob, -210 + Math.sin(t * 3.5) * 24, -60 + bob); g.stroke();
+  const nod = Math.sin(t * 2.1) * 0.06;
+  g.save(); g.translate(145, -185 + bob); g.rotate(0.18 + nod);
+  g.fillStyle = col; g.beginPath(); g.ellipse(38, 12, 72, 42, 0.32, 0, TAU); g.fill();
+  g.fillStyle = dark(col, 0.28); g.beginPath(); g.ellipse(90, 34, 28, 22, 0.2, 0, TAU); g.fill();
+  g.strokeStyle = '#d8cdb8'; g.lineWidth = 18;
+  g.beginPath(); g.moveTo(15, -18); g.quadraticCurveTo(-55, -85, -95, -28); g.stroke();
+  g.strokeStyle = '#9e927c'; g.lineWidth = 14;
+  g.beginPath(); g.moveTo(28, -12); g.quadraticCurveTo(65, -75, 105, -24); g.stroke();
+  g.fillStyle = '#18120e'; g.beginPath(); g.arc(48, 2, 7, 0, TAU); g.fill();
+  g.restore();
+  if (plow) {
+    g.strokeStyle = '#7a522e'; g.lineWidth = 16;
+    g.beginPath(); g.moveTo(115, -235 + bob); g.lineTo(105, -135 + bob); g.stroke();
+    g.lineWidth = 14;
+    g.beginPath(); g.moveTo(110, -195 + bob); g.lineTo(-310, -25); g.stroke();
+    g.beginPath(); g.moveTo(-290, -25); g.lineTo(-330, -145); g.stroke();
+  }
+  g.restore();
+}
+/** White paddy heron (burung kuntul / blekok sawah), either flying or standing in the terrace. */
+export function blekok(g, x, y, s = 1, t = 0, { fly = true, seed = 1 } = {}) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  if (fly) {
+    const w = Math.sin(t * 7 + seed * 2.1) * 42;
+    g.strokeStyle = '#fffdf6'; g.lineWidth = 12; g.lineCap = 'round';
+    g.beginPath(); g.moveTo(-65, w); g.quadraticCurveTo(-22, -18 + w * 0.3, 0, 0); g.quadraticCurveTo(22, -18 + w * 0.3, 65, w); g.stroke();
+    g.fillStyle = '#f7f2e4'; g.beginPath(); g.ellipse(0, 2, 24, 10, -0.1, 0, TAU); g.fill();
+    g.strokeStyle = '#e8b84a'; g.lineWidth = 5; g.beginPath(); g.moveTo(22, -2); g.lineTo(42, -4); g.stroke();
+  } else {
+    g.strokeStyle = '#c89e3a'; g.lineWidth = 5;
+    g.beginPath(); g.moveTo(-4, -40); g.lineTo(-6, 0); g.moveTo(6, -40); g.lineTo(10, 0); g.stroke();
+    g.fillStyle = '#fffdf6'; g.beginPath(); g.ellipse(0, -52, 28, 16, -0.25, 0, TAU); g.fill();
+    g.strokeStyle = '#fffdf6'; g.lineWidth = 10; g.lineCap = 'round';
+    const neck = Math.sin(t * 1.8 + seed) * 6;
+    g.beginPath(); g.moveTo(18, -58); g.quadraticCurveTo(32, -88, 22 + neck, -112); g.stroke();
+    g.strokeStyle = '#e6ad32'; g.lineWidth = 6;
+    g.beginPath(); g.moveTo(24 + neck, -112); g.lineTo(48 + neck, -106); g.stroke();
+  }
+  g.restore();
+}
+/** Shimmering impressionist village river / irrigation stream cutting across the countryside. */
+export function sungai(g, t, { y0 = 1150, y1 = 1950, xTop = 440, xBot = 620, wTop = 140, wBot = 560, sky = '#bcd8e8', gold = '#ffe6a8' } = {}) {
+  const steps = 20, L = [], R = [];
+  for (let i = 0; i <= steps; i++) {
+    const u = i / steps, y = lerp(y0, y1, u);
+    const cx = lerp(xTop, xBot, u) + Math.sin(u * 4.5 + 0.8) * (60 + u * 90);
+    const hw = lerp(wTop, wBot, Math.pow(u, 1.25)) * 0.5;
+    L.push([cx - hw, y]); R.push([cx + hw, y]);
+  }
+  g.fillStyle = '#6a5838';
+  g.beginPath(); L.forEach(([x, y], i) => (i ? g.lineTo(x - 28, y) : g.moveTo(x - 28, y)));
+  for (let i = steps; i >= 0; i--) g.lineTo(R[i][0] + 28, R[i][1]);
+  g.closePath(); g.fill();
+  g.fillStyle = vGrad(g, y0, y1, [lit(sky, 0.3), sky, '#6a9ab0']);
+  g.beginPath(); L.forEach(([x, y], i) => (i ? g.lineTo(x, y) : g.moveTo(x, y)));
+  for (let i = steps; i >= 0; i--) g.lineTo(R[i][0], R[i][1]);
+  g.closePath(); g.fill();
+  const r = mulberry32(19);
+  for (let i = 0; i < 48; i++) {
+    const u = r(), y = lerp(y0, y1, u);
+    const cx = lerp(xTop, xBot, u) + Math.sin(u * 4.5 + 0.8) * (60 + u * 90);
+    const hw = lerp(wTop, wBot, Math.pow(u, 1.25)) * 0.42;
+    const wx = cx + (r() - 0.5) * hw * 2 + Math.sin(t * 2.2 + i) * 10;
+    const dw = 22 + u * 48;
+    g.fillStyle = i % 3 === 0 ? gold : '#fffdf4';
+    g.fillRect(wx - dw / 2, y, dw, 5 + u * 7);
+  }
+}
+/** Traditional wooden rice-pounding trough (lesung kayu). */
+export function lesung(g, x, y, s = 1) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  g.fillStyle = 'rgba(30,22,14,0.35)'; g.beginPath(); g.ellipse(0, 12, 260, 28, 0, 0, TAU); g.fill();
+  g.fillStyle = vGrad(g, -110, 10, ['#9c6e44', '#6e4a2a', '#4a301a']);
+  poly(g, [[-240, -95], [240, -95], [205, 8], [-205, 8]]);
+  g.fillStyle = '#3a2210'; g.beginPath(); g.ellipse(0, -95, 195, 22, 0, 0, TAU); g.fill();
+  g.fillStyle = PAL.gold; g.beginPath(); g.ellipse(0, -92, 155, 15, 0, 0, TAU); g.fill();
+  g.restore();
+}
+/** Ceremonial cone of yellow tumpeng rice on banana leaves with side dishes (for Wiwitan / Sedekah Bumi). */
+export function tumpeng(g, x, y, s = 1, t = 0) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  g.fillStyle = 'rgba(30,22,12,0.3)'; g.beginPath(); g.ellipse(0, 35, 250, 42, 0, 0, TAU); g.fill();
+  g.fillStyle = '#b88c52'; g.beginPath(); g.ellipse(0, 18, 235, 38, 0, 0, TAU); g.fill();
+  g.fillStyle = '#4e8a38'; g.beginPath(); g.ellipse(0, 10, 205, 30, 0, 0, TAU); g.fill();
+  const dishes = [['#c85228', -125, 8], ['#e6edf2', -65, 18], ['#b56e2c', 0, 22], ['#6fa83a', 70, 16], ['#d94a38', 130, 6]];
+  for (const [col, dx, dy] of dishes) { g.fillStyle = col; g.beginPath(); g.ellipse(dx, dy, 34, 16, 0, 0, TAU); g.fill(); }
+  g.fillStyle = shadeGrad(g, -120, 120, '#f2c438', -1, 1.15);
+  g.beginPath(); g.moveTo(-115, 6); g.lineTo(0, -225); g.lineTo(115, 6); g.quadraticCurveTo(0, 24, -115, 6); g.fill();
+  g.fillStyle = '#3d752a'; g.beginPath(); g.moveTo(-26, -180); g.lineTo(0, -235); g.lineTo(26, -180); g.closePath(); g.fill();
+  g.fillStyle = '#d93224'; g.beginPath(); g.ellipse(0, -242, 8, 18, 0.15, 0, TAU); g.fill();
+  g.strokeStyle = 'rgba(255,250,235,0.5)'; g.lineWidth = 14; g.lineCap = 'round';
+  for (let k = -1; k <= 1; k++) {
+    const sx = k * 55, ph = t * 1.5 + k;
+    g.beginPath(); g.moveTo(sx, -160); g.quadraticCurveTo(sx + Math.sin(ph) * 28, -240, sx - Math.sin(ph) * 24, -310); g.stroke();
+  }
+  g.restore();
+}

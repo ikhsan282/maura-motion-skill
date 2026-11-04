@@ -1,54 +1,50 @@
+# Boneka Rajut (Amigurumi Stop-Motion & Diorama Kain Flanel — Fabel Anak)
+
+Gaya **boneka rajut *amigurumi* dan diorama kain flanel (*felt craft*)** dengan tekstur simpul benang berbentuk huruf **V** yang diproyeksikan secara 3D ke bola/tabung (`knitEllipsoid`, `knitTube`), mata kancing baju mengilap dengan 4 lubang benang (`buttonSprite`), dan lanskap bukit kain flanel berjahit jelujur di tepinya (`feltSprite`, `runStitch`).
+
+Cocok untuk: **dongeng fabel hewan Nusantara, cerita anak dengan pesan moral, edukasi PAUD/SD yang hangat dan taktil**.
+
 ---
-id: boneka-rajut
-name: Boneka Rajut
-no: 6
-source: drive:06_Boneka_Rajut (tidak bisa diunduh; dibuat dari nama + referensi amigurumi)
-family: craft
-tech: canvas2d
-music: musicbox   voice: id-f   captions: kids (anim 'rise')
-best_for: dongeng anak, fabel, cerita moral, lagu anak, edukasi balita, kisah persahabatan, konten parenting
+
+## Ciri Visual
+
+1. **Rajutan Benang 3D Prosedural (`knitEllipsoid`, `knitTube`)**: Bukan sekadar lingkaran datar — setiap kepala, badan, tempurung, dan lengan boneka dirajut dari ratusan simpul V benang wol mengikuti lengkungan permukaan elipsoid dengan pencahayaan lembut dan serabut wol tipis di tepi siluetnya (*halo fuzz*).
+2. **Diorama Kain Flanel Berlapis (`hillLayer`, `feltSprite`, `river`)**: Langit, awan, matahari, sungai, dan bukit-bukit dibuat dari potongan kain flanel bertekstur serat wol dengan jahitan benang putus-putus (*running stitch*) di sekeliling tepinya dan bayangan lipatan kain di bawahnya.
+3. **Mata Kancing & Ekspresi Sulaman Benang (`buttonSprite`, `thread`)**: Mata karakter adalah kancing bulat berbingkai dengan lubang benang silang; alis dan mulut disulam dengan benang tebal yang berubah sesuai emosi (`smile`, `grin`, `ouch`, `frown`, `sly`, `chew`) serta sinkron dengan suara (`talk`).
+4. **Label & Papan Kain Flanel (`patch`, `signpost`, `banner`, `tag`)**: Semua teks di layar ditulis dengan font bulat (`Fredoka`) di atas potongan kain flanel berjahit tepi, baik ditancapkan di tanah (`signpost`), digantung dengan tali benang dari atas layar (`banner`), maupun muncul di dekat karakter (`patch`).
+
 ---
-# Boneka Rajut
 
-**Ciri khas (look):** dunia boneka amigurumi di atas diorama kain flanel. Setiap bagian tubuh adalah rajutan
-"V" (stockinette) yang ditata di atas elipsoid/tabung, disinari dari kiri atas, dengan bulu benang halus di tepi.
-Mata kancing hitam mengilap dengan benang silang, mulut dan alis berupa sulaman (backstitch), pipi merah muda.
-Latar: langit flanel #bfe4ef→#e9f5ee, bukit #b9dc8e / #8fc767, padang #7cb957 dengan jahitan jelujur krem,
-bunga sulam, pohon lolipop flanel. Monyet #8d5a3a + krem #f2cc9c, kura-kura #93cf63 dengan cangkang #3f9150
-bermotif petak rajutan. Teks: Fredoka di tempelan flanel dengan huruf "satin stitch" dan tepi jelujur.
+## Apa Saja yang Ada di `kit.js`
 
-**Gerak (motion):** boneka bergoyang seperti dipegang tangan (rock + bob), melompat dengan squash, lengan
-berputar di bahu, kepala menoleh (fitur wajah bergeser di atas kepala), ekspresi berganti lewat mulut/alis
-sulaman (senyum, O, cemberut, licik, "aduh", mata X). Benda flanel muncul dengan pop (outBack) seakan baru
-ditempel. Animasi on twos (hold 2) = rasa stop-motion. Tiap potongan adegan: kilasan krem lembut.
+Import `* as K from '../kit.js'` (dari dalam `styles/boneka-rajut/demoN/scene.js`):
 
-**Kenapa menarik:** material terasa bisa diraba (benang, kancing, flanel), lucu dan aman untuk anak,
-ekspresi kancing+sulaman langsung terbaca di HP, palet cerah tapi lembut.
+- **Karakter Boneka Rajut (*Amigurumi Cast*)**:
+  - `K.monkey(ctx, o)` — Monyet rajut cokelat lengkap dengan ekor melengkung, tangan/kaki artikulasi (`armL`, `armR`, `legL`, `legR`), perut yang bisa menggembung (`belly`), dan plester luka (`bandage`).
+  - `K.turtle(ctx, o)` — Kura-kura rajut hijau dengan tempurung bermotif heksagonal benang gelap, leher yang bisa menjulur (`neck`), langkah kaki (`walk`), dan pose terbalik (`flip`).
+  - `K.kancil(ctx, o)` — Si Kancil rajut cokelat kayu manis dengan dada krem, telinga panjang tegak, kuku mungil, serta mahkota kain flanel opsional (`crown`).
+  - `K.crocodile(ctx, o)` — Buaya rajut hijau zamrud dengan sisik punggung kain flanel, rahang atas-bawah yang bisa menganga (`open`, `talk`) memperlihatkan gigi flanel putih, serta lencana nomor (`badge`).
+  - `K.rabbit(ctx, o)` — Kelinci rajut putih-merah muda dengan telinga panjang (`earDroop`), ekor pom-pom benang, dan pose berlari atau tertidur (`eyes: 'closed'`).
+- **Properti & Tanaman Rajut/Flanel**:
+  - `K.bananaTree(ctx, x, y, opts)`, `K.plantPiece(ctx, which, opts)`, `K.bananaBunch(ctx, x, y, opts)`, `K.banana(ctx, x, y, opts)`, `K.peel(ctx, x, y, opts)`
+  - `K.appleTree(ctx, x, y, { s, t, apples })` — Pohon apel flanel & rajut dengan buah apel merah rajut.
+  - `K.carrot(ctx, x, y, { rot, s })` — Wortel rajut oranye dengan daun benang hijau.
+  - `K.thorns(ctx, x, y, opts)`, `K.mound(ctx, x, y, opts)`, `K.scissors(ctx, x, y, opts)`
+  - `K.heart(ctx, x, y, opts)`, `K.star(ctx, x, y, opts)`, `K.drop(ctx, x, y, opts)`, `K.plaster(ctx, x, y, a)`
+- **Dunia Diorama, Kamera & Tipografi Kain**:
+  - `K.cam(ctx, c, depth)`, `K.sky(ctx, { sunset })`, `K.sun(ctx, x, y, opts)`, `K.cloud(ctx, x, y, opts)`
+  - `K.hillLayer(key, opts)`, `K.drawLayer(ctx, L, y)`, `K.river(ctx, y, h, t, opts)`
+  - `K.patch(ctx, text, x, y, opts)`, `K.tag(ctx, text, x, y, opts)`, `K.signpost(ctx, text, x, y, opts)`, `K.banner(ctx, text, x, y, opts)`, `K.finish(ctx, t, { flash })`.
 
-**Cerita yang cocok:**
-- Kura-kura dan Monyet: "Monyet memilih bagian atas pohon pisang. Pilihan yang ia sesali."
-- Kancil dan Buaya: "Seekor kancil menghitung buaya... untuk menyeberang sungai."
-- Semut dan Belalang: "Belalang bernyanyi sepanjang musim panas. Musim hujan datang."
-- Bawang Merah Bawang Putih: "Labu kecil itu berisi emas. Labu besar berisi ular."
-- Timun Mas: "Ia hanya punya empat bungkusan kecil untuk melawan raksasa."
-- Edukasi: kenapa gigi harus disikat, dari mana datangnya hujan.
+---
 
-**Rumus hook:** "[Tokoh] memilih [X]. Pilihan yang ia sesali." / "[Tokoh kecil] punya rencana. [Tokoh besar] tidak
-tahu." / "Ini kisah [hewan] yang [kebiasaan buruk]... sampai suatu hari."
+## Koleksi Demo (`demo1`, `demo2`, `demo3`)
 
-**Kit API (`styles/boneka-rajut/kit.js`):**
-- `knitEllipsoid(key, {rx, ry, color, sw, colorAt, flat, clip, fuzz})`, `knitTube(key, {pts, r0, r1, color, sw, colorAt, caps})` → sprite rajutan (cached); `smooth(pts)` menghaluskan jalur.
-- `stamp(ctx, spr, x, y, {rot, sx, sy, alpha})` menempel sprite.
-- `feltTile()`, `feltFill(g, pathFn, color)`, `feltSprite(key, {w, h, path, color, stitch, inset, extra})`: flanel + bayangan + jelujur.
-- `runStitch(g, pathFn, {color, len, gap, w, offset})`, `thread(ctx, pts|pathFn, {color, w})`, `yarn(g, pts, {w, color})`.
-- `buttonSprite(r, color, holes)`, `contactShadow(ctx, x, y, w, a)`, `heart`, `star`, `drop`, `plaster`.
-- `patch(ctx, text, x, y, {size, fill, ink, shape:'round'|'burst', s, rot})`, `tag`, `signpost`, `banner` (judul tergantung benang).
-- `monkey(ctx, o)`, `turtle(ctx, o)`: o = {x, y, s, t, look, tilt, hop, squash, mood, eyes, brows, talk, armL/armR, legL/legR, sit, belly, bandage, walk, neck, face} → posisi tangan/kepala.
-- Properti: `banana`, `peel`, `plantPiece(ctx, 'top'|'bottom'|'full', {...wilt, seam})`, `bananaTree(ctx, x, y, {grow, bunch, wilt})`, `bananaBunch`, `thorns`, `mound`, `scissors`.
-- Dunia: `cam(ctx, c, depth)` (paralaks), `sky(ctx, {sunset})`, `sun`, `cloud`, `hillLayer(key, {amp, color, flowers, trees})` + `drawLayer`, `river(ctx, y, h, t)`.
-- Tokoh baru: rakit dari `knitEllipsoid`/`knitTube` + `buttonSprite` + `face()` (lihat `MK`/`TK`).
+Semua demo menggunakan narator Bahasa Indonesia (`el-id-m`, George — ElevenLabs) dengan rentang durasi 30–90 detik:
 
-**Demo:** "Kura-kura dan Monyet Menanam Pisang", 19,5 detik, 6 shot. Monyet mengangkat pucuk pisang yang
-langsung layu → kura-kura dapat batang dan akar → pucuk monyet layu, batang kura-kura tumbuh dan berbuah →
-monyet memanjat dan makan semua, kulit pisang menimpa kura-kura → kura-kura diam-diam menaruh duri →
-monyet melompat turun: "ADUH!" dengan bintang berputar.
+1. **`demo1/` — Kura-kura dan Monyet Menanam Pisang** (6 beat):
+   - Kura-kura dan Monyet membagi batang pohon pisang yang hanyut; Monyet serakah mengambil pucuk daun yang akhirnya layu, sedangkan Kura-kura merawat bonggol berakar hingga berbuah lebat dan memberi pelajaran pada Monyet yang menghabiskan pisangnya di atas pohon.
+2. **`demo2/` — Kancil dan Barisan Buaya Sungai** (10 beat):
+   - Si Kancil yang lapar ingin menyeberangi sungai deras menuju pohon apel merah; dengan akal cerdiknya ia mengumumkan undangan pesta Raja Hutan sehingga kawanan Buaya berbaris membentuk jembatan hidup untuk dihitung satu sampai enam hingga Kancil tiba di seberang.
+3. **`demo3/` — Balap Lari Kelinci Sombong dan Kura-kura** (10 beat):
+   - Kelinci putih yang sombong menertawakan langkah lambat Kura-kura lalu beradu lari dengan Monyet sebagai wasit; karena merasa unggul jauh, Kelinci berhenti makan wortel dan tertidur pulas di bawah pohon rindang hingga Kura-kura yang tekun berhasil menyusul dan memenangkan lomba.

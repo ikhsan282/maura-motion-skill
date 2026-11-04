@@ -1,0 +1,60 @@
+{
+ "title": "Fajar Seorang Petani & Sepiring Nasi",
+ "slug": "03_lukis-pedesaan_demo2",
+ "style": "lukis-pedesaan",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "folk",
+  "db": -16
+ },
+ "lead": 0.35,
+ "tail": 1.2,
+ "pause": 0.25,
+ "speed": 1.12,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Sebelum matahari terbit dan kota terbangun, sepasang kaki tua sudah melangkah menembus dinginnya kabut sawah pedesaan.",
+   "pause": 0.3
+  },
+  {
+   "id": "bajak",
+   "text": "Bersama kerbau setianya, Pak Tani membajak lumpur berair yang memantulkan warna langit fajar keemasan di lereng gunung."
+  },
+  {
+   "id": "tanam",
+   "text": "Satu demi satu bibit padi hijau ditancapkan dengan punggung membungkuk, menitipkan harapan hidup pada tanah dan hujan."
+  },
+  {
+   "id": "rawat",
+   "text": "Berbulan-bulan ia menjaga petak sawahnya dari terik siang hingga senja, ditemani burung kuntul putih yang beterbangan."
+  },
+  {
+   "id": "hama",
+   "text": "Saat angin kencang dan hama datang mengancam, ia berteduh di dangau bambu sambil berdoa agar bulir padinya selamat."
+  },
+  {
+   "id": "menguning",
+   "text": "Hingga akhirnya keajaiban waktu tiba: hamparan lembah hijau perlahan berubah menjadi lautan emas yang merunduk bernas!"
+  },
+  {
+   "id": "panen",
+   "text": "Di pagi panen raya, para petani desa turun bersama-sama memotong tangkai padi dengan senyum syukur yang hangat."
+  },
+  {
+   "id": "lesung",
+   "text": "Irama alu yang menumbuk gabah di lesung kayu menggema di halaman kampung, menyatu dengan tawa anak-anak desa."
+  },
+  {
+   "id": "perjalanan",
+   "text": "Perjalanan panjang selama seratus hari di bawah terik matahari itu bermuara pada sebutir beras putih yang bersih."
+  },
+  {
+   "id": "akhir",
+   "text": "Maka setiap kali kamu menyendok nasi hangat di piringmu, ingatlah ada keringat dan doa petani di setiap butirnya."
+  }
+ ]
+}
+

@@ -932,3 +932,254 @@ export function finish(ctx, t, { flash = 0 } = {}) {
 }
 
 export { ease, clamp, lerp, hrand };
+
+// ---------------------------------------------------------------- extra amigurumi cast & props (demo2 & demo3)
+const KC = () => ({
+  head: knitEllipsoid('kc-head', { rx: 94, ry: 84, color: '#c47c3c', sw: 19 }),
+  muzzle: knitEllipsoid('kc-muz', { rx: 56, ry: 40, color: '#f3e1c3', sw: 15, fuzz: 0.45 }),
+  ear: knitEllipsoid('kc-ear', { rx: 28, ry: 62, color: '#b56c2d', sw: 15, flat: 0.3 }),
+  earIn: knitEllipsoid('kc-earin', { rx: 15, ry: 42, color: '#f2b8b2', sw: 12, flat: 0.45 }),
+  body: knitEllipsoid('kc-body', { rx: 82, ry: 96, color: '#c47c3c', sw: 20 }),
+  belly: knitEllipsoid('kc-belly', { rx: 52, ry: 66, color: '#f5e6cc', sw: 15, flat: 0.45 }),
+  arm: knitTube('kc-arm', { pts: [[0, 0], [2, 46], [0, 96]], r0: 18, r1: 15, color: '#c47c3c', sw: 15 }),
+  hoof: knitEllipsoid('kc-hoof', { rx: 19, ry: 16, color: '#4a3222', sw: 11 }),
+  leg: knitTube('kc-leg', { pts: [[0, 0], [0, 68]], r0: 20, r1: 17, color: '#c47c3c', sw: 16 }),
+  tail: knitEllipsoid('kc-tail', { rx: 22, ry: 28, color: '#b56c2d', sw: 13 }),
+});
+
+/**
+ * Knitted Kancil (mouse deer) amigurumi.
+ * o: { x, y, s, t, face, look, tilt, hop, squash, mood, eyes, brows, talk, walk, armL, armR, crown, seed }
+ */
+export function kancil(ctx, o) {
+  const P = cached('kc-parts', KC);
+  const { x, y, s = 1, t = 0, face: fc = 1, look = 0, tilt = 0, hop = 0, squash = 0, walk = 0, armL = 0.25, armR = 0.25, wob = 1, headTilt = 0, crown = 0, seed = 2 } = o;
+  const rock = (Math.sin(t * 2.4 + seed) * 0.035) * wob + tilt;
+  const step = walk ? Math.sin(t * walk) : 0;
+  const bob = Math.abs(step) * 7 + Math.abs(Math.sin(t * 2.2 + seed)) * 3.5 * wob;
+  const out = {};
+  const M0i = ctx.getTransform().invertSelf();
+  ctx.save();
+  ctx.translate(x, y - hop * s); ctx.scale(s * fc, s); ctx.rotate(rock);
+  ctx.scale(1 + squash * 0.12, 1 - squash * 0.12);
+  ctx.translate(0, -bob);
+  const W = (lx, ly) => { const p = M0i.transformPoint(ctx.getTransform().transformPoint(new DOMPoint(lx, ly))); return [p.x, p.y]; };
+  // tail
+  stamp(ctx, P.tail, -66, -110, { rot: -0.35 + Math.sin(t * 3 + seed) * 0.12 });
+  // legs
+  const legY = -74;
+  for (const [sd, ph] of [[-1, 0], [1, Math.PI]]) {
+    const ang = walk ? Math.sin(t * walk + ph) * 0.42 : 0;
+    stamp(ctx, P.leg, sd * 36, legY, { rot: ang });
+    const fx = sd * 36 - Math.sin(ang) * 70, fy = legY + Math.cos(ang) * 70;
+    stamp(ctx, P.hoof, fx + sd * 4, fy + 2, { rot: ang * 0.4 });
+  }
+  // body + cream chest
+  const by = -156;
+  stamp(ctx, P.body, 0, by);
+  stamp(ctx, P.belly, look * 8, by + 10);
+  // arms
+  for (const [sd, a] of [[-1, armL], [1, armR]]) {
+    const sx = sd * 68, sy = by - 48, ang = sd * -a;
+    stamp(ctx, P.arm, sx, sy, { rot: ang });
+    const hx = sx - Math.sin(ang) * 100, hy = sy + Math.cos(ang) * 100;
+    stamp(ctx, P.hoof, hx, hy);
+    out[sd < 0 ? 'handL' : 'handR'] = W(hx, hy);
+  }
+  // head + long upright deer ears
+  const hy0 = by - 156;
+  ctx.save(); ctx.translate(0, hy0); ctx.rotate(headTilt);
+  for (const sd of [-1, 1]) {
+    const ex = sd * 64, ey = -78, erot = sd * 0.38 + Math.sin(t * 2.6 + sd) * 0.06;
+    stamp(ctx, P.ear, ex, ey, { rot: erot });
+    stamp(ctx, P.earIn, ex, ey + 4, { rot: erot });
+  }
+  stamp(ctx, P.head, 0, 0);
+  const fx = look * 24;
+  stamp(ctx, P.muzzle, fx * 1.1, 30);
+  // dark nose button
+  stamp(ctx, buttonSprite(10, '#2a1c16', 2, '#f5e6cc'), fx * 1.15, 12);
+  if (fc < 0) ctx.scale(-1, 1);
+  face(ctx, { ...o, eyeGap: 34, eyeY: -12, mouthY: 36, eyeR: 16 }, (fc < 0 ? -fx : fx) * 0.9, 0, 0.95, 0);
+  if (crown > 0) {
+    const cr = feltSprite('kc-crown', { w: 110, h: 58, color: PAL.sun, stitch: '#c87a18', inset: 6, stitchLen: 5, stitchGap: 4, ox: 55, oy: 50,
+      path: (g, i) => { g.beginPath(); g.moveTo(10 + i, 52 - i); g.lineTo(6 + i, 12 + i); g.lineTo(32, 32); g.lineTo(55, 6 + i); g.lineTo(78, 32); g.lineTo(104 - i, 12 + i); g.lineTo(100 - i, 52 - i); g.closePath(); } });
+    stamp(ctx, cr, 0, -78, { sx: crown });
+  }
+  out.head = W(0, 0); out.top = W(0, -110);
+  ctx.restore();
+  ctx.restore();
+  return out;
+}
+
+const CR = () => ({
+  body: knitEllipsoid('cr-body', { rx: 145, ry: 62, color: '#3b8c52', sw: 20 }),
+  snoutU: knitEllipsoid('cr-snu', { rx: 110, ry: 38, color: '#459c5d', sw: 18 }),
+  snoutL: knitEllipsoid('cr-snl', { rx: 98, ry: 26, color: '#9ed18b', sw: 16 }),
+  headBump: knitEllipsoid('cr-bump', { rx: 48, ry: 36, color: '#3b8c52', sw: 16 }),
+  tail: knitTube('cr-tail', { pts: [[0, 0], [-65, 6], [-125, -8]], r0: 34, r1: 10, color: '#3b8c52', sw: 17 }),
+  leg: knitEllipsoid('cr-leg', { rx: 28, ry: 22, color: '#2e7341', sw: 14 }),
+  scutes: feltSprite('cr-scutes', { w: 220, h: 46, color: '#286639', stitch: '#9ed18b', inset: 4, stitchLen: 5, stitchGap: 4, ox: 110, oy: 40,
+    path: (g) => { g.beginPath(); g.moveTo(10, 42); for (let k = 0; k < 5; k++) { g.lineTo(22 + k * 40, 8); g.lineTo(42 + k * 40, 42); } g.closePath(); } }),
+});
+
+/**
+ * Knitted Crocodile (Buaya) in water or on bank (facing right by default; face=-1 mirrors).
+ * o: { x, y, s, t, face, open (0..1 jaw open), talk, badge (number string), submerge (0..1), mood, seed }
+ */
+export function crocodile(ctx, o) {
+  const P = cached('cr-parts', CR);
+  const { x, y, s = 1, t = 0, face: fc = 1, open = 0, talk = 0, badge = null, submerge = 0, wob = 1, seed = 3 } = o;
+  const jaw = clamp(open + (talk > 0 ? talk * (0.35 + 0.35 * Math.sin(t * 16 + seed)) : 0));
+  const bob = Math.sin(t * 2.1 + seed) * 5 * wob + submerge * 38;
+  const out = {};
+  const M0i = ctx.getTransform().invertSelf();
+  ctx.save();
+  ctx.translate(x, y + bob * s); ctx.scale(s * fc, s); ctx.rotate(Math.sin(t * 1.6 + seed) * 0.025 * wob);
+  const W = (lx, ly) => { const p = M0i.transformPoint(ctx.getTransform().transformPoint(new DOMPoint(lx, ly))); return [p.x, p.y]; };
+  // tail + dorsal scutes + body
+  stamp(ctx, P.tail, -130, -18, { rot: Math.sin(t * 2.5 + seed) * 0.08 });
+  stamp(ctx, P.scutes, -18, -56);
+  stamp(ctx, P.body, 0, -24);
+  if (submerge < 0.5) {
+    stamp(ctx, P.leg, -70, 12);
+    stamp(ctx, P.leg, 60, 12);
+  }
+  // lower jaw
+  ctx.save(); ctx.translate(105, -14); ctx.rotate(jaw * 0.32);
+  stamp(ctx, P.snoutL, 48, 8);
+  ctx.restore();
+  // upper jaw + teeth
+  ctx.save(); ctx.translate(105, -28); ctx.rotate(-jaw * 0.42);
+  if (jaw > 0.05) {
+    ctx.fillStyle = PAL.cream;
+    for (let k = 0; k < 5; k++) {
+      const tx = 18 + k * 24;
+      ctx.beginPath(); ctx.moveTo(tx - 6, 12); ctx.lineTo(tx, 26); ctx.lineTo(tx + 6, 12); ctx.closePath(); ctx.fill();
+    }
+  }
+  stamp(ctx, P.snoutU, 52, -8);
+  // nostril bump
+  stamp(ctx, buttonSprite(8, '#1e4d2b', 2, '#9ed18b'), 132, -22);
+  stamp(ctx, P.headBump, -8, -36);
+  stamp(ctx, buttonSprite(15, '#f2c138', 2, '#1f1b1d'), -4, -38);
+  ctx.restore();
+  out.back = W(15, -76);
+  out.head = W(100, -78);
+  ctx.restore();
+  if (badge !== null) {
+    const bp = out.head;
+    patch(ctx, String(badge), bp[0], bp[1] - 46 * s, { size: 40, fill: PAL.sun, ink: PAL.ink, s });
+  }
+  return out;
+}
+
+const RB = () => ({
+  head: knitEllipsoid('rb-head', { rx: 98, ry: 88, color: '#f7f3eb', sw: 19 }),
+  cheek: knitEllipsoid('rb-cheek', { rx: 44, ry: 34, color: '#fffaf2', sw: 15, fuzz: 0.5 }),
+  ear: knitEllipsoid('rb-ear', { rx: 28, ry: 86, color: '#f7f3eb', sw: 16, flat: 0.3 }),
+  earIn: knitEllipsoid('rb-earin', { rx: 15, ry: 62, color: '#f4b2b0', sw: 13, flat: 0.45 }),
+  body: knitEllipsoid('rb-body', { rx: 86, ry: 98, color: '#f7f3eb', sw: 20 }),
+  belly: knitEllipsoid('rb-belly', { rx: 54, ry: 66, color: '#f4b2b0', sw: 15, flat: 0.45 }),
+  arm: knitTube('rb-arm', { pts: [[0, 0], [2, 46], [0, 94]], r0: 19, r1: 16, color: '#f7f3eb', sw: 16 }),
+  paw: knitEllipsoid('rb-paw', { rx: 22, ry: 20, color: '#fffaf2', sw: 13 }),
+  leg: knitTube('rb-leg', { pts: [[0, 0], [0, 60]], r0: 22, r1: 20, color: '#f7f3eb', sw: 16 }),
+  foot: knitEllipsoid('rb-foot', { rx: 36, ry: 20, color: '#fffaf2', sw: 14 }),
+  tail: knitEllipsoid('rb-tail', { rx: 32, ry: 30, color: '#ffffff', sw: 14, fuzz: 0.7 }),
+});
+
+/**
+ * Knitted Rabbit (Kelinci) amigurumi.
+ * o: { x, y, s, t, face, look, tilt, hop, squash, mood, eyes, brows, talk, walk, armL, armR, earDroop, seed }
+ */
+export function rabbit(ctx, o) {
+  const P = cached('rb-parts', RB);
+  const { x, y, s = 1, t = 0, face: fc = 1, look = 0, tilt = 0, hop = 0, squash = 0, walk = 0, armL = 0.25, armR = 0.25, earDroop = 0, wob = 1, headTilt = 0, seed = 4 } = o;
+  const rock = (Math.sin(t * 2.5 + seed) * 0.035) * wob + tilt;
+  const step = walk ? Math.sin(t * walk) : 0;
+  const bob = Math.abs(step) * 8 + Math.abs(Math.sin(t * 2.2 + seed)) * 3.5 * wob;
+  const out = {};
+  const M0i = ctx.getTransform().invertSelf();
+  ctx.save();
+  ctx.translate(x, y - hop * s); ctx.scale(s * fc, s); ctx.rotate(rock);
+  ctx.scale(1 + squash * 0.12, 1 - squash * 0.12);
+  ctx.translate(0, -bob);
+  const W = (lx, ly) => { const p = M0i.transformPoint(ctx.getTransform().transformPoint(new DOMPoint(lx, ly))); return [p.x, p.y]; };
+  // fluffy cotton tail
+  stamp(ctx, P.tail, -68, -96);
+  // legs
+  const legY = -72;
+  for (const [sd, ph] of [[-1, 0], [1, Math.PI]]) {
+    const ang = walk ? Math.sin(t * walk + ph) * 0.48 : 0;
+    stamp(ctx, P.leg, sd * 38, legY, { rot: ang });
+    const fx = sd * 38 - Math.sin(ang) * 62, fy = legY + Math.cos(ang) * 62;
+    stamp(ctx, P.foot, fx + sd * 6, fy + 2, { rot: ang * 0.4 });
+  }
+  // body + pink belly
+  const by = -152;
+  stamp(ctx, P.body, 0, by);
+  stamp(ctx, P.belly, look * 8, by + 12);
+  // arms
+  for (const [sd, a] of [[-1, armL], [1, armR]]) {
+    const sx = sd * 70, sy = by - 46, ang = sd * -a;
+    stamp(ctx, P.arm, sx, sy, { rot: ang });
+    const hx = sx - Math.sin(ang) * 98, hy = sy + Math.cos(ang) * 98;
+    stamp(ctx, P.paw, hx, hy);
+    out[sd < 0 ? 'handL' : 'handR'] = W(hx, hy);
+  }
+  // head + long bunny ears
+  const hy0 = by - 160;
+  ctx.save(); ctx.translate(0, hy0); ctx.rotate(headTilt);
+  for (const sd of [-1, 1]) {
+    const ex = sd * 44, ey = -96, erot = sd * (0.18 + earDroop * 0.65) + Math.sin(t * 2.8 + sd) * 0.08;
+    stamp(ctx, P.ear, ex, ey, { rot: erot });
+    stamp(ctx, P.earIn, ex, ey + 6, { rot: erot });
+  }
+  stamp(ctx, P.head, 0, 0);
+  const fx = look * 24;
+  stamp(ctx, P.cheek, fx - 26, 24);
+  stamp(ctx, P.cheek, fx + 26, 24);
+  stamp(ctx, buttonSprite(10, '#e87a90', 2, '#ffffff'), fx * 1.1, 14);
+  if (fc < 0) ctx.scale(-1, 1);
+  face(ctx, { ...o, eyeGap: 36, eyeY: -12, mouthY: 36, eyeR: 16 }, (fc < 0 ? -fx : fx) * 0.9, 0, 0.95, 0);
+  out.head = W(0, 0); out.top = W(0, -140);
+  ctx.restore();
+  ctx.restore();
+  return out;
+}
+
+/** Lush stitched felt & knitted fruit tree with red knitted apples. */
+export function appleTree(ctx, x, y, { s = 1, t = 0, apples = 6 } = {}) {
+  const trunk = knitTube('ap-trunk', { pts: [[0, 0], [-6, -160], [4, -320]], r0: 36, r1: 26, color: '#8b5e3c', sw: 18 });
+  const canopy = feltSprite('ap-canopy', { w: 420, h: 320, color: '#58a84c', stitch: '#dff3b8', inset: 14, ox: 210, oy: 180,
+    path: (g, i) => {
+      g.beginPath();
+      for (const [bx, by, br] of [[110, 180, 95], [210, 110, 105], [310, 180, 95], [160, 220, 85], [260, 220, 85]]) {
+        g.moveTo(bx + br - i, by); g.arc(bx, by, br - i, 0, TAU);
+      }
+    } });
+  const apple = knitEllipsoid('ap-fruit', { rx: 22, ry: 22, color: PAL.red, sw: 12 });
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  contactShadow(ctx, 0, 0, 140, 0.45);
+  stamp(ctx, trunk, 0, 0);
+  ctx.save(); ctx.translate(0, -320); ctx.rotate(Math.sin(t * 1.6) * 0.025);
+  stamp(ctx, canopy, 0, 0);
+  const coords = [[-95, -10], [-35, -65], [45, -55], [95, -5], [-45, 30], [40, 35]];
+  for (let i = 0; i < Math.min(apples, coords.length); i++) {
+    const [ax, ay] = coords[i];
+    stamp(ctx, apple, ax, ay + Math.sin(t * 2.5 + i) * 3);
+  }
+  ctx.restore();
+  ctx.restore();
+}
+
+/** Knitted carrot prop for the rabbit. */
+export function carrot(ctx, x, y, { rot = 0, s = 1 } = {}) {
+  const body = knitTube('cr-carrot', { pts: [[0, -36], [0, 36]], r0: 20, r1: 6, color: '#f07828', sw: 13 });
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s);
+  yarn(ctx, [[0, -36], [-14, -64]], { w: 7, color: '#58a84c' });
+  yarn(ctx, [[0, -36], [0, -68]], { w: 7, color: '#58a84c' });
+  yarn(ctx, [[0, -36], [14, -64]], { w: 7, color: '#58a84c' });
+  stamp(ctx, body, 0, 0);
+  ctx.restore();
+}

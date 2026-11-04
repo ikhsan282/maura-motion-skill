@@ -1,0 +1,60 @@
+{
+ "title": "Malin Kundang & Kutukan Batu Pantai Air Manis",
+ "slug": "02_kartun-3d-sinematik_demo2",
+ "style": "kartun-3d-sinematik",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "cinematic",
+  "db": -16
+ },
+ "lead": 0.35,
+ "tail": 1.2,
+ "pause": 0.25,
+ "speed": 1.12,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Di tepi Pantai Air Manis Sumatera Barat, terhampar bongkahan batu yang bentuknya persis seperti manusia sedang bersujud!",
+   "pause": 0.3
+  },
+  {
+   "id": "pamit",
+   "text": "Dahulu kala, pemuda miskin bernama Malin Kundang berpamitan pada ibunya, Mande Rubayah, untuk merantau menyeberangi lautan."
+  },
+  {
+   "id": "doa",
+   "text": "Setiap hari di dermaga desa, sang ibu yang renta tak pernah berhenti menatap laut sambil mendoakan keselamatan putranya."
+  },
+  {
+   "id": "kapal",
+   "text": "Bertahun-tahun berlalu, sebuah kapal kayu megah berlayar masuk ke teluk bersama saudagar kaya raya dan istrinya yang jelita."
+  },
+  {
+   "id": "sambut",
+   "text": "Mendengar kabar Malin telah pulang, Mande Rubayah berlari tertatih-tatih memanggil namanya dengan mata berkaca-kaca."
+  },
+  {
+   "id": "peluk",
+   "text": "Namun saat sang ibu hendak memeluknya, Malin justru mundur dengan wajah jijik karena malu melihat pakaian ibunya yang lusuh."
+  },
+  {
+   "id": "tolak",
+   "text": "Di depan istrinya yang angkuh, Malin membentak keras dan mendorong ibunya hingga terjatuh ke atas pasir pantai!"
+  },
+  {
+   "id": "langit",
+   "text": "Hati sang ibu hancur berkeping-keping; ia menengadah ke langit kelam, mengadukan luka batinnya kepada Sang Pencipta."
+  },
+  {
+   "id": "badai",
+   "text": "Seketika langit menghitam pekat, petir menyambar ganas, dan gelombang raksasa menghantam kapal megah Malin hingga terbelah!"
+  },
+  {
+   "id": "batu",
+   "text": "Tubuh Malin Kundang yang bersujud memohon ampun perlahan membeku menjadi batu karang, abadi sebagai pengingat bakti kepada ibu."
+  }
+ ]
+}
+

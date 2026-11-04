@@ -1,0 +1,49 @@
+{
+  "style": "boneka-rajut",
+  "voice": "el-id-m",
+  "fps": 30,
+  "maxDuration": 90,
+  "title": "Balap Lari Kelinci Sombong dan Kura-kura",
+  "beats": [
+    {
+      "id": "sombong",
+      "narration": "Di tepi hutan, hiduplah Kelinci putih yang bangga karena larinya amat cepat. Ia gemar mengejek Kura-kura yang melangkah pelan."
+    },
+    {
+      "id": "tantang",
+      "narration": "Tanpa gentar, Kura-kura yang sabar menantang Kelinci untuk beradu lari sampai ke pohon apel besar di ujung bukit."
+    },
+    {
+      "id": "mulai",
+      "narration": "Monyet menjadi wasit di garis awal. Begitu aba-aba dimulai, Kelinci langsung melesat kencang meninggalkan kepulan debu."
+    },
+    {
+      "id": "pelan",
+      "narration": "Sementara itu, Kura-kura mulai melangkah setapak demi setapak dengan tenang. Tatapan matanya tetap lurus menuju garis akhir."
+    },
+    {
+      "id": "wortel",
+      "narration": "Di tengah jalan, Kelinci menoleh ke belakang dan tak melihat Kura-kura. Ia pun berhenti santai mengunyah wortel segar."
+    },
+    {
+      "id": "tidur",
+      "narration": "Karena perutnya kenyang dan angin berhembus sejuk di bawah pohon rindang, Kelinci yang sombong akhirnya tertidur pulas."
+    },
+    {
+      "id": "lewat",
+      "narration": "Matahari bergulir ke barat. Tanpa berhenti sedikit pun, Kura-kura berhasil menyusul dan melewati Kelinci yang masih lelap."
+    },
+    {
+      "id": "kaget",
+      "narration": "Saat terbangun menjelang sore, Kelinci terkejut melihat Kura-kura sudah hampir menyentuh garis akhir di dekat pohon apel!"
+    },
+    {
+      "id": "menang",
+      "narration": "Kelinci berlari sekuat tenaga, namun terlambat! Kura-kura lebih dulu menembus garis akhir dan disambut sorak gembira oleh Monyet serta Kancil."
+    },
+    {
+      "id": "hikmah",
+      "narration": "Kelinci tertunduk malu dan meminta maaf. Ketekunan yang konsisten akan selalu mengalahkan bakat besar yang malas."
+    }
+  ]
+}

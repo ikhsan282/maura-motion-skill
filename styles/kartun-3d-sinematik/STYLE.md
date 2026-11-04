@@ -5,7 +5,7 @@ no: 2
 source: drive:02_Kartun_3D_Sinematik + github:toon-cel-3d
 family: 3D
 tech: three
-music: cinematic   voice: id-m   captions: bold
+music: cinematic   voice: el-id-m   captions: bold
 best_for: legenda Nusantara, dongeng anak, kisah asal-usul tempat, cerita keluarga, komedi situasi, fabel
 ---
 # Kartun 3D Sinematik
@@ -29,12 +29,11 @@ judul onomatope (DUAKK!, BRUKK!, KUKURUYUUK!), benda besar terlempar lalu jatuh 
 lokal mendapat "kualitas bioskop" — kombinasi yang jarang di feed.
 
 **Cerita yang cocok:**
-- Sangkuriang & Tangkuban Perahu: "Gunung ini sebenarnya perahu yang ditendang hingga terbalik."
-- Malin Kundang: "Batu berbentuk orang bersujud ini... dulunya anak durhaka."
+- Sangkuriang & Tangkuban Perahu (`demo1/`): "Gunung ini sebenarnya perahu yang ditendang hingga terbalik."
+- Malin Kundang & Kutukan Batu Pantai Air Manis (`demo2/`): "Di tepi Pantai Air Manis Sumatera Barat, terhampar bongkahan batu yang bentuknya persis seperti manusia sedang bersujud!"
+- Roro Jonggrang & Seribu Candi Semalam (`demo3/`): "Pernahkah kamu bertanya mengapa kompleks Candi Prambanan yang megah ini disebut legenda Seribu Candi yang kurang satu?"
 - Danau Toba: "Satu janji yang dilanggar menenggelamkan sebuah lembah."
-- Roro Jonggrang: "Seribu candi dalam semalam. Kurang satu."
 - Si Kancil & Buaya: "Kancil menghitung buaya... untuk menyeberang sungai."
-- Asal-usul Banyuwangi: "Air sungai ini konon harum karena sebuah sumpah."
 
 **Rumus hook:** "[Tempat terkenal] ini sebenarnya [benda/kejadian tak terduga]." / "[Tokoh] melakukan [hal
 mustahil] dalam [batas waktu]." / "Satu [kesalahan kecil] mengubah [nasib besar]."
@@ -55,8 +54,7 @@ mustahil] dalam [batas waktu]." / "Satu [kesalahan kecil] mengubah [nasib besar]
 - 2D: `title(ctx, str, x, y, {size, pop, fill, stroke, rot})`, `nameplate(ctx, str, x, y, {sub, pop})`, `pointer()`,
   `dizzy()`, `rings()`, `finish(ctx, AM, t, {flash})`, `use(scene, ...objs)`.
 
-**Demo:** "Sangkuriang & Tangkuban Perahu", 19,8 detik, 6 shot. Gunung berubah jadi perahu, ditendang, jatuh
-terbalik (BRUKK!) → Sangkuriang berlutut melamar, hati beterbangan, lalu wajah kaget Dayang Sumbi "IBUNYA
-SENDIRI!" → ikon 3D danau, perahu, bulan muncul → para jin memalu perahu (PERAHU 98%) → kain ajaib memerahkan
-langit timur, ayam berkokok → Sangkuriang murka menendang perahu, perahu jatuh terbalik menjadi gunung, garis
-titik-titik perahu tergambar di punggung gunung.
+**Demos:**
+- **`demo1/` ("Sangkuriang & Tangkuban Perahu", 6 shot, voice `el-id-m`):** Gunung berubah jadi perahu, ditendang, jatuh terbalik (BRUKK!) → Sangkuriang melamar Dayang Sumbi → syarat danau dan perahu semalam → para jin memalu perahu → kain ajaib memerahkan langit timur, ayam berkokok → Sangkuriang menendang perahu menjadi Gunung Tangkuban Perahu.
+- **`demo2/` ("Malin Kundang & Kutukan Batu Pantai Air Manis", 10 shot, ~55–65 dtk, voice `el-id-m`):** Batu bersujud di Pantai Air Manis → Malin pamit merantau pada Mande Rubayah → doa ibu di dermaga → kapal megah saudagar berlabuh → sambutan ibu yang ditolak dan didorong ke pasir → doa ibu ke langit kelam → badai petir dan ombak menghancurkan kapal → Malin membeku menjadi batu karang.
+- **`demo3/` ("Roro Jonggrang & Seribu Candi Semalam", 10 shot, ~55–65 dtk, voice `el-id-m`):** Kompleks Candi Prambanan yang kurang satu → lamaran Bandung Bondowoso → syarat 1.000 candi dalam semalam → pemanggilan pasukan jin → pembangunan candi menembus kabut hingga 999 candi → Roro Jonggrang menumbuk lesung dan membakar jerami timur → ayam berkokok → jin kabur dan Bandung Bondowoso mengutuk sang putri menjadi arca ke-1.000.

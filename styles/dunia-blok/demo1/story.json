@@ -1,0 +1,29 @@
+{
+  "style": "dunia-blok",
+  "voice": "el-id-m",
+  "fps": 30,
+  "maxDuration": 90,
+  "title": "Membangun Borobudur Blok demi Blok",
+  "beats": [
+    {
+      "id": "pondasi",
+      "narration": "Bagaimana membangun Candi Borobudur yang megah? Lebih dari seribu dua ratus tahun lalu di lembah Jawa Tengah, bukit diratakan dan pondasi lebar dari batu andesit mulai disusun blok demi blok."
+    },
+    {
+      "id": "undakan",
+      "narration": "Lima undakan persegi yang kokoh dibangun bertingkat ke atas. Dua juta blok batu gunung dipahat rapi, lalu dikunci satu sama lain dengan sistem sambungan ekor burung tanpa memakai semen sedikit pun."
+    },
+    {
+      "id": "relief",
+      "narration": "Sepanjang lorongnya, dua ribu enam ratus panel relief diukir indah di dinding batu, sementara ratusan arca duduk tenang menghadap empat penjuru mata angin."
+    },
+    {
+      "id": "stupa",
+      "narration": "Di atasnya, tiga pelataran melingkar melambangkan alam tanpa wujud. Tujuh puluh dua stupa berlubang disusun mengelilingi satu stupa induk raksasa sebagai mahkota di puncak candi."
+    },
+    {
+      "id": "abadi",
+      "narration": "Tertimbun abu Gunung Merapi selama berabad-abad, Borobudur akhirnya ditemukan kembali dan dipugar. Dari jutaan blok batu sederhana, lahirlah warisan dunia yang abadi."
+    }
+  ]
+}

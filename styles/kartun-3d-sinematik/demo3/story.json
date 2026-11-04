@@ -1,0 +1,60 @@
+{
+ "title": "Roro Jonggrang & Seribu Candi Semalam",
+ "slug": "02_kartun-3d-sinematik_demo3",
+ "style": "kartun-3d-sinematik",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "cinematic",
+  "db": -16
+ },
+ "lead": 0.35,
+ "tail": 1.2,
+ "pause": 0.25,
+ "speed": 1.12,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Pernahkah kamu bertanya mengapa kompleks Candi Prambanan yang megah ini disebut legenda Seribu Candi yang kurang satu?",
+   "pause": 0.3
+  },
+  {
+   "id": "lamar",
+   "text": "Kisahnya bermula saat kesatria sakti Bandung Bondowoso jatuh hati dan memaksa melamar putri cantik bernama Roro Jonggrang."
+  },
+  {
+   "id": "syarat",
+   "text": "Karena enggan menikah, sang putri mengajukan syarat mustahil: bangunkan seribu candi batu hanya dalam waktu satu malam!"
+  },
+  {
+   "id": "panggil",
+   "text": "Tak disangka, Bandung Bondowoso menyanggupi syarat itu dan memanggil pasukan jin dari perut bumi saat bulan purnama naik."
+  },
+  {
+   "id": "bangun",
+   "text": "Dalam sekejap, ratusan jin bercahaya bekerja memahat dan menyusun balok batu candi yang menjulang menembus kabut malam!"
+  },
+  {
+   "id": "panik",
+   "text": "Menjelang dini hari, Roro Jonggrang mengintip dengan panik karena jumlah candi sudah mencapai sembilan ratus sembilan puluh sembilan!"
+  },
+  {
+   "id": "lesung",
+   "text": "Sang putri segera membangunkan gadis-gadis desa untuk menumbuk lesung padi dan membakar jerami merah di ufuk timur."
+  },
+  {
+   "id": "ayam",
+   "text": "Cahaya merah dan suara lesung membuat ayam jantan berkokok nyaring, menyangka matahari pagi telah terbit lebih awal!"
+  },
+  {
+   "id": "kabur",
+   "text": "Pasukan jin pun lari tunggang-langgang meninggalkan satu candi terakhir yang belum selesai, membuat Bandung Bondowoso murka besar!"
+  },
+  {
+   "id": "arca",
+   "text": "Mengetahui tipu daya itu, ia mengutuk sang putri menjadi arca batu penggenap candi keseribu yang abadi hingga kini."
+  }
+ ]
+}
+

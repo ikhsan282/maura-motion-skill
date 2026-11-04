@@ -1,0 +1,49 @@
+{
+  "style": "dunia-blok",
+  "voice": "el-id-m",
+  "fps": 30,
+  "maxDuration": 90,
+  "title": "Letusan Gunung Krakatau 1883 & Lahirnya Anak Krakatau",
+  "beats": [
+    {
+      "id": "selat",
+      "narration": "Di tengah birunya Selat Sunda, dulu berdiri pulau vulkanik Krakatau dengan tiga puncak megah: Perboewatan, Danan, dan Rakata."
+    },
+    {
+      "id": "pelayaran",
+      "narration": "Kapal-kapal dagang berlayar tenang melewati perairannya setiap hari, tanpa menyangka gunung di bawah laut sedang mengumpulkan amarah."
+    },
+    {
+      "id": "mei",
+      "narration": "Bulan Mei seribu delapan ratus delapan puluh tiga, kawah Perboewatan mulai batuk. Kepulan abu kelabu menyembur tinggi ke langit."
+    },
+    {
+      "id": "agustus",
+      "narration": "Memasuki akhir Agustus, guncangan gempa makin rapat. Hujan batu pijar dan petir vulkanik menyambar puncak kawah yang membara."
+    },
+    {
+      "id": "puncak",
+      "narration": "Pagi dua puluh tujuh Agustus pukul sepuluh lewat dua menit, empat ledakan dahsyat merobek pulau Krakatau hingga hancur!"
+    },
+    {
+      "id": "suara",
+      "narration": "Dentuman itu menjadi suara paling keras dalam sejarah, terdengar jelas hingga ke Australia sejauh empat ribu delapan ratus kilometer."
+    },
+    {
+      "id": "tsunami",
+      "narration": "Runtuhnya dinding gunung ke laut memicu gelombang tsunami setinggi tiga puluh meter yang menyapu pesisir Banten dan Lampung."
+    },
+    {
+      "id": "gelap",
+      "narration": "Debu vulkanik terlontar ke lapisan stratosfer, menyelimuti bumi dan membuat langit senja dunia memerah selama berbulan-bulan."
+    },
+    {
+      "id": "kaldera",
+      "narration": "Saat asap mereda, dua pertiga Pulau Krakatau telah lenyap ditelan laut, menyisakan tebing curam puncak Rakata."
+    },
+    {
+      "id": "anak",
+      "narration": "Namun pada seribu sembilan ratus dua puluh tujuh, dari dasar kaldera muncul blok demi blok gunung baru: Anak Krakatau."
+    }
+  ]
+}

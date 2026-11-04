@@ -331,3 +331,30 @@ export function finish(ctx, AM, t, { flash = 0 } = {}) {
   if (flash > 0) { ctx.fillStyle = `rgba(255,255,255,${flash})`; ctx.fillRect(0, 0, AM.W, AM.H); }
   AM.lib.vignette(ctx, { strength: 0.32, inner: 0.55 });
 }
+
+/** Voxel sailing/steam ship for maritime scenes (Krakatau, Nusantara). */
+export function voxShip(x = 0, y = 0, z = 0, { s = 1 } = {}) {
+  const g = new THREE.Group();
+  const hull = vbox(3, 1.2, 7, 'wood'); hull.position.set(0, 0.6, 0);
+  const prow = vbox(2, 1.0, 2, 'wood'); prow.position.set(0, 0.7, 4);
+  const deck = vbox(2.6, 0.4, 5.6, 'sand'); deck.position.set(0, 1.3, 0);
+  const cabin = vbox(2, 1.2, 2.2, 'wood'); cabin.position.set(0, 1.9, -1.2);
+  const mast = vbox(0.4, 5.2, 0.4, 'wood'); mast.position.set(0, 3.8, 0.6);
+  const sail1 = vbox(3.2, 2.2, 0.3, 'snow'); sail1.position.set(0, 4.4, 0.9);
+  const sail2 = vbox(2.6, 1.6, 0.3, 'snow'); sail2.position.set(0, 2.5, 0.9);
+  const stack = vbox(0.7, 2.2, 0.7, 'andesitDark'); stack.position.set(0, 2.6, -0.4);
+  g.add(hull, prow, deck, cabin, mast, sail1, sail2, stack);
+  g.position.set(x, y, z); g.scale.setScalar(s);
+  return g;
+}
+
+/** Voxel Red-and-White Indonesian flag on a pole. */
+export function voxFlag(x = 0, y = 0, z = 0, { h = 6, s = 1 } = {}) {
+  const g = new THREE.Group();
+  const pole = vbox(0.25, h, 0.25, 'snow'); pole.position.set(0, h / 2, 0);
+  const red = vbox(2.2, 0.7, 0.2, 'lava'); red.position.set(1.2, h - 0.5, 0);
+  const white = vbox(2.2, 0.7, 0.2, 'snow'); white.position.set(1.2, h - 1.2, 0);
+  g.add(pole, red, white);
+  g.position.set(x, y, z); g.scale.setScalar(s);
+  return g;
+}
