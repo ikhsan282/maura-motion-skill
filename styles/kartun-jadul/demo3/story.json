@@ -1,0 +1,58 @@
+{
+  "style": "kartun-jadul",
+  "voice": "el-id-m",
+  "speed": 1.04,
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "maxDuration": 90,
+  "music": { "preset": "playful", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu melihat orang menyuruh buah nangka pulang jalan kaki sendiri? Inilah kisah jenaka Si Kabayan yang legendaris!",
+      "pause": 0.4
+    },
+    {
+      "id": "berangkat",
+      "text": "Suatu siang yang cerah, Kabayan diminta pergi ke kebun tepi sungai untuk memetik buah nangka yang sudah tua dan matang.",
+      "pause": 0.35
+    },
+    {
+      "id": "pohon",
+      "text": "Di bawah pohon rindang, ia berhasil menurunkan sebutir nangka berukuran sangat besar. Namun ketika hendak mengangkatnya, pinggang Kabayan langsung pegal!",
+      "pause": 0.35
+    },
+    {
+      "id": "malas",
+      "text": "Karena malas memikul beban seberat itu, Kabayan mengetuk kulit nangka sambil berkata: Hei Nangka, kamu kan sudah tua, pulanglah sendiri!",
+      "pause": 0.35
+    },
+    {
+      "id": "cebur",
+      "text": "Byur! Ia mendorong buah nangka bulat itu ke arus sungai, lalu melambai santai menyuruhnya hanyut berenang menuju rumah.",
+      "pause": 0.35
+    },
+    {
+      "id": "pulang",
+      "text": "Kabayan pun melenggang pulang dengan tangan kosong sambil bersiul riang. Di depan gubuk, keluarga sudah menunggu dengan perut lapar.",
+      "pause": 0.35
+    },
+    {
+      "id": "alasan",
+      "text": "Saat ditanya mana buah nangkanya, Kabayan menjawab polos: Tadi sudah kusuruh jalan duluan lewat sungai, masa belum sampai juga?",
+      "pause": 0.35
+    },
+    {
+      "id": "marah",
+      "text": "Mendengar jawaban ajaib itu, telinga mertuanya langsung mengepulkan uap panas! Kabayan pun terbirit-birit dikejar keliling halaman.",
+      "pause": 0.4
+    },
+    {
+      "id": "moral",
+      "text": "Kisah klasik ini menyindir kita sambil tertawa: rasa malas selalu pandai mencari alasan konyol, padahal tanggung jawab harus dituntaskan sendiri!",
+      "pause": 0.6
+    }
+  ]
+}
+

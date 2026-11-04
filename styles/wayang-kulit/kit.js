@@ -170,6 +170,10 @@ export const CHARACTERS = {
   bisma: { body: 'alus', head: 'resi', beard: 'long', sumping: false, keris: false, uncal: true, lace: 'dot', lean: 0.06, scale: 1.04 },
   durna: { body: 'alus', head: 'kethu', beard: 'pointed', sumping: false, keris: false, uncal: false, lace: 'dot', lean: 0.24, scale: 0.94, noseLen: 30 },
   prajurit: { body: 'gagah', head: 'kupluk', sumping: false, keris: true, uncal: false, lace: 'diamond', scale: 0.98 },
+  bima: { body: 'gagah', head: 'gelung', sumping: true, keris: false, uncal: true, lace: 'kawung', scale: 1.12 },
+  dewaruci: { body: 'alus', head: 'gelung', sumping: true, keris: false, uncal: true, lace: 'kawung', scale: 0.42 },
+  gatotkaca: { body: 'gagah', head: 'makutha', sumping: true, keris: true, uncal: true, lace: 'diamond', scale: 1.08 },
+  karna: { body: 'alus', head: 'makutha', sumping: true, keris: true, uncal: true, lace: 'diamond', scale: 1.02 },
 };
 
 const RES = 1.3; // cache resolution multiplier
@@ -552,4 +556,4 @@ export function goldTitle(ctx, text, x, y, { size = 86, alpha = 1, spacing = 10,
   ctx.restore();
 }
 
-export { ease, clamp, lerp, hrand };
+export { ease, clamp, lerp, hrand, noise, TAU };

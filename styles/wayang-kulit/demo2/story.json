@@ -1,0 +1,63 @@
+{
+  "style": "wayang-kulit",
+  "voice": "el-id-m",
+  "speed": 1.04,
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.26,
+  "maxDuration": 90,
+  "music": { "preset": "gamelan", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Demi mencari setetes air suci kehidupan, kesatria terkuat Pandawa rela terjun seorang diri ke dasar samudra yang gelap!",
+      "pause": 0.35
+    },
+    {
+      "id": "durna",
+      "text": "Dalam lakon legendaris Dewa Ruci, Pandita Durna memerintahkan Bima mencari Tirta Pawitra hingga ke tengah lautan luas.",
+      "pause": 0.3
+    },
+    {
+      "id": "berangkat",
+      "text": "Meski saudara-saudaranya khawatir perintah itu adalah jebakan maut, Bima tetap melangkah teguh karena baktinya yang tulus kepada guru.",
+      "pause": 0.3
+    },
+    {
+      "id": "samudra",
+      "text": "Tanpa rasa gentar sedikit pun, sang Bratasena menerjang gulungan ombak raksasa yang menggemuruh di tengah samudra!",
+      "pause": 0.35
+    },
+    {
+      "id": "naga",
+      "text": "Dari palung laut muncul Naga Nemburnawa yang melilit tubuhnya dengan ganas, namun kuku Pancanaka Bima berhasil menaklukkannya!",
+      "pause": 0.35
+    },
+    {
+      "id": "hening",
+      "text": "Setelah badai samudra mereda menjadi hening, hadir sosok mungil bercahaya yang wujudnya persis seperti Bima sendiri: Sang Hyang Dewa Ruci.",
+      "pause": 0.35
+    },
+    {
+      "id": "masuk",
+      "text": "Dewa Ruci meminta Bima masuk ke dalam tubuh kecilnya melalui telinga. Ajaib, di dalamnya justru terbentang semesta raya yang tak bertepi!",
+      "pause": 0.35
+    },
+    {
+      "id": "wejangan",
+      "text": "Di dalam keheningan batin itulah Bima memahami rahasia Sangkan Paraning Dumadi: asal-usul dan tujuan akhir seluruh kehidupan.",
+      "pause": 0.35
+    },
+    {
+      "id": "tirta",
+      "text": "Ia pun tersadar bahwa Tirta Pawitra bukanlah air di dasar laut, melainkan kejernihan jiwa yang telah mengenali jati dirinya.",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Lakon Dewa Ruci mengajarkan kita: ketulusan hati yang murni mampu menembus tipu daya dunia dan menuntun kita menuju pencerahan sejati.",
+      "pause": 0.6
+    }
+  ]
+}
+

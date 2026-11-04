@@ -130,11 +130,18 @@ def synth_elevenlabs(text, v, speed):
         'voice_settings': {'stability': 0.5, 'similarity_boost': 0.75, 'speed': sp},
     }).encode()
     req = urllib.request.Request(url, data=body, headers={'xi-api-key': key, 'Content-Type': 'application/json'})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as r:
-            data = r.read()
-    except Exception as e:
-        sys.exit(f'ElevenLabs error: {e}')
+    import time
+    data = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = r.read()
+            break
+        except Exception as e:
+            if attempt == 3:
+                sys.exit(f'ElevenLabs error: {e}')
+            print(f'  .. ElevenLabs retry {attempt+1}/3 ({e})')
+            time.sleep(1.5 * (attempt + 1))
     import io
     try:
         a, sr = sf.read(io.BytesIO(data))

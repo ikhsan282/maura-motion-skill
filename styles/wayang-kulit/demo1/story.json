@@ -1,0 +1,82 @@
+{
+  "style": "wayang-kulit",
+  "voice": "el-id-m",
+  "speed": 1.04,
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.25,
+  "maxDuration": 90,
+  "music": { "preset": "gamelan", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di padang Kurusetra, tepat sebelum perang terbesar dimulai, kesatria terhebat justru menjatuhkan busurnya sendiri.",
+      "pause": 0.35
+    },
+    {
+      "id": "arjuna",
+      "text": "Kereta kencana melaju kencang membelah kabut pagi, membawa sang pemanah utama Pandawa, Arjuna, menuju garis depan.",
+      "pause": 0.3
+    },
+    {
+      "id": "kurawa",
+      "text": "Di hadapannya, berbaris rapat seratus saudara Kurawa bersama ribuan prajurit yang siap bertempur habis-habisan.",
+      "pause": 0.3
+    },
+    {
+      "id": "bisma",
+      "text": "Di seberang sana berdiri Resi Bisma, kakek agung yang dulu menggendong dan membesarkan Arjuna sejak kecil.",
+      "pause": 0.3
+    },
+    {
+      "id": "durna",
+      "text": "Dan tepat di sampingnya berdiri Pandita Durna, guru sejati yang mengajarkan setiap rahasia ilmu memanah.",
+      "pause": 0.3
+    },
+    {
+      "id": "ragu",
+      "text": "Tangan sang kesatria mendadak gemetar hebat. Bayangan keraguan membelah batinnya: untuk apa kemenangan jika harus menumpahkan darah keluarga?",
+      "pause": 0.3
+    },
+    {
+      "id": "jatuh",
+      "text": "Busur sakti Gandiwa pun terlepas dari genggamannya, jatuh berdentum ke atas tanah.",
+      "pause": 0.35
+    },
+    {
+      "id": "kresna",
+      "text": "Namun sang kusir kereta perlahan menoleh ke belakang. Dialah Sri Kresna, titisan Dewa Wisnu yang memancarkan cahaya keemasan.",
+      "pause": 0.3
+    },
+    {
+      "id": "nasihat",
+      "text": "Dengan suara teduh namun tegas, Kresna memberi wejangan suci bahwa tugas seorang kesatria adalah menegakkan dharma tanpa terikat hasil.",
+      "pause": 0.3
+    },
+    {
+      "id": "semesta",
+      "text": "Bayangan Kresna pun membesar mendekati cahaya blencong, menyingkap wujud agung Wiswarupa yang memuat seluruh semesta raya!",
+      "pause": 0.35
+    },
+    {
+      "id": "bangkit",
+      "text": "Hati yang gelap kini terang benderang. Arjuna bangkit tegak dan kembali menggenggam busur Gandiwa dengan mantap.",
+      "pause": 0.3
+    },
+    {
+      "id": "perang",
+      "text": "Genderang Bharatayudha pun bergema! Gunungan berputar kencang dan ribuan anak panah melesat membelah langit Kurusetra.",
+      "pause": 0.35
+    },
+    {
+      "id": "gita",
+      "text": "Percakapan abadi di atas kereta perang itulah yang kelak dikenal dunia sebagai kitab suci Bhagavad Gita.",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Saat batinmu goyah di persimpangan hidup, ingatlah: laksanakan kewajibanmu dengan jujur dan berani, karena ragu adalah musuh pertama yang harus dikalahkan.",
+      "pause": 0.6
+    }
+  ]
+}

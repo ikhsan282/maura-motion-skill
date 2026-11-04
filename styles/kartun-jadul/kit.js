@@ -421,4 +421,79 @@ export function bubble(ctx, text, x, y, { w = 520, h = 220, alpha = 1, tail = [-
   const lines = text.split('\n'); lines.forEach((l, i) => ctx.fillText(l, 0, (i - (lines.length - 1) / 2) * size * 1.15));
   ctx.restore();
 }
+/** Rubber-hose crocodile (buaya) floating in the river or standing. */
+export function buaya(ctx, x, y, s, { t = 0, mouth = 0.25, look = [0, 0], blink = 0, face = 1, sq = 0, angry = 0, num = 0 } = {}) {
+  const bt = beat(t);
+  const [sx0, sy0] = squash(t, 0.04);
+  const [jx, jy] = boil(t, 91);
+  ctx.save(); ctx.translate(x + jx, y - bt.b * 10 + jy); ctx.scale(s * face * sx0 * (1 + sq), s * sy0 * (1 - sq));
+  // lumpy back scales
+  for (let i = -3; i <= 0; i++) {
+    const sc = ell(i * 46 - 20, -18, 22, 16); ink(ctx, sc, PAL.g4, 5);
+  }
+  const body = ell(-60, 0, 120, 44); ink(ctx, body, PAL.g3, 6);
+  // upper jaw + lower jaw
+  ctx.save(); ctx.translate(30, -18);
+  ctx.save(); ctx.rotate(-mouth * 0.45);
+  const up = P(); up.moveTo(-30, -28); up.quadraticCurveTo(60, -40, 145, -18); up.quadraticCurveTo(155, 0, 130, 8); up.lineTo(-30, 8); up.closePath();
+  ink(ctx, up, PAL.g2, 6);
+  // teeth
+  ctx.fillStyle = PAL.white; ctx.strokeStyle = PAL.ink; ctx.lineWidth = 4;
+  for (let i = 0; i < 4; i++) {
+    const tx = 20 + i * 26;
+    ctx.beginPath(); ctx.moveTo(tx, 6); ctx.lineTo(tx + 9, 22); ctx.lineTo(tx + 18, 6); ctx.closePath(); ctx.fill(); ctx.stroke();
+  }
+  ink(ctx, ell(128, -18, 12, 9), PAL.ink, 4);
+  pieEye(ctx, -6, -38, 15, 22, { look, blink, angry });
+  pieEye(ctx, 22, -36, 15, 22, { look, blink, angry });
+  ctx.restore();
+  // lower jaw
+  ctx.save(); ctx.rotate(mouth * 0.35);
+  const lo = P(); lo.moveTo(-25, 6); lo.lineTo(125, 6); lo.quadraticCurveTo(115, 32, -25, 28); lo.closePath();
+  ink(ctx, lo, PAL.g1, 6);
+  ctx.restore();
+  ctx.restore();
+  if (num > 0) {
+    ctx.save(); ctx.scale(face, 1);
+    ink(ctx, ell(0, -125, 38, 38), PAL.white, 6);
+    ctx.fillStyle = PAL.ink; ctx.font = "400 50px 'Abril Fatface'"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(String(num), 0, -122);
+    ctx.restore();
+  }
+  ctx.restore();
+}
+/** Rubber-hose river with animated wavy currents and banks. */
+export function sungai(ctx, t, { y = 1320, h = 340, night = false } = {}) {
+  ctx.fillStyle = night ? PAL.g4 : PAL.g2; ctx.fillRect(-300, y - 160, 1700, 900);
+  ctx.fillStyle = night ? PAL.g5 : PAL.g3; ctx.fillRect(-300, y, 1700, h);
+  ctx.strokeStyle = PAL.ink; ctx.lineWidth = 7;
+  for (const yy of [y, y + h]) {
+    ctx.beginPath();
+    for (let x = -300; x <= 1400; x += 24) ctx.lineTo(x, yy + Math.sin(x * 0.025 + t * 3) * 10);
+    ctx.stroke();
+  }
+  ctx.strokeStyle = PAL.white; ctx.lineWidth = 4;
+  for (let r = 0; r < 4; r++) {
+    const ry = y + 55 + r * 72;
+    ctx.beginPath();
+    for (let x = -260; x <= 1360; x += 30) ctx.lineTo(x, ry + Math.sin(x * 0.03 + t * 4 + r) * 12);
+    ctx.stroke();
+  }
+}
+/** Bouncy cartoon fruit tree. */
+export function pohon(ctx, x, y, s, { t = 0, fruits = 3 } = {}) {
+  const bt = beat(t);
+  const [sx, sy] = squash(t, 0.035);
+  ctx.save(); ctx.translate(x, y); ctx.scale(s * sx, s * sy);
+  const tr = P(); tr.moveTo(-45, 0); tr.quadraticCurveTo(-28, -190, -35, -360); tr.lineTo(35, -360); tr.quadraticCurveTo(28, -190, 45, 0); tr.closePath();
+  ink(ctx, tr, PAL.g4, 6);
+  for (const [cx, cy, rx, ry] of [[-110, -400, 110, 85], [110, -400, 110, 85], [0, -470, 145, 105]]) {
+    ink(ctx, ell(cx, cy - bt.b * 8, rx, ry), PAL.g2, 6);
+  }
+  for (let i = 0; i < fruits; i++) {
+    const fx = -85 + i * 85, fy = -370 + (i % 2) * 28 - bt.b * 14;
+    ink(ctx, ell(fx, fy, 24, 30, 0.2), PAL.white, 5);
+  }
+  ctx.restore();
+}
 export { clamp, lerp, ease, hrand, noise, TAU };

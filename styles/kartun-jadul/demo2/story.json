@@ -1,0 +1,63 @@
+{
+  "title": "Kancil dan Barisan Buaya — Jembatan Hidup di Sungai Lebar",
+  "style": "kartun-jadul",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ragtime",
+    "db": -15
+  },
+  "leadIn": 0.35,
+  "tailOut": 1.1,
+  "defaultPause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Seekor kancil yang kelaparan, pohon buah ranum di seberang sungai, dan gerombolan buaya ganas yang siap menerkam!",
+      "pause": 0.35
+    },
+    {
+      "id": "seberang",
+      "text": "Di tepi sungai yang deras, Kancil menatap pohon buah manis di seberang sana, tetapi tak ada satu pun jembatan untuk menyeberang.",
+      "pause": 0.35
+    },
+    {
+      "id": "muncul",
+      "text": "Tiba-tiba muncul sang Raja Buaya dari balik arus air sambil membuka moncong lebarnya yang penuh gigi tajam!",
+      "pause": 0.4
+    },
+    {
+      "id": "akal",
+      "text": "Bukannya lari ketakutan, Kancil malah melompat ke atas batu dan berseru gembira: Hei Buaya, Raja Hutan mau menggelar pesta daging besar!",
+      "pause": 0.4
+    },
+    {
+      "id": "baris",
+      "text": "Aku diperintahkan menghitung jumlah kalian semua! Ayo berbaris rapi dari tepi sini sampai ke tepi seberang sungai!",
+      "pause": 0.4
+    },
+    {
+      "id": "hitung",
+      "text": "Para buaya yang tergiur hadiah daging langsung berjejer rapat. Kancil pun melompat riang di atas kepala mereka: Satu! Dua! Tiga! Empat!",
+      "pause": 0.45
+    },
+    {
+      "id": "sampai",
+      "text": "Begitu kakinya mendarat aman di daratan seberang, Kancil melambaikan sarung tangan putihnya sambil berteriak: Terima kasih atas jembatannya, Buaya bodoh!",
+      "pause": 0.4
+    },
+    {
+      "id": "ngamuk",
+      "text": "Para buaya menganga kesal karena tertipu mentah-mentah, sementara Kancil sudah melesat kabur menikmati buah manisnya!",
+      "pause": 0.35
+    },
+    {
+      "id": "pesan",
+      "text": "Ketika menghadapi bahaya besar, ketenangan dan akal cerdik selalu lebih kuat daripada otot semata!",
+      "pause": 0.8
+    }
+  ]
+}
+

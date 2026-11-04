@@ -733,4 +733,4 @@ export function tornWipe(ctx, p, col = PAL.kraft, dir = 1) {
   ctx.restore();
 }
 
-export { ease, clamp, lerp, hrand };
+export { ease, clamp, lerp, hrand, noise, TAU };

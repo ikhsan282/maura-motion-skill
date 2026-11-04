@@ -98,7 +98,7 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 
 ## Gaya dengan demo tambahan
 
-Gaya No. 1 sampai 9 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
+Gaya No. 1 sampai 11 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
 
 | No | Gaya | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|---|---|
@@ -109,10 +109,12 @@ Gaya No. 1 sampai 9 kini sudah memiliki paket lengkap **3 demo per gaya**, denga
 | 5 | `clay-stop-motion` | "Timun Mas & Buto Ijo" (`demo1/`, 17 dtk) | "Sangkuriang & Perahu Terbalik" (`demo2/`, 57 dtk) | "Bawang Putih & Labu Emas" (`demo3/`, 62 dtk) |
 | 6 | `boneka-rajut` | "Kancil Mencuri Mentimun" (`demo1/`, 50 dtk) | "Kancil dan Barisan Buaya Sungai" (`demo2/`, 55 dtk) | "Balap Lari Kelinci Sombong & Kura-kura" (`demo3/`, 55 dtk) |
 | 7 | `pixel-retro` | "Si Pitung: Level Batavia" (`demo1/`, 48 dtk) | "Kenapa Game Jadul 16-Bit Bikin Nagih?" (`demo2/`, 55 dtk) | "Tamagotchi 90-an: Jangan Sampai Mati!" (`demo3/`, 55 dtk) |
-| 8 | `kertas-guntingan` | "Legenda Danau Toba" (`demo1/`, 62 dtk) | "Legenda Batu Menangis" (`demo2/`, 55 dtk) | "Asal-Usul Nama Banyuwangi" (`demo3/`, 55 dtk) |
+| 8 | `kertas-guntingan` | "Legenda Danau Toba" (`demo1/`, 62 dtk) | "Legenda Batu Menangis" (`demo2/`, 87 dtk) | "Asal-Usul Nama Banyuwangi" (`demo3/`, 55 dtk) |
 | 9 | `sketsa-pensil` | "Faktor Habibie: Retakan Sekecil Rambut" (`demo1/`, 58 dtk) | "Kenapa Kapal Baja Mengapung? Archimedes" (`demo2/`, 58 dtk) | "Rahasia Konstruksi Candi Borobudur" (`demo3/`, 55 dtk) |
+| 10 | `kartun-jadul` | "Kancil Mencuri Timun" (`demo1/`, 54 dtk) | "Kancil dan Barisan Buaya" (`demo2/`, 55 dtk) | "Si Kabayan & Nangka Hanyut" (`demo3/`, 55 dtk) |
+| 11 | `wayang-kulit` | "Arjuna di Kurusetra — Bhagavad Gita" (`demo1/`, 62 dtk) | "Bima & Dewa Ruci — Tirta Pawitra" (`demo2/`, 55 dtk) | "Gugurnya Gatotkaca di Kurusetra" (`demo3/`, 56 dtk) |
 
-Selain gaya 1–9, sebagian gaya lain juga memiliki variasi demo tambahan:
+Selain gaya 1–11, sebagian gaya lain juga memiliki variasi demo tambahan:
 
 | Gaya | Demo |
 |---|---|
@@ -145,8 +147,8 @@ Selain gaya 1–9, sebagian gaya lain juga memiliki variasi demo tambahan:
 | 7 | **Pixel Retro** | pixel-retro | ✅ ([demo1](styles/pixel-retro/demo1/) · [demo2](styles/pixel-retro/demo2/) · [demo3](styles/pixel-retro/demo3/)) |
 | 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([demo1](styles/kertas-guntingan/demo1/) · [demo2](styles/kertas-guntingan/demo2/) · [demo3](styles/kertas-guntingan/demo3/)) |
 | 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([demo1](styles/sketsa-pensil/demo1/) · [demo2](styles/sketsa-pensil/demo2/) · [demo3](styles/sketsa-pensil/demo3/)) |
-| 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([styles/kartun-jadul](styles/kartun-jadul/)) |
-| 11 | **Wayang Kulit** | wayang-kulit | ✅ ([styles/wayang-kulit](styles/wayang-kulit/)) |
+| 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([demo1](styles/kartun-jadul/demo1/) · [demo2](styles/kartun-jadul/demo2/) · [demo3](styles/kartun-jadul/demo3/)) |
+| 11 | **Wayang Kulit** | wayang-kulit | ✅ ([demo1](styles/wayang-kulit/demo1/) · [demo2](styles/wayang-kulit/demo2/) · [demo3](styles/wayang-kulit/demo3/)) |
 | 12 | **Low Poly** | low-poly | ❌ (belum diimplementasi) |
 | 13 | **Buku Pop-up** | buku-pop-up | ✅ ([styles/buku-pop-up](styles/buku-pop-up/)) |
 | 14 | **Batik Hidup** | batik-hidup | ✅ ([styles/batik-hidup](styles/batik-hidup/)) |

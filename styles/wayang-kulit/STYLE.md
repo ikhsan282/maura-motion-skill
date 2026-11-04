@@ -5,7 +5,7 @@ no: 11
 source: drive:11_Wayang_Kulit + github:silhouette-shadow-play
 family: craft
 tech: canvas2d
-music: gamelan   voice: id-m   captions: serif
+music: gamelan   voice: el-id-m   captions: serif
 best_for: Mahabharata, Ramayana, Panji, legenda Nusantara, kisah kepahlawanan, filosofi Jawa, cerita moral
 ---
 # Wayang Kulit
@@ -42,7 +42,7 @@ menambah suasana "pertunjukan malam".
 - `kelir(ctx, t, {glow, flick, hx, hy})`: layar yang menyala dan berkedip (hanya menggambar area yang terlihat kamera).
 - `gedebog(ctx, y)`: batang pisang di bawah, tempat wayang ditancapkan.
 - `puppet(ctx, name, {x, y, s, face, armF:[a1,a2], armB, depth, alpha, t, wobble, fill, rods})`: tokohnya
-  `arjuna`, `kresna`, `bisma`, `durna`, `prajurit`. `face` bernilai 1 atau -1 (nilai di antaranya = sedang berbalik),
+  `arjuna`, `kresna`, `bisma`, `durna`, `prajurit`, `bima`, `dewaruci`, `gatotkaca`, `karna`. `face` bernilai 1 atau -1 (nilai di antaranya = sedang berbalik),
   `depth` 0..1 membuat bayangan membesar dan mengabur, `fill` mengisi bagian dalam siluet (misalnya `cosmosFill(t)`).
 - `hand(name, o, 'F'|'B')` → `[x, y, scale]`: posisi ujung tangan, untuk memegang properti.
 - `gunungan(ctx, x, y, {s, rot, depth, alpha, flip})`, `bow(ctx, x, y, {s, rot, drawn})`, `arrow(ctx, x, y, ang)`,
@@ -50,7 +50,7 @@ menambah suasana "pertunjukan malam".
 - `nameplate(ctx, text, x, y, {alpha, size})`, `goldTitle(ctx, text, x, y, {size, alpha})`, `cosmosFill(t)`, `flicker(t)`, `viewRect(ctx)`, `spline(ctx, pts)`.
 - Menambah tokoh: tambahkan entri di `CHARACTERS` (tubuh `alus`/`gagah`, `HEADGEAR`, `BEARD`), lalu lubang-lubangnya di `puppetBody`.
 
-**Demo:** "Arjuna di Kurusetra", sekitar 61 detik, 14 shot. Gunungan membuka adegan → Arjuna dan busurnya →
-kereta perang → 100 Kurawa → Bisma dan Durna → ragu (bayangan ganda) → busur jatuh → kusir berbalik, ternyata
-Kresna → nasihat → wujud semesta → Arjuna bangkit → perang Bharatayudha → judul Bhagavad Gita → Arjuna
-membidik, gunungan menutup.
+**Koleksi Demo (`demo1`, `demo2`, `demo3` — 30–90 detik):**
+- **`demo1`** — *Arjuna di Kurusetra — Bhagavad Gita* (14 shot, ~62 dtk): Gunungan membuka adegan → Arjuna menjatuhkan busur Gandiwa → kereta perang → 100 Kurawa → Resi Bisma dan Pandita Durna → keraguan Arjuna (bayangan ganda) → busur jatuh ke gedebog → sang kusir menoleh: Sri Kresna → wejangan suci → wujud semesta Wiswarupa (`cosmosFill`) → Arjuna bangkit → perang Bharatayudha → Bhagavad Gita → tancep kayon.
+- **`demo2`** — *Bima & Dewa Ruci — Pencarian Air Suci Tirta Pawitra* (10 shot, ~55 dtk): Gunungan membuka di tepi samudra → Pandita Durna mengutus Bima → Bima berpamitan pada Arjuna → menerjang gulungan ombak samudra & gara-gara gunungan → bertarung melawan siluet Naga Nemburnawa dengan kuku Pancanaka → samudra hening bercahaya emas, muncul Sang Hyang Dewa Ruci mungil → Bima masuk melalui telinga Dewa Ruci → semesta kosmik `Sangkan Paraning Dumadi` → pencerahan Tirta Pawitra sejati → tancep kayon.
+- **`demo3`** — *Gugurnya Gatotkaca — Kesatria Otot Kawat Tulang Besi di Langit Kurusetra* (10 shot, ~56 dtk): Gunungan membuka pada Gatotkaca terbang di langit malam → kereta perang Adipati Karna → pusaka Konta Wijayandanu → Sri Kresna mengutus Gatotkaca → Gatotkaca menyambar barisan Kurawa dari balik awan → Karna terdesak dan membidikkan Konta ke langit → tombak bercahaya meluncur menembus awan → Gatotkaca gugur bermandikan cahaya kosmos demi menyelamatkan Arjuna → bayangan raksasanya runtuh menghancurkan kereta Kurawa → tancep kayon.

@@ -1,0 +1,63 @@
+{
+  "style": "wayang-kulit",
+  "voice": "el-id-m",
+  "speed": 1.04,
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.26,
+  "maxDuration": 90,
+  "music": { "preset": "gamelan", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di malam paling kelam perang Bharatayudha, seorang kesatria terbang menantang maut di angkasa demi menyelamatkan pamannya, Arjuna!",
+      "pause": 0.35
+    },
+    {
+      "id": "malam",
+      "text": "Pasukan Kurawa merangsek maju di bawah cahaya obor, dipimpin Adipati Karna yang memegang pusaka Konta Wijayandanu.",
+      "pause": 0.3
+    },
+    {
+      "id": "ancaman",
+      "text": "Senjata sakti itu hanya dapat dilepaskan satu kali saja, dan Karna menyimpannya khusus untuk menumbangkan Arjuna esok hari.",
+      "pause": 0.3
+    },
+    {
+      "id": "kresna",
+      "text": "Menyadari ancaman tersebut, Sri Kresna mengutus Gatotkaca, kesatria otot kawat tulang besi, untuk memimpin pertempuran malam.",
+      "pause": 0.3
+    },
+    {
+      "id": "terbang",
+      "text": "Gatotkaca pun melesat terbang menembus awan, menyambar barisan prajurit Kurawa dari angkasa bagaikan garuda perkasa!",
+      "pause": 0.35
+    },
+    {
+      "id": "karna",
+      "text": "Terdesak hebat di medan laga, Adipati Karna akhirnya terpaksa mencabut senjata Konta dan membidikkannya lurus ke langit.",
+      "pause": 0.35
+    },
+    {
+      "id": "konta",
+      "text": "Pusaka bercahaya itu meluncur membelah malam! Gatotkaca menyambutnya dengan dada tengadah karena tahu Arjuna kini telah selamat.",
+      "pause": 0.35
+    },
+    {
+      "id": "gugur",
+      "text": "Senjata Konta menembus raga sang kesatria di balik awan. Namun hingga detik terakhir, Gatotkaca masih memilih cara ia gugur!",
+      "pause": 0.35
+    },
+    {
+      "id": "runtuh",
+      "text": "Bayangan raksasa Gatotkaca menukik jatuh dari langit, menghancurkan kereta perang serta barisan pasukan Kurawa sekaligus!",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Gugurnya Gatotkaca mengajarkan arti pengabdian sejati: seorang pahlawan tidak diukur dari panjang usianya, melainkan dari besarnya pengorbanan bagi sesama.",
+      "pause": 0.6
+    }
+  ]
+}
+

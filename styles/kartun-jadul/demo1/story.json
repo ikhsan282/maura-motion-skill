@@ -1,0 +1,47 @@
+{
+  "title": "Kancil Mencuri Timun — Jebakan Orang-Orangan Bergetah",
+  "style": "kartun-jadul",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ragtime",
+    "db": -15
+  },
+  "leadIn": 0.35,
+  "tailOut": 1.1,
+  "defaultPause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Ini kisah klasik seekor kancil yang usil, kebun timun yang segar ranum, dan seorang petani tua yang akhirnya habis sabar!",
+      "pause": 0.35
+    },
+    {
+      "id": "makan",
+      "text": "Malam-malam Kancil menyelinap masuk dan melahap panen terbaik di kebun: Satu, dua, tiga buah timun habis dilahap sampai perutnya buncit!",
+      "pause": 0.35
+    },
+    {
+      "id": "lengket",
+      "text": "Pak Tani yang cerdik pun memasang orang-orangan sawah berlumur getah nangka kental. Saat Kancil meninjunya: Plak! Tangannya langsung lengket tak bisa lepas!",
+      "pause": 0.4
+    },
+    {
+      "id": "bohong",
+      "text": "Ketika dikurung di kandang bambu, Kancil membujuk si anjing Belang yang lewat: Aku mau dinikahkan dengan putri Pak Tani dan pesta daging, gantikan aku di dalam!",
+      "pause": 0.4
+    },
+    {
+      "id": "kabur",
+      "text": "Si Belang yang polos langsung masuk ke kandang. Begitu pintu dikunci rapat dari luar, Kancil pun kabur secepat kilat menembus kepulan debu!",
+      "pause": 0.35
+    },
+    {
+      "id": "pesan",
+      "text": "Ingat ya teman-teman, punya akal cerdik itu sangat boleh, tapi mencuri milik orang lain jelas jangan ditiru!",
+      "pause": 0.8
+    }
+  ]
+}
