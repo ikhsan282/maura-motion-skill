@@ -1,0 +1,228 @@
+{
+ "key": "b08ee7e54de5f9ce",
+ "voice": "el-id-m",
+ "duration": 15.719,
+ "lead": 0.35,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Selembar kertas merah bisa jadi burung yang hidup.",
+   "start": 0.35,
+   "end": 2.916,
+   "words": [
+    {
+     "w": "Selembar",
+     "start": 0.35,
+     "end": 0.786
+    },
+    {
+     "w": "kertas",
+     "start": 0.786,
+     "end": 1.092
+    },
+    {
+     "w": "merah",
+     "start": 1.092,
+     "end": 1.398
+    },
+    {
+     "w": "bisa",
+     "start": 1.398,
+     "end": 1.704
+    },
+    {
+     "w": "jadi",
+     "start": 1.704,
+     "end": 2.01
+    },
+    {
+     "w": "burung",
+     "start": 2.01,
+     "end": 2.316
+    },
+    {
+     "w": "yang",
+     "start": 2.316,
+     "end": 2.492
+    },
+    {
+     "w": "hidup.",
+     "start": 2.492,
+     "end": 2.798
+    }
+   ]
+  },
+  {
+   "id": "lipat",
+   "text": "Lipat menjadi dua, lalu lagi, sampai sudutnya berdiri.",
+   "start": 3.166,
+   "end": 5.632,
+   "words": [
+    {
+     "w": "Lipat",
+     "start": 3.166,
+     "end": 3.421
+    },
+    {
+     "w": "menjadi",
+     "start": 3.421,
+     "end": 3.785
+    },
+    {
+     "w": "dua,",
+     "start": 3.785,
+     "end": 3.931
+    },
+    {
+     "w": "lalu",
+     "start": 3.986,
+     "end": 4.241
+    },
+    {
+     "w": "lagi,",
+     "start": 4.241,
+     "end": 4.496
+    },
+    {
+     "w": "sampai",
+     "start": 4.551,
+     "end": 4.806
+    },
+    {
+     "w": "sudutnya",
+     "start": 4.806,
+     "end": 5.17
+    },
+    {
+     "w": "berdiri.",
+     "start": 5.17,
+     "end": 5.534
+    }
+   ]
+  },
+  {
+   "id": "sayap",
+   "text": "Sayapnya dibuka lebar, dan lehernya menengadah.",
+   "start": 5.882,
+   "end": 8.785,
+   "words": [
+    {
+     "w": "Sayapnya",
+     "start": 5.882,
+     "end": 6.25
+    },
+    {
+     "w": "dibuka",
+     "start": 6.25,
+     "end": 6.776
+    },
+    {
+     "w": "lebar,",
+     "start": 6.776,
+     "end": 7.145
+    },
+    {
+     "w": "dan",
+     "start": 7.224,
+     "end": 7.435
+    },
+    {
+     "w": "lehernya",
+     "start": 7.435,
+     "end": 7.961
+    },
+    {
+     "w": "menengadah.",
+     "start": 7.961,
+     "end": 8.644
+    }
+   ]
+  },
+  {
+   "id": "terbang",
+   "text": "Sekali kepakan, dan ia terbang ke langit pagi.",
+   "start": 9.035,
+   "end": 11.409,
+   "words": [
+    {
+     "w": "Sekali",
+     "start": 9.035,
+     "end": 9.449
+    },
+    {
+     "w": "kepakan,",
+     "start": 9.449,
+     "end": 9.864
+    },
+    {
+     "w": "dan",
+     "start": 9.925,
+     "end": 10.092
+    },
+    {
+     "w": "ia",
+     "start": 10.092,
+     "end": 10.259
+    },
+    {
+     "w": "terbang",
+     "start": 10.259,
+     "end": 10.55
+    },
+    {
+     "w": "ke",
+     "start": 10.55,
+     "end": 10.716
+    },
+    {
+     "w": "langit",
+     "start": 10.716,
+     "end": 11.007
+    },
+    {
+     "w": "pagi.",
+     "start": 11.007,
+     "end": 11.297
+    }
+   ]
+  },
+  {
+   "id": "moral",
+   "text": "Lipatlah sampai sayapmu cukup untuk terbang.",
+   "start": 11.659,
+   "end": 13.669,
+   "words": [
+    {
+     "w": "Lipatlah",
+     "start": 11.659,
+     "end": 12.08
+    },
+    {
+     "w": "sampai",
+     "start": 12.08,
+     "end": 12.375
+    },
+    {
+     "w": "sayapmu",
+     "start": 12.375,
+     "end": 12.67
+    },
+    {
+     "w": "cukup",
+     "start": 12.67,
+     "end": 12.965
+    },
+    {
+     "w": "untuk",
+     "start": 12.965,
+     "end": 13.26
+    },
+    {
+     "w": "terbang.",
+     "start": 13.26,
+     "end": 13.556
+    }
+   ]
+  }
+ ]
+}
