@@ -96,144 +96,87 @@ Default suara untuk Bahasa Indonesia maupun Inggris adalah **ElevenLabs George**
 
 Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`), `~/.hermes/elevenlabs.env`, atau `.env` di folder repo.
 
-## Gaya dengan demo tambahan
-
-Gaya No. 1 sampai 30 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
-
-| No | Gaya | Demo 1 | Demo 2 | Demo 3 |
-|:---:|---|---|---|---|
-| 1 | `anime` | "Tiket Terakhir Mudik" (`demo1/`, 17 dtk) | "Surat di Ujung Peron" (`demo2/`, 52 dtk) | "Rantang Hangat di Peron Senja" (`demo3/`, 60 dtk) |
-| 2 | `kartun-3d-sinematik` | "Sangkuriang & Tangkuban Perahu" (`demo1/`, 48 dtk) | "Roro Jonggrang & Candi Sewu" (`demo2/`, 55 dtk) | "Legenda Danau Toba & Ikan Mas Ajaib" (`demo3/`, 55 dtk) |
-| 3 | `lukis-pedesaan` | "Dewi Sri, Asal Mula Padi" (`demo1/`, 48 dtk) | "Musim Tanam Sawah Terasering" (`demo2/`, 55 dtk) | "Pasar Terapung & Perahu Pagi" (`demo3/`, 55 dtk) |
-| 4 | `dunia-blok` | "Candi Borobudur: Megastruktur Voxel" (`demo1/`, 48 dtk) | "Letusan Krakatau 1883" (`demo2/`, 55 dtk) | "Monas: Lidah Api Emas di Puncak" (`demo3/`, 55 dtk) |
-| 5 | `clay-stop-motion` | "Timun Mas & Buto Ijo" (`demo1/`, 17 dtk) | "Sangkuriang & Perahu Terbalik" (`demo2/`, 57 dtk) | "Bawang Putih & Labu Emas" (`demo3/`, 62 dtk) |
-| 6 | `boneka-rajut` | "Kancil Mencuri Mentimun" (`demo1/`, 50 dtk) | "Kancil dan Barisan Buaya Sungai" (`demo2/`, 55 dtk) | "Balap Lari Kelinci Sombong & Kura-kura" (`demo3/`, 55 dtk) |
-| 7 | `pixel-retro` | "Si Pitung: Level Batavia" (`demo1/`, 48 dtk) | "Kenapa Game Jadul 16-Bit Bikin Nagih?" (`demo2/`, 55 dtk) | "Tamagotchi 90-an: Jangan Sampai Mati!" (`demo3/`, 55 dtk) |
-| 8 | `kertas-guntingan` | "Legenda Danau Toba" (`demo1/`, 62 dtk) | "Legenda Batu Menangis" (`demo2/`, 87 dtk) | "Asal-Usul Nama Banyuwangi" (`demo3/`, 55 dtk) |
-| 9 | `sketsa-pensil` | "Faktor Habibie: Retakan Sekecil Rambut" (`demo1/`, 58 dtk) | "Kenapa Kapal Baja Mengapung? Archimedes" (`demo2/`, 58 dtk) | "Rahasia Konstruksi Candi Borobudur" (`demo3/`, 55 dtk) |
-| 10 | `kartun-jadul` | "Kancil Mencuri Timun" (`demo1/`, 54 dtk) | "Kancil dan Barisan Buaya" (`demo2/`, 55 dtk) | "Si Kabayan & Nangka Hanyut" (`demo3/`, 55 dtk) |
-| 11 | `wayang-kulit` | "Arjuna di Kurusetra — Bhagavad Gita" (`demo1/`, 62 dtk) | "Bima & Dewa Ruci — Tirta Pawitra" (`demo2/`, 55 dtk) | "Gugurnya Gatotkaca di Kurusetra" (`demo3/`, 56 dtk) |
-| 12 | `low-poly` | "Pulau Run & Manhattan — Pulau Pala" (`demo1/`, 56 dtk) | "Kapal Phinisi Nusantara" (`demo2/`, 55 dtk) | "Cincin Api Nusantara" (`demo3/`, 78 dtk) |
-| 13 | `buku-pop-up` | "Roro Jonggrang & Seribu Candi" (`demo1/`, 52 dtk) | "Timun Mas & Empat Bungkusan Ajaib" (`demo2/`, 55 dtk) | "Keajaiban Candi Borobudur" (`demo3/`, 55 dtk) |
-| 14 | `batik-hidup` | "Parang Rusak: Motif Larangan" (`demo1/`, 52 dtk) | "Filosofi Batik Kawung — Buah Aren" (`demo2/`, 55 dtk) | "Batik Mega Mendung Cirebon" (`demo3/`, 55 dtk) |
-| 15 | `wayang-golek` | "Hanoman Obong: Membakar Alengka" (`demo1/`, 55 dtk) | "Si Cepot & Falsafah Tawa Sunda" (`demo2/`, 55 dtk) | "Lahirnya Gatotkaca di Kawah Candradimuka" (`demo3/`, 55 dtk) |
-| 16 | `wayang-beber` | "Panji & Dewi Sekartaji" (`demo1/`, 52 dtk) | "Ande-Ande Lumut & Klenting Kuning" (`demo2/`, 55 dtk) | "Jaka Tarub & Selendang Nawangwulan" (`demo3/`, 55 dtk) |
-| 17 | `lukisan-gua-purba` | "Lukisan Gua Tertua di Sulawesi" (`demo1/`, 55 dtk) | "Perburuan Agung di Dinding Batu" (`demo2/`, 55 dtk) | "Rahasia Cap Tangan Merah" (`demo3/`, 55 dtk) |
-| 18 | `origami` | "Seribu Bangau Kertas" (`demo1/`, 52 dtk) | "Sains Lipatan Origami ke Antariksa" (`demo2/`, 55 dtk) | "Empat Musim di Desa Kertas Washi" (`demo3/`, 55 dtk) |
-| 19 | `kardus-bekas` | "Perjalanan Kardus Paketmu" (`demo1/`, 55 dtk) | "Rahasia Kekuatan Kardus Bergelombang" (`demo2/`, 55 dtk) | "Imajinasi Tanpa Batas Kardus Bekas" (`demo3/`, 55 dtk) |
-| 20 | `kolase-daun-bunga` | "Rafflesia arnoldii Bunga Raksasa" (`demo1/`, 55 dtk) | "Kantong Semar Pemangsa Serangga" (`demo2/`, 55 dtk) | "Seni Herbarium & Kolase Botani" (`demo3/`, 55 dtk) |
-| 21 | `kotak-cahaya-kertas` | "Legenda Malin Kundang" (`demo1/`, 52 dtk) | "Putri Mandalika & Tradisi Bau Nyale" (`demo2/`, 55 dtk) | "Seni Shadow Box & Teater Siluet" (`demo3/`, 55 dtk) |
-| 22 | `lukisan-minyak` | "Lukisan Balasan Raden Saleh" (`demo1/`, 52 dtk) | "Perjalanan Raden Saleh ke Eropa" (`demo2/`, 55 dtk) | "Jalan Raya Pos Anyer–Panarukan 1808" (`demo3/`, 55 dtk) |
-| 23 | `papan-tulis-kapur` | "Paradoks Ulang Tahun: 23 Orang 50%" (`demo1/`, 52 dtk) | "Paradoks Monty Hall: Pindah Pintu" (`demo2/`, 55 dtk) | "Lipat Kertas 42 Kali Sampai ke Bulan" (`demo3/`, 55 dtk) |
-| 24 | `flipbook` | "Animasi Lahir dari Pojok Buku" (`demo1/`, 52 dtk) | "Rahasia 12 Prinsip Animasi" (`demo2/`, 55 dtk) | "Taruhan Kuda Berlari Muybridge 1878" (`demo3/`, 55 dtk) |
-| 25 | `terminal-ascii` | "Virus Brain 1986: Alamat di Kode Virus" (`demo1/`, 52 dtk) | "Pesan Pertama Internet 1969: LO Crash" (`demo2/`, 55 dtk) | "Kepanikan Bug Y2K Tahun 2000" (`demo3/`, 55 dtk) |
-| 26 | `cat-air` | "Legenda Roro Anteng & Joko Seger (Kasada)" (`demo1/`, 52 dtk) | "Fajar di Kaldera Tengger: Bromo, Batok, Semeru" (`demo2/`, 55 dtk) | "Teknik Lukis Cat Air Basah di Atas Basah" (`demo3/`, 55 dtk) |
-| 27 | `gouache-dongeng` | "Bawang Merah & Bawang Putih: Dua Labu" (`demo1/`, 52 dtk) | "Keong Mas & Putri Candra Kirana" (`demo2/`, 55 dtk) | "Kancil & Siput Lomba Lari di Sungai" (`demo3/`, 55 dtk) |
-| 28 | `pastel-krayon` | "Kenapa Bulan Mengikuti Kita? Paralaks" (`demo1/`, 52 dtk) | "Bagaimana Pelangi Muncul Selepas Hujan?" (`demo2/`, 55 dtk) | "Ke Mana Perginya Bayanganmu Saat Siang?" (`demo3/`, 55 dtk) |
-| 29 | `tinta-novel-grafis` | "Sumpah Palapa Gajah Mada 1336" (`demo1/`, 52 dtk) | "Ekspedisi Pati Unus & 100 Kapal Jong" (`demo2/`, 55 dtk) | "Strategi Sultan Agung di Sungai Ciliwung" (`demo3/`, 55 dtk) |
-| 30 | `product-light` | "Satu Detik di Balik Scan Kode QRIS" (`demo1/`, 52 dtk) | "Rahasia Kode OTP 6 Angka 30 Detik" (`demo2/`, 55 dtk) | "Tiga Algoritma Saat Memesan Ojek Online" (`demo3/`, 55 dtk) |
-
-Selain gaya 1–30, sebagian gaya lain juga memiliki variasi demo tambahan:
-
-| Gaya | Demo |
-|---|---|
-| `flat-vector` | 1. "Cahaya di Wajahmu" (bawaan, 20 dtk) · 2. "Ke Mana Perginya Rp100 Ribu?" (`demo/`, 27 dtk) · 3. "Peta Isi Kepala pas Macet" (`demo-kepala-macet/`, 25 dtk) |
-| `infografis-data` | 1. "Jika Dunia Hanya 100 Orang" (bawaan, 20 dtk) · 2. "Harga Bensin 10 Tahun" (`demo-bensin/`, 39 dtk, Pertalite Rp7.400→Rp10.000) · 3. "Kirim Kucing ke Mana Aja" (`demo-ongkir/`, 41 dtk, tarif paket hewan Maura Trans) |
-| `kinetic-type` | 1. "Aturan Dua Menit" (bawaan, 20 dtk) · 2. "Fokus Satu Hal" (`demo-fokus-1-hal/`, 18 dtk) · 3. "Efek Hal Kecil" (`demo-efek-kecil/`, 18 dtk) |
-| `partikel` | 1. "Murmurasi Burung Jalak" (bawaan) · 2. "Kunang-kunang" (`demo-kunang/`, 20 dtk) · 3. "Hujan + Petrichor" (`demo-hujan/`, 23 dtk) |
-| `terminal-ascii` | 1. "Virus yang Mencantumkan Alamat" (bawaan, 20 dtk) · 2. "Password 123456" (`demo-password/`, 20 dtk, brute force + 2FA) · 3. "Backup 3-2-1" (`demo-backup/`, 19 dtk, foto skripsi Rani + cloud vs lokal) |
-| `synthwave` | 1. "Suara Drum 80-an" (bawaan, 20 dtk) · 2. "Laser & Grid" (`demo-laser-grid/`, 20 dtk, matahari bergaris + chrome) |
-| `math-3b1b` | 1. "Luas Lingkaran = πr²" (bawaan, 19 dtk) · 2. "Phi: K ÷ d = 3,14" (`demo-pitagoras/`, 20 dtk, tali keliling + diameter) · 3. "Setengah Tak Terhingga" (`demo-setengah/`, 20 dtk, Zeno ½+¼+⅛=1) |
-| `papan-tulis-kapur` | 1. "Paradoks Ulang Tahun" (bawaan, 20 dtk) · 2. "Efek SKS" (`demo-sks/`, 20 dtk, deadline + adrenalin) · 3. "Trik 9x Jari" (`demo-rumus/`, 19 dtk, tekuk jari ke-7) |
-| `blueprint` | 1. "Piramida Giza" (bawaan, 20 dtk) · 2. "Denah Rumah 36" (`demo-rumah/`, 21 dtk, 5 ruang + skala) · 3. "Jembatan Gantung" (`demo-jembatan/`, 20 dtk, kabel + menara + dek) |
-| `dark-glow-ui` | 1. "Cyberpunk Login" (bawaan, 20 dtk) · 2. "Notifikasi + FOMO" (`demo-notif/`, 19 dtk, layar HP + digital detox) · 3. "Dashboard Real-time" (`demo-dashboard/`, 15 dtk, chart + metrik + alert) |
-| `hud-showreel` | 1. "HP Bar" (`demo/` & `demo-hp/`, 14 dtk, damage + heal + KO) · 2. "Skill Cooldown" (`demo-skill/`, 21 dtk, ulti + combo x3 + level up) |
-| `flipbook` | 1. "Lompat Katak" (bawaan, 18 dtk) · 2. "Bola Memantul" (`demo-bola/`, 12 dtk, squash + stretch + gravitasi) · 3. "Stickman Lari" (`demo-lari/`, 16 dtk, langkah + debu + garis gerak) |
-| `garis-tunggal` | 1. "Wajah Satu Garis" (bawaan, 18 dtk) · 2. "Burung Satu Garis" (`demo-burung/`, 20 dtk, paruh + sayap + terbang) · 3. "Tangan Satu Garis" (`demo-tangan/`, 19 dtk, jari + genggam + lambaian) |
-| `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
-| `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
-
 ## Status gaya (77 gaya: 70 siap pakai ✅, 7 belum diimplementasi ❌)
 
-| No | Gaya | ID | Status |
-|:---:|---|---|---|
-| 1 | **Anime** | anime | ✅ ([demo1](styles/anime/demo1/) · [demo2](styles/anime/demo2/) · [demo3](styles/anime/demo3/)) |
-| 2 | **Kartun 3D Sinematik** | kartun-3d-sinematik | ✅ ([demo1](styles/kartun-3d-sinematik/demo1/) · [demo2](styles/kartun-3d-sinematik/demo2/) · [demo3](styles/kartun-3d-sinematik/demo3/)) |
-| 3 | **Lukis Pedesaan** | lukis-pedesaan | ✅ ([demo1](styles/lukis-pedesaan/demo1/) · [demo2](styles/lukis-pedesaan/demo2/) · [demo3](styles/lukis-pedesaan/demo3/)) |
-| 4 | **Dunia Blok (Voxel)** | dunia-blok | ✅ ([demo1](styles/dunia-blok/demo1/) · [demo2](styles/dunia-blok/demo2/) · [demo3](styles/dunia-blok/demo3/)) |
-| 5 | **Clay Stop Motion** | clay-stop-motion | ✅ ([demo1](styles/clay-stop-motion/demo1/) · [demo2](styles/clay-stop-motion/demo2/) · [demo3](styles/clay-stop-motion/demo3/)) |
-| 6 | **Boneka Rajut** | boneka-rajut | ✅ ([demo1](styles/boneka-rajut/demo1/) · [demo2](styles/boneka-rajut/demo2/) · [demo3](styles/boneka-rajut/demo3/)) |
-| 7 | **Pixel Retro** | pixel-retro | ✅ ([demo1](styles/pixel-retro/demo1/) · [demo2](styles/pixel-retro/demo2/) · [demo3](styles/pixel-retro/demo3/)) |
-| 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([demo1](styles/kertas-guntingan/demo1/) · [demo2](styles/kertas-guntingan/demo2/) · [demo3](styles/kertas-guntingan/demo3/)) |
-| 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([demo1](styles/sketsa-pensil/demo1/) · [demo2](styles/sketsa-pensil/demo2/) · [demo3](styles/sketsa-pensil/demo3/)) |
-| 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([demo1](styles/kartun-jadul/demo1/) · [demo2](styles/kartun-jadul/demo2/) · [demo3](styles/kartun-jadul/demo3/)) |
-| 11 | **Wayang Kulit** | wayang-kulit | ✅ ([demo1](styles/wayang-kulit/demo1/) · [demo2](styles/wayang-kulit/demo2/) · [demo3](styles/wayang-kulit/demo3/)) |
-| 12 | **Low Poly** | low-poly | ✅ ([demo1](styles/low-poly/demo1/) · [demo2](styles/low-poly/demo2/) · [demo3](styles/low-poly/demo3/)) |
-| 13 | **Buku Pop-up** | buku-pop-up | ✅ ([demo1](styles/buku-pop-up/demo1/) · [demo2](styles/buku-pop-up/demo2/) · [demo3](styles/buku-pop-up/demo3/)) |
-| 14 | **Batik Hidup** | batik-hidup | ✅ ([demo1](styles/batik-hidup/demo1/) · [demo2](styles/batik-hidup/demo2/) · [demo3](styles/batik-hidup/demo3/)) |
-| 15 | **Wayang Golek** | wayang-golek | ✅ ([demo1](styles/wayang-golek/demo1/) · [demo2](styles/wayang-golek/demo2/) · [demo3](styles/wayang-golek/demo3/)) |
-| 16 | **Wayang Beber** | wayang-beber | ✅ ([demo1](styles/wayang-beber/demo1/) · [demo2](styles/wayang-beber/demo2/) · [demo3](styles/wayang-beber/demo3/)) |
-| 17 | **Lukisan Gua Purba** | lukisan-gua-purba | ✅ ([demo1](styles/lukisan-gua-purba/demo1/) · [demo2](styles/lukisan-gua-purba/demo2/) · [demo3](styles/lukisan-gua-purba/demo3/)) |
-| 18 | **Origami** | origami | ✅ ([demo1](styles/origami/demo1/) · [demo2](styles/origami/demo2/) · [demo3](styles/origami/demo3/)) |
-| 19 | **Kardus Bekas** | kardus-bekas | ✅ ([demo1](styles/kardus-bekas/demo1/) · [demo2](styles/kardus-bekas/demo2/) · [demo3](styles/kardus-bekas/demo3/)) |
-| 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([demo1](styles/kolase-daun-bunga/demo1/) · [demo2](styles/kolase-daun-bunga/demo2/) · [demo3](styles/kolase-daun-bunga/demo3/)) |
-| 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([demo1](styles/kotak-cahaya-kertas/demo1/) · [demo2](styles/kotak-cahaya-kertas/demo2/) · [demo3](styles/kotak-cahaya-kertas/demo3/)) |
-| 22 | **Lukisan Minyak Bergerak** | lukisan-minyak | ✅ ([demo1](styles/lukisan-minyak/demo1/) · [demo2](styles/lukisan-minyak/demo2/) · [demo3](styles/lukisan-minyak/demo3/)) |
-| 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([demo1](styles/papan-tulis-kapur/demo1/) · [demo2](styles/papan-tulis-kapur/demo2/) · [demo3](styles/papan-tulis-kapur/demo3/)) |
-| 24 | **Flipbook** | flipbook | ✅ ([demo1](styles/flipbook/demo1/) · [demo2](styles/flipbook/demo2/) · [demo3](styles/flipbook/demo3/)) |
-| 25 | **Terminal ASCII** | terminal-ascii | ✅ ([demo1](styles/terminal-ascii/demo1/) · [demo2](styles/terminal-ascii/demo2/) · [demo3](styles/terminal-ascii/demo3/)) |
-| 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([demo1](styles/cat-air/demo1/) · [demo2](styles/cat-air/demo2/) · [demo3](styles/cat-air/demo3/)) |
-| 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([demo1](styles/gouache-dongeng/demo1/) · [demo2](styles/gouache-dongeng/demo2/) · [demo3](styles/gouache-dongeng/demo3/)) |
-| 28 | **Pastel & Krayon** | pastel-krayon | ✅ ([demo1](styles/pastel-krayon/demo1/) · [demo2](styles/pastel-krayon/demo2/) · [demo3](styles/pastel-krayon/demo3/)) |
-| 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ✅ ([demo1](styles/tinta-novel-grafis/demo1/) · [demo2](styles/tinta-novel-grafis/demo2/) · [demo3](styles/tinta-novel-grafis/demo3/)) |
-| 30 | **Product Film Light** | product-light | ✅ ([demo1](styles/product-light/demo1/) · [demo2](styles/product-light/demo2/) · [demo3](styles/product-light/demo3/)) |
-| 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([styles/dark-glow-ui](styles/dark-glow-ui/)) |
-| 32 | **One-Shape UI Morph** | ui-morph | ✅ ([styles/ui-morph](styles/ui-morph/)) |
-| 33 | **Kinetic Typography** | kinetic-type | ✅ ([styles/kinetic-type](styles/kinetic-type/)) |
-| 34 | **Swiss / Bauhaus Grid** | swiss-bauhaus | ✅ ([styles/swiss-bauhaus](styles/swiss-bauhaus/)) |
-| 35 | **Editorial Serif** | editorial-serif | ❌ (belum diimplementasi) |
-| 36 | **Chrome Y2K** | chrome-y2k | ❌ (belum diimplementasi) |
-| 37 | **Noir Dokumenter** | noir-dokumenter | ✅ ([styles/noir-dokumenter](styles/noir-dokumenter/)) |
-| 38 | **VHS & Arsip CRT** | vhs-arsip | ✅ ([styles/vhs-arsip](styles/vhs-arsip/)) |
-| 39 | **Flat Vector Explainer** | flat-vector | ✅ ([styles/flat-vector](styles/flat-vector/)) |
-| 40 | **Kartun Outline Tebal** | kartun-outline-tebal | ✅ ([styles/kartun-outline-tebal](styles/kartun-outline-tebal/)) |
-| 41 | **Neo-Brutalist Bento** | neo-brutalist | ✅ ([styles/neo-brutalist](styles/neo-brutalist/)) |
-| 42 | **Vas Yunani Black-Figure** | vas-yunani | ❌ (belum diimplementasi) |
-| 43 | **Scrapbook Collage** | scrapbook | ✅ ([styles/scrapbook](styles/scrapbook/)) |
-| 44 | **Risograph Halftone** | riso-halftone | ✅ ([styles/riso-halftone](styles/riso-halftone/)) |
-| 45 | **Manga Action** | manga-action | ✅ ([styles/manga-action](styles/manga-action/)) |
-| 46 | **Sumi-e Tinta Timur** | sumi-e | ✅ ([styles/sumi-e](styles/sumi-e/)) |
-| 47 | **Synthwave Neon** | synthwave | ✅ ([styles/synthwave](styles/synthwave/)) |
-| 48 | **Psychedelic Shader** | psychedelic-shader | ✅ ([styles/psychedelic-shader](styles/psychedelic-shader/)) |
-| 49 | **Math Explainer Gelap** | math-3b1b | ✅ ([styles/math-3b1b](styles/math-3b1b/)) |
-| 50 | **Infografis Data** | infografis-data | ✅ ([styles/infografis-data](styles/infografis-data/)) |
-| 51 | **3D Cutaway Explainer** | cutaway-3d | ❌ (belum diimplementasi) |
-| 52 | **Blueprint** | blueprint | ✅ ([styles/blueprint](styles/blueprint/)) |
-| 53 | **Skala Kosmik** | skala-kosmik | ✅ ([styles/skala-kosmik](styles/skala-kosmik/)) |
-| 54 | **Dunia 3D Painterly** | dunia-3d-painterly | ❌ (belum diimplementasi) |
-| 55 | **Diorama Miniatur Tilt-shift** | diorama-miniatur | ✅ ([styles/diorama-miniatur](styles/diorama-miniatur/)) |
-| 56 | **Kawanan Partikel** | partikel | ✅ ([styles/partikel](styles/partikel/)) |
-| 57 | **Pop Art Sunburst** | pop-art | ✅ ([styles/pop-art](styles/pop-art/)) |
-| 58 | **Isometrik** | isometrik | ✅ ([styles/isometrik](styles/isometrik/)) |
-| 59 | **HUD Showreel** | hud-showreel | ✅ ([styles/hud-showreel](styles/hud-showreel/)) |
-| 60 | **Trailer Tipografi Gelap** | trailer-gelap | ❌ (belum diimplementasi) |
-| 61 | **Monoline Satu Garis** | garis-tunggal | ✅ ([styles/garis-tunggal](styles/garis-tunggal/)) |
-| 62 | **Kaca Patri Mosaik** | kaca-patri | ❌ (belum diimplementasi) |
-| 63 | **Perkamen Ukiran Kuno** | perkamen-ukiran | ✅ ([styles/perkamen-ukiran](styles/perkamen-ukiran/)) |
-| 64 | **Toon 3D Gacha Reveal** | gacha-3d | ✅ ([styles/gacha-3d](styles/gacha-3d/)) |
-| 65 | **Stickman Doodle** | stickman-doodle | ✅ ([styles/stickman-doodle](styles/stickman-doodle/)) |
-| 66 | **Stickman Subuh** | stickman-subuh | ✅ ([styles/stickman-subuh](styles/stickman-subuh/)) |
-| 67 | **Stickman Pelukis** | stickman-pelukis | ✅ ([styles/stickman-pelukis](styles/stickman-pelukis/)) |
-| 68 | **Stickman Kisah** | stickman-kisah | ✅ ([styles/stickman-kisah](styles/stickman-kisah/)) |
-| 69 | **Stickman 3D World** | stickman-3dworld | ✅ ([styles/stickman-3dworld](styles/stickman-3dworld/)) |
-| 70 | **Stickman Beanie** | stickman-beanie | ✅ ([styles/stickman-beanie](styles/stickman-beanie/)) |
-| 71 | **Stickman Caveman** | stickman-caveman | ✅ ([styles/stickman-caveman](styles/stickman-caveman/)) |
-| 72 | **Stickman Cinematic** | stickman-cinematic | ✅ ([styles/stickman-cinematic](styles/stickman-cinematic/)) |
-| 73 | **Stickman Duo** | stickman-duo | ✅ ([styles/stickman-duo](styles/stickman-duo/)) |
-| 74 | **Stickman Graffiti** | stickman-graffiti | ✅ ([styles/stickman-graffiti](styles/stickman-graffiti/)) |
-| 75 | **Stickman Lecture** | stickman-lecture | ✅ ([styles/stickman-lecture](styles/stickman-lecture/)) |
-| 76 | **Stickman Minimal Dark** | stickman-minimal-dark | ✅ ([styles/stickman-minimal-dark](styles/stickman-minimal-dark/)) |
-| 77 | **Stickman Picturebook** | stickman-picturebook | ✅ ([styles/stickman-picturebook](styles/stickman-picturebook/)) |
+| No | Gaya | ID | Status | Demo 1 | Demo 2 | Demo 3 |
+|:---:|---|---|:---:|---|---|---|
+| 1 | **Anime** | `anime` | ✅ | [Tiket Terakhir Mudik](styles/anime/demo1/) (17 dtk) | [Surat di Ujung Peron](styles/anime/demo2/) (52 dtk) | [Rantang Hangat di Peron Senja](styles/anime/demo3/) (60 dtk) |
+| 2 | **Kartun 3D Sinematik** | `kartun-3d-sinematik` | ✅ | [Sangkuriang & Tangkuban Perahu](styles/kartun-3d-sinematik/demo1/) (48 dtk) | [Malin Kundang & Kutukan Batu](styles/kartun-3d-sinematik/demo2/) (65 dtk) | [Roro Jonggrang & Seribu Candi](styles/kartun-3d-sinematik/demo3/) (67 dtk) |
+| 3 | **Lukis Pedesaan** | `lukis-pedesaan` | ✅ | [Dewi Sri, Asal Mula Padi](styles/lukis-pedesaan/demo1/) (48 dtk) | [Fajar Seorang Petani & Sepiring Nasi](styles/lukis-pedesaan/demo2/) (65 dtk) | [Tradisi Wiwitan: Syukur Bumi](styles/lukis-pedesaan/demo3/) (65 dtk) |
+| 4 | **Dunia Blok (Voxel)** | `dunia-blok` | ✅ | [Membangun Borobudur Blok demi Blok](styles/dunia-blok/demo1/) (48 dtk) | [Letusan Gunung Krakatau 1883](styles/dunia-blok/demo2/) (68 dtk) | [Monas: Lidah Api Emas di Puncak](styles/dunia-blok/demo3/) (73 dtk) |
+| 5 | **Clay Stop Motion** | `clay-stop-motion` | ✅ | [Timun Mas & Buto Ijo](styles/clay-stop-motion/demo1/) (17 dtk) | [Sangkuriang & Perahu Terbalik](styles/clay-stop-motion/demo2/) (57 dtk) | [Bawang Putih & Labu Emas](styles/clay-stop-motion/demo3/) (62 dtk) |
+| 6 | **Boneka Rajut** | `boneka-rajut` | ✅ | [Kura-kura dan Monyet Menanam Pisang](styles/boneka-rajut/demo1/) (46 dtk) | [Kancil dan Barisan Buaya Sungai](styles/boneka-rajut/demo2/) (69 dtk) | [Balap Lari Kelinci & Kura-kura](styles/boneka-rajut/demo3/) (67 dtk) |
+| 7 | **Pixel Retro** | `pixel-retro` | ✅ | [Si Pitung: Level Batavia](styles/pixel-retro/demo1/) (48 dtk) | [Kenapa Game Jadul 16-Bit Bikin Nagih?](styles/pixel-retro/demo2/) (80 dtk) | [Tamagotchi 90-an: Jangan Sampai Mati!](styles/pixel-retro/demo3/) (68 dtk) |
+| 8 | **Kertas Guntingan** | `kertas-guntingan` | ✅ | [Legenda Danau Toba](styles/kertas-guntingan/demo1/) (62 dtk) | [Legenda Batu Menangis](styles/kertas-guntingan/demo2/) (87 dtk) | [Asal-Usul Nama Banyuwangi](styles/kertas-guntingan/demo3/) (70 dtk) |
+| 9 | **Sketsa Pensil** | `sketsa-pensil` | ✅ | [Faktor Habibie: Retakan Sekecil Rambut](styles/sketsa-pensil/demo1/) (58 dtk) | [Kenapa Kapal Baja Mengapung? Archimedes](styles/sketsa-pensil/demo2/) (58 dtk) | [Rahasia Konstruksi Candi Borobudur](styles/sketsa-pensil/demo3/) (60 dtk) |
+| 10 | **Kartun Jadul (Rubber Hose)** | `kartun-jadul` | ✅ | [Kancil Mencuri Timun](styles/kartun-jadul/demo1/) (54 dtk) | [Kancil dan Barisan Buaya](styles/kartun-jadul/demo2/) (63 dtk) | [Si Kabayan & Nangka Hanyut](styles/kartun-jadul/demo3/) (65 dtk) |
+| 11 | **Wayang Kulit** | `wayang-kulit` | ✅ | [Arjuna di Kurusetra — Bhagavad Gita](styles/wayang-kulit/demo1/) (62 dtk) | [Bima & Dewa Ruci — Tirta Pawitra](styles/wayang-kulit/demo2/) (70 dtk) | [Gugurnya Gatotkaca di Kurusetra](styles/wayang-kulit/demo3/) (56 dtk) |
+| 12 | **Low Poly** | `low-poly` | ✅ | [Pulau Run & Manhattan — Pulau Pala](styles/low-poly/demo1/) (56 dtk) | [Kapal Phinisi Nusantara](styles/low-poly/demo2/) (63 dtk) | [Cincin Api Nusantara](styles/low-poly/demo3/) (78 dtk) |
+| 13 | **Buku Pop-up** | `buku-pop-up` | ✅ | [Roro Jonggrang & Seribu Candi](styles/buku-pop-up/demo1/) (52 dtk) | [Timun Mas & Empat Bungkusan Ajaib](styles/buku-pop-up/demo2/) (68 dtk) | [Keajaiban Candi Borobudur](styles/buku-pop-up/demo3/) (68 dtk) |
+| 14 | **Batik Hidup** | `batik-hidup` | ✅ | [Parang Rusak: Motif Larangan](styles/batik-hidup/demo1/) (52 dtk) | [Filosofi Batik Kawung — Buah Aren](styles/batik-hidup/demo2/) (70 dtk) | [Batik Mega Mendung Cirebon](styles/batik-hidup/demo3/) (68 dtk) |
+| 15 | **Wayang Golek** | `wayang-golek` | ✅ | [Hanoman Obong: Membakar Alengka](styles/wayang-golek/demo1/) (77 dtk) | [Si Cepot & Falsafah Tawa Sunda](styles/wayang-golek/demo2/) (80 dtk) | [Lahirnya Gatotkaca di Candradimuka](styles/wayang-golek/demo3/) (77 dtk) |
+| 16 | **Wayang Beber** | `wayang-beber` | ✅ | [Panji & Dewi Sekartaji](styles/wayang-beber/demo1/) (52 dtk) | [Ande-Ande Lumut & Klenting Kuning](styles/wayang-beber/demo2/) (61 dtk) | [Jaka Tarub & Selendang Nawangwulan](styles/wayang-beber/demo3/) (63 dtk) |
+| 17 | **Lukisan Gua Purba** | `lukisan-gua-purba` | ✅ | [Lukisan Gua Tertua di Sulawesi](styles/lukisan-gua-purba/demo1/) (69 dtk) | [Perburuan Agung di Dinding Batu](styles/lukisan-gua-purba/demo2/) (63 dtk) | [Rahasia Cap Tangan Merah](styles/lukisan-gua-purba/demo3/) (62 dtk) |
+| 18 | **Origami** | `origami` | ✅ | [Seribu Bangau Kertas](styles/origami/demo1/) (52 dtk) | [Sains Lipatan Origami ke Antariksa](styles/origami/demo2/) (63 dtk) | [Empat Musim di Desa Kertas Washi](styles/origami/demo3/) (63 dtk) |
+| 19 | **Kardus Bekas** | `kardus-bekas` | ✅ | [Perjalanan Kardus Paketmu](styles/kardus-bekas/demo1/) (61 dtk) | [Rahasia Kekuatan Kardus Bergelombang](styles/kardus-bekas/demo2/) (62 dtk) | [Imajinasi Tanpa Batas Kardus Bekas](styles/kardus-bekas/demo3/) (63 dtk) |
+| 20 | **Kolase Daun & Bunga** | `kolase-daun-bunga` | ✅ | [Rafflesia arnoldii Bunga Raksasa](styles/kolase-daun-bunga/demo1/) (57 dtk) | [Kantong Semar Pemangsa Serangga](styles/kolase-daun-bunga/demo2/) (60 dtk) | [Seni Herbarium & Kolase Botani](styles/kolase-daun-bunga/demo3/) (63 dtk) |
+| 21 | **Kotak Cahaya Kertas** | `kotak-cahaya-kertas` | ✅ | [Legenda Malin Kundang](styles/kotak-cahaya-kertas/demo1/) (52 dtk) | [Putri Mandalika & Tradisi Bau Nyale](styles/kotak-cahaya-kertas/demo2/) (81 dtk) | [Seni Shadow Box & Teater Siluet](styles/kotak-cahaya-kertas/demo3/) (78 dtk) |
+| 22 | **Lukisan Minyak Bergerak** | `lukisan-minyak` | ✅ | [Lukisan Balasan Raden Saleh](styles/lukisan-minyak/demo1/) (60 dtk) | [Perjalanan Raden Saleh ke Eropa](styles/lukisan-minyak/demo2/) (74 dtk) | [Jalan Raya Pos Anyer–Panarukan 1808](styles/lukisan-minyak/demo3/) (77 dtk) |
+| 23 | **Papan Tulis Kapur** | `papan-tulis-kapur` | ✅ | [Paradoks Ulang Tahun: 23 Orang 50%](styles/papan-tulis-kapur/demo1/) (48 dtk) | [Paradoks Monty Hall: Pindah Pintu](styles/papan-tulis-kapur/demo2/) (73 dtk) | [Lipat Kertas 42 Kali ke Bulan](styles/papan-tulis-kapur/demo3/) (75 dtk) |
+| 24 | **Flipbook** | `flipbook` | ✅ | [Animasi Lahir dari Pojok Buku](styles/flipbook/demo1/) (46 dtk) | [Rahasia 12 Prinsip Animasi](styles/flipbook/demo2/) (65 dtk) | [Taruhan Kuda Berlari Muybridge 1878](styles/flipbook/demo3/) (71 dtk) |
+| 25 | **Terminal ASCII** | `terminal-ascii` | ✅ | [Virus Brain 1986: Alamat di Kode Virus](styles/terminal-ascii/demo1/) (56 dtk) | [Pesan Pertama Internet 1969: LO Crash](styles/terminal-ascii/demo2/) (81 dtk) | [Kepanikan Bug Y2K Tahun 2000](styles/terminal-ascii/demo3/) (80 dtk) |
+| 26 | **Cat Air (Watercolor)** | `cat-air` | ✅ | [Legenda Roro Anteng & Joko Seger](styles/cat-air/demo1/) (53 dtk) | [Fajar di Kaldera Tengger: Bromo](styles/cat-air/demo2/) (75 dtk) | [Teknik Lukis Cat Air Basah di Atas Basah](styles/cat-air/demo3/) (79 dtk) |
+| 27 | **Gouache Buku Dongeng** | `gouache-dongeng` | ✅ | [Bawang Merah & Bawang Putih: Dua Labu](styles/gouache-dongeng/demo1/) (71 dtk) | [Keong Mas & Putri Candra Kirana](styles/gouache-dongeng/demo2/) (76 dtk) | [Kancil & Siput Lomba Lari di Sungai](styles/gouache-dongeng/demo3/) (72 dtk) |
+| 28 | **Pastel & Krayon** | `pastel-krayon` | ✅ | [Kenapa Bulan Mengikuti Kita? Paralaks](styles/pastel-krayon/demo1/) (78 dtk) | [Bagaimana Pelangi Muncul Selepas Hujan?](styles/pastel-krayon/demo2/) (71 dtk) | [Ke Mana Perginya Bayanganmu Saat Siang?](styles/pastel-krayon/demo3/) (72 dtk) |
+| 29 | **Tinta Novel Grafis** | `tinta-novel-grafis` | ✅ | [Sumpah Palapa Gajah Mada 1336](styles/tinta-novel-grafis/demo1/) (71 dtk) | [Ekspedisi Pati Unus & 100 Kapal Jong](styles/tinta-novel-grafis/demo2/) (73 dtk) | [Strategi Sultan Agung di Sungai Ciliwung](styles/tinta-novel-grafis/demo3/) (65 dtk) |
+| 30 | **Product Film Light** | `product-light` | ✅ | [Satu Detik di Balik Scan Kode QRIS](styles/product-light/demo1/) (46 dtk) | [Rahasia Kode OTP 6 Angka 30 Detik](styles/product-light/demo2/) (70 dtk) | [Tiga Algoritma Saat Memesan Ojek Online](styles/product-light/demo3/) (63 dtk) |
+| 31 | **Dark Glow Product UI** | `dark-glow-ui` | ✅ | [Apa yang Terjadi Saat Kamu Menekan Kirim](styles/dark-glow-ui/demo/) (17 dtk) | [Notifikasi Tidak Pernah Tidur](styles/dark-glow-ui/demo-notif/) (19 dtk) | [Dashboard: Data Hidup di Layar](styles/dark-glow-ui/demo-dashboard/) (15 dtk) |
+| 32 | **One-Shape UI Morph** | `ui-morph` | ✅ | [Satu Tombol yang Berubah Jadi Makan Malammu](styles/ui-morph/demo/) (17 dtk) | — | — |
+| 33 | **Kinetic Typography** | `kinetic-type` | ✅ | [Aturan Dua Menit](styles/kinetic-type/demo/) (16 dtk) | [Fokus Satu Hal](styles/kinetic-type/demo-fokus-1-hal/) (18 dtk) | [Efek Hal Kecil](styles/kinetic-type/demo-efek-kecil/) (18 dtk) |
+| 34 | **Swiss / Bauhaus Grid** | `swiss-bauhaus` | ✅ | [Bauhaus: Sekolah 14 Tahun](styles/swiss-bauhaus/demo/) (15 dtk) | [Grid Desain](styles/swiss-bauhaus/demo-grid/) (18 dtk) | [3 Warna Primer](styles/swiss-bauhaus/demo-warna/) (24 dtk) |
+| 35 | **Editorial Serif** | `editorial-serif` | ❌ | — | — | — |
+| 36 | **Chrome Y2K** | `chrome-y2k` | ❌ | — | — | — |
+| 37 | **Noir Dokumenter** | `noir-dokumenter` | ✅ | [Krakatau 1883: Suara Paling Keras dalam Sejarah](styles/noir-dokumenter/demo/) (15 dtk) | — | — |
+| 38 | **VHS & Arsip CRT** | `vhs-arsip` | ✅ | [Sinyal Wow! 1977](styles/vhs-arsip/demo/) (15 dtk) | — | — |
+| 39 | **Flat Vector Explainer** | `flat-vector` | ✅ | [Ke Mana Perginya Rp100 Ribu?](styles/flat-vector/demo/) (27 dtk) | [Peta Isi Kepala Pas Macet](styles/flat-vector/demo-kepala-macet/) (25 dtk) | — |
+| 40 | **Kartun Outline Tebal** | `kartun-outline-tebal` | ✅ | [Perang Aplikasi di Baterai 1 Persen](styles/kartun-outline-tebal/demo/) (15 dtk) | — | — |
+| 41 | **Neo-Brutalist Bento** | `neo-brutalist` | ✅ | [Ke Mana Perginya Uang Kopi Susu Kekinianmu?](styles/neo-brutalist/demo/) (15 dtk) | — | — |
+| 42 | **Vas Yunani Black-Figure** | `vas-yunani` | ❌ | — | — | — |
+| 43 | **Scrapbook Collage** | `scrapbook` | ✅ | [Jurnal Wallace: Garis Tak Terlihat di Nusantara](styles/scrapbook/demo/) (42 dtk) | — | — |
+| 44 | **Risograph Halftone** | `riso-halftone` | ✅ | [Band yang Dipenjara karena Lagu](styles/riso-halftone/demo/) (15 dtk) | — | — |
+| 45 | **Manga Action** | `manga-action` | ✅ | [Smash 565 km/jam](styles/manga-action/demo/) (15 dtk) | — | — |
+| 46 | **Sumi-e Tinta Timur** | `sumi-e` | ✅ | [Laksamana Cheng Ho Singgah di Nusantara](styles/sumi-e/demo/) (42 dtk) | — | — |
+| 47 | **Synthwave Neon** | `synthwave` | ✅ | [Suara Drum 80-an Lahir dari Kecelakaan](styles/synthwave/demo/) (20 dtk) | [Laser dan Grid: Estetika Synthwave](styles/synthwave/demo-laser-grid/) (20 dtk) | — |
+| 48 | **Psychedelic Shader** | `psychedelic-shader` | ✅ | [Satu Rumus, Gambar Tanpa Akhir](styles/psychedelic-shader/demo/) (18 dtk) | — | — |
+| 49 | **Math Explainer Gelap** | `math-3b1b` | ✅ | [Kenapa Luas Lingkaran itu Pi r Kuadrat](styles/math-3b1b/demo/) (19 dtk) | [Phi: Keliling Dibagi Diameter Selalu 3,14](styles/math-3b1b/demo-pitagoras/) (20 dtk) | [Setengah Tak Terhingga](styles/math-3b1b/demo-setengah/) (20 dtk) |
+| 50 | **Infografis Data** | `infografis-data` | ✅ | [Jika Dunia Hanya 100 Orang](styles/infografis-data/demo/) (20 dtk) | [Harga Bensin 10 Tahun](styles/infografis-data/demo-bensin/) (39 dtk) | [Kirim Kucing ke Mana Aja](styles/infografis-data/demo-ongkir/) (41 dtk) |
+| 51 | **3D Cutaway Explainer** | `cutaway-3d` | ❌ | — | — | — |
+| 52 | **Blueprint** | `blueprint` | ✅ | [Bagaimana Piramida Giza Dibangun](styles/blueprint/demo/) (20 dtk) | [Denah Rumah Tipe 36](styles/blueprint/demo-rumah/) (21 dtk) | [Jembatan Gantung](styles/blueprint/demo-jembatan/) (20 dtk) |
+| 53 | **Skala Kosmik** | `skala-kosmik` | ✅ | [Zoom Out dari Monas ke Ujung Alam Semesta](styles/skala-kosmik/demo/) (16 dtk) | — | — |
+| 54 | **Dunia 3D Painterly** | `dunia-3d-painterly` | ❌ | — | — | — |
+| 55 | **Diorama Miniatur Tilt-shift** | `diorama-miniatur` | ✅ | [Pasar Terapung Lok Baintan](styles/diorama-miniatur/demo/) (38 dtk) | — | — |
+| 56 | **Kawanan Partikel** | `partikel` | ✅ | [Ribuan Burung Terbang Tanpa Pemimpin](styles/partikel/demo/) (17 dtk) | [Kunang-Kunang: Cahaya yang Bernyanyi](styles/partikel/demo-kunang/) (20 dtk) | [Hujan: Satu Tetes, Ribuan Kehidupan](styles/partikel/demo-hujan/) (23 dtk) |
+| 57 | **Pop Art Sunburst** | `pop-art` | ✅ | [Kenapa Harga Selalu Berakhir 99?](styles/pop-art/demo/) (15 dtk) | — | — |
+| 58 | **Isometrik** | `isometrik` | ✅ | [Perjalanan Paketmu dari Gudang ke Pintu](styles/isometrik/demo/) (15 dtk) | — | — |
+| 59 | **HUD Showreel** | `hud-showreel` | ✅ | [HP Bar: Nyawa Terakhirmu](styles/hud-showreel/demo/) (14 dtk) | [Skill Cooldown: Harga Sebuah Kemenangan](styles/hud-showreel/demo-skill/) (21 dtk) | — |
+| 60 | **Trailer Tipografi Gelap** | `trailer-gelap` | ❌ | — | — | — |
+| 61 | **Monoline Satu Garis** | `garis-tunggal` | ✅ | [Lingkaran Kebiasaan](styles/garis-tunggal/demo/) (18 dtk) | [Burung Satu Garis](styles/garis-tunggal/demo-burung/) (20 dtk) | [Tangan Satu Garis](styles/garis-tunggal/demo-tangan/) (19 dtk) |
+| 62 | **Kaca Patri Mosaik** | `kaca-patri` | ❌ | — | — | — |
+| 63 | **Perkamen Ukiran Kuno** | `perkamen-ukiran` | ✅ | [Kamus Melayu Pertama Ditulis Pelaut Italia](styles/perkamen-ukiran/demo/) (45 dtk) | — | — |
+| 64 | **Toon 3D Gacha Reveal** | `gacha-3d` | ✅ | [Gacha Satwa Langka Indonesia](styles/gacha-3d/demo/) (19 dtk) | — | — |
+| 65 | **Stickman Doodle** | `stickman-doodle` | ✅ | [Kenapa Kita Menunda-nunda?](styles/stickman-doodle/demo/) (15 dtk) | — | — |
+| 66 | **Stickman Subuh** | `stickman-subuh` | ✅ | [Stickman Subuh](styles/stickman-subuh/demo/) (18 dtk) | [Begadang vs Tidur Cukup](styles/stickman-subuh/demo-begadang/) (22 dtk) | [Stickman Subuh Tahajud](styles/stickman-subuh/demo-tahajud/) (21 dtk) |
+| 67 | **Stickman Pelukis** | `stickman-pelukis` | ✅ | [Sempurna vs Gerak Cepat](styles/stickman-pelukis/demo/) (25 dtk) | — | — |
+| 68 | **Stickman Kisah** | `stickman-kisah` | ✅ | [Kisah Utang](styles/stickman-kisah/demo/) (54 dtk) | — | — |
+| 69 | **Stickman 3D World** | `stickman-3dworld` | ✅ | [Kamu Bukan Pemalas (3D World)](styles/stickman-3dworld/demo/) (15 dtk) | — | — |
+| 70 | **Stickman Beanie** | `stickman-beanie` | ✅ | [Kamu Bukan Pemalas (Kupluk)](styles/stickman-beanie/demo/) (15 dtk) | — | — |
+| 71 | **Stickman Caveman** | `stickman-caveman` | ✅ | [Otak Purba & Rasa Malas](styles/stickman-caveman/demo/) (15 dtk) | — | — |
+| 72 | **Stickman Cinematic** | `stickman-cinematic` | ✅ | [Kota Tidur, Mimpimu Belum Selesai](styles/stickman-cinematic/demo/) (15 dtk) | — | — |
+| 73 | **Stickman Duo** | `stickman-duo` | ✅ | [Mager Lagi? Obrolan Dua Sahabat](styles/stickman-duo/demo/) (15 dtk) | — | — |
+| 74 | **Stickman Graffiti** | `stickman-graffiti` | ✅ | [Tembok Ini Saksi Mimpimu](styles/stickman-graffiti/demo/) (15 dtk) | — | — |
+| 75 | **Stickman Lecture** | `stickman-lecture` | ✅ | [Perhatian ke Papan Tulis!](styles/stickman-lecture/demo/) (15 dtk) | — | — |
+| 76 | **Stickman Minimal Dark** | `stickman-minimal-dark` | ✅ | [Kamu Bukan Pemalas (Minimal Dark)](styles/stickman-minimal-dark/demo/) (15 dtk) | — | — |
+| 77 | **Stickman Picturebook** | `stickman-picturebook` | ✅ | [Kamu Bukan Pemalas (Buku Cerita)](styles/stickman-picturebook/demo/) (15 dtk) | — | — |
 
 ## Contoh hasil
 
