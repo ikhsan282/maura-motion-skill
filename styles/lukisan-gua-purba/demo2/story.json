@@ -1,0 +1,51 @@
+{
+  "title": "Perburuan Agung di Dinding Batu — Ketika Api Unggun Menghidupkan Lukisan Purba",
+  "slug": "lukisan-gua-purba-demo2",
+  "style": "lukisan-gua-purba",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -15
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Ketika matahari tenggelam di zaman es puluhan ribu tahun silam, mulut gua kapur berubah menjadi ruang berkumpul yang hangat oleh nyala api unggun."
+    },
+    {
+      "id": "malam",
+      "text": "Sang tetua mengambil bongkahan oker merah dan arang kayu, lalu mulai menggoreskan kisah perburuan besar di atas dinding batu yang lembap."
+    },
+    {
+      "id": "jejak",
+      "text": "Goresan pertama menghadirkan kawanan banteng liar bertanduk melengkung dan rusa beranduk bercabang yang berlari melintasi padang savana purba."
+    },
+    {
+      "id": "sergap",
+      "text": "Dari kedua sisi tebing, para pemburu gesit merunduk dan mengepung kawanan itu secara serempak, mengandalkan kerja sama seluruh anggota kelompok."
+    },
+    {
+      "id": "tombak",
+      "text": "Tombak kayu diayunkan dan anak panah melesat di udara, mengabadikan detik-detik menegangkan saat manusia purba mempertaruhkan nyawa demi makanan."
+    },
+    {
+      "id": "tarian",
+      "text": "Usai perburuan berhasil, mereka melingkari api unggun dan menarikan tarian penghormatan bagi roh hewan yang telah memberi kehidupan bagi suku mereka."
+    },
+    {
+      "id": "warisan",
+      "text": "Setiap generasi baru yang lahir ikut membubuhkan cap tangan mereka di sekeliling lukisan itu sebagai tanda ikatan keluarga yang tak terputus."
+    },
+    {
+      "id": "moral",
+      "text": "Lukisan perburuan di dinding gua mengajarkan bahwa manusia mampu bertahan melewati zaman terberat bukan karena kekuatan sendiri, melainkan karena kebersamaan."
+    }
+  ]
+}
+

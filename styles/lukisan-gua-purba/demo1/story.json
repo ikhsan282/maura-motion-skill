@@ -1,0 +1,51 @@
+{
+  "title": "Lukisan Gua Tertua di Dunia Ada di Sulawesi — Jejak 51.200 Tahun di Karst Maros-Pangkep",
+  "slug": "lukisan-gua-purba-demo1",
+  "style": "lukisan-gua-purba",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -15
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Selama puluhan tahun dunia mengira lukisan gua tertua ada di Eropa, sampai tebing batu kapur Maros-Pangkep di Sulawesi Selatan mengubah sejarah manusia."
+    },
+    {
+      "id": "maros",
+      "text": "Di langit-langit gua Leang Karampuang dan Leang Tedongnge, para arkeolog menemukan lukisan cadas yang usianya mencapai lima puluh satu ribu dua ratus tahun."
+    },
+    {
+      "id": "cap_tangan",
+      "text": "Di sebelahnya terpampang cap-cap tangan manusia purba, dibuat dengan menempelkan telapak tangan ke batu lalu menyemburkan cairan oker merah dari mulut."
+    },
+    {
+      "id": "babirusa",
+      "text": "Tepat di tengah dinding, terlukis sosok babi rusa endemik Sulawesi berukuran besar dengan bulu punggung tegak dan arsiran garis mineral merah tua."
+    },
+    {
+      "id": "karampuang",
+      "text": "Lebih menakjubkan lagi, tampak tiga sosok pemburu setengah manusia setengah hewan yang sedang mengepung buruan, menjadi bukti imajinasi bercerita paling awal."
+    },
+    {
+      "id": "pigmen",
+      "text": "Warna merah abadi itu berasal dari batu hematit dan oker tanah yang ditumbuk halus di atas batu giling, dicampur air gua, lalu digoreskan dengan jari."
+    },
+    {
+      "id": "animasi",
+      "text": "Ketika obor api dinyalakan di malam hari, bayangan cahaya yang menari di permukaan batu bergelombang membuat babi rusa dan pemburu itu seolah bergerak hidup."
+    },
+    {
+      "id": "moral",
+      "text": "Jauh sebelum huruf ditemukan, leluhur di Nusantara telah menjadikan dinding gua sebagai layar sinema pertama untuk mewariskan kisah mereka kepada kita."
+    }
+  ]
+}
+

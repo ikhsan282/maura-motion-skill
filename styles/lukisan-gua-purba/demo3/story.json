@@ -1,0 +1,51 @@
+{
+  "title": "Rahasia Cap Tangan Merah — Pesan Manusia Purba yang Melintasi Zaman",
+  "slug": "lukisan-gua-purba-demo3",
+  "style": "lukisan-gua-purba",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -15
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Dari tebing Maros di Sulawesi, Sangkulirang di Kalimantan, hingga kepulauan Raja Ampat, ribuan cap tangan merah menyapa kita dari masa silam."
+    },
+    {
+      "id": "teknik",
+      "text": "Bukan dicap seperti stempel, lukisan ini dibuat dengan merentangkan jari di permukaan batu, lalu menyemprotkan larutan oker lewat pipa tulang burung."
+    },
+    {
+      "id": "anak",
+      "text": "Ketika tangan diangkat, tertinggallah siluet telapak yang bersih di tengah kabut merah, termasuk cetakan tangan mungil milik anak-anak purba."
+    },
+    {
+      "id": "pohon",
+      "text": "Di Kalimantan Timur, cap-cap tangan itu bahkan dihubungkan dengan garis-garis sulur menyerupai cabang pohon kehidupan yang menyatukan seluruh klan."
+    },
+    {
+      "id": "pelaut",
+      "text": "Ribuan tahun kemudian, generasi pelaut Austronesia menambahkan lukisan perahu arwah dengan arang hitam di dinding yang sama sebagai penghormatan."
+    },
+    {
+      "id": "makna",
+      "text": "Bagi manusia purba, dinding batu kapur bukanlah pembatas yang dingin, melainkan selaput tipis tempat mereka menyentuh dunia roh leluhur."
+    },
+    {
+      "id": "abadi",
+      "text": "Lapisan mineral air gua yang menetes perlahan selama ribuan tahun akhirnya membungkus pigmen merah itu bagaikan kaca pelindung alami."
+    },
+    {
+      "id": "moral",
+      "text": "Setiap cap tangan di gua purba adalah sapaan hangat melintasi lima puluh ribu tahun yang berkata: kami pernah hidup, bermimpi, dan mencintai di bumi ini."
+    }
+  ]
+}
+
