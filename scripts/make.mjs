@@ -16,7 +16,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const SKILL = path.resolve(here, '..');
 const argv = process.argv.slice(2);
 const flags = {}; const pos = [];
-const BOOL = new Set(['audio-only', 'no-music', 'force', 'keep']);
+const BOOL = new Set(['audio-only', 'no-music', 'no-tts', 'force', 'keep']);
 for (let i = 0; i < argv.length; i++) {
   const a = argv[i];
   if (a.startsWith('--')) { const k = a.slice(2); if (!BOOL.has(k) && argv[i + 1] !== undefined && !argv[i + 1].startsWith('--')) flags[k] = argv[++i]; else flags[k] = true; }
@@ -25,11 +25,30 @@ for (let i = 0; i < argv.length; i++) {
 const proj = path.resolve(pos[0] || '.');
 if (!fs.existsSync(path.join(proj, 'story.json'))) { console.error(`no story.json in ${proj}`); process.exit(1); }
 
+// Auto-discover hermes ffmpeg if not on PATH
+if (process.platform === 'win32' && process.env.LOCALAPPDATA) {
+  const hTools = path.join(process.env.LOCALAPPDATA, 'hermes', 'tools');
+  if (fs.existsSync(hTools)) {
+    for (const d of fs.readdirSync(hTools)) {
+      const bin = path.join(hTools, d, 'bin');
+      if (d.startsWith('ffmpeg-') && fs.existsSync(path.join(bin, 'ffmpeg.exe'))) {
+        process.env.PATH = `${bin};${process.env.PATH || ''}`;
+        break;
+      }
+    }
+  }
+}
+
 function python() {
   if (process.env.AM_PYTHON) return process.env.AM_PYTHON;
-  const venv = path.join(os.homedir(), '.cache', 'maura-motion', 'venv');
-  const cand = process.platform === 'win32' ? path.join(venv, 'Scripts', 'python.exe') : path.join(venv, 'bin', 'python');
-  if (fs.existsSync(cand)) return cand;
+  const venvs = [
+    path.join(SKILL, '.venv'),
+    path.join(os.homedir(), '.cache', 'maura-motion', 'venv'),
+  ];
+  for (const venv of venvs) {
+    const cand = process.platform === 'win32' ? path.join(venv, 'Scripts', 'python.exe') : path.join(venv, 'bin', 'python');
+    if (fs.existsSync(cand)) return cand;
+  }
   return process.platform === 'win32' ? 'python' : 'python3';
 }
 const PY = python();
@@ -48,7 +67,7 @@ const B = path.join(proj, 'build'); fs.mkdirSync(B, { recursive: true });
 const ttsArgs = [path.join(SKILL, 'audio', 'tts.py'), proj];
 if (flags.voice) ttsArgs.push('--voice', flags.voice);
 if (flags.force) ttsArgs.push('--force');
-if (story.voice !== 'none') run(PY, ttsArgs, 'narration');
+if (story.voice !== 'none' && !flags['no-tts']) run(PY, ttsArgs, 'narration');
 
 // 2. stills only
 if (flags.stills) {
@@ -65,7 +84,11 @@ if (!flags['audio-only'] || !fs.existsSync(video)) run(process.execPath, [path.j
 const mArgs = [path.join(SKILL, 'audio', 'music.py'), proj];
 if (flags.music) mArgs.push('--preset', flags.music);
 if (!flags['no-music']) run(PY, mArgs, 'score');
-run(PY, [path.join(SKILL, 'audio', 'mix.py'), proj], 'mix');
+
+const mixArgs = [path.join(SKILL, 'audio', 'mix.py'), proj];
+if (flags['no-music']) mixArgs.push('--no-music');
+if (flags.keep) mixArgs.push('--keep');
+run(PY, mixArgs, 'mix');
 
 // 6. mux
 const outDir = path.join(proj, 'out'); fs.mkdirSync(outDir, { recursive: true });

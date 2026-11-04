@@ -20,7 +20,7 @@ Pertama kali: `node $SK/scripts/setup.mjs` (install voice model + cek semua).
 - User nyebut nama ("gaya wayang", "style 22", "kayak lukisan minyak") → cocokkan di `STYLES.md`. Kalau deskripsi verbal, pilih yang paling dekat dan sebutkan.
 - User cuma kasih topik → pilih yang **best_for**-nya pas (dongeng → wayang/kertas guntingan/pop-up; sains → flat vector/blueprint/cutaway; uang/psikologi → stickman/neo-brutalist/pop art; sejarah → noir/perkamen/lukisan minyak; teknologi → terminal/dark glow UI/product film; anak → clay/boneka rajut/pastel).
 - Baca `styles/<id>/STYLE.md` (ciri visual, gerakan, rumus hook, API kit) dan intip demonya di `styles/<id>/demo/`.
-- Default durasi: max 20 detik. Untuk video panjang (40–60 dtk): set `AM_MAX_DURATION=70` saat render.
+- Default durasi: max 20 detik. Untuk video panjang (40–60 dtk): set `AM_MAX_DURATION=70` saat render (atau `"maxDuration": 70` di `story.json`).
 
 ## 2. Tulis naskah (story.json)
 
@@ -63,14 +63,90 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - `styles/<id>/` — STYLE.md, kit.js, demo/ (story.json, scene.js, out/<slug>.mp4).
 - `engine/` — runtime (AM API), renderer, caption, font, three.js, `sa/` (Shorts Animator paint pass + kit + looks).
 - `audio/` — tts.py (voices: ElevenLabs cloud + Kokoro/Piper offline), music.py (19 preset), sfx.py (45 efek), mix.py (ducking, −14 LUFS).
-- **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id`. Butuh `ELEVENLABS_API_KEY` di env — jangan commit key. Offline gratis `id-f`/`id-m` buat produksi massal.
+- **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (audit 1 Nov 2026, update stills)
+## Status gaya (77 gaya: 65 siap pakai ✅, 12 belum diimplementasi ❌)
 
-- ✅ Siap pakai (40): anime, batik-hidup, blueprint, boneka-rajut, buku-pop-up, cat-air, clay-stop-motion, dark-glow-ui, dunia-blok, flat-vector, flipbook, garis-tunggal, infografis-data, isometrik, kartun-3d-sinematik, kartun-jadul, kartun-outline-tebal, kertas-guntingan, kinetic-type, kotak-cahaya-kertas, lukisan-minyak, lukis-pedesaan, manga-action, math-3b1b, neo-brutalist, noir-dokumenter, origami, papan-tulis-kapur, pixel-retro, pop-art, product-light, riso-halftone, stickman-doodle, synthwave, terminal-ascii, ui-morph, vhs-arsip, wayang-beber, wayang-kulit, sketsa-pensil* (*still menyusul).
-- 🔧 Sebagian (12): diorama-miniatur, kardus-bekas, gacha-3d, gouache-dongeng, kolase-daun-bunga, partikel, perkamen-ukiran, psychedelic-shader, scrapbook, skala-kosmik, sumi-e, swiss-bauhaus.
-- ❌ Kosong (9): chrome-y2k, cutaway-3d, dunia-3d-painterly, editorial-serif, hud-showreel, kaca-patri, lukisan-gua-purba, pastel-krayon, tinta-novel-grafis, trailer-gelap, vas-yunani.
+| No | Gaya | ID | Status |
+|:---:|---|---|---|
+| 1 | **Anime** | anime | ✅ ([demo1](styles/anime/demo1/) · [demo2](styles/anime/demo2/) · [demo3](styles/anime/demo3/)) |
+| 2 | **Kartun 3D Sinematik** | kartun-3d-sinematik | ✅ ([styles/kartun-3d-sinematik](styles/kartun-3d-sinematik/)) |
+| 3 | **Lukis Pedesaan** | lukis-pedesaan | ✅ ([styles/lukis-pedesaan](styles/lukis-pedesaan/)) |
+| 4 | **Dunia Blok (Voxel)** | dunia-blok | ✅ ([styles/dunia-blok](styles/dunia-blok/)) |
+| 5 | **Clay Stop Motion** | clay-stop-motion | ✅ ([demo1](styles/clay-stop-motion/demo1/) · [demo2](styles/clay-stop-motion/demo2/) · [demo3](styles/clay-stop-motion/demo3/)) |
+| 6 | **Boneka Rajut** | boneka-rajut | ✅ ([styles/boneka-rajut](styles/boneka-rajut/)) |
+| 7 | **Pixel Retro** | pixel-retro | ✅ ([styles/pixel-retro](styles/pixel-retro/)) |
+| 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([styles/kertas-guntingan](styles/kertas-guntingan/)) |
+| 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([styles/sketsa-pensil](styles/sketsa-pensil/)) |
+| 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([styles/kartun-jadul](styles/kartun-jadul/)) |
+| 11 | **Wayang Kulit** | wayang-kulit | ✅ ([styles/wayang-kulit](styles/wayang-kulit/)) |
+| 12 | **Low Poly** | low-poly | ❌ (belum diimplementasi) |
+| 13 | **Buku Pop-up** | buku-pop-up | ✅ ([styles/buku-pop-up](styles/buku-pop-up/)) |
+| 14 | **Batik Hidup** | batik-hidup | ✅ ([styles/batik-hidup](styles/batik-hidup/)) |
+| 15 | **Wayang Golek** | wayang-golek | ❌ (belum diimplementasi) |
+| 16 | **Wayang Beber** | wayang-beber | ✅ ([styles/wayang-beber](styles/wayang-beber/)) |
+| 17 | **Lukisan Gua Purba** | lukisan-gua-purba | ❌ (belum diimplementasi) |
+| 18 | **Origami** | origami | ✅ ([styles/origami](styles/origami/)) |
+| 19 | **Kardus Bekas** | kardus-bekas | ✅ ([styles/kardus-bekas](styles/kardus-bekas/)) |
+| 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([styles/kolase-daun-bunga](styles/kolase-daun-bunga/)) |
+| 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([styles/kotak-cahaya-kertas](styles/kotak-cahaya-kertas/)) |
+| 22 | **Lukisan Minyak Bergerak** | lukisan-minyak | ✅ ([styles/lukisan-minyak](styles/lukisan-minyak/)) |
+| 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([styles/papan-tulis-kapur](styles/papan-tulis-kapur/)) |
+| 24 | **Flipbook** | flipbook | ✅ ([styles/flipbook](styles/flipbook/)) |
+| 25 | **Terminal ASCII** | terminal-ascii | ✅ ([styles/terminal-ascii](styles/terminal-ascii/)) |
+| 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([styles/cat-air](styles/cat-air/)) |
+| 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([styles/gouache-dongeng](styles/gouache-dongeng/)) |
+| 28 | **Pastel & Krayon** | pastel-krayon | ❌ (belum diimplementasi) |
+| 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ❌ (belum diimplementasi) |
+| 30 | **Product Film Light** | product-light | ✅ ([styles/product-light](styles/product-light/)) |
+| 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([styles/dark-glow-ui](styles/dark-glow-ui/)) |
+| 32 | **One-Shape UI Morph** | ui-morph | ✅ ([styles/ui-morph](styles/ui-morph/)) |
+| 33 | **Kinetic Typography** | kinetic-type | ✅ ([styles/kinetic-type](styles/kinetic-type/)) |
+| 34 | **Swiss / Bauhaus Grid** | swiss-bauhaus | ✅ ([styles/swiss-bauhaus](styles/swiss-bauhaus/)) |
+| 35 | **Editorial Serif** | editorial-serif | ❌ (belum diimplementasi) |
+| 36 | **Chrome Y2K** | chrome-y2k | ❌ (belum diimplementasi) |
+| 37 | **Noir Dokumenter** | noir-dokumenter | ✅ ([styles/noir-dokumenter](styles/noir-dokumenter/)) |
+| 38 | **VHS & Arsip CRT** | vhs-arsip | ✅ ([styles/vhs-arsip](styles/vhs-arsip/)) |
+| 39 | **Flat Vector Explainer** | flat-vector | ✅ ([styles/flat-vector](styles/flat-vector/)) |
+| 40 | **Kartun Outline Tebal** | kartun-outline-tebal | ✅ ([styles/kartun-outline-tebal](styles/kartun-outline-tebal/)) |
+| 41 | **Neo-Brutalist Bento** | neo-brutalist | ✅ ([styles/neo-brutalist](styles/neo-brutalist/)) |
+| 42 | **Vas Yunani Black-Figure** | vas-yunani | ❌ (belum diimplementasi) |
+| 43 | **Scrapbook Collage** | scrapbook | ✅ ([styles/scrapbook](styles/scrapbook/)) |
+| 44 | **Risograph Halftone** | riso-halftone | ✅ ([styles/riso-halftone](styles/riso-halftone/)) |
+| 45 | **Manga Action** | manga-action | ✅ ([styles/manga-action](styles/manga-action/)) |
+| 46 | **Sumi-e Tinta Timur** | sumi-e | ✅ ([styles/sumi-e](styles/sumi-e/)) |
+| 47 | **Synthwave Neon** | synthwave | ✅ ([styles/synthwave](styles/synthwave/)) |
+| 48 | **Psychedelic Shader** | psychedelic-shader | ✅ ([styles/psychedelic-shader](styles/psychedelic-shader/)) |
+| 49 | **Math Explainer Gelap** | math-3b1b | ✅ ([styles/math-3b1b](styles/math-3b1b/)) |
+| 50 | **Infografis Data** | infografis-data | ✅ ([styles/infografis-data](styles/infografis-data/)) |
+| 51 | **3D Cutaway Explainer** | cutaway-3d | ❌ (belum diimplementasi) |
+| 52 | **Blueprint** | blueprint | ✅ ([styles/blueprint](styles/blueprint/)) |
+| 53 | **Skala Kosmik** | skala-kosmik | ✅ ([styles/skala-kosmik](styles/skala-kosmik/)) |
+| 54 | **Dunia 3D Painterly** | dunia-3d-painterly | ❌ (belum diimplementasi) |
+| 55 | **Diorama Miniatur Tilt-shift** | diorama-miniatur | ✅ ([styles/diorama-miniatur](styles/diorama-miniatur/)) |
+| 56 | **Kawanan Partikel** | partikel | ✅ ([styles/partikel](styles/partikel/)) |
+| 57 | **Pop Art Sunburst** | pop-art | ✅ ([styles/pop-art](styles/pop-art/)) |
+| 58 | **Isometrik** | isometrik | ✅ ([styles/isometrik](styles/isometrik/)) |
+| 59 | **HUD Showreel** | hud-showreel | ✅ ([styles/hud-showreel](styles/hud-showreel/)) |
+| 60 | **Trailer Tipografi Gelap** | trailer-gelap | ❌ (belum diimplementasi) |
+| 61 | **Monoline Satu Garis** | garis-tunggal | ✅ ([styles/garis-tunggal](styles/garis-tunggal/)) |
+| 62 | **Kaca Patri Mosaik** | kaca-patri | ❌ (belum diimplementasi) |
+| 63 | **Perkamen Ukiran Kuno** | perkamen-ukiran | ✅ ([styles/perkamen-ukiran](styles/perkamen-ukiran/)) |
+| 64 | **Toon 3D Gacha Reveal** | gacha-3d | ✅ ([styles/gacha-3d](styles/gacha-3d/)) |
+| 65 | **Stickman Doodle** | stickman-doodle | ✅ ([styles/stickman-doodle](styles/stickman-doodle/)) |
+| 66 | **Stickman Subuh** | stickman-subuh | ✅ ([styles/stickman-subuh](styles/stickman-subuh/)) |
+| 67 | **Stickman Pelukis** | stickman-pelukis | ✅ ([styles/stickman-pelukis](styles/stickman-pelukis/)) |
+| 68 | **Stickman Kisah** | stickman-kisah | ✅ ([styles/stickman-kisah](styles/stickman-kisah/)) |
+| 69 | **Stickman 3D World** | stickman-3dworld | ✅ ([styles/stickman-3dworld](styles/stickman-3dworld/)) |
+| 70 | **Stickman Beanie** | stickman-beanie | ✅ ([styles/stickman-beanie](styles/stickman-beanie/)) |
+| 71 | **Stickman Caveman** | stickman-caveman | ✅ ([styles/stickman-caveman](styles/stickman-caveman/)) |
+| 72 | **Stickman Cinematic** | stickman-cinematic | ✅ ([styles/stickman-cinematic](styles/stickman-cinematic/)) |
+| 73 | **Stickman Duo** | stickman-duo | ✅ ([styles/stickman-duo](styles/stickman-duo/)) |
+| 74 | **Stickman Graffiti** | stickman-graffiti | ✅ ([styles/stickman-graffiti](styles/stickman-graffiti/)) |
+| 75 | **Stickman Lecture** | stickman-lecture | ✅ ([styles/stickman-lecture](styles/stickman-lecture/)) |
+| 76 | **Stickman Minimal Dark** | stickman-minimal-dark | ✅ ([styles/stickman-minimal-dark](styles/stickman-minimal-dark/)) |
+| 77 | **Stickman Picturebook** | stickman-picturebook | ✅ ([styles/stickman-picturebook](styles/stickman-picturebook/)) |
 
 ## Troubleshooting
 

@@ -1,1 +1,41 @@
-{"lang":"id","lead":0.3,"lines":[{"id":"hook","pause":0.25,"text":"Satu naskah, jadi video animasi. Tanpa gambar manual, tanpa editor."},{"id":"pilih","pause":0.25,"text":"Pilih dari 77 gaya: anime, wayang, flat vector, stickman kisah, dan lainnya."},{"id":"tengah","pause":0.25,"text":"Tulis ceritamu, mesin yang menggambar setiap adegan sampai jadi."},{"id":"suara","pause":0.25,"text":"Narasi ElevenLabs, musik dan caption otomatis ikut jadi."},{"id":"akhir","text":"Maura Motion: idemu, tayang hari ini."}],"music":{"db":-16,"preset":"ambient"},"pause":0.3,"slug":"hello","speed":1.2,"style":"flat-vector","tail":1.0,"title":"Halo Maura Motion","voice":"el-id-m"}
+{
+  "title": "Halo Maura Motion",
+  "slug": "hello",
+  "style": "flat-vector",
+  "lang": "id",
+  "voice": "el-id-m",
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.3,
+  "speed": 1.2,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Satu naskah, jadi video animasi. Tanpa gambar manual, tanpa editor.",
+      "pause": 0.25
+    },
+    {
+      "id": "pilih",
+      "text": "Pilih dari 77 gaya: anime, wayang, flat vector, stickman kisah, dan lainnya.",
+      "pause": 0.25
+    },
+    {
+      "id": "tengah",
+      "text": "Tulis ceritamu, mesin yang menggambar setiap adegan sampai jadi.",
+      "pause": 0.25
+    },
+    {
+      "id": "suara",
+      "text": "Narasi ElevenLabs, musik dan caption otomatis ikut jadi.",
+      "pause": 0.25
+    },
+    {
+      "id": "akhir",
+      "text": "Maura Motion: idemu, tayang hari ini."
+    }
+  ]
+}

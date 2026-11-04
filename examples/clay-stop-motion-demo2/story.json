@@ -1,0 +1,60 @@
+{
+ "title": "Sangkuriang & Perahu Terbalik",
+ "slug": "05_clay-stop-motion_demo2",
+ "style": "clay-stop-motion",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "playful",
+  "db": -17
+ },
+ "lead": 0.35,
+ "tail": 1.2,
+ "pause": 0.25,
+ "speed": 1.12,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Pernahkah kamu melihat gunung yang bentuknya persis seperti perahu kayu yang terbalik?",
+   "pause": 0.3
+  },
+  {
+   "id": "luka",
+   "text": "Dahulu kala, bocah bernama Sangkuriang pergi merantau setelah kepalanya terluka oleh centong nasi."
+  },
+  {
+   "id": "pulang",
+   "text": "Bertahun-tahun kemudian, ia tumbuh menjadi pemuda gagah dan melamar wanita cantik di tepi desa."
+  },
+  {
+   "id": "rahasia",
+   "text": "Namun saat melihat bekas luka di keningnya, Dayang Sumbi tersentak: pemuda itu adalah anaknya sendiri!"
+  },
+  {
+   "id": "syarat",
+   "text": "Untuk menolak secara halus, sang ibu meminta syarat mustahil: buat danau dan perahu besar dalam semalam."
+  },
+  {
+   "id": "jin",
+   "text": "Dengan kesaktiannya, Sangkuriang memanggil kawanan jin biru untuk memahat perahu sebelum subuh tiba."
+  },
+  {
+   "id": "kain",
+   "text": "Panik melihat perahu hampir jadi, Dayang Sumbi membentangkan kain merah bercahaya di ufuk timur."
+  },
+  {
+   "id": "ayam",
+   "text": "Ayam jantan pun tertipu cahaya fajar palsu itu, lalu berkokok nyaring membangunkan seluruh desa."
+  },
+  {
+   "id": "tendang",
+   "text": "Merasa dicurangi karena jin-jinnya kabur, Sangkuriang murka dan menendang perahu itu sekuat tenaga!"
+  },
+  {
+   "id": "akhir",
+   "text": "Perahu raksasa itu jatuh tertelungkup di lembah, menjadi Gunung Tangkuban Perahu hingga hari ini."
+  }
+ ]
+}
+

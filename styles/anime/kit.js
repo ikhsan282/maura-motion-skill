@@ -36,12 +36,13 @@ export function viewRect(ctx, pad = 40) {
 /** Tapered lock/leaf from root (x0,y0) width w to a pointed tip, bending sideways by `bend` (and `bend2` for an S). */
 export function lockPath(x0, y0, x1, y1, w, bend = 0, bend2 = bend, p = new Path2D()) {
   const dx = x1 - x0, dy = y1 - y0, L = Math.hypot(dx, dy) || 1;
-  const nx = -dy / L, ny = dx / L;
+  const nx = -dy / L, ny = dx / L, ang = Math.atan2(dy, dx);
   const a = [x0 + dx / 3 + nx * bend, y0 + dy / 3 + ny * bend], b = [x0 + dx * 2 / 3 + nx * bend2, y0 + dy * 2 / 3 + ny * bend2];
-  // traversed so the winding matches arcs/ellipses (positive), so unions of subpaths fill without holes
+  // traversed so the winding matches arcs/ellipses (positive), with a rounded root cap so locks never form square corners
   p.moveTo(x0 - nx * w / 2, y0 - ny * w / 2);
   p.bezierCurveTo(a[0] - nx * w * 0.5, a[1] - ny * w * 0.5, b[0] - nx * w * 0.28, b[1] - ny * w * 0.28, x1, y1);
   p.bezierCurveTo(b[0] + nx * w * 0.28, b[1] + ny * w * 0.28, a[0] + nx * w * 0.5, a[1] + ny * w * 0.5, x0 + nx * w / 2, y0 + ny * w / 2);
+  p.arc(x0, y0, w / 2, ang + Math.PI / 2, ang - Math.PI / 2, false);
   p.closePath();
   return p;
 }
@@ -149,14 +150,17 @@ export function cloudSprite(seed = 1, preset = 'golden', { w = 900, h = 1000, to
     for (let i = 0; i < 9; i++) puffs.push([w * (0.08 + i * 0.105) + (r() - 0.5) * 20, base - 20 * k, (44 + r() * 20) * k]);
     const [sx, sy] = sunDir;
     puffs.sort((A, B) => (A[0] * sx + A[1] * sy) - (B[0] * sx + B[1] * sy));
-    // rim halo on the sun side
+    // 1) rim halo on the sun side
     g.fillStyle = S.rim; g.beginPath();
     for (const [x, y, rr] of puffs) { g.moveTo(x + sx * 6 + rr, y + sy * 6); g.arc(x + sx * 6, y + sy * 6, rr, 0, TAU); } g.fill();
-    // each puff: painted radial light (hot -> lit -> base -> shadow edge), nearer-to-sun puffs on top
+    // 2) unified shadow body so puffs merge into one cloud mass without dark rings between spheres
+    g.fillStyle = S.shadow; g.beginPath();
+    for (const [x, y, rr] of puffs) { g.moveTo(x + rr, y); g.arc(x, y, rr, 0, TAU); } g.fill();
+    // 3) cel-shaded midtone & lit puffs shifted toward the sun
     for (const [x, y, rr] of puffs) {
-      const gr = g.createRadialGradient(x + sx * rr * 0.4, y + sy * rr * 0.4, 0, x + sx * rr * 0.2, y + sy * rr * 0.2, rr * 1.15);
-      gr.addColorStop(0, S.hot); gr.addColorStop(0.3, S.lit); gr.addColorStop(0.62, S.base); gr.addColorStop(0.9, S.shadow); gr.addColorStop(1, S.shadow);
-      g.fillStyle = gr; g.beginPath(); g.arc(x, y, rr, 0, TAU); g.fill();
+      const gr = g.createRadialGradient(x + sx * rr * 0.38, y + sy * rr * 0.38, rr * 0.05, x + sx * rr * 0.12, y + sy * rr * 0.12, rr * 0.96);
+      gr.addColorStop(0, S.hot); gr.addColorStop(0.38, S.lit); gr.addColorStop(0.78, S.base); gr.addColorStop(1, rgbA(S.base, 0));
+      g.fillStyle = gr; g.beginPath(); g.arc(x, y, rr * 0.98, 0, TAU); g.fill();
     }
     // painted wash: darker away from the sun, lighter toward it (inside the cloud only)
     g.globalCompositeOperation = 'source-atop';
@@ -291,16 +295,16 @@ function hairBackParts(C, o) {
   const { t = 0, wind = 0.4 } = o;
   const parts = [];
   if (C.hair === 'long') {
-    const top = new Path2D(); top.ellipse(0, -36, 156, 160, 0, 0, TAU); parts.push(top);
+    const top = new Path2D(); top.ellipse(0, -36, 158, 164, 0, 0, TAU); parts.push(top);
     const n = 9;
     for (let i = 0; i < n; i++) {
       const u = i / (n - 1) - 0.5;
-      const rx = u * 250, ry = -20 + Math.abs(u) * 50;
+      const rx = u * 168, ry = -64 + Math.abs(u) * 28;
       const aw = Math.abs(wind);
-      const len = 420 + hrand(i, 3) * 80 - aw * 70;
+      const len = 450 + hrand(i, 3) * 80 - aw * 70;
       const sway = Math.sin(t * 3.2 + i * 1.7) * (10 + 26 * aw) + noise.n2(t * 1.3, i) * 18 * aw;
-      const tx = rx * 1.3 + wind * (170 + 90 * hrand(i, 5)) + sway, ty = ry + len - aw * hrand(i, 6) * 90;
-      parts.push(lockPath(rx, ry, tx, ty, 118, wind * 30 + sway * 0.3, wind * 60 + sway));
+      const tx = u * 290 + wind * (170 + 90 * hrand(i, 5)) + sway, ty = ry + len - aw * hrand(i, 6) * 90;
+      parts.push(lockPath(rx, ry, tx, ty, 102, wind * 30 + sway * 0.3, wind * 60 + sway));
     }
   } else if (C.hair === 'pig') {
     const top = new Path2D(); top.ellipse(0, -36, 150, 156, 0, 0, TAU); parts.push(top);
@@ -323,14 +327,14 @@ function hairFrontParts(C, o) {
   const sw = (i, a = 1) => Math.sin(t * 3.6 + i * 1.9) * (3 + 9 * Math.abs(wind)) * a;
   const cap = new Path2D();
   cap.moveTo(-128, 40); cap.bezierCurveTo(-158, -80, -102, -196, 0, -196); cap.bezierCurveTo(102, -196, 158, -80, 128, 40);
-  cap.lineTo(108, 10); cap.bezierCurveTo(104, -50, 60, -74, 0, -76); cap.bezierCurveTo(-60, -74, -104, -50, -108, 10); cap.closePath();
+  cap.lineTo(108, 22); cap.bezierCurveTo(96, -8, 56, -16, 0, -16); cap.bezierCurveTo(-56, -16, -96, -8, -108, 22); cap.closePath();
   parts.push(cap);
   (BANGS[C.hair] || []).forEach(([x0, y0, x1, y1, w, b], i) => { const p = lockPath(x0, y0, x1 + wind * 14 + sw(i), y1 + sw(i + 3, 0.4), w, b, b * 0.6 + wind * 6); parts.push(p); bangs.push(p); });
   if (C.hair === 'long') {
     for (const sd of [-1, 1]) {
       const s2 = sw(sd + 5, 1.8), wv = wind * (sd === Math.sign(wind) ? 56 : 30);
-      parts.push(lockPath(sd * 108, -70, sd * 132 + wv + s2, 262, 66, sd * 26, -sd * 10 + s2 * 0.6));
-      const fine = lockPath(sd * 102, -40, sd * 118 + wv * 0.8 + s2 * 0.7, 160, 32, -sd * 4, sd * 8); parts.push(fine); bangs.push(fine);
+      parts.push(lockPath(sd * 94, -82, sd * 130 + wv + s2, 262, 58, sd * 20, -sd * 10 + s2 * 0.6));
+      const fine = lockPath(sd * 92, -52, sd * 116 + wv * 0.8 + s2 * 0.7, 160, 30, -sd * 4, sd * 8); parts.push(fine); bangs.push(fine);
     }
   } else if (C.hair === 'pig') {
     for (const sd of [-1, 1]) parts.push(lockPath(sd * 112, -70, sd * 126 + sw(sd, 1.2), 96, 42, sd * 8, 0));
@@ -362,8 +366,8 @@ function drawEye(g, C, ex, ey, s, o, lw) {
   }
   const open = clamp(1 - blink) * (1 + wide * 0.12);
   const U = (yo, yc) => lerp(yc, yo, open);
-  const topY = sad ? -21 : -28;
-  const up = [[inX, U(ey + 2, ey + 18)], [ex - s * 14, U(ey + topY, ey + 26)], [ex + s * 22, U(ey + topY - 2 + sad * 8, ey + 26)], [outX, U(ey - 8 + sad * 6, ey + 14)]];
+  const topY = sad ? -25 : -28;
+  const up = [[inX, U(ey + 2 - sad * 2, ey + 18)], [ex - s * 14, U(ey + topY - sad * 2, ey + 26)], [ex + s * 22, U(ey + topY + sad * 4, ey + 26)], [outX, U(ey - 8 + sad * 5, ey + 14)]];
   const lo = [[outX - s * 2, ey + 8], [ex + s * 30, ey + 36], [ex - s * 6, ey + 44], [inX + s * 2, ey + 14]];
   if (open < 0.14) {
     g.strokeStyle = PAL.line; g.lineWidth = lw * 1.8; g.lineCap = 'round';
@@ -474,8 +478,8 @@ export function head(g, who, o = {}, part = 'all') {
   else {
     const all = unionOf(front.parts);
     cel(g, all, C.hairC, C.hairS, (gg) => {
-      if (light !== 0) { gg.beginPath(); gg.ellipse(-light * 150, 40, 120, 260, 0, 0, TAU); gg.fill(); }
-      gg.fillRect(-220, -4, 440, 300);
+      if (light !== 0) { gg.beginPath(); gg.ellipse(-light * 145, 40, 130, 260, 0, 0, TAU); gg.fill(); }
+      gg.beginPath(); gg.moveTo(-240, 36); gg.quadraticCurveTo(0, 6, 240, 36); gg.lineTo(240, 320); gg.lineTo(-240, 320); gg.closePath(); gg.fill();
       if (shade > 0) { gg.globalAlpha = shade * 0.7; gg.fillRect(-250, -250, 500, 600); gg.globalAlpha = 1; }
       // angel-ring highlight: smooth upper arc, scalloped lower edge
       gg.fillStyle = C.hairH; gg.beginPath();
@@ -488,9 +492,9 @@ export function head(g, who, o = {}, part = 'all') {
       }
       gg.closePath(); gg.globalAlpha = 0.32; gg.fill(); gg.globalAlpha = 1;
     }, lw, RIM(o, 7, 330, 0, -40));
-    // strand separations on the bangs (lower parts only)
-    g.save(); g.beginPath(); g.rect(-260, -96, 520, 400); g.clip();
-    g.strokeStyle = PAL.line; g.lineWidth = lw * 0.75; g.lineJoin = 'round';
+    // subtle strand accents near bang tips only
+    g.save(); g.beginPath(); g.rect(-115, -6, 230, 50); g.clip();
+    g.strokeStyle = PAL.line; g.lineWidth = lw * 0.65; g.lineJoin = 'round';
     for (const p of front.bangs) g.stroke(p);
     g.restore();
   }
@@ -1155,16 +1159,18 @@ export function filmTitle(ctx, text, x, y, { size = 110, alpha = 1, sub = null, 
   ctx.restore();
 }
 /** Quote / spoken line in a soft rounded box (for remembered dialogue). */
-export function quoteBox(ctx, text, x, y, { alpha = 1, size = 54, maxW = 860, col = '#ffffff', bg = 'rgba(30,18,50,0.55)' } = {}) {
+export function quoteBox(ctx, text, x, y, { alpha = 1, size = 54, maxW = 860, col = '#fffaf0', bg = 'rgba(24,14,42,0.78)' } = {}) {
   if (alpha <= 0) return;
   ctx.save(); ctx.globalAlpha = alpha;
-  ctx.font = `italic 400 ${size}px 'Noto Serif'`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.font = `italic 600 ${size}px 'Noto Serif'`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   const words = text.split(' '), lines = []; let cur = '';
   for (const w of words) { const tt = cur ? cur + ' ' + w : w; if (ctx.measureText(tt).width > maxW && cur) { lines.push(cur); cur = w; } else cur = tt; }
   lines.push(cur);
-  const lh = size * 1.3, bw = Math.max(...lines.map((l) => ctx.measureText(l).width)) + 80, bh = lines.length * lh + 50;
+  const lh = size * 1.3, bw = Math.max(...lines.map((l) => ctx.measureText(l).width)) + 88, bh = lines.length * lh + 54;
   ctx.fillStyle = bg; ctx.beginPath(); ctx.roundRect(x - bw / 2, y - bh / 2, bw, bh, 30); ctx.fill();
-  ctx.fillStyle = col; lines.forEach((l, i) => ctx.fillText(l, x, y - bh / 2 + 25 + lh * (i + 0.5)));
+  ctx.strokeStyle = 'rgba(255,222,170,0.45)'; ctx.lineWidth = 2.5; ctx.stroke();
+  ctx.shadowColor = 'rgba(15,6,28,0.85)'; ctx.shadowBlur = 10;
+  ctx.fillStyle = col; lines.forEach((l, i) => ctx.fillText(l, x, y - bh / 2 + 27 + lh * (i + 0.5)));
   ctx.restore();
 }
 /** Soft light leak (for flashbacks / transitions): warm blobs drifting, additive. */

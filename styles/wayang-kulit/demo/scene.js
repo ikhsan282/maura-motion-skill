@@ -1,4 +1,4 @@
-// Wayang Kulit demo: "Arjuna di Kurusetra" (Mahabharata / Bhagavad Gita), 14 shots timed to the narration.
+// Wayang Kulit demo: "Arjuna di Kurusetra" (Mahabharata / Bhagavad Gita), shots timed to the narration.
 import * as K from '/styles/wayang-kulit/kit.js';
 const { clamp, lerp, ease, prog, env, noise, hrand } = AM.lib;
 
@@ -6,11 +6,11 @@ export const meta = { fps: 24, captions: { preset: 'serif', y: 1500 } };
 
 let ctx, fx;
 let C = {};
+const W = (id, w) => (C[id] ? AM.wordTime(id, w) : 0);
 export async function setup(AM) {
   ctx = AM.layer('world');
   fx = AM.layer('fx');
   for (const l of AM.timeline.lines) C[l.id] = l;
-  const W = (id, w) => AM.wordTime(id, w);
   // sound design: dalang's keprak/cempala knocks, gong on the big moments
   AM.sfx('gong', 0.02, { gain: 0.55 });
   AM.sfx('keprak', 0.05, { gain: 0.5 });
@@ -67,7 +67,7 @@ shot('hook', 'arjuna', (t, a, b) => {
   const p = (t - a) / (b - a);
   camera(1 + 0.07 * ease.inOutSine(p), 540, 1000);
   K.kelir(ctx, t, { flick: 1.4 });
-  const drop = AM.wordTime('hook', 'menjatuhkan');
+  const drop = W('hook', 'menjatuhkan');
   const fall = clamp((t - drop - 0.2) / 0.9);
   const o = { x: 250, y: 2380, s: 1.75, t, armF: [0.35 + tremble(t, 0.05) + fall * 0.2, 2.3 - fall * 1.6], armB: [-0.25, 0.4] };
   K.puppet(ctx, 'arjuna', o);
@@ -104,7 +104,7 @@ shot('arjuna', 'kurawa', (t, a, b) => {
   K.puppet(ctx, 'arjuna', { x: cx - 80, y: deck, s: 0.62, t, armF: [0.6, 0.6] });
   K.gedebog(ctx, 1800);
   ctx.setTransform(1, 0, 0, 1, 0, 0);
-  K.nameplate(ctx, 'ARJUNA', 540, 300, { alpha: env(t, AM.wordTime('arjuna', 'Arjuna'), b, 0.4, 0.3) });
+  K.nameplate(ctx, 'ARJUNA', 540, 300, { alpha: env(t, W('arjuna', 'Arjuna') || a, b, 0.4, 0.3) });
 });
 
 // 3. A hundred Kurawa march in, rows on rows.
@@ -127,7 +127,7 @@ shot('kurawa', 'bisma', (t, a, b) => {
   });
   K.gedebog(ctx, 1800);
   ctx.setTransform(1, 0, 0, 1, 0, 0);
-  const n = AM.wordTime('kurawa', 'seratus');
+  const n = W('kurawa', 'seratus') || a;
   const na = env(t, n - 0.1, b, 0.35, 0.3);
   const count = Math.round(lerp(1, 100, ease.outCubic(clamp((t - n + 0.1) / 1.0))));
   K.goldTitle(ctx, String(count), 540, 420, { size: 200, alpha: na, spacing: 4 });
@@ -194,10 +194,10 @@ shot('kresna', 'nasihat', (t, a, b) => {
   const p = (t - a) / (b - a);
   camera(1.15 + 0.06 * p, 520, 1150);
   K.kelir(ctx, t);
-  const turn = AM.wordTime('kresna', 'menoleh');
+  const turn = W('kresna', 'menoleh');
   const f = ease.inOutCubic(clamp((t - turn) / 0.3));
   const face = Math.cos(f * Math.PI); // 1 -> -1, with the thin edge-on moment in between
-  const reveal = env(t, AM.wordTime('kresna', 'Dialah'), b + 1, 0.8, 0.5);
+  const reveal = env(t, W('kresna', 'Dialah'), b + 1, 0.8, 0.5);
   glowBehind(640, 1050, 520 + 80 * Math.sin(t * 2), 0.55 * reveal);
   K.chariot(ctx, 450, 1600, { s: 0.85, wheel: 0, flag: t * 0.5 });
   const deck = 1600 - 250 * 0.85;
@@ -275,7 +275,7 @@ shot('gita', 'moral', (t, a, b) => {
   K.chariot(ctx, 200, 1800, { s: 0.38, flag: t * 0.6, alpha: 0.6 });
   K.chariot(ctx, 880, 1800, { s: 0.38, face: -1, flag: t * 0.6, alpha: 0.6 });
   ctx.setTransform(1, 0, 0, 1, 0, 0);
-  const ga = env(t, AM.wordTime('gita', 'Bhagavad') - 0.2, b + 0.2, 0.6, 0.4);
+  const ga = env(t, (W('gita', 'Bhagavad') || a) - 0.2, b + 0.2, 0.6, 0.4);
   K.goldTitle(ctx, 'BHAGAVAD', 540, 330, { size: 92, alpha: ga });
   K.goldTitle(ctx, 'GITA', 540, 440, { size: 92, alpha: ga });
   K.nameplate(ctx, 'NYANYIAN SANG ILAHI', 540, 530, { alpha: ga * 0.9, size: 30 });

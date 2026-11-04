@@ -15,13 +15,16 @@ MODELS = os.environ.get('AM_MODELS', os.path.join(os.path.expanduser('~'), '.cac
 SR = 24000
 
 # Default voice per language — ganti di sini kalau mau suara lain jadi standar.
-# el-id-f = Alice (ElevenLabs, natural, butuh API key). Alternatif gratis offline: id-f.
-DEFAULT_VOICE = {'id': 'el-id-m', 'en': 'en-m'}
+# el-id-m = George (ElevenLabs, natural, butuh API key). Alternatif gratis offline: id-m.
+DEFAULT_VOICE = {'id': 'el-id-m', 'en': 'el-id-m'}
 
 VOICES = {
-    # ElevenLabs (cloud, natural) — needs ELEVENLABS_API_KEY in ~/.hermes/elevenlabs.env
-    'el-id-m': {'engine': 'elevenlabs', 'voice': 'pNInz6obpgDQGcFmaJgB', 'model': 'eleven_multilingual_v2', 'desc': 'George, pria hangat storyteller (ElevenLabs)'},
-    'el-id-f': {'engine': 'elevenlabs', 'voice': 'Xb7hH8MSUJpSbSDYk0k2', 'model': 'eleven_multilingual_v2', 'desc': 'Wanita Indonesia, natural (ElevenLabs)'},
+    # ElevenLabs (cloud, natural) — needs ELEVENLABS_API_KEY in ~/.hermes/elevenlabs.env or .env
+    'el-id-m': {'engine': 'elevenlabs', 'voice': 'JBFqnCBsd6RMkjVDRZzb', 'model': 'eleven_multilingual_v2', 'desc': 'George, pria hangat storyteller (ElevenLabs, default)'},
+    'el-id-f': {'engine': 'elevenlabs', 'voice': 'Xb7hH8MSUJpSbSDYk0k2', 'model': 'eleven_multilingual_v2', 'desc': 'Alice, wanita natural (ElevenLabs)'},
+    'george':  {'engine': 'elevenlabs', 'voice': 'JBFqnCBsd6RMkjVDRZzb', 'model': 'eleven_multilingual_v2', 'desc': 'Alias el-id-m (George, ElevenLabs)'},
+    'alice':   {'engine': 'elevenlabs', 'voice': 'Xb7hH8MSUJpSbSDYk0k2', 'model': 'eleven_multilingual_v2', 'desc': 'Alias el-id-f (Alice, ElevenLabs)'},
+    'adam':    {'engine': 'elevenlabs', 'voice': 'pNInz6obpgDQGcFmaJgB', 'model': 'eleven_multilingual_v2', 'desc': 'Adam, pria tegas (ElevenLabs)'},
     # Indonesian (espeak 'id' phonemes into Kokoro voices that pronounce them most clearly)
     'id-m':  {'engine': 'kokoro', 'voice': 'hm_omega', 'phon': 'id', 'speed': 1.12,  'desc': 'Pria, hangat & jelas (default)'},
     'id-f':  {'engine': 'kokoro', 'voice': 'hf_beta',  'phon': 'id', 'speed': 1.1,  'desc': 'Wanita, jernih'},
@@ -56,7 +59,7 @@ def terbilang(n):
 
 def normalize_id(s):
     s = re.sub(r'(\d+)\s?%', lambda m: terbilang(m.group(1)) + ' persen', s)
-    s = re.sub(r'(\d+)\.(\d{3})', r'\1\2', s)
+    s = re.sub(r'(?<=\d)\.(?=\d{3}\b)', '', s)
     s = re.sub(r'\d+', lambda m: terbilang(m.group(0)), s)
     s = s.replace('&', ' dan ').replace('—', ', ').replace('–', ', ').replace('…', '...')
     return s
@@ -103,19 +106,29 @@ def synth_piper(text, v, speed):
     a = np.concatenate(chunks) if chunks else np.zeros(1000, np.float32)
     return a, pv.config.sample_rate
 
+def _find_elevenlabs_key():
+    key = os.environ.get('ELEVENLABS_API_KEY')
+    if key: return key
+    root_env = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
+    for p in [os.path.expanduser('~/.hermes/elevenlabs.env'), root_env]:
+        if os.path.exists(p):
+            for ln in open(p, encoding='utf-8'):
+                if ln.strip().startswith('ELEVENLABS_API_KEY'):
+                    return ln.split('=', 1)[1].strip().strip('"').strip("'")
+    return None
+
 _eleven = None
 def synth_elevenlabs(text, v, speed):
     import urllib.request
-    key = None
-    for p in [os.path.expanduser('~/.hermes/elevenlabs.env'), os.path.expanduser('~/.hermes/elevenlabs.env')]:
-        if os.path.exists(p):
-            for ln in open(p):
-                if ln.strip().startswith('ELEVENLABS_API_KEY'):
-                    key = ln.split('=', 1)[1].strip().strip('"').strip("'")
-    key = key or os.environ.get('ELEVENLABS_API_KEY')
-    if not key: sys.exit('ElevenLabs voice needs ELEVENLABS_API_KEY in ~/.hermes/elevenlabs.env')
+    key = _find_elevenlabs_key()
+    if not key: sys.exit('ElevenLabs voice needs ELEVENLABS_API_KEY in ~/.hermes/elevenlabs.env or .env')
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{v['voice']}"
-    body = json.dumps({'text': text, 'model_id': v.get('model', 'eleven_multilingual_v2')}).encode()
+    sp = max(0.7, min(1.2, float(speed or 1.0)))
+    body = json.dumps({
+        'text': text,
+        'model_id': v.get('model', 'eleven_multilingual_v2'),
+        'voice_settings': {'stability': 0.5, 'similarity_boost': 0.75, 'speed': sp},
+    }).encode()
     req = urllib.request.Request(url, data=body, headers={'xi-api-key': key, 'Content-Type': 'application/json'})
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
@@ -178,9 +191,14 @@ def main():
     a = ap.parse_args()
     proj = os.path.abspath(a.project)
     story = json.load(open(os.path.join(proj, 'story.json'), encoding='utf-8'))
-    vname = a.voice or story.get('voice') or DEFAULT_VOICE.get(story.get('lang', 'id'), 'id-m')
+    vname = a.voice or story.get('voice') or DEFAULT_VOICE.get(story.get('lang', 'id'), 'el-id-m')
     if vname not in VOICES: sys.exit(f'unknown voice {vname}. choose: {", ".join(VOICES)}')
     v = VOICES[vname]
+    if v['engine'] == 'elevenlabs' and not _find_elevenlabs_key():
+        fb = 'id-f' if vname in ('el-id-f', 'alice') else 'id-m'
+        print(f'!! ELEVENLABS_API_KEY not found; falling back from {vname} to offline voice {fb}')
+        vname = fb
+        v = VOICES[vname]
     speed = a.speed or story.get('speed') or v.get('speed', 1.0)
     lang = story.get('lang', 'id')
     lead = float(story.get('lead', 0.3)); tail = float(story.get('tail', 1.0))
@@ -191,7 +209,7 @@ def main():
     tl_path = os.path.join(build, 'timeline.json')
     if not a.force and os.path.exists(tl_path):
         try:
-            old = json.load(open(tl_path))
+            old = json.load(open(tl_path, encoding='utf-8'))
             if old.get('key') == key and os.path.exists(os.path.join(build, 'narration.wav')):
                 if old['duration'] > max_dur + 0.01: sys.exit(f"!! TOO LONG: {old['duration']:.1f}s > {max_dur:.0f}s limit.")
                 print('narration up to date'); return
@@ -200,8 +218,16 @@ def main():
     # one narrator at a time on this machine (the voice model is large)
     lockf = None
     try:
-        import fcntl, tempfile
-        lockf = open(os.path.join(tempfile.gettempdir(), 'maura-motion-tts.lock'), 'w'); fcntl.flock(lockf, fcntl.LOCK_EX)
+        import tempfile
+        lock_path = os.path.join(tempfile.gettempdir(), 'maura-motion-tts.lock')
+        lockf = open(lock_path, 'w')
+        if os.name == 'nt':
+            import msvcrt
+            lockf.write('1'); lockf.flush(); lockf.seek(0)
+            msvcrt.locking(lockf.fileno(), msvcrt.LK_LOCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(lockf, fcntl.LOCK_EX)
     except Exception: pass
     pieces = [np.zeros(int(lead * SR), np.float32)]
     t = lead; lines = []
@@ -226,7 +252,7 @@ def main():
     duration = round(t + tail, 3)
     narr = np.concatenate([narr, np.zeros(max(0, int(duration * SR) - len(narr)), np.float32)])
     sf.write(os.path.join(build, 'narration.wav'), narr, SR)
-    json.dump({'key': key, 'voice': vname, 'duration': duration, 'lead': lead, 'lines': lines}, open(tl_path, 'w'), ensure_ascii=False, indent=1)
+    json.dump({'key': key, 'voice': vname, 'duration': duration, 'lead': lead, 'lines': lines}, open(tl_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'narration: {duration:.1f}s, voice {vname} ({v["desc"]})')
     if duration > max_dur + 0.01:
         sys.exit(f'!! TOO LONG: {duration:.1f}s > {max_dur:.0f}s limit. Cut words/lines (or raise "speed" up to 1.2) and run again.')

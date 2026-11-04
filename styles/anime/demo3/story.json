@@ -1,0 +1,60 @@
+{
+ "title": "Rantang Hangat di Peron Senja",
+ "slug": "01_anime_demo3",
+ "style": "anime",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "anime",
+  "db": -16
+ },
+ "lead": 0.4,
+ "tail": 1.4,
+ "pause": 0.3,
+ "speed": 1.08,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Tahun pertamanya bekerja di kota besar, Laras belum mampu membeli tiket pulang ke kampung.",
+   "pause": 0.35
+  },
+  {
+   "id": "rindu",
+   "text": "Setiap kali tugas dinas membawanya naik kereta lintas provinsi, ia hanya bisa menatap jendela."
+  },
+  {
+   "id": "telepon",
+   "text": "Sore itu, ibunya mengirim pesan singkat: keretamu berhenti dua menit di stasiun desa, kan?"
+  },
+  {
+   "id": "stasiun",
+   "text": "Saat roda kereta melambat di stasiun kecil itu, dari kejauhan tampak sosok berhijab yang sangat ia kenal."
+  },
+  {
+   "id": "lari",
+   "text": "Pintu gerbong terbuka. Laras berlari turun, sementara waktu berhenti kereta hanya seratus dua puluh detik."
+  },
+  {
+   "id": "bekal",
+   "text": "Dengan napas terengah, sang ibu mengulurkan bungkusan rantang hangat yang baru selesai dimasak."
+  },
+  {
+   "id": "ucapan",
+   "text": "Ibunya tersenyum sambil berkata: makanlah yang kenyang, Nak, jangan pernah merasa sendirian di kota."
+  },
+  {
+   "id": "berangkat",
+   "text": "Peluit keberangkatan berbunyi. Kereta kembali melaju menembus senja, meninggalkan lambaian tangan ibunya."
+  },
+  {
+   "id": "airmata",
+   "text": "Di balik kaca jendela, air mata Laras jatuh tepat ketika aroma masakan rumah memenuhi gerbong."
+  },
+  {
+   "id": "akhir",
+   "text": "Sejauh apa pun langkah kita merantau, doa seorang ibu selalu ikut di setiap perjalanan."
+  }
+ ]
+}
+

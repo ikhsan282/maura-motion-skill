@@ -43,8 +43,9 @@ function serve() {
     if (url === '/' || url === '/index.html') { res.writeHead(200, { 'content-type': 'text/html' }); return fs.createReadStream(path.join(SKILL, 'engine', 'stage.html')).pipe(res); }
     for (const [pre, root] of Object.entries(roots)) {
       if (url.startsWith(pre)) {
-        const file = path.join(root, url.slice(pre.length));
-        if (!file.startsWith(root) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) break;
+        const file = path.resolve(root, url.slice(pre.length));
+        const rel = path.relative(root, file);
+        if (rel.startsWith('..') || path.isAbsolute(rel) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) break;
         res.writeHead(200, { 'content-type': TYPES[path.extname(file).toLowerCase()] || 'application/octet-stream', 'cache-control': 'no-store' });
         return fs.createReadStream(file).pipe(res);
       }
@@ -85,8 +86,13 @@ async function acquireSlot(pool = 'render', n = parseInt(process.env.AM_RENDER_S
       const f = path.join(dir, `slot${k}`);
       try { fs.mkdirSync(f); fs.writeFileSync(path.join(f, 'pid'), String(process.pid)); return () => fs.rmSync(f, { recursive: true, force: true }); }
       catch {
-        try { const pid = +fs.readFileSync(path.join(f, 'pid'), 'utf8'); process.kill(pid, 0); }
-        catch { fs.rmSync(f, { recursive: true, force: true }); }
+        try {
+          const pid = +fs.readFileSync(path.join(f, 'pid'), 'utf8');
+          if (!pid) throw Object.assign(new Error('empty pid'), { code: 'ESRCH' });
+          process.kill(pid, 0);
+        } catch (err) {
+          if (!err || err.code !== 'EPERM') fs.rmSync(f, { recursive: true, force: true });
+        }
       }
     }
     await new Promise((r) => setTimeout(r, 1500));

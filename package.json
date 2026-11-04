@@ -1,0 +1,15 @@
+{
+  "name": "maura-motion-skill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Maura Motion — 77 code-drawn animation styles for vertical narrative videos",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "make": "node scripts/make.mjs",
+    "render": "node engine/render.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.64.1"
+  }
+}

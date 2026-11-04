@@ -1,0 +1,60 @@
+{
+ "title": "Bawang Putih & Labu Emas",
+ "slug": "05_clay-stop-motion_demo3",
+ "style": "clay-stop-motion",
+ "lang": "id",
+ "voice": "el-id-m",
+ "maxDuration": 90,
+ "music": {
+  "preset": "playful",
+  "db": -17
+ },
+ "lead": 0.35,
+ "tail": 1.2,
+ "pause": 0.25,
+ "speed": 1.12,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Di sebuah desa tanah liat yang tenang, sebutir labu kecil tiba-tiba memancarkan kilau emas saat dibelah!",
+   "pause": 0.3
+  },
+  {
+   "id": "cucian",
+   "text": "Kisahnya bermula ketika Bawang Putih mencuci di sungai, lalu selendang merah milik saudaranya hanyut terbawa arus."
+  },
+  {
+   "id": "nenek",
+   "text": "Menyusuri tepian sungai hingga sore, ia bertemu seorang nenek ramah yang menemukan selendang itu di dekat gubuknya."
+  },
+  {
+   "id": "bantu",
+   "text": "Dengan tulus, Bawang Putih membantu sang nenek membersihkan halaman dan menanak nasi memakai centong kayu."
+  },
+  {
+   "id": "hadiah",
+   "text": "Sebagai hadiah perpisahan, nenek menyuruhnya memilih satu dari dua labu: Bawang Putih memilih labu yang kecil."
+  },
+  {
+   "id": "emas",
+   "text": "Sesampainya di rumah, begitu labu kecil itu dibuka, kepingan emas dan permata berkilau tumpah memenuhi lantai!"
+  },
+  {
+   "id": "serakah",
+   "text": "Melihat harta itu, Bawang Merah yang serakah langsung datang ke gubuk nenek tanpa mau membantu sedikit pun."
+  },
+  {
+   "id": "rebut",
+   "text": "Tanpa mengucap terima kasih, ia merebut labu yang paling besar dan membawanya pulang sambil tertawa bangga."
+  },
+  {
+   "id": "kejutan",
+   "text": "Namun saat labu raksasa itu dibelah, yang keluar justru kepulan asap dan makhluk jahil yang membuatnya lari ketakutan!"
+  },
+  {
+   "id": "akhir",
+   "text": "Dari kisah ini kita belajar: ketulusan dan sikap rendah hati selalu membawa berkah yang sesungguhnya."
+  }
+ ]
+}
+

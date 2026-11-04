@@ -5,7 +5,7 @@ no: 1
 source: drive:01_Anime + github:anime-cel, anime-motion-comic
 family: 2D
 tech: canvas2d
-music: anime   voice: id-f   captions: bold
+music: anime   voice: el-id-m   captions: bold
 best_for: slice-of-life emosional, mudik/pulang kampung, kisah keluarga, perjalanan, cinta pertama, kenangan masa kecil
 ---
 # Anime
@@ -42,7 +42,7 @@ ternyata [kenangan besar]." / "Sudah [n] tahun ia [tidak melakukan X]. Malam ini
 - Tempat: `station(ctx,t,{cam:{z}})` peron perspektif dengan kereta, `trainSide({open, part:'body'|'doors'})`, `landscape` (pemandangan jendela bergerak), `village`, `house`, `palm`, `obor`.
 - Properti & teks: `clock`, `ticketHand`, `nameCard`, `filmTitle`, `quoteBox`, `lightLeak`, `memoryFrame`.
 
-**Demo:** "Tiket Terakhir Mudik", 19,2 dtk, 6 shot. Laras berlari di peron golden hour (flare) → pintu kereta menutup,
-ia melompat masuk, wajah lega di kaca pintu → di jendela kereta, "3 Lebaran" dan janji "Lebaran ini aku pulang, Bu",
-air mata jatuh → kereta tertahan sinyal merah saat matahari tenggelam (jam berjalan) → malam takbiran, ibu menunggu di
-pintu, pelukan → desa bercahaya obor, judul "Tiket Terakhir".
+**Demos:**
+- **`demo1/` ("Tiket Terakhir Mudik", 17,9 dtk, 6 shot, voice `el-id-f`):** Laras berlari mengejar kereta terakhir saat golden hour, melompat melewati pintu kereta, mengingat janji 3 Lebaran, tertahan sinyal saat matahari tenggelam, hingga disambut ibunya di malam takbiran.
+- **`demo2/` ("Surat di Ujung Peron", 57,7 dtk, 10 shot, voice `el-id-f`):** Sepuluh tahun setelah lulus dan berpisah tanpa sempat berpamitan di stasiun, Laras menerima sepucuk surat lama yang menuntunnya kembali ke bangku kayu di ujung peron saat senja.
+- **`demo3/` ("Rantang Hangat di Peron Senja", ~58 dtk, 10 shot, voice `el-id-m`):** Tahun pertama merantau di kota besar dan belum mampu mudik, kereta dinas Laras berhenti 2 menit di stasiun desa tempat ibunya sudah menunggu sambil membawa rantang masakan hangat.

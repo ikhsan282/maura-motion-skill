@@ -5,8 +5,23 @@ build/
 out/
 *.log
 
+# video & audio render outputs (jangan pernah di-push)
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.avi
+*.wav
+
+# python bytecode & venv
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
 # voice models & venv (diinstall via scripts/setup.mjs, jangan commit)
 .cache/
+.env
 
 # OS
 .DS_Store

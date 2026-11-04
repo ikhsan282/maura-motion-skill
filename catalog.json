@@ -6,7 +6,7 @@
   "source": "drive:01_Anime + github:anime-cel",
   "family": "2D",
   "tech": "canvas2d",
-  "voice": "id-f",
+  "voice": "el-id-m",
   "music": "anime",
   "captions": "bold",
   "story": "Tiket Terakhir Mudik",
@@ -62,7 +62,7 @@
   "source": "drive:05_Clay_Stop_Motion + github:clay-toy-diorama + github:claymation-soft-3d",
   "family": "3D",
   "tech": "three",
-  "voice": "id-f",
+  "voice": "el-id-m",
   "music": "playful",
   "captions": "kids",
   "story": "Timun Mas & Buto Ijo",
@@ -961,9 +961,9 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-3dworld",
-  "hook": "",
-  "concept": ""
+  "story": "Kenapa Kita Menunda-nunda (Dark Notebook)",
+  "hook": "Kamu bukan pemalas. Otakmu cuma kabur dari rasa tidak enak.",
+  "concept": "Notebook doodle gelap (#0e1626): panel sketsa tangan per baris — tulisan PEMALAS? dicoret merah, awan rasa-tak-enak, alarm amigdala KABUR!, HP lega lalu hujan rasa bersalah, timer biru 5 menit, dorong batu TUGAS yang menyusut jadi kerikil."
  },
  {
   "no": 70,
@@ -975,9 +975,9 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-beanie",
-  "hook": "",
-  "concept": ""
+  "story": "Kupluk Merah vs Mager",
+  "hook": "Kamu bukan pemalas, katamu sambil pakai kupluk.",
+  "concept": "Studio putih + grid abu: satu stickman kupluk rajut merah + pompom, kaos kuning. Ekspresi ganti per panel (shock, worried, happy, grin), bubble komik Permanent Marker merah."
  },
  {
   "no": 71,
@@ -989,9 +989,9 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-caveman",
-  "hook": "",
-  "concept": ""
+  "story": "Otak Gua vs Tugas",
+  "hook": "Kamu bukan pemalas. Otakmu cuma kabur dari rasa tidak enak.",
+  "concept": "Notebook gua (#241610): panel sketsa + stickman gua berambut gondrong, cawat, pentungan kayu. Amigdala sebagai alarm purba KABUR!, batu TUGAS diseret menyusut dengan efek boil tangan."
  },
  {
   "no": 72,
@@ -1003,9 +1003,9 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-cinematic",
-  "hook": "",
-  "concept": ""
+  "story": "Kota Tidur, Mimpi Belum Selesai",
+  "hook": "Kota tidur, tapi mimpimu belum selesai.",
+  "concept": "Sunset sinematik: gradien ungu-magenta-oranye, matahari radial glow, siluet stickman jas panjang + rim light biru, bubble gelap teks oranye, dan letterbox dramatis."
  },
  {
   "no": 73,
@@ -1017,9 +1017,9 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-duo",
-  "hook": "",
-  "concept": ""
+  "story": "Gas Bareng, Jangan Mager",
+  "hook": "A: Mager lagi? B: Iya, parah.",
+  "concept": "Studio putih dengan dua stickman berdampingan (A bertopi merah, B berkacamata biru). Dialog A/B bergantian per panel dalam bubble komik, ditutup pose kompak gas bareng."
  },
  {
   "no": 74,
@@ -1031,9 +1031,9 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-graffiti",
-  "hook": "",
-  "concept": ""
+  "story": "Coretan Pertama di Tembok Kota",
+  "hook": "Tembok ini saksi mimpimu!",
+  "concept": "Tembok gelap (#101014) dengan coretan neon graffiti pink (#ff2fb3) dan cyan (#22e6ff). Stickman putih ber-beanie pink, bubble kata satu kata per panel (FOKUS!, MULAI!, GAS!, BISA!, MENANG!)."
  },
  {
   "no": 75,
@@ -1045,9 +1045,9 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-lecture",
-  "hook": "",
-  "concept": ""
+  "story": "Kuliah Singkat: Kenapa Otak Kabur",
+  "hook": "Anak-anak, perhatian ke papan tulis!",
+  "concept": "Papan tulis hijau (#1e4d3b) berbingkai kuning kapur (#f6d24a), garis kapur putih transparan, stickman putih ber-beanie kuning, dan bubble kata per panel."
  },
  {
   "no": 76,
@@ -1059,9 +1059,9 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-minimal-dark",
-  "hook": "",
-  "concept": ""
+  "story": "Kenapa Kita Menunda-nunda (Minimal Dark)",
+  "hook": "Kamu bukan pemalas. Otakmu cuma kabur dari rasa tidak enak.",
+  "concept": "Hitam pekat (#000000), tinta putih, aksen merah alarm (#e0412f) + biru timer (#2f6fd6). Panel doodle progresif mengikuti word-timing dengan stickman mendorong batu TUGAS hingga menyusut."
  },
  {
   "no": 77,
@@ -1073,8 +1073,8 @@
   "voice": "el-id-m",
   "music": "lofi",
   "captions": "hand",
-  "story": "Demo stickman-picturebook",
-  "hook": "",
-  "concept": ""
+  "story": "Kenapa Kita Menunda-nunda (Picturebook)",
+  "hook": "Kamu bukan pemalas. Otakmu cuma kabur dari rasa tidak enak.",
+  "concept": "Kertas krem hangat (#fdf3d8), tinta cokelat (#5b4a3a), aksen merah, biru, dan kuning. Ilustrasi doodle hangat bergaya buku cerita yang ramah mata di layar malam."
  }
 ]

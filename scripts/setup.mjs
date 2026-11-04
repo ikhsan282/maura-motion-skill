@@ -16,7 +16,12 @@ const win = process.platform === 'win32';
 const ok = (m) => console.log('  ✓ ' + m), bad = (m) => console.log('  !! ' + m);
 let failed = false;
 
-const has = (bin, args = ['-version']) => spawnSync(bin, args, { encoding: 'utf8' }).status === 0;
+const has = (bin, args = ['-version'], match = null) => {
+  const r = spawnSync(bin, args, { encoding: 'utf8' });
+  if (r.status !== 0) return false;
+  if (match) return match.test((r.stdout || '') + (r.stderr || ''));
+  return true;
+};
 console.log('Maura Motion setup\n');
 if (+process.versions.node.split('.')[0] < 22) { bad(`Node ${process.versions.node}: need 22+ (https://nodejs.org)`); failed = true; } else ok(`Node ${process.versions.node}`);
 if (has('ffmpeg')) ok('ffmpeg'); else { bad('ffmpeg not found: ' + (win ? 'winget install Gyan.FFmpeg' : process.platform === 'darwin' ? 'brew install ffmpeg' : 'sudo apt install ffmpeg')); failed = true; }
@@ -41,7 +46,8 @@ if (chrome) ok('browser: ' + chrome); else { bad('Chrome/Edge not found: install
 const venv = path.join(CACHE, 'venv');
 const py = win ? path.join(venv, 'Scripts', 'python.exe') : path.join(venv, 'bin', 'python');
 if (!fs.existsSync(py)) {
-  const sys = ['python3', 'python', 'py'].find((b) => has(b, ['--version']));
+  const pyBins = win ? ['python', 'py', 'python3'] : ['python3', 'python'];
+  const sys = pyBins.find((b) => has(b, ['--version'], /Python 3\./));
   if (!sys) { bad('Python 3.10+ not found (https://python.org)'); failed = true; }
   else spawnSync(sys, ['-m', 'venv', venv], { stdio: 'inherit' });
 }
@@ -79,6 +85,6 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'maura-motion-'));
 fs.cpSync(path.join(SKILL, 'styles', 'wayang-kulit', 'demo', 'story.json'), path.join(tmp, 'story.json'));
 fs.cpSync(path.join(SKILL, 'styles', 'wayang-kulit', 'demo', 'scene.js'), path.join(tmp, 'scene.js'));
 const r1 = spawnSync(py, [path.join(SKILL, 'audio', 'tts.py'), tmp], { stdio: 'inherit' });
-const r2 = spawnSync(process.execPath, [path.join(SKILL, 'engine', 'render.mjs'), tmp, '--stills', '3,40'], { stdio: 'inherit' });
+const r2 = spawnSync(process.execPath, [path.join(SKILL, 'engine', 'render.mjs'), tmp, '--stills', '2,8'], { stdio: 'inherit' });
 if (r1.status === 0 && r2.status === 0) console.log(`\nMaura Motion is ready. Test stills: ${path.join(tmp, 'build', 'stills', 'sheet.png')}`);
 else { console.log('\nSetup finished but the smoke test failed (see above).'); process.exit(1); }

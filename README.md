@@ -1,26 +1,32 @@
 # Maura Motion Skill
 
-Library **77 gaya animasi** untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode, bukan AI generate. Pilih gaya, kasih topik/naskah, jadi MP4 + narasi Indonesia/Inggris + caption + musik.
+Library **77 gaya animasi** (65 gaya siap pakai + 12 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
 
-Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa aja.
+Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa saja.
 
 ## Cara pakai (5 langkah)
 
-1. **Pilih gaya** — buka `STYLES.md`, cari yang `best_for`-nya cocok (mudik → `anime`, rute → `isometrik`, promo hype → `kinetic-type`).
-2. **Pelajari kit** — baca `styles/<gaya>/STYLE.md` (ciri visual, gerakan, API) + intip `demo/`.
-3. **Tulis naskah** — bikin `story.json` (4–6 baris untuk 20 dtk, 8–12 baris untuk 40–60 dtk, baris 1 = hook).
+1. **Pilih gaya** — buka `STYLES.md`, cari yang `best_for`-nya cocok (mudik/emosional → `anime`, dongeng plastisin 3D → `clay-stop-motion`, rute → `isometrik`, promo hype → `kinetic-type`).
+2. **Pelajari kit** — baca `styles/<gaya>/STYLE.md` (ciri visual, gerakan, API) + intip `demo1/` (atau `demo/`).
+3. **Tulis naskah** — bikin `story.json` (4–6 baris untuk 20 dtk, 8–12 baris untuk 40–90 dtk, baris 1 = hook).
 4. **Bangun scene** — tulis `scene.js` pakai fungsi dari `kit.js`, satu shot per baris naskah.
-5. **Render** — `node scripts/make.mjs <project>` → MP4 + narasi + musik + caption.
+5. **Render** — `node scripts/make.mjs <project>` → MP4 + narasi + musik + caption + QA sheet.
 
 ```bash
-# setup pertama kali
+# setup pertama kali (cek Chrome, ffmpeg, Python venv, & dependensi audio)
 node scripts/setup.mjs
 
-# render pendek (maks 20 dtk)
-node scripts/make.mjs styles/anime/demo
+# render demo pendek (~17 dtk)
+node scripts/make.mjs styles/anime/demo1
 
-# render panjang (sampai 120 dtk)
-AM_MAX_DURATION=120 node scripts/make.mjs styles/stickman-kisah/demo
+# render ulang paksa & simpan file build sementara (narration.wav, video.mp4, dll)
+node scripts/make.mjs styles/clay-stop-motion/demo2 --force --keep
+
+# render ulang visual/musik saja tanpa memanggil ulang TTS (hemat kuota ElevenLabs)
+node scripts/make.mjs examples/hello --no-tts --keep
+
+# render video panjang (atau set "maxDuration": 90 di story.json)
+AM_MAX_DURATION=90 node scripts/make.mjs styles/stickman-kisah/demo
 ```
 
 Detail lengkap: baca `SKILL.md`. Standar nulis cerita & gaya baru: `AUTHORING.md`.
@@ -31,43 +37,40 @@ Skill ini dirancang untuk dijalankan **bareng AI coding agent**. Kamu cukup ceri
 
 **Contoh prompt (copy-paste, ganti topiknya):**
 
-> Buatkan video vertikal gaya `flat-vector` tentang "ke mana perginya Rp100 ribu".
-> Naskah 5 baris Bahasa Indonesia, hook di baris pertama.
+> Buatkan video vertikal gaya `clay-stop-motion` tentang "Sangkuriang & Perahu Terbalik".
+> Naskah 10 baris Bahasa Indonesia (durasi 50–60 detik), suara George ElevenLabs (`el-id-m`), hook di baris pertama.
 > Render MP4 + narasi + musik, lalu kirim videonya.
 
 **Pola prompt yang works:**
 
 | Mau apa | Bilang gini |
 |---|---|
-| Gaya tertentu | "pakai gaya `kinetic-type`" / "gaya 22" / "kayak lukisan minyak" |
+| Gaya tertentu | "pakai gaya `clay-stop-motion`" / "gaya `anime`" / "gaya 22" |
 | Topik bebas | "buatkan video tentang mudik" (AI pilihkan gaya yang cocok) |
-| Video panjang | "buatkan 60 detik tentang ..." |
+| Video panjang | "buatkan 30–90 detik tentang ..." |
 | Revisi visual | "di detik 7 teksnya numpuk, benerin" |
-| Tambah demo | "jadikan demo resmi gaya ini" |
+| Tambah demo | "buatkan `demo2` dan `demo3` di gaya ini" |
 
 ### Pakai Hermes
 
 Hermes (gateway + kanban) bisa menjalankan skill ini sebagai worker. Cukup kirim prompt seperti di atas ke chat Hermes — Hermes yang akan baca `SKILL.md`, tulis naskah & scene, render, dan kirim MP4-nya ke chat.
 
-Catatan: Hermes butuh akses ke repo ini (`~/maura-motion-skill/`), Node 22+, ffmpeg, Chrome, dan Python 3.10+. Setup sekali: `node scripts/setup.mjs`. Untuk suara manusia (ElevenLabs), taruh key di `~/.hermes/elevenlabs.env`.
+Catatan: Hermes butuh akses ke repo ini (`~/maura-motion-skill/`), Node 22+, ffmpeg, Chrome, dan Python 3.10+. Setup sekali: `node scripts/setup.mjs`. Untuk suara manusia (ElevenLabs), taruh key `ELEVENLABS_API_KEY` di `~/.env`, `~/.hermes/elevenlabs.env`, atau `.env` di root repo.
 
-### Pakai Claude Code
+### Pakai Claude Code / Antigravity
 
-Clone repo ini, lalu jalankan Claude Code dari dalam folder repo:
+Clone repo ini, lalu jalankan agen AI dari dalam folder repo:
 
 ```bash
 git clone https://github.com/ikhsan282/maura-motion-skill.git
 cd maura-motion-skill
 node scripts/setup.mjs
-claude  # atau: claude-code
 ```
 
-Lalu prompt di dalam Claude Code (sama polanya):
+Lalu beri prompt:
 
 > Baca SKILL.md. Buatkan video gaya `infografis-data` tentang "harga bensin 10 tahun".
 > Naskah Bahasa Indonesia 8 baris, render MP4 + narasi ElevenLabs (George), kirim hasilnya.
-
-Claude Code (termasuk paket Pro) tinggal mengikuti `SKILL.md` + `AUTHORING.md` — tidak perlu plugin tambahan. Pastikan `ffmpeg`, Chrome, dan Python 3.10+ tersedia di mesin yang sama.
 
 ## Struktur
 
@@ -76,29 +79,32 @@ Claude Code (termasuk paket Pro) tinggal mengikuti `SKILL.md` + `AUTHORING.md` �
 | `SKILL.md` | Panduan pakai skill (pintu masuk agen) |
 | `AUTHORING.md` | Standar naskah & cara bikin gaya baru |
 | `STYLES.md` / `catalog.json` | Katalog 77 gaya + kecocokan topik |
-| `styles/<gaya>/` | `STYLE.md` + `kit.js` + `demo/` per gaya |
-| `examples/` | Contoh jadi: `hello`, `flat-uang100`, `flat-kepala-macet` |
-| `engine/` | Runtime + renderer (headless Chrome → MP4) |
-| `audio/` | TTS (Kokoro/Piper offline + ElevenLabs), musik, SFX, mixing −14 LUFS |
+| `styles/<gaya>/` | `STYLE.md` + `kit.js` + `demo1/`..`demo3/` (atau `demo/`) per gaya |
+| `examples/` | Contoh unggulan siap tonton: `hello` (*Halo Maura Motion*) & `clay-stop-motion-demo2` (*Sangkuriang & Perahu Terbalik*) |
+| `projects/` | Proyek tambahan (`bulan-papanfakta`, `demo-tangan`, `harga-99-papan`, `papanfakta-ultah23`) |
+| `engine/` | Runtime + renderer (headless Chrome / Playwright → MP4) |
+| `audio/` | TTS (ElevenLabs default George + Kokoro/Piper/SAPI offline fallback), musik, SFX, mixing −14 LUFS |
 | `scripts/` | `setup.mjs`, `make.mjs`, `build_index.py` |
 
 ## Narasi suara
 
-Dua jalur, pilih sesuai kebutuhan:
+Default suara untuk Bahasa Indonesia maupun Inggris adalah **ElevenLabs George** (`el-id-m`, voice ID `JBFqnCBsd6RMkjVDRZzb`):
 
 | Jalur | Suara | Kapan dipakai |
 |---|---|---|
-| Offline (default) | Kokoro/Piper, 19 preset, tanpa API key | Draft, iterasi cepat, tanpa internet |
-| ElevenLabs | George (`el-id-m`), Alice (`el-id-f`) + 2 lagi, model `eleven_multilingual_v2` | Hasil akhir — suara manusia, Bahasa Indonesia natural |
+| **ElevenLabs (default)** | **George** (`el-id-m` / `george`, pria hangat storyteller), **Alice** (`el-id-f`, wanita jelas ramah), model `eleven_multilingual_v2` | Default utama — suara manusia natural dengan word-level alignment |
+| **Offline (fallback otomatis)** | Kokoro / Piper / Windows SAPI, 14 preset (`id-m`, `id-f`, dll), tanpa API key | Otomatis dipakai bila `ELEVENLABS_API_KEY` tidak ditemukan atau kuota habis |
 
-Key ElevenLabs di `~/.hermes/elevenlabs.env` (jangan commit). Semua demo multi-baru pakai George.
+Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`), `~/.hermes/elevenlabs.env`, atau `.env` di folder repo.
 
 ## Gaya dengan demo tambahan
 
-Sebagian gaya punya lebih dari 1 demo (tema berbeda, kit sama):
+Sebagian gaya memiliki beberapa variasi demo dengan cerita dan durasi berbeda:
 
 | Gaya | Demo |
 |---|---|
+| `anime` | 1. "Tiket Terakhir Mudik" (`demo1/`, 17 dtk) · 2. "Surat di Ujung Peron" (`demo2/`, 52 dtk) · 3. "Rantang Hangat di Peron Senja" (`demo3/`, 60 dtk) |
+| `clay-stop-motion` | 1. "Timun Mas & Buto Ijo" (`demo1/`, 17 dtk) · 2. "Sangkuriang & Perahu Terbalik" (`demo2/`, 57 dtk) · 3. "Bawang Putih & Labu Emas" (`demo3/`, 62 dtk) |
 | `flat-vector` | 1. "Cahaya di Wajahmu" (bawaan, 20 dtk) · 2. "Ke Mana Perginya Rp100 Ribu?" (`demo/`, 27 dtk) · 3. "Peta Isi Kepala pas Macet" (`demo-kepala-macet/`, 25 dtk) |
 | `infografis-data` | 1. "Jika Dunia Hanya 100 Orang" (bawaan, 20 dtk) · 2. "Harga Bensin 10 Tahun" (`demo-bensin/`, 39 dtk, Pertalite Rp7.400→Rp10.000) · 3. "Kirim Kucing ke Mana Aja" (`demo-ongkir/`, 41 dtk, tarif paket hewan Maura Trans) |
 | `kinetic-type` | 1. "Aturan Dua Menit" (bawaan, 20 dtk) · 2. "Fokus Satu Hal" (`demo-fokus-1-hal/`, 18 dtk) · 3. "Efek Hal Kecil" (`demo-efek-kecil/`, 18 dtk) |
@@ -109,29 +115,105 @@ Sebagian gaya punya lebih dari 1 demo (tema berbeda, kit sama):
 | `papan-tulis-kapur` | 1. "Paradoks Ulang Tahun" (bawaan, 20 dtk) · 2. "Efek SKS" (`demo-sks/`, 20 dtk, deadline + adrenalin) · 3. "Trik 9x Jari" (`demo-rumus/`, 19 dtk, tekuk jari ke-7) |
 | `blueprint` | 1. "Piramida Giza" (bawaan, 20 dtk) · 2. "Denah Rumah 36" (`demo-rumah/`, 21 dtk, 5 ruang + skala) · 3. "Jembatan Gantung" (`demo-jembatan/`, 20 dtk, kabel + menara + dek) |
 | `dark-glow-ui` | 1. "Cyberpunk Login" (bawaan, 20 dtk) · 2. "Notifikasi + FOMO" (`demo-notif/`, 19 dtk, layar HP + digital detox) · 3. "Dashboard Real-time" (`demo-dashboard/`, 15 dtk, chart + metrik + alert) |
-| `hud-showreel` | 1. "Radar Lock" (bawaan, 20 dtk) · 2. "HP Bar" (`demo-hp/`, 14 dtk, damage + heal + KO) · 3. "Skill Cooldown" (`demo-skill/`, 21 dtk, ulti + combo x3 + level up) |
+| `hud-showreel` | 1. "HP Bar" (`demo/` & `demo-hp/`, 14 dtk, damage + heal + KO) · 2. "Skill Cooldown" (`demo-skill/`, 21 dtk, ulti + combo x3 + level up) |
 | `flipbook` | 1. "Lompat Katak" (bawaan, 18 dtk) · 2. "Bola Memantul" (`demo-bola/`, 12 dtk, squash + stretch + gravitasi) · 3. "Stickman Lari" (`demo-lari/`, 16 dtk, langkah + debu + garis gerak) |
 | `garis-tunggal` | 1. "Wajah Satu Garis" (bawaan, 18 dtk) · 2. "Burung Satu Garis" (`demo-burung/`, 20 dtk, paruh + sayap + terbang) · 3. "Tangan Satu Garis" (`demo-tangan/`, 19 dtk, jari + genggam + lambaian) |
 | `pixel-retro` | 1. "Si Pitung: Level Batavia" (bawaan, 19 dtk) · 2. "Kenapa Game Jadul Bikin Nagih" (`demo-nagih/`, 20 dtk, skor + 3 nyawa) · 3. "Tamagotchi 90-an" (`demo-tamagotchi/`, 23 dtk, kasih makan + nisan) |
 | `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
 
-## Status gaya (audit 1 Nov 2026, update stills)
+## Status gaya (77 gaya: 65 siap pakai ✅, 12 belum diimplementasi ❌)
 
-- ✅ **Siap pakai (73):** anime, batik-hidup, blueprint, boneka-rajut, buku-pop-up, cat-air, clay-stop-motion, dark-glow-ui, dunia-blok, flat-vector, flipbook, garis-tunggal, infografis-data, isometrik, kartun-3d-sinematik, kartun-jadul, kartun-outline-tebal, kertas-guntingan, kinetic-type, kotak-cahaya-kertas, lukisan-minyak, lukis-pedesaan, manga-action, math-3b1b, neo-brutalist, noir-dokumenter, origami, papan-tulis-kapur, pixel-retro, pop-art, product-light, riso-halftone, stickman-doodle, stickman-beanie, stickman-cinematic, stickman-duo, stickman-lecture, stickman-graffiti, stickman-3dworld, stickman-picturebook, stickman-caveman, stickman-minimal-dark, stickman-subuh, stickman-pelukis, stickman-kisah, synthwave, terminal-ascii, ui-morph, vhs-arsip, wayang-beber, wayang-kulit, diorama-miniatur, kardus-bekas, gacha-3d, gouache-dongeng, kolase-daun-bunga, partikel, perkamen-ukiran, psychedelic-shader, scrapbook, skala-kosmik, sumi-e, swiss-bauhaus, sketsa-pensil*
-- ❌ **Kosong (11):** chrome-y2k, cutaway-3d, dunia-3d-painterly, editorial-serif, hud-showreel, kaca-patri, lukisan-gua-purba, pastel-krayon, tinta-novel-grafis, trailer-gelap, vas-yunani
-
-*sketsa-pensil: demo ada, still menyusul.
+| No | Gaya | ID | Status |
+|:---:|---|---|---|
+| 1 | **Anime** | anime | ✅ ([demo1](styles/anime/demo1/) · [demo2](styles/anime/demo2/) · [demo3](styles/anime/demo3/)) |
+| 2 | **Kartun 3D Sinematik** | kartun-3d-sinematik | ✅ ([styles/kartun-3d-sinematik](styles/kartun-3d-sinematik/)) |
+| 3 | **Lukis Pedesaan** | lukis-pedesaan | ✅ ([styles/lukis-pedesaan](styles/lukis-pedesaan/)) |
+| 4 | **Dunia Blok (Voxel)** | dunia-blok | ✅ ([styles/dunia-blok](styles/dunia-blok/)) |
+| 5 | **Clay Stop Motion** | clay-stop-motion | ✅ ([demo1](styles/clay-stop-motion/demo1/) · [demo2](styles/clay-stop-motion/demo2/) · [demo3](styles/clay-stop-motion/demo3/)) |
+| 6 | **Boneka Rajut** | boneka-rajut | ✅ ([styles/boneka-rajut](styles/boneka-rajut/)) |
+| 7 | **Pixel Retro** | pixel-retro | ✅ ([styles/pixel-retro](styles/pixel-retro/)) |
+| 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([styles/kertas-guntingan](styles/kertas-guntingan/)) |
+| 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([styles/sketsa-pensil](styles/sketsa-pensil/)) |
+| 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([styles/kartun-jadul](styles/kartun-jadul/)) |
+| 11 | **Wayang Kulit** | wayang-kulit | ✅ ([styles/wayang-kulit](styles/wayang-kulit/)) |
+| 12 | **Low Poly** | low-poly | ❌ (belum diimplementasi) |
+| 13 | **Buku Pop-up** | buku-pop-up | ✅ ([styles/buku-pop-up](styles/buku-pop-up/)) |
+| 14 | **Batik Hidup** | batik-hidup | ✅ ([styles/batik-hidup](styles/batik-hidup/)) |
+| 15 | **Wayang Golek** | wayang-golek | ❌ (belum diimplementasi) |
+| 16 | **Wayang Beber** | wayang-beber | ✅ ([styles/wayang-beber](styles/wayang-beber/)) |
+| 17 | **Lukisan Gua Purba** | lukisan-gua-purba | ❌ (belum diimplementasi) |
+| 18 | **Origami** | origami | ✅ ([styles/origami](styles/origami/)) |
+| 19 | **Kardus Bekas** | kardus-bekas | ✅ ([styles/kardus-bekas](styles/kardus-bekas/)) |
+| 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([styles/kolase-daun-bunga](styles/kolase-daun-bunga/)) |
+| 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([styles/kotak-cahaya-kertas](styles/kotak-cahaya-kertas/)) |
+| 22 | **Lukisan Minyak Bergerak** | lukisan-minyak | ✅ ([styles/lukisan-minyak](styles/lukisan-minyak/)) |
+| 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([styles/papan-tulis-kapur](styles/papan-tulis-kapur/)) |
+| 24 | **Flipbook** | flipbook | ✅ ([styles/flipbook](styles/flipbook/)) |
+| 25 | **Terminal ASCII** | terminal-ascii | ✅ ([styles/terminal-ascii](styles/terminal-ascii/)) |
+| 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([styles/cat-air](styles/cat-air/)) |
+| 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([styles/gouache-dongeng](styles/gouache-dongeng/)) |
+| 28 | **Pastel & Krayon** | pastel-krayon | ❌ (belum diimplementasi) |
+| 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ❌ (belum diimplementasi) |
+| 30 | **Product Film Light** | product-light | ✅ ([styles/product-light](styles/product-light/)) |
+| 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([styles/dark-glow-ui](styles/dark-glow-ui/)) |
+| 32 | **One-Shape UI Morph** | ui-morph | ✅ ([styles/ui-morph](styles/ui-morph/)) |
+| 33 | **Kinetic Typography** | kinetic-type | ✅ ([styles/kinetic-type](styles/kinetic-type/)) |
+| 34 | **Swiss / Bauhaus Grid** | swiss-bauhaus | ✅ ([styles/swiss-bauhaus](styles/swiss-bauhaus/)) |
+| 35 | **Editorial Serif** | editorial-serif | ❌ (belum diimplementasi) |
+| 36 | **Chrome Y2K** | chrome-y2k | ❌ (belum diimplementasi) |
+| 37 | **Noir Dokumenter** | noir-dokumenter | ✅ ([styles/noir-dokumenter](styles/noir-dokumenter/)) |
+| 38 | **VHS & Arsip CRT** | vhs-arsip | ✅ ([styles/vhs-arsip](styles/vhs-arsip/)) |
+| 39 | **Flat Vector Explainer** | flat-vector | ✅ ([styles/flat-vector](styles/flat-vector/)) |
+| 40 | **Kartun Outline Tebal** | kartun-outline-tebal | ✅ ([styles/kartun-outline-tebal](styles/kartun-outline-tebal/)) |
+| 41 | **Neo-Brutalist Bento** | neo-brutalist | ✅ ([styles/neo-brutalist](styles/neo-brutalist/)) |
+| 42 | **Vas Yunani Black-Figure** | vas-yunani | ❌ (belum diimplementasi) |
+| 43 | **Scrapbook Collage** | scrapbook | ✅ ([styles/scrapbook](styles/scrapbook/)) |
+| 44 | **Risograph Halftone** | riso-halftone | ✅ ([styles/riso-halftone](styles/riso-halftone/)) |
+| 45 | **Manga Action** | manga-action | ✅ ([styles/manga-action](styles/manga-action/)) |
+| 46 | **Sumi-e Tinta Timur** | sumi-e | ✅ ([styles/sumi-e](styles/sumi-e/)) |
+| 47 | **Synthwave Neon** | synthwave | ✅ ([styles/synthwave](styles/synthwave/)) |
+| 48 | **Psychedelic Shader** | psychedelic-shader | ✅ ([styles/psychedelic-shader](styles/psychedelic-shader/)) |
+| 49 | **Math Explainer Gelap** | math-3b1b | ✅ ([styles/math-3b1b](styles/math-3b1b/)) |
+| 50 | **Infografis Data** | infografis-data | ✅ ([styles/infografis-data](styles/infografis-data/)) |
+| 51 | **3D Cutaway Explainer** | cutaway-3d | ❌ (belum diimplementasi) |
+| 52 | **Blueprint** | blueprint | ✅ ([styles/blueprint](styles/blueprint/)) |
+| 53 | **Skala Kosmik** | skala-kosmik | ✅ ([styles/skala-kosmik](styles/skala-kosmik/)) |
+| 54 | **Dunia 3D Painterly** | dunia-3d-painterly | ❌ (belum diimplementasi) |
+| 55 | **Diorama Miniatur Tilt-shift** | diorama-miniatur | ✅ ([styles/diorama-miniatur](styles/diorama-miniatur/)) |
+| 56 | **Kawanan Partikel** | partikel | ✅ ([styles/partikel](styles/partikel/)) |
+| 57 | **Pop Art Sunburst** | pop-art | ✅ ([styles/pop-art](styles/pop-art/)) |
+| 58 | **Isometrik** | isometrik | ✅ ([styles/isometrik](styles/isometrik/)) |
+| 59 | **HUD Showreel** | hud-showreel | ✅ ([styles/hud-showreel](styles/hud-showreel/)) |
+| 60 | **Trailer Tipografi Gelap** | trailer-gelap | ❌ (belum diimplementasi) |
+| 61 | **Monoline Satu Garis** | garis-tunggal | ✅ ([styles/garis-tunggal](styles/garis-tunggal/)) |
+| 62 | **Kaca Patri Mosaik** | kaca-patri | ❌ (belum diimplementasi) |
+| 63 | **Perkamen Ukiran Kuno** | perkamen-ukiran | ✅ ([styles/perkamen-ukiran](styles/perkamen-ukiran/)) |
+| 64 | **Toon 3D Gacha Reveal** | gacha-3d | ✅ ([styles/gacha-3d](styles/gacha-3d/)) |
+| 65 | **Stickman Doodle** | stickman-doodle | ✅ ([styles/stickman-doodle](styles/stickman-doodle/)) |
+| 66 | **Stickman Subuh** | stickman-subuh | ✅ ([styles/stickman-subuh](styles/stickman-subuh/)) |
+| 67 | **Stickman Pelukis** | stickman-pelukis | ✅ ([styles/stickman-pelukis](styles/stickman-pelukis/)) |
+| 68 | **Stickman Kisah** | stickman-kisah | ✅ ([styles/stickman-kisah](styles/stickman-kisah/)) |
+| 69 | **Stickman 3D World** | stickman-3dworld | ✅ ([styles/stickman-3dworld](styles/stickman-3dworld/)) |
+| 70 | **Stickman Beanie** | stickman-beanie | ✅ ([styles/stickman-beanie](styles/stickman-beanie/)) |
+| 71 | **Stickman Caveman** | stickman-caveman | ✅ ([styles/stickman-caveman](styles/stickman-caveman/)) |
+| 72 | **Stickman Cinematic** | stickman-cinematic | ✅ ([styles/stickman-cinematic](styles/stickman-cinematic/)) |
+| 73 | **Stickman Duo** | stickman-duo | ✅ ([styles/stickman-duo](styles/stickman-duo/)) |
+| 74 | **Stickman Graffiti** | stickman-graffiti | ✅ ([styles/stickman-graffiti](styles/stickman-graffiti/)) |
+| 75 | **Stickman Lecture** | stickman-lecture | ✅ ([styles/stickman-lecture](styles/stickman-lecture/)) |
+| 76 | **Stickman Minimal Dark** | stickman-minimal-dark | ✅ ([styles/stickman-minimal-dark](styles/stickman-minimal-dark/)) |
+| 77 | **Stickman Picturebook** | stickman-picturebook | ✅ ([styles/stickman-picturebook](styles/stickman-picturebook/)) |
 
 ## Contoh hasil
 
-- "Ke Mana Perginya Rp100 Ribu?" (`styles/flat-vector/demo/`, 27 dtk) — pipa uang mengalir ke 4 kotak: bensin, jajan, parkir, hilang.
-- "Kirim Kucing ke Mana Aja" (`styles/infografis-data/demo-ongkir/`, 41 dtk) — bar chart tarif paket hewan Maura Trans (Bandung 230rb, Tasik 250rb, Ciamis 300rb).
-- `examples/hello/` — contoh minimal 5 baris, render 23 dtk (voice George).
+- `examples/hello/` (*"Halo Maura Motion"*, 19.1 dtk, voice George `el-id-m`) — perkenalan pipeline Maura Motion dalam 5 babak dengan maskot `K.photon`, kartu gaya, kanvas otomatis, dan equalizer audio.
+- `examples/clay-stop-motion-demo2/` (*"Sangkuriang & Perahu Terbalik"*, 56.9 dtk, voice George `el-id-m`) — diorama plastisin 3D 10 babak lengkap dengan gunung perahu, pasukan jin biru, kain fajar palsu, dan ayam berkokok.
+- `styles/anime/demo1/`..`demo3/` (*"Tiket Terakhir Mudik"*, *"Surat di Ujung Peron"*, *"Rantang Hangat di Peron Senja"*, voice George `el-id-m`) — 3 cerita slice-of-life anime 2.5D sinematik.
+- `styles/clay-stop-motion/demo1/`..`demo3/` (*"Timun Mas & Buto Ijo"*, *"Sangkuriang & Perahu Terbalik"*, *"Bawang Putih & Labu Emas"*, voice George `el-id-m`) — 3 dongeng Nusantara bergaya stop-motion tanah liat.
 
 ## Butuh
 
-Node 22+, ffmpeg, Chrome/Chromium, Python 3.10+. Narasi offline (tidak perlu API key); ElevenLabs opsional untuk suara manusia.
+Node 22+, ffmpeg, Chrome/Chromium (via Playwright), Python 3.10+ (`numpy`, `soundfile`, `scipy`). Narasi utama menggunakan ElevenLabs (`el-id-m` George) dengan fallback otomatis ke TTS offline.
 
 ## Lisensi
 

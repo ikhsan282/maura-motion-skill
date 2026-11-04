@@ -342,6 +342,17 @@ def compose(preset, dur, cues, seed=3, bpm=None, key=None):
     out = np.tanh(out * 1.4) / 1.4
     return out.astype(np.float32)
 
+def fallback_timeline(story):
+    t = float(story.get('lead', 0.4))
+    default_pause = float(story.get('pause', 0.35))
+    lines = []
+    for i, l in enumerate(story.get('lines', [])):
+        words = l.get('text', '').split()
+        dur = max(1.2, len(words) / 2.45)
+        lines.append({'id': l.get('id', f'l{i}'), 'text': l.get('text', ''), 'start': round(t, 3), 'end': round(t + dur, 3)})
+        t += dur + float(l.get('pause', default_pause))
+    return {'duration': round(t + float(story.get('tail', 1.6)), 3), 'lines': lines}
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('project'); ap.add_argument('--preset'); ap.add_argument('--seed', type=int); ap.add_argument('--list', action='store_true')
@@ -351,7 +362,8 @@ def main():
         return
     proj = os.path.abspath(a.project)
     story = json.load(open(os.path.join(proj, 'story.json'), encoding='utf-8'))
-    tl = json.load(open(os.path.join(proj, 'build', 'timeline.json')))
+    tl_path = os.path.join(proj, 'build', 'timeline.json')
+    tl = json.load(open(tl_path, encoding='utf-8')) if os.path.exists(tl_path) else fallback_timeline(story)
     m = story.get('music', 'cinematic')
     if isinstance(m, str): m = {'preset': m}
     preset = a.preset or m.get('preset', 'cinematic')
@@ -359,6 +371,7 @@ def main():
     dur = float(story.get('duration') or tl['duration'])
     key = tuple(m['key']) if m.get('key') else None
     audio = compose(preset, dur, tl, seed=a.seed or m.get('seed', 3), bpm=m.get('bpm'), key=key)
+    os.makedirs(os.path.join(proj, 'build'), exist_ok=True)
     sf.write(os.path.join(proj, 'build', 'music.wav'), audio.T, SR)
     print(f'music: {preset} {dur:.1f}s')
 

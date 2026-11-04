@@ -1,0 +1,59 @@
+{
+    "title": "Surat di Ujung Peron",
+    "slug": "01_anime_demo2",
+    "style": "anime",
+    "lang": "id",
+    "voice": "el-id-m",
+    "maxDuration": 90,
+    "music": {
+        "preset": "anime",
+        "db": -16
+    },
+    "lead": 0.4,
+    "tail": 1.4,
+    "pause": 0.3,
+    "speed": 1.08,
+    "lines": [
+        {
+            "id": "hook",
+            "text": "Sepuluh tahun setelah lulus, Laras kembali ke stasiun kecil di ujung kotanya.",
+            "pause": 0.35
+        },
+        {
+            "id": "kenangan",
+            "text": "Dulu, setiap sore sepulang sekolah, ada sahabat kecil yang selalu menunggunya di peron ini."
+        },
+        {
+            "id": "pindah",
+            "text": "Hari ketika keluarganya pindah mendadak, ia tak sempat mengucapkan selamat tinggal."
+        },
+        {
+            "id": "kabar",
+            "text": "Namun kemarin, sepucuk surat lusuh tiba-tiba sampai ke alamat barunya."
+        },
+        {
+            "id": "perjalanan",
+            "text": "Sepanjang perjalanan kereta, dadanya berdebar membaca tulisan tangan yang sangat ia kenal."
+        },
+        {
+            "id": "isi",
+            "text": "Di dalamnya tertulis: kalau kamu kembali saat senja, tengoklah bangku kayu di ujung peron."
+        },
+        {
+            "id": "senja",
+            "text": "Kereta pun berhenti. Langit senja menyala keemasan, persis seperti sepuluh tahun lalu."
+        },
+        {
+            "id": "temu",
+            "text": "Di ujung peron yang sepi, seseorang berdiri menatap matahari yang perlahan tenggelam."
+        },
+        {
+            "id": "tangis",
+            "text": "Air mata Laras jatuh bersama senyumnya. Waktu boleh berlalu, tapi kenangan tak pernah lupa."
+        },
+        {
+            "id": "akhir",
+            "text": "Beberapa janji tidak pernah hilang. Ia hanya menunggu waktu yang tepat untuk pulang."
+        }
+    ]
+}

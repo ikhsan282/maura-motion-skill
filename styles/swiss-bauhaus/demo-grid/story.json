@@ -3,7 +3,7 @@
  "slug": "demo-grid",
  "style": "swiss-bauhaus",
  "lang": "id",
- "voice": "george",
+ "voice": "el-id-m",
  "speed": 1.0,
  "music": { "preset": "tech", "db": -17 },
  "lead": 0.3,
