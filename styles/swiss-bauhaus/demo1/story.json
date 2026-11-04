@@ -1,0 +1,44 @@
+{
+  "title": "Bauhaus: Sekolah 14 Tahun yang Mengubah Wajah Desain Dunia",
+  "slug": "34_swiss-bauhaus-demo1",
+  "style": "swiss-bauhaus",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kursi di ruang kerjamu, huruf tanpa kait di papan jalan, hingga susunan ikon di layar HP-mu semuanya meniru satu sekolah seni yang hanya berumur empat belas tahun.",
+      "say": "Kursi di ruang kerjamu, huruf tanpa kait di papan jalan, hingga susunan ikon di layar hape-mu semuanya meniru satu sekolah seni yang hanya berumur empat belas tahun.",
+      "pause": 0.25
+    },
+    {
+      "id": "bauhaus",
+      "text": "Sekolah itu bernama Staatliches Bauhaus, didirikan oleh arsitek Walter Gropius di kota Weimar, Jerman, pada tahun sembilan belas sembilan belas seusai Perang Dunia Pertama."
+    },
+    {
+      "id": "aturan",
+      "text": "Prinsip utamanya radikal pada zamannya: bentuk harus mengikuti fungsi, buang seluruh ukiran rumit yang tidak perlu, dan kembalikan desain pada lingkaran biru, segitiga kuning, serta persegi merah."
+    },
+    {
+      "id": "karya",
+      "text": "Dari bengkel kampus di Dessau lahir benda-benda ikonik yang masih diproduksi hari ini, mulai dari lampu meja kaca Wilhelm Wagenfeld hingga kursi pipa baja lentur karya Marcel Breuer."
+    },
+    {
+      "id": "tutup",
+      "text": "Sayangnya pada tahun sembilan belas tiga puluh tiga, rezim Nazi menganggap gaya modernis ini berbahaya dan memaksa gedung sekolah Bauhaus ditutup selamanya."
+    },
+    {
+      "id": "akhir",
+      "text": "Namun penutupan itu justru membuat para gurunya merantau ke Amerika dan Swiss, menyebarkan filosofi grid bersih yang kini hidup di setiap layar ponsel di genggamanmu."
+    }
+  ]
+}

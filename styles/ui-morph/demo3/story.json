@@ -1,0 +1,52 @@
+{
+  "title": "Satu Kapsul di Pagi Hari — Dari Alarm Jam Enam Sampai Timer Fokus",
+  "slug": "32_ui-morph-demo3",
+  "style": "ui-morph",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bayangkan satu kapsul hitam mungil di bagian atas layarmu yang menemani seluruh rutinitas pagimu tanpa pernah memotong perhatianmu.",
+      "pause": 0.25
+    },
+    {
+      "id": "alarm",
+      "text": "Tepat pukul enam pagi, kapsul itu membulat dan berayun menjadi lonceng alarm yang membangunkanmu dengan dering lembut."
+    },
+    {
+      "id": "cuaca",
+      "text": "Begitu kamu menyentuhnya untuk mematikan dering, ia langsung melebar menjadi kartu prakiraan cuaca pagi lengkap dengan suhu udara dan rute berangkat kerja."
+    },
+    {
+      "id": "kopi",
+      "text": "Saat kamu menyeduh kopi di dapur, kartu itu menyusut menjadi penanda pesanan sarapan yang sedang diantar menuju rumahmu."
+    },
+    {
+      "id": "fokus",
+      "text": "Tiba di meja kerja pukul sembilan, bentuk yang sama membesar menjadi jam hitungan mundur dua puluh lima menit untuk sesi kerja fokus tanpa gangguan."
+    },
+    {
+      "id": "selesai",
+      "text": "Ketika waktu fokus habis, ia memercikkan warna oranye dengan tanda centang besar sebagai penanda target pagimu telah tuntas."
+    },
+    {
+      "id": "bintang",
+      "text": "Ia lalu merentang menjadi deretan lima bintang pencapaian harian sebelum kembali beristirahat menjadi kapsul mungil."
+    },
+    {
+      "id": "penutup",
+      "text": "Dari bangun tidur hingga produktif bekerja, satu bentuk yang lentur membuat teknologi terasa tenang dan menyatu dengan harimu."
+    }
+  ]
+}
+

@@ -1,0 +1,52 @@
+{
+  "title": "Bagaimana AI Menjawab Pertanyaanmu? — Rahasia Prediksi Satu Kata demi Satu Kata",
+  "slug": "31_dark-glow-ui-demo3",
+  "style": "dark-glow-ui",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "synthwave",
+    "db": -18
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bertanya-tanya mengapa kecerdasan buatan mengetik jawabannya kata demi kata di layarmu, bukan memunculkan satu halaman sekaligus?",
+      "pause": 0.3
+    },
+    {
+      "id": "token",
+      "text": "Saat kamu mengirim pertanyaan, kalimatmu dipecah lebih dulu menjadi potongan suku kata bernomor yang disebut token."
+    },
+    {
+      "id": "jaringan",
+      "text": "Ratusan lapisan jaringan saraf tiruan dengan sepuluh pangkat dua belas parameter langsung menghitung hubungan makna antar setiap kata."
+    },
+    {
+      "id": "peluang",
+      "text": "Uniknya, mesin ini sebenarnya tidak punya naskah jawaban utuh di kepalanya, melainkan hanya menghitung persentase peluang kata berikutnya yang paling masuk akal."
+    },
+    {
+      "id": "pilih",
+      "text": "Begitu satu kata terbaik terpilih, kata itu ditempelkan ke ujung kalimat, lalu seluruh rumus dihitung ulang dari awal untuk menebak kata kedua."
+    },
+    {
+      "id": "temperatur",
+      "text": "Pengaturan bernama temperatur menentukan apakah mesin selalu memilih kata paling aman, atau sesekali memilih kata kejutan agar terdengar kreatif."
+    },
+    {
+      "id": "kecepatan",
+      "text": "Proses tebak-menebak beruntun ini diulang puluhan kali setiap detik di dalam prosesor grafis raksasa."
+    },
+    {
+      "id": "penutup",
+      "text": "Jadi setiap kalimat cerdas yang kamu baca di layar sebenarnya lahir dari miliaran hitungan probabilitas satu kata demi satu kata."
+    }
+  ]
+}
+

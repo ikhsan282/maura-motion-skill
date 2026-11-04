@@ -1,0 +1,41 @@
+{
+  "title": "Apa yang Terjadi Saat Kamu Menekan Kirim — Rahasia Enkripsi End-to-End AES-256",
+  "slug": "31_dark-glow-ui-demo1",
+  "style": "dark-glow-ui",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "synthwave",
+    "db": -18
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kalimat 'Aku sayang kamu' ini langsung diacak menjadi deretan kode sandi rahasia tepat sepersekian detik sebelum keluar dari layar HP-mu.",
+      "say": "Kalimat Aku sayang kamu ini langsung diacak menjadi deretan kode sandi rahasia tepat sepersekian detik sebelum keluar dari layar ha pe mu.",
+      "pause": 0.3
+    },
+    {
+      "id": "kunci",
+      "text": "Begitu kamu menekan tombol kirim, pesan itu dikunci rapat dengan gembok kriptografi publik milik si dia, sehingga server perantara di tengah jalan pun cuma bisa melihat barisan huruf acak tanpa makna."
+    },
+    {
+      "id": "buka",
+      "text": "Tidak ada penyadap, operator jaringan, maupun pemilik aplikasi yang sanggup mengintip isinya, karena hanya kunci privat yang tersimpan aman di dalam chip HP si dia saja yang bisa membukanya kembali menjadi kalimat utuh.",
+      "say": "Tidak ada penyadap, operator jaringan, maupun pemilik aplikasi yang sanggup mengintip isinya, karena hanya kunci privat yang tersimpan aman di dalam chip ha pe si dia saja yang bisa membukanya kembali menjadi kalimat utuh."
+    },
+    {
+      "id": "tapi",
+      "text": "Bagaimana jika superkomputer tercanggih di dunia mencoba menebak kuncinya agar pesanmu bisa dibobol? Dengan standar enkripsi AES dua lima enam, ada sepuluh pangkat tujuh puluh tujuh kemungkinan kombinasi kunci yang harus dicoba satu per satu."
+    },
+    {
+      "id": "akhir",
+      "text": "Jumlah itu bahkan setara dengan jumlah seluruh atom di jagat raya, memastikan bahwa pesan pribadimu melewati ribuan kilometer kabel samudra hanya untuk dibaca oleh satu orang saja."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Kenapa Server Tidak Pernah Tahu Password-mu? — Rahasia Fungsi Hash Satu Arah",
+  "slug": "31_dark-glow-ui-demo2",
+  "style": "dark-glow-ui",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "synthwave",
+    "db": -18
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu bahwa perusahaan teknologi besar sebenarnya tidak pernah tahu apa kata sandi akunmu, karena sistem mereka memang tidak pernah menyimpannya?",
+      "pause": 0.3
+    },
+    {
+      "id": "input",
+      "text": "Saat kamu mendaftar dan mengetik password rahasia di layar, aplikasi tidak menyalin kata itu bulat-bulat ke dalam tabel basis data server."
+    },
+    {
+      "id": "hash",
+      "text": "Sebaliknya, password-mu langsung digiling oleh fungsi matematika satu arah bernama kriptografi hash menjadi deretan enam puluh empat karakter acak yang disebut sidik digital."
+    },
+    {
+      "id": "satu_arah",
+      "text": "Fungsi ini bekerja persis seperti blender pembuat jus: sangat mudah mengubah buah menjadi cairan, tetapi mustahil menyusun kembali cairan itu menjadi buah utuh."
+    },
+    {
+      "id": "salt",
+      "text": "Agar makin kebal terhadap kamus tebakan peretas, sistem menambahkan bumbu unik bernama salt pada setiap akun sebelum password diacak."
+    },
+    {
+      "id": "login",
+      "text": "Ketika kamu masuk kembali esok harinya, server cukup mencocokkan apakah sidik hash dari ketikanmu hari ini persis sama dengan sidik yang tersimpan."
+    },
+    {
+      "id": "kebocoran",
+      "text": "Bahkan jika ruang server dibobol peretas, mereka hanya menemukan jutaan kode hash yang butuh sepuluh pangkat enam puluh percobaan untuk ditebak mundur."
+    },
+    {
+      "id": "penutup",
+      "text": "Itulah alasan mengapa saat kamu menekan tombol lupa password, layanan resmi tidak pernah mengirimkan sandi lamamu, melainkan memintamu membuat yang baru."
+    }
+  ]
+}
+

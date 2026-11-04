@@ -1,0 +1,52 @@
+{
+  "title": "Eksperimen Tiga Warna Primer Kandinsky 1923 — Mengapa Segitiga Itu Kuning dan Lingkaran Itu Biru?",
+  "slug": "34_swiss-bauhaus-demo3",
+  "style": "swiss-bauhaus",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jika di hadapanmu ada sebuah segitiga, sebuah persegi, dan sebuah lingkaran, lalu kamu diminta mewarnainya dengan merah, kuning, dan biru, mana yang akan kamu pilih?",
+      "pause": 0.25
+    },
+    {
+      "id": "kuesioner",
+      "text": "Pada tahun seribu sembilan ratus dua puluh tiga, pelukis Wassily Kandinsky membagikan kuesioner terkenal itu kepada seluruh mahasiswa dan pengajar di sekolah Bauhaus."
+    },
+    {
+      "id": "kuning",
+      "text": "Menurut teori Kandinsky, sudut lancip segitiga yang tajam dan agresif beresonansi sempurna dengan warna kuning yang memancar terang ke segala arah."
+    },
+    {
+      "id": "merah",
+      "text": "Sebaliknya, persegi dengan empat sudut siku-siku sembilan puluh derajat yang berat, kokoh, dan membumi berpasangan tepat dengan warna merah."
+    },
+    {
+      "id": "biru",
+      "text": "Sementara itu, lingkaran tanpa sudut yang mengalir tenang dan tak berujung merupakan wujud visual dari warna biru yang dalam dan spiritual."
+    },
+    {
+      "id": "itten",
+      "text": "Bersama guru warna Johannes Itten, eksperimen ini melahirkan roda kontras warna modern yang menjadi buku pegangan sekolah desain di seluruh penjuru bumi."
+    },
+    {
+      "id": "aplikasi",
+      "text": "Sampai detik ini, rambu peringatan lalu lintas memakai segitiga kuning, tombol bahaya memakai kotak merah, dan ikon informasi memakai lingkaran biru."
+    },
+    {
+      "id": "penutup",
+      "text": "Tiga bentuk dasar dan tiga warna primer itu membuktikan bahwa mata manusia berbicara dalam bahasa geometri yang sama."
+    }
+  ]
+}
+

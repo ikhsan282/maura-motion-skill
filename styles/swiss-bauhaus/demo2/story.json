@@ -1,0 +1,52 @@
+{
+  "title": "Rahasia Grid Swiss & Josef Müller-Brockmann — Mengapa Desain Rapi Memakai Kotak Tak Terlihat",
+  "slug": "34_swiss-bauhaus-demo2",
+  "style": "swiss-bauhaus",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu melihat poster, majalah, atau situs web yang terasa begitu tenang dan rapi di mata, meski kamu tidak tahu apa rahasianya?",
+      "pause": 0.25
+    },
+    {
+      "id": "swiss",
+      "text": "Jawabannya lahir di Zurich dan Basel pada tahun seribu sembilan ratus lima puluhan lewat gerakan International Typographic Style atau Gaya Desain Swiss."
+    },
+    {
+      "id": "grid",
+      "text": "Pelopornya, Josef Müller-Brockmann, membagi halaman kertas menjadi petak-petak modul matematika beserta selasar kosong yang disebut gutter."
+    },
+    {
+      "id": "kiri",
+      "text": "Berbeda dengan poster klasik yang memaksakan semua tulisan rata tengah, gaya Swiss menata teks rata kiri dengan huruf sans-serif tegas tanpa hiasan."
+    },
+    {
+      "id": "asimetri",
+      "text": "Keseimbangannya justru dicapai secara asimetris: satu bentuk geometri besar di sisi kiri diimbangi oleh ruang kosong lega di sisi kanan."
+    },
+    {
+      "id": "musik",
+      "text": "Dalam poster konser musik legendaris di gedung Tonhalle Zurich, lengkungan busur lingkaran diatur mengikuti ketukan irama simfoni Beethoven."
+    },
+    {
+      "id": "web",
+      "text": "Kini sistem grid enam hingga dua belas kolom dari Swiss itu menjadi fondasi wajib seluruh kerangka kerja desain web dan aplikasi modern."
+    },
+    {
+      "id": "penutup",
+      "text": "Ketika struktur matematika di balik layar tertata presisi, pesan utamamu langsung berbicara jernih tanpa perlu berteriak."
+    }
+  ]
+}
+

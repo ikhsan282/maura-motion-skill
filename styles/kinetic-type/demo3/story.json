@@ -1,0 +1,53 @@
+{
+  "title": "Hukum Parkinson & Efek Satu Persen — Kenapa Pekerjaan Selalu Molor dan Cara Mengalahkannya",
+  "slug": "33_kinetic-type-demo3",
+  "style": "kinetic-type",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.1,
+  "music": {
+    "preset": "hype",
+    "db": -16
+  },
+  "captions": false,
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu punya tugas yang sebenarnya bisa selesai dalam dua jam, tapi entah kenapa justru menghabiskan waktu seminggu penuh?",
+      "pause": 0.25
+    },
+    {
+      "id": "parkinson",
+      "text": "Fenomena itu disebut Hukum Parkinson: pekerjaan akan selalu memuai untuk menghabiskan seluruh jatah waktu yang kamu sediakan."
+    },
+    {
+      "id": "kelonggaran",
+      "text": "Jika kamu memberi tenggat waktu tujuh hari, otakmu akan mencari seribu alasan untuk menunda sampai malam terakhir."
+    },
+    {
+      "id": "potong",
+      "text": "Solusinya bukan bekerja lebih lama, melainkan memangkas batas waktumu menjadi separuh dan menyalakan jam hitung mundur."
+    },
+    {
+      "id": "satu_persen",
+      "text": "Lalu gabungkan dengan matematika satu persen: jika kamu membaik satu persen saja setiap hari selama setahun penuh, hasilnya bukan tiga ratus enam puluh lima persen."
+    },
+    {
+      "id": "lipat",
+      "text": "Berkat efek bunga majemuk kebiasaan, satu koma nol satu pangkat tiga ratus enam puluh lima membuat kemampuanmu melonjak tiga puluh tujuh kali lipat!"
+    },
+    {
+      "id": "konsisten",
+      "text": "Tenggat pendek menghentikan penundaan hari ini, sementara perbaikan satu persen melipatgandakan masa depanmu."
+    },
+    {
+      "id": "penutup",
+      "text": "Persempit waktumu, cicil satu persen setiap hari, dan menangkan tahun ini."
+    }
+  ]
+}
+

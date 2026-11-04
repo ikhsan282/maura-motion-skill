@@ -1,0 +1,44 @@
+{
+  "title": "Satu Tombol yang Berubah Jadi Makan Malammu — Seni Animasi UI Morph Tanpa Potongan",
+  "slug": "32_ui-morph-demo1",
+  "style": "ui-morph",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Lihat satu tombol hitam sederhana di tengah layar ini yang bisa terus berubah wujud menemani seluruh perjalanan makan malammu tanpa pernah berpindah halaman.",
+      "pause": 0.25
+    },
+    {
+      "id": "pesan",
+      "text": "Begitu kamu tekan tombol Pesan dengan ujung kursor, bentuk kapsul itu menyusut sambil berputar memproses pembayaranmu, lalu mengembang menjadi tanda centang oranye saat pesanan dikonfirmasi."
+    },
+    {
+      "id": "kurir",
+      "text": "Detik berikutnya, lingkaran itu menumbuhkan ekor menjadi pin lokasi restoran, lalu melebar luwes menjadi kartu peta tempat titik kurir melaju menyusuri jalanan kota."
+    },
+    {
+      "id": "timer",
+      "text": "Saat pengemudi makin dekat ke kompleksmu, kartu peta kembali membulat menjadi jam hitungan mundur otomatis menuju angka 12 menit.",
+      "say": "Saat pengemudi makin dekat ke kompleksmu, kartu peta kembali membulat menjadi jam hitungan mundur otomatis menuju angka dua belas menit."
+    },
+    {
+      "id": "bel",
+      "text": "Ting tong! Begitu makanan tiba di teras rumah, bentuk itu berayun menjadi lonceng ketika Bel pintu berbunyi memberi tahu bahwa kurir sudah menunggu di depan pintu."
+    },
+    {
+      "id": "akhir",
+      "text": "Terakhir, ia merentang menjadi deretan lima bintang penilaian sebelum kembali utuh ke wujud awalnya: Satu bentuk yang mengalir mulus untuk satu makan malam hangat."
+    }
+  ]
+}

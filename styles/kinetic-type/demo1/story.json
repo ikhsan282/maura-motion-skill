@@ -1,0 +1,41 @@
+{
+  "title": "Aturan Dua Menit James Clear — Rahasia Memulai Kebiasaan Besar Tanpa Menunggu Motivasi",
+  "slug": "33_kinetic-type-demo1",
+  "style": "kinetic-type",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.1,
+  "music": {
+    "preset": "hype",
+    "db": -16
+  },
+  "captions": false,
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kamu tidak butuh motivasi. Kamu butuh dua menit. Banyak rencana besar gagal bukan karena kita malas, melainkan karena langkah pertamanya terasa terlalu berat untuk dimulai.",
+      "pause": 0.25
+    },
+    {
+      "id": "aturan",
+      "text": "Aturan dua menit, dari James Clear, penulis buku Atomic Habits, mengajarkan bahwa setiap kebiasaan baru harus dipangkas menjadi versi paling ringkas di bawah seratus dua puluh detik.",
+      "say": "Aturan dua menit, dari Jems Klir, penulis buku Atomik Hebits, mengajarkan bahwa setiap kebiasaan baru harus dipangkas menjadi versi paling ringkas di bawah seratus dua puluh detik."
+    },
+    {
+      "id": "contoh",
+      "text": "Mau rajin membaca? Baca satu halaman. Mau lari? Ikat tali sepatumu. Jangan pikirkan maraton lima kilometer atau menamatkan satu buku tebal malam ini juga."
+    },
+    {
+      "id": "tapi",
+      "text": "Terlalu kecil? Justru itu intinya. Yang berat cuma mulai. Begitu tubuhmu sudah bergerak melewati gerbang dua menit pertama, gaya gesek mental langsung runtuh dengan sendirinya."
+    },
+    {
+      "id": "akhir",
+      "text": "Jangan tunggu semangat. Pasang dua menit. Mulai sekarang. Karena satu tindakan kecil yang benar-benar kamu kerjakan hari ini jauh lebih kuat daripada seribu niat sempurna."
+    }
+  ]
+}

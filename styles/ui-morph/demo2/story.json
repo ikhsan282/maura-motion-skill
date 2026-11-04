@@ -1,0 +1,52 @@
+{
+  "title": "Dari Tombol Bayar Sampai Struk Digital — Satu Bentuk Mengawal Transaksimu Tanpa Pindah Layar",
+  "slug": "32_ui-morph-demo2",
+  "style": "ui-morph",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa aplikasi lama selalu memaksamu berpindah empat layar berbeda saat membayar tagihan, padahal satu tombol pintar saja bisa berubah menjadi semuanya?",
+      "pause": 0.25
+    },
+    {
+      "id": "klik",
+      "text": "Perhatikan bagaimana satu kapsul hitam bertuliskan Bayar Seratus Dua Puluh Lima Ribu Rupiah ini merespons sentuhan kursor dengan pegas yang terasa hidup."
+    },
+    {
+      "id": "proses",
+      "text": "Begitu diklik, tepi kiri dan kanannya menyusut menjadi lingkaran pemindai yang memverifikasi saldo dompet digitalmu dalam hitungan milidetik."
+    },
+    {
+      "id": "sukses",
+      "text": "Saat otorisasi bank disetujui, lingkaran hitam itu langsung memercikkan warna oranye hangat bersama goresan tanda centang yang tegas."
+    },
+    {
+      "id": "struk",
+      "text": "Tanpa membuka halaman baru, lingkaran centang itu memanjang ke bawah menjadi lembar struk digital lengkap dengan rincian tagihan listrik dan nomor referensi."
+    },
+    {
+      "id": "cashback",
+      "text": "Setelah struk tercatat, kartu itu kembali meramping menjadi kapsul notifikasi hadiah koin kembalian yang langsung masuk ke akunmu."
+    },
+    {
+      "id": "rating",
+      "text": "Ia bahkan sempat merentang menjadi barisan lima bintang kepuasan pengguna sebelum mengempis kembali ke ukuran semula."
+    },
+    {
+      "id": "penutup",
+      "text": "Inilah prinsip desain antarmuka masa depan: satu bentuk yang terus bermetamorfosis menjaga fokus matamu tetap di satu titik."
+    }
+  ]
+}
+

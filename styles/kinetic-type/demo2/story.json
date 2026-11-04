@@ -1,0 +1,53 @@
+{
+  "title": "Teknik Belajar Richard Feynman — Rahasia Memahami Konsep Tersulit Tanpa Menghafal",
+  "slug": "33_kinetic-type-demo2",
+  "style": "kinetic-type",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.1,
+  "music": {
+    "preset": "hype",
+    "db": -16
+  },
+  "captions": false,
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kalau kamu belum bisa menjelaskannya dengan kalimat sederhana, artinya kamu sendiri sebenarnya belum benar-benar paham.",
+      "pause": 0.25
+    },
+    {
+      "id": "tokoh",
+      "text": "Itulah prinsip legendaris dari peraih Nobel Fisika Richard Feynman yang dijuluki Sang Penjelas Agung karena mampu menerangkan mekanika kuantum tanpa istilah rumit."
+    },
+    {
+      "id": "langkah1",
+      "text": "Langkah pertama: ambil selembar kertas kosong, tulis topik yang sedang kamu pelajari di bagian paling atas."
+    },
+    {
+      "id": "langkah2",
+      "text": "Langkah kedua: tuliskan penjelasannya seolah-olah kamu sedang mengajari anak usia dua belas tahun, dan coret semua istilah asing yang terdengar keren tapi kosong."
+    },
+    {
+      "id": "langkah3",
+      "text": "Langkah ketiga: bagian di mana kalimatmu mulai terbata-bata adalah celah ketidaktahuanmu, jadi buka kembali bukumu tepat di titik itu."
+    },
+    {
+      "id": "langkah4",
+      "text": "Langkah keempat: pangkas kalimat berbelit dan ganti dengan perumpamaan sehari-hari sampai siapa pun langsung mengangguk mengerti."
+    },
+    {
+      "id": "mitos",
+      "text": "Berhenti menghafal kata demi kata untuk ujian besok pagi, karena hafalan cepat menguap sedangkan pemahaman sejati menetap seumur hidup."
+    },
+    {
+      "id": "penutup",
+      "text": "Ambil kertasmu sekarang: pelajari, ajarkan, sederhanakan."
+    }
+  ]
+}
+

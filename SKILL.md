@@ -100,10 +100,10 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 28 | **Pastel & Krayon** | pastel-krayon | ✅ ([demo1](styles/pastel-krayon/demo1/) · [demo2](styles/pastel-krayon/demo2/) · [demo3](styles/pastel-krayon/demo3/)) |
 | 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ✅ ([demo1](styles/tinta-novel-grafis/demo1/) · [demo2](styles/tinta-novel-grafis/demo2/) · [demo3](styles/tinta-novel-grafis/demo3/)) |
 | 30 | **Product Film Light** | product-light | ✅ ([demo1](styles/product-light/demo1/) · [demo2](styles/product-light/demo2/) · [demo3](styles/product-light/demo3/)) |
-| 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([styles/dark-glow-ui](styles/dark-glow-ui/)) |
-| 32 | **One-Shape UI Morph** | ui-morph | ✅ ([styles/ui-morph](styles/ui-morph/)) |
-| 33 | **Kinetic Typography** | kinetic-type | ✅ ([styles/kinetic-type](styles/kinetic-type/)) |
-| 34 | **Swiss / Bauhaus Grid** | swiss-bauhaus | ✅ ([styles/swiss-bauhaus](styles/swiss-bauhaus/)) |
+| 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([demo1](styles/dark-glow-ui/demo1/) · [demo2](styles/dark-glow-ui/demo2/) · [demo3](styles/dark-glow-ui/demo3/)) |
+| 32 | **One-Shape UI Morph** | ui-morph | ✅ ([demo1](styles/ui-morph/demo1/) · [demo2](styles/ui-morph/demo2/) · [demo3](styles/ui-morph/demo3/)) |
+| 33 | **Kinetic Typography** | kinetic-type | ✅ ([demo1](styles/kinetic-type/demo1/) · [demo2](styles/kinetic-type/demo2/) · [demo3](styles/kinetic-type/demo3/)) |
+| 34 | **Swiss / Bauhaus Grid** | swiss-bauhaus | ✅ ([demo1](styles/swiss-bauhaus/demo1/) · [demo2](styles/swiss-bauhaus/demo2/) · [demo3](styles/swiss-bauhaus/demo3/)) |
 | 35 | **Editorial Serif** | editorial-serif | ❌ (belum diimplementasi) |
 | 36 | **Chrome Y2K** | chrome-y2k | ❌ (belum diimplementasi) |
 | 37 | **Noir Dokumenter** | noir-dokumenter | ✅ ([styles/noir-dokumenter](styles/noir-dokumenter/)) |
