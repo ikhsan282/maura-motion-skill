@@ -1,0 +1,43 @@
+{
+  "title": "Mesin Espresso 9 Bar — Fisika Tekanan Air Panas yang Melahirkan Crema Emas",
+  "slug": "51_cutaway-3d-mesin-espresso",
+  "style": "cutaway-3d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa kopi seduhan biasa di rumah tidak pernah menghasilkan busa keemasan kental bernama crema seperti di kedai kopi? Jawabannya bukan sekadar jenis biji kopinya, melainkan fisika tekanan sembilan bar di dalam mesin espresso.",
+      "pause": 0.25
+    },
+    {
+      "id": "boiler",
+      "text": "Perjalanan dimulai di dalam tabung boiler tembaga di bagian atas. Elemen pemanas spiral menjaga suhu air secara presisi di kisaran sembilan puluh tiga derajat Celsius agar kopi tidak gosong namun tetap terekstraksi sempurna.",
+      "pause": 0.25
+    },
+    {
+      "id": "tekanan",
+      "text": "Pompa rotari kemudian mendorong air panas itu melewati grouphead kuningan dengan tekanan sembilan bar, setara sembilan kali tekanan atmosfer bumi atau tekanan air di kedalaman delapan puluh meter bawah laut.",
+      "pause": 0.25
+    },
+    {
+      "id": "puck",
+      "text": "Di dalam portafilter baja, delapan belas gram bubuk kopi yang telah dipadatkan atau tamped coffee puck menahan laju air, memaksa air bertekanan tinggi melarutkan minyak aromatik dan gas karbon dioksida alami dari sel biji kopi.",
+      "pause": 0.25
+    },
+    {
+      "id": "crema",
+      "text": "Begitu cairan keluar dari cerat portafilter menuju tekanan udara normal di cangkir, jutaan gelembung mikroskopis mengembang dan mengapung menjadi lapisan crema cokelat keemasan yang mengunci aroma espresso."
+    }
+  ]
+}
+

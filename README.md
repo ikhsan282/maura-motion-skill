@@ -1,6 +1,6 @@
 # Maura Motion Skill
 
-Library **77 gaya animasi** (73 gaya siap pakai + 4 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
+Library **77 gaya animasi** (74 gaya siap pakai + 3 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
 
 Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa saja.
 
@@ -96,7 +96,7 @@ Default suara untuk Bahasa Indonesia maupun Inggris adalah **ElevenLabs George**
 
 Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`), `~/.hermes/elevenlabs.env`, atau `.env` di folder repo.
 
-## Status gaya (77 gaya: 73 siap pakai ✅, 4 belum diimplementasi ❌)
+## Status gaya (77 gaya: 74 siap pakai ✅, 3 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|:---:|---|---|---|
@@ -150,8 +150,8 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 | 48 | **Psychedelic Shader** | `psychedelic-shader` | ✅ | [Satu Rumus, Gambar Tanpa Akhir (Mandelbrot)](styles/psychedelic-shader/demo1/) (64 dtk) | [Paradoks Garis Pantai & Dimensi Fraktal](styles/psychedelic-shader/demo2/) (64 dtk) | [Pola Turing & Gelombang Kimia Belousov](styles/psychedelic-shader/demo3/) (65 dtk) |
 | 49 | **Math Explainer Gelap** | `math-3b1b` | ✅ | [Kenapa Luas Lingkaran itu Pi r Kuadrat](styles/math-3b1b/demo1/) (63 dtk) | [Rahasia Angka Pi (K ÷ d = 3,14)](styles/math-3b1b/demo2/) (63 dtk) | [Setengah Tak Terhingga (Paradoks Zeno)](styles/math-3b1b/demo3/) (63 dtk) |
 | 50 | **Infografis Data** | `infografis-data` | ✅ | [Jika Dunia Hanya 100 Orang](styles/infografis-data/demo1/) (63 dtk) | [Harga Bensin 10 Tahun (2015–2025)](styles/infografis-data/demo2/) (63 dtk) | [Kirim Kucing ke Mana Aja (Tarif & Jarak)](styles/infografis-data/demo3/) (64 dtk) |
-| 51 | **3D Cutaway Explainer** | `cutaway-3d` | ❌ | — | — | — |
-| 52 | **Blueprint** | `blueprint` | ✅ | [Bagaimana Piramida Giza Dibangun](styles/blueprint/demo/) (20 dtk) | [Denah Rumah Tipe 36](styles/blueprint/demo-rumah/) (21 dtk) | [Jembatan Gantung](styles/blueprint/demo-jembatan/) (20 dtk) |
+| 51 | **3D Cutaway Explainer** | `cutaway-3d` | ✅ | [Isi Jam Tangan Mekanik (28.800 Detak/Jam)](styles/cutaway-3d/demo1/) (64 dtk) | [Mesin Jet Turbofan (Hisap, Tekan, Bakar)](styles/cutaway-3d/demo2/) (64 dtk) | [Mesin Espresso 9 Bar & Crema Emas](styles/cutaway-3d/demo3/) (65 dtk) |
+| 52 | **Blueprint** | `blueprint` | ✅ | [Bagaimana Piramida Giza Dibangun](styles/blueprint/demo1/) (63 dtk) | [Denah Rumah Tipe 36 (6×6 Meter)](styles/blueprint/demo2/) (63 dtk) | [Jembatan Gantung Tanpa Tiang Tengah](styles/blueprint/demo3/) (64 dtk) |
 | 53 | **Skala Kosmik** | `skala-kosmik` | ✅ | [Zoom Out dari Monas ke Ujung Alam Semesta](styles/skala-kosmik/demo/) (16 dtk) | — | — |
 | 54 | **Dunia 3D Painterly** | `dunia-3d-painterly` | ❌ | — | — | — |
 | 55 | **Diorama Miniatur Tilt-shift** | `diorama-miniatur` | ✅ | [Pasar Terapung Lok Baintan](styles/diorama-miniatur/demo/) (38 dtk) | — | — |

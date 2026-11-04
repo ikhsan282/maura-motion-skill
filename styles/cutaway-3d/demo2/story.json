@@ -1,0 +1,43 @@
+{
+  "title": "Mesin Jet Turbofan — Hisap, Tekan, Bakar, Hembus di Ketinggian 10 Kilometer",
+  "slug": "51_cutaway-3d-mesin-jet",
+  "style": "cutaway-3d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bagaimana sepasang tabung logam di bawah sayap pesawat sanggup mengangkat beban tiga ratus ton menembus langit dengan kecepatan sembilan ratus kilometer per jam? Rahasianya dirangkum dalam empat kata sederhana: hisap, tekan, bakar, dan hembus.",
+      "pause": 0.25
+    },
+    {
+      "id": "hisap",
+      "text": "Tahap pertama adalah hisap. Kipas raksasa berbahan paduan titanium di bagian paling depan berputar kencang menghisap lebih dari satu ton udara dingin setiap detiknya ke dalam selubung mesin.",
+      "pause": 0.25
+    },
+    {
+      "id": "tekan",
+      "text": "Tahap kedua adalah tekan. Udara inti masuk ke deretan bilah kompresor bertekanan rendah dan tinggi yang memampatkan ruang udara hingga tekanannya melonjak tiga puluh kali lipat dan suhunya memanas drastis.",
+      "pause": 0.25
+    },
+    {
+      "id": "bakar",
+      "text": "Tahap ketiga adalah bakar. Di dalam ruang bakar cincin atau annular combustor, udara padat tadi disemprot bahan bakar avtur dan dinyalakan hingga meledak kontinu mencapai suhu seribu tujuh ratus derajat Celsius.",
+      "pause": 0.25
+    },
+    {
+      "id": "hembus",
+      "text": "Tahap terakhir adalah hembus. Gas panas yang mengembang dahsyat menerjang bilah turbin di belakang untuk memutar poros kipas depan, lalu menyembur keluar lewat nosel buang dan melahirkan daya dorong raksasa."
+    }
+  ]
+}
+

@@ -1,0 +1,42 @@
+{
+  "title": "Bagaimana Piramida Giza Dibangun — 2,3 Juta Blok Batu Tanpa Roda dan Besi",
+  "slug": "52_blueprint-piramida-giza",
+  "style": "blueprint",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "cinematic",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Empat ribu lima ratus tahun yang lalu di tepi Sungai Nil, bangsa Mesir Kuno menyusun lebih dari 2 juta tiga ratus ribu blok batu kapur raksasa menjadi Piramida Agung Khufu. Hebatnya, seluruh mahakarya itu dibangun tanpa roda pengangkut dan tanpa perkakas besi.",
+      "pause": 0.22
+    },
+    {
+      "id": "tarik",
+      "text": "Bagaimana cara memindahkan batu seberat dua setengah ton melintasi gurun? Bukti lukisan makam kuno menunjukkan blok batu diikat di atas kereta luncur kayu, lalu ditarik bersama-sama sementara seorang pekerja di depan menuangkan air hingga melewati jalur pasir basah.",
+      "pause": 0.22
+    },
+    {
+      "id": "gesek",
+      "text": "Eksperimen fisika Universitas Amsterdam tahun dua ribu empat belas membuktikan bahwa takaran air yang tepat mengikat butiran pasir dan memangkas gaya gesek, sehingga memangkas jumlah tenaga penarik hingga separuhnya.",
+      "pause": 0.22
+    },
+    {
+      "id": "naik",
+      "text": "Lalu bagaimana cara menaikkannya ke puncak? Hingga kini para arkeolog dan insinyur masih menguji tiga teori jalan landai utama: jalur landai lurus panjang dari luar, jalur zigzag di sisi dinding, atau terowongan melingkar di bagian dalam.",
+      "pause": 0.22
+    },
+    {
+      "id": "hasil",
+      "text": "Hasilnya adalah keajaiban geometri setinggi 146 meter yang berdiri tegak selama ribuan tahun, dengan keempat sisinya menghadap tepat ke arah mata angin utara sejati."
+    }
+  ]
+}

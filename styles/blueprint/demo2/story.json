@@ -1,0 +1,42 @@
+{
+  "title": "Denah Rumah Tipe 36 — Rahasia Tata Ruang 6×6 Meter yang Muat 5 Ruangan",
+  "slug": "52_blueprint-rumah-tipe-36",
+  "style": "blueprint",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "cinematic",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa rumah tipe tiga puluh enam menjadi denah hunian pertama paling populer bagi keluarga muda di seluruh Indonesia? Di atas bidang tanah berukuran enam kali enam meter, atau tepat tiga puluh enam meter persegi, setiap sentimeternya dirancang tanpa ruang terbuang.",
+      "pause": 0.22
+    },
+    {
+      "id": "ruang",
+      "text": "Saat pintu depan dibuka, kita langsung disambut oleh area ruang tamu dan ruang keluarga yang lega, sementara di sisi sebelahnya berjajar dua kamar tidur berukuran tiga kali tiga meter yang nyaman.",
+      "pause": 0.22
+    },
+    {
+      "id": "servis",
+      "text": "Di zona belakang, area dapur dan kamar mandi diletakkan saling menempel bersebelahan. Penataan cerdas ini membuat seluruh saluran air bersih dan pembuangan cukup memakai satu jalur pipa lurus yang hemat biaya.",
+      "pause": 0.22
+    },
+    {
+      "id": "skala",
+      "text": "Pada lembar cetak biru arsitektur berskala satu banding dua ratus ini, ukuran satu sentimeter di atas kertas gambar sama dengan setengah meter pada bangunan aslinya di lapangan.",
+      "pause": 0.22
+    },
+    {
+      "id": "hasil",
+      "text": "Lewat pembagian proporsi geometri yang presisi, hasil akhirnya sungguh efisien: lima ruang utama yang fungsional muat dengan lega di dalam luas tiga puluh enam meter persegi."
+    }
+  ]
+}

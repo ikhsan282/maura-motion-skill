@@ -27,7 +27,7 @@ const camDrift = (t, a, b, z0 = 1, z1 = 1.04, cx = 540, cy = 900) => { const p =
 // Bridge geometry (screen coords). Two towers, main cable sags between them, deck hangs below.
 const T1 = 220, T2 = 860, TOP = 700, DECK = 1180, SAG = 250;
 // catenary-ish main cable: y = TOP + sag * (x-mid)^2 / (half)^2
-function cableY(x) { const m = (T1 + T2) / 2, h = (T2 - T1) / 2; return TOP + SAG * Math.pow((x - m) / h, 2); }
+function cableY(x) { const m = (T1 + T2) / 2, h = (T2 - T1) / 2; return TOP + 30 + SAG * (1 - Math.pow((x - m) / h, 2)); }
 function cablePts(n = 26) { const P = []; for (let i = 0; i <= n; i++) { const x = T1 + (T2 - T1) * i / n; P.push([x, cableY(x)]); } return P; }
 
 function bridge(t, mode, a, { reveal = 1, hangers = 1, dims = 1 } = {}) {
@@ -48,7 +48,7 @@ function bridge(t, mode, a, { reveal = 1, hangers = 1, dims = 1 } = {}) {
   K.line(ctx, 80, DECK + 80, 1000, DECK + 80, prog(t, a + 0.3, a + 0.8), ink, { w: 2 });
   if (dims > 0) {
     K.dim(ctx, T1, TOP, T2, TOP, 'BENTANG', prog(t, a + 0.6, a + 1.2), ink, { off: -70, size: 26 });
-    K.dim(ctx, cableY((T1 + T2) / 2), DECK, cableY((T1 + T2) / 2), DECK - 60, 'SAG', prog(t, a + 0.8, a + 1.4), ink, { off: 46, size: 26 });
+    K.dim(ctx, (T1 + T2) / 2, TOP + 30, (T1 + T2) / 2, cableY((T1 + T2) / 2), 'LENDUTAN', prog(t, a + 0.8, a + 1.4), ink, { off: 0, size: 24 });
   }
   return { tp };
 }
@@ -57,7 +57,7 @@ function bridge(t, mode, a, { reveal = 1, hangers = 1, dims = 1 } = {}) {
 shot('kabel', (t, a, b) => {
   const u = prog(t, b - 0.65, b, ease.linear);
   camDrift(t, a, b, 1.0, 1.03);
-  if (u <= 0) { K.sheet(ctx, 'pencil'); bridge(t, 'pencil', a, { hangers: 0, dims: 0 }); }
+  if (u <= 0) { K.sheet(ctx, 'pencil'); bridge(t, 'pencil', a, { hangers: 0, dims: 1 }); K.figLabel(ctx, '01', 'SKETSA BENTANG JEMBATAN', 'pencil', prog(t, 0.1, 0.8), 'LEMBAR 1/4'); }
   else K.scanTransition(ctx, u, 'pencil', 'blue', (m) => bridge(t, m, a, { hangers: 0, dims: 0 }));
 });
 
@@ -66,9 +66,9 @@ shot('menara', (t, a, b) => {
   K.sheet(ctx, 'blue');
   camDrift(t, a, b, 1.06, 1.0, 540, 930);
   bridge(t, 'blue', a, { hangers: 0, dims: 0 });
-  K.note(ctx, 'KABEL UTAMA', 540, TOP - 60, prog(t, W('kabel', 'menara') - 0.1, W('kabel', 'menara') + 0.4, ease.linear), 'blue', { size: 30, weight: 700, align: 'center', leader: [540, TOP + 30] });
+  K.note(ctx, 'KABEL UTAMA', 540, TOP - 60, prog(t, W('kabel', 'menara') - 0.1, W('kabel', 'menara') + 0.4, ease.linear), 'blue', { size: 30, weight: 700, align: 'center', leader: [540, cableY(540)] });
   K.note(ctx, 'MENARA', T1, TOP - 120, prog(t, W('menara', 'menara') - 0.1, W('menara', 'menara') + 0.4, ease.linear), 'blue', { size: 30, weight: 700, leader: [T1, TOP + 40] });
-  K.note(ctx, 'BEBAN → TANAH', T2 + 60, DECK + 150, prog(t, W('menara', 'kaki') - 0.1, W('menara', 'kaki') + 0.5, ease.linear), 'blue', { size: 28, weight: 700, leader: [T2, DECK + 90], color: '#ffd36b' });
+  K.note(ctx, 'BEBAN → TANAH', T2 - 40, DECK + 140, prog(t, W('menara', 'kaki') - 0.1, W('menara', 'kaki') + 0.5, ease.linear), 'blue', { size: 28, weight: 700, leader: [T2, DECK + 90], color: '#ffd36b' });
   sc(); K.figLabel(ctx, '02', 'MENARA & KABEL UTAMA', 'blue', prog(t, a, a + 0.6, ease.linear), 'LEMBAR 2/4');
 });
 

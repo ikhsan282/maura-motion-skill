@@ -51,8 +51,8 @@ shot('hook', (t, a, b) => {
 
 // ---- 2. blueprint: the sledge, the rope team and the water pourer.
 const GY = 1080;
-function rig(t, a, mode, { x0 = 120, speed = 34, team = 4, scale = 1, gy = GY, wet = 0, fadeExtra = 0, draw = 1, pourOn = 0 } = {}) {
-  const x = x0 + (t - a) * speed;
+function rig(t, a, mode, { x0 = 90, speed = 11, team = 4, scale = 1, gy = GY, wet = 0, fadeExtra = 0, draw = 1, pourOn = 0 } = {}) {
+  const x = x0 + Math.min(220, (t - a) * speed);
   const sw = 300 * scale;
   // sand
   ctx.save(); ctx.fillStyle = mode === 'pencil' ? 'rgba(58,57,52,.4)' : 'rgba(238,245,255,.35)';

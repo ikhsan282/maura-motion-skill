@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 73 siap pakai ✅, 4 belum diimplementasi ❌)
+## Status gaya (77 gaya: 74 siap pakai ✅, 3 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -120,8 +120,8 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 48 | **Psychedelic Shader** | psychedelic-shader | ✅ ([demo1](styles/psychedelic-shader/demo1/) · [demo2](styles/psychedelic-shader/demo2/) · [demo3](styles/psychedelic-shader/demo3/)) |
 | 49 | **Math Explainer Gelap** | math-3b1b | ✅ ([demo1](styles/math-3b1b/demo1/) · [demo2](styles/math-3b1b/demo2/) · [demo3](styles/math-3b1b/demo3/)) |
 | 50 | **Infografis Data** | infografis-data | ✅ ([demo1](styles/infografis-data/demo1/) · [demo2](styles/infografis-data/demo2/) · [demo3](styles/infografis-data/demo3/)) |
-| 51 | **3D Cutaway Explainer** | cutaway-3d | ❌ (belum diimplementasi) |
-| 52 | **Blueprint** | blueprint | ✅ ([styles/blueprint](styles/blueprint/)) |
+| 51 | **3D Cutaway Explainer** | cutaway-3d | ✅ ([demo1](styles/cutaway-3d/demo1/) · [demo2](styles/cutaway-3d/demo2/) · [demo3](styles/cutaway-3d/demo3/)) |
+| 52 | **Blueprint** | blueprint | ✅ ([demo1](styles/blueprint/demo1/) · [demo2](styles/blueprint/demo2/) · [demo3](styles/blueprint/demo3/)) |
 | 53 | **Skala Kosmik** | skala-kosmik | ✅ ([styles/skala-kosmik](styles/skala-kosmik/)) |
 | 54 | **Dunia 3D Painterly** | dunia-3d-painterly | ❌ (belum diimplementasi) |
 | 55 | **Diorama Miniatur Tilt-shift** | diorama-miniatur | ✅ ([styles/diorama-miniatur](styles/diorama-miniatur/)) |

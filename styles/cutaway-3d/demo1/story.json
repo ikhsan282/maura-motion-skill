@@ -1,0 +1,43 @@
+{
+  "title": "Isi Jam Tangan Mekanik — 28.800 Detak per Jam Tanpa Baterai",
+  "slug": "51_cutaway-3d-jam-mekanik",
+  "style": "cutaway-3d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jam tangan ini sama sekali tidak memakai baterai maupun sirkuit listrik, namun mampu berdetak tepat dua puluh delapan ribu delapan ratus kali setiap jamnya. Mari kita buka penampang bajanya dan bedah seluruh lapisannya secara tiga dimensi.",
+      "pause": 0.25
+    },
+    {
+      "id": "pegas",
+      "text": "Sumber tenaganya tersembunyi di dalam tabung kuningan bernama mainspring barrel. Di dalamnya terdapat pita baja pegas sepanjang setengah meter yang digulung rapat untuk menyimpan energi mekanik selama empat puluh jam.",
+      "pause": 0.25
+    },
+    {
+      "id": "gigi",
+      "text": "Agar gulungan pegas itu tidak langsung habis terlepas dalam satu detik, torsinya disalurkan melewati rangkaian roda gigi presisi, sementara setiap porosnya bertumpu di atas bantalan permata rubi sintetis yang sangat licin untuk memangkas gesekan.",
+      "pause": 0.25
+    },
+    {
+      "id": "detak",
+      "text": "Di ujung rangkaian itulah bekerja jantung pengatur waktu bernama escapement dan roda penyeimbang balance wheel. Roda emas ini berayun bolak-balik pada frekuensi empat Hertz, atau tepat delapan ketukan halus setiap satu detik.",
+      "pause": 0.25
+    },
+    {
+      "id": "hasil",
+      "text": "Ketika seluruh lapisan mekanisme itu menyatu kembali di balik kaca safir, ratusan komponen logam mikroskopis ini mengubah dorongan pegas menjadi perjalanan jarum waktu yang tak pernah lelah."
+    }
+  ]
+}
+

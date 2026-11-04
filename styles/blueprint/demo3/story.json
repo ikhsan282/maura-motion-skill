@@ -1,0 +1,42 @@
+{
+  "title": "Jembatan Gantung — Rahasia Kabel Lengkung yang Menahan Beban Tanpa Tiang Tengah",
+  "slug": "52_blueprint-jembatan-gantung",
+  "style": "blueprint",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "cinematic",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "kabel",
+      "text": "Bagaimana sebuah jembatan gantung raksasa sanggup membentang menyeberangi selat laut yang dalam tanpa satu pun tiang penyangga di tengah air? Rahasianya dimulai dari sepasang kabel baja utama yang terentang dari puncak menara ke menara.",
+      "pause": 0.22
+    },
+    {
+      "id": "menara",
+      "text": "Seluruh tarikan dari bentangan kabel utama itu ditumpukan ke puncak dua menara kembar, lalu menara menyalurkan gaya tekan raksasa tersebut lurus ke dasar bumi lewat dua kaki fondasi beton yang kokoh.",
+      "pause": 0.22
+    },
+    {
+      "id": "dek",
+      "text": "Di bawahnya, lantai jalan raya atau dek jembatan tempat ribuan kendaraan melintas sama sekali tidak bertumpu ke air, melainkan menggantung rapat pada deretan kabel penggantung vertikal.",
+      "pause": 0.22
+    },
+    {
+      "id": "lengkung",
+      "text": "Perhatikan bentuk kabel utamanya yang tidak pernah ditarik lurus kaku, melainkan melengkung anggun membentuk kurva parabola ke bawah karena tarikan gaya gravitasi dan beban merata dari lantai dek.",
+      "pause": 0.22
+    },
+    {
+      "id": "hasil",
+      "text": "Perpaduan gaya tarik pada kabel baja dan gaya tekan pada menara inilah yang melahirkan keajaiban teknik sipil: bentang jalan super panjang yang kokoh tanpa tiang di tengah."
+    }
+  ]
+}
