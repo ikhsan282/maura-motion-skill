@@ -1,29 +1,36 @@
 {
-  "style": "dunia-blok",
-  "voice": "el-id-m",
-  "fps": 30,
-  "maxDuration": 90,
   "title": "Membangun Borobudur Blok demi Blok",
-  "beats": [
+  "slug": "04_dunia-blok_demo1",
+  "style": "dunia-blok",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.12,
+  "music": { "preset": "chiptune", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.2,
+  "pause": 0.25,
+  "lines": [
     {
-      "id": "pondasi",
-      "narration": "Bagaimana membangun Candi Borobudur yang megah? Lebih dari seribu dua ratus tahun lalu di lembah Jawa Tengah, bukit diratakan dan pondasi lebar dari batu andesit mulai disusun blok demi blok."
+      "id": "hook",
+      "text": "Tahukah kamu bahwa Candi Buddha terbesar di dunia yang megah di Jawa Tengah ini ternyata dibangun kokoh tanpa memakai semen sedikit pun?",
+      "pause": 0.3
     },
     {
-      "id": "undakan",
-      "narration": "Lima undakan persegi yang kokoh dibangun bertingkat ke atas. Dua juta blok batu gunung dipahat rapi, lalu dikunci satu sama lain dengan sistem sambungan ekor burung tanpa memakai semen sedikit pun."
+      "id": "batu",
+      "text": "Lebih dari sejuta blok batu andesit dari sungai dan lereng gunung dipahat rapi dengan tangan, lalu disusun agar saling mengunci rapat seperti kepingan teka-teki."
     },
     {
-      "id": "relief",
-      "narration": "Sepanjang lorongnya, dua ribu enam ratus panel relief diukir indah di dinding batu, sementara ratusan arca duduk tenang menghadap empat penjuru mata angin."
+      "id": "lapis",
+      "text": "Lapis demi lapis undakan dari bagian kaki, tubuh, hingga kepala candi diselesaikan, dipuncaki oleh tujuh puluh dua stupa berlubang yang mengelilingi stupa induk."
     },
     {
-      "id": "stupa",
-      "narration": "Di atasnya, tiga pelataran melingkar melambangkan alam tanpa wujud. Tujuh puluh dua stupa berlubang disusun mengelilingi satu stupa induk raksasa sebagai mahkota di puncak candi."
+      "id": "hutan",
+      "text": "Namun setelah letusan dahsyat gunung berapi, candi agung ini sempat ditinggalkan selama berabad-abad, terkubur abu vulkanik dan tertelan lebatnya hutan belantara."
     },
     {
-      "id": "abadi",
-      "narration": "Tertimbun abu Gunung Merapi selama berabad-abad, Borobudur akhirnya ditemukan kembali dan dipugar. Dari jutaan blok batu sederhana, lahirlah warisan dunia yang abadi."
+      "id": "akhir",
+      "text": "Saat akhirnya ditemukan kembali dan dibersihkan, setiap blok batunya tetap terkunci sempurna. Setelah seribu dua ratus tahun, Borobudur masih berdiri abadi."
     }
   ]
 }

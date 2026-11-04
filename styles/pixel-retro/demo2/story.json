@@ -1,0 +1,59 @@
+{
+  "title": "Kenapa Game Jadul 16-Bit Bikin Nagih?",
+  "slug": "pixel-retro-game-nagih",
+  "style": "pixel-retro",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.14,
+  "music": {
+    "preset": "chiptune",
+    "db": -17
+  },
+  "lead": 0.35,
+  "tail": 1.1,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bertanya kenapa game jadul era enam belas bit begitu bikin nagih? Karena di zaman itu, skor tinggi di layar tidak pernah bohong."
+    },
+    {
+      "id": "nyawa",
+      "text": "Sejak awal permainan, kamu hanya dibekali tiga nyawa tanpa fitur simpan otomatis. Setiap lompatan melewati jurang terasa tegang dan sangat berharga."
+    },
+    {
+      "id": "pola",
+      "text": "Musuh yang menghadang punya pola serangan tetap yang harus dihafal. Jari dan matamu dipaksa menyatu dengan irama gerakan piksel demi piksel."
+    },
+    {
+      "id": "rahasia",
+      "text": "Kejutan paling seru ada di balik peti dan tembok tersembunyi. Menemukan karung koin emas atau ramuan kebal memberikan kepuasan instan."
+    },
+    {
+      "id": "bos",
+      "text": "Di ujung setiap level, layar berkedip merah menyambut raja terakhir. Bar darah bos yang panjang menguji seluruh kesabaran dan ketangkasanmu."
+    },
+    {
+      "id": "over",
+      "text": "Ketika nyawa habis dan tulisan Game Over jatuh di layar, itu bukanlah kekalahan, melainkan tantangan panas untuk menekan tombol coba lagi."
+    },
+    {
+      "id": "mabar",
+      "text": "Apalagi saat main bergantian bersama teman sekampung di depan televisi tabung. Sorak-sorai penonton membuat satu nyawa terasa seperti pertandingan final."
+    },
+    {
+      "id": "lanjut",
+      "text": "Begitu satu rintangan berhasil dilewati dan gerbang level baru terbuka, selalu muncul bisikan klasik di kepala: tanggung, satu level lagi!"
+    },
+    {
+      "id": "menang",
+      "text": "Saat bos akhirnya tumbang dan hujan koin kemenangan turun di malam hari, kamu merasakan bangga yang murni hasil dari latihan sendiri."
+    },
+    {
+      "id": "akhir",
+      "text": "Skor tinggi, tiga nyawa berharga, dan rasa penasaran satu level lagi. Itulah resep abadi kenapa game piksel klasik tak pernah tergantikan."
+    }
+  ]
+}
+

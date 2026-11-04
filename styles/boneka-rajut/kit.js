@@ -11,7 +11,7 @@ export const RES = 1.4; // bake resolution for knitted sprites (close-ups stay c
 
 export const PAL = {
   sky: '#bfe4ef', skyLow: '#e9f5ee', sunsetTop: '#f6b27c', sunsetLow: '#ffe2b0',
-  hillFar: '#b9dc8e', hillNear: '#8fc767', meadow: '#7cb957', meadowDeep: '#5d9c45',
+  hillFar: '#b9dc8e', hillMid: '#a4d37a', hillNear: '#8fc767', grass: '#7cb957', meadow: '#7cb957', meadowDeep: '#5d9c45',
   river: '#5aa9d6', riverDeep: '#3d88bf', soil: '#9b6a45', soilDeep: '#6f4a2f',
   sun: '#ffd34f', cloud: '#fffaf2',
   monkey: '#8d5a3a', monkeyTan: '#f2cc9c', turtle: '#93cf63', shell: '#3f9150', shellLine: '#1d4f2b', shellRim: '#d6dd73',

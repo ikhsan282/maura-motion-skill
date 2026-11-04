@@ -1,4 +1,4 @@
-// Dunia Blok demo: "Membangun Borobudur Blok demi Blok", 5 shots timed to the narration (≤ 20 s).
+// Dunia Blok demo 1: "Membangun Borobudur Blok demi Blok", 5 shots timed to narration (30-90s).
 import * as K from '/styles/dunia-blok/kit.js';
 const THREE = K.THREE;
 const { clamp, lerp, ease, prog, env, noise, hrand, TAU } = AM.lib;
@@ -7,7 +7,7 @@ export const meta = { fps: 24, hold: 1, captions: { preset: 'pixel', y: 1470, si
 
 let S, ui, C = {}, W;
 const Wt = (id, w) => AM.wordTime(id, w);
-let sky, key, hemi, slabs = [], stupas, main, plan, leaves, pile, rain, ash, lava, smoke, workers = [], lockA, lockB, sparkle;
+let sky, key, hemi, slabs = [], stupas, main, plan, leaves, pile, ash, lava, smoke, workers = [], lockA, lockB, sparkle;
 
 function buildWorld() {
   W = new THREE.Scene(); W.fog = new THREE.Fog('#cfe8ff', 90, 280);
@@ -23,27 +23,29 @@ function buildWorld() {
   for (let i = 0; i < 40; i++) { const a = hrand(i, 5) * TAU, r = 34 + hrand(i, 6) * 70; const t = K.voxTree(2 + (hrand(i, 7) * 3 | 0), i, { palm: i % 3 === 0 }); t.position.set(Math.round(Math.cos(a) * r), 0, Math.round(Math.sin(a) * r)); W.add(t); }
   const v1 = K.volcano({ r: 40, h: 30, steps: 12 }); v1.group.position.set(90, 0, -210); W.add(v1.group);
   const v2 = K.volcano({ r: 40, h: 32, steps: 12, top: 'rock' }); v2.group.position.set(-70, 0, -190); W.add(v2.group);
-  lava = K.cubeBurst({ n: 50, type: 'lava', size: 2.2, speed: 14, up: 34, grav: -22, life: 2.2, seed: 4, origin: [90, 30, -210] }); W.add(lava);
-  smoke = K.cubeBurst({ n: 26, type: 'ash', size: 4, speed: 4, area: 10, height: 40, rain: false, up: 16, grav: 2, life: 3, seed: 8, origin: [90, 31, -210] }); W.add(smoke);
+  lava = K.cubeBurst({ n: 50, type: 'lava', size: 2.2, speed: 14, up: 34, grav: -22, life: 3.5, seed: 4, origin: [90, 30, -210] }); W.add(lava);
+  smoke = K.cubeBurst({ n: 26, type: 'ash', size: 4, speed: 4, area: 10, height: 40, rain: false, up: 16, grav: 2, life: 5.5, seed: 8, origin: [90, 31, -210] }); W.add(smoke);
   // Borobudur
   plan = K.borobudurPlan({ base: 20 });
   slabs = K.borobudurSlabs(plan); slabs.forEach((s) => W.add(s));
   stupas = K.stupaMesh(72); W.add(stupas);
   main = K.mainStupa(); main.position.y = plan.mainY; W.add(main);
-  // jungle that swallows the temple, then flies off
-  leaves = new K.Blocks({ drop: 3, dur: 0.3 });
-  const T0 = 11.7;
+  // jungle that swallows the temple in shot 'hutan', then flies off in shot 'akhir'
+  leaves = new K.Blocks({ drop: 3, dur: 0.35 });
+  const T0 = Wt('hutan', 'tertelan') - 0.8;
+  const TOut = C.akhir.start + 0.15;
   for (let i = 0; i < 520; i++) {
     const L = plan.levels[Math.floor(hrand(i, 1) * plan.levels.length)];
     let x, z; if (L.round) { const a = hrand(i, 2) * TAU, r = L.hs * Math.sqrt(hrand(i, 3)); x = Math.cos(a) * r; z = Math.sin(a) * r; } else { const e = Math.floor(hrand(i, 2) * 4), u = (hrand(i, 3) - 0.5) * 2 * L.hs; x = e < 2 ? (e ? 1 : -1) * L.hs : u; z = e < 2 ? u : (e === 2 ? 1 : -1) * L.hs; }
     const y = L.y + L.h + (hrand(i, 4) > 0.6 ? 1 : 0) + (L.round ? 1 : 0.6);
     const d = Math.hypot(x, z) / 22, ty = (y / 20);
-    leaves.add(Math.round(x), Math.round(y), Math.round(z), hrand(i, 5) > 0.3 ? 'leaf' : 'grass', T0 + (1 - d) * 0.4 + ty * 1.2 + hrand(i, 6) * 0.5, { tout: 14.15 + ty * 0.5 + hrand(i, 7) * 0.5 });
+    leaves.add(Math.round(x), Math.round(y), Math.round(z), hrand(i, 5) > 0.3 ? 'leaf' : 'grass', T0 + (1 - d) * 0.5 + ty * 1.6 + hrand(i, 6) * 0.7, { tout: TOut + ty * 0.7 + hrand(i, 7) * 0.7 });
   }
   leaves.build(W);
-  // quarry pile + raining blocks
+  // quarry pile + raining blocks in shot 'batu'
   pile = new K.Blocks({ drop: 14, dur: 0.5 });
-  for (let i = 0; i < 160; i++) { const x = 30 + (i % 8) - 4, z = 26 + (Math.floor(i / 8) % 5) - 2, y = Math.floor(i / 40); pile.add(x, y, z, i % 5 ? 'andesit' : 'andesitDark', 4.0 + i * 0.012 + hrand(i, 1) * 0.3, { spin: 4 }); }
+  const tBatu0 = C.batu.start + 0.1;
+  for (let i = 0; i < 160; i++) { const x = 30 + (i % 8) - 4, z = 26 + (Math.floor(i / 8) % 5) - 2, y = Math.floor(i / 40); pile.add(x, y, z, i % 5 ? 'andesit' : 'andesitDark', tBatu0 + i * 0.018 + hrand(i, 1) * 0.35, { spin: 4 }); }
   pile.build(W);
   for (let i = 0; i < 5; i++) { const w = K.worker({ shirt: ['#c8452e', '#2e6ac8', '#e0a020', '#3a9a5a', '#8a3ac8'][i], seed: i }); const blk = K.vbox(0.7, 0.5, 0.7, 'andesit'); blk.position.y = 1.45; w.j.hips.add(blk); W.add(w.root); workers.push(w); }
   // interlocking blocks (close-up): A has a tab, B has a matching notch
@@ -78,12 +80,11 @@ function daySky(warm = 0, dark = 0) {
   key.color.set(K.mix(K.mix('#fff0d0', '#ffc080', warm), '#bdb8b0', dark)); key.intensity = lerp(2.0, 1.2, dark);
   hemi.intensity = lerp(1.1, 0.8, dark);
 }
-/** Temple state: build = 0..1 over levels (+ stupas + main stupa). Each level rises out of the ground into place. */
 const M4 = new THREE.Matrix4(), Q = new THREE.Quaternion(), V = new THREE.Vector3(), Sv = new THREE.Vector3();
 function temple(t, { levelsT = null, stupaT = null, mainT = null } = {}) {
   slabs.forEach((s, i) => {
     const tt = levelsT ? levelsT[i] : -1; const u = tt < 0 ? 1 : clamp((t - tt) / 0.22);
-    s.visible = u > 0; s.position.y = (1 - ease.outBack(u, 1.6)) * -2.5 + (u < 1 ? 0 : 0);
+    s.visible = u > 0; s.position.y = (1 - ease.outBack(u, 1.6)) * -2.5;
     s.scale.set(1, Math.max(0.01, u), 1);
   });
   let n = 0;
@@ -106,7 +107,7 @@ shot('hook', (t, a, b) => {
   daySky(0.15);
   temple(t, { mainT: 0.15 });
   const p = (t - a) / (b - a);
-  cam(K.orbit(0, 0, lerp(0.75, 1.1, ease.inOutSine(p)), lerp(80, 72, p), lerp(34, 28, p)), [0, 13, 0], 40, t);
+  cam(K.orbit(0, 0, lerp(0.75, 1.25, ease.inOutSine(p)), lerp(80, 72, p), lerp(34, 28, p)), [0, 13, 0], 40, t);
   S.render(W);
   ui.setTransform(1, 0, 0, 1, 0, 0);
   K.pixTitle(ui, 'CANDI BUDDHA', 540, 230, { size: 50, alpha: env(t, Wt('hook', 'Candi') - 0.1, b, 0.15, 0.2), pop: (t - 0.2) / 0.3 });
@@ -115,7 +116,6 @@ shot('hook', (t, a, b) => {
   if (t > sx) {
     const u = clamp((t - sx) / 0.25), al = env(t, sx, b, 0.05, 0.2);
     ui.save(); ui.globalAlpha = al; ui.translate(540, 560); ui.scale(ease.outBack(u, 2), ease.outBack(u, 2));
-    // pixel cement sack, crossed out
     const px = 12; const sack = ['..XXXXXXXX..', '.XXXXXXXXXX.', 'XXXXXXXXXXXX', 'XXXXXXXXXXXX', 'XXXXXXXXXXXX', 'XXXXXXXXXXXX', 'XXXXXXXXXXXX', '.XXXXXXXXXX.'];
     sack.forEach((row, r) => [...row].forEach((c, k) => { if (c === 'X') { ui.fillStyle = r < 2 ? '#c9c4bb' : '#b0aa9e'; ui.fillRect((k - 6) * px, (r - 4) * px, px, px); } }));
     ui.fillStyle = '#3a3634'; ui.font = "400 18px 'Press Start 2P'"; ui.textAlign = 'center'; ui.fillText('SEMEN', 0, 6);
@@ -130,14 +130,13 @@ shot('hook', (t, a, b) => {
 shot('batu', (t, a, b) => {
   const tLock = Wt('batu', 'dipahat') - 0.15;
   daySky(0.1);
-  temple(t, { levelsT: plan.levels.map(() => 99), stupaT: () => 99, mainT: 99 });
+  temple(t, { levelsT: plan.levels.map(() => 999), stupaT: () => 999, mainT: 999 });
   if (t < tLock) {
-    const landed = pile.update(t);
-    workers.forEach((w, i) => { w.root.visible = true; const ph = (t * 0.25 + i * 0.2) % 1; const x = lerp(30, 10, ph), z = lerp(26, 6 + i * 2, ph); K.workerPose(w, { x, z, ry: Math.atan2(10 - 30, 6 - 26) + Math.PI * 0, walk: t * 1.6 + i * 0.3, carry: 1, t }); });
+    pile.update(t);
+    workers.forEach((w, i) => { w.root.visible = true; const ph = (t * 0.25 + i * 0.2) % 1; const x = lerp(30, 10, ph), z = lerp(26, 6 + i * 2, ph); K.workerPose(w, { x, z, ry: Math.atan2(10 - 30, 6 - 26), walk: t * 1.6 + i * 0.3, carry: 1, t }); });
     const p = (t - a) / (tLock - a);
     cam([lerp(44, 40, p), lerp(9, 8, p), lerp(42, 38, p)], [24, 2, 20], 42, t, 0.1);
     S.render(W);
-    // blocks carried on heads: draw small andesite cubes via projection? (kept in 3D: reuse pile for look) — counter in 2D
     ui.setTransform(1, 0, 0, 1, 0, 0);
     const c0 = Wt('batu', 'sejuta') - 0.2; const n = Math.floor(lerp(0, 1000000, ease.outCubic(clamp((t - c0) / 1.0))));
     K.pixTitle(ui, n.toLocaleString('id-ID') + (n >= 1000000 ? '+' : ''), 540, 260, { size: 70, alpha: env(t, c0, tLock, 0.1, 0.15), color: '#ffffff' });
@@ -145,7 +144,7 @@ shot('batu', (t, a, b) => {
   } else {
     lockA.visible = lockB.visible = true;
     const lk = Wt('batu', 'mengunci') + 0.05;
-    const u = ease.inCubic(clamp((t - tLock - 0.2) / (lk - tLock - 0.2)));
+    const u = ease.inCubic(clamp((t - tLock - 0.2) / Math.max(0.4, lk - tLock - 0.2)));
     const shk = t > lk ? Math.exp(-(t - lk) * 10) * 0.12 : 0;
     lockA.position.set(140, 2 + lerp(3.2, 0, u) + shk * Math.sin(t * 60), 0); lockA.rotation.y = (1 - u) * 0.6; lockB.position.set(140, 0, 0);
     sparkle.userData.tick(t - lk);
@@ -153,7 +152,7 @@ shot('batu', (t, a, b) => {
     cam([140 + lerp(2.8, 1.8, p), lerp(5.0, 4.4, p), lerp(11.5, 10.2, p)], [140, 2.4, 0], 40, t, 0.05);
     S.render(W);
     ui.setTransform(1, 0, 0, 1, 0, 0);
-    const [ax, ay] = scr(140, lockA.position.y - 0.5, 0.5), [bx, by] = scr(140, 1.5, 0.75);
+    const [, ay] = scr(140, lockA.position.y - 0.5, 0.5), [, by] = scr(140, 1.5, 0.75);
     if (t < lk) { K.pixPanel(ui, 'TONJOLAN', 280, ay, { size: 26, alpha: env(t, tLock + 0.1, lk, 0.15, 0.1), color: '#ffe14a' }); K.pixPanel(ui, 'LEKUKAN', 800, by, { size: 26, alpha: env(t, tLock + 0.3, lk, 0.15, 0.1), color: '#ffe14a' }); }
     else { K.pixTitle(ui, 'KLIK!', 540, 330, { size: 110, pop: (t - lk) / 0.25 }); K.pixPanel(ui, 'TERKUNCI', 540, 480, { size: 34, pop: (t - lk - 0.15) / 0.3, color: '#7fff7f' }); }
   }
@@ -171,10 +170,10 @@ shot('lapis', (t, a, b) => {
   key.intensity = lerp(2.0, 0.7, night); W.fog.color.set(K.mix('#cfe8ff', '#3a4070', night));
   const n = temple(t, { levelsT, stupaT, mainT });
   const p = (t - a) / (b - a);
-  cam(K.orbit(0, 0, lerp(1.9, 2.6, p), 60, 26), [0, 6 + p * 3, 0], 40, t);
+  cam(K.orbit(0, 0, lerp(1.9, 2.7, p), 60, 26), [0, 6 + p * 3, 0], 40, t);
   S.render(W);
   ui.setTransform(1, 0, 0, 1, 0, 0);
-  const lab = (txt, i0, y, col) => { const tt = levelsT[i0]; const L = plan.levels[i0]; const [x, sy] = scr(L.hs + 1, L.y + 1, L.hs + 1); K.pixPanel(ui, txt, 540, y, { size: 30, alpha: env(t, tt, b, 0.12, 0.2), pop: (t - tt) / 0.25, color: col }); };
+  const lab = (txt, i0, y, col) => { const tt = levelsT[i0]; K.pixPanel(ui, txt, 540, y, { size: 30, alpha: env(t, tt, b, 0.12, 0.2), pop: (t - tt) / 0.25, color: col }); };
   lab('KAKI', 0, 250, '#cfe8ff'); lab('TUBUH', 1, 360, '#ffe14a'); lab('KEPALA', 6, 470, '#7fff7f');
   if (t > st0 - 0.1) { K.pixTitle(ui, `${Math.min(72, n)} STUPA`, 540, 640, { size: 56, pop: (t - st0 + 0.1) / 0.3, color: n >= 72 ? '#ffe14a' : '#ffffff' }); }
 });
@@ -185,7 +184,7 @@ shot('hutan', (t, a, b) => {
   daySky(0.1, dark * 0.8);
   temple(t);
   leaves.update(t);
-  lava.userData.tick(t - Wt('hutan', 'ditinggalkan') + 0.1); smoke.userData.tick((t - a) * 0.8);
+  lava.userData.tick(t - a - 0.2); smoke.userData.tick((t - a) * 0.8);
   ash.userData.tick(t - a);
   const p = (t - a) / (b - a);
   cam([lerp(-30, -24, p), lerp(30, 24, p), lerp(52, 46, p)], [6, 6, -10], 42, t, 0.2);

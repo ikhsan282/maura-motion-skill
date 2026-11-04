@@ -1,0 +1,39 @@
+{
+  "title": "Si Pitung: Level Batavia",
+  "slug": "07_pixel-retro",
+  "style": "pixel-retro",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.15,
+  "music": {
+    "preset": "chiptune",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di jalanan Batavia akhir abad sembilan belas, pasukan kolonial mengejar Buronan nomor satu yang paling ditakuti, yaitu Si Pitung dari Rawa Belong.",
+      "pause": 0.25
+    },
+    {
+      "id": "bagi",
+      "text": "Dengan jurus silat Haji Naipin, ia berani merampas pundi harta milik tuan tanah yang tamak, lalu membagikannya secara adil kepada warga miskin di kampung."
+    },
+    {
+      "id": "kebal",
+      "text": "Berkali-kali ia dikepung dan ditembak oleh serdadu Opas hingga sempat jatuh tersungkur, namun berkat ilmu raga ia selalu bangkit kembali tanpa luka."
+    },
+    {
+      "id": "boss",
+      "text": "Hingga akhirnya kepala polisi Belanda, Schout Hinne, menghadangnya di pelabuhan Sunda Kelapa dan menembaknya dengan sebutir peluru emas pembuka jimat."
+    },
+    {
+      "id": "akhir",
+      "text": "Raganya gugur tahun seribu delapan ratus sembilan puluh tiga. Di hati rakyat Betawi, permainan belum usai karena kisah dan legendanya tetap hidup selamanya."
+    }
+  ]
+}

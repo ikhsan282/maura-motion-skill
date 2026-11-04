@@ -1,49 +1,59 @@
 {
-  "style": "dunia-blok",
-  "voice": "el-id-m",
-  "fps": 30,
-  "maxDuration": 90,
   "title": "Monas: Rahasia Lidah Api Emas di Puncak Jakarta",
-  "beats": [
+  "slug": "04_dunia-blok_demo3",
+  "style": "dunia-blok",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.12,
+  "music": {
+    "preset": "chiptune",
+    "db": -17
+  },
+  "lead": 0.35,
+  "tail": 1.2,
+  "pause": 0.25,
+  "lines": [
     {
       "id": "medan",
-      "narration": "Di jantung Medan Merdeka Jakarta, tugu kebanggaan bangsa mulai dibangun pada tujuh belas Agustus seribu sembilan ratus enam puluh satu."
+      "text": "Di jantung Medan Merdeka Jakarta, tugu kebanggaan bangsa mulai dibangun pada tujuh belas Agustus seribu sembilan ratus enam puluh satu.",
+      "pause": 0.3
     },
     {
       "id": "filosofi",
-      "narration": "Arsitek Frederich Silaban dan Soedarsono merancang Monas dengan filosofi Lingga dan Yoni: tugu menjulang dan cawan raksasa lambang keabadian."
+      "text": "Arsitek Frederich Silaban dan Soedarsono merancang Monas dengan filosofi Lingga dan Yoni: tugu menjulang dan cawan raksasa lambang keabadian."
     },
     {
       "id": "pondasi",
-      "narration": "Ratusan tiang pancang beton ditanam kokoh ke tanah, menopang ruang museum sejarah nasional yang luas di dasar monumen."
+      "text": "Ratusan tiang pancang beton ditanam kokoh ke tanah, menopang ruang museum sejarah nasional yang luas di dasar monumen."
     },
     {
       "id": "cawan",
-      "narration": "Di atasnya, blok demi blok cawan dibangun setinggi tujuh belas meter, dengan lebar empat puluh lima meter lambang kemerdekaan."
+      "text": "Di atasnya, blok demi blok cawan dibangun setinggi tujuh belas meter, dengan lebar empat puluh lima meter lambang kemerdekaan."
     },
     {
       "id": "tugu",
-      "narration": "Menembus langit, batang tugu obelisk dilapisi marmer putih berkilau, menjulang setinggi seratus tujuh belas meter dari dasar cawan."
+      "text": "Menembus langit, batang tugu obelisk dilapisi marmer putih berkilau, menjulang setinggi seratus tujuh belas meter dari dasar cawan."
     },
     {
       "id": "pelataran",
-      "narration": "Di puncak tugu terdapat pelataran penglihatan. Melalui lift cepat, pengunjung dapat memandang hamparan kota Jakarta hingga ke laut."
+      "text": "Di puncak tugu terdapat pelataran penglihatan. Melalui lift cepat, pengunjung dapat memandang hamparan kota Jakarta hingga ke laut."
     },
     {
       "id": "perunggu",
-      "narration": "Sebagai mahkota di atas pelataran, dipasang patung Lidah Api raksasa dari perunggu seberat empat belas koma lima ton."
+      "text": "Sebagai mahkota di atas pelataran, dipasang patung Lidah Api raksasa dari perunggu seberat empat belas koma lima ton."
     },
     {
       "id": "emas",
-      "narration": "Tahukah kamu asal emas di puncaknya? Sebanyak tiga puluh delapan kilogram emas murni disumbangkan saudagar Aceh, Teuku Markam, bersama rakyat."
+      "text": "Tahukah kamu asal emas di puncaknya? Sebanyak tiga puluh delapan kilogram emas murni disumbangkan saudagar Aceh, Teuku Markam, bersama rakyat."
     },
     {
       "id": "lima_puluh",
-      "narration": "Saat perayaan lima puluh tahun Indonesia merdeka, lapisan emas di puncak Monas ditambah hingga genap mencapai lima puluh kilogram!"
+      "text": "Saat perayaan lima puluh tahun Indonesia merdeka, lapisan emas di puncak Monas ditambah hingga genap mencapai lima puluh kilogram!"
     },
     {
       "id": "abadi",
-      "narration": "Kini baik di bawah terik matahari maupun gemerlap malam, Lidah Api emas Monas bersinar sebagai semangat perjuangan yang tak pernah padam."
+      "text": "Kini baik di bawah terik matahari maupun gemerlap malam, Lidah Api emas Monas bersinar sebagai semangat perjuangan yang tak pernah padam."
     }
   ]
 }

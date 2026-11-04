@@ -102,6 +102,15 @@ export function pline(g, x0, y0, x1, y1, w = 1) {
   }
 }
 /** Filled pixel circle (rows of rects, no AA). */
+export function pelipse(g, cx, cy, rx, ry, c) {
+  if (c) g.fillStyle = c;
+  cx = Math.round(cx); cy = Math.round(cy);
+  for (let y = -ry; y <= ry; y++) {
+    const ny = y / Math.max(1, ry);
+    const hw = Math.round(rx * Math.sqrt(Math.max(0, 1 - ny * ny)));
+    g.fillRect(cx - hw, cy + y, hw * 2 + 1, 1);
+  }
+}
 export function pcircle(g, cx, cy, r, c) {
   if (c) g.fillStyle = c;
   cx = Math.round(cx); cy = Math.round(cy);

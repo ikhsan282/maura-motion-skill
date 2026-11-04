@@ -1,49 +1,56 @@
 {
-  "style": "boneka-rajut",
-  "voice": "el-id-m",
-  "fps": 30,
-  "maxDuration": 90,
   "title": "Kancil dan Barisan Buaya Sungai",
-  "beats": [
+  "slug": "06_boneka-rajut_demo2",
+  "style": "boneka-rajut",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.14,
+  "music": { "preset": "musicbox", "db": -16 },
+  "lead": 0.35,
+  "tail": 1.2,
+  "pause": 0.25,
+  "lines": [
     {
       "id": "lapar",
-      "narration": "Siang itu Si Kancil berjalan dengan perut keroncongan mencari buah segar. Tiba-tiba langkahnya terhenti oleh aliran sungai yang deras."
+      "text": "Siang itu Si Kancil berjalan dengan perut keroncongan mencari buah segar. Tiba-tiba langkahnya terhenti oleh aliran sungai yang deras.",
+      "pause": 0.3
     },
     {
       "id": "seberang",
-      "narration": "Di seberang sungai, tampak pohon apel berbuah merah manis. Namun air sungai terlalu dalam untuk diseberangi Kancil sendirian."
+      "text": "Di seberang sungai, tampak pohon apel berbuah merah manis. Namun air sungai terlalu dalam untuk diseberangi Kancil sendirian."
     },
     {
       "id": "buaya",
-      "narration": "Dari balik air muncul moncong Buaya lapar yang siap menerkam! Bukannya takut, Kancil yang cerdik justru mendapat sebuah akal."
+      "text": "Dari balik air muncul moncong Buaya lapar yang siap menerkam! Bukannya takut, Kancil yang cerdik justru mendapat sebuah akal."
     },
     {
       "id": "titah",
-      "narration": "Kancil berseru bahwa Raja Hutan akan menggelar pesta besar, dan memerintahkannya menghitung seluruh Buaya di sungai itu."
+      "text": "Kancil berseru bahwa Raja Hutan akan menggelar pesta besar, dan memerintahkannya menghitung seluruh Buaya di sungai itu."
     },
     {
       "id": "setuju",
-      "narration": "Mendengar janji jamuan dari sang Raja, pemimpin Buaya langsung gembira dan memanggil teman-temannya naik ke permukaan air."
+      "text": "Mendengar janji jamuan dari sang Raja, pemimpin Buaya langsung gembira dan memanggil teman-temannya naik ke permukaan air."
     },
     {
       "id": "baris",
-      "narration": "Sesuai aba-aba Kancil, kawanan Buaya pun berbaris rapi dari tepi ke tepi bagaikan sebuah jembatan hidup!"
+      "text": "Sesuai aba-aba Kancil, kawanan Buaya pun berbaris rapi dari tepi ke tepi bagaikan sebuah jembatan hidup!"
     },
     {
       "id": "lompat1",
-      "narration": "Dengan lincah, Kancil melompat di atas punggung mereka sambil berteriak: Satu, dua, tiga! Para Buaya diam agar hitungan tidak salah."
+      "text": "Dengan lincah, Kancil melompat di atas punggung mereka sambil berteriak: Satu, dua, tiga! Para Buaya diam agar hitungan tidak salah."
     },
     {
       "id": "lompat2",
-      "narration": "Empat, lima, enam! Kancil terus melompat gesit dari kepala ke kepala hingga mencapai tepi seberang dengan selamat."
+      "text": "Empat, lima, enam! Kancil terus melompat gesit dari kepala ke kepala hingga mencapai tepi seberang dengan selamat."
     },
     {
       "id": "jujur",
-      "narration": "Di tepi seberang, Kancil melambai riang: Terima kasih atas jembatannya, sebenarnya tidak ada pesta, aku hanya ingin memetik buah!"
+      "text": "Di tepi seberang, Kancil melambai riang: Terima kasih atas jembatannya, sebenarnya tidak ada pesta, aku hanya ingin memetik buah!"
     },
     {
       "id": "hikmah",
-      "narration": "Kawanan Buaya menganga kesal, sementara Kancil menikmati apel merah dengan gembira. Akal yang cerdik mampu mengalahkan kekuatan besar."
+      "text": "Kawanan Buaya menganga kesal, sementara Kancil menikmati apel merah dengan gembira. Akal yang cerdik mampu mengalahkan kekuatan besar."
     }
   ]
 }

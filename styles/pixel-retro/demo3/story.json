@@ -1,0 +1,63 @@
+{
+  "title": "Tamagotchi 90-an: Jangan Sampai Mati!",
+  "slug": "pixel-retro-tamagotchi",
+  "style": "pixel-retro",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.14,
+  "music": {
+    "preset": "chiptune",
+    "db": -17
+  },
+  "lead": 0.35,
+  "tail": 1.1,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di era sembilan puluhan, peliharaan paling heboh sedunia tidak butuh kandang besar, karena muat di gantungan kunci saku celana."
+    },
+    {
+      "id": "tetas",
+      "show": "Namanya Tamagotchi. Saat pertama dinyalakan, sebutir telur piksel bergetar di layar hingga menetas menjadi makhluk mungil.",
+      "say": "Namanya Tamagoci. Saat pertama dinyalakan, sebutir telur piksel bergetar di layar hingga menetas menjadi makhluk mungil.",
+      "text": "Namanya Tamagotchi. Saat pertama dinyalakan, sebutir telur piksel bergetar di layar hingga menetas menjadi makhluk mungil."
+    },
+    {
+      "id": "makan",
+      "text": "Setiap beberapa jam, kamu wajib menekan tiga tombol kecilnya untuk memberi nasi kepal atau permen agar perutnya tidak lapar melulu."
+    },
+    {
+      "id": "bersih",
+      "text": "Kalau telat dibersihkan, kotoran menumpuk di pojok layar dan peliharaanmu bisa jatuh sakit dengan tanda tengkorak berkedip."
+    },
+    {
+      "id": "sekolah",
+      "text": "Karena takut peliharaannya terlantar, anak-anak nekat membawanya ke sekolah dan menyembunyikannya rapat-rapat di balik tas."
+    },
+    {
+      "id": "bunyi",
+      "say": "Masalahnya, di tengah jam pelajaran yang hening, tiba-tiba terdengar bunyi tit-tit nyaring yang bikin satu kelas panik.",
+      "text": "Masalahnya, di tengah jam pelajaran yang hening, tiba-tiba terdengar bunyi tit-tit nyaring yang bikin satu kelas panik."
+    },
+    {
+      "id": "lupa",
+      "text": "Jika lupa diurus sehari saja karena ketiduran, esok paginya layar itu hanya menyisakan gambar nisan yang bikin patah hati."
+    },
+    {
+      "id": "reset",
+      "text": "Satu-satunya jalan adalah menusuk tombol kecil di belakang cangkang dengan ujung pulpen, lalu berjanji merawatnya lebih rajin."
+    },
+    {
+      "id": "evolusi",
+      "text": "Namun bila dirawat penuh disiplin, ia berevolusi menjadi karakter dewasa langka yang dipamerkan dengan bangga saat jam istirahat."
+    },
+    {
+      "id": "akhir",
+      "say": "Kini Tamagoci hadir kembali di layar hape modern, namun misinya tetap sama seperti dulu: jangan sampai mati lagi!",
+      "text": "Kini Tamagotchi hadir kembali di layar hape modern, namun misinya tetap sama seperti dulu: jangan sampai mati lagi!"
+    }
+  ]
+}
+

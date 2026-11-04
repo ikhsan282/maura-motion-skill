@@ -5,7 +5,7 @@ no: 7
 source: drive:07_Pixel_Retro + github:pixel-art + github:pixel-art-16bit
 family: retro-digital
 tech: canvas2d
-music: chiptune   voice: id-m   captions: pixel
+music: chiptune   voice: el-id-m   captions: pixel
 best_for: legenda & tokoh rakyat, sejarah sebagai "level", biografi singkat, finansial/karier ala RPG, budaya pop, tantangan
 ---
 # Pixel Retro 16-bit
@@ -53,7 +53,7 @@ terduga]." / "[Tokoh] punya [N] nyawa... dan semuanya habis di [tempat]."
   (grid string) di `HEADS`/`TORSOS` + entri `RIG`.
 - Efek & UI: `coin`, `sparkle`, `puff`, `heart`, `popup`, `alert`, `streaks`, `hud(g, {hp, score, level, msg})`, `panel`, `bossBar`.
 
-**Demo:** "Si Pitung: Level Batavia", 18,6 detik, 5 layar: LEVEL 1 Batavia (lari, koin, lompat, dikejar opas,
-BURONAN NO.1) → merampok tumpukan harta tuan tanah, kamera bergeser ke kampung yang dihujani koin → ditembak,
-roboh, bangkit "KEBAL! 1UP" → WARNING bos Schout Hinne lalu peluru emas slow-motion → GAME OVER 1893, huruf runtuh,
-CONTINUE? YA → "LEGENDA" di atap rumah Betawi, PRESS START.
+**Demo (30–90 detik):**
+- **`demo1` — "Si Pitung: Level Batavia"** (~48 detik, 5 babak): LEVEL 1 Batavia (lari, koin, lompat, dikejar opas, BURONAN NO.1) → merampok tumpukan harta tuan tanah, kamera bergeser ke kampung yang dihujani koin → ditembak, roboh, bangkit "KEBAL! 1UP" → WARNING bos Schout Hinne lalu peluru emas slow-motion → GAME OVER 1893, huruf runtuh, CONTINUE? YA → "LEGENDA" di atap rumah Betawi, PRESS START.
+- **`demo2` — "Kenapa Game Jadul 16-Bit Bikin Nagih?"** (~55 detik, 10 babak): Skor tinggi jujur di layar arcade → tantangan 3 nyawa melompati jurang paku tanpa auto-save → menghafal pola tembakan musuh & counter-attack presisi → peti harta di zona rahasia balik dinding → pertarungan Raja Terakhir dengan bar HP bos → layar GAME OVER & hitungan mundur CONTINUE → keseruan mabar giliran stik bersama teman sekampung → sindrom "1 Level Lagi!" → hujan koin kemenangan STAGE CLEAR → resep abadi game 16-bit.
+- **`demo3` — "Tamagotchi 90-an: Jangan Sampai Mati!"** (~55 detik, 10 babak): Demam gantungan kunci cangkang telur 1990-an → telur piksel bergetar dan menetas di layar LCD → menekan tombol A-B-C memberi nasi kepal & permen → kotoran menumpuk & tanda sakit berkedip → menyelundupkan Tamagotchi di balik tas sekolah → panik saat alarm "Tit-Tit!" berbunyi di tengah kelas hening → tragedi lupa sehari hingga layar tinggal nisan → menusuk tombol reset belakang dengan ujung pulpen → evolusi karakter mahkota langka → hadir kembali di layar hape modern.

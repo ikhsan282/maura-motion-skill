@@ -1,43 +1,43 @@
 {
-    "title": "Dewi Sri, Asal Mula Padi",
-    "slug": "03_lukis-pedesaan",
-    "style": "lukis-pedesaan",
-    "lang": "id",
-    "voice": "el-id-m",
-    "maxDuration": 90,
-    "music": {
-        "preset": "folk",
-        "db": -16
+  "title": "Dewi Sri, Asal Mula Padi",
+  "slug": "03_lukis-pedesaan",
+  "style": "lukis-pedesaan",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.25,
+  "speed": 1.1,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di balik hamparan sawah hijau Nusantara, setiap butir nasimu konon berasal dari pengorbanan suci tubuh seorang dewi.",
+      "pause": 0.25
     },
-    "lead": 0.3,
-    "tail": 1.0,
-    "pause": 0.15,
-    "speed": 1.1,
-    "lines": [
-        {
-            "id": "hook",
-            "text": "Setiap butir nasimu, konon, berasal dari tubuh seorang dewi.",
-            "pause": 0.2
-        },
-        {
-            "id": "lahir",
-            "text": "Dewi Sri lahir dari air mata naga Antaboga."
-        },
-        {
-            "id": "racun",
-            "text": "Para dewa cemas akan pesonanya, lalu meracunnya."
-        },
-        {
-            "id": "tumbuh",
-            "text": "Tapi dari kuburnya tumbuh kelapa, bambu... dan dari pusarnya, padi."
-        },
-        {
-            "id": "panen",
-            "text": "Petani masih menyambutnya di setiap panen."
-        },
-        {
-            "id": "moral",
-            "text": "Jadi, jangan sisakan nasimu."
-        }
-    ]
+    {
+      "id": "lahir",
+      "text": "Kisah bermula ketika tetesan air mata kesedihan sang naga penjaga bumi, Antaboga, berubah menjadi sebutir permata yang melahirkan Dewi Sri."
+    },
+    {
+      "id": "racun",
+      "text": "Di kahyangan, para dewa merasa cemas akan pesonanya yang memikat hati Batara Guru, lalu bersekongkol dan tega meracunnya hingga gugur."
+    },
+    {
+      "id": "tumbuh",
+      "text": "Namun keajaiban muncul dari kuburnya di bumi, di mana dari kepalanya tumbuh pohon kelapa, di sisinya bambu, dan dari pusarnya mekar bulir padi."
+    },
+    {
+      "id": "panen",
+      "text": "Sejak saat itu, para petani di desa masih menyambutnya dengan penuh rasa syukur melalui tradisi Mapag Sri di setiap musim panen."
+    },
+    {
+      "id": "moral",
+      "text": "Setiap suap nasi menyimpan berkah kehidupan bagi manusia. Jadi, jangan pernah sisakan sebutir pun nasimu di piring."
+    }
+  ]
 }
