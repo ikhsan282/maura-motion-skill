@@ -1,0 +1,40 @@
+{
+  "title": "Seribu Bangau Kertas — Kisah Sadako Sasaki & Doa Perdamaian Hiroshima",
+  "slug": "origami-demo1",
+  "style": "origami",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "japanese",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Dalam legenda kuno Jepang, konon siapa pun yang tekun melipat seribu bangau kertas dengan tulus, boleh meminta satu permohonan dari para dewa.",
+      "pause": 0.35
+    },
+    {
+      "id": "sadako",
+      "text": "Sepuluh tahun setelah ledakan bom atom Hiroshima, gadis kecil bernama Sadako Sasaki jatuh sakit akibat radiasi, lalu mulai melipat kertas bungkus obat di ranjang rumah sakit."
+    },
+    {
+      "id": "seribu",
+      "text": "Dengan jemari mungil yang tak kenal menyerah, ia melipat satu demi satu bangau harapan, sampai jumlahnya melampaui lebih dari seribu ekor yang menggantung di langit-langit kamar."
+    },
+    {
+      "id": "pergi",
+      "text": "Tapi takdir berkata lain: Sadako pergi dengan tenang di umur dua belas tahun, meninggalkan bangau-bangau kertasnya di tepi jendela.",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Kini jutaan bangau kertas warna-warni dikirim anak-anak dari seluruh dunia ke monumen patungnya setiap tahun, membawa satu doa abadi yang sama: damai di bumi."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Hanoman Obong: Kera Putih yang Membakar Kerajaan Alengka",
+  "style": "wayang-golek",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": { "mood": "gamelan", "gain": 0.15 },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.45,
+      "text": "Seekor kesatria kera putih menyusup sendirian ke jantung kerajaan raksasa, lalu membalikkan hukuman bakar menjadi kobaran api yang meluluhlantakkan seluruh istana!"
+    },
+    {
+      "id": "culik",
+      "pauseAfter": 0.45,
+      "text": "Di atas panggung Wayang Golek Sunda, lakon agung ini bermula ketika raja raksasa Rahwana menculik Dewi Sinta dan menyekapnya di Kerajaan Alengka."
+    },
+    {
+      "id": "utus",
+      "pauseAfter": 0.5,
+      "text": "Sri Rama kemudian mengutus panglima kepercayaannya, Hanoman sang kera putih berbulu seputih kapas, dengan membawa sebentuk cincin permata sebagai tanda bukti."
+    },
+    {
+      "id": "argasoka",
+      "pauseAfter": 0.5,
+      "text": "Menyeberangi samudra luas, Hanoman berhasil menyelinap masuk ke keheningan Taman Argasoka dan menyerahkan cincin suci itu kepada Dewi Sinta yang dirundung duka."
+    },
+    {
+      "id": "tangkap",
+      "pauseAfter": 0.45,
+      "text": "Namun sebelum kembali, Hanoman sengaja memancing keributan besar di gerbang istana hingga kepungan pasukan raksasa Alengka menangkap dan menyeretnya ke hadapan Rahwana."
+    },
+    {
+      "id": "hukum",
+      "pauseAfter": 0.5,
+      "text": "Rahwana yang murka memerintahkan algojo melilit ekor panjang Hanoman dengan kain berminyak, lalu menyulutnya dengan obor menyala di tengah alun-alun!"
+    },
+    {
+      "id": "lompat",
+      "pauseAfter": 0.5,
+      "text": "Bukannya kesakitan, Hanoman justru merapalkan kesaktiannya, membesarkan tubuh, memutus tali pengikat, dan melompat tinggi ke atas bubungan atap emas istana!"
+    },
+    {
+      "id": "obong",
+      "pauseAfter": 0.5,
+      "text": "Dengan ekor yang berkobar bagai obor raksasa, Hanoman melompat dari satu menara ke menara lain hingga seluruh Kerajaan Alengka berubah menjadi lautan api, kecuali Taman Argasoka tempat Dewi Sinta berada."
+    },
+    {
+      "id": "moral",
+      "pauseAfter": 0.8,
+      "text": "Lakon Hanoman Obong mengingatkan kita bahwa kesombongan dan angkara murka pada akhirnya akan selalu terbakar oleh nyala api keserakahan mereka sendiri."
+    }
+  ]
+}
+

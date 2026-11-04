@@ -1,0 +1,56 @@
+{
+  "title": "Si Cepot & Falsafah Tawa Sunda: Ketika Rakyat Kecil Menasihati Para Dewa",
+  "style": "wayang-golek",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": { "mood": "gamelan", "gain": 0.15 },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.45,
+      "text": "Mengapa di panggung Wayang Golek Sunda, boneka kayu berwajah merah dengan satu gigi nongol ini justru lebih ditunggu penonton daripada para raja dan kesatria?"
+    },
+    {
+      "id": "kenal",
+      "pauseAfter": 0.45,
+      "text": "Kenalkan Si Cepot, atau Astrajingga, putra sulung Lurah Semar Badranaya yang lahir dari bayangan tanah Pasundan yang jujur, hangat, dan apa adanya."
+    },
+    {
+      "id": "dawala",
+      "pauseAfter": 0.5,
+      "text": "Bersama adiknya Dawala yang berhidung mancung dan ayah mereka Semar yang bijaksana, kehadiran para Punakawan selalu memecah ketegangan di tengah malam pertunjukan."
+    },
+    {
+      "id": "goyang",
+      "pauseAfter": 0.45,
+      "text": "Di tangan sang dalang, kepala kayu Si Cepot bisa menoleh lincah, mengangguk jenaka, hingga memperagakan jurus pencak silat Sunda diiringi tabuhan kendang yang rancak!"
+    },
+    {
+      "id": "kritik",
+      "pauseAfter": 0.5,
+      "text": "Namun di balik banyolannya yang mengocok perut, Si Cepot adalah simbol suara rakyat kecil yang berani mengkritik penguasa sombong tanpa rasa takut."
+    },
+    {
+      "id": "buto",
+      "pauseAfter": 0.5,
+      "text": "Ketika raksasa angkara murka datang mengadang para kesatria, Si Cepot maju bukan dengan senjata pusaka, melainkan dengan akal cerdik dan ketangkasan silat yang membuat lawan kelabakan!"
+    },
+    {
+      "id": "makna",
+      "pauseAfter": 0.5,
+      "text": "Nama Astrajingga sendiri menyimpan makna mendalam: kulit luarnya boleh tampak merah menyala penuh canda, tetapi hatinya tetap suci, setia, dan membela kebenaran."
+    },
+    {
+      "id": "sunda",
+      "pauseAfter": 0.5,
+      "text": "Melalui tawa Si Cepot, para maestro dalang Pasundan menitipkan falsafah luhur: silih asah, silih asih, dan silih asuh dalam menjalani hidup bersama."
+    },
+    {
+      "id": "penutup",
+      "pauseAfter": 0.8,
+      "text": "Sebab dalam kearifan Wayang Golek, kebijaksanaan sejati tidak diukur dari mahkota emas di kepala, melainkan dari ketulusan hati yang membawa senyum bagi sesama."
+    }
+  ]
+}
+

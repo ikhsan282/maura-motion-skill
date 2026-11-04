@@ -1,0 +1,56 @@
+{
+  "title": "Lahirnya Gatotkaca di Kawah Candradimuka: Kesatria Otot Kawat Tulang Besi",
+  "style": "wayang-golek",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": { "mood": "gamelan", "gain": 0.15 },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.45,
+      "text": "Bagaimana seorang bayi yang baru lahir justru dicemplungkan ke dalam kawah gunung berapi mendidih oleh para dewa, lalu bangkit menjadi kesatria terkuat di angkasa?"
+    },
+    {
+      "id": "tetuka",
+      "pauseAfter": 0.45,
+      "text": "Dalam lakon Wayang Golek Purwa, putra pasangan Bima dan Dewi Arimbi lahir dengan nama Jabang Tetuka, namun tali pusarnya tidak mempan dipotong oleh senjata tajam apa pun!"
+    },
+    {
+      "id": "kahyangan",
+      "pauseAfter": 0.5,
+      "text": "Di saat yang sama, Kahyangan Jonggringsaloka sedang digempur oleh raksasa sakti Prabu Kala Pracona yang tidak sanggup dikalahkan oleh pasukan bidadari maupun para dewa."
+    },
+    {
+      "id": "kawah",
+      "pauseAfter": 0.5,
+      "text": "Batara Narada pun turun membawa bayi Tetuka dan memasukkannya ke dalam Kawah Candradimuka yang membara untuk ditempa menjadi penyelamat kahyangan!"
+    },
+    {
+      "id": "tempa",
+      "pauseAfter": 0.5,
+      "text": "Para dewa melemparkan beraneka pusaka besi, tembaga, dan baja sakti ke dalam kawah menyala, menyatu langsung ke dalam raga sang bayi!"
+    },
+    {
+      "id": "bangkit",
+      "pauseAfter": 0.5,
+      "text": "Dari kepulan asap dan pijar api kawah, muncullah kesatria muda gagah perkasa bernama Raden Gatotkaca yang berotot kawat dan bertulang besi!"
+    },
+    {
+      "id": "pusaka",
+      "pauseAfter": 0.45,
+      "text": "Ia dianugerahi rompi bintang Kotang Antakusuma yang membuatnya mampu terbang secepat kilat, serta Caping Basunanda yang melindunginya dari panas dan hujan."
+    },
+    {
+      "id": "menang",
+      "pauseAfter": 0.5,
+      "text": "Melesat membelah langit, Gatotkaca menumbangkan angkara murka raksasa Kala Pracona dan mengembalikan kedamaian di Kahyangan maupun bumi Pringgadani."
+    },
+    {
+      "id": "moral",
+      "pauseAfter": 0.8,
+      "text": "Kisah Kawah Candradimuka mengajarkan kita bahwa tempaan ujian hidup yang paling panas sekalipun justru hadir untuk membentuk ketangguhan sejati di dalam diri kita."
+    }
+  ]
+}
+

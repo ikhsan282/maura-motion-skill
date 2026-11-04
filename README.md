@@ -98,7 +98,7 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 
 ## Gaya dengan demo tambahan
 
-Gaya No. 1 sampai 14 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
+Gaya No. 1 sampai 15 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
 
 | No | Gaya | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|---|---|
@@ -116,8 +116,9 @@ Gaya No. 1 sampai 14 kini sudah memiliki paket lengkap **3 demo per gaya**, deng
 | 12 | `low-poly` | "Pulau Run & Manhattan — Pulau Pala" (`demo1/`, 56 dtk) | "Kapal Phinisi Nusantara" (`demo2/`, 55 dtk) | "Cincin Api Nusantara" (`demo3/`, 78 dtk) |
 | 13 | `buku-pop-up` | "Roro Jonggrang & Seribu Candi" (`demo1/`, 52 dtk) | "Timun Mas & Empat Bungkusan Ajaib" (`demo2/`, 55 dtk) | "Keajaiban Candi Borobudur" (`demo3/`, 55 dtk) |
 | 14 | `batik-hidup` | "Parang Rusak: Motif Larangan" (`demo1/`, 52 dtk) | "Filosofi Batik Kawung — Buah Aren" (`demo2/`, 55 dtk) | "Batik Mega Mendung Cirebon" (`demo3/`, 55 dtk) |
+| 15 | `wayang-golek` | "Hanoman Obong: Membakar Alengka" (`demo1/`, 55 dtk) | "Si Cepot & Falsafah Tawa Sunda" (`demo2/`, 55 dtk) | "Lahirnya Gatotkaca di Kawah Candradimuka" (`demo3/`, 55 dtk) |
 
-Selain gaya 1–14, sebagian gaya lain juga memiliki variasi demo tambahan:
+Selain gaya 1–15, sebagian gaya lain juga memiliki variasi demo tambahan:
 
 | Gaya | Demo |
 |---|---|
@@ -137,7 +138,7 @@ Selain gaya 1–14, sebagian gaya lain juga memiliki variasi demo tambahan:
 | `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
 
-## Status gaya (77 gaya: 66 siap pakai ✅, 11 belum diimplementasi ❌)
+## Status gaya (77 gaya: 67 siap pakai ✅, 10 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -155,10 +156,10 @@ Selain gaya 1–14, sebagian gaya lain juga memiliki variasi demo tambahan:
 | 12 | **Low Poly** | low-poly | ✅ ([demo1](styles/low-poly/demo1/) · [demo2](styles/low-poly/demo2/) · [demo3](styles/low-poly/demo3/)) |
 | 13 | **Buku Pop-up** | buku-pop-up | ✅ ([demo1](styles/buku-pop-up/demo1/) · [demo2](styles/buku-pop-up/demo2/) · [demo3](styles/buku-pop-up/demo3/)) |
 | 14 | **Batik Hidup** | batik-hidup | ✅ ([demo1](styles/batik-hidup/demo1/) · [demo2](styles/batik-hidup/demo2/) · [demo3](styles/batik-hidup/demo3/)) |
-| 15 | **Wayang Golek** | wayang-golek | ❌ (belum diimplementasi) |
-| 16 | **Wayang Beber** | wayang-beber | ✅ ([styles/wayang-beber](styles/wayang-beber/)) |
+| 15 | **Wayang Golek** | wayang-golek | ✅ ([demo1](styles/wayang-golek/demo1/) · [demo2](styles/wayang-golek/demo2/) · [demo3](styles/wayang-golek/demo3/)) |
+| 16 | **Wayang Beber** | wayang-beber | ✅ ([demo1](styles/wayang-beber/demo1/) · [demo2](styles/wayang-beber/demo2/) · [demo3](styles/wayang-beber/demo3/)) |
 | 17 | **Lukisan Gua Purba** | lukisan-gua-purba | ❌ (belum diimplementasi) |
-| 18 | **Origami** | origami | ✅ ([styles/origami](styles/origami/)) |
+| 18 | **Origami** | origami | ✅ ([demo1](styles/origami/demo1/) · [demo2](styles/origami/demo2/) · [demo3](styles/origami/demo3/)) |
 | 19 | **Kardus Bekas** | kardus-bekas | ✅ ([styles/kardus-bekas](styles/kardus-bekas/)) |
 | 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([styles/kolase-daun-bunga](styles/kolase-daun-bunga/)) |
 | 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([styles/kotak-cahaya-kertas](styles/kotak-cahaya-kertas/)) |

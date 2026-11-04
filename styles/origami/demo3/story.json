@@ -1,0 +1,51 @@
+{
+  "title": "Empat Musim di Desa Kertas Washi — Perjalanan Bangau Origami Melintasi Pegunungan Jepang",
+  "slug": "origami-demo3",
+  "style": "origami",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "japanese",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Sebelum menjadi bangau origami yang anggun, setiap lembar kertas washi lahir dari tangan para perajin di lembah pegunungan Jepang."
+    },
+    {
+      "id": "semi",
+      "text": "Saat musim semi tiba, serat kulit pohon murbei direndam di sungai jernih yang mengalir di bawah guguran kelopak bunga sakura merah muda."
+    },
+    {
+      "id": "desa",
+      "text": "Lembaran serat basah dijemur di bawah hangat matahari pagi di halaman rumah-rumah kayu, menghasilkan kertas washi yang tipis namun sangat ulet."
+    },
+    {
+      "id": "panas",
+      "text": "Di musim panas yang cerah, anak-anak desa berlarian membawa bangau kertas bermotif asanoha dan seigaiha menuju perbukitan hijau."
+    },
+    {
+      "id": "gugur",
+      "text": "Ketika angin musim gugur berembus, hutan kertas berubah warna menjadi merah tua dan keemasan, mengiringi kawanan bangau yang terbang melintasi lembah."
+    },
+    {
+      "id": "salju",
+      "text": "Di puncak musim dingin, salju putih menyelimuti atap-atap desa dan lereng gunung, namun serat kertas washi tetap hangat memantulkan cahaya lentera."
+    },
+    {
+      "id": "festival",
+      "text": "Pada malam perayaan tahun baru, untaian bendera kertas dan seribu bangau digantung di sepanjang jalan desa sebagai lambang umur panjang dan keberuntungan."
+    },
+    {
+      "id": "moral",
+      "text": "Dari serat pohon kembali menyatu dengan alam, seni kertas washi dan origami mengajarkan harmoni indah antara ketekunan manusia dan putaran musim."
+    }
+  ]
+}
+

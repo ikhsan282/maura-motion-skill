@@ -1,0 +1,51 @@
+{
+  "title": "Jaka Tarub & Selendang Nawangwulan — Kisah Telaga Bidadari di Gulungan Daluwang",
+  "slug": "wayang-beber-demo3",
+  "style": "wayang-beber",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "gamelan-pelog",
+    "db": -15
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di atas lembaran kertas kulit kayu daluwang yang mulai menguning, tersimpan legenda Jaka Tarub dan bidadari Nawangwulan yang dituturkan turun-temurun."
+    },
+    {
+      "id": "telaga",
+      "text": "Di tengah rimba yang sunyi, tujuh bidadari turun dari kahyangan untuk mandi di telaga jernih, sementara Jaka Tarub mengintip dari balik pepohonan."
+    },
+    {
+      "id": "selendang",
+      "text": "Secara diam-diam ia mengambil sehelai selendang milik Nawangwulan, membuat sang bidadari bungsu tertinggal seorang diri ketika keenam saudarinya terbang kembali."
+    },
+    {
+      "id": "keluarga",
+      "text": "Nawangwulan akhirnya menerima uluran tangan Jaka Tarub, menikah, dan hidup berbahagia bersama putri kecil mereka yang diberi nama Nawangsih."
+    },
+    {
+      "id": "lumbung",
+      "text": "Berkat kesaktian kahyangan, Nawangwulan mampu menanak sebakul nasi hanya dari setangkai padi, asalkan tutup kukusan dapurnya tak pernah dibuka oleh suaminya."
+    },
+    {
+      "id": "rahasia",
+      "text": "Namun rasa penasaran mengalahkan janji: Jaka Tarub membuka tutup kukusan itu dan terkejut hanya melihat sebatang padi, sehingga kesaktian istrinya pun lenyap."
+    },
+    {
+      "id": "terbang",
+      "text": "Saat persediaan padi di lumbung menipis, Nawangwulan menemukan kembali selendang pusakanya di dasar tumpukan jerami, lalu terbang pulang menuju kahyangan."
+    },
+    {
+      "id": "moral",
+      "text": "Lukisan wayang beber ini menjadi pengingat abadi bahwa sebuah kepercayaan yang dilanggar, sekali saja, takkan mudah kembali seperti sedia kala."
+    }
+  ]
+}
+

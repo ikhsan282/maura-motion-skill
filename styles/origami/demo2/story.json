@@ -1,0 +1,51 @@
+{
+  "title": "Sains Lipatan Origami — Dari Kertas Washi ke Panel Surya Teleskop Antariksa",
+  "slug": "origami-demo2",
+  "style": "origami",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "japanese",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Apa jadinya jika seni melipat selembar kertas tradisional Jepang menjadi kunci utama untuk menerbangkan teleskop raksasa ke luar angkasa?"
+    },
+    {
+      "id": "aturan",
+      "text": "Origami sejati bekerja dengan aturan matematika yang elegan: hanya dari satu lembar kertas persegi utuh, tanpa gunting dan tanpa setetes lem pun."
+    },
+    {
+      "id": "bangau",
+      "text": "Setiap garis lipatan gunung dan lembah mengubah bidang dua dimensi yang datar menjadi struktur tiga dimensi yang kokoh sekaligus lentur."
+    },
+    {
+      "id": "miura",
+      "text": "Pada tahun seribu sembilan ratus tujuh puluhan, astrofisikawan Koryo Miura menciptakan pola lipatan jajar genjang yang mampu membuka dan menutup hanya dengan satu tarikan sudut."
+    },
+    {
+      "id": "satelit",
+      "text": "Pola Miura-ori ini memungkinkan panel surya dan cermin teleskop antariksa selebar lapangan tenis dilipat ringkas ke dalam moncong roket peluncur."
+    },
+    {
+      "id": "medis",
+      "text": "Di dunia kedokteran, prinsip lipatan yang sama digunakan untuk membuat cincin penyangga pembuluh darah mikro yang mengembang otomatis di dalam jantung manusia."
+    },
+    {
+      "id": "arsitektur",
+      "text": "Hingga kubah bangunan tahan gempa dan kantung udara keselamatan mobil, semuanya berutang budi pada geometri lipatan kertas yang presisi."
+    },
+    {
+      "id": "moral",
+      "text": "Origami membuktikan bahwa dari kesederhanaan selembar kertas washi, imajinasi manusia sanggup melipat jarak menuju masa depan."
+    }
+  ]
+}
+

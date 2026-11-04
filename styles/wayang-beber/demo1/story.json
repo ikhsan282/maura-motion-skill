@@ -1,0 +1,40 @@
+{
+  "title": "Panji & Dewi Sekartaji — Misteri Adegan Ke-24 Wayang Beber Pacitan",
+  "slug": "wayang-beber-demo1",
+  "style": "wayang-beber",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "gamelan-pelog",
+    "db": -15
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di desa terpencil Pacitan, tersimpan gulungan lukisan kertas daluwang berusia ratusan tahun. Namun adegan terakhir kisah cinta ini... tak boleh dibuka oleh siapa pun.",
+      "pause": 0.35
+    },
+    {
+      "id": "kabur",
+      "text": "Kisahnya bermula saat Dewi Sekartaji kabur diam-diam dari gerbang istana Kediri pada malam buta, karena menolak dijodohkan paksa tanpa cinta."
+    },
+    {
+      "id": "sayembara",
+      "text": "Sang Raja yang cemas pun bersayembara ke seluruh penjuru negeri: siapa saja penemunya, dialah yang berhak mempersunting sang putri menjadi pendamping hidupnya."
+    },
+    {
+      "id": "jaka",
+      "text": "Di tengah keramaian pasar, Jaka Kembang Kuning akhirnya menemukannya, menyamar jadi pengamen topeng barong yang menari diiringi tabuhan kendang pengiringnya."
+    },
+    {
+      "id": "akhir",
+      "text": "Mereka pun bersatu dan menikah di pendopo agung. Tapi adegan ke-24 tetap tergulung rapat dengan ikatan benang merah sebagai pantangan sakral hingga hari ini.",
+      "say": "Mereka pun bersatu dan menikah di pendopo agung. Tapi adegan ke dua puluh empat tetap tergulung rapat dengan ikatan benang merah sebagai pantangan sakral hingga hari ini."
+    }
+  ]
+}

@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 66 siap pakai ✅, 11 belum diimplementasi ❌)
+## Status gaya (77 gaya: 67 siap pakai ✅, 10 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -84,10 +84,10 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 12 | **Low Poly** | low-poly | ✅ ([demo1](styles/low-poly/demo1/) · [demo2](styles/low-poly/demo2/) · [demo3](styles/low-poly/demo3/)) |
 | 13 | **Buku Pop-up** | buku-pop-up | ✅ ([demo1](styles/buku-pop-up/demo1/) · [demo2](styles/buku-pop-up/demo2/) · [demo3](styles/buku-pop-up/demo3/)) |
 | 14 | **Batik Hidup** | batik-hidup | ✅ ([demo1](styles/batik-hidup/demo1/) · [demo2](styles/batik-hidup/demo2/) · [demo3](styles/batik-hidup/demo3/)) |
-| 15 | **Wayang Golek** | wayang-golek | ❌ (belum diimplementasi) |
-| 16 | **Wayang Beber** | wayang-beber | ✅ ([styles/wayang-beber](styles/wayang-beber/)) |
+| 15 | **Wayang Golek** | wayang-golek | ✅ ([demo1](styles/wayang-golek/demo1/) · [demo2](styles/wayang-golek/demo2/) · [demo3](styles/wayang-golek/demo3/)) |
+| 16 | **Wayang Beber** | wayang-beber | ✅ ([demo1](styles/wayang-beber/demo1/) · [demo2](styles/wayang-beber/demo2/) · [demo3](styles/wayang-beber/demo3/)) |
 | 17 | **Lukisan Gua Purba** | lukisan-gua-purba | ❌ (belum diimplementasi) |
-| 18 | **Origami** | origami | ✅ ([styles/origami](styles/origami/)) |
+| 18 | **Origami** | origami | ✅ ([demo1](styles/origami/demo1/) · [demo2](styles/origami/demo2/) · [demo3](styles/origami/demo3/)) |
 | 19 | **Kardus Bekas** | kardus-bekas | ✅ ([styles/kardus-bekas](styles/kardus-bekas/)) |
 | 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([styles/kolase-daun-bunga](styles/kolase-daun-bunga/)) |
 | 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([styles/kotak-cahaya-kertas](styles/kotak-cahaya-kertas/)) |

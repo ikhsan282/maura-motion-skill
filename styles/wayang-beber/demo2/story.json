@@ -1,0 +1,51 @@
+{
+  "title": "Ande-Ande Lumut & Klenting Kuning — Kisah Kesetiaan dalam Gulungan Daluwang",
+  "slug": "wayang-beber-demo2",
+  "style": "wayang-beber",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "gamelan-pelog",
+    "db": -15
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "speed": 1.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Saat gulungan daluwang dibuka di bawah sinar lampu minyak, mengalirlah kisah Panji lainnya yang paling dicintai masyarakat Jawa: Ande-Ande Lumut."
+    },
+    {
+      "id": "sungai",
+      "text": "Para gadis cantik berbondong-bondong hendak melamar pemuda tampan di Desa Dadapan, namun langkah mereka terhenti oleh sungai lebar yang sedang banjir."
+    },
+    {
+      "id": "yuyukangkang",
+      "text": "Muncul Yuyu Kangkang, kepiting raksasa penjaga sungai yang menawarkan tumpangan menyeberang dengan satu syarat licik: mencium pipi setiap gadis."
+    },
+    {
+      "id": "klenting",
+      "text": "Saudari-saudari Klenting menerima syarat itu demi cepat sampai, tetapi si bungsu Klenting Kuning yang berlumur jelaga menolak dengan tegas."
+    },
+    {
+      "id": "pusaka",
+      "text": "Dengan memukulkan pusaka lidi kuning pemberian bangau ajaib ke permukaan air, sungai besar itu seketika surut mengering dan membuka jalan."
+    },
+    {
+      "id": "desa",
+      "text": "Sesampainya di pendopo Mbok Rondo Dadapan, satu per satu gadis pesolek ditolak oleh Ande-Ande Lumut karena telah kehilangan keteguhan janji."
+    },
+    {
+      "id": "pilihan",
+      "text": "Hanya Klenting Kuning yang dipilihnya, sebab di balik wajah sederhananya, ia adalah Dewi Sekartaji yang menjaga kehormatan dan kesetiaan."
+    },
+    {
+      "id": "moral",
+      "text": "Gulungan wayang beber ini mengajarkan bahwa kemuliaan sejati tidak diukur dari indahnya busana luar, melainkan dari kemurnian hati yang tak tergoyahkan."
+    }
+  ]
+}
+
