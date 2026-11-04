@@ -1,0 +1,42 @@
+{
+  "style": "gouache-dongeng",
+  "title": "Kancil & Siput Lomba Lari di Tepian Sungai — Ketika Kesombongan Kalah oleh Kerjasama",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di tepian sungai hutan tropis yang teduh, Si Kancil yang terkenal cerdik dan lincah sedang berjalan santai sambil membanggakan kecepatan kakinya kepada penghuni hutan."
+    },
+    {
+      "id": "tantang",
+      "text": "Ketika melihat seekor siput kecil merayap pelan di atas batu lumut, Kancil tertawa mengejek dan menantang Siput untuk adu lari menyusuri sungai pada keesokan paginya."
+    },
+    {
+      "id": "siasat",
+      "text": "Siput menerima tantangan itu dengan tenang, lalu malam harinya ia mengumpulkan puluhan teman siput untuk berbaris rapi di sepanjang pinggir sungai dari garis awal hingga akhir."
+    },
+    {
+      "id": "mulai",
+      "text": "Begitu matahari terbit dan aba-aba lomba dimulai, Kancil langsung melesat kencang meninggalkan garis awal sambil yakin bahwa Siput masih tertinggal jauh di belakang."
+    },
+    {
+      "id": "panggil",
+      "text": "Setelah berlari cukup jauh, Kancil berhenti sejenak lalu berteriak memanggil Siput—namun betapa kagetnya ia ketika suara Siput menyahut tepat dari depan langkahnya!"
+    },
+    {
+      "id": "bingung",
+      "text": "Kancil memacu larinya berkali-kali lipat lebih cepat dan kembali memanggil, tetapi setiap kali ia berseru, selalu ada siput di depannya yang menjawab dengan santai."
+    },
+    {
+      "id": "menyerah",
+      "text": "Hingga akhirnya di dekat garis akhir, napas Kancil tersengal-sengal kelelahan dan ia pun mengakui kekalahannya dengan wajah malu di hadapan Siput kecil."
+    },
+    {
+      "id": "outro",
+      "text": "Fabel Nusantara ini mengajarkan bahwa sepandai dan secepat apa pun seseorang, kesombongan akan selalu dikalahkan oleh kerendahan hati dan kekompakan bersama."
+    }
+  ]
+}
+

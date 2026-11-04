@@ -1,0 +1,46 @@
+{
+  "style": "papan-tulis-kapur",
+  "title": "Keajaiban Lipatan Kertas — Lipat 42 Kali Bisa Sampai ke Bulan!",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Selembar kertas buku tulis hanya setebal nol koma satu milimeter, tetapi jika kamu sanggup melipatnya empat puluh dua kali, tumpukannya akan menembus langit hingga menyentuh permukaan Bulan!"
+    },
+    {
+      "id": "rekor",
+      "text": "Di dunia nyata, kita biasanya macet pada lipatan ketujuh atau kedelapan karena serat kertas menjadi terlalu kaku, bahkan rekor dunia hanya berhenti di dua belas lipatan."
+    },
+    {
+      "id": "eksponen",
+      "text": "Namun secara matematika, setiap satu kali lipatan selalu menggandakan ketebalan sebelumnya menjadi dua kali, empat kali, delapan kali, hingga membentuk deret dua pangkat N."
+    },
+    {
+      "id": "sepuluh",
+      "text": "Pada lipatan kesepuluh, ketebalannya menjadi seribu dua puluh empat lapis atau sekitar sepuluh sentimeter, setebal sebuah kamus besar di meja kelas."
+    },
+    {
+      "id": "monas",
+      "text": "Lanjutkan hingga dua puluh kali lipatan maka tingginya menembus seratus meter melampaui Tugu Monas, dan pada lipatan kedua puluh tujuh sudah lebih tinggi dari puncak Gunung Everest!"
+    },
+    {
+      "id": "bumi",
+      "text": "Pada lipatan ketiga puluh, ketebalan kertas itu mencapai seratus tujuh kilometer yang berarti sudah menembus batas atmosfer Bumi menuju ruang hampa antariksa."
+    },
+    {
+      "id": "bulan",
+      "text": "Dan tepat pada lipatan keempat puluh dua, dua pangkat empat puluh dua dikali nol koma satu milimeter menghasilkan empat ratus tiga puluh sembilan ribu kilometer, melewati jarak Bulan!"
+    },
+    {
+      "id": "outro",
+      "text": "Itulah dahsyatnya pertumbuhan eksponensial: berawal dari angka yang tampak tak berarti, lalu meledak melampaui imajinasi ketika terus berlipat ganda."
+    }
+  ]
+}
+

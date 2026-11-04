@@ -24,4 +24,7 @@ best_for: Gouache buku cerita (paint pass gouache): bentuk datar matte, tepi rap
 **Kit API (`styles/gouache-dongeng/kit.js`):**
 - Exports: `PAL`, `cam`, `pop`, `pr`, `bg`, `title`, `caption`, `hill`, `hut`, `figure`, `pumpkin`.
 
-**Demo:** "Bawang Merah Bawang Putih" — voice `id-f`, musik `musicbox`. Hook: "Dua labu dari nenek misterius: satu berisi emas... satu berisi ular."
+**Paket Demo (30–90 Detik):**
+1. **`demo1`** — *Bawang Merah & Bawang Putih — Kisah Dua Labu Ajaib dari Nenek di Tepi Sungai* (~52 detik): Kisah selendang yang hanyut di sungai, ketulusan Bawang Putih memilih labu kecil berisi emas, dan keserakahan Bawang Merah memilih labu besar.
+2. **`demo2`** — *Keong Mas & Candra Kirana — Putri Kerajaan Kediri yang Disihir Menjadi Keong Emas* (~55 detik): Dongeng klasik Dewi Candra Kirana yang dikutuk menjadi keong emas, dirawat oleh Mbok Rondo Dadapan di dalam tempayan, hingga bertemu kembali dengan Raden Inu Kertapati.
+3. **`demo3`** — *Kancil & Siput Lomba Lari di Tepian Sungai — Ketika Kesombongan Kalah oleh Kerjasama* (~55 detik): Fabel Nusantara tentang Kancil yang menantang Siput adu lari di tepi sungai dan dikalahkan oleh kekompakan barisan siput.

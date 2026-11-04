@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 68 siap pakai ✅, 9 belum diimplementasi ❌)
+## Status gaya (77 gaya: 69 siap pakai ✅, 8 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -92,12 +92,12 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([demo1](styles/kolase-daun-bunga/demo1/) · [demo2](styles/kolase-daun-bunga/demo2/) · [demo3](styles/kolase-daun-bunga/demo3/)) |
 | 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([demo1](styles/kotak-cahaya-kertas/demo1/) · [demo2](styles/kotak-cahaya-kertas/demo2/) · [demo3](styles/kotak-cahaya-kertas/demo3/)) |
 | 22 | **Lukisan Minyak Bergerak** | lukisan-minyak | ✅ ([demo1](styles/lukisan-minyak/demo1/) · [demo2](styles/lukisan-minyak/demo2/) · [demo3](styles/lukisan-minyak/demo3/)) |
-| 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([styles/papan-tulis-kapur](styles/papan-tulis-kapur/)) |
-| 24 | **Flipbook** | flipbook | ✅ ([styles/flipbook](styles/flipbook/)) |
-| 25 | **Terminal ASCII** | terminal-ascii | ✅ ([styles/terminal-ascii](styles/terminal-ascii/)) |
-| 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([styles/cat-air](styles/cat-air/)) |
-| 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([styles/gouache-dongeng](styles/gouache-dongeng/)) |
-| 28 | **Pastel & Krayon** | pastel-krayon | ❌ (belum diimplementasi) |
+| 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([demo1](styles/papan-tulis-kapur/demo1/) · [demo2](styles/papan-tulis-kapur/demo2/) · [demo3](styles/papan-tulis-kapur/demo3/)) |
+| 24 | **Flipbook** | flipbook | ✅ ([demo1](styles/flipbook/demo1/) · [demo2](styles/flipbook/demo2/) · [demo3](styles/flipbook/demo3/)) |
+| 25 | **Terminal ASCII** | terminal-ascii | ✅ ([demo1](styles/terminal-ascii/demo1/) · [demo2](styles/terminal-ascii/demo2/) · [demo3](styles/terminal-ascii/demo3/)) |
+| 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([demo1](styles/cat-air/demo1/) · [demo2](styles/cat-air/demo2/) · [demo3](styles/cat-air/demo3/)) |
+| 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([demo1](styles/gouache-dongeng/demo1/) · [demo2](styles/gouache-dongeng/demo2/) · [demo3](styles/gouache-dongeng/demo3/)) |
+| 28 | **Pastel & Krayon** | pastel-krayon | ✅ ([demo1](styles/pastel-krayon/demo1/) · [demo2](styles/pastel-krayon/demo2/) · [demo3](styles/pastel-krayon/demo3/)) |
 | 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ❌ (belum diimplementasi) |
 | 30 | **Product Film Light** | product-light | ✅ ([styles/product-light](styles/product-light/)) |
 | 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([styles/dark-glow-ui](styles/dark-glow-ui/)) |

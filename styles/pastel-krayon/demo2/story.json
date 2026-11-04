@@ -1,0 +1,42 @@
+{
+  "style": "pastel-krayon",
+  "title": "Bagaimana Pelangi Muncul Selepas Hujan? — Ketika Tetes Air Menjadi Prisma Cahaya",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Selepas hujan reda di sore hari dan matahari kembali mengintip dari balik awan, sebuah lengkungan tujuh warna raksasa tiba-tiba melukis langit: pelangi."
+    },
+    {
+      "id": "putih",
+      "text": "Dari mana datangnya warna-warni itu? Rahasianya ada pada sinar matahari yang tampak putih kekuningan, padahal sesungguhnya tersusun dari gabungan seluruh spektrum warna cahaya."
+    },
+    {
+      "id": "tetes",
+      "text": "Saat hujan baru saja berhenti, jutaan tetesan air berukuran mikroskopis masih melayang-layang di udara dan bekerja layaknya prisma kaca alami."
+    },
+    {
+      "id": "bias",
+      "text": "Ketika seberkas sinar matahari menembus masuk ke permukaan tetes air hujan, cahaya mengalami pembiasan atau refraksi karena kecepatannya melambat di dalam air."
+    },
+    {
+      "id": "pantul",
+      "text": "Cahaya yang terurai itu kemudian memantul di dinding bagian belakang tetesan air, lalu keluar kembali menuju mata kita dengan sudut sekitar empat puluh dua derajat."
+    },
+    {
+      "id": "spektrum",
+      "text": "Karena setiap warna memiliki panjang gelombang yang berbeda, cahaya merah dibelokkan paling sedikit di bagian atas, sementara cahaya ungu dibelokkan paling tajam di bagian bawah."
+    },
+    {
+      "id": "busur",
+      "text": "Pelangi selalu tampak melengkung seperti busur karena hanya tetesan air yang berada pada sudut empat puluh dua derajat melingkar dari arah berlawanan matahari yang memantulkan warnanya ke matamu."
+    },
+    {
+      "id": "outro",
+      "text": "Itulah sebabnya untuk melihat pelangi, kamu harus selalu berdiri membelakangi matahari sambil menatap ke arah tirai hujan di depanmu."
+    }
+  ]
+}
+

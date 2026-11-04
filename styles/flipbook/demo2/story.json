@@ -1,0 +1,46 @@
+{
+  "style": "flipbook",
+  "title": "Rahasia 12 Prinsip Animasi — Squash, Stretch, dan Antisipasi di Pojok Buku",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kenapa gambar kartun di buku lipat terasa punya bobot, lentur, dan bernyawa, padahal ia hanyalah goresan tinta pulpen biru di atas kertas tipis?"
+    },
+    {
+      "id": "squash",
+      "text": "Rahasia pertamanya disebut squash and stretch: saat karakter mendarat ke tanah tubuhnya memipih seperti karet, lalu memanjang saat melesat naik ke udara."
+    },
+    {
+      "id": "antisipasi",
+      "text": "Sebelum melompat tinggi, seorang tokoh tidak langsung terbang, melainkan merunduk lebih dulu mengambil ancang-ancang yang dalam istilah animasi disebut antisipasi."
+    },
+    {
+      "id": "onion",
+      "text": "Saat menggambar halaman baru, animator mengintip bayangan tembus pandang dari halaman sebelumnya atau onion skin agar jarak antar pose tetap terukur."
+    },
+    {
+      "id": "spacing",
+      "text": "Jika jarak gambar antar halaman dibuat rapat maka gerakan akan tampak lambat, sedangkan jika jaraknya renggang maka tokoh akan melesat cepat."
+    },
+    {
+      "id": "arc",
+      "text": "Semua gerakan alami mulai dari ayunan tangan hingga lompatan di udara selalu mengikuti jalur melengkung atau busur parabolik, bukan garis lurus yang kaku."
+    },
+    {
+      "id": "disney",
+      "text": "Prinsip-prinsip yang dirumuskan para animator legendaris tahun seribu sembilan ratus tiga puluhan ini menjadi kitab suci seluruh studio animasi dunia."
+    },
+    {
+      "id": "outro",
+      "text": "Dengan sebatang pulpen dan buku catatan kecil, siapa pun bisa menghidupkan imajinasi dari halaman pertama hingga halaman terakhir bertuliskan tamat."
+    }
+  ]
+}
+

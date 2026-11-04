@@ -51,3 +51,9 @@ besar]." / "Di dalam file ini tersembunyi [rahasia]."
 progress infeksi → pesan asli "Welcome to the Dungeon" diketik, nama/alamat/telepon menyala saat diucapkan →
 peta dunia ASCII, jalur infeksi dari Lahore ke UK/USA, disket bajakan berlipat → +25 tahun: sosok berjalan ke
 730 Nizam Block, TOK TOK, pintu terbuka, "MASIH DI SINI." → layar mati.
+
+
+**Paket Demo (30–90 Detik):**
+1. **`demo1`** — *Virus Brain 1986 — Ketika Dua Bersaudara Mencantumkan Alamat Rumah di Dalam Kode Virus* (~52 detik): Kisah nyata Basit dan Amjad Farooq Alvi di Lahore, Pakistan, yang menulis nama, alamat toko, dan nomor telepon rumah mereka di boot sector virus PC pertama di dunia.
+2. **`demo2`** — *Pesan Pertama di Internet 1969 — Ketika Sistem Crash Setelah Mengetik Dua Huruf LO* (~55 detik): Kronologi pengiriman pesan ARPANET pertama dari komputer SDS Sigma 7 di UCLA ke SDS 940 di Stanford Research Institute yang mengalami buffer overflow setelah huruf `L` dan `O`.
+3. **`demo3`** — *Kepanikan Bug Y2K Tahun 2000 — Ketika Dunia Cemas Hanya Karena Dua Digit Angka Tahun* (~55 detik): Penjelasan teknis format tanggal dua digit `PIC 9(2)` di COBOL, risiko rollover tahun `99` ke `00`, dan kerja maraton ratusan ribu insinyur menambal kode sebelum tengah malam tahun 2000.

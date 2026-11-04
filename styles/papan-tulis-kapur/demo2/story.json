@@ -1,0 +1,46 @@
+{
+  "style": "papan-tulis-kapur",
+  "title": "Paradoks Monty Hall — Kenapa Pindah Pintu Menggandakan Peluang Menangmu?",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di hadapanmu ada tiga pintu tertutup: satu pintu menyimpan mobil mewah, sedangkan dua pintu lainnya hanya berisi seekor kambing, dan pilihanmu menentukan segalanya."
+    },
+    {
+      "id": "pilih",
+      "text": "Misalkan kamu memilih Pintu Nomor Satu, maka pada saat itu peluang pintu pilihanmu berisi mobil hanyalah satu per tiga atau tiga puluh tiga persen."
+    },
+    {
+      "id": "buka",
+      "text": "Pembawa acara yang tahu persis lokasi mobil kemudian membuka Pintu Nomor Tiga dan memperlihatkan seekor kambing, lalu bertanya apakah kamu mau pindah ke Pintu Nomor Dua?"
+    },
+    {
+      "id": "jebakan",
+      "text": "Kebanyakan orang merasa peluang dua pintu yang tersisa adalah sama-sama lima puluh persen, sehingga mereka enggan berpindah karena takut menyesal."
+    },
+    {
+      "id": "rahasia",
+      "text": "Padahal sejak awal, dua pintu yang tidak kamu pilih menyimpan gabungan peluang sebesar dua per tiga atau enam puluh tujuh persen untuk menyembunyikan mobil."
+    },
+    {
+      "id": "saring",
+      "text": "Ketika pembawa acara sengaja menyingkirkan satu pintu kambing di antara dua pintu itu, seluruh peluang dua per tiga tadi terkonsentrasi penuh ke Pintu Nomor Dua!"
+    },
+    {
+      "id": "bukti",
+      "text": "Artinya jika kamu bertahan di Pintu Satu peluang menangmu tetap sepertiga, tetapi jika kamu memutuskan pindah ke Pintu Dua peluang menangmu langsung berlipat ganda menjadi dua pertiga."
+    },
+    {
+      "id": "outro",
+      "text": "Paradoks Monty Hall mengajarkan kita bahwa informasi baru mengubah peta peluang, dan matematika sering kali jauh lebih cerdas daripada perasaan ragu kita."
+    }
+  ]
+}
+

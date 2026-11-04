@@ -1,0 +1,42 @@
+{
+  "style": "cat-air",
+  "title": "Teknik Lukis Cat Air Basah di Atas Basah — Bagaimana Air dan Pigmen Menciptakan Kabut Hidup",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu memperhatikan mengapa lukisan cat air tampak bernapas dan bercahaya dari dalam, berbeda jauh dari sapuan cat minyak atau cat akrilik yang pekat?"
+    },
+    {
+      "id": "kertas",
+      "text": "Rahasia pertamanya terletak pada kertas khusus bertekstur kasar atau cold-press. Dalam lukisan cat air sejati, pelukis jarang memakai cat putih karena terangnya cahaya berasal dari warna kertas itu sendiri."
+    },
+    {
+      "id": "basah",
+      "text": "Saat pelukis menyapukan kuas berisi pigmen ke permukaan kertas yang sudah dibasahi air atau teknik wet-on-wet, partikel warna langsung menyebar lembut mengikuti aliran kapiler serat kertas."
+    },
+    {
+      "id": "kabut",
+      "text": "Efek mekarnya pigmen atau bloom inilah yang membuat gradasi langit fajar, kepulan asap kawah gunung, dan kabut tipis di lembah terlihat begitu alami tanpa garis batas yang kaku."
+    },
+    {
+      "id": "lapisan",
+      "text": "Pelukis selalu bekerja dari lapisan paling terang menuju gelap melalui teknik glazing, yakni menumpuk sapuan transparan tipis setelah lapisan di bawahnya mengering."
+    },
+    {
+      "id": "tepi",
+      "text": "Ketika genangan cat air mulai mengering di tepi sapuan, pigmen berkumpul membentuk garis batas organik yang memberi karakter tegas pada siluet punggung gunung dan gerbang batu."
+    },
+    {
+      "id": "kontras",
+      "text": "Di atas latar lembut yang menyatu, sapuan kering atau dry-brush dengan pigmen lebih pekat ditambahkan terakhir untuk menghadirkan sosok manusia dan nyala obor yang tajam."
+    },
+    {
+      "id": "outro",
+      "text": "Perpaduan antara kendali tangan pelukis dan kebebasan aliran air menjadikan setiap lukisan cat air sebuah karya hidup yang tak mungkin diulang persis sama dua kali."
+    }
+  ]
+}
+

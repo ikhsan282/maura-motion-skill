@@ -1,0 +1,37 @@
+{
+  "style": "gouache-dongeng",
+  "title": "Bawang Merah & Bawang Putih — Kisah Dua Labu Ajaib dari Nenek di Tepi Sungai",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di sebuah desa yang dikelilingi bukit hijau dan aliran sungai jernih, tersebutlah kisah dua saudari tiri dengan sifat yang bagai siang dan malam: Bawang Putih dan Bawang Merah."
+    },
+    {
+      "id": "hanyut",
+      "text": "Suatu pagi ketika Bawang Putih sedang mencuci pakaian di tepi sungai, selendang kesayangan ibu tirinya terlepas lalu hanyut terbawa arus deras hingga ke hilir."
+    },
+    {
+      "id": "putih",
+      "text": "Ia menyusuri sungai sampai tiba di gubuk seorang nenek tua penyayang. Dengan tulus Bawang Putih membantu memasak dan membersihkan rumah, lalu hanya memilih labu yang kecil sebagai bekal pulang."
+    },
+    {
+      "id": "emas",
+      "text": "Betapa terkejutnya Bawang Putih ketika labu kecil itu dibelah di rumah—dari dalamnya memancar kilau koin emas, kalung permata, dan perhiasan indah yang memenuhi meja!"
+    },
+    {
+      "id": "merah",
+      "text": "Melihat kekayaan itu, Bawang Merah yang serakah segera berlari ke gubuk sang nenek, enggan membantu bekerja sedikit pun, dan langsung merebut buah labu yang ukurannya paling besar."
+    },
+    {
+      "id": "ular",
+      "text": "Namun saat labu raksasa itu dibelah dengan penuh kesombongan di ruang tengah, bukan emas yang keluar, melainkan kawanan ular berbisa dan kalajengking yang membuat mereka ketakutan."
+    },
+    {
+      "id": "moral",
+      "text": "Dongeng klasik Nusantara ini mengingatkan kita dari generasi ke generasi bahwa ketulusan hati dan kerendahan diri selalu berbuah berkah, sedangkan keserakahan tak pernah bisa meniru kebaikan."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Maura Motion Skill
 
-Library **77 gaya animasi** (66 gaya siap pakai + 11 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
+Library **77 gaya animasi** (69 gaya siap pakai + 8 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
 
 Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa saja.
 
@@ -98,7 +98,7 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 
 ## Gaya dengan demo tambahan
 
-Gaya No. 1 sampai 22 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
+Gaya No. 1 sampai 28 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
 
 | No | Gaya | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|---|---|
@@ -124,8 +124,14 @@ Gaya No. 1 sampai 22 kini sudah memiliki paket lengkap **3 demo per gaya**, deng
 | 20 | `kolase-daun-bunga` | "Rafflesia arnoldii Bunga Raksasa" (`demo1/`, 55 dtk) | "Kantong Semar Pemangsa Serangga" (`demo2/`, 55 dtk) | "Seni Herbarium & Kolase Botani" (`demo3/`, 55 dtk) |
 | 21 | `kotak-cahaya-kertas` | "Legenda Malin Kundang" (`demo1/`, 52 dtk) | "Putri Mandalika & Tradisi Bau Nyale" (`demo2/`, 55 dtk) | "Seni Shadow Box & Teater Siluet" (`demo3/`, 55 dtk) |
 | 22 | `lukisan-minyak` | "Lukisan Balasan Raden Saleh" (`demo1/`, 52 dtk) | "Perjalanan Raden Saleh ke Eropa" (`demo2/`, 55 dtk) | "Jalan Raya Pos Anyer–Panarukan 1808" (`demo3/`, 55 dtk) |
+| 23 | `papan-tulis-kapur` | "Paradoks Ulang Tahun: 23 Orang 50%" (`demo1/`, 52 dtk) | "Paradoks Monty Hall: Pindah Pintu" (`demo2/`, 55 dtk) | "Lipat Kertas 42 Kali Sampai ke Bulan" (`demo3/`, 55 dtk) |
+| 24 | `flipbook` | "Animasi Lahir dari Pojok Buku" (`demo1/`, 52 dtk) | "Rahasia 12 Prinsip Animasi" (`demo2/`, 55 dtk) | "Taruhan Kuda Berlari Muybridge 1878" (`demo3/`, 55 dtk) |
+| 25 | `terminal-ascii` | "Virus Brain 1986: Alamat di Kode Virus" (`demo1/`, 52 dtk) | "Pesan Pertama Internet 1969: LO Crash" (`demo2/`, 55 dtk) | "Kepanikan Bug Y2K Tahun 2000" (`demo3/`, 55 dtk) |
+| 26 | `cat-air` | "Legenda Roro Anteng & Joko Seger (Kasada)" (`demo1/`, 52 dtk) | "Fajar di Kaldera Tengger: Bromo, Batok, Semeru" (`demo2/`, 55 dtk) | "Teknik Lukis Cat Air Basah di Atas Basah" (`demo3/`, 55 dtk) |
+| 27 | `gouache-dongeng` | "Bawang Merah & Bawang Putih: Dua Labu" (`demo1/`, 52 dtk) | "Keong Mas & Putri Candra Kirana" (`demo2/`, 55 dtk) | "Kancil & Siput Lomba Lari di Sungai" (`demo3/`, 55 dtk) |
+| 28 | `pastel-krayon` | "Kenapa Bulan Mengikuti Kita? Paralaks" (`demo1/`, 52 dtk) | "Bagaimana Pelangi Muncul Selepas Hujan?" (`demo2/`, 55 dtk) | "Ke Mana Perginya Bayanganmu Saat Siang?" (`demo3/`, 55 dtk) |
 
-Selain gaya 1–22, sebagian gaya lain juga memiliki variasi demo tambahan:
+Selain gaya 1–28, sebagian gaya lain juga memiliki variasi demo tambahan:
 
 | Gaya | Demo |
 |---|---|
@@ -145,7 +151,7 @@ Selain gaya 1–22, sebagian gaya lain juga memiliki variasi demo tambahan:
 | `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
 
-## Status gaya (77 gaya: 68 siap pakai ✅, 9 belum diimplementasi ❌)
+## Status gaya (77 gaya: 69 siap pakai ✅, 8 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -171,12 +177,12 @@ Selain gaya 1–22, sebagian gaya lain juga memiliki variasi demo tambahan:
 | 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([demo1](styles/kolase-daun-bunga/demo1/) · [demo2](styles/kolase-daun-bunga/demo2/) · [demo3](styles/kolase-daun-bunga/demo3/)) |
 | 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([demo1](styles/kotak-cahaya-kertas/demo1/) · [demo2](styles/kotak-cahaya-kertas/demo2/) · [demo3](styles/kotak-cahaya-kertas/demo3/)) |
 | 22 | **Lukisan Minyak Bergerak** | lukisan-minyak | ✅ ([demo1](styles/lukisan-minyak/demo1/) · [demo2](styles/lukisan-minyak/demo2/) · [demo3](styles/lukisan-minyak/demo3/)) |
-| 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([styles/papan-tulis-kapur](styles/papan-tulis-kapur/)) |
-| 24 | **Flipbook** | flipbook | ✅ ([styles/flipbook](styles/flipbook/)) |
-| 25 | **Terminal ASCII** | terminal-ascii | ✅ ([styles/terminal-ascii](styles/terminal-ascii/)) |
-| 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([styles/cat-air](styles/cat-air/)) |
-| 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([styles/gouache-dongeng](styles/gouache-dongeng/)) |
-| 28 | **Pastel & Krayon** | pastel-krayon | ❌ (belum diimplementasi) |
+| 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([demo1](styles/papan-tulis-kapur/demo1/) · [demo2](styles/papan-tulis-kapur/demo2/) · [demo3](styles/papan-tulis-kapur/demo3/)) |
+| 24 | **Flipbook** | flipbook | ✅ ([demo1](styles/flipbook/demo1/) · [demo2](styles/flipbook/demo2/) · [demo3](styles/flipbook/demo3/)) |
+| 25 | **Terminal ASCII** | terminal-ascii | ✅ ([demo1](styles/terminal-ascii/demo1/) · [demo2](styles/terminal-ascii/demo2/) · [demo3](styles/terminal-ascii/demo3/)) |
+| 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([demo1](styles/cat-air/demo1/) · [demo2](styles/cat-air/demo2/) · [demo3](styles/cat-air/demo3/)) |
+| 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([demo1](styles/gouache-dongeng/demo1/) · [demo2](styles/gouache-dongeng/demo2/) · [demo3](styles/gouache-dongeng/demo3/)) |
+| 28 | **Pastel & Krayon** | pastel-krayon | ✅ ([demo1](styles/pastel-krayon/demo1/) · [demo2](styles/pastel-krayon/demo2/) · [demo3](styles/pastel-krayon/demo3/)) |
 | 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ❌ (belum diimplementasi) |
 | 30 | **Product Film Light** | product-light | ✅ ([styles/product-light](styles/product-light/)) |
 | 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([styles/dark-glow-ui](styles/dark-glow-ui/)) |

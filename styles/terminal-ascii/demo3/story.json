@@ -1,0 +1,42 @@
+{
+  "style": "terminal-ascii",
+  "title": "Kepanikan Bug Y2K Tahun 2000 — Ketika Dunia Cemas Hanya Karena Dua Digit Angka Tahun",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Malam pergantian tahun menuju satu Januari dua ribu, seluruh dunia menahan napas dalam kecemasan besar, bukan karena perang, melainkan karena dua digit angka di dalam memori komputer."
+    },
+    {
+      "id": "hemat",
+      "text": "Pada era seribu sembilan ratus enam puluhan hingga tujuh puluhan, memori komputer sangat mahal dan sempit, sehingga para programmer menyingkat tahun empat digit menjadi dua digit terakhir saja."
+    },
+    {
+      "id": "masalah",
+      "text": "Tahun seribu sembilan ratus sembilan puluh sembilan disimpan hanya sebagai angka sembilan puluh sembilan. Masalahnya, saat jarum jam berganti ke tahun dua ribu, angka itu berubah menjadi nol-nol."
+    },
+    {
+      "id": "dampak",
+      "text": "Komputer perbankan, pembangkit listrik, hingga jadwal penerbangan dikhawatirkan salah mengira tahun dua ribu sebagai tahun seribu sembilan ratus, sehingga perhitungan bunga dan umur sistem menjadi kacau."
+    },
+    {
+      "id": "lembur",
+      "text": "Demi mencegah lumpuhnya infrastruktur dunia, ratusan ribu insinyur perangkat lunak dan programmer bahasa COBOL dipanggil kembali untuk memeriksa ratusan miliar baris kode secara maraton."
+    },
+    {
+      "id": "biaya",
+      "text": "Total biaya perbaikan global diperkirakan menembus tiga ratus miliar dolar Amerika untuk memperluas format penyimpanan tanggal menjadi empat digit penuh sebelum tengah malam tiba."
+    },
+    {
+      "id": "malam",
+      "text": "Ketika detik-detik tahun dua ribu akhirnya berdentang di seluruh zona waktu bumi, pesawat tetap terbang aman, listrik menyala normal, dan mesin ATM tetap mengeluarkan uang."
+    },
+    {
+      "id": "outro",
+      "text": "Banyak orang mengira Y2K hanyalah kehebohan palsu, padahal bencana itu batal terjadi justru karena kerja keras tak terlihat dari para programmer yang menambal kode tepat waktu."
+    }
+  ]
+}
+

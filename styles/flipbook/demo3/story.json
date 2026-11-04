@@ -1,0 +1,46 @@
+{
+  "style": "flipbook",
+  "title": "Taruhan Kuda Berlari Eadweard Muybridge 1878 — Ketika Foto Diam Melahirkan Bioskop",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Selama ribuan tahun para pelukis dunia berdebat sengit: saat seekor kuda berlari kencang, apakah keempat kakinya pernah melayang bersamaan di udara?"
+    },
+    {
+      "id": "lukisan",
+      "text": "Lukisan-lukisan klasik selalu menggambarkan kuda terbang dengan kaki depan lurus ke depan dan kaki belakang lurus ke belakang, karena mata manusia tak sanggup menangkap gerak secepat itu."
+    },
+    {
+      "id": "taruhan",
+      "text": "Pada tahun seribu delapan ratus tujuh puluh delapan di California, fotografer Eadweard Muybridge memasang dua belas kamera berjajar dengan benang pemicu di sepanjang lintasan pacuan."
+    },
+    {
+      "id": "jepret",
+      "text": "Saat kuda bernama Sallie Gardner melesat memutus benang demi benang dalam seperseribu detik, dua belas pelat foto berhasil membekukan setiap tahapan langkah kakinya."
+    },
+    {
+      "id": "bukti",
+      "text": "Foto ketiga membuktikan bahwa keempat kaki kuda memang terangkat lepas dari tanah secara bersamaan, tepat ketika seluruh kakinya menekuk rapat di bawah perut!"
+    },
+    {
+      "id": "putar",
+      "text": "Ketika rangkaian dua belas gambar kuda itu disusun berurutan di dalam buku lipat atau cakram Zoopraxiscope lalu diputar cepat, sang kuda kembali berlari hidup."
+    },
+    {
+      "id": "bioskop",
+      "text": "Eksperimen kuda berlari inilah yang menjembatani buku flipbook dengan kamera film seluloid dua puluh empat bingkai per detik yang melahirkan industri bioskop modern."
+    },
+    {
+      "id": "outro",
+      "text": "Berawal dari rasa penasaran tentang langkah seekor kuda, manusia berhasil menangkap waktu dan menghidupkannya kembali di atas lembaran kertas."
+    }
+  ]
+}
+

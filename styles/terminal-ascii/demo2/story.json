@@ -1,0 +1,42 @@
+{
+  "style": "terminal-ascii",
+  "title": "Pesan Pertama di Internet 1969 — Ketika Sistem Crash Setelah Mengetik Dua Huruf LO",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu apa bunyi pesan pertama yang pernah dikirim lewat jaringan internet manusia? Bukan kalimat pidato yang agung, melainkan hanya dua huruf singkat: L dan O."
+    },
+    {
+      "id": "ucla",
+      "text": "Malam tanggal dua puluh sembilan Oktober seribu sembilan ratus enam puluh sembilan, mahasiswa bernama Charley Kline duduk di depan terminal komputer SDS Sigma Tujuh di laboratorium UCLA."
+    },
+    {
+      "id": "sri",
+      "text": "Melalui saluran kabel telepon berkecepatan lima puluh kilobit per detik, ia mencoba menghubungi komputer SDS sembilan ratus empat puluh di Stanford Research Institute sejauh lima ratus kilometer."
+    },
+    {
+      "id": "login",
+      "text": "Tugasnya tampak sangat sederhana: mengetik kata perintah LOGIN dari jarak jauh sambil berbicara lewat telepon dengan rekannya, Bill Duvall, untuk memastikan setiap huruf muncul di layar Stanford."
+    },
+    {
+      "id": "ketik",
+      "text": "Charley menekan tombol huruf L, dan Bill mengonfirmasi huruf L muncul. Charley lalu menekan tombol huruf O, dan Bill kembali menjawab huruf O sudah tampil di monitor."
+    },
+    {
+      "id": "crash",
+      "text": "Namun tepat saat Charley menekan tombol huruf G, memori buffer komputer Stanford meluap karena sistemnya otomatis melengkapi kata LOGIN lebih cepat daripada ketikan manusia, sehingga jaringan langsung crash!"
+    },
+    {
+      "id": "bangkit",
+      "text": "Setelah kode program diperbaiki satu jam kemudian, pada pukul sepuluh lewat tiga puluh malam seluruh kata LOGIN akhirnya berhasil terkirim utuh tanpa gangguan."
+    },
+    {
+      "id": "outro",
+      "text": "Dua huruf LO yang terputus akibat crash malam itu secara tak sengaja terdengar seperti kata puitis Lo and Behold—lihatlah, sebuah dunia digital baru baru saja lahir."
+    }
+  ]
+}
+

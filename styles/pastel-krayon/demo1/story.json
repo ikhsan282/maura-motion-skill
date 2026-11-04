@@ -1,0 +1,42 @@
+{
+  "style": "pastel-krayon",
+  "title": "Kenapa Bulan Selalu Mengikuti Kita di Jalan Malam? — Rahasia Ilusi Paralaks",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Waktu kecil saat duduk di kursi belakang mobil pada malam hari, kamu pasti pernah menatap ke luar jendela dan merasa yakin bahwa Bulan sedang mengikuti mobilmu pulang."
+    },
+    {
+      "id": "mobil",
+      "text": "Ke mana pun mobil berbelok atau melaju kencang di jalan raya, bola Bulan yang bulat bercahaya itu seolah ikut melayang setia di atas atap tanpa pernah tertinggal."
+    },
+    {
+      "id": "cepat",
+      "text": "Padahal di saat yang sama, tiang lampu jalan, deretan pohon, dan rumah-rumah di pinggir jalan tampak berkelebatan mundur dengan sangat cepat."
+    },
+    {
+      "id": "bulan",
+      "text": "Apakah Bulan benar-benar bergerak mengikuti kita? Jawabannya terletak pada sebuah trik penglihatan alami yang dalam ilmu fisika dan astronomi disebut efek paralaks."
+    },
+    {
+      "id": "paralaks",
+      "text": "Paralaks adalah perubahan posisi semu suatu benda ketika dilihat dari sudut pandang yang bergerak. Semakin dekat sebuah benda dari mata kita, semakin cepat sudut pandangnya berubah."
+    },
+    {
+      "id": "jarak",
+      "text": "Pohon di tepi jalan hanya berjarak beberapa meter sehingga sudutnya langsung bergeser tajam, sedangkan Bulan berada sangat jauh, yakni sekitar tiga ratus delapan puluh empat ribu kilometer dari Bumi."
+    },
+    {
+      "id": "sudut",
+      "text": "Karena jarak yang luar biasa jauh itu, meskipun mobilmu sudah melaju puluhan kilometer, sudut garis pandang matamu menuju Bulan hampir tidak berubah sama sekali."
+    },
+    {
+      "id": "outro",
+      "text": "Otak kita yang melihat pohon melintas cepat lalu membandingkannya dengan Bulan yang tetap di sudut yang sama akhirnya menciptakan ilusi hangat seolah Bulan menemani perjalanan pulangmu."
+    }
+  ]
+}
+

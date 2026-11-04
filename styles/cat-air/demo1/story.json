@@ -1,0 +1,29 @@
+{
+  "style": "cat-air",
+  "title": "Legenda Roro Anteng & Joko Seger — Asal-Usul Upacara Yadnya Kasada di Kawah Bromo",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Setiap tahun pada malam bulan purnama di kaldera pegunungan Jawa Timur, masyarakat suku Tengger berkumpul di bibir kawah Gunung Bromo untuk mempersembahkan hasil bumi dan ternak."
+    },
+    {
+      "id": "doa",
+      "text": "Tradisi kuno ini berakar dari legenda leluhur pasangan Roro Anteng dan Joko Seger, yang setelah bertahun-tahun menikah tanpa keturunan, mendaki puncak gunung untuk berdoa kepada Sang Hyang Widhi."
+    },
+    {
+      "id": "janji",
+      "text": "Permohonan suci mereka akhirnya dikabulkan dengan lahirnya dua puluh lima anak, namun disertai satu syarat janji berat: satu anak bungsu mereka kelak harus diserahkan kembali ke kawah Bromo."
+    },
+    {
+      "id": "letus",
+      "text": "Ketika anak-anak tumbuh dewasa dan janji itu belum ditepati, Gunung Bromo meletus dahsyat menyemburkan api yang merenggut putra bungsu mereka, Raden Kesuma, hingga suaranya bergema meminta keluarganya hidup rukun."
+    },
+    {
+      "id": "moral",
+      "text": "Sejak pengorbanan suci di malam purnama keempat belas bulan Kasada itu, warga keturunan Tengger terus mengirim hasil panen terbaik ke kawah Bromo sebagai tanda bakti abadi untuknya."
+    }
+  ]
+}

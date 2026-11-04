@@ -1,0 +1,39 @@
+{
+  "title": "Paradoks Ulang Tahun — Kenapa 23 Orang di Kelas Punya Peluang 50% Kembar?",
+  "slug": "23_papan-tulis-kapur-paradoks-23",
+  "style": "papan-tulis-kapur",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.0,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bayangkan hanya ada dua puluh tiga orang di dalam satu ruang kelas, namun matematika membuktikan peluang ada dua orang yang berulang tahun di tanggal kembar mencapai lima puluh persen."
+    },
+    {
+      "id": "mustahil",
+      "text": "Intuisi kita langsung menolak dan menganggap hal itu mustahil, padahal satu tahun penuh memiliki 365 hari sehingga dua puluh tiga orang terasa sangat sedikit."
+    },
+    {
+      "id": "pasangan",
+      "text": "Jebakan pikiran kita terjadi karena kita hanya membandingkan orang dengan dirinya sendiri, padahal dua puluh tiga orang saling berjabat tangan membentuk 253 pasangan berbeda!"
+    },
+    {
+      "id": "numpuk",
+      "text": "Setiap satu garis pasangan yang terhubung di papan tulis ini memberikan satu kesempatan baru terjadinya kecocokan tanggal lahir hingga peluangnya terus menumpuk secara eksponensial."
+    },
+    {
+      "id": "p70",
+      "text": "Bahkan jika jumlah murid di ruangan ditambah menjadi 70 orang saja, peluang ada yang berulang tahun di hari yang sama melonjak drastis menjadi 99,9 persen!",
+      "say": "Bahkan jika jumlah murid di ruangan ditambah menjadi tujuh puluh orang saja, peluang ada yang berulang tahun di hari yang sama melonjak drastis menjadi sembilan puluh sembilan koma sembilan persen!"
+    }
+  ]
+}

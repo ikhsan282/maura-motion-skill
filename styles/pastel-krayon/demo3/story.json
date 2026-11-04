@@ -1,0 +1,42 @@
+{
+  "style": "pastel-krayon",
+  "title": "Ke Mana Perginya Bayanganmu Saat Tengah Hari? — Sains Cahaya dan Arah Matahari",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu memperhatikan bayangan hitam di tanah yang selalu meniru setiap gerakanmu, kadang tumbuh menjadi raksasa panjang, lalu tiba-tiba menyusut hilang saat tengah hari?"
+    },
+    {
+      "id": "cahaya",
+      "text": "Bayangan terbentuk karena gelombang cahaya matahari selalu merambat lurus. Ketika tubuhmu menghalangi jalannya cahaya, area di belakang tubuhmu menjadi gelap dan membentuk siluet."
+    },
+    {
+      "id": "pagi",
+      "text": "Pada pagi hari saat matahari baru terbit rendah di ufuk timur, sinar datang dari sudut miring, sehingga bayangan tubuhmu memanjang jauh ke arah barat."
+    },
+    {
+      "id": "siang",
+      "text": "Namun tepat pada tengah hari pukul dua belas siang, posisi matahari berada tinggi hampir tegak lurus di atas kepala kita, sehingga bayanganmu bersembunyi tepat di bawah telapak kaki!"
+    },
+    {
+      "id": "sore",
+      "text": "Ketika sore menjelang dan matahari mulai turun di ufuk barat, sudut cahaya kembali merendah dan bayanganmu pun memanjang lagi, kali ini menjulur ke arah timur."
+    },
+    {
+      "id": "malam",
+      "text": "Sebelum ditemukan jam mekanik, peradaban kuno memanfaatkan pergeseran arah dan panjang bayangan ini untuk menciptakan jam matahari atau sundial sebagai penunjuk waktu."
+    },
+    {
+      "id": "ukuran",
+      "text": "Jadi bayanganmu tidak pernah benar-benar pergi menghilang, melainkan hanya berubah ukuran dan arah mengikuti rotasi Bumi terhadap matahari sepanjang hari."
+    },
+    {
+      "id": "outro",
+      "text": "Besok saat berjalan di bawah sinar matahari, cobalah lihat ke tanah—dari panjang bayanganmu saja, kamu bisa menebak waktu tanpa melirik jam tangan."
+    }
+  ]
+}
+

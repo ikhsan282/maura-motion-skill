@@ -1,0 +1,42 @@
+{
+  "style": "gouache-dongeng",
+  "title": "Keong Mas & Candra Kirana — Putri Kerajaan Kediri yang Disihir Menjadi Keong Emas",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Dahulu kala di Kerajaan Daha atau Kediri, hiduplah seorang putri berparas elok dan berhati lembut bernama Dewi Candra Kirana yang telah dipertunangkan dengan Pangeran Raden Inu Kertapati."
+    },
+    {
+      "id": "kutuk",
+      "text": "Namun rasa iri hati saudarinya mengundang penyihir jahat yang mengutuk sang putri menjadi seekor keong bercangkang emas berkilau, lalu membuangnya ke arus Sungai Brantas."
+    },
+    {
+      "id": "jaring",
+      "text": "Suatu pagi, seorang perempuan tua pencari ikan yang baik hati dari Desa Dadapan, Mbok Rondo, tak sengaja menjaring keong emas yang memancarkan cahaya indah itu."
+    },
+    {
+      "id": "tempayan",
+      "text": "Mbok Rondo membawa pulang keong emas tersebut dan merawatnya dengan penuh kasih sayang di dalam sebuah tempayan tanah liat berisi air sungai yang bersih."
+    },
+    {
+      "id": "masak",
+      "text": "Sejak hari itu, setiap kali Mbok Rondo pulang dari mencari kayu dan ikan di sungai, meja dapurnya selalu telah dipenuhi hidangan lezat yang masih mengepul hangat."
+    },
+    {
+      "id": "intip",
+      "text": "Penasaran dengan keajaiban itu, Mbok Rondo pulang lebih awal dan mengintip dari balik bilik bambu—tampaklah Putri Candra Kirana keluar dari cangkang keong emasnya!"
+    },
+    {
+      "id": "inu",
+      "text": "Sementara itu, Raden Inu Kertapati yang menyamar mengembara ke pelosok desa akhirnya tiba di gubuk Mbok Rondo Dadapan, mematahkan kutukan sihir dengan ketulusan cintanya."
+    },
+    {
+      "id": "outro",
+      "text": "Candra Kirana kembali menjadi putri seutuhnya dan memboyong Mbok Rondo ke istana sebagai bukti bahwa kebaikan kepada makhluk kecil sekalipun tak akan pernah sia-sia."
+    }
+  ]
+}
+

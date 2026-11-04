@@ -1,0 +1,29 @@
+{
+  "style": "terminal-ascii",
+  "title": "Virus Brain 1986 — Ketika Dua Bersaudara Mencantumkan Alamat Rumah di Dalam Kode Virus",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahun seribu sembilan ratus delapan puluh enam, dua bersaudara programmer muda dari kota Lahore, Pakistan, menciptakan program nakal lalu dengan polos menaruh alamat rumah asli mereka di dalamnya."
+    },
+    {
+      "id": "brain",
+      "text": "Program tersembunyi di sektor boot disket lima seperempat inci itu dinamai Brain, yang kemudian tercatat dalam sejarah komputasi sebagai virus komputer pribadi IBM PC pertama di dunia."
+    },
+    {
+      "id": "pesan",
+      "text": "Uniknya, di dalam kode heksadesimal boot sector tersebut, Basit dan Amjad Farooq Alvi sengaja menulis lengkap nama asli, alamat toko komputer, serta nomor telepon rumah mereka untuk dihubungi."
+    },
+    {
+      "id": "sebar",
+      "text": "Mereka awalnya hanya ingin melacak pembajakan perangkat lunak medis buatan mereka, namun disket bajakan yang terinfeksi justru menyebar lintas benua hingga menginfeksi ribuan komputer di Amerika dan Eropa."
+    },
+    {
+      "id": "masih",
+      "text": "Telepon rumah mereka pun berdering tanpa henti dan pintu toko mereka terus diketuk pengguna dari seluruh dunia. Mereka tidak pernah ditangkap, dan toko Brain Computer Services masih berdiri di alamat yang sama sampai hari ini."
+    }
+  ]
+}

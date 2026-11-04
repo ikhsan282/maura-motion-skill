@@ -1,0 +1,42 @@
+{
+  "style": "cat-air",
+  "title": "Fajar di Kaldera Tengger — Harmoni Gunung Bromo, Batok, dan Semeru di Atas Lautan Pasir",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Sebelum matahari terbit menyibak dinginnya udara pegunungan Jawa Timur, hamparan kaldera Tengger tampak seperti lukisan cat air raksasa yang mengapung di atas lautan kabut."
+    },
+    {
+      "id": "kaldera",
+      "text": "Lembah luas berdiameter enam belas kilometer ini sesungguhnya adalah sisa kawah gunung berapi purba Tengger yang runtuh ribuan tahun silam dan meninggalkan hamparan pasir vulkanik."
+    },
+    {
+      "id": "batok",
+      "text": "Di tengah lautan pasir berbisik itu, berdiri anggun Gunung Batok yang sudah tidak aktif, dengan lereng beralur simetris berwarna hijau kecokelatan menyerupai tempurung kelapa terbalik."
+    },
+    {
+      "id": "bromo",
+      "text": "Tepat di sebelahnya, kawah Gunung Bromo terus mengembuskan kepulan asap putih belerang ke angkasa, menjadi pusat spiritual yang disakralkan oleh masyarakat adat suku Tengger."
+    },
+    {
+      "id": "semeru",
+      "text": "Sementara jauh di latar belakang selatan, puncak kerucut Gunung Semeru atau Mahameru menjulang setinggi tiga ribu enam ratus tujuh puluh enam meter sebagai atap tertinggi Pulau Jawa."
+    },
+    {
+      "id": "pura",
+      "text": "Di kaki kawah, berdiri kokoh Pura Luhur Poten dengan gerbang candi bentar batu hitam yang hening diselimuti kabut tipis sebelum cahaya fajar menyentuh pasir."
+    },
+    {
+      "id": "fajar",
+      "text": "Saat semburat merah keemasan matahari pagi mulai naik dari ufuk timur, bayangan tiga gunung berpadu dengan sapuan kabut pagi yang perlahan menghangat."
+    },
+    {
+      "id": "outro",
+      "text": "Harmoni antara kawah yang bernapas, keheningan lautan pasir, dan keteguhan warga lereng gunung menjadikan kaldera Tengger salah satu lanskap alam paling puitis di Nusantara."
+    }
+  ]
+}
+

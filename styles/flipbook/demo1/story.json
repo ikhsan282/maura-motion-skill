@@ -1,0 +1,41 @@
+{
+  "title": "Animasi Lahir dari Pojok Buku — Sejarah Kineograf hingga 24 Bingkai per Detik",
+  "slug": "24_flipbook",
+  "style": "flipbook",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.0,
+  "music": {
+    "preset": "musicbox",
+    "db": -17
+  },
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Hampir semua film kartun modern yang kita tonton hari ini sesungguhnya memakai trik optik sederhana yang lahir dari coretan iseng di pojok buku tulis ini."
+    },
+    {
+      "id": "gambar",
+      "text": "Caranya dimulai dengan menggambar satu tokoh stickman memakai pulpen biru, menggeser posisinya sedikit demi sedikit di setiap halaman berikutnya, lalu membalik lembaran kertasnya secara cepat.",
+      "say": "Caranya dimulai dengan menggambar satu tokoh stikmen memakai pulpen biru, menggeser posisinya sedikit demi sedikit di setiap halaman berikutnya, lalu membalik lembaran kertasnya secara cepat."
+    },
+    {
+      "id": "hidup",
+      "text": "Seketika tokoh di atas kertas tampak hidup berlari dan melompat karena mata serta otak manusia menyambungkan rangkaian gambar diam menjadi ilusi gerakan yang mulus!"
+    },
+    {
+      "id": "paten",
+      "text": "Pada Tahun 1868 di Inggris, buku lipat ajaib ini resmi dipatenkan oleh John Barnes Linnett dengan nama kineograf yang secara harfiah berarti gambar yang bergerak.",
+      "say": "Pada Tahun delapan belas enam delapan di Inggris, buku lipat ajaib ini resmi dipatenkan oleh John Barnes Linnett dengan nama kinéograf yang secara harfiah berarti gambar yang bergerak."
+    },
+    {
+      "id": "kartun",
+      "text": "Prinsip buku lipat inilah yang kemudian melahirkan proyektor bioskop dan studio animasi dunia yang memutar 24 bingkai gambar setiap satu detik.",
+      "say": "Prinsip buku lipat inilah yang kemudian melahirkan proyektor bioskop dan studio animasi dunia yang memutar dua puluh empat bingkai gambar setiap satu detik."
+    }
+  ]
+}
