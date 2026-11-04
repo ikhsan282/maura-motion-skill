@@ -1,0 +1,42 @@
+{
+  "title": "Peta Isi Kepala Pas Macet — Anatomi Pikiran Saat Terjebak di Jalanan Sore",
+  "slug": "39_flat-vector-demo2",
+  "style": "flat-vector",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.24,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pukul lima lewat tiga puluh sore di tengah kemacetan kota, roda kendaraan memang berhenti total di aspal, tetapi isi kepala kita justru berputar sangat bising."
+    },
+    {
+      "id": "ngeluh",
+      "text": "Empat puluh persen kapasitas otak langsung dipenuhi keluhan berulang sambil menatap lampu rem merah di depan: kenapa jalanan macet sekali dan kapan akhirnya tiba di rumah?"
+    },
+    {
+      "id": "lapar",
+      "text": "Tiga puluh persen berikutnya dikuasai oleh rasa lapar karena kepulan asap tukang sate, nasi goreng, dan martabak di pinggir trotoar terus menggoda perut yang kosong."
+    },
+    {
+      "id": "ngantuk",
+      "text": "Dua puluh persen sisanya adalah pertarungan melawan rasa kantuk akibat kelelahan bekerja seharian, sementara suara klakson bersahut-sahutan dari segala penjuru jalan."
+    },
+    {
+      "id": "kerjaan",
+      "text": "Sedangkan sepuluh persen terakhir masih tersita oleh kecemasan memikirkan pesan atasan yang belum dibalas serta tenggat pekerjaan esok pagi yang sudah menanti di meja."
+    },
+    {
+      "id": "tutup",
+      "text": "Itulah anatomi jujur isi kepala para pejuang komuter setiap senja di jalan raya; dari empat bagian tadi, pikiran mana yang paling sering memenuhi kepalamu?"
+    }
+  ]
+}

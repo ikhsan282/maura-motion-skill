@@ -1,0 +1,44 @@
+{
+  "title": "Ke Mana Perginya Uang Kopi Susu Kekinianmu? — Bedah Struk Segelas Es Kopi",
+  "slug": "41_neo-brutalist_demo1",
+  "style": "neo-brutalist",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bertanya, saat membeli segelas es kopi susu kekinian seharga Rp25.000 di kafe favoritmu, sebenarnya petani kopinya di kebun pegunungan cuma dapat bagian sekitar Rp1.300 per gelas?",
+      "say": "Pernahkah kamu bertanya, saat membeli segelas es kopi susu kekinian seharga dua puluh lima ribu rupiah di kafe favoritmu, sebenarnya petani kopinya di kebun pegunungan cuma dapat bagian sekitar seribu tiga ratus rupiah per gelas?",
+      "pause": 0.35
+    },
+    {
+      "id": "bahan",
+      "text": "Kalau kita bedah struknya, total modal bahan baku di dalam gelas itu kira-kira Rp6.500 saja, yang terbagi untuk seduhan biji kopi pilihan, susu segar, gula aren cair, serta gelas plastik dan es batu.",
+      "say": "Kalau kita bedah struknya, total modal bahan baku di dalam gelas itu kira-kira enam ribu lima ratus rupiah saja, yang terbagi untuk seduhan biji kopi pilihan, susu segar, gula aren cair, serta gelas plastik dan es batu."
+    },
+    {
+      "id": "sisa",
+      "text": "Lalu ke mana perginya Rp18.500 sisanya? Porsi terbesar justru habis untuk membayar sewa ruko strategis, gaji barista yang meracik minumanmu, tagihan listrik mesin espresso dan pendingin ruangan, serta margin untung kedai.",
+      "say": "Lalu ke mana perginya delapan belas ribu lima ratus rupiah sisanya? Porsi terbesar justru habis untuk membayar sewa ruko strategis, gaji barista yang meracik minumanmu, tagihan listrik mesin espresso dan pendingin ruangan, serta margin untung kedai."
+    },
+    {
+      "id": "petani",
+      "text": "Bahkan dari anggaran biji kopi yang Rp2.500 tadi, uangnya masih harus dibagi dengan pengepul dan roaster, sehingga petani kopi yang merawat pohonnya berbulan-bulan hanya mengantongi sekitar separuhnya.",
+      "say": "Bahkan dari anggaran biji kopi yang dua ribu lima ratus rupiah tadi, uangnya masih harus dibagi dengan pengepul dan roaster, sehingga petani kopi yang merawat pohonnya berbulan-bulan hanya mengantongi sekitar separuhnya."
+    },
+    {
+      "id": "akhir",
+      "text": "Artinya, dari seratus kotak nilai di dalam segelas kopi susu yang kamu seruput hari ini, hanya sekitar lima persen yang benar-benar sampai ke tangan mereka yang menanamnya di tanah Nusantara.",
+      "say": "Artinya, dari seratus kotak nilai di dalam segelas kopi susu yang kamu seruput hari ini, hanya sekitar lima persen yang benar-benar sampai ke tangan mereka yang menanamnya di tanah Nusantara."
+    }
+  ]
+}

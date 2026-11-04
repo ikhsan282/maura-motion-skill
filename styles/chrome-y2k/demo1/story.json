@@ -1,0 +1,51 @@
+{
+  "title": "Emas di Dalam HP-mu Lahir dari Tabrakan Bintang — Jejak Kilonova Kosmik di Sirkuit Ponsel",
+  "slug": "36_chrome-y2k-demo1",
+  "style": "chrome-y2k",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.06,
+  "music": {
+    "preset": "synthwave",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "l1",
+      "text": "Tahukah kamu bahwa tepat di dalam ponsel yang sedang kamu pegang sekarang, terdapat emas murni yang usianya lebih tua dari Bumi?",
+      "say": "Tahukah kamu bahwa tepat di dalam ponsel yang sedang kamu pegang sekarang, terdapat emas murni yang usianya lebih tua dari Bumi?"
+    },
+    {
+      "id": "l2",
+      "text": "Bumi kita tidak bisa memproduksi emas sendiri, bahkan bintang sebesar Matahari pun hanya sanggup melebur elemen hingga batas unsur besi."
+    },
+    {
+      "id": "l3",
+      "text": "Untuk menciptakan satu atom emas dengan tujuh puluh sembilan proton, alam semesta membutuhkan bencana kosmik paling ekstrem yang disebut kilonova."
+    },
+    {
+      "id": "l4",
+      "text": "Kilonova terjadi ketika dua bintang neutron super padat yang mengorbit satu sama lain akhirnya bertabrakan dengan kecepatan mendekati cahaya."
+    },
+    {
+      "id": "l5",
+      "text": "Dalam ledakan sepersekian detik itu, semburan neutron bebas memaksa inti atom menyerap partikel secara beruntun melalui proses tangkapan neutron cepat."
+    },
+    {
+      "id": "l6",
+      "text": "Satu tabrakan bintang neutron saja mampu melontarkan awan emas murni seberat beberapa kali massa planet Bumi ke ruang antarbintang."
+    },
+    {
+      "id": "l7",
+      "text": "Miliaran tahun kemudian, debu emas kosmik itu ikut menyatu saat tata surya kita terbentuk, lalu ditambang manusia untuk dijadikan komponen elektronik."
+    },
+    {
+      "id": "l8",
+      "text": "Sekitar nol koma nol tiga empat gram emas murni kini mengalirkan sinyal listrik tanpa karat di dalam prosesor setiap ponsel pintar di tanganmu."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Sinyal Wow! 1977 — 72 Detik Misteri Radio dari Rasi Sagitarius",
+  "slug": "38_vhs-arsip-demo1",
+  "style": "vhs-arsip",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pada malam lima belas Agustus tahun sembilan belas tujuh puluh tujuh, teleskop radio Big Ear di Ohio menangkap sebuah sinyal gelombang sempit misterius selama tujuh puluh dua detik penuh dari arah rasi bintang Sagitarius."
+    },
+    {
+      "id": "kode",
+      "text": "Beberapa hari kemudian saat memeriksa gulungan kertas komputer, astronom Jerry Ehman tertegun melihat deretan kodenya yang melonjak tiga puluh kali lebih kuat dari derau angkasa, yakni 6EQUJ5.",
+      "say": "Beberapa hari kemudian saat memeriksa gulungan kertas komputer, astronom Jeri Eman tertegun melihat deretan kodenya yang melonjak tiga puluh kali lebih kuat dari derau angkasa, yakni enam, E, Q, U, J, lima."
+    },
+    {
+      "id": "wow",
+      "text": "Saking takjubnya melihat frekuensi yang persis berada di pita hidrogen antarbintang itu, ia langsung mengambil pena merah, melingkarinya dengan cepat, lalu menulis kata: Wow!"
+    },
+    {
+      "id": "sunyi",
+      "text": "Namun ketika para ilmuwan mengarahkan berbagai teleskop paling canggih ke titik langit yang sama berulang kali selama puluhan tahun, sinyal itu tak pernah terdengar lagi."
+    },
+    {
+      "id": "akhir",
+      "text": "Entah berasal dari awan hidrogen kosmik yang langka atau pancaran peradaban jauh, satu lembar kertas bertuliskan Wow tetap menjadi misteri terbesar astronomi radio sampai hari ini."
+    }
+  ]
+}

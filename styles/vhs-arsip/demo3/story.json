@@ -1,0 +1,43 @@
+{
+  "title": "Gerhana Matahari Total 11 Juni 1983 — Hari Ketika Langit Siang Pulau Jawa Menjadi Malam",
+  "slug": "38_vhs-arsip-demo3",
+  "style": "vhs-arsip",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tepat pukul sebelas lewat dua puluh sembilan siang pada tanggal sebelas Juni sembilan belas delapan puluh tiga, langit terang di atas Pulau Jawa mendadak berubah gelap gulita seperti tengah malam."
+    },
+    {
+      "id": "korona",
+      "text": "Hari itu terjadi fenomena Gerhana Matahari Total dengan durasi luar biasa panjang mencapai lima menit sepuluh detik yang melintasi Yogyakarta, Semarang, hingga Surabaya."
+    },
+    {
+      "id": "tvri",
+      "text": "Karena khawatir warga menatap matahari secara langsung hingga memicu kebutaan retina, pemerintah saat itu mengimbau masyarakat tetap di dalam rumah dan menyaksikannya lewat layar kaca televisi."
+    },
+    {
+      "id": "hewan",
+      "text": "Suasana kota-kota di Jawa seketika menjadi sunyi senyap seperti kota mati, suhu udara turun drastis, burung-burung kembali ke sarang, dan ayam jantan berkokok kebingungan."
+    },
+    {
+      "id": "observasi",
+      "text": "Namun di Candi Borobudur dan Tanjung Kodok Lamongan, ratusan astronom dunia justru berkumpul mengabadikan mahkota korona matahari serta kilau cincin berlian di tepi piringan Bulan."
+    },
+    {
+      "id": "kenangan",
+      "text": "Rekaman pita video dari tahun delapan puluh tiga ini menjadi saksi bisu perpaduan antara ketakutan kolektif, denting kentongan desa, dan keajaiban kosmik yang tak terlupakan."
+    }
+  ]
+}
+

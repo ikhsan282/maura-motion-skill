@@ -1,6 +1,6 @@
 # Maura Motion Skill
 
-Library **77 gaya animasi** (70 gaya siap pakai + 7 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
+Library **77 gaya animasi** (73 gaya siap pakai + 4 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
 
 Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa saja.
 
@@ -96,7 +96,7 @@ Default suara untuk Bahasa Indonesia maupun Inggris adalah **ElevenLabs George**
 
 Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`), `~/.hermes/elevenlabs.env`, atau `.env` di folder repo.
 
-## Status gaya (77 gaya: 70 siap pakai ✅, 7 belum diimplementasi ❌)
+## Status gaya (77 gaya: 73 siap pakai ✅, 4 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|:---:|---|---|---|
@@ -134,14 +134,14 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 | 32 | **One-Shape UI Morph** | `ui-morph` | ✅ | [Satu Tombol Jadi Makan Malammu](styles/ui-morph/demo1/) (52 dtk) | [Dari Tombol Bayar Sampai Struk Digital](styles/ui-morph/demo2/) (65 dtk) | [Satu Kapsul di Pagi Hari: Alarm & Fokus](styles/ui-morph/demo3/) (65 dtk) |
 | 33 | **Kinetic Typography** | `kinetic-type` | ✅ | [Aturan Dua Menit James Clear](styles/kinetic-type/demo1/) (52 dtk) | [Teknik Belajar Richard Feynman](styles/kinetic-type/demo2/) (65 dtk) | [Hukum Parkinson & Efek 1% (37x Lipat)](styles/kinetic-type/demo3/) (65 dtk) |
 | 34 | **Swiss / Bauhaus Grid** | `swiss-bauhaus` | ✅ | [Bauhaus: Sekolah 14 Tahun Ubah Dunia](styles/swiss-bauhaus/demo1/) (55 dtk) | [Rahasia Grid Swiss & Müller-Brockmann](styles/swiss-bauhaus/demo2/) (65 dtk) | [Eksperimen 3 Warna Primer Kandinsky](styles/swiss-bauhaus/demo3/) (65 dtk) |
-| 35 | **Editorial Serif** | `editorial-serif` | ❌ | — | — | — |
-| 36 | **Chrome Y2K** | `chrome-y2k` | ❌ | — | — | — |
-| 37 | **Noir Dokumenter** | `noir-dokumenter` | ✅ | [Krakatau 1883: Suara Paling Keras dalam Sejarah](styles/noir-dokumenter/demo/) (15 dtk) | — | — |
-| 38 | **VHS & Arsip CRT** | `vhs-arsip` | ✅ | [Sinyal Wow! 1977](styles/vhs-arsip/demo/) (15 dtk) | — | — |
-| 39 | **Flat Vector Explainer** | `flat-vector` | ✅ | [Ke Mana Perginya Rp100 Ribu?](styles/flat-vector/demo/) (27 dtk) | [Peta Isi Kepala Pas Macet](styles/flat-vector/demo-kepala-macet/) (25 dtk) | — |
-| 40 | **Kartun Outline Tebal** | `kartun-outline-tebal` | ✅ | [Perang Aplikasi di Baterai 1 Persen](styles/kartun-outline-tebal/demo/) (15 dtk) | — | — |
-| 41 | **Neo-Brutalist Bento** | `neo-brutalist` | ✅ | [Ke Mana Perginya Uang Kopi Susu Kekinianmu?](styles/neo-brutalist/demo/) (15 dtk) | — | — |
-| 42 | **Vas Yunani Black-Figure** | `vas-yunani` | ❌ | — | — | — |
+| 35 | **Editorial Serif** | `editorial-serif` | ✅ | [Kain yang Ditenun Setahun di Sumba](styles/editorial-serif/demo1/) (65 dtk) | [Jejak Rempah yang Mengubah Peta Dunia](styles/editorial-serif/demo2/) (65 dtk) | [Anatomi Secangkir Kopi Nusantara](styles/editorial-serif/demo3/) (65 dtk) |
+| 36 | **Chrome Y2K** | `chrome-y2k` | ✅ | [Emas di HP-mu Lahir dari Tabrakan Bintang](styles/chrome-y2k/demo1/) (65 dtk) | [Estetika Chrome Y2K Tahun 2000](styles/chrome-y2k/demo2/) (66 dtk) | [Rahasia Logam Titanium (SR-71 & HP)](styles/chrome-y2k/demo3/) (66 dtk) |
+| 37 | **Noir Dokumenter** | `noir-dokumenter` | ✅ | [Krakatau 1883: Suara Paling Keras](styles/noir-dokumenter/demo1/) (54 dtk) | [Letusan Tambora 1815: Tanpa Musim Panas](styles/noir-dokumenter/demo2/) (64 dtk) | [Misteri Kapal SS Ourang Medan 1947](styles/noir-dokumenter/demo3/) (64 dtk) |
+| 38 | **VHS & Arsip CRT** | `vhs-arsip` | ✅ | [Sinyal Wow! 1977 (Kode 6EQUJ5)](styles/vhs-arsip/demo1/) (54 dtk) | [Piringan Emas Voyager 1977 & Gamelan](styles/vhs-arsip/demo2/) (64 dtk) | [Gerhana Matahari Total 11 Juni 1983](styles/vhs-arsip/demo3/) (64 dtk) |
+| 39 | **Flat Vector Explainer** | `flat-vector` | ✅ | [Ke Mana Perginya Rp100 Ribu?](styles/flat-vector/demo1/) (62 dtk) | [Peta Isi Kepala Pas Macet](styles/flat-vector/demo2/) (62 dtk) | [Cahaya di Wajahmu: 170.000 Tahun Foton](styles/flat-vector/demo3/) (65 dtk) |
+| 40 | **Kartun Outline Tebal** | `kartun-outline-tebal` | ✅ | [Perang Aplikasi di Baterai 1 Persen](styles/kartun-outline-tebal/demo1/) (62 dtk) | [Drama Alarm Jam Enam vs Tombol Snooze](styles/kartun-outline-tebal/demo2/) (64 dtk) | [Rapat Tengah Malam Penghuni HP-mu](styles/kartun-outline-tebal/demo3/) (64 dtk) |
+| 41 | **Neo-Brutalist Bento** | `neo-brutalist` | ✅ | [Ke Mana Perginya Uang Kopi Susu?](styles/neo-brutalist/demo1/) (62 dtk) | [Dari Rp1,5 Juta Tiket Konsermu](styles/neo-brutalist/demo2/) (64 dtk) | [Rahasia di Balik Label Gratis Ongkir](styles/neo-brutalist/demo3/) (65 dtk) |
+| 42 | **Vas Yunani Black-Figure** | `vas-yunani` | ✅ | [Prometheus, Pencuri Api Olimpus](styles/vas-yunani/demo1/) (64 dtk) | [Sayap Lilin Icarus & Labirin Daedalus](styles/vas-yunani/demo2/) (64 dtk) | [Siasat Kuda Troya & Trojan Horse](styles/vas-yunani/demo3/) (65 dtk) |
 | 43 | **Scrapbook Collage** | `scrapbook` | ✅ | [Jurnal Wallace: Garis Tak Terlihat di Nusantara](styles/scrapbook/demo/) (42 dtk) | — | — |
 | 44 | **Risograph Halftone** | `riso-halftone` | ✅ | [Band yang Dipenjara karena Lagu](styles/riso-halftone/demo/) (15 dtk) | — | — |
 | 45 | **Manga Action** | `manga-action` | ✅ | [Smash 565 km/jam](styles/manga-action/demo/) (15 dtk) | — | — |

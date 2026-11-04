@@ -1,0 +1,50 @@
+{
+  "title": "Kain yang Ditenun Setahun di Sumba — Rahasia Tenun Ikat Hinggi dari Akar Mengkudu dan Daun Nila",
+  "slug": "35_editorial-serif-demo1",
+  "style": "editorial-serif",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.06,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "l1",
+      "text": "Pernahkah kamu memegang selembar kain yang waktu pembuatannya lebih lama daripada membangun sebuah rumah?"
+    },
+    {
+      "id": "l2",
+      "text": "Di perbukitan sabana Sumba Timur, sehelai kain tenun ikat bernama Hinggi membutuhkan waktu enam bulan hingga tiga tahun penuh untuk selesai."
+    },
+    {
+      "id": "l3",
+      "text": "Semuanya dimulai dari kapas lokal yang dipintal dengan tangan, lalu diikat helai demi helai menggunakan serat daun gewang agar membentuk pola negatif."
+    },
+    {
+      "id": "l4",
+      "text": "Tidak ada satu tetes pun pewarna kimia di sini, karena warna birunya lahir dari rendaman daun nila segar yang difermentasi di dalam tempayan tanah liat."
+    },
+    {
+      "id": "l5",
+      "text": "Sementara warna merah bata Kombu yang legendaris diekstrak dari tumbukan kulit akar pohon mengkudu yang dicampur kulit kayu loba sebagai pengunci warna."
+    },
+    {
+      "id": "l6",
+      "text": "Untuk mendapatkan merah tua yang pekat dan tidak pernah pudar, ikatan benang tadi harus dicelup dan dijemur berulang kali selama berbulan-bulan mengikuti musim kemarau."
+    },
+    {
+      "id": "l7",
+      "text": "Ketika ratusan ikatan akhirnya dibuka dan ditenun di atas alat gedogan, barulah muncul motif kuda Njara, udang, dan tengkorak sebagai simbol keberanian serta siklus hidup."
+    },
+    {
+      "id": "l8",
+      "text": "Bagi masyarakat Sumba, Hinggi bukan sekadar pakaian, melainkan buku sejarah yang ditenun dengan kesabaran waktu dan membungkus manusia dari lahir hingga kembali ke tanah leluhur."
+    }
+  ]
+}

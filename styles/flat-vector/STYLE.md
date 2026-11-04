@@ -5,25 +5,14 @@ no: 39
 source: github:flat-vector-explainer + flat-vector-kurzgesagt
 family: 2D
 tech: canvas2d
-music: ambient   voice: id-f   captions: bold (anim rise)
-best_for: sains populer, astronomi, biologi, "bagaimana cara kerja", perbandingan skala dan waktu, eksplainer anak muda
+music: ambient   voice: el-id-m   captions: bold (anim rise)
+best_for: sains populer, astronomi, biologi, keuangan populer, "bagaimana cara kerja", perbandingan skala dan waktu
 ---
 # Ilustrasi Vektor Datar
 
 **Ciri khas (look):** ilustrasi datar tanpa outline, isian gradien dua titik (terang di kiri atas), glow lembut dari sprite yang di-cache. Latar luar angkasa navy pekat #060b22 → #1c2a66 dengan bintang berkelip; aksen hangat matahari #fff7d1 / #ffd65e / #ffa63f / #f46a3a, ungu sinar gamma #8f7bff, teal #3fd6c6. Tokoh bulat bermata titik dengan pipi merah muda (foton, orang berponi). Label berupa "pill" semi-transparan, angka besar Poppins 800, ikon datar (piramida, gandum, lukisan gua).
 
-**Gerak (motion):** semua bergerak halus dengan ease in/out; tokoh squash & stretch searah kecepatan, berkedip, mengangguk pelan. Gerak khas: **potongan irisan** (wedge) yang membuka isi planet/bintang, **zoom-through** (kamera menembus objek lalu adegan berikutnya ada di dalamnya), pop-in dengan overshoot, counter yang bergulir, dan **simulasi sungguhan** (random walk deterministik yang jejaknya makin kusut sementara kamera mundur).
-
-**Kenapa menarik:** gaya penjelas sains yang paling dikenal di YouTube: ramah, jelas di layar HP, dan terasa "pintar". Karakter imut membuat konsep abstrak (foton, sel, atom) punya wajah dan perasaan.
-
-**Cerita yang cocok:**
-- Foton dari inti Matahari: "Cahaya di wajahmu lebih tua dari peradaban."
-- Perjalanan sebutir oksigen: "Napasmu barusan pernah lewat paru-paru dinosaurus?"
-- Kenapa langit biru: "Langit sebenarnya ungu. Matamu yang curang."
-- Titik Nemo: "Di titik ini, manusia terdekat sedang melayang di luar angkasa."
-- Satu hari di Venus lebih lama dari setahunnya.
-
-**Rumus hook:** "[Benda sehari-hari] ini ternyata [lebih tua/besar/aneh] dari [pembanding]." / "Kalau kamu [ukuran mustahil], [hal biasa] jadi [mengejutkan]." / "[Angka] tahun... hanya untuk [perjalanan pendek]."
+**Gerak (motion):** semua bergerak halus dengan ease in/out; tokoh squash & stretch searah kecepatan, berkedip, mengangguk pelan. Gerak khas: **potongan irisan** (wedge) yang membuka isi planet/bintang, **zoom-through**, pop-in dengan overshoot, counter yang bergulir, dan **simulasi sungguhan** (random walk deterministik).
 
 **Kit API (`styles/flat-vector/kit.js`):**
 - `PAL`, `cam(ctx, z, cx, cy, rot)`, `pop(t, t0, dur)`, `pr(t, a, b)`, `fmt(n)` (format 170.000).
@@ -39,6 +28,7 @@ best_for: sains populer, astronomi, biologi, "bagaimana cara kerja", perbandinga
 - `badge`, `headline`, `callout`, `counter`: label pill, judul, garis penunjuk yang menggambar diri, angka bergulir.
 - `icon(ctx, 'pyramid'|'wheat'|'cave'|'clock'|'face', x, y, s)`, `beam(...)`: berkas cahaya; `iris(...)`: transisi lingkaran.
 
-**Demo:** "Cahaya di Wajahmu Lebih Tua dari Peradaban", 19,6 detik, 8 beat. Foton meluncur di berkas cahaya pagi dan mendarat di pipi (piramida "±4.500 tahun lalu") → zoom-through ke Matahari yang terbelah, "INTI 15 juta °C" → lahir dari kilatan fusi lalu menabrak partikel → diserap dan dilepas ke arah acak, jejaknya makin kusut → kamera mundur, penghitung tahun 10.000 → 170.000 (perkiraan) → foton lolos dari permukaan → 08:20 menuju Bumi → kembali ke pipi, judul "LEBIH TUA DARI PERADABAN".
-- **Demo 2 — "Ke Mana Perginya Rp100 Ribu?"** (`demo/`, ~27 dtk): pipa uang mengalir ke 4 kotak — bensin, jajan, parkir, hilang. Voice el-id-m.
-- **Demo 3 — "Peta Isi Kepala pas Macet"** (`demo-kepala-macet/`, ~25 dtk): pie chart isi kepala — kerja, lapar, bensin, "OTAK MACET". Voice el-id-m.
+## Paket Demo (30–90 Detik)
+1. **`demo1/` — *Ke Mana Perginya Rp100 Ribu? — Misteri Bocor Halus di Dompet Kita*** (~62 dtk, 6 babak): Pipa aliran uang seratus ribu rupiah ke bensin (-30rb), jajan kopi & gorengan (-25rb), parkir & tol (-15rb), serta fenomena *bocor halus* (-30rb).
+2. **`demo2/` — *Peta Isi Kepala Pas Macet — Anatomi Pikiran Saat Terjebak di Jalanan Sore*** (~62 dtk, 6 babak): Diagram pai isi kepala pejuang komuter saat macet pukul 17:30 — mengeluh 40%, lapar 30%, mengantuk 20%, dan memikirkan tenggat kerjaan 10%.
+3. **`demo3/` — *Cahaya di Wajahmu Lebih Tua dari Peradaban — Perjalanan 170.000 Tahun Sebutir Foton*** (~65 dtk, 7 babak): Lahirnya foton dari fusi hidrogen di inti Matahari (15 juta °C), terjebak *random walk* menabrak plasma di zona radiasi selama 170.000 tahun, lalu melesat 8 menit 20 detik menuju Bumi.

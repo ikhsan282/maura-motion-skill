@@ -1,0 +1,44 @@
+{
+  "title": "Prometheus, Pencuri Api Olimpus — Bara di Dalam Batang Adas yang Mengubah Nasib Manusia",
+  "slug": "42_vas-yunani_demo1",
+  "style": "vas-yunani",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.06,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tribal",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Dulu, menurut mitologi Yunani kuno yang terukir di atas amfora tanah liat Athena, manusia hidup menggigil dalam kegelapan karena Dewa Zeus menyembunyikan api suci di puncak Gunung Olimpus.",
+      "pause": 0.35
+    },
+    {
+      "id": "olimpus",
+      "text": "Titan Prometheus yang berhati welas asih tidak tega melihat manusia bertahan hidup tanpa kehangatan, sehingga ia menyelinap ke bengkel pandai besi Hephaestus saat para dewa lengah."
+    },
+    {
+      "id": "narthex",
+      "text": "Ia mencuri sebutir bara api abadi dan menyembunyikannya di dalam rongga batang tanaman adas raksasa bernama narthex, yang bagian dalamnya kering seperti sumbu namun kulit luarnya tidak terbakar."
+    },
+    {
+      "id": "peradaban",
+      "text": "Begitu obor batang adas itu diserahkan kepada manusia, peradaban langsung menyala: manusia mulai menempa logam, membakar tembikar terakota, memasak makanan, serta membangun ilmu pengetahuan dan seni."
+    },
+    {
+      "id": "hukuman",
+      "text": "Namun cahaya api yang berkilau dari bumi membuat Zeus murka; Prometheus ditangkap dan dirantai di tebing batu Pegunungan Kaukasus, tempat seekor elang raksasa datang setiap fajar."
+    },
+    {
+      "id": "herakles",
+      "text": "Berabad-abad kemudian, pahlawan Herakles melintas dan membidikkan anak panahnya untuk membebaskan sang Titan—menjadikan Prometheus lambang abadi keberanian ilmu pengetahuan yang menantang kegelapan."
+    }
+  ]
+}
+

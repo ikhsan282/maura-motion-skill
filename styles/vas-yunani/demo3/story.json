@@ -1,0 +1,44 @@
+{
+  "title": "Siasat Kuda Troya — Ketika Hadiah Kemenangan Justru Meruntuhkan Benteng Terkuat",
+  "slug": "42_vas-yunani_demo3",
+  "style": "vas-yunani",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.06,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tribal",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Selama sepuluh tahun penuh, ribuan kapal perang Yunani mengepung kota Troya tanpa hasil—hingga sebuah patung kayu raksasa menyelesaikan perang itu hanya dalam satu malam.",
+      "pause": 0.35
+    },
+    {
+      "id": "benteng",
+      "text": "Tembok batu Troya begitu tebal dan kokoh sehingga tombak Achilles maupun serbuan pasukan Sparta tidak sanggup menembusnya, membuat perang berubah menjadi kebuntuan panjang yang menguras tenaga."
+    },
+    {
+      "id": "odiseus",
+      "text": "Raja Odiseus yang terkenal cerdik akhirnya mengusulkan strategi psikologis: mereka membangun seekor kuda kayu raksasa beroda, menyembunyikan tiga puluh prajurit terbaik di dalam perutnya, lalu pura-pura berlayar pulang."
+    },
+    {
+      "id": "gerbang",
+      "text": "Penduduk Troya yang mengira pasukan Yunani telah menyerah menyambut kuda itu sebagai persembahan suci bagi Dewi Athena, bahkan membongkar sebagian gerbang kota mereka sendiri demi menariknya masuk."
+    },
+    {
+      "id": "malam",
+      "text": "Ketika seluruh kota tertidur lelap seusai pesta kemenangan, pintu rahasia di perut kuda kayu terbuka; Odiseus dan pasukannya turun membuka gerbang utama bagi armada Yunani yang kembali dalam gelap."
+    },
+    {
+      "id": "warisan",
+      "text": "Dua puluh lima abad kemudian, kisah di atas vas terakota ini masih hidup di setiap komputer modern lewat istilah Trojan Horse—program berbahaya yang menyamar sebagai hadiah menggiurkan."
+    }
+  ]
+}
+

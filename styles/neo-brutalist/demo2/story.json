@@ -1,0 +1,50 @@
+{
+  "title": "Dari Rp1,5 Juta Tiket Konsermu, Berapa yang Sampai ke Penyanyinya? — Bedah Ekonomi Panggung Musik",
+  "slug": "41_neo-brutalist_demo2",
+  "style": "neo-brutalist",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Saat kamu rela mengantre war tiket konser seharga satu juta lima ratus ribu rupiah, pernahkah kamu menghitung berapa uang yang sebenarnya masuk ke kantong penyanyi atau band favoritmu di atas panggung?",
+      "say": "Saat kamu rela mengantre war tiket konser seharga satu juta lima ratus ribu rupiah, pernahkah kamu menghitung berapa uang yang sebenarnya masuk ke kantong penyanyi atau band favoritmu di atas panggung?",
+      "pause": 0.35
+    },
+    {
+      "id": "pajak",
+      "text": "Begitu transaksi berhasil, sekitar tiga ratus ribu rupiah atau dua puluh persen langsung terpotong di awal untuk pajak hiburan daerah, komisi platform penjualan tiket, dan biaya gerbang pembayaran digital.",
+      "say": "Begitu transaksi berhasil, sekitar tiga ratus ribu rupiah atau dua puluh persen langsung terpotong di awal untuk pajak hiburan daerah, komisi platform penjualan tiket, dan biaya gerbang pembayaran digital."
+    },
+    {
+      "id": "panggung",
+      "text": "Porsi terbesar berikutnya, sekitar lima ratus dua puluh lima ribu rupiah, habis untuk menyewa stadion, membangun panggung raksasa, tata suara ratusan ribu watt, layar LED, serta izin keamanan.",
+      "say": "Porsi terbesar berikutnya, sekitar lima ratus dua puluh lima ribu rupiah, habis untuk menyewa stadion, membangun panggung raksasa, tata suara ratusan ribu watt, layar LED, serta izin keamanan."
+    },
+    {
+      "id": "promotor",
+      "text": "Lalu sekitar dua ratus dua puluh lima ribu rupiah dialokasikan untuk biaya pemasaran promotor, asuransi acara, kru lokal, dan risiko bila kursi stadion tidak terjual habis.",
+      "say": "Lalu sekitar dua ratus dua puluh lima ribu rupiah dialokasikan untuk biaya pemasaran promotor, asuransi acara, kru lokal, dan risiko bila kursi stadion tidak terjual habis."
+    },
+    {
+      "id": "artis",
+      "text": "Dari sisa empat ratus lima puluh ribu rupiah untuk honor artis, angkanya masih harus dipotong komisi manajemen, agen booking, serta gaji kru tur dan teknisi instrumen.",
+      "say": "Dari sisa empat ratus lima puluh ribu rupiah untuk honor artis, angkanya masih harus dipotong komisi manajemen, agen booking, serta gaji kru tur dan teknisi instrumen."
+    },
+    {
+      "id": "akhir",
+      "text": "Hasil akhirnya, sang musisi rata-rata membawa pulang bersih sekitar dua ratus empat puluh ribu rupiah atau enam belas persen dari tiketmu—itulah mengapa merchandise resmi di venue menjadi penyelamat tur mereka.",
+      "say": "Hasil akhirnya, sang musisi rata-rata membawa pulang bersih sekitar dua ratus empat puluh ribu rupiah atau enam belas persen dari tiketmu, itulah mengapa merchandise resmi di venue menjadi penyelamat tur mereka."
+    }
+  ]
+}
+

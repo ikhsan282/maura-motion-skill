@@ -1,0 +1,43 @@
+{
+  "title": "Drama Alarm Jam Enam Pagi vs Tombol Snooze — Kenapa Tidur Lima Menit Lagi Justru Bikin Pusing?",
+  "slug": "40_kartun-outline-tebal-demo2",
+  "style": "kartun-outline-tebal",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "playful",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Setiap pukul enam pagi tepat, layar ponsel di samping bantalmu berubah menjadi arena pertempuran sengit antara pasukan alarm pagi melawan godaan tombol tunda."
+    },
+    {
+      "id": "snooze",
+      "text": "Saat dering pertama berbunyi nyaring, tangan yang masih setengah sadar hampir selalu menekan tombol tunda demi janji manis tidur lima menit lagi."
+    },
+    {
+      "id": "mimpi",
+      "text": "Padahal menurut sains tidur, memejamkan mata kembali setelah terbangun justru menipu otak untuk memulai siklus tidur dalam yang baru dari awal."
+    },
+    {
+      "id": "perang",
+      "text": "Akibatnya ketika alarm kedua dan ketiga meledak lima menit kemudian, otakmu dipaksa bangun di tengah siklus sehingga memicu efek pusing berat bernama inersia tidur."
+    },
+    {
+      "id": "kesiangan",
+      "text": "Lebih parahnya lagi, lima menit yang terasa sekejap itu tahu-tahu berubah menjadi jam tujuh lewat lima belas menit dan membuatmu panik berlari mengejar waktu!"
+    },
+    {
+      "id": "akhir",
+      "text": "Solusi terbaiknya sederhana: pasang satu alarm saja di waktu yang benar-benar kamu butuhkan, lalu letakkan ponselmu jauh di seberang kamar agar kaki terpaksa melangkah bangun."
+    }
+  ]
+}
+

@@ -1,0 +1,50 @@
+{
+  "title": "Jejak Rempah yang Mengubah Peta Dunia — Pala Banda, Cengkeh Ternate, dan Kapur Barus",
+  "slug": "35_editorial-serif-demo2",
+  "style": "editorial-serif",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.06,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "l1",
+      "text": "Tahukah kamu bahwa lima abad lalu, segenggam biji buah dari kepulauan kecil di Maluku nilainya setara dengan emas murni di pasar Eropa?"
+    },
+    {
+      "id": "l2",
+      "text": "Buah itu adalah pala dari Kepulauan Banda dan kuncup cengkeh dari lereng gunung api Ternate serta Tidore."
+    },
+    {
+      "id": "l3",
+      "text": "Selama ribuan tahun sebelum kapal Eropa tiba, pelaut Nusantara telah merajut jalur dagang maritim bersama saudagar Arab, India, dan Tiongkok."
+    },
+    {
+      "id": "l4",
+      "text": "Bahkan kristal kapur barus dari hutan Sumatra sudah tercatat berada di dalam balsam pengawet mumi firaun Mesir Kuno."
+    },
+    {
+      "id": "l5",
+      "text": "Satu buah pala menghasilkan dua komoditas mewah sekaligus: biji pala di bagian dalam dan jaring merah menyala bernama fuli yang menyelimutinya."
+    },
+    {
+      "id": "l6",
+      "text": "Di abad ke-17, obsesi memonopoli pohon pala membuat Belanda menukar Pulau Run di Kepulauan Banda dengan Pulau Manhattan di Amerika kepada Inggris."
+    },
+    {
+      "id": "l7",
+      "text": "Melalui Perjanjian Breda tahun 1667, sepetak pulau karang penghasil pala dianggap jauh lebih berharga daripada tanah yang kelak menjadi kota New York."
+    },
+    {
+      "id": "l8",
+      "text": "Kini bumbu yang kita taburkan dengan mudah di dapur adalah saksi bisu bagaimana aroma hutan Nusantara pernah menggerakkan kapal dan mengubah peta dunia."
+    }
+  ]
+}

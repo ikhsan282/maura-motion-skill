@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 70 siap pakai ✅, 7 belum diimplementasi ❌)
+## Status gaya (77 gaya: 73 siap pakai ✅, 4 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -104,14 +104,14 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 32 | **One-Shape UI Morph** | ui-morph | ✅ ([demo1](styles/ui-morph/demo1/) · [demo2](styles/ui-morph/demo2/) · [demo3](styles/ui-morph/demo3/)) |
 | 33 | **Kinetic Typography** | kinetic-type | ✅ ([demo1](styles/kinetic-type/demo1/) · [demo2](styles/kinetic-type/demo2/) · [demo3](styles/kinetic-type/demo3/)) |
 | 34 | **Swiss / Bauhaus Grid** | swiss-bauhaus | ✅ ([demo1](styles/swiss-bauhaus/demo1/) · [demo2](styles/swiss-bauhaus/demo2/) · [demo3](styles/swiss-bauhaus/demo3/)) |
-| 35 | **Editorial Serif** | editorial-serif | ❌ (belum diimplementasi) |
-| 36 | **Chrome Y2K** | chrome-y2k | ❌ (belum diimplementasi) |
-| 37 | **Noir Dokumenter** | noir-dokumenter | ✅ ([styles/noir-dokumenter](styles/noir-dokumenter/)) |
-| 38 | **VHS & Arsip CRT** | vhs-arsip | ✅ ([styles/vhs-arsip](styles/vhs-arsip/)) |
-| 39 | **Flat Vector Explainer** | flat-vector | ✅ ([styles/flat-vector](styles/flat-vector/)) |
-| 40 | **Kartun Outline Tebal** | kartun-outline-tebal | ✅ ([styles/kartun-outline-tebal](styles/kartun-outline-tebal/)) |
-| 41 | **Neo-Brutalist Bento** | neo-brutalist | ✅ ([styles/neo-brutalist](styles/neo-brutalist/)) |
-| 42 | **Vas Yunani Black-Figure** | vas-yunani | ❌ (belum diimplementasi) |
+| 35 | **Editorial Serif** | editorial-serif | ✅ ([demo1](styles/editorial-serif/demo1/) · [demo2](styles/editorial-serif/demo2/) · [demo3](styles/editorial-serif/demo3/)) |
+| 36 | **Chrome Y2K** | chrome-y2k | ✅ ([demo1](styles/chrome-y2k/demo1/) · [demo2](styles/chrome-y2k/demo2/) · [demo3](styles/chrome-y2k/demo3/)) |
+| 37 | **Noir Dokumenter** | noir-dokumenter | ✅ ([demo1](styles/noir-dokumenter/demo1/) · [demo2](styles/noir-dokumenter/demo2/) · [demo3](styles/noir-dokumenter/demo3/)) |
+| 38 | **VHS & Arsip CRT** | vhs-arsip | ✅ ([demo1](styles/vhs-arsip/demo1/) · [demo2](styles/vhs-arsip/demo2/) · [demo3](styles/vhs-arsip/demo3/)) |
+| 39 | **Flat Vector Explainer** | flat-vector | ✅ ([demo1](styles/flat-vector/demo1/) · [demo2](styles/flat-vector/demo2/) · [demo3](styles/flat-vector/demo3/)) |
+| 40 | **Kartun Outline Tebal** | kartun-outline-tebal | ✅ ([demo1](styles/kartun-outline-tebal/demo1/) · [demo2](styles/kartun-outline-tebal/demo2/) · [demo3](styles/kartun-outline-tebal/demo3/)) |
+| 41 | **Neo-Brutalist Bento** | neo-brutalist | ✅ ([demo1](styles/neo-brutalist/demo1/) · [demo2](styles/neo-brutalist/demo2/) · [demo3](styles/neo-brutalist/demo3/)) |
+| 42 | **Vas Yunani Black-Figure** | vas-yunani | ✅ ([demo1](styles/vas-yunani/demo1/) · [demo2](styles/vas-yunani/demo2/) · [demo3](styles/vas-yunani/demo3/)) |
 | 43 | **Scrapbook Collage** | scrapbook | ✅ ([styles/scrapbook](styles/scrapbook/)) |
 | 44 | **Risograph Halftone** | riso-halftone | ✅ ([styles/riso-halftone](styles/riso-halftone/)) |
 | 45 | **Manga Action** | manga-action | ✅ ([styles/manga-action](styles/manga-action/)) |

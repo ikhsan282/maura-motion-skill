@@ -1,0 +1,43 @@
+{
+  "title": "Rapat Tengah Malam Penghuni HP-mu — Siapa yang Paling Boros Kuota dan Memori?",
+  "slug": "40_kartun-outline-tebal-demo3",
+  "style": "kartun-outline-tebal",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "playful",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jam dua dini hari saat kamu sudah tertidur pulas, para aplikasi di dalam ponselmu diam-diam berkumpul mengadakan rapat darurat karena memori penyimpanan penuh sembilan puluh sembilan persen!"
+    },
+    {
+      "id": "kamera",
+      "text": "Tersangka pertama yang langsung ditunjuk adalah aplikasi Kamera, karena menyimpan empat ribu foto makanan dan foto kucing buram yang tidak pernah dihapus sejak tahun lalu."
+    },
+    {
+      "id": "chat",
+      "text": "Aplikasi Chat tidak mau kalah membela diri, padahal dialah yang diam-diam mengunduh ratusan video ucapan selamat pagi dan stiker dari grup keluarga secara otomatis."
+    },
+    {
+      "id": "peta",
+      "text": "Sementara itu di balik layar, aplikasi Game dan Peta ternyata masih menyedot kuota internet malam untuk mengunduh pembaruan peta raksasa sebesar lima gigabita."
+    },
+    {
+      "id": "musik",
+      "text": "Akibat ulah mereka semua, ruang penyimpanan ponselmu sesak napas hingga layar sering macet saat kamu sedang buru-buru ingin memindai kode pembayaran."
+    },
+    {
+      "id": "akhir",
+      "text": "Supaya ponselmu kembali ngebut tanpa harus ganti baru, luangkan lima menit akhir pekan ini untuk membersihkan tumpukan cache dan mematikan unduhan otomatis di aplikasi pesanmu."
+    }
+  ]
+}
+

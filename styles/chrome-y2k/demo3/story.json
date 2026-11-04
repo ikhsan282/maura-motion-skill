@@ -1,0 +1,50 @@
+{
+  "title": "Rahasia Logam Titanium — Mengapa Logam Pesawat Tempur Kini Ada di Casing Ponsel dan Implan Tulang?",
+  "slug": "36_chrome-y2k-demo3",
+  "style": "chrome-y2k",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.06,
+  "music": {
+    "preset": "synthwave",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "l1",
+      "text": "Mengapa logam yang dulunya dirahasiakan untuk membuat kulit pesawat intai supersonik kini berada di dalam implan tulang manusia dan rangka ponsel pintar?"
+    },
+    {
+      "id": "l2",
+      "text": "Logam itu adalah titanium, unsur bernomor atom dua puluh dua yang dinamai dari raksasa Titan dalam mitologi Yunani."
+    },
+    {
+      "id": "l3",
+      "text": "Keunggulan terbesar titanium adalah rasio kekuatan terhadap beratnya yang luar biasa: sekuat baja tulangan namun empat puluh lima persen lebih ringan."
+    },
+    {
+      "id": "l4",
+      "text": "Saat tergores dan terpapar oksigen, permukaan titanium langsung membentuk selaput oksida mikroskopis yang melindunginya dari karat air laut maupun asam."
+    },
+    {
+      "id": "l5",
+      "text": "Pada era Perang Dingin, pesawat intai SR-71 Blackbird dibuat dari sembilan puluh tiga persen titanium agar tidak meleleh akibat gesekan udara di kecepatan Mach tiga."
+    },
+    {
+      "id": "l6",
+      "text": "Di dunia medis, titanium adalah satu-satunya logam struktural yang tidak ditolak oleh sistem imun kita, sehingga sel tulang dapat tumbuh menyatu di permukaannya."
+    },
+    {
+      "id": "l7",
+      "text": "Kini paduan Titanium Kelas Lima yang sama digunakan pada bodi ponsel kelas atas untuk menahan benturan keras tanpa membuat tangan cepat pegal."
+    },
+    {
+      "id": "l8",
+      "text": "Dari ketinggian delapan puluh ribu kaki hingga ke dalam tubuh manusia, titanium membuktikan bagaimana satu elemen logam mengubah batas rekayasa modern."
+    }
+  ]
+}

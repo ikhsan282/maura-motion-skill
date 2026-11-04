@@ -1,0 +1,47 @@
+{
+  "title": "Cahaya di Wajahmu Lebih Tua dari Peradaban — Perjalanan 170.000 Tahun Sebutir Foton",
+  "slug": "39_flat-vector-demo3",
+  "style": "flat-vector",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.24,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu bahwa cahaya matahari hangat yang menyentuh wajahmu pagi ini sebenarnya sudah memulai perjalanannya jauh sebelum manusia membangun Piramida Mesir?"
+    },
+    {
+      "id": "inti",
+      "text": "Banyak yang mengira cahaya matahari hanya butuh waktu delapan menit untuk sampai ke Bumi, padahal itu hanyalah waktu tempuh dari permukaan luarnya saja."
+    },
+    {
+      "id": "fusi",
+      "text": "Setiap partikel cahaya atau foton sesungguhnya lahir di kedalaman inti Matahari yang bersuhu lima belas juta derajat Celsius dari reaksi fusi nuklir hidrogen."
+    },
+    {
+      "id": "acak",
+      "text": "Begitu lahir, foton itu tidak bisa langsung terbang lurus keluar karena zona radiasi Matahari begitu padat oleh plasma proton dan elektron yang saling berdesakan."
+    },
+    {
+      "id": "waktu",
+      "text": "Akibatnya sang foton terus menabrak atom, diserap, lalu dimuntahkan kembali ke arah acak miliaran kali seperti bola pinball selama rata-rata seratus tujuh puluh ribu tahun."
+    },
+    {
+      "id": "terbang",
+      "text": "Barulah setelah berhasil menembus permukaan Matahari, foton yang telah berubah menjadi cahaya tampak itu melesat bebas di ruang hampa menuju Bumi dalam waktu delapan menit dua puluh detik."
+    },
+    {
+      "id": "akhir",
+      "text": "Jadi saat kamu berjemur di pagi hari, kulitmu sedang menyambut partikel cahaya purba yang lahir ketika manusia purba di Bumi baru belajar menyalakan api di dalam gua."
+    }
+  ]
+}
+

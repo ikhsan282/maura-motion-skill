@@ -1,0 +1,50 @@
+{
+  "title": "Estetika Chrome Y2K Tahun 2000 — Ketika Dunia Terobsesi Masa Depan Logam Cair",
+  "slug": "36_chrome-y2k-demo2",
+  "style": "chrome-y2k",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.06,
+  "music": {
+    "preset": "synthwave",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "l1",
+      "text": "Mengapa menjelang tahun dua ribu, hampir seluruh poster musik, konsol gim, dan pemutar MP3 tiba-tiba tampil dengan warna perak mengilap seperti logam cair?"
+    },
+    {
+      "id": "l2",
+      "text": "Fenomena visual ini dikenal sebagai estetika Y2K, sebuah gerakan desain futuristik yang meledak dari tahun seribu sembilan ratus sembilan puluh tujuh hingga dua ribu empat."
+    },
+    {
+      "id": "l3",
+      "text": "Saat itu dunia baru saja menyambut internet rumahan, keping cakram padat yang memantulkan pelangi, serta optimisme besar memasuki milenium baru."
+    },
+    {
+      "id": "l4",
+      "text": "Kemajuan perangkat lunak grafik tiga dimensi memungkinkan desainer membuat objek bola merkuri dan tipografi krom yang tampak menetes di layar komputer."
+    },
+    {
+      "id": "l5",
+      "text": "Berbeda dengan fiksi ilmiah masa kini yang sering tampak suram, era Y2K membayangkan masa depan yang bersih, aerodinamis, dan ramah teknologi."
+    },
+    {
+      "id": "l6",
+      "text": "Perangkat keras mulai dari komputer iMac transparan hingga pemutar musik Winamp berlomba memamerkan lekukan organik berbalut pantulan logam spekular."
+    },
+    {
+      "id": "l7",
+      "text": "Ciri khas lainnya adalah perpaduan latar biru kobalt gelap dengan kisi kawat perspektif, cincin orbit, dan kilau bintang empat sudut."
+    },
+    {
+      "id": "l8",
+      "text": "Lebih dari dua dekade kemudian, estetika Chrome Y2K kembali bangkit karena generasi baru merindukan masa ketika teknologi terasa begitu berani dan penuh harapan."
+    }
+  ]
+}

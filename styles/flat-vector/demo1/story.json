@@ -1,0 +1,42 @@
+{
+  "title": "Ke Mana Perginya Rp100 Ribu? — Misteri Bocor Halus di Dompet Kita",
+  "slug": "39_flat-vector-demo1",
+  "style": "flat-vector",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "lofi",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.24,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Saat selembar uang seratus ribu rupiah masih utuh di dompet, rasanya kita cukup kaya, namun begitu uang itu pecah, tiba-tiba saja sisanya lenyap tinggal struk belanjaan."
+    },
+    {
+      "id": "bensin",
+      "text": "Pemberhentian pertama biasanya adalah stasiun pengisian bahan bakar untuk mengisi tangki motor, di mana tiga puluh ribu rupiah langsung melayang begitu saja demi perjalanan kerja."
+    },
+    {
+      "id": "jajan",
+      "text": "Siang harinya, godaan segelas es kopi susu gula aren dan sepiring gorengan hangat di kantor diam-diam memangkas dua puluh lima ribu rupiah berikutnya tanpa terasa."
+    },
+    {
+      "id": "parkir",
+      "text": "Belum lagi pengeluaran receh seperti uang parkir dua ribu di minimarket, biaya admin transfer, serta tarif jalan yang bila dijumlahkan menguras lima belas ribu rupiah."
+    },
+    {
+      "id": "habis",
+      "text": "Lalu ke mana perginya sisa tiga puluh ribu rupiah terakhir? Dalam psikologi keuangan, fenomena ini disebut bocor halus atau pengeluaran mikro yang luput dari ingatan."
+    },
+    {
+      "id": "tutup",
+      "text": "Karena otak kita cenderung meremehkan nominal kecil di bawah dua puluh ribu rupiah, mencatat setiap transaksi harian adalah satu-satunya cara agar gaji tak habis tanpa jejak."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Perang Aplikasi di Baterai 1 Persen — Drama di Dalam Layar Ponselmu",
+  "slug": "40_kartun-outline-tebal-demo1",
+  "style": "kartun-outline-tebal",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "playful",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu membayangkan apa yang terjadi di balik layar saat baterai HP-mu tersisa satu persen dan seluruh aplikasiku mulai perang berebut tetes daya terakhir?",
+      "say": "Pernahkah kamu membayangkan apa yang terjadi di balik layar saat baterai hape-mu tersisa satu persen dan seluruh aplikasiku mulai perang berebut tetes daya terakhir?"
+    },
+    {
+      "id": "kamera",
+      "text": "Aplikasi Kamera langsung berteriak meminta satu foto lagi dengan lampu kilat menyala, sementara aplikasi Chat menyerbu masuk membawa tiga ratus pesan grup yang belum dibaca!",
+      "say": "Aplikasi Kamera langsung berteriak meminta satu foto lagi dengan lampu kilat menyala, sementara aplikasi Cet menyerbu masuk membawa tiga ratus pesan grup yang belum dibaca!"
+    },
+    {
+      "id": "game",
+      "text": "Di pojok layar, aplikasi Game ikut berlutut memohon-mohon agar jangan ditutup dulu karena tinggal butuh satu ronde lagi untuk naik peringkat, sumpah!",
+      "say": "Di pojok layar, aplikasi Gem ikut berlutut memohon-mohon agar jangan ditutup dulu karena tinggal butuh satu ronde lagi untuk naik peringkat, sumpah!"
+    },
+    {
+      "id": "redup",
+      "text": "Namun sebelum pertengkaran itu selesai, kecerahan layar mendadak meredup gelap, suara kipas prosesor melambat, dan semua aplikasi seketika terdiam panik."
+    },
+    {
+      "id": "charger",
+      "text": "Untungnya tepat di detik terakhir terdengar bunyi Klik saat pahlawan kabel Charger datang menancapkan aliran listrik, membuat sang baterai bangkit penuh energi!",
+      "say": "Untungnya tepat di detik terakhir terdengar bunyi Klik saat pahlawan kabel Carjer datang menancapkan aliran listrik, membuat sang baterai bangkit penuh energi!"
+    },
+    {
+      "id": "akhir",
+      "text": "Agar ponselmu tidak sering pingsan di jalan, ingat dua langkah penyelamatan ini: segera redupkan layar dan nyalakan fitur mode hemat daya sejak baterai dua puluh persen."
+    }
+  ]
+}

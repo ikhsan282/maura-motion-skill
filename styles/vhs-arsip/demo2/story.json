@@ -1,0 +1,43 @@
+{
+  "title": "Piringan Emas Voyager 1977 — Kaset Pesan Bumi yang Mengembara di Luar Tata Surya",
+  "slug": "38_vhs-arsip-demo2",
+  "style": "vhs-arsip",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pada tahun sembilan belas tujuh puluh tujuh, umat manusia meluncurkan dua wahana antariksa bernama Voyager sambil menempelkan sekeping piringan hitam berlapis emas di lambungnya."
+    },
+    {
+      "id": "piringan",
+      "text": "Piringan bernama Golden Record itu dirancang oleh tim yang dipimpin astronom Carl Sagan sebagai kapsul waktu bagi siapa pun yang mungkin menemukannya di lautan antarbintang."
+    },
+    {
+      "id": "diagram",
+      "text": "Di sampul aluminiumnya terukir petunjuk cara memutar piringan beserta peta lokasi Matahari yang dihitung menggunakan empat belas bintang pulsar sebagai kompas kosmik."
+    },
+    {
+      "id": "indonesia",
+      "text": "Di antara sapaan lima puluh lima bahasa serta musik dunia, ikut terekam ucapan Selamat Malam dalam Bahasa Indonesia dan alunan gamelan Jawa berjudul Puspawarna."
+    },
+    {
+      "id": "sagan",
+      "text": "Selain musik, alur piringan ini menyimpan seratus lima belas foto kehidupan Bumi, suara hujan, detak jantung manusia, hingga pesan perdamaian lintas bangsa."
+    },
+    {
+      "id": "antariksa",
+      "text": "Kini Voyager telah menembus jarak lebih dari dua puluh empat miliar kilometer di ruang antarbintang, membawa kaset kenangan Bumi yang akan bertahan hingga satu miliar tahun ke depan."
+    }
+  ]
+}
+

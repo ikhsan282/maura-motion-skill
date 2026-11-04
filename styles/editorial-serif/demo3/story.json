@@ -1,0 +1,50 @@
+{
+  "title": "Anatomi Secangkir Kopi Nusantara — Mengapa Tanah Gunung Berapi Melahirkan Rasa Terbaik?",
+  "slug": "35_editorial-serif-demo3",
+  "style": "editorial-serif",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.06,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "l1",
+      "text": "Saat kamu menyesap secangkir kopi pagi ini, pernahkah kamu bertanya mengapa rasa kopi Gayo, Toraja, dan Flores begitu berbeda?"
+    },
+    {
+      "id": "l2",
+      "text": "Jawabannya tersembunyi di bawah kaki kita, yaitu sabuk cincin api gunung berapi yang membentang dari Sumatra hingga Nusa Tenggara."
+    },
+    {
+      "id": "l3",
+      "text": "Abu vulkanik purba memperkaya tanah dataran tinggi dengan mineral kalium, fosfor, dan magnesium yang menjadi nutrisi utama pohon kopi Arabika."
+    },
+    {
+      "id": "l4",
+      "text": "Di ketinggian lebih dari seribu dua ratus meter di atas permukaan laut, suhu udara yang dingin memperlambat pematangan buah ceri kopi."
+    },
+    {
+      "id": "l5",
+      "text": "Proses pematangan yang lambat ini memberi waktu bagi biji kopi untuk mengakumulasi gula alami dan asam organik yang jauh lebih kompleks."
+    },
+    {
+      "id": "l6",
+      "text": "Selain faktor tanah, petani Nusantara mengembangkan teknik pascapanen unik bernama giling basah yang mengupas kulit tanduk saat biji masih lembap."
+    },
+    {
+      "id": "l7",
+      "text": "Metode giling basah inilah yang menciptakan karakter rasa kopi Indonesia yang terkenal di dunia: berbadan tebal, rendah asam, dengan aroma rempah dan cokelat tanah."
+    },
+    {
+      "id": "l8",
+      "text": "Setiap tegukan kopi Nusantara sesungguhnya adalah sari pati dari tanah gunung api, kabut pegunungan, dan keahlian tangan petani lintas generasi."
+    }
+  ]
+}

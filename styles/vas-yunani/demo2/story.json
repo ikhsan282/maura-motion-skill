@@ -1,0 +1,44 @@
+{
+  "title": "Sayap Lilin Icarus & Labirin Daedalus — Peringatan Abadi tentang Kesombongan di Langit Kreta",
+  "slug": "42_vas-yunani_demo2",
+  "style": "vas-yunani",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.06,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tribal",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di atas pecahan keramik Yunani kuno, terlukis kisah tragis seorang pemuda bersayap yang jatuh dari langit—sebuah legenda tentang batas tipis antara kejeniusan teknologi dan kesombongan manusia.",
+      "pause": 0.35
+    },
+    {
+      "id": "labirin",
+      "text": "Semua bermula di Pulau Kreta, ketika sang arsitek legendaris Daedalus dan putranya, Icarus, dikurung oleh Raja Minos di sebuah menara tinggi tepat di atas Labirin Minotaur yang ia rancang sendiri."
+    },
+    {
+      "id": "sayap",
+      "text": "Karena seluruh jalur laut dijaga ketat oleh armada kapal Kreta, Daedalus mengumpulkan ratusan helai bulu burung yang rontok, mengikatnya dengan benang linen, lalu merekatkannya memakai lilin lebah."
+    },
+    {
+      "id": "pesan",
+      "text": "Sebelum melompat ke udara, sang ayah memberi satu peringatan tegas: terbanglah di jalur tengah, jangan terlalu rendah agar bulu tidak berat oleh buih laut, dan jangan terlalu tinggi mendekati matahari."
+    },
+    {
+      "id": "matahari",
+      "text": "Namun mabuk oleh kebebasan dan rasa kagum saat melayang menembus awan, Icarus melupakan nasihat ayahnya dan terus mengepakkan sayap menuju teriknya kereta matahari Helios hingga lilin lebahnya meleleh."
+    },
+    {
+      "id": "makna",
+      "text": "Bulu-bulu sayapnya terlepas satu demi satu di atas Laut Ikaria—mengingatkan kita bahwa setiap penemuan besar selalu menuntut kerendahan hati serta kendali diri dari penggunanya."
+    }
+  ]
+}
+

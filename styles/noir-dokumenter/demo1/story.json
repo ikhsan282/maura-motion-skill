@@ -1,0 +1,38 @@
+{
+  "title": "Krakatau 1883: Suara Paling Keras dalam Sejarah — Berkas Bencana yang Mengguncang Dunia",
+  "slug": "37_noir-dokumenter-demo1",
+  "style": "noir-dokumenter",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "noir",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pada pagi hari dua puluh tujuh Agustus delapan belas delapan puluh tiga, pulau gunung api Krakatau di Selat Sunda meledak dengan suara paling keras dalam sejarah manusia hingga terdengar sampai 4.800 kilometer jauhnya."
+    },
+    {
+      "id": "meriam",
+      "text": "Para penjaga pantai di Pulau Rodrigues di seberang Samudra Hindia bahkan mengira suara menggelegar itu adalah tembakan meriam dari kapal perang yang sedang meminta pertolongan."
+    },
+    {
+      "id": "bumi",
+      "text": "Hempasan gelombang kejut atmosfernya begitu dahsyat hingga merobek gendang telinga pelaut dan terekam barograf mengitari bumi sebanyak tujuh kali berturut-turut selama lima hari."
+    },
+    {
+      "id": "korban",
+      "text": "Runtuhnya kaldera gunung ke dasar laut memicu dinding tsunami setinggi empat puluh meter yang menyapu pesisir Banten serta Lampung dan menelan 36.000 jiwa lebih."
+    },
+    {
+      "id": "aktif",
+      "text": "Namun berkas bencana ini belum ditutup selamanya, sebab dari kawah bawah laut yang sama lahir gunung baru bernama Anak Krakatau yang statusnya masih aktif hingga hari ini."
+    }
+  ]
+}

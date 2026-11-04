@@ -1,7 +1,7 @@
 // Maura Motion style kit: NEO-BRUTALIST BENTO.
 // A bento grid of saturated flat tiles (lime, coral, cobalt, yellow, lavender) with thick black outlines and hard
 // offset shadows, diagonal hatching that scrolls, pill labels, chunky numbers that roll, bars that fill, and a
-// cup character. Motion: tiles snap in with hard spring overshoot and reflow between layouts; punchy, a bit jittery.
+// cup/ticket/box character. Motion: tiles snap in with hard spring overshoot and reflow between layouts; punchy, a bit jittery.
 import { clamp, lerp, ease, hrand, TAU } from '/engine/lib/core.js';
 import { makeCanvas, cached, roundRect } from '/engine/lib/draw.js';
 
@@ -63,6 +63,7 @@ export function tile(ctx, R, { fill = PAL.white, r = 26, t = 0, hatchIt = false,
   roundRect(ctx, x, y, w, h, r); ctx.fillStyle = fill; ctx.fill();
   if (hatchIt) hatch(ctx, x, y, w, h, { t, r, color: hatchColor || 'rgba(17,17,17,0.18)' });
   roundRect(ctx, x, y, w, h, r); ctx.lineWidth = LINE; ctx.strokeStyle = PAL.ink; ctx.stroke();
+  ctx.restore();
   return true;
 }
 /** Run fn inside the tile's pop transform + clip (content moves and scales with the tile). */
@@ -116,23 +117,24 @@ export const ICON = {
   bolt(ctx, x, y, s, fill = PAL.yellow) { ib(ctx, x, y, s); ctx.beginPath(); ctx.moveTo(13, 2); ctx.lineTo(5, 13); ctx.lineTo(11, 13); ctx.lineTo(10, 22); ctx.lineTo(19, 10); ctx.lineTo(13, 10); ctx.closePath(); ctx.fillStyle = fill; ctx.fill(); ctx.stroke(); ctx.restore(); },
   coins(ctx, x, y, s, fill = PAL.yellow) { ib(ctx, x, y, s); for (const yy of [17, 13, 9]) { ctx.beginPath(); ctx.ellipse(12, yy, 8, 3.2, 0, 0, TAU); ctx.fillStyle = fill; ctx.fill(); ctx.stroke(); } ctx.restore(); },
   leaf(ctx, x, y, s, fill = PAL.lime) { ib(ctx, x, y, s); ctx.beginPath(); ctx.moveTo(4, 20); ctx.bezierCurveTo(4, 8, 12, 3, 21, 3); ctx.bezierCurveTo(21, 13, 15, 20, 4, 20); ctx.fillStyle = fill; ctx.fill(); ctx.stroke(); ctx.beginPath(); ctx.moveTo(4, 20); ctx.lineTo(15, 9); ctx.stroke(); ctx.restore(); },
+  ticket(ctx, x, y, s, fill = PAL.yellow) { ib(ctx, x, y, s); ctx.beginPath(); ctx.moveTo(3, 6); ctx.lineTo(21, 6); ctx.lineTo(21, 10); ctx.arc(21, 12, 2.2, -1.57, 1.57, true); ctx.lineTo(21, 18); ctx.lineTo(3, 18); ctx.lineTo(3, 14); ctx.arc(3, 12, 2.2, 1.57, -1.57, true); ctx.closePath(); ctx.fillStyle = fill; ctx.fill(); ctx.stroke(); ctx.beginPath(); ctx.setLineDash([2, 2]); ctx.moveTo(9, 7); ctx.lineTo(9, 17); ctx.stroke(); ctx.setLineDash([]); ctx.restore(); },
+  mic(ctx, x, y, s, fill = PAL.coral) { ib(ctx, x, y, s); ctx.beginPath(); ctx.arc(12, 7.5, 4.2, 0, TAU); ctx.fillStyle = fill; ctx.fill(); ctx.stroke(); ctx.beginPath(); ctx.moveTo(9, 11); ctx.lineTo(15, 11); ctx.lineTo(13.5, 20); ctx.lineTo(10.5, 20); ctx.closePath(); ctx.fillStyle = PAL.white; ctx.fill(); ctx.stroke(); ctx.restore(); },
+  box(ctx, x, y, s, fill = PAL.milk) { ib(ctx, x, y, s); ctx.beginPath(); ctx.moveTo(12, 3); ctx.lineTo(21, 7.5); ctx.lineTo(21, 16.5); ctx.lineTo(12, 21); ctx.lineTo(3, 16.5); ctx.lineTo(3, 7.5); ctx.closePath(); ctx.fillStyle = fill; ctx.fill(); ctx.stroke(); ctx.beginPath(); ctx.moveTo(3, 7.5); ctx.lineTo(12, 12); ctx.lineTo(21, 7.5); ctx.moveTo(12, 12); ctx.lineTo(12, 21); ctx.stroke(); ctx.restore(); },
+  truck(ctx, x, y, s, fill = PAL.lime) { ib(ctx, x, y, s); ctx.fillStyle = fill; ctx.fillRect(2, 6, 12, 10); ctx.strokeRect(2, 6, 12, 10); ctx.beginPath(); ctx.moveTo(14, 9); ctx.lineTo(19, 9); ctx.lineTo(22, 13); ctx.lineTo(22, 16); ctx.lineTo(14, 16); ctx.closePath(); ctx.fillStyle = PAL.white; ctx.fill(); ctx.stroke(); for (const cx of [6.5, 18]) { ctx.beginPath(); ctx.arc(cx, 17, 2.6, 0, TAU); ctx.fillStyle = PAL.ink; ctx.fill(); ctx.beginPath(); ctx.arc(cx, 17, 1.1, 0, TAU); ctx.fillStyle = PAL.white; ctx.fill(); } ctx.restore(); },
 };
 
-// ---------------------------------------------------------------- the cup character
+// ---------------------------------------------------------------- characters
 /** Iced coffee cup with a face. mood: 'happy' | 'shock' | 'sad'. look -1..1 eyes. Bottom-centre at x,y. */
 export function cupGuy(ctx, x, y, s, { t = 0, mood = 'happy', squash = 0, fill = 0.85, look = 0, wave = 0 } = {}) {
   const bob = Math.sin(t * 5) * 6, sq = 1 + squash * 0.12;
   ctx.save(); ctx.translate(x, y); ctx.scale(s * sq, s / sq); ctx.translate(0, bob * 0.3);
   const H = 300, Wt = 200, Wb = 150;
   const cupPath = () => { ctx.beginPath(); ctx.moveTo(-Wt / 2, -H); ctx.lineTo(Wt / 2, -H); ctx.lineTo(Wb / 2, 0); ctx.lineTo(-Wb / 2, 0); ctx.closePath(); };
-  // shadow
   ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.ellipse(8, 6, 92, 14, 0, 0, TAU); ctx.fill();
-  // arms
   ctx.lineWidth = 9; ctx.lineCap = 'round'; ctx.strokeStyle = PAL.ink;
   ctx.beginPath(); ctx.moveTo(-88, -150); ctx.quadraticCurveTo(-140, -120, -132, -70); ctx.stroke();
   const wa = Math.sin(t * 9) * 0.5 * wave;
   ctx.beginPath(); ctx.moveTo(88, -150); ctx.quadraticCurveTo(140 + wa * 20, -190 - wave * 30, 128 + wa * 30, -230 - wave * 40); ctx.stroke();
-  // body
   cupPath(); ctx.fillStyle = 'rgba(255,255,255,0.9)'; ctx.fill();
   ctx.save(); cupPath(); ctx.clip();
   const lvl = -H * fill;
@@ -141,11 +143,9 @@ export function cupGuy(ctx, x, y, s, { t = 0, mood = 'happy', squash = 0, fill =
   ctx.fillStyle = 'rgba(255,255,255,0.75)'; for (let i = 0; i < 4; i++) { const ix = -50 + i * 32, iy = lvl + 30 + (i % 2) * 40; ctx.save(); ctx.translate(ix, iy); ctx.rotate(0.3 * i); ctx.fillRect(-16, -16, 32, 32); ctx.strokeStyle = 'rgba(17,17,17,0.35)'; ctx.lineWidth = 3; ctx.strokeRect(-16, -16, 32, 32); ctx.restore(); }
   ctx.restore();
   cupPath(); ctx.lineWidth = LINE * 1.2; ctx.strokeStyle = PAL.ink; ctx.lineJoin = 'round'; ctx.stroke();
-  // lid + straw
   ctx.fillStyle = PAL.white; ctx.beginPath(); ctx.ellipse(0, -H, Wt / 2 + 10, 34, 0, Math.PI, 0); ctx.closePath(); ctx.fill(); ctx.stroke();
-  roundRect(ctx, -Wt / 2 - 14, -H - 8, Wt + 28, 22, 10); ctx.fill(); ctx.stroke();
+  roundRect(ctx, -Wt / 2 - 14, -H - 8, Wt + 22, 22, 10); ctx.fill(); ctx.stroke();
   ctx.save(); ctx.translate(30, -H - 20); ctx.rotate(0.25); roundRect(ctx, -11, -150, 22, 160, 8); ctx.fillStyle = PAL.coral; ctx.fill(); ctx.stroke(); ctx.restore();
-  // label band + face
   roundRect(ctx, -70, -205, 140, 120, 18); ctx.fillStyle = PAL.white; ctx.fill(); ctx.lineWidth = 4; ctx.stroke();
   const blink = (Math.floor(t * 10) % 37) === 0 ? 0.15 : 1;
   ctx.fillStyle = PAL.ink;
@@ -158,5 +158,6 @@ export function cupGuy(ctx, x, y, s, { t = 0, mood = 'happy', squash = 0, fill =
   if (mood !== 'shock') { ctx.fillStyle = 'rgba(255,90,78,0.45)'; ctx.beginPath(); ctx.arc(-48, -138, 10, 0, TAU); ctx.arc(48, -138, 10, 0, TAU); ctx.fill(); }
   ctx.restore();
 }
+
 /** Tiny jitter for "punchy" entrances (stepped, not smooth). */
 export const jit = (t, t0, amp = 6) => { const d = t - t0; if (d < 0 || d > 0.25) return [0, 0]; const f = Math.floor(d * 24); return [(hrand(f, 3) - 0.5) * amp, (hrand(f, 7) - 0.5) * amp]; };

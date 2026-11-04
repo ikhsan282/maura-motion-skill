@@ -1,0 +1,43 @@
+{
+  "title": "Letusan Tambora 1815 — Tahun Ketika Dunia Kehilangan Musim Panas",
+  "slug": "37_noir-dokumenter-demo2",
+  "style": "noir-dokumenter",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "noir",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pada bulan Juni tahun delapan belas enam belas, salju tebal tiba-tiba turun di Amerika dan Eropa di tengah musim panas, namun tak seorang pun tahu bahwa penyebabnya berasal dari sebuah pulau di Nusantara."
+    },
+    {
+      "id": "abu",
+      "text": "Setahun sebelumnya, pada sepuluh April delapan belas lima belas, Gunung Tambora di Pulau Sumbawa meledak hebat dan memangkas tinggi puncaknya dari empat ribu tiga ratus meter menjadi tinggal separuhnya."
+    },
+    {
+      "id": "eropa",
+      "text": "Seratus lima puluh kilometer kubik abu dan gas belerang terlontar ke lapisan stratosfer, menyelimuti bola dunia dengan tirai aerosol yang memantulkan cahaya matahari kembali ke angkasa."
+    },
+    {
+      "id": "lukisan",
+      "text": "Akibatnya suhu bumi anjlok drastis, panen gandum gagal total di belahan bumi utara, dan di tengah langit gelap Swiss itulah sastrawan Mary Shelley menulis kisah legendaris Frankenstein."
+    },
+    {
+      "id": "korban",
+      "text": "Di tanah air sendiri, sapuan awan panas, tsunami, dan kelaparan panjang menghapus tiga kerajaan di Sumbawa sekaligus serta merenggut lebih dari tujuh puluh satu ribu jiwa."
+    },
+    {
+      "id": "arsip",
+      "text": "Catatan geologi menetapkan Tambora 1815 sebagai letusan gunung berapi terbesar dalam sepuluh ribu tahun terakhir yang pernah mengubah jalannya sejarah iklim manusia."
+    }
+  ]
+}
+

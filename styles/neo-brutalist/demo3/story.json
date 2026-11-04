@@ -1,0 +1,45 @@
+{
+  "title": "Rahasia di Balik Label Gratis Ongkir — Siapa yang Sebenarnya Membayar Paketmu?",
+  "slug": "41_neo-brutalist_demo3",
+  "style": "neo-brutalist",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.1,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Saat kamu checkout belanjaan seharga seratus ribu rupiah di marketplace dengan klaim voucher Gratis Ongkir Rp0, pernahkah kamu berpikir siapa yang sebenarnya membayar bensin dan tenaga kurir pengantar paketmu?",
+      "say": "Saat kamu checkout belanjaan seharga seratus ribu rupiah di marketplace dengan klaim voucher Gratis Ongkir nol rupiah, pernahkah kamu berpikir siapa yang sebenarnya membayar bensin dan tenaga kurir pengantar paketmu?",
+      "pause": 0.35
+    },
+    {
+      "id": "potongan",
+      "text": "Di balik layar, ongkos kirim tidak pernah hilang begitu saja. Penjual UMKM yang mengaktifkan label Gratis Ongkir dikenai potongan biaya administrasi dan layanan ekstra sekitar delapan hingga dua belas persen dari harga barang.",
+      "say": "Di balik layar, ongkos kirim tidak pernah hilang begitu saja. Penjual U M K M yang mengaktifkan label Gratis Ongkir dikenai potongan biaya administrasi dan layanan ekstra sekitar delapan hingga dua belas persen dari harga barang."
+    },
+    {
+      "id": "rincian",
+      "text": "Mari kita bedah transaksi seratus ribu rupiahmu: sekitar enam puluh lima ribu rupiah adalah modal produksi barang, tiga ribu untuk kardus dan bubble wrap, sepuluh ribu untuk komisi platform, dan lima ribu untuk biaya iklan toko.",
+      "say": "Mari kita bedah transaksi seratus ribu rupiahmu: sekitar enam puluh lima ribu rupiah adalah modal produksi barang, tiga ribu untuk kardus dan bubble wrap, sepuluh ribu untuk komisi platform, dan lima ribu untuk biaya iklan toko."
+    },
+    {
+      "id": "kurir",
+      "text": "Komisi itulah yang digabungkan platform bersama subsidi promosi untuk membayar perusahaan logistik, sementara kurir lapangan menerima insentif sekitar dua ribu hingga tiga ribu rupiah per paket yang berhasil diantar.",
+      "say": "Komisi itulah yang digabungkan platform bersama subsidi promosi untuk membayar perusahaan logistik, sementara kurir lapangan menerima insentif sekitar dua ribu hingga tiga ribu rupiah per paket yang berhasil diantar."
+    },
+    {
+      "id": "akhir",
+      "text": "Setelah semua potongan itu, penjual lokal rata-rata menyisakan margin bersih sekitar tujuh belas persen—jadi setiap kali paket tiba dengan selamat, ada kerja keras penjual dan kurir di balik angka nol rupiahmu.",
+      "say": "Setelah semua potongan itu, penjual lokal rata-rata menyisakan margin bersih sekitar tujuh belas persen, jadi setiap kali paket tiba dengan selamat, ada kerja keras penjual dan kurir di balik angka nol rupiahmu."
+    }
+  ]
+}
+

@@ -1,0 +1,43 @@
+{
+  "title": "Misteri Kapal SS Ourang Medan 1947 — Pesan SOS Terakhir dari Selat Malaka",
+  "slug": "37_noir-dokumenter-demo3",
+  "style": "noir-dokumenter",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.08,
+  "music": {
+    "preset": "noir",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.0,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Dalam arsip maritim Nusantara, terdapat satu teka-teki kapal hantu di perairan Selat Malaka yang pesannya masih membuat merinding para operator radio hingga hari ini."
+    },
+    {
+      "id": "sos",
+      "text": "Menurut laporan tahun sembilan belas empat puluh tujuh, sejumlah stasiun pendengar menangkap sinyal sandi Morse darurat dari kapal dagang berbendera Belanda bernama SS Ourang Medan."
+    },
+    {
+      "id": "peta",
+      "text": "Isi pesan pertamanya berbunyi bahwa seluruh perwira termasuk kapten telah tewas di ruang peta dan anjungan, lalu disusul dua kata terakhir yang mengerikan: aku mati."
+    },
+    {
+      "id": "dek",
+      "text": "Ketika kapal Amerika Silver Star melacak koordinat sinyal itu dan naik ke atas geladak, mereka dikisahkan menemukan seluruh awak kapal telah kaku tanpa satu pun luka fisik di tubuhnya."
+    },
+    {
+      "id": "ledakan",
+      "text": "Belum sempat kapal itu ditarik menuju pelabuhan terdekat, asap tebal tiba-tiba membubung dari ruang palka nomor empat disusul ledakan dahsyat yang menenggelamkan Ourang Medan ke dasar laut."
+    },
+    {
+      "id": "rahasia",
+      "text": "Hingga kini para sejarawan masih memperdebatkan apakah kapal itu mengangkut gas saraf rahasia peninggalan perang atau kebocoran asam nitrat, menjadikannya misteri laut terbesar yang belum terpecahkan."
+    }
+  ]
+}
+
