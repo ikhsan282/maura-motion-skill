@@ -1,0 +1,53 @@
+{
+  "title": "Keajaiban Candi Borobudur — Dua Juta Balok Batu Tanpa Semen dalam Buku Pop-up",
+  "style": "buku-pop-up",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": {
+    "mood": "reflective",
+    "gain": 0.14
+  },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.45,
+      "text": "Bagaimana leluhur Nusantara menyusun lebih dari dua juta balok batu vulkanik menjadi candi Buddha terbesar di dunia tanpa setetes semen pun?"
+    },
+    {
+      "id": "bukit",
+      "pauseAfter": 0.45,
+      "text": "Dibangun pada abad kedelapan oleh Wangsa Syailendra di dataran Kedu, Candi Borobudur dirancang membungkus sebuah bukit alami dengan presisi arsitektur luar biasa."
+    },
+    {
+      "id": "kunci",
+      "pauseAfter": 0.5,
+      "text": "Rahasianya terletak pada teknik sambungan batu ekor burung yang saling mengunci rapat, lengkap dengan seratus saluran air berukir makara agar candi tidak longsor diterjang hujan tropis."
+    },
+    {
+      "id": "relief",
+      "pauseAfter": 0.5,
+      "text": "Di sepanjang lorong bawah pada tingkatan Kamadhatu dan Rupadhatu, para pematung memahat dua ribu enam ratus tujuh puluh dua panel relief yang bercerita bagaikan buku raksasa dari batu."
+    },
+    {
+      "id": "mandala",
+      "pauseAfter": 0.45,
+      "text": "Jika dilihat dari angkasa, sepuluh pelataran bertingkat ini membentuk mandala kosmik suci yang menuntun peziarah menuju pencerahan batin."
+    },
+    {
+      "id": "arupadhatu",
+      "pauseAfter": 0.5,
+      "text": "Memasuki pelataran bundar Arupadhatu di puncak, dinding ukiran menghilang, berganti tujuh puluh dua stupa berlubang terawang yang mengelilingi satu stupa induk mahabesar."
+    },
+    {
+      "id": "abu",
+      "pauseAfter": 0.45,
+      "text": "Sempat terkubur abu vulkanik Gunung Merapi dan rimbunnya hutan belantara selama berabad-abad, mahakarya ini akhirnya ditemukan kembali dan dipugar dengan penuh ketekunan."
+    },
+    {
+      "id": "warisan",
+      "pauseAfter": 0.8,
+      "text": "Kini Candi Borobudur berdiri megah menyongsong mentari pagi sebagai bukti abadi kejeniusan teknik, seni, dan spiritualitas bangsa Indonesia."
+    }
+  ]
+}

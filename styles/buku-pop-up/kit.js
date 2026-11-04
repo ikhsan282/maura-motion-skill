@@ -296,7 +296,7 @@ export { AMshade as shade };
  * canvas and then stood up in the book. who: 'putri' | 'bandung' | 'jin' | 'warga' | 'ayam'.
  * o: {arm (rad), arm2, bob, stone (0..1 greys it out), face (1/-1), t}
  */
-const FIG = { putri: [260, 560], bandung: [300, 600], jin: [260, 460], warga: [300, 470], ayam: [240, 240] };
+const FIG = { putri: [260, 560], bandung: [300, 600], jin: [260, 460], warga: [300, 470], ayam: [240, 240], buto: [340, 620], pematung: [280, 520] };
 export function figure(who, o = {}) {
   const [w, h] = FIG[who];
   const c = cached('pu-fig-tmp:' + who + (o.slot || 0), () => makeCanvas(w + 16, h + 16));
@@ -411,6 +411,41 @@ const DRAW = {
     headP(g, cx + 2, h * 0.16, 40, { bun: true });
     g.fillStyle = '#d7c39a'; g.fillRect(cx + 70, h * 0.05 + up, 14, h * 0.78); // alu
     limb(g, cx + 6, h * 0.3, -1.2 - up / 300, h * 0.24, 22, '#7e5aa0');
+  },
+  buto: (g, w, h, o) => {
+    const arm = o.arm ?? 0.5, sink = clamp(o.sink || 0), cx = w * 0.48;
+    g.translate(0, (o.bob || 0) + sink * h * 0.45);
+    const grn = '#3b6e38', grnDk = '#264a24', grnHi = '#5d9c57';
+    limb(g, cx - 18, h * 0.32, -(o.arm2 ?? 0.3), h * 0.28, 36, grnDk, grnDk);
+    g.fillStyle = grnDk; g.fillRect(cx - 42, h * 0.72, 32, h * 0.26); g.fillStyle = grn; g.fillRect(cx + 10, h * 0.72, 32, h * 0.26);
+    batikBand(g, cx - 72, h * 0.52, 144, h * 0.24, '#7a221c', '#f0c45a');
+    g.fillStyle = grn; g.beginPath(); g.ellipse(cx, h * 0.42, 74, 96, 0, 0, TAU); g.fill();
+    g.fillStyle = grnHi; g.beginPath(); g.ellipse(cx + 10, h * 0.44, 48, 62, 0, 0, TAU); g.fill();
+    g.fillStyle = PAL.gold; for (let i = -3; i <= 3; i++) { g.beginPath(); g.arc(cx + i * 16, h * 0.28 + (9 - i * i) * 1.4, 8, 0, TAU); g.fill(); }
+    g.fillStyle = grn; g.beginPath(); g.ellipse(cx + 6, h * 0.16, 56, 54, 0, 0, TAU); g.fill();
+    g.fillStyle = PAL.hair; g.beginPath(); g.ellipse(cx - 12, h * 0.08, 56, 36, -0.2, Math.PI * 0.9, Math.PI * 2.1); g.fill();
+    g.fillStyle = PAL.gold; g.fillRect(cx - 48, h * 0.09, 96, 10);
+    g.fillStyle = '#fff5d6'; g.beginPath(); g.arc(cx + 28, h * 0.14, 14, 0, TAU); g.fill();
+    g.fillStyle = PAL.red; g.beginPath(); g.arc(cx + 31, h * 0.14, 7, 0, TAU); g.fill();
+    g.fillStyle = '#4a1814'; g.fillRect(cx + 12, h * 0.21, 38, 16);
+    g.fillStyle = '#fbf5e6'; g.beginPath(); g.moveTo(cx + 16, h * 0.21); g.lineTo(cx + 22, h * 0.26); g.lineTo(cx + 28, h * 0.21); g.moveTo(cx + 36, h * 0.27); g.lineTo(cx + 42, h * 0.19); g.lineTo(cx + 48, h * 0.27); g.fill();
+    limb(g, cx + 22, h * 0.32, -arm, h * 0.28, 38, grn, grn);
+  },
+  pematung: (g, w, h, o) => {
+    const ch = o.chisel ?? 0, cx = w * 0.45, hit = Math.abs(Math.sin(ch * Math.PI));
+    g.translate(0, o.bob || 0);
+    limb(g, cx - 8, h * 0.32, -0.8, h * 0.24, 24, PAL.skinDk, PAL.skinDk);
+    g.fillStyle = PAL.skinDk; g.fillRect(cx - 26, h * 0.74, 20, h * 0.24); g.fillStyle = PAL.skin; g.fillRect(cx + 6, h * 0.74, 20, h * 0.24);
+    batikBand(g, cx - 48, h * 0.5, 96, h * 0.28, '#5a3a22', '#e0b46a');
+    g.fillStyle = PAL.skin; g.beginPath(); g.moveTo(cx - 42, h * 0.26); g.lineTo(cx + 42, h * 0.26); g.lineTo(cx + 34, h * 0.52); g.lineTo(cx - 36, h * 0.52); g.fill();
+    headP(g, cx + 4, h * 0.15, 42, {});
+    g.fillStyle = '#b8342b'; g.fillRect(cx - 38, h * 0.08, 82, 12);
+    const ang = -1.35 + hit * 0.65;
+    limb(g, cx + 12, h * 0.32, ang, h * 0.25, 26, PAL.skin);
+    g.save(); g.translate(cx + 12, h * 0.32); g.rotate(ang);
+    g.fillStyle = '#5a3a22'; g.fillRect(-6, h * 0.25, 12, 46);
+    g.fillStyle = '#8b7e74'; g.fillRect(-22, h * 0.25 + 36, 44, 24);
+    g.restore();
   },
   ayam: (g, w, h, o) => {
     const crow = o.crow || 0, cx = w * 0.45;

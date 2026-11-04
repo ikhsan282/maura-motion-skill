@@ -1,0 +1,35 @@
+{
+  "title": "Parang Rusak: Motif Larangan",
+  "style": "batik-hidup",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": { "mood": "reflective", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.5,
+      "text": "Tahukah kamu bahwa selembar kain batik ini dahulu memiliki motif sakral yang terlarang keras bagi rakyat biasa, dan hanya boleh dikenakan oleh raja serta keturunannya?"
+    },
+    {
+      "id": "asal",
+      "pauseAfter": 0.5,
+      "text": "Kisahnya berawal ketika Panembahan Senopati, pendiri Kerajaan Mataram, bersemedi di pesisir pantai selatan dan terilhami oleh gulungan ombak samudra yang tiada henti menghantam karang tajam."
+    },
+    {
+      "id": "makna",
+      "pauseAfter": 0.5,
+      "text": "Setiap deretan lekuk parang yang saling bertautan secara diagonal ini melambangkan jalinan perjuangan hidup manusia yang tak pernah putus dan pantang menyerah melawan keadaan."
+    },
+    {
+      "id": "larang",
+      "pauseAfter": 0.5,
+      "text": "Pada abad kedelapan belas, keraton secara resmi menetapkan aturan adat bahwa motif Parang Rusak adalah busana larangan khusus untuk raja dan keluarga inti istana."
+    },
+    {
+      "id": "kini",
+      "pauseAfter": 0.8,
+      "text": "Namun kini, di luar lingkungan keraton, siapa pun bebas memakainya sebagai warisan budaya Nusantara yang mengingatkan kita untuk selalu teguh dan bijaksana."
+    }
+  ]
+}

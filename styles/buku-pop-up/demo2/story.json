@@ -1,0 +1,56 @@
+{
+  "title": "Timun Mas & Empat Bungkusan Ajaib — Buku Pop-up Petualangan Nusantara",
+  "style": "buku-pop-up",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": { "mood": "playful", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.45,
+      "text": "Bagaimana seorang gadis kecil berani mengalahkan raksasa hijau pemangsa manusia hanya dengan empat bungkusan kecil di tangannya?"
+    },
+    {
+      "id": "janji",
+      "pauseAfter": 0.45,
+      "text": "Semua bermula ketika Mbok Srini menemukan bayi mungil di dalam buah ketimun emas raksasa di ladangnya, lalu menamainya Timun Mas."
+    },
+    {
+      "id": "bekal",
+      "pauseAfter": 0.5,
+      "text": "Saat raksasa Buto Ijo datang menagih janji lama, sang ibu membekali putrinya dengan empat bungkusan ajaib: biji mentimun, jarum bambu, garam, dan terasi."
+    },
+    {
+      "id": "biji",
+      "pauseAfter": 0.45,
+      "text": "Ketika langkah kaki raksasa mengguncang tanah, Timun Mas melempar bungkusan pertama berisi biji mentimun yang seketika tumbuh melilit tubuh Buto Ijo!"
+    },
+    {
+      "id": "jarum",
+      "pauseAfter": 0.5,
+      "text": "Sang raksasa mengamuk merobek sulur tanaman, namun lemparan jarum di bungkusan kedua langsung menjulang menjadi hutan bambu rapat yang tajam menghadang jalannya."
+    },
+    {
+      "id": "garam",
+      "pauseAfter": 0.5,
+      "text": "Dengan tubuh penuh goresan, Buto Ijo terus menerobos keluar hutan, hingga taburan garam dari bungkusan ketiga berubah menjadi samudra luas yang menghanyutkannya."
+    },
+    {
+      "id": "terasi",
+      "pauseAfter": 0.5,
+      "text": "Masih belum menyerah, raksasa itu berenang mencapai tepian, tepat saat Timun Mas melemparkan bungkusan terakhir berisi terasi udang ke tanah!"
+    },
+    {
+      "id": "lumpur",
+      "pauseAfter": 0.5,
+      "text": "Dalam sekejap, tanah terbelah menjadi kawah lumpur mendidih yang menenggelamkan Buto Ijo untuk selamanya."
+    },
+    {
+      "id": "moral",
+      "pauseAfter": 0.8,
+      "text": "Dongeng klasik Nusantara ini mengajarkan kita bahwa keberanian, kecerdikan, dan doa seorang ibu mampu mengalahkan rintangan sebesar apa pun."
+    }
+  ]
+}
+

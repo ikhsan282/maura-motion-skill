@@ -1,0 +1,35 @@
+{
+  "title": "Roro Jonggrang & Seribu Candi",
+  "style": "buku-pop-up",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": { "mood": "playful", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.5,
+      "text": "Bayangkan seribu candi batu megah berdiri menjulang tinggi hanya dalam satu malam saja! Kurang satu candi terakhir, dan sang putri jelita justru berubah menjadi patung batu abadi."
+    },
+    {
+      "id": "syarat",
+      "pauseAfter": 0.5,
+      "text": "Ketika kesatria sakti Bandung Bondowoso melamar dengan penuh kuasa, putri Roro Jonggrang tidak berani menolak secara langsung, melainkan mengajukan satu syarat yang terdengar mustahil bagi manusia biasa."
+    },
+    {
+      "id": "jin",
+      "pauseAfter": 0.5,
+      "text": "Dengan kesaktiannya, sang pangeran memanggil pasukan makhluk halus dari perut bumi untuk memahat dan menyusun batu demi batu. Jelang waktu subuh, seribu candi itu nyaris rampung sempurna!"
+    },
+    {
+      "id": "tipu",
+      "pauseAfter": 0.5,
+      "text": "Panik melihat keajaiban itu, sang putri memerintahkan gadis-gadis desa menumbuk lesung padi dan membakar jerami di ufuk timur. Ayam jantan berkokok nyaring, membuat para jin lari ketakutan karena mengira fajar telah tiba."
+    },
+    {
+      "id": "kutuk",
+      "pauseAfter": 0.8,
+      "text": "Menyadari tipu muslihat itu saat bangunan baru mencapai sembilan ratus sembilan puluh sembilan, pangeran murka dan mengutuk sang putri menjadi arca pelengkap di Candi Prambanan yang masih berdiri megah hingga hari ini."
+    }
+  ]
+}

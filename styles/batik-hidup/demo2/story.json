@@ -1,0 +1,51 @@
+{
+  "title": "Filosofi Batik Kawung — Dari Empat Belahan Buah Aren hingga Simbol Kesucian Hati",
+  "style": "batik-hidup",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": { "mood": "reflective", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.45,
+      "text": "Pernahkah kamu memperhatikan motif bulatan geometris yang tersusun rapi bagaikan kelopak bunga pada kain batik klasik Jawa ini?"
+    },
+    {
+      "id": "asal",
+      "pauseAfter": 0.45,
+      "text": "Inilah Batik Kawung, salah satu motif tertua di tanah Jawa yang sudah terpahat indah pada arca-arca candi batu sejak abad ketiga belas."
+    },
+    {
+      "id": "aren",
+      "pauseAfter": 0.5,
+      "text": "Bentuk empat lonjong yang mengelilingi satu titik pusat ini terinspirasi dari buah pohon aren atau kolang-kaling yang dibelah empat secara simetris."
+    },
+    {
+      "id": "pohon",
+      "pauseAfter": 0.45,
+      "text": "Bagi masyarakat Jawa kuno, pohon aren adalah tumbuhan mulia karena seluruh bagiannya, mulai dari daun, batang, nira, hingga buahnya yang putih bersih, bermanfaat bagi sesama."
+    },
+    {
+      "id": "kosmos",
+      "pauseAfter": 0.5,
+      "text": "Dalam falsafah keraton, empat penjuru bulatan Kawung melambangkan persatuan empat arah mata angin dan empat sumber energi alam yang berporos pada satu pusat kesadaran."
+    },
+    {
+      "id": "hati",
+      "pauseAfter": 0.5,
+      "text": "Ketika malam tiba dan canting menorehkan malam panas di atas kain mori, motif Kawung menjadi doa agar pemakainya mampu mengendalikan hawa nafsu dan menjaga hati tetap suci."
+    },
+    {
+      "id": "abdi",
+      "pauseAfter": 0.45,
+      "text": "Tak heran bila di lingkungan keraton, motif ini dikenakan oleh para bangsawan dan abdi dalem sebagai pengingat untuk mengabdi dengan tulus tanpa pamrih."
+    },
+    {
+      "id": "warisan",
+      "pauseAfter": 0.8,
+      "text": "Hingga hari ini, selembar Batik Kawung bukan sekadar kain berpola indah, melainkan pesan leluhur agar hidup kita selalu berguna bagi banyak orang."
+    }
+  ]
+}
+

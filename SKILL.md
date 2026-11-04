@@ -71,19 +71,19 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
 | 1 | **Anime** | anime | ✅ ([demo1](styles/anime/demo1/) · [demo2](styles/anime/demo2/) · [demo3](styles/anime/demo3/)) |
-| 2 | **Kartun 3D Sinematik** | kartun-3d-sinematik | ✅ ([styles/kartun-3d-sinematik](styles/kartun-3d-sinematik/)) |
-| 3 | **Lukis Pedesaan** | lukis-pedesaan | ✅ ([styles/lukis-pedesaan](styles/lukis-pedesaan/)) |
-| 4 | **Dunia Blok (Voxel)** | dunia-blok | ✅ ([styles/dunia-blok](styles/dunia-blok/)) |
+| 2 | **Kartun 3D Sinematik** | kartun-3d-sinematik | ✅ ([demo1](styles/kartun-3d-sinematik/demo1/) · [demo2](styles/kartun-3d-sinematik/demo2/) · [demo3](styles/kartun-3d-sinematik/demo3/)) |
+| 3 | **Lukis Pedesaan** | lukis-pedesaan | ✅ ([demo1](styles/lukis-pedesaan/demo1/) · [demo2](styles/lukis-pedesaan/demo2/) · [demo3](styles/lukis-pedesaan/demo3/)) |
+| 4 | **Dunia Blok (Voxel)** | dunia-blok | ✅ ([demo1](styles/dunia-blok/demo1/) · [demo2](styles/dunia-blok/demo2/) · [demo3](styles/dunia-blok/demo3/)) |
 | 5 | **Clay Stop Motion** | clay-stop-motion | ✅ ([demo1](styles/clay-stop-motion/demo1/) · [demo2](styles/clay-stop-motion/demo2/) · [demo3](styles/clay-stop-motion/demo3/)) |
-| 6 | **Boneka Rajut** | boneka-rajut | ✅ ([styles/boneka-rajut](styles/boneka-rajut/)) |
-| 7 | **Pixel Retro** | pixel-retro | ✅ ([styles/pixel-retro](styles/pixel-retro/)) |
-| 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([styles/kertas-guntingan](styles/kertas-guntingan/)) |
-| 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([styles/sketsa-pensil](styles/sketsa-pensil/)) |
-| 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([styles/kartun-jadul](styles/kartun-jadul/)) |
-| 11 | **Wayang Kulit** | wayang-kulit | ✅ ([styles/wayang-kulit](styles/wayang-kulit/)) |
+| 6 | **Boneka Rajut** | boneka-rajut | ✅ ([demo1](styles/boneka-rajut/demo1/) · [demo2](styles/boneka-rajut/demo2/) · [demo3](styles/boneka-rajut/demo3/)) |
+| 7 | **Pixel Retro** | pixel-retro | ✅ ([demo1](styles/pixel-retro/demo1/) · [demo2](styles/pixel-retro/demo2/) · [demo3](styles/pixel-retro/demo3/)) |
+| 8 | **Kertas Guntingan** | kertas-guntingan | ✅ ([demo1](styles/kertas-guntingan/demo1/) · [demo2](styles/kertas-guntingan/demo2/) · [demo3](styles/kertas-guntingan/demo3/)) |
+| 9 | **Sketsa Pensil** | sketsa-pensil | ✅ ([demo1](styles/sketsa-pensil/demo1/) · [demo2](styles/sketsa-pensil/demo2/) · [demo3](styles/sketsa-pensil/demo3/)) |
+| 10 | **Kartun Jadul (Rubber Hose)** | kartun-jadul | ✅ ([demo1](styles/kartun-jadul/demo1/) · [demo2](styles/kartun-jadul/demo2/) · [demo3](styles/kartun-jadul/demo3/)) |
+| 11 | **Wayang Kulit** | wayang-kulit | ✅ ([demo1](styles/wayang-kulit/demo1/) · [demo2](styles/wayang-kulit/demo2/) · [demo3](styles/wayang-kulit/demo3/)) |
 | 12 | **Low Poly** | low-poly | ✅ ([demo1](styles/low-poly/demo1/) · [demo2](styles/low-poly/demo2/) · [demo3](styles/low-poly/demo3/)) |
-| 13 | **Buku Pop-up** | buku-pop-up | ✅ ([styles/buku-pop-up](styles/buku-pop-up/)) |
-| 14 | **Batik Hidup** | batik-hidup | ✅ ([styles/batik-hidup](styles/batik-hidup/)) |
+| 13 | **Buku Pop-up** | buku-pop-up | ✅ ([demo1](styles/buku-pop-up/demo1/) · [demo2](styles/buku-pop-up/demo2/) · [demo3](styles/buku-pop-up/demo3/)) |
+| 14 | **Batik Hidup** | batik-hidup | ✅ ([demo1](styles/batik-hidup/demo1/) · [demo2](styles/batik-hidup/demo2/) · [demo3](styles/batik-hidup/demo3/)) |
 | 15 | **Wayang Golek** | wayang-golek | ❌ (belum diimplementasi) |
 | 16 | **Wayang Beber** | wayang-beber | ✅ ([styles/wayang-beber](styles/wayang-beber/)) |
 | 17 | **Lukisan Gua Purba** | lukisan-gua-purba | ❌ (belum diimplementasi) |

@@ -109,6 +109,26 @@ export function kawungTile(ground = PAL.indigo, line = PAL.cream, fill = PAL.ind
   });
 }
 /** MEGA MENDUNG cloud (Cirebon): concentric rounded cloud outlines in 7 graded blues. */
+export function megaTile(mode = 'dyed', ground = '#8c1f19', S = 280) {
+  return cached(`bt-mega-tile:${mode}:${ground}:${S}`, () => {
+    const c = makeCanvas(S, S), g = c.getContext('2d');
+    if (mode === 'dyed') { g.fillStyle = ground; g.fillRect(0, 0, S, S); }
+    const lobes = [[-72, 0, 42], [-24, -24, 48], [30, -18, 45], [72, 6, 36], [12, 18, 42], [-48, 24, 34]];
+    const pts = [[S * 0.5, S * 0.28], [0, S * 0.78], [S, S * 0.78]];
+    for (const [cx, cy] of pts) {
+      g.save(); g.translate(cx, cy);
+      PAL.mega.forEach((col, i) => {
+        const k = 1 - i * 0.13;
+        g.beginPath();
+        lobes.forEach(([lx, ly, r]) => { g.moveTo(lx * k + r * k, ly * k); g.arc(lx * k, ly * k, r * k, 0, TAU); });
+        if (mode === 'dyed') { g.fillStyle = col; g.fill(); g.strokeStyle = PAL.cream; g.lineWidth = 2; g.stroke(); }
+        else { g.strokeStyle = PAL.wax; g.lineWidth = 3; g.stroke(); }
+      });
+      g.restore();
+    }
+    return c;
+  });
+}
 export function megaMendung(ctx, x, y, s = 1, t = 0) {
   ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
   const lobes = [[-120, 0, 70], [-40, -40, 80], [50, -30, 75], [120, 10, 60], [20, 30, 70], [-80, 40, 55]];

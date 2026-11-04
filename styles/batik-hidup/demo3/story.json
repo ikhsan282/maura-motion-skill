@@ -1,0 +1,51 @@
+{
+  "title": "Batik Mega Mendung Cirebon — Tujuh Lapisan Awan Penyejuk Hati",
+  "style": "batik-hidup",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "maxDuration": 90,
+  "bgm": { "mood": "reflective", "gain": 0.14 },
+  "lines": [
+    {
+      "id": "hook",
+      "pauseAfter": 0.45,
+      "text": "Mengapa motif awan berlapis tujuh dari pesisir Cirebon ini selalu dilukis dengan gradasi warna biru yang begitu teduh di atas latar merah menyala?"
+    },
+    {
+      "id": "pelabuhan",
+      "pauseAfter": 0.45,
+      "text": "Jawabannya berakar pada abad keenam belas, ketika pelabuhan Muara Jati di Cirebon menjadi titik temu kapal-kapal dagang Nusantara dengan para perantau dari Tiongkok."
+    },
+    {
+      "id": "akulturasi",
+      "pauseAfter": 0.5,
+      "text": "Pernikahan Sunan Gunung Jati dengan Putri Ong Tien melahirkan perpaduan seni keramik awan Tiongkok dan tradisi canting batik pesisir yang terbuka serta berani."
+    },
+    {
+      "id": "lancip",
+      "pauseAfter": 0.45,
+      "text": "Berbeda dengan lukisan awan negeri tirai bambu yang membulat, perajin Trusmi Cirebon menarik garis canting yang tegas dan meruncing di ujungnya."
+    },
+    {
+      "id": "tujuh",
+      "pauseAfter": 0.5,
+      "text": "Setiap gumpalan awan wajib memiliki tujuh lapisan warna, dari biru langit yang terang hingga biru nila yang pekat, melambangkan tujuh lapisan langit dan tujuh lapis bumi."
+    },
+    {
+      "id": "teduh",
+      "pauseAfter": 0.5,
+      "text": "Secara filosofis, awan mendung adalah penahan terik matahari yang membawa hujan kehidupan, simbol seorang pemimpin yang mampu meredam amarah dan menyejukkan hati."
+    },
+    {
+      "id": "proses",
+      "pauseAfter": 0.45,
+      "text": "Untuk menghasilkan gradasi biru setenang itu, kain harus dicelup dan ditutup malam panas berulang kali dengan kesabaran tingkat tinggi."
+    },
+    {
+      "id": "kini",
+      "pauseAfter": 0.8,
+      "text": "Kini Batik Mega Mendung telah mendunia sebagai lambang harmoni budaya Nusantara yang mengajarkan ketenangan batin di tengah badai kehidupan."
+    }
+  ]
+}
+
