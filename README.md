@@ -98,7 +98,7 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 
 ## Gaya dengan demo tambahan
 
-Gaya No. 1 sampai 15 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
+Gaya No. 1 sampai 22 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
 
 | No | Gaya | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|---|---|
@@ -117,8 +117,15 @@ Gaya No. 1 sampai 15 kini sudah memiliki paket lengkap **3 demo per gaya**, deng
 | 13 | `buku-pop-up` | "Roro Jonggrang & Seribu Candi" (`demo1/`, 52 dtk) | "Timun Mas & Empat Bungkusan Ajaib" (`demo2/`, 55 dtk) | "Keajaiban Candi Borobudur" (`demo3/`, 55 dtk) |
 | 14 | `batik-hidup` | "Parang Rusak: Motif Larangan" (`demo1/`, 52 dtk) | "Filosofi Batik Kawung — Buah Aren" (`demo2/`, 55 dtk) | "Batik Mega Mendung Cirebon" (`demo3/`, 55 dtk) |
 | 15 | `wayang-golek` | "Hanoman Obong: Membakar Alengka" (`demo1/`, 55 dtk) | "Si Cepot & Falsafah Tawa Sunda" (`demo2/`, 55 dtk) | "Lahirnya Gatotkaca di Kawah Candradimuka" (`demo3/`, 55 dtk) |
+| 16 | `wayang-beber` | "Panji & Dewi Sekartaji" (`demo1/`, 52 dtk) | "Ande-Ande Lumut & Klenting Kuning" (`demo2/`, 55 dtk) | "Jaka Tarub & Selendang Nawangwulan" (`demo3/`, 55 dtk) |
+| 17 | `lukisan-gua-purba` | "Lukisan Gua Tertua di Sulawesi" (`demo1/`, 55 dtk) | "Perburuan Agung di Dinding Batu" (`demo2/`, 55 dtk) | "Rahasia Cap Tangan Merah" (`demo3/`, 55 dtk) |
+| 18 | `origami` | "Seribu Bangau Kertas" (`demo1/`, 52 dtk) | "Sains Lipatan Origami ke Antariksa" (`demo2/`, 55 dtk) | "Empat Musim di Desa Kertas Washi" (`demo3/`, 55 dtk) |
+| 19 | `kardus-bekas` | "Perjalanan Kardus Paketmu" (`demo1/`, 55 dtk) | "Rahasia Kekuatan Kardus Bergelombang" (`demo2/`, 55 dtk) | "Imajinasi Tanpa Batas Kardus Bekas" (`demo3/`, 55 dtk) |
+| 20 | `kolase-daun-bunga` | "Rafflesia arnoldii Bunga Raksasa" (`demo1/`, 55 dtk) | "Kantong Semar Pemangsa Serangga" (`demo2/`, 55 dtk) | "Seni Herbarium & Kolase Botani" (`demo3/`, 55 dtk) |
+| 21 | `kotak-cahaya-kertas` | "Legenda Malin Kundang" (`demo1/`, 52 dtk) | "Putri Mandalika & Tradisi Bau Nyale" (`demo2/`, 55 dtk) | "Seni Shadow Box & Teater Siluet" (`demo3/`, 55 dtk) |
+| 22 | `lukisan-minyak` | "Lukisan Balasan Raden Saleh" (`demo1/`, 52 dtk) | "Perjalanan Raden Saleh ke Eropa" (`demo2/`, 55 dtk) | "Jalan Raya Pos Anyer–Panarukan 1808" (`demo3/`, 55 dtk) |
 
-Selain gaya 1–15, sebagian gaya lain juga memiliki variasi demo tambahan:
+Selain gaya 1–22, sebagian gaya lain juga memiliki variasi demo tambahan:
 
 | Gaya | Demo |
 |---|---|
@@ -162,8 +169,8 @@ Selain gaya 1–15, sebagian gaya lain juga memiliki variasi demo tambahan:
 | 18 | **Origami** | origami | ✅ ([demo1](styles/origami/demo1/) · [demo2](styles/origami/demo2/) · [demo3](styles/origami/demo3/)) |
 | 19 | **Kardus Bekas** | kardus-bekas | ✅ ([demo1](styles/kardus-bekas/demo1/) · [demo2](styles/kardus-bekas/demo2/) · [demo3](styles/kardus-bekas/demo3/)) |
 | 20 | **Kolase Daun & Bunga** | kolase-daun-bunga | ✅ ([demo1](styles/kolase-daun-bunga/demo1/) · [demo2](styles/kolase-daun-bunga/demo2/) · [demo3](styles/kolase-daun-bunga/demo3/)) |
-| 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([styles/kotak-cahaya-kertas](styles/kotak-cahaya-kertas/)) |
-| 22 | **Lukisan Minyak Bergerak** | lukisan-minyak | ✅ ([styles/lukisan-minyak](styles/lukisan-minyak/)) |
+| 21 | **Kotak Cahaya Kertas** | kotak-cahaya-kertas | ✅ ([demo1](styles/kotak-cahaya-kertas/demo1/) · [demo2](styles/kotak-cahaya-kertas/demo2/) · [demo3](styles/kotak-cahaya-kertas/demo3/)) |
+| 22 | **Lukisan Minyak Bergerak** | lukisan-minyak | ✅ ([demo1](styles/lukisan-minyak/demo1/) · [demo2](styles/lukisan-minyak/demo2/) · [demo3](styles/lukisan-minyak/demo3/)) |
 | 23 | **Papan Tulis Kapur** | papan-tulis-kapur | ✅ ([styles/papan-tulis-kapur](styles/papan-tulis-kapur/)) |
 | 24 | **Flipbook** | flipbook | ✅ ([styles/flipbook](styles/flipbook/)) |
 | 25 | **Terminal ASCII** | terminal-ascii | ✅ ([styles/terminal-ascii](styles/terminal-ascii/)) |

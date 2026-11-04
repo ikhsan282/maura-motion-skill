@@ -1,0 +1,46 @@
+{
+  "style": "lukisan-minyak",
+  "title": "Jalan Raya Pos Anyer–Panarukan 1808 — Tragedi Seribu Kilometer di Atas Kanvas Sejarah",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Seribu kilometer jalan raya yang membelah ujung barat hingga ujung timur Pulau Jawa dibangun hanya dalam waktu satu tahun dengan harga ribuan nyawa rakyat pekerja paksa."
+    },
+    {
+      "id": "daendels",
+      "text": "Pada tahun seribu delapan ratus delapan, Gubernur Jenderal Herman Willem Daendels datang membawa mandat Tangan Besi untuk mempertahankan Pulau Jawa dari ancaman blokade armada Inggris."
+    },
+    {
+      "id": "cadas",
+      "text": "Tantangan paling mematikan menghadang di tebing batu Cadas Pangeran Sumedang, di mana rakyat pribumi dipaksa membelah gunung cadas keras hanya dengan linggis, pahat, dan tangan kosong."
+    },
+    {
+      "id": "sumedang",
+      "text": "Bupati Sumedang Pangeran Kornel berdiri menantang Daendels dengan tangan kiri menggenggam hulu keris sebagai protes atas penderitaan rakyatnya yang gugur kelaparan dan terserang malaria."
+    },
+    {
+      "id": "lukisan",
+      "text": "Beberapa dekade kemudian, Raden Saleh mengabadikan lanskap Jalan Raya Pos di Megamendung dan Priangan dalam lukisan minyak romantik yang menyimpan mendung kelam di balik keindahan alamnya."
+    },
+    {
+      "id": "pos",
+      "text": "Kereta kuda pos kolonial dapat melaju cepat memangkas perjalanan Batavia ke Surabaya dari empat puluh hari menjadi enam hari, namun setiap kilometernya dibayar oleh keringat dan air mata."
+    },
+    {
+      "id": "memori",
+      "text": "Melalui sapuan cat minyak impasto dan kontras cahaya chiaroscuro, kanvas sejarah mengingatkan kita bahwa kemegahan infrastruktur kolonial berdiri di atas luka kemanusiaan yang mendalam."
+    },
+    {
+      "id": "outro",
+      "text": "Kini jalur Anyer hingga Panarukan tetap menjadi urat nadi Pulau Jawa, sekaligus monumen abadi bagi ketangguhan dan pengorbanan rakyat Nusantara."
+    }
+  ]
+}
+

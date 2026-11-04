@@ -24,4 +24,8 @@ best_for: Shadow box / lightbox kertas: lapisan kertas siluet bertumpuk (5-7 lay
 **Kit API (`styles/kotak-cahaya-kertas/kit.js`):**
 - Exports: `LIGHTS`, `PAL`, `backlight`, `sheetColor`, `sheet`, `drawSheet`, `haze`, `ridges`, `rumahGadang`, `palm`, `ship`, `boat`, `puppet`, `waves`, `motes`, `boxFrame`, `litTitle`.
 
-**Demo:** "Malin Kundang" — voice `id-f`, musik `ambient`. Hook: "Ia pulang sebagai orang kaya... dan berpura-pura tidak mengenal ibunya sendiri."
+**Demos (`styles/kotak-cahaya-kertas/demo1/`, `demo2/`, `demo3/`):**
+- **`demo1/`**: *Legenda Malin Kundang — Anak Durhaka yang Membatu di Pantai Air Manis* (~52 detik, 5 babak: Hook → Merantau → Kapal Saudagar → Penolakan Ibu → Kutukan Batu di Pantai Air Manis).
+- **`demo2/`**: *Putri Mandalika & Tradisi Bau Nyale — Pengorbanan Sang Putri di Tebing Pantai Seger* (~55 detik, 8 babak: Fajar Bau Nyale → Putri Mandalika → Armada Lamaran Pangeran → Semedi Tengah Malam → Tebing Pantai Seger → Terjun ke Samudra → Pendaran Nyale → Warisan Sasak).
+- **`demo3/`**: *Seni Shadow Box & Teater Siluet — Rahasia Kedalaman dari Tumpukan Kertas dan Cahaya* (~55 detik, 8 babak: Pertanyaan pembuka → Sejarah teater siluet → Anatomi 6 lapisan kertas → Transmisi LED backlight → Perspektif atmosferik → Efek paralaks ruang → Pergantian 4 suhu warna cahaya → Penutup).
+- Render salah satu demo: `node scripts/make.mjs styles/kotak-cahaya-kertas/demo1/story.json` (atau `demo2` / `demo3`).

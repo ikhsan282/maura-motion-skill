@@ -1,0 +1,46 @@
+{
+  "style": "lukisan-minyak",
+  "title": "Perjalanan Raden Saleh — Dari Bangsawan Semarang Menjadi Pelukis Istana Eropa",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jauh sebelum era kemerdekaan Indonesia, seorang pemuda kelahiran Semarang tahun seribu delapan ratus sebelas berhasil menembus istana-istana kerajaan Eropa dan dijuluki sebagai Pelukis Raja."
+    },
+    {
+      "id": "bakat",
+      "text": "Raden Saleh Sjarif Boestaman kecil memiliki bakat menggambar luar biasa hingga pelukis Belgia Antoine Payen membawanya belajar teknik cat minyak dan perspektif Barat secara mendalam."
+    },
+    {
+      "id": "pelayaran",
+      "text": "Pada usia delapan belas tahun, ia berlayar seorang diri menuju Belanda dan memukau para maestro Eropa lewat ketajaman sapuan kuas potret serta penguasaan cahaya chiaroscuro."
+    },
+    {
+      "id": "dresden",
+      "text": "Di kota Dresden dan Paris, ia menemukan gaya Romantisisme yang penuh gejolak emosi, memadukan teknik akademik Eropa dengan jiwa ketimuran Nusantara yang dramatis dan megah."
+    },
+    {
+      "id": "berburu",
+      "text": "Karya-karya besarnya yang melukiskan pertarungan hidup dan mati antara singa, banteng liar, dan penunggang kuda di bawah langit badai langsung menjadi rebutan para bangsawan dan raja."
+    },
+    {
+      "id": "pulang",
+      "text": "Setelah lebih dari dua dekade mengharumkan nama tanah kelahirannya di benua biru, Raden Saleh kembali ke Hindia Belanda pada tahun seribu delapan ratus lima puluh dua."
+    },
+    {
+      "id": "magelang",
+      "text": "Di tanah airnya sendiri, ia menciptakan mahakarya sejarah Penangkapan Pangeran Diponegoro sebagai pernyataan harga diri bangsa Jawa di hadapan kekuasaan kolonial."
+    },
+    {
+      "id": "outro",
+      "text": "Raden Saleh membuka jalan sebagai bapak seni lukis modern Indonesia, membuktikan bahwa seniman Nusantara sanggup berdiri sejajar dengan para maestro dunia."
+    }
+  ]
+}
+

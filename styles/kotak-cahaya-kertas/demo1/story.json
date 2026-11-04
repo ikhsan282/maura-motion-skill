@@ -1,0 +1,33 @@
+{
+  "style": "kotak-cahaya-kertas",
+  "title": "Legenda Malin Kundang — Anak Durhaka yang Membatu di Pantai Air Manis",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Seorang anak tega pura-pura tidak mengenal ibu kandungnya sendiri yang telah membesarkannya dengan penuh air mata dan pengorbanan di sebuah desa nelayan miskin di pesisir Sumatera Barat."
+    },
+    {
+      "id": "rantau",
+      "text": "Saat dewasa, Malin Kundang pamit merantau menyeberangi lautan luas demi mengubah nasib keluarga, sementara sang ibu setiap senja berdiri di tepi dermaga menatap cakrawala menantikan kepulangannya."
+    },
+    {
+      "id": "kaya",
+      "text": "Bertahun-tahun kemudian, sebuah kapal dagang megah berlabuh membawa Malin yang telah menjadi saudagar kaya raya bersama istri bangsawannya, dan Sang ibu berlari tertatih-tatih hendak memeluknya dengan penuh rindu."
+    },
+    {
+      "id": "tolak",
+      "text": "Namun Malin justru mendorongnya hingga tersungkur ke pasir karena malu mengakui perempuan tua renta berpakaian compang-camping itu sebagai ibunya di hadapan sang istri dan para awak kapal."
+    },
+    {
+      "id": "batu",
+      "text": "Hati ibu yang hancur melahirkan doa kutukan yang menggetarkan langit, mendatangkan badai petir dahsyat yang menghancurkan kapal hingga tubuh Malin sujud membatu selamanya di Pantai Air Manis."
+    }
+  ]
+}

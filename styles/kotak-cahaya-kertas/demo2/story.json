@@ -1,0 +1,46 @@
+{
+  "style": "kotak-cahaya-kertas",
+  "title": "Putri Mandalika & Tradisi Bau Nyale — Pengorbanan Sang Putri di Tebing Pantai Seger",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Setiap tahun di pesisir selatan Pulau Lombok, ribuan warga turun ke laut sebelum fajar menyingsing untuk menangkap cacing laut warna-warni yang dipercaya sebagai jelmaan seorang putri raja."
+    },
+    {
+      "id": "putri",
+      "text": "Konon di Kerajaan Tonjang Beru hiduplah Putri Mandalika yang terkenal bukan hanya karena parasnya yang elok bagai purnama, melainkan juga tutur katanya yang lembut dan kepeduliannya kepada rakyat."
+    },
+    {
+      "id": "lamaran",
+      "text": "Para pangeran dari berbagai kerajaan di penjuru pulau datang membawa armada dan persembahan megah untuk meminangnya, masing-masing mengancam akan mengobarkan perang besar jika lamaran mereka ditolak."
+    },
+    {
+      "id": "semedi",
+      "text": "Gelisah melihat tanah kelahirannya terancam pertumpahan darah saudara, Mandalika bersemedi semalaman di bawah cahaya lentera, mencari jalan agar seluruh rakyat Lombok tetap hidup rukun dan damai."
+    },
+    {
+      "id": "tebing",
+      "text": "Pada dini hari tanggal dua puluh bulan kesepuluh penanggalan Sasak, ia mengundang seluruh pangeran dan rakyat berkumpul di puncak Tebing Pantai Seger yang menghadap samudra lepas."
+    },
+    {
+      "id": "terjun",
+      "text": "Di hadapan obor yang berkobar dan angin fajar yang menderu, Putri Mandalika menyatakan bahwa dirinya adalah milik seluruh rakyat, lalu terjun bebas ke dalam deburan ombak samudra."
+    },
+    {
+      "id": "nyale",
+      "text": "Sesaat setelah tubuhnya ditelan buih laut, permukaan air tiba-tiba berpendar keemasan dan kemerahan oleh jutaan cacing laut Nyale yang muncul membawa berkah kesuburan bagi petani dan nelayan."
+    },
+    {
+      "id": "outro",
+      "text": "Hingga kini festival Bau Nyale terus dirayakan masyarakat Sasak sebagai pengingat abadi bahwa pemimpin sejati rela mengorbankan kepentingannya demi menjaga persatuan dan kedamaian bersama."
+    }
+  ]
+}
+

@@ -1,0 +1,37 @@
+{
+  "style": "lukisan-minyak",
+  "title": "Lukisan Balasan Raden Saleh — Ketika Kuas Pelukis Jawa Melawan Sejarah Kolonial",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Seorang pelukis Jawa di abad kesembilan belas membalas keangkuhan penjajah Belanda bukan dengan sebilah keris atau senapan, melainkan lewat sehelai kanvas lukisan minyak raksasa yang menggemparkan Eropa."
+    },
+    {
+      "id": "tunduk",
+      "text": "Sebelumnya, pelukis kolonial Nicolaas Pieneman melukis penangkapan Pangeran Diponegoro dengan kepala tertunduk lesu dan tangan pasrah seolah sang pahlawan Jawa itu telah kalah secara sukarela."
+    },
+    {
+      "id": "tegak",
+      "text": "Dua puluh tahun kemudian, Raden Saleh melukis ulang peristiwa di Magelang itu secara radikal, di mana Pangeran Diponegoro berdiri tegak menantang Jenderal De Kock sambil menahan marah yang membara."
+    },
+    {
+      "id": "kepala",
+      "text": "Jika diperhatikan secara saksama, proporsi kepala para perwira Belanda di lukisan itu sengaja Dibuat sedikit kebesaran sebagai sindiran halus bahwa kekuasaan kolonial penuh kesombongan tanpa kebijaksanaan."
+    },
+    {
+      "id": "diri",
+      "text": "Bahkan secara diam-diam Raden Saleh ikut melukis wajah dirinya sendiri di antara kerumunan pengikut setia yang menatap sang pangeran dengan penuh hormat dan duka mendalam."
+    },
+    {
+      "id": "moral",
+      "text": "Sejarah resmi memang sering ditulis oleh pihak pemenang perang, Tapi di tangan seorang maestro, sebatang kuas cat minyak mampu membalikkan narasi dan mengabadikan martabat bangsa."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "style": "kotak-cahaya-kertas",
+  "title": "Seni Shadow Box & Teater Siluet — Rahasia Kedalaman dari Tumpukan Kertas dan Cahaya",
+  "voice": "el-id-m",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "maxDuration": 90,
+  "leadIn": 0.4,
+  "leadOut": 0.9,
+  "pauseBetween": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bagaimana selembar kertas putih yang dipotong pisau bedah bisa berubah menjadi dunia tiga dimensi yang terasa hidup, hangat, dan memukau hanya dengan sorotan satu lampu dari belakang?"
+    },
+    {
+      "id": "sejarah",
+      "text": "Seni kotak cahaya kertas atau paper cut lightbox lahir dari perpaduan teater bayangan Asia dan tradisi siluet Eropa abad kedelapan belas sebelum era fotografi ditemukan."
+    },
+    {
+      "id": "lapisan",
+      "text": "Rahasia utamanya terletak pada tumpukan lima hingga delapan lembar kertas tebal yang disusun sejajar di dalam bingkai kayu dengan jarak celah busa sekitar setengah sentimeter."
+    },
+    {
+      "id": "cahaya",
+      "text": "Saat lampu LED dipasang tepat di dinding paling belakang, cahaya menembus kertas pertama secara benderang lalu meredup bertahap setiap kali terhalang lapisan kertas di depannya."
+    },
+    {
+      "id": "gradasi",
+      "text": "Hukum fisika sederhana ini menciptakan perspektif atmosferik alami, di mana pegunungan terjauh tampak kuning keemasan menyala sementara siluet pepohonan terdepan berubah menjadi ungu pekat."
+    },
+    {
+      "id": "paralaks",
+      "text": "Ketika mata penonton atau kamera bergeser sedikit saja ke samping, setiap lapisan kertas bergerak dengan kecepatan paralaks berbeda sehingga panggung datar terasa memiliki ruang yang dalam."
+    },
+    {
+      "id": "warna",
+      "text": "Seniman modern bahkan dapat mengubah suasana panggung yang sama persis dari fajar merah muda, senja tembaga, hingga badai malam biru keperakan hanya dengan menggeser suhu warna lampu belakang."
+    },
+    {
+      "id": "outro",
+      "text": "Tanpa setetes pun kuas cat di permukaan kertas, perpaduan pisau ukir, jarak ruang, dan pendaran cahaya membuktikan bahwa bayangan mampu bercerita seindah lukisan."
+    }
+  ]
+}
+
