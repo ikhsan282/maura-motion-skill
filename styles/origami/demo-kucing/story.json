@@ -1,0 +1,38 @@
+{
+ "title": "Kucing Origami",
+ "slug": "20_origami-kucing",
+ "style": "origami",
+ "lang": "id",
+ "voice": "el-id-m",
+ "music": {
+  "preset": "japanese",
+  "db": -16
+ },
+ "lead": 0.35,
+ "tail": 1.8,
+ "pause": 0.25,
+ "speed": 0.85,
+ "duration": 28,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Selembar kertas putih lahir di telinga yang runcing."
+  },
+  {
+   "id": "lipat",
+   "text": "Lipat menjadi dua, lalu lagi, sampai sudutnya berdiri."
+  },
+  {
+   "id": "akal",
+   "text": "Telinganya menegak, dan ekor tumbuh dari ujung."
+  },
+  {
+   "id": "terbang",
+   "text": "Kucing itu melompat, dan mendarat di langit pagi."
+  },
+  {
+   "id": "moral",
+   "text": "Lipatlah sampai ia cukup memiliki wujud yang kuat."
+  }
+ ]
+}
