@@ -1,6 +1,6 @@
 # Maura Motion Skill
 
-Library **77 gaya animasi** (69 gaya siap pakai + 8 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
+Library **77 gaya animasi** (70 gaya siap pakai + 7 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
 
 Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa saja.
 
@@ -98,7 +98,7 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 
 ## Gaya dengan demo tambahan
 
-Gaya No. 1 sampai 28 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
+Gaya No. 1 sampai 30 kini sudah memiliki paket lengkap **3 demo per gaya**, dengan naskah narasi lengkap yang berdurasi 30–90 detik (dan demo pendek ~17–48 detik) serta siap dirender:
 
 | No | Gaya | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|---|---|
@@ -130,8 +130,10 @@ Gaya No. 1 sampai 28 kini sudah memiliki paket lengkap **3 demo per gaya**, deng
 | 26 | `cat-air` | "Legenda Roro Anteng & Joko Seger (Kasada)" (`demo1/`, 52 dtk) | "Fajar di Kaldera Tengger: Bromo, Batok, Semeru" (`demo2/`, 55 dtk) | "Teknik Lukis Cat Air Basah di Atas Basah" (`demo3/`, 55 dtk) |
 | 27 | `gouache-dongeng` | "Bawang Merah & Bawang Putih: Dua Labu" (`demo1/`, 52 dtk) | "Keong Mas & Putri Candra Kirana" (`demo2/`, 55 dtk) | "Kancil & Siput Lomba Lari di Sungai" (`demo3/`, 55 dtk) |
 | 28 | `pastel-krayon` | "Kenapa Bulan Mengikuti Kita? Paralaks" (`demo1/`, 52 dtk) | "Bagaimana Pelangi Muncul Selepas Hujan?" (`demo2/`, 55 dtk) | "Ke Mana Perginya Bayanganmu Saat Siang?" (`demo3/`, 55 dtk) |
+| 29 | `tinta-novel-grafis` | "Sumpah Palapa Gajah Mada 1336" (`demo1/`, 52 dtk) | "Ekspedisi Pati Unus & 100 Kapal Jong" (`demo2/`, 55 dtk) | "Strategi Sultan Agung di Sungai Ciliwung" (`demo3/`, 55 dtk) |
+| 30 | `product-light` | "Satu Detik di Balik Scan Kode QRIS" (`demo1/`, 52 dtk) | "Rahasia Kode OTP 6 Angka 30 Detik" (`demo2/`, 55 dtk) | "Tiga Algoritma Saat Memesan Ojek Online" (`demo3/`, 55 dtk) |
 
-Selain gaya 1–28, sebagian gaya lain juga memiliki variasi demo tambahan:
+Selain gaya 1–30, sebagian gaya lain juga memiliki variasi demo tambahan:
 
 | Gaya | Demo |
 |---|---|
@@ -151,7 +153,7 @@ Selain gaya 1–28, sebagian gaya lain juga memiliki variasi demo tambahan:
 | `swiss-bauhaus` | 1. "Bauhaus: Sekolah 14 Tahun" (bawaan) · 2. "Grid Desain" (`demo-grid/`, 18 dtk, aturan sepertiga + margin) · 3. "3 Warna Primer" (`demo-warna/`, 24 dtk, merah-kuning-biru + psikologi warna) |
 | `stickman-subuh` | 1. "Begadang vs Tidur Cukup" (`demo/`) · 2. "Begadang" (`demo-begadang/`) · 3. "Tahajud" (`demo-tahajud/`) |
 
-## Status gaya (77 gaya: 69 siap pakai ✅, 8 belum diimplementasi ❌)
+## Status gaya (77 gaya: 70 siap pakai ✅, 7 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -183,8 +185,8 @@ Selain gaya 1–28, sebagian gaya lain juga memiliki variasi demo tambahan:
 | 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([demo1](styles/cat-air/demo1/) · [demo2](styles/cat-air/demo2/) · [demo3](styles/cat-air/demo3/)) |
 | 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([demo1](styles/gouache-dongeng/demo1/) · [demo2](styles/gouache-dongeng/demo2/) · [demo3](styles/gouache-dongeng/demo3/)) |
 | 28 | **Pastel & Krayon** | pastel-krayon | ✅ ([demo1](styles/pastel-krayon/demo1/) · [demo2](styles/pastel-krayon/demo2/) · [demo3](styles/pastel-krayon/demo3/)) |
-| 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ❌ (belum diimplementasi) |
-| 30 | **Product Film Light** | product-light | ✅ ([styles/product-light](styles/product-light/)) |
+| 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ✅ ([demo1](styles/tinta-novel-grafis/demo1/) · [demo2](styles/tinta-novel-grafis/demo2/) · [demo3](styles/tinta-novel-grafis/demo3/)) |
+| 30 | **Product Film Light** | product-light | ✅ ([demo1](styles/product-light/demo1/) · [demo2](styles/product-light/demo2/) · [demo3](styles/product-light/demo3/)) |
 | 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([styles/dark-glow-ui](styles/dark-glow-ui/)) |
 | 32 | **One-Shape UI Morph** | ui-morph | ✅ ([styles/ui-morph](styles/ui-morph/)) |
 | 33 | **Kinetic Typography** | kinetic-type | ✅ ([styles/kinetic-type](styles/kinetic-type/)) |

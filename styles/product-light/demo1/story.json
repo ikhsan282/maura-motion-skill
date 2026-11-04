@@ -1,0 +1,29 @@
+{
+  "style": "product-light",
+  "title": "Satu Detik di Balik Scan Kode QRIS — Perjalanan Pesan Pembayaran Melewati Empat Pihak",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Setiap kali kamu mengarahkan kamera ponsel untuk scan kode QR dan tekan bayar di meja kasir, tanpa kamu sadari ada empat pihak berbeda yang bekerja serentak dalam hitungan satu detik."
+    },
+    {
+      "id": "alur",
+      "text": "Begitu kamu menekan konfirmasi, aplikasi bank atau dompet digital penerbit memotong saldomu, lembaga switching merutekan paket pesannya, lalu penyedia acquirer toko langsung memverifikasi dan menyetujuinya."
+    },
+    {
+      "id": "kasir",
+      "text": "Sepersekian detik kemudian, layar ponsel kasir atau mesin suara toko berbunyi nyaring menandakan bahwa transaksi pembayaranmu telah resmi diterima."
+    },
+    {
+      "id": "tapi",
+      "text": "Namun tahukah kamu bahwa yang melesat secepat kilat di udara itu baru sebatas pesan otorisasi? Uangnya sendiri baru berpindah antarbank saat proses settlement kliring menyusul belakangan."
+    },
+    {
+      "id": "akhir",
+      "text": "Satu ketukan jari di layar, empat institusi keuangan yang saling terhubung, dan semuanya berujung pada satu kata sederhana: berhasil."
+    }
+  ]
+}

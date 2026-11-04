@@ -1,0 +1,42 @@
+{
+  "style": "product-light",
+  "title": "Apa yang Terjadi Saat Kamu Memesan Ojek Online? — Tiga Algoritma yang Bekerja dalam Dua Detik",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Saat kamu menekan tombol pesan ojek online di layar ponsel, dalam waktu kurang dari dua detik sistem langsung mencarikan pengemudi paling pas dari ribuan mitra di sekitarmu."
+    },
+    {
+      "id": "titik",
+      "text": "Pertama, algoritma pemetaan geospasial membagi peta kota menjadi petak-petak heksagonal untuk memindai posisi koordinat GPS penjemputan dan tujuanmu secara presisi."
+    },
+    {
+      "id": "harga",
+      "text": "Kedua, algoritma tarif dinamis menghitung jarak tempuh, perkiraan kemacetan lalu lintas, cuaca, serta perbandingan jumlah penumpang dan pengemudi di area tersebut."
+    },
+    {
+      "id": "radar",
+      "text": "Ketiga, mesin pencocokan atau matchmaking tidak sekadar memilih pengemudi yang jarak garis lurusnya paling dekat di peta."
+    },
+    {
+      "id": "skor",
+      "text": "Sistem menghitung waktu tempuh nyata termasuk putar balik jalan, arah laju kendaraan pengemudi saat itu, hingga riwayat penerimaan pesanan."
+    },
+    {
+      "id": "terima",
+      "text": "Tawaran pesanan lalu dikirim ke ponsel pengemudi dengan skor kecocokan tertinggi, dan begitu ia menekan terima, profil serta pelat nomornya tampil di layarmu."
+    },
+    {
+      "id": "rute",
+      "text": "Selama perjalanan berlangsung, titik lokasi GPS diperbarui setiap beberapa detik untuk memandu rute tercepat sekaligus menjaga keamanan perjalanan."
+    },
+    {
+      "id": "outro",
+      "text": "Satu ketukan sederhana di layar ponselmu sesungguhnya menggerakkan orkestrasi tiga algoritma cerdas yang bekerja tanpa henti di balik awan."
+    }
+  ]
+}
+

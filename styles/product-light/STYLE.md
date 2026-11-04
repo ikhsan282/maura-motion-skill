@@ -52,3 +52,9 @@ pihak muncul → paket "Pesan · Rp25.000" melewati Penerbit (saldo dipotong), S
 Acquirer (stempel DISETUJUI) → HP kasir: toast "Pembayaran diterima" → kamera mundur: baru pesan, belum uang;
 koin hijau menyusul (settlement) → rewind ke HP: "Satu ketukan. Empat pihak. Berhasil." Fakta: BI (pihak
 QRIS: penerbit, acquirer, switching; settlement bisa H+0/H+1).
+
+
+**Paket Demo (30–90 Detik):**
+1. **`demo1`** — *Satu Detik di Balik Scan Kode QRIS — Perjalanan Pesan Pembayaran Melewati Empat Pihak* (~52 detik): Perjalanan paket otorisasi pembayaran QRIS melewati Penerbit, Lembaga Switching, dan Acquirer hingga notifikasi kasir menyala dan *settlement* uang menyusul.
+2. **`demo2`** — *Rahasia Kode OTP Enam Angka — Mengapa Kode Verifikasimu Kedaluwarsa dalam Tiga Puluh Detik?* (~55 detik): Cara kerja algoritma *Time-Based One-Time Password* (TOTP) yang menggabungkan kunci rahasia unik dan stempel waktu 30 detik.
+3. **`demo3`** — *Apa yang Terjadi Saat Kamu Memesan Ojek Online? — Tiga Algoritma yang Bekerja dalam Dua Detik* (~55 detik): Orkestrasi indeks geospasial heksagonal, tarif dinamis *supply-demand*, dan algoritma *matchmaking* waktu tempuh nyata.

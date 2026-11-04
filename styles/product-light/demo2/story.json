@@ -1,0 +1,42 @@
+{
+  "style": "product-light",
+  "title": "Rahasia Kode OTP Enam Angka — Mengapa Kode Verifikasimu Kedaluwarsa dalam Tiga Puluh Detik?",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bertanya mengapa enam angka kode OTP yang masuk ke ponselmu selalu buru-buru hangus hanya dalam waktu tiga puluh hingga enam puluh detik?"
+    },
+    {
+      "id": "login",
+      "text": "Saat kamu masuk ke akun bank atau dompet digital, kata sandi biasa saja tidak lagi cukup karena sandi yang tetap bisa dicuri atau ditebak oleh peretas."
+    },
+    {
+      "id": "server",
+      "text": "Di balik layar, server keamanan menggunakan algoritma Time-Based One-Time Password yang mencampur kunci rahasia unik milikmu dengan detik waktu saat itu juga."
+    },
+    {
+      "id": "waktu",
+      "text": "Melalui fungsi kriptografi satu arah, campuran kunci dan stempel waktu tadi diperas menjadi enam digit angka acak yang hanya sah untuk satu jendela waktu singkat."
+    },
+    {
+      "id": "kirim",
+      "text": "Kode enam angka itu langsung dikirim lewat pesan singkat atau notifikasi aplikasi ke ponsel yang berada di genggaman tanganmu."
+    },
+    {
+      "id": "ketik",
+      "text": "Ketika kamu mengetik keenam angka tersebut kembali ke layar login, server mencocokkannya dengan hasil hitungan jam di sisi server pada detik yang sama."
+    },
+    {
+      "id": "hangus",
+      "text": "Begitu jarum detik melewati batas tiga puluh detik, rumus waktunya otomatis bergeser menghasilkan kombinasi enam angka baru, sehingga kode lama menjadi tidak berguna bagi pencuri."
+    },
+    {
+      "id": "outro",
+      "text": "Enam angka sederhana yang berumur pendek itulah benteng terakhir yang menjaga uang dan data pribadimu tetap aman setiap hari."
+    }
+  ]
+}
+

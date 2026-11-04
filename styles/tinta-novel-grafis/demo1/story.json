@@ -1,0 +1,42 @@
+{
+  "style": "tinta-novel-grafis",
+  "title": "Sumpah Palapa Gajah Mada 1336 — Ikrar Sang Mahapatih Menyatukan Nusantara",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahun seribu tiga ratus tiga puluh enam Masehi di pendopo agung Kerajaan Majapahit, seorang panglima bertubuh tegap maju ke hadapan Ratu Tribhuwana Tunggadewi dan mengucapkan ikrar yang mengguncang sejarah."
+    },
+    {
+      "id": "lantik",
+      "text": "Hari itu Gajah Mada resmi diangkat menjadi Mahapatih Amangkubhumi, jabatan tertinggi pemerintahan Majapahit setelah ia berjasa memadamkan pemberontakan Sadeng dan Keta."
+    },
+    {
+      "id": "sumpah",
+      "text": "Namun alih-alih berpesta menikmati kemewahan jabatan barunya, Gajah Mada justru menghunus tekadnya dan mengucapkan Sumpah Palapa yang tercatat di dalam kitab Pararaton."
+    },
+    {
+      "id": "pulau",
+      "text": "Ia bersumpah tidak akan amukti palapa—tidak akan menikmati istirahat maupun kenikmatan duniawi—sebelum berhasil menyatukan Gurun, Seran, Tanjungpura, Haru, Pahang, Dompo, Bali, Sunda, Palembang, dan Tumasik."
+    },
+    {
+      "id": "ejek",
+      "text": "Mendengar sumpah yang terdengar mustahil itu, sejumlah bangsawan dan menteri senior di balairung istana sempat mencibir serta menertawakan ambisi besar sang patih muda."
+    },
+    {
+      "id": "keris",
+      "text": "Penghinaan itu membakar semangat Gajah Mada. Di bawah panji gula kelapa merah putih, ia membangun kekuatan militer dan diplomasi maritim terbesar di Asia Tenggara."
+    },
+    {
+      "id": "armada",
+      "text": "Ratusan kapal Jong Majapahit pun berlayar mengarungi lautan selama puluhan tahun, menghubungkan pelabuhan demi pelabuhan dari Sumatra hingga kepulauan Maluku di timur."
+    },
+    {
+      "id": "outro",
+      "text": "Kata Nusantara yang diikrarkan Gajah Mada hampir tujuh abad silam itulah yang kelak menginspirasi cita-cita persatuan kepulauan Indonesia modern."
+    }
+  ]
+}
+

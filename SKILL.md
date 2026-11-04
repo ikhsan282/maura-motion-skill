@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 69 siap pakai ✅, 8 belum diimplementasi ❌)
+## Status gaya (77 gaya: 70 siap pakai ✅, 7 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -98,8 +98,8 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 26 | **Cat Air (Watercolor)** | cat-air | ✅ ([demo1](styles/cat-air/demo1/) · [demo2](styles/cat-air/demo2/) · [demo3](styles/cat-air/demo3/)) |
 | 27 | **Gouache Buku Dongeng** | gouache-dongeng | ✅ ([demo1](styles/gouache-dongeng/demo1/) · [demo2](styles/gouache-dongeng/demo2/) · [demo3](styles/gouache-dongeng/demo3/)) |
 | 28 | **Pastel & Krayon** | pastel-krayon | ✅ ([demo1](styles/pastel-krayon/demo1/) · [demo2](styles/pastel-krayon/demo2/) · [demo3](styles/pastel-krayon/demo3/)) |
-| 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ❌ (belum diimplementasi) |
-| 30 | **Product Film Light** | product-light | ✅ ([styles/product-light](styles/product-light/)) |
+| 29 | **Tinta Novel Grafis** | tinta-novel-grafis | ✅ ([demo1](styles/tinta-novel-grafis/demo1/) · [demo2](styles/tinta-novel-grafis/demo2/) · [demo3](styles/tinta-novel-grafis/demo3/)) |
+| 30 | **Product Film Light** | product-light | ✅ ([demo1](styles/product-light/demo1/) · [demo2](styles/product-light/demo2/) · [demo3](styles/product-light/demo3/)) |
 | 31 | **Dark Glow Product UI** | dark-glow-ui | ✅ ([styles/dark-glow-ui](styles/dark-glow-ui/)) |
 | 32 | **One-Shape UI Morph** | ui-morph | ✅ ([styles/ui-morph](styles/ui-morph/)) |
 | 33 | **Kinetic Typography** | kinetic-type | ✅ ([styles/kinetic-type](styles/kinetic-type/)) |

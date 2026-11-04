@@ -1,0 +1,42 @@
+{
+  "style": "tinta-novel-grafis",
+  "title": "Pertahanan Sultan Agung & Benteng Batavia — Strategi Membendung Sungai Ciliwung 1628",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahun seribu enam ratus dua puluh delapan, Raja terbesar Kesultanan Mataram, Sultan Agung Hanyakrakusuma, mengambil keputusan berani untuk menghadang ekspansi VOC di Batavia."
+    },
+    {
+      "id": "jalan",
+      "text": "Ribuan prajurit Mataram yang dipimpin Tumenggung Baureksa menempuh perjalanan darat ratusan kilometer dari pedalaman Jawa Tengah melintasi hutan dan pegunungan menuju pesisir barat."
+    },
+    {
+      "id": "lumbung",
+      "text": "Untuk mendukung logistik jarak jauh di tahun berikutnya, pasukan Mataram bahkan membangun lumbung-lumbung beras rahasia di sepanjang jalur Karawang, Cirebon, dan Tegal."
+    },
+    {
+      "id": "malam",
+      "text": "Ketika berhadapan dengan tembok batu Kastil Batavia yang dikelilingi parit dalam, para panglima Mataram merancang siasat teknik sipil yang tak diduga lawan."
+    },
+    {
+      "id": "bendung",
+      "text": "Di tengah keheningan malam, ribuan prajurit menebang batang pohon kelapa dan menancapkan tiang-tiang kayu untuk membendung serta membelokkan aliran Sungai Ciliwung!"
+    },
+    {
+      "id": "tanggul",
+      "text": "Mereka juga menggali parit-parit perlindungan dan menimbun tanggul tanah yang terus bergerak maju mendekati dinding meriam benteng pertahanan Belanda."
+    },
+    {
+      "id": "warisan",
+      "text": "Meskipun pengepungan itu menghadapi tantangan jarak logistik yang amat berat, keberanian strategi pasukan Mataram sempat mengguncang pusat kekuasaan VOC di Jawa."
+    },
+    {
+      "id": "outro",
+      "text": "Keteguhan Sultan Agung mempertahankan kedaulatan tanah air menjadikannya salah satu tokoh pahlawan nasional paling dihormati dalam sejarah perjuangan Nusantara."
+    }
+  ]
+}
+

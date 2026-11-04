@@ -1,0 +1,42 @@
+{
+  "style": "tinta-novel-grafis",
+  "title": "Ekspedisi Pati Unus ke Malaka 1513 — Sang Pangeran Sabrang Lor dan Ratusan Kapal Jong",
+  "voice": "el-id-m",
+  "rate": "+5%",
+  "maxDuration": 90,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Awal tahun seribu lima ratus tiga belas, perairan Selat Malaka bergetar ketika seratus kapal perang raksasa dari pesisir utara Jawa muncul membelah kabut pagi."
+    },
+    {
+      "id": "malaka",
+      "text": "Dua tahun sebelumnya, pelabuhan dagang Malaka telah jatuh ke tangan armada Portugis pimpinan Afonso de Albuquerque, sehingga jalur rempah Nusantara terancam monopoli asing."
+    },
+    {
+      "id": "jong",
+      "text": "Dari bandar pelabuhan Jepara dan Kesultanan Demak, seorang panglima muda berusia dua puluh lima tahun bernama Raden Abdul Qadir atau Pati Unus menyiapkan armada balasan."
+    },
+    {
+      "id": "lapis",
+      "text": "Kapal induknya adalah sebuah Jong Jawa raksasa yang lambungnya dilapisi beberapa lapis papan kayu jati tebal sehingga peluru meriam besi Portugis pun sulit menembusnya."
+    },
+    {
+      "id": "berangkat",
+      "text": "Bersama sekitar lima ribu prajurit gabungan dari Jawa, Palembang, dan pesisir Nusantara, armada Pati Unus berlayar menyeberangi lautan menuju benteng A Famosa di Malaka."
+    },
+    {
+      "id": "meriam",
+      "text": "Pertempuran laut sengit pun pecah di perairan Malaka. Catatan sejarah Portugis sendiri mengakui betapa dahsyat dan besarnya kapal Jong yang dipimpin sang adipati muda."
+    },
+    {
+      "id": "gelar",
+      "text": "Sekembalinya ke tanah Jawa, keberanian luar biasa dalam ekspedisi lintas selat itu membuat rakyat menghormatinya dengan gelar abadi: Pangeran Sabrang Lor—Pangeran yang Menyeberangi Utara."
+    },
+    {
+      "id": "outro",
+      "text": "Kisah Pati Unus dan kapal Jong raksasanya menjadi bukti nyata bahwa nenek moyang Nusantara adalah bangsa bahari pemberani yang menguasai teknologi perkapalan samudra."
+    }
+  ]
+}
+
