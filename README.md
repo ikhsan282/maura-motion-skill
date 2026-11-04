@@ -81,7 +81,6 @@ Lalu beri prompt:
 | `STYLES.md` / `catalog.json` | Katalog 77 gaya + kecocokan topik |
 | `styles/<gaya>/` | `STYLE.md` + `kit.js` + `demo1/`..`demo3/` (atau `demo/`) per gaya |
 | `examples/` | Contoh unggulan siap tonton: `hello` (*Halo Maura Motion*) & `clay-stop-motion-demo2` (*Sangkuriang & Perahu Terbalik*) |
-| `projects/` | Proyek tambahan (`bulan-papanfakta`, `demo-tangan`, `harga-99-papan`, `papanfakta-ultah23`) |
 | `engine/` | Runtime + renderer (headless Chrome / Playwright → MP4) |
 | `audio/` | TTS (ElevenLabs default George + Kokoro/Piper/SAPI offline fallback), musik, SFX, mixing −14 LUFS |
 | `scripts/` | `setup.mjs`, `make.mjs`, `build_index.py` |
