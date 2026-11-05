@@ -1,6 +1,6 @@
 {
-  "title": "Arya Green IPL — Solusi Cerdas & Transparan Iuran Perumahan Modern (UI Morph)",
-  "slug": "arya_green_ipl_uimorph",
+  "title": "Arya Green IPL — Solusi Cerdas & Transparan Iuran Perumahan Modern",
+  "slug": "arya_green_ipl",
   "style": "ui-morph",
   "lang": "id",
   "voice": "el-id-m",
@@ -21,8 +21,8 @@
     },
     {
       "id": "tagihan",
-      "text": "Tagihan bulanan dibuat otomatis sesuai tipe rumah warga, lengkap dengan rincian komponen biaya IPL dan notifikasi pengingat jatuh tempo berkala.",
-      "say": "Tagihan bulanan dibuat otomatis sesuai tipe rumah warga, lengkap dengan rincian komponen biaya IPL dan notifikasi pengingat jatuh tempo berkala."
+      "text": "Tagihan bulanan dibuat otomatis sesuai tipe rumah warga, lengkap dengan rincian iuran dasar dan iuran sampah, serta notifikasi pengingat jatuh tempo berkala.",
+      "say": "Tagihan bulanan dibuat otomatis sesuai tipe rumah warga, lengkap dengan rincian iuran dasar dan iuran sampah, serta notifikasi pengingat jatuh tempo berkala."
     },
     {
       "id": "qris",

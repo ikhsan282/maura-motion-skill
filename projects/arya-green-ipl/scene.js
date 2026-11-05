@@ -24,7 +24,7 @@ const CX = 540, CY = 840;
 const SH = {
   manual_book: { x: CX, y: CY, w: 760, h: 480, r: 44, elev: 1.2, color: '#161517' },
   brand_pill:  { x: CX, y: CY, w: 740, h: 260, r: 130, elev: 1.5, color: '#0E0E10' },
-  tagihan:     { x: CX, y: CY, w: 780, h: 640, r: 46, elev: 1.4, color: '#0E0E10' },
+  tagihan:     { x: CX, y: CY, w: 780, h: 630, r: 46, elev: 1.4, color: '#0E0E10' },
   qris:        { x: CX, y: CY, w: 760, h: 650, r: 48, elev: 1.6, color: '#0E0E10' },
   kas:         { x: CX, y: CY, w: 820, h: 580, r: 42, elev: 1.4, color: '#0E0E10' },
   botwa:       { x: CX, y: CY, w: 800, h: 680, r: 50, elev: 1.5, color: '#0E0E10' },
@@ -196,42 +196,44 @@ function content(kind, s, t, t0, t1) {
     K.label(ctx, 'ARYA GREEN IPL', x, y - 10, { size: 54, weight: 800, color: '#FFFFFF', spacing: -1 });
     K.label(ctx, 'Sistem Manajemen IPL & Kas Lingkungan RT Modern', x, y + 54, { size: 25, weight: 400, color: 'rgba(255,255,255,0.75)', spacing: 0 });
   } else if (kind === 'tagihan') {
-    // Tagihan otomatis
+    // Tagihan otomatis: Total 200rb (Dasar 150rb + Sampah 50rb)
     ctx.fillStyle = 'rgba(16, 185, 129, 0.16)';
-    roundRect(ctx, x - 170, y - 265, 340, 38, 19);
+    roundRect(ctx, x - 170, y - 260, 340, 38, 19);
     ctx.fill();
-    K.label(ctx, 'TAGIHAN IPL BULANAN', x, y - 246, { size: 22, weight: 700, font: K.FONT.mono, color: '#10B981', spacing: 1 });
+    K.label(ctx, 'TAGIHAN IPL BULANAN', x, y - 241, { size: 22, weight: 700, font: K.FONT.mono, color: '#10B981', spacing: 1 });
 
-    K.label(ctx, 'Rp150.000', x, y - 175, { size: 68, weight: 800, color: '#FFFFFF' });
-    K.label(ctx, 'Unit B-12 · Tipe 45/90 · Blok Sakura', x, y - 110, { size: 28, weight: 500, color: 'rgba(255,255,255,0.65)' });
+    K.label(ctx, 'Rp 200.000', x, y - 170, { size: 70, weight: 800, color: '#FFFFFF' });
+    K.label(ctx, 'Unit B-12 · Tipe 45/90 · Blok Sakura', x, y - 105, { size: 28, weight: 500, color: 'rgba(255,255,255,0.65)' });
 
     // Divider
     ctx.fillStyle = 'rgba(255,255,255,0.12)';
-    ctx.fillRect(x - 320, y - 70, 640, 2);
+    ctx.fillRect(x - 320, y - 65, 640, 2);
 
-    // Component rows
+    // Component rows: Iuran Dasar Rumah 150.000, Iuran Sampah 50.000
     const rows = [
-      ['Iuran Kebersihan Lingkungan', 'Rp70.000'],
-      ['Iuran Keamanan Satpam 24 Jam', 'Rp50.000'],
-      ['Perawatan Fasilitas & PJU', 'Rp30.000'],
+      ['Iuran Dasar Rumah', 'Rp 150.000'],
+      ['Iuran Sampah', 'Rp 50.000'],
     ];
     rows.forEach(([k, v], i) => {
-      const yy = y - 25 + i * 54;
-      K.label(ctx, k, x - 310, yy, { size: 26, weight: 400, color: 'rgba(255,255,255,0.6)', align: 'left', spacing: 0 });
-      K.label(ctx, v, x + 310, yy, { size: 26, weight: 700, color: '#FFFFFF', align: 'right', spacing: 0 });
+      const yy = y - 15 + i * 62;
+      ctx.fillStyle = 'rgba(255,255,255,0.05)';
+      roundRect(ctx, x - 320, yy - 24, 640, 50, 12);
+      ctx.fill();
+      K.label(ctx, k, x - 300, yy + 2, { size: 28, weight: 500, color: 'rgba(255,255,255,0.8)', align: 'left', spacing: 0 });
+      K.label(ctx, v, x + 300, yy + 2, { size: 28, weight: 700, color: '#FFFFFF', align: 'right', spacing: 0 });
     });
 
-    // Bottom highlight: Denda dihapus
+    // Bottom note: Notifikasi jatuh tempo otomatis (Tanpa bahas denda sama sekali)
     ctx.fillStyle = 'rgba(16, 185, 129, 0.12)';
-    roundRect(ctx, x - 320, y + 160, 640, 64, 16);
+    roundRect(ctx, x - 320, y + 145, 640, 62, 16);
     ctx.fill();
-    ctx.strokeStyle = 'rgba(16, 185, 129, 0.4)';
+    ctx.strokeStyle = 'rgba(16, 185, 129, 0.35)';
     ctx.lineWidth = 1.5;
-    roundRect(ctx, x - 320, y + 160, 640, 64, 16);
+    roundRect(ctx, x - 320, y + 145, 640, 62, 16);
     ctx.stroke();
 
-    K.label(ctx, '✔ DENDA KETERLAMBATAN: DIHAPUS (Rp0)', x, y + 182, { size: 22, weight: 700, color: '#10B981', font: K.FONT.mono, spacing: 1 });
-    K.label(ctx, 'Notifikasi pengingat ramah via WhatsApp sebelum jatuh tempo', x, y + 206, { size: 20, weight: 400, color: 'rgba(255,255,255,0.65)' });
+    K.label(ctx, '📲 NOTIFIKASI PENGINGAT JATUH TEMPO OTOMATIS', x, y + 166, { size: 21, weight: 700, color: '#10B981', font: K.FONT.mono, spacing: 0.5 });
+    K.label(ctx, 'Pengingat ramah dikirim otomatis via WhatsApp sebelum jatuh tempo', x, y + 190, { size: 20, weight: 400, color: 'rgba(255,255,255,0.7)' });
   } else if (kind === 'qris') {
     const isPaid = t >= TT.qris_pay;
 
@@ -243,9 +245,9 @@ function content(kind, s, t, t0, t1) {
     if (!isPaid) {
       drawQrCode(ctx, x - 150, y - 90, 190);
 
-      // Amount & method info on the right
+      // Amount & method info on the right: Rp 200.000
       K.label(ctx, 'Total Tagihan', x + 50, y - 145, { size: 22, weight: 400, color: 'rgba(255,255,255,0.6)', align: 'left' });
-      K.label(ctx, 'Rp150.000', x + 50, y - 105, { size: 44, weight: 800, color: '#FFFFFF', align: 'left' });
+      K.label(ctx, 'Rp 200.000', x + 50, y - 105, { size: 44, weight: 800, color: '#FFFFFF', align: 'left' });
       K.label(ctx, 'QRIS Dinamis 1-Klik', x + 50, y - 60, { size: 24, weight: 600, color: '#10B981', align: 'left' });
 
       // Highlight Bebas Biaya Transfer
@@ -343,8 +345,8 @@ function content(kind, s, t, t0, t1) {
 
     // Hermes full feature list
     const features = [
-      ['[1] Cek Tagihan IPL', 'Status & rincian bulanan'],
-      ['[2] Minta QRIS Instan', '1-klik bayar tanpa biaya'],
+      ['[1] Cek Tagihan IPL', 'Rincian Dasar Rp150rb + Sampah Rp50rb'],
+      ['[2] Minta QRIS Instan', '1-klik bayar tanpa biaya transfer'],
       ['[3] Saldo Kas & Transparansi', 'Pantau arus kas terbuka'],
       ['[4] Lapor Aduan Fasilitas', 'Foto lampu mati / sampah'],
       ['[5] Info Agenda & Rapat RT', 'Jadwal kerja bakti warga'],
@@ -498,11 +500,11 @@ export function render(t) {
     content(STATES[i][2], s, t, STATES[i][0], STATES[i + 1] ? STATES[i + 1][0] : 99);
   }
 
-  // Floating sub-indicator labels below shape
+  // Floating sub-indicator labels below shape (tanpa bahas denda sama sekali)
   const subs = [
     [0, TT.brand, 'Pencatatan manual sering memicu selisih & kecurigaan'],
     [TT.brand, TT.tagihan, 'Sistem modern terpusat untuk warga & pengurus RT'],
-    [TT.tagihan, TT.qris, 'Rincian transparan · Denda keterlambatan dihapus'],
+    [TT.tagihan, TT.qris, 'Iuran dasar & sampah terinci jelas · Otomatis setiap bulan'],
     [TT.qris, TT.kas, 'Scan QRIS dari bank atau e-wallet tanpa biaya transfer'],
     [TT.kas, TT.botwa, 'Semua pemasukan & pengeluaran tercatat akurat 100%'],
     [TT.botwa, TT.bendahara, 'Layanan warga mandiri cukup lewat chat WhatsApp'],
