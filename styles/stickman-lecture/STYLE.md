@@ -2,36 +2,35 @@
 id: stickman-lecture
 name: Stickman Lecture
 no: 75
-source: custom:stickman-doodle-kit
+source: custom:stickman-lecture-kit
 family: stickman
 tech: canvas2d
-music: lofi   voice: el-id-m   captions: hand
-best_for: edukasi ringan, penjelasan konsep, tips produktivitas, konten guru/mentor
+music: lofi   voice: el-id-m   captions: clean
+best_for: edukasi ringan, penjelasan konsep, psikologi belajar, tips produktivitas, konten guru/mentor
 ---
 # Stickman Lecture
 
-**Ciri khas (look):** papan tulis hijau (#1e4d3b) bingkai kuning kapur (#f6d24a), garis kapur putih transparan.
-Stickman putih ber-beanie kuning, bubble kata "FOKUS! / MULAI! / GAS! / BISA! / MENANG!" font Permanent Marker,
-boil 1.7 + vignette.
+**Ciri khas (look):** Panggung ruang kelas papan tulis hijau zamrud (`#1b4d3b`) berbingkai kayu hangat (`#b57c43`) lengkap dengan kapur warna-warni dan penghapus papan tulis di talang bawah. Karakter unik **Si Profesor Kapur (`lectureStickman`)** tampil mengenakan **topi toga akademik (*mortarboard*) dengan rumbai emas bergoyang**, **kacamata bulat profesor**, kumis ramah, **jas akademik *tweed* berdasi kupu-kupu merah**, serta **tongkat penunjuk papan tulis (*pointer stick*)** di tangan kanan.
 
-**Gerak (motion):** kamera scroll vertikal 5 panel (PY 700→5700), ease inOutCubic 0.55s per pindah;
-stickman ganti pose + ekspresi per baris (shock → worried → happy → grin), bubble pop outBack.
+**Gerak (motion):** Transisi 4 babak perkuliahan dengan ayunan tongkat penunjuk ke arah diagram kapur (`lectureBoardDiagram`), goyangan rumbai toga, dan kartu catatan kuliah di paruh bawah layar.
 
-**Kenapa menarik:** nuansa kelas yang akrab — papan tulis hijau langsung memberi otoritas guru
-tanpa terasa menggurui. Ritme satu kata per panel cocok untuk tips singkat.
+**Kenapa menarik:** Menghadirkan wibawa akademis yang hangat dan mudah dicerna — mengubah teori sains belajar, memori, dan produktivitas menjadi kuliah visual yang seru.
 
 **Cerita yang cocok:**
-- Atensi Kelas: "Anak-anak, perhatian ke papan tulis!"
-- Avoidance: "Otak kabur itu wajar, namanya avoidance."
-- Mulai 5 Menit: "Solusinya: mulai lima menit saja."
-
-**Rumus hook:** "[Sapaan kelas], perhatian ke [topik]!" / "[Gejala] itu wajar, namanya [istilah]."
+- Kurva Lupa Ebbinghaus & *Spaced Repetition* (mengapa belajar SKS semalam langsung menguap)
+- *Active Recall* vs *Passive Highlighting* (mengapa mewarnai buku dengan stabilo sering menipu otak)
+- Efek Zeigarnik & Jeda Istirahat (mengapa otak terus memikirkan soal yang belum selesai)
 
 **Kit API (`styles/stickman-lecture/kit.js`):**
-- `stickDraw(ctx, pose, t, { reveal })`: stickman boil (pose: x, y, s, face, look, arms, legs, blink).
-- `bubble(ctx, x, y, w, h, tx, ty, text, { a, size, font, textCol, fill, col })`: bubble kata pop.
-- `notebook(ctx)`, `mline(ctx, pts, { w, col, seed, alpha })`: bg papan + garis kapur.
-- `cam(ctx, x, y, z)`, `viewRect(ctx, n)`, `setBoil(t, amp, freq)`.
-- Props: `brainGuy`, `cloud`, `sweat`, `marker`/`markerFor`, `drawWriting`, `drawErase`, `pointAt`, `motion`, `mtext`.
+- `PAL` — palet papan tulis hijau, bingkai kayu, dan kapur (`chalkWhite`, `chalkYellow`, `chalkPink`, `chalkBlue`)
+- `lectureBg(ctx, t, opts)` — latar papan tulis kayu + kapur tulis + penghapus papan
+- `lectureHeader(ctx, badgeText, title, subtitle, opts)` — header silabus kuliah
+- `lectureStickman(ctx, x, floorY, pose, opts)` — karakter unik Si Profesor Kapur (`'teach'`, `'think'`, `'eureka'`)
+- `lectureBoardDiagram(ctx, floorY, badge, formula, note, opts)` — diagram kapur putus-putus di kanan papan
+- `lectureBubble(ctx, x, y, text, opts)` — balon ucapan kapur
+- `lectureCard(ctx, cx, cy, w, h, opts)` — kartu catatan kuliah
 
-**Demo:** "Demo stickman-lecture" — 5 baris, voice el-id-m (ElevenLabs George), musik lofi, 13.4s.
+**Demos:**
+1. `demo1` — *Perhatian ke Papan Tulis! Kurva Lupa Ebbinghaus — Mengapa Sistem Kebut Semalam Cepat Menguap?* (~64 dtk)
+2. `demo2` — *Jebakan Stabilo Warna-Warni — Mengapa Menguji Diri Sendiri Jauh Lebih Ampuh daripada Membaca Ulang?* (~64 dtk)
+3. `demo3` — *Rahasia Efek Zeigarnik di Ruang Kelas — Mengapa Memulai Lima Menit Mengaktifkan Memori Kerja Otak?* (~65 dtk)

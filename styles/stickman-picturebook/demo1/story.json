@@ -1,0 +1,58 @@
+{
+  "title": "Dongeng Batu yang Menyusut — Mengapa Beban Besar Mengecil Saat Kita Mulai Melangkah?",
+  "slug": "stickman_picturebook_batu_menyusut",
+  "style": "stickman-picturebook",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "warm",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu menatap sebuah tugas besar dan merasa tugas itu seperti batu raksasa yang menutup seluruh jalanmu?",
+      "say": "Pernahkah kamu menatap sebuah tugas besar dan merasa tugas itu seperti batu raksasa yang menutup seluruh jalanmu?"
+    },
+    {
+      "id": "pangeran",
+      "text": "Di halaman buku dongeng ini, Pangeran Kecil berdiri gemetar di depan batu kecemasan yang tampak tiga kali lebih tinggi dari tubuhnya.",
+      "say": "Di halaman buku dongeng ini, Pangeran Kecil berdiri gemetar di depan batu kecemasan yang tampak tiga kali lebih tinggi dari tubuhnya."
+    },
+    {
+      "id": "ilusi",
+      "text": "Saat kita hanya diam menatap masalah dari kejauhan, otak memicu pembesaran emosional yang menambahkan bayangan ketakutan semu.",
+      "say": "Saat kita hanya diam menatap masalah dari kejauhan, otak memicu pembesaran emosional yang menambahkan bayangan ketakutan semu."
+    },
+    {
+      "id": "kabut",
+      "text": "Imajinasi cemas membuat masalah tampak mustahil disentuh, padahal sebagian besar ukurannya hanyalah kabut pikiran kita sendiri.",
+      "say": "Imajinasi cemas membuat masalah tampak mustahil disentuh, padahal sebagian besar ukurannya hanyalah kabut pikiran kita sendiri."
+    },
+    {
+      "id": "sentuh",
+      "text": "Keajaiban dongeng terjadi saat Pangeran Kecil memberanikan diri maju dan menyentuh batu itu dengan pena bulu emasnya.",
+      "say": "Keajaiban dongeng terjadi saat Pangeran Kecil memberanikan diri maju dan menyentuh batu itu dengan pena bulu emasnya."
+    },
+    {
+      "id": "susut",
+      "text": "Begitu langkah pertama diambil dan tugas dipecah menjadi satu kalimat awal, batu raksasa itu tiba-tiba menyusut separuh ukuran!",
+      "say": "Begitu langkah pertama diambil dan tugas dipecah menjadi satu kalimat awal, batu raksasa itu tiba-tiba menyusut separuh ukuran!"
+    },
+    {
+      "id": "kerikil",
+      "text": "Setelah tiga langkah kecil yang konsisten, batu yang tadinya menghalangi jalan kini berubah menjadi kerikil kecil yang mudah dilangkahi.",
+      "say": "Setelah tiga langkah kecil yang konsisten, batu yang tadinya menghalangi jalan kini berubah menjadi kerikil kecil yang mudah dilangkahi."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan tunggu rasa takut hilang baru kamu melangkah; ambil satu langkah kecil hari ini dan saksikan batu raksasamu menyusut!",
+      "say": "Jangan tunggu rasa takut hilang baru kamu melangkah; ambil satu langkah kecil hari ini dan saksikan batu raksasamu menyusut!"
+    }
+  ]
+}

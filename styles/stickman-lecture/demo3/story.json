@@ -1,0 +1,59 @@
+{
+  "title": "Rahasia Efek Zeigarnik di Ruang Kelas — Mengapa Memulai Lima Menit Mengaktifkan Memori Kerja Otak?",
+  "slug": "stickman_lecture_efek_zeigarnik",
+  "style": "stickman-lecture",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa kita selalu penasaran dengan kelanjutan film yang bersambung, tetapi sangat sulit menggerakkan diri untuk memulai tugas yang belum disentuh sama sekali?",
+      "say": "Mengapa kita selalu penasaran dengan kelanjutan film yang bersambung, tetapi sangat sulit menggerakkan diri untuk memulai tugas yang belum disentuh sama sekali?"
+    },
+    {
+      "id": "pelayan",
+      "text": "Psikolog Bluma Zeigarnik menemukan jawabannya saat mengamati pelayan restoran yang hafal rincian pesanan yang belum dibayar, namun langsung lupa begitu tagihan lunas.",
+      "say": "Psikolog Bluma Zeigarnik menemukan jawabannya saat mengamati pelayan restoran yang hafal rincian pesanan yang belum dibayar, namun langsung lupa begitu tagihan lunas."
+    },
+    {
+      "id": "loop",
+      "text": "Otak manusia memiliki ketegangan kognitif alami terhadap pekerjaan yang sudah dimulai tetapi belum selesai, seperti tab aplikasi yang tetap terbuka di latar belakang.",
+      "say": "Otak manusia memiliki ketegangan kognitif alami terhadap pekerjaan yang sudah dimulai tetapi belum selesai, seperti tab aplikasi yang tetap terbuka di latar belakang."
+    },
+    {
+      "id": "nol",
+      "text": "Selama tugasmu masih berada di titik nol persen dan belum kamu buka, Efek Zeigarnik belum menyala sehingga kamu mudah sekali melupakannya.",
+      "say": "Selama tugasmu masih berada di titik nol persen dan belum kamu buka, Efek Zeigarnik belum menyala sehingga kamu mudah sekali melupakannya."
+    },
+    {
+      "id": "buka",
+      "text": "Namun begitu kamu menyentuhnya selama lima menit saja, misalnya membuat kerangka judul atau mengerjakan soal nomor satu, tab memori kerja di otakmu langsung aktif!",
+      "say": "Namun begitu kamu menyentuhnya selama lima menit saja, misalnya membuat kerangka judul atau mengerjakan soal nomor satu, tab memori kerja di otakmu langsung aktif!"
+    },
+    {
+      "id": "bawah",
+      "text": "Bahkan saat kamu sedang beristirahat, alam bawah sadarmu akan terus merangkai ide dan menarikmu kembali untuk segera menuntaskan pekerjaan itu.",
+      "say": "Bahkan saat kamu sedang beristirahat, alam bawah sadarmu akan terus merangkai ide dan menarikmu kembali untuk segera menuntaskan pekerjaan itu."
+    },
+    {
+      "id": "hemingway",
+      "text": "Penulis Ernest Hemingway bahkan sengaja berhenti menulis saat ia sudah tahu kalimat berikutnya, agar keesokan paginya ia bisa langsung tancap gas tanpa macet.",
+      "say": "Penulis Ernest Hemingway bahkan sengaja berhenti menulis saat ia sudah tahu kalimat berikutnya, agar keesokan paginya ia bisa langsung tancap gas tanpa macet."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan tunggu siap untuk menyelesaikan semuanya; buka saja tugasmu lima menit hari ini dan biarkan Efek Zeigarnik bekerja untukmu!",
+      "say": "Jangan tunggu siap untuk menyelesaikan semuanya; buka saja tugasmu lima menit hari ini dan biarkan Efek Zeigarnik bekerja untukmu!"
+    }
+  ]
+}
+

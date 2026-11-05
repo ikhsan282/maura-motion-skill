@@ -1,38 +1,24 @@
----
-id: stickman-picturebook
-name: Stickman Picturebook
-no: 77
-source: custom:stickman-doodle-kit
-family: stickman
-tech: canvas2d
-music: lofi   voice: el-id-m   captions: hand
-best_for: cerita anak-dewasa, dongeng motivasi, konten hangat, bedtime wisdom
----
-# Stickman Picturebook
+# Stickman Picturebook (`styles/stickman-picturebook`)
 
-**Ciri khas (look):** kertas krem hangat (#fdf3d8), tinta cokelat (#5b4a3a), aksen merah (#e0412f) +
-biru (#2f6fd6) + kuning (#f6d24a). Panel doodle sama seperti minimal-dark tapi di atas kertas:
-"PEMALAS?" dicoret, lembar TUGAS, alarm "KABUR!", awan hujan, timer biru, batu menyusut. Boil halus.
+Gaya **Stickman Picturebook (No. 77)** menghadirkan estetika **Buku Dongeng Ilustrasi Klasik Berbingkai Jahitan Emas** dengan karakter ikonik **"Si Pangeran Kecil Buku Cerita (`picturebookStickman`)"** yang mengenakan mahkota kertas emas tiga puncak, jubah merah tua yang berkibar lembut, syal emas, tunik zamrud berkancing bintang, pipi merona hangat, serta membawa pena bulu emas atau lentera dongeng.
 
-**Gerak (motion):** kamera scroll vertikal 5 panel (PY 700→5700); Sketch digambar progresif mengikuti
-word-timing (speed 2600–3400, seed per panel); stickman-beanie mendorong batu yang mengecil;
-9 sfx (pencil, alarm, hujan, timer).
+## Karakteristik Visual & Anatomi Unik
+- **Kanvas Halaman Buku Dongeng (`picturebookBg`)**: Kertas krem hangat (`#fff9ea`) dengan tepi jahitan buku cerita, pita pembatas buku merah (`crimson bookmark ribbon`) di sudut kanan atas, dan taburan bintang emas lembut.
+- **Karakter Ikonik (`picturebookStickman`)**:
+  - **Mahkota Kertas Emas 3 Puncak** dengan permata merah di tengah.
+  - **Wajah Hangat Pipi Merona** dengan mata ramah dan senyum dongeng.
+  - **Jubah Merah Berkibar & Tunik Zamrud** dengan sabuk kulit dan lencana emas di dada.
+  - **Properti Interaktif**: Pena bulu emas (`prop: 'quill'`), lentera berpendar (`prop: 'lantern'`), atau penyiram tanaman (`prop: 'watering'`).
 
-**Kenapa menarik:** rasa buku cerita yang hangat dan aman — topik berat (prokrastinasi, rasa bersalah)
-jadi mudah dicerna semua umur. Kertas krem juga ramah mata di layar malam.
+## Komponen Utama `kit.js`
+- `picturebookBg(ctx, W, H, t)`
+- `drawPicturebookHeader(ctx, W, chapterTag, title, subtitle, accent)`
+- `drawStorybookStage(ctx, x, y, w, h, t, accent, meadowLabel)`
+- `picturebookStickman(ctx, x, y, t, opts)`
+- `drawStoryCard(ctx, x, y, w, h, opts)`
+- `drawPicturebookFooter(ctx, W, H, moralText, accent)`
 
-**Cerita yang cocok:**
-- Kenapa Menunda: "Kamu bukan pemalas. Otakmu cuma kabur dari rasa tidak enak."
-- Dongeng 5 Menit: "Triknya: jangan tunggu mood. Bilang, lima menit aja."
-- Batu Jadi Kerikil: "Begitu mulai, beratnya mengecil."
-
-**Rumus hook:** "Kamu bukan [label negatif]. [Alasan hangat]." / "[Beban besar] menyusut jadi [kecil] begitu mulai."
-
-**Kit API (`styles/stickman-picturebook/kit.js`):**
-- `Sketch`: `text()`, `line()`, `at()` — gambar progresif sinkron word-timing (`t0`, `speed`, `seed`, `gap`).
-- `Pen().sketch(d)`: eksekutor sketch; `G.rect()`: geometri bantu.
-- `stickDraw(ctx, pose, t, { reveal })`, `bubble(...)`, `brainGuy`, `cloud`, `sweat`.
-- `cam(ctx, x, y, z)`, `viewRect(ctx, n)`, `setBoil(t, amp, freq)`, `marker`, `drawWriting`, `pointAt`, `motion`.
-
-**Demo:** "Demo stickman-picturebook" — 5 baris (prokrastinasi/amigdala), voice el-id-m
-(ElevenLabs George), musik lofi, 18.1s.
+## Daftar Demo (64–65 Detik, Voice `el-id-m`)
+1. **`demo1`**: *Dongeng Batu yang Menyusut — Mengapa Beban Besar Mengecil Saat Kita Mulai Melangkah?*
+2. **`demo2`**: *Kisah Dua Benih di Taman — Mengapa Membandingkan Musim Tumbuhmu dengan Orang Lain Itu Tidak Adil?*
+3. **`demo3`**: *Lentera Seratus Langkah — Mengapa Kamu Hanya Perlu Melihat Satu Langkah di Depan Kaki?*

@@ -1,0 +1,59 @@
+{
+  "title": "Jebakan Stabilo Warna-Warni — Mengapa Menguji Diri Sendiri Jauh Lebih Ampuh daripada Membaca Ulang?",
+  "slug": "stickman_lecture_active_recall",
+  "style": "stickman-lecture",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Siapa di kelas ini yang bukunya penuh coretan stabilo warna-warni dari atas sampai bawah, namun tetap bingung saat lembar soal dibagikan?",
+      "say": "Siapa di kelas ini yang bukunya penuh coretan stabilo warna-warni dari atas sampai bawah, namun tetap bingung saat lembar soal dibagikan?"
+    },
+    {
+      "id": "stabilo",
+      "text": "Penelitian psikologi kognitif oleh Profesor John Dunlosky membuktikan bahwa menandai buku dengan stabilo dan membaca ulang adalah metode belajar paling rendah efektivitasnya.",
+      "say": "Penelitian psikologi kognitif oleh Profesor John Dunlosky membuktikan bahwa menandai buku dengan stabilo dan membaca ulang adalah metode belajar paling rendah efektivitasnya."
+    },
+    {
+      "id": "pasif",
+      "text": "Mewarnai halaman buku memang memberi kepuasan visual seolah-olah kita sudah rajin belajar, padahal otak kita sedang berada dalam mode pasif.",
+      "say": "Mewarnai halaman buku memang memberi kepuasan visual seolah-olah kita sudah rajin belajar, padahal otak kita sedang berada dalam mode pasif."
+    },
+    {
+      "id": "recall",
+      "text": "Metode juara yang terbukti dua kali lebih ampuh adalah Active Recall atau pemanggilan aktif: tutup bukumu, lalu tarik keluar informasinya dari dalam ingatanmu.",
+      "say": "Metode juara yang terbukti dua kali lebih ampuh adalah Active Recall atau pemanggilan aktif: tutup bukumu, lalu tarik keluar informasinya dari dalam ingatanmu."
+    },
+    {
+      "id": "kertas",
+      "text": "Setiap selesai membaca satu halaman, ambil selembar kertas kosong dan tuliskan tiga poin utama yang baru saja kamu pelajari tanpa mengintip.",
+      "say": "Setiap selesai membaca satu halaman, ambil selembar kertas kosong dan tuliskan tiga poin utama yang baru saja kamu pelajari tanpa mengintip."
+    },
+    {
+      "id": "berat",
+      "text": "Memeras otak untuk mengingat memang terasa lebih melelahkan daripada sekadar membaca, tetapi justru rasa berat itulah yang sedang membentuk otot memorimu.",
+      "say": "Memeras otak untuk mengingat memang terasa lebih melelahkan daripada sekadar membaca, tetapi justru rasa berat itulah yang sedang membentuk otot memorimu."
+    },
+    {
+      "id": "kartu",
+      "text": "Ubah subjudul bukumu menjadi daftar pertanyaan, sehingga setiap kali belajar kamu langsung berlatih menjawab seperti saat ujian sesungguhnya.",
+      "say": "Ubah subjudul bukumu menjadi daftar pertanyaan, sehingga setiap kali belajar kamu langsung berlatih menjawab seperti saat ujian sesungguhnya."
+    },
+    {
+      "id": "moral",
+      "text": "Simpan stabilo warna-warnimu; tutup bukumu dan ujilah ingatanmu secara aktif mulai hari ini!",
+      "say": "Simpan stabilo warna-warnimu; tutup bukumu dan ujilah ingatanmu secara aktif mulai hari ini!"
+    }
+  ]
+}
+

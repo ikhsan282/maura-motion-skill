@@ -1,0 +1,58 @@
+{
+  "title": "Lentera Seratus Langkah — Mengapa Kamu Hanya Perlu Melihat Satu Langkah di Depan Kaki?",
+  "slug": "stickman_picturebook_lentera_langkah",
+  "style": "stickman-picturebook",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "warm",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Malam turun di hutan buku dongeng, dan Pangeran Kecil harus menyeberangi lembah sepanjang seratus langkah menuju kastil impian.",
+      "say": "Malam turun di hutan buku dongeng, dan Pangeran Kecil harus menyeberangi lembah sepanjang seratus langkah menuju kastil impian."
+    },
+    {
+      "id": "cemas",
+      "text": "Ia berhenti cemas karena lentera kecil di tangannya hanya mampu menerangi dua langkah pendek di depan kakinya.",
+      "say": "Ia berhenti cemas karena lentera kecil di tangannya hanya mampu menerangi dua langkah pendek di depan kakinya."
+    },
+    {
+      "id": "lumpuh",
+      "text": "Kita sering mengalami kelumpuhan analisis karena menuntut kepastian penuh dari langkah pertama hingga langkah keseratus sebelum mau bergerak.",
+      "say": "Kita sering mengalami kelumpuhan analisis karena menuntut kepastian penuh dari langkah pertama hingga langkah keseratus sebelum mau bergerak."
+    },
+    {
+      "id": "kabut",
+      "text": "Ketika masa depan masih tertutup kabut malam, otak kita keliru mengira bahwa jalan di depan tidak ada.",
+      "say": "Ketika masa depan masih tertutup kabut malam, otak kita keliru mengira bahwa jalan di depan tidak ada."
+    },
+    {
+      "id": "cahaya",
+      "text": "Namun rahasia lentera dongeng sangat sederhana: lingkaran cahayanya ikut berpindah mengikuti setiap langkah kakimu!",
+      "say": "Namun rahasia lentera dongeng sangat sederhana: lingkaran cahayanya ikut berpindah mengikuti setiap langkah kakimu!"
+    },
+    {
+      "id": "terbuka",
+      "text": "Saat Pangeran Kecil maju ke langkah kedua, cahaya lentera otomatis membuka langkah ketiga dan keempat yang tadinya gelap.",
+      "say": "Saat Pangeran Kecil maju ke langkah kedua, cahaya lentera otomatis membuka langkah ketiga dan keempat yang tadinya gelap."
+    },
+    {
+      "id": "hadiah",
+      "text": "Kejelasan hidup tidak pernah diberikan sekaligus di garis awal, melainkan dibuka sedikit demi sedikit bagi mereka yang terus berjalan.",
+      "say": "Kejelasan hidup tidak pernah diberikan sekaligus di garis awal, melainkan dibuka sedikit demi sedikit bagi mereka yang terus berjalan."
+    },
+    {
+      "id": "moral",
+      "text": "Pegang lentera kecilmu hari ini, ambil satu langkah yang terlihat jelas sekarang, dan biarkan jalan berikutnya terbuka!",
+      "say": "Pegang lentera kecilmu hari ini, ambil satu langkah yang terlihat jelas sekarang, dan biarkan jalan berikutnya terbuka!"
+    }
+  ]
+}

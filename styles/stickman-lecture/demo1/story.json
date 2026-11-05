@@ -1,0 +1,58 @@
+{
+  "title": "Perhatian ke Papan Tulis! Kurva Lupa Ebbinghaus — Mengapa Sistem Kebut Semalam Cepat Menguap?",
+  "slug": "stickman_lecture_kurva_ebbinghaus",
+  "style": "stickman-lecture",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Perhatian ke papan tulis semuanya! Pernahkah kamu menghafal materi ujian semalaman suntuk, namun dua hari kemudian hampir semuanya hilang dari ingatan?",
+      "say": "Perhatian ke papan tulis semuanya! Pernahkah kamu menghafal materi ujian semalaman suntuk, namun dua hari kemudian hampir semuanya hilang dari ingatan?"
+    },
+    {
+      "id": "ebbinghaus",
+      "text": "Pada tahun seribu delapan ratus delapan puluh lima, psikolog Hermann Ebbinghaus memetakan fenomena ini melalui rumus terkenal yang disebut Kurva Lupa.",
+      "say": "Pada tahun seribu delapan ratus delapan puluh lima, psikolog Hermann Ebbinghaus memetakan fenomena ini melalui rumus terkenal yang disebut Kurva Lupa."
+    },
+    {
+      "id": "turun",
+      "text": "Tanpa pengulangan, otak kita secara alami membuang lebih dari enam puluh persen informasi baru hanya dalam waktu dua puluh empat jam pertama.",
+      "say": "Tanpa pengulangan, otak kita secara alami membuang lebih dari enam puluh persen informasi baru hanya dalam waktu dua puluh empat jam pertama."
+    },
+    {
+      "id": "sks",
+      "text": "Sistem kebut semalam memaksa otak menampung informasi di memori jangka pendek yang rapuh, persis seperti menulis kapur di atas air.",
+      "say": "Sistem kebut semalam memaksa otak menampung informasi di memori jangka pendek yang rapuh, persis seperti menulis kapur di atas air."
+    },
+    {
+      "id": "spaced",
+      "text": "Cara meretas kurva lupa ini adalah Spaced Repetition atau pengulangan berjarak: ulangi materi pada hari pertama, hari ketiga, dan hari ketujuh.",
+      "say": "Cara meretas kurva lupa ini adalah Spaced Repetition atau pengulangan berjarak: ulangi materi pada hari pertama, hari ketiga, dan hari ketujuh."
+    },
+    {
+      "id": "sinyal",
+      "text": "Setiap kali kamu memanggil kembali ingatan tepat sebelum ia terlupakan, sambungan sinapsis di otakmu diperkuat menjadi memori jangka panjang.",
+      "say": "Setiap kali kamu memanggil kembali ingatan tepat sebelum ia terlupakan, sambungan sinapsis di otakmu diperkuat menjadi memori jangka panjang."
+    },
+    {
+      "id": "hemat",
+      "text": "Belajar dua puluh menit selama empat hari berturut-turut jauh lebih kuat hasilnya daripada belajar empat jam sekaligus di malam terakhir.",
+      "say": "Belajar dua puluh menit selama empat hari berturut-turut jauh lebih kuat hasilnya daripada belajar empat jam sekaligus di malam terakhir."
+    },
+    {
+      "id": "moral",
+      "text": "Catat rumus Profesor Kapur ini: cicil pengulanganmu secara berjarak, dan kuasai ilmu untuk selamanya!",
+      "say": "Catat rumus Profesor Kapur ini: cicil pengulanganmu secara berjarak, dan kuasai ilmu untuk selamanya!"
+    }
+  ]
+}

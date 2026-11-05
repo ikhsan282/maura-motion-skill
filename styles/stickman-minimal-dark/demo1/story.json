@@ -1,0 +1,58 @@
+{
+  "title": "Kamu Bukan Pemalas, Kamu Sedang Menghindari Rasa Cemas — Sains Regulasi Emosi",
+  "slug": "stickman_minimal_dark_regulasi_emosi",
+  "style": "stickman-minimal-dark",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Berhentilah mencaci maki dirimu sendiri sebagai pemalas setiap kali kamu menunda pekerjaan penting yang sebenarnya sangat ingin kamu selesaikan.",
+      "say": "Berhentilah mencaci maki dirimu sendiri sebagai pemalas setiap kali kamu menunda pekerjaan penting yang sebenarnya sangat ingin kamu selesaikan."
+    },
+    {
+      "id": "pychyl",
+      "text": "Profesor psikologi Tim Pychyl dan Fuschia Sirois membuktikan bahwa prokrastinasi bukanlah masalah manajemen waktu, melainkan masalah regulasi emosi.",
+      "say": "Profesor psikologi Tim Pychyl dan Fuschia Sirois membuktikan bahwa prokrastinasi bukanlah masalah manajemen waktu, melainkan masalah regulasi emosi."
+    },
+    {
+      "id": "emosi",
+      "text": "Kita menunda sebuah tugas bukan karena kita malas bekerja, melainkan karena tugas itu memicu perasaan tidak nyaman seperti takut gagal, bingung, atau merasa kurang mampu.",
+      "say": "Kita menunda sebuah tugas bukan karena kita malas bekerja, melainkan karena tugas itu memicu perasaan tidak nyaman seperti takut gagal, bingung, atau merasa kurang mampu."
+    },
+    {
+      "id": "rasa",
+      "text": "Menghukum diri sendiri dengan kata-kata kasar justru menambah beban kecemasan, yang membuat otakmu semakin ingin kabur dari pekerjaan tersebut.",
+      "say": "Menghukum diri sendiri dengan kata-kata kasar justru menambah beban kecemasan, yang membuat otakmu semakin ingin kabur dari pekerjaan tersebut."
+    },
+    {
+      "id": "maaf",
+      "text": "Penelitian menunjukkan bahwa orang yang memaafkan dirinya atas penundaan kemarin justru jauh lebih cepat memulai kerja di hari berikutnya.",
+      "say": "Penelitian menunjukkan bahwa orang yang memaafkan dirinya atas penundaan kemarin justru jauh lebih cepat memulai kerja di hari berikutnya."
+    },
+    {
+      "id": "tanya",
+      "text": "Saat kamu merasa berat memulai, tanyakan dengan lembut pada dirimu: bagian mana dari tugas ini yang membuatku merasa cemas atau bingung?",
+      "say": "Saat kamu merasa berat memulai, tanyakan dengan lembut pada dirimu: bagian mana dari tugas ini yang membuatku merasa cemas atau bingung?"
+    },
+    {
+      "id": "urai",
+      "text": "Begitu benang kusut emosi itu terurai menjadi satu langkah teknis yang jelas, kabut ketakutan di kepalamu akan langsung menghilang.",
+      "say": "Begitu benang kusut emosi itu terurai menjadi satu langkah teknis yang jelas, kabut ketakutan di kepalamu akan langsung menghilang."
+    },
+    {
+      "id": "moral",
+      "text": "Peluk kecemasanmu dengan pengertian, maafkan dirimu, dan melangkahlah dengan pikiran yang jernih.",
+      "say": "Peluk kecemasanmu dengan pengertian, maafkan dirimu, dan melangkahlah dengan pikiran yang jernih."
+    }
+  ]
+}

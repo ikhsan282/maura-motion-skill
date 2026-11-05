@@ -1,0 +1,58 @@
+{
+  "title": "Kisah Dua Benih di Taman — Mengapa Membandingkan Musim Tumbuhmu dengan Orang Lain Itu Tidak Adil?",
+  "slug": "stickman_picturebook_dua_benih",
+  "style": "stickman-picturebook",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "warm",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di taman buku dongeng ini, Pangeran Kecil menanam dua benih di hari yang sama: satu benih bunga matahari dan satu benih pohon ek raksasa.",
+      "say": "Di taman buku dongeng ini, Pangeran Kecil menanam dua benih di hari yang sama: satu benih bunga matahari dan satu benih pohon ek raksasa."
+    },
+    {
+      "id": "permukaan",
+      "text": "Seminggu kemudian, tunas bunga matahari sudah menjulang tinggi, sementara tanah pohon ek masih tampak nyaris kosong.",
+      "say": "Seminggu kemudian, tunas bunga matahari sudah menjulang tinggi, sementara tanah pohon ek masih tampak nyaris kosong."
+    },
+    {
+      "id": "ragu",
+      "text": "Jika benih pohon ek membandingkan dirinya dengan bunga matahari di minggu pertama, ia pasti merasa gagal dan tertinggal.",
+      "say": "Jika benih pohon ek membandingkan dirinya dengan bunga matahari di minggu pertama, ia pasti merasa gagal dan tertinggal."
+    },
+    {
+      "id": "manusia",
+      "text": "Begitu pula manusia saat melihat teman sebaya tampak lebih cepat berhasil di permukaan hidup.",
+      "say": "Begitu pula manusia saat melihat teman sebaya tampak lebih cepat berhasil di permukaan hidup."
+    },
+    {
+      "id": "akar",
+      "text": "Namun ketika halaman buku dibuka ke lapisan bawah tanah, terlihat rahasia besarnya: pohon ek sedang membangun jaringan akar vertikal yang sangat dalam.",
+      "say": "Namun ketika halaman buku dibuka ke lapisan bawah tanah, terlihat rahasia besarnya: pohon ek sedang membangun jaringan akar vertikal yang sangat dalam."
+    },
+    {
+      "id": "fondasi",
+      "text": "Akar yang dalam itulah yang kelak membuat pohon ek mampu menopang dahan raksasa dan bertahan menghadapi badai ratusan tahun.",
+      "say": "Akar yang dalam itulah yang kelak membuat pohon ek mampu menopang dahan raksasa dan bertahan menghadapi badai ratusan tahun."
+    },
+    {
+      "id": "musim",
+      "text": "Apa yang terlihat lambat di atas permukaan sering kali merupakan fondasi terdalam yang sedang dipersiapkan di bawah tanah.",
+      "say": "Apa yang terlihat lambat di atas permukaan sering kali merupakan fondasi terdalam yang sedang dipersiapkan di bawah tanah."
+    },
+    {
+      "id": "moral",
+      "text": "Berhentilah mencabut benihmu karena taman tetangga mekar lebih dulu; sirami akarmu dengan sabar hingga musim tumbuhmu tiba!",
+      "say": "Berhentilah mencabut benihmu karena taman tetangga mekar lebih dulu; sirami akarmu dengan sabar hingga musim tumbuhmu tiba!"
+    }
+  ]
+}

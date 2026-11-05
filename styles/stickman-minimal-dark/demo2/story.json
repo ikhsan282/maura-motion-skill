@@ -1,0 +1,59 @@
+{
+  "title": "Menghentikan Overthinking Pukul Dua Pagi — Teknik Brain Dump & Jarak Kognitif",
+  "slug": "stickman_minimal_dark_brain_dump",
+  "style": "stickman-minimal-dark",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa setiap kali lampu kamar dimatikan dan kita berbaring ingin tidur, pikiran kita justru mendadak ramai memutar puluhan kekhawatiran sekaligus?",
+      "say": "Mengapa setiap kali lampu kamar dimatikan dan kita berbaring ingin tidur, pikiran kita justru mendadak ramai memutar puluhan kekhawatiran sekaligus?"
+    },
+    {
+      "id": "malam",
+      "text": "Pada malam hari, pusat logika di korteks prefrontal mulai lelah beristirahat, sementara pusat emosi amigdala tetap terjaga dan membesar-besarkan masalah.",
+      "say": "Pada malam hari, pusat logika di korteks prefrontal mulai lelah beristirahat, sementara pusat emosi amigdala tetap terjaga dan membesar-besarkan masalah."
+    },
+    {
+      "id": "putar",
+      "text": "Memikirkan masalah berulang-ulang di atas kasur tidak akan menghasilkan solusi, karena memori kerja otak terus berputar di tempat seperti kaset rusak.",
+      "say": "Memikirkan masalah berulang-ulang di atas kasur tidak akan menghasilkan solusi, karena memori kerja otak terus berputar di tempat seperti kaset rusak."
+    },
+    {
+      "id": "tuang",
+      "text": "Cara tercepat mematikan putaran pikiran ini adalah teknik Brain Dump: ambil buku catatan dan tuangkan seluruh isi kepalamu ke atas kertas.",
+      "say": "Cara tercepat mematikan putaran pikiran ini adalah teknik Brain Dump: ambil buku catatan dan tuangkan seluruh isi kepalamu ke atas kertas."
+    },
+    {
+      "id": "baylor",
+      "text": "Penelitian Universitas Baylor menemukan bahwa menuliskan daftar spesifik tugas untuk besok malam sebelum tidur membuat seseorang terlelap jauh lebih cepat.",
+      "say": "Penelitian Universitas Baylor menemukan bahwa menuliskan daftar spesifik tugas untuk besok malam sebelum tidur membuat seseorang terlelap jauh lebih cepat."
+    },
+    {
+      "id": "simpan",
+      "text": "Saat sebuah kekhawatiran sudah tertulis di kertas, otak merasa aman karena tahu informasi itu sudah tersimpan dan tidak akan terlupakan.",
+      "say": "Saat sebuah kekhawatiran sudah tertulis di kertas, otak merasa aman karena tahu informasi itu sudah tersimpan dan tidak akan terlupakan."
+    },
+    {
+      "id": "besok",
+      "text": "Katakan pada pikiranmu: semuanya sudah tercatat rapi di kertas ini, dan kita akan menyelesaikannya besok pagi saat tenaga sudah pulih.",
+      "say": "Katakan pada pikiranmu: semuanya sudah tercatat rapi di kertas ini, dan kita akan menyelesaikannya besok pagi saat tenaga sudah pulih."
+    },
+    {
+      "id": "moral",
+      "text": "Pindahkan beban dari kepalamu ke atas kertas malam ini, dan berikan hak istirahat yang tenang bagi pikiranmu.",
+      "say": "Pindahkan beban dari kepalamu ke atas kertas malam ini, dan berikan hak istirahat yang tenang bagi pikiranmu."
+    }
+  ]
+}
+

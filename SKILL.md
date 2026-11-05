@@ -144,9 +144,9 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 72 | **Stickman Cinematic** | stickman-cinematic | ✅ ([demo1](styles/stickman-cinematic/demo1/) · [demo2](styles/stickman-cinematic/demo2/) · [demo3](styles/stickman-cinematic/demo3/)) |
 | 73 | **Stickman Duo** | stickman-duo | ✅ ([demo1](styles/stickman-duo/demo1/) · [demo2](styles/stickman-duo/demo2/) · [demo3](styles/stickman-duo/demo3/)) |
 | 74 | **Stickman Graffiti** | stickman-graffiti | ✅ ([demo1](styles/stickman-graffiti/demo1/) · [demo2](styles/stickman-graffiti/demo2/) · [demo3](styles/stickman-graffiti/demo3/)) |
-| 75 | **Stickman Lecture** | stickman-lecture | ✅ ([styles/stickman-lecture](styles/stickman-lecture/)) |
-| 76 | **Stickman Minimal Dark** | stickman-minimal-dark | ✅ ([styles/stickman-minimal-dark](styles/stickman-minimal-dark/)) |
-| 77 | **Stickman Picturebook** | stickman-picturebook | ✅ ([styles/stickman-picturebook](styles/stickman-picturebook/)) |
+| 75 | **Stickman Lecture** | stickman-lecture | ✅ ([demo1](styles/stickman-lecture/demo1/) · [demo2](styles/stickman-lecture/demo2/) · [demo3](styles/stickman-lecture/demo3/)) |
+| 76 | **Stickman Minimal Dark** | stickman-minimal-dark | ✅ ([demo1](styles/stickman-minimal-dark/demo1/) · [demo2](styles/stickman-minimal-dark/demo2/) · [demo3](styles/stickman-minimal-dark/demo3/)) |
+| 77 | **Stickman Picturebook** | stickman-picturebook | ✅ ([demo1](styles/stickman-picturebook/demo1/) · [demo2](styles/stickman-picturebook/demo2/) · [demo3](styles/stickman-picturebook/demo3/)) |
 
 ## Troubleshooting
 

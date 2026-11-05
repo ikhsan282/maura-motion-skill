@@ -174,9 +174,9 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 | 72 | **Stickman Cinematic** | `stickman-cinematic` | ✅ | [Kota Tidur, Mimpimu Belum Selesai (45 Menit Malam)](styles/stickman-cinematic/demo1/) (64 dtk) | [Juara Ditempa Saat Lampu Panggung Mati](styles/stickman-cinematic/demo2/) (64 dtk) | [Surat dari Dirimu Satu Tahun Lagi](styles/stickman-cinematic/demo3/) (65 dtk) |
 | 73 | **Stickman Duo** | `stickman-duo` | ✅ | [Mager Sendirian vs Gas Bareng (ASTD 95%)](styles/stickman-duo/demo1/) (64 dtk) | [Efek Body Doubling (Fokus Bersama)](styles/stickman-duo/demo2/) (64 dtk) | [Rahasia Protégé Effect (Belajar = Mengajar)](styles/stickman-duo/demo3/) (65 dtk) |
 | 74 | **Stickman Graffiti** | `stickman-graffiti` | ✅ | [Tembok Ini Saksi Mimpimu (The Taste Gap)](styles/stickman-graffiti/demo1/) (64 dtk) | [Jangan Hapus Gagalmu, Timpa dengan Karya](styles/stickman-graffiti/demo2/) (64 dtk) | [Temukan Ciri Khasmu Sendiri (Signature Style)](styles/stickman-graffiti/demo3/) (65 dtk) |
-| 75 | **Stickman Lecture** | `stickman-lecture` | ✅ | [Perhatian ke Papan Tulis!](styles/stickman-lecture/demo/) (15 dtk) | — | — |
-| 76 | **Stickman Minimal Dark** | `stickman-minimal-dark` | ✅ | [Kamu Bukan Pemalas (Minimal Dark)](styles/stickman-minimal-dark/demo/) (15 dtk) | — | — |
-| 77 | **Stickman Picturebook** | `stickman-picturebook` | ✅ | [Kamu Bukan Pemalas (Buku Cerita)](styles/stickman-picturebook/demo/) (15 dtk) | — | — |
+| 75 | **Stickman Lecture** | `stickman-lecture` | ✅ | [Kurva Lupa Ebbinghaus (Spaced Repetition)](styles/stickman-lecture/demo1/) (64 dtk) | [Jebakan Stabilo vs Active Recall](styles/stickman-lecture/demo2/) (64 dtk) | [Efek Zeigarnik & Aturan 5 Menit](styles/stickman-lecture/demo3/) (65 dtk) |
+| 76 | **Stickman Minimal Dark** | `stickman-minimal-dark` | ✅ | [Kamu Bukan Pemalas (Regulasi Emosi)](styles/stickman-minimal-dark/demo1/) (64 dtk) | [Hentikan Overthinking Jam 2 Pagi (Brain Dump)](styles/stickman-minimal-dark/demo2/) (64 dtk) | [Lingkaran Kendali Stoik (Epictetus)](styles/stickman-minimal-dark/demo3/) (65 dtk) |
+| 77 | **Stickman Picturebook** | `stickman-picturebook` | ✅ | [Dongeng Batu yang Menyusut (Langkah Awal)](styles/stickman-picturebook/demo1/) (64 dtk) | [Kisah Dua Benih di Taman (Akar Pohon Ek)](styles/stickman-picturebook/demo2/) (64 dtk) | [Lentera Seratus Langkah (Cahaya Berpindah)](styles/stickman-picturebook/demo3/) (65 dtk) |
 
 ## Contoh hasil
 

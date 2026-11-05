@@ -1,0 +1,59 @@
+{
+  "title": "Lingkaran Kendali Stoik — Mengapa Melepaskan Hal di Luar Kendalimu Mengembalikan Kedamaian?",
+  "slug": "stickman_minimal_dark_lingkaran_kendali",
+  "style": "stickman-minimal-dark",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Sebagian besar kelelahan batin kita bukan berasal dari beratnya pekerjaan yang kita lakukan, melainkan dari memikirkan hal-hal yang tidak bisa kita kendalikan.",
+      "say": "Sebagian besar kelelahan batin kita bukan berasal dari beratnya pekerjaan yang kita lakukan, melainkan dari memikirkan hal-hal yang tidak bisa kita kendalikan."
+    },
+    {
+      "id": "epictetus",
+      "text": "Dua ribu tahun lalu, filsuf Epictetus mengajarkan satu rumus ketenangan paling tajam yang dikenal sebagai Dikotomi Kendali.",
+      "say": "Dua ribu tahun lalu, filsuf Epictetus mengajarkan satu rumus ketenangan paling tajam yang dikenal sebagai Dikotomi Kendali."
+    },
+    {
+      "id": "luar",
+      "text": "Di lingkaran luar terdapat hal-hal yang berada di luar kuasa kita: komentar orang lain, masa lalu yang sudah lewat, cuaca, hingga hasil akhir yang belum terjadi.",
+      "say": "Di lingkaran luar terdapat hal-hal yang berada di luar kuasa kita: komentar orang lain, masa lalu yang sudah lewat, cuaca, hingga hasil akhir yang belum terjadi."
+    },
+    {
+      "id": "bocor",
+      "text": "Ketika kamu menggantungkan kebahagiaanmu pada lingkaran luar tersebut, ketenanganmu akan selalu terombang-ambing setiap hari.",
+      "say": "Ketika kamu menggantungkan kebahagiaanmu pada lingkaran luar tersebut, ketenanganmu akan selalu terombang-ambing setiap hari."
+    },
+    {
+      "id": "dalam",
+      "text": "Tarik kembali seluruh energimu menuju lingkaran dalam yang seratus persen berada di tanganmu: usaha terbaikmu, ucapanmu, dan caramu merespons keadaan.",
+      "say": "Tarik kembali seluruh energimu menuju lingkaran dalam yang seratus persen berada di tanganmu: usaha terbaikmu, ucapanmu, dan caramu merespons keadaan."
+    },
+    {
+      "id": "pemanah",
+      "text": "Jadilah seperti seorang pemanah bijak: tugasmu adalah membidik dan menarik busur sebaik mungkin, sedangkan hembusan angin setelah anak panah lepas bukanlah urusanmu lagi.",
+      "say": "Jadilah seperti seorang pemanah bijak: tugasmu adalah membidik dan menarik busur sebaik mungkin, sedangkan hembusan angin setelah anak panah lepas bukanlah urusanmu lagi."
+    },
+    {
+      "id": "fokus",
+      "text": "Saat kamu berhenti mencemaskan hal yang bukan bagianmu, kamu mendapatkan kembali seratus persen kekuatan untuk menyempurnakan langkahmu.",
+      "say": "Saat kamu berhenti mencemaskan hal yang bukan bagianmu, kamu mendapatkan kembali seratus persen kekuatan untuk menyempurnakan langkahmu."
+    },
+    {
+      "id": "moral",
+      "text": "Fokuskan lenteramu pada apa yang bisa kamu kerjakan hari ini, dan lepaskan sisanya dengan hati yang lapang.",
+      "say": "Fokuskan lenteramu pada apa yang bisa kamu kerjakan hari ini, dan lepaskan sisanya dengan hati yang lapang."
+    }
+  ]
+}
+
