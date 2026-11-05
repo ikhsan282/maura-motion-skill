@@ -1,0 +1,43 @@
+{
+  "title": "Zoom In ke Dalam Sehelai Daun — Dari Sel, Heliks DNA, hingga Kuark",
+  "slug": "53_skala-kosmik-mikro-kuark",
+  "style": "skala-kosmik",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "daun",
+      "text": "Jika tadi kita terbang keluar menuju ujung semesta, apa yang akan kita temukan bila kita menyelam masuk ke dalam sehelai daun hijau di tanganmu? Pada skala sepuluh pangkat minus satu meter, tulang-tulang daun tampak seperti jaringan sungai.",
+      "pause": 0.25
+    },
+    {
+      "id": "sel",
+      "text": "Saat kita perbesar sepuluh ribu kali ke skala sepuluh pangkat minus lima meter, permukaan daun terbuka menjadi bilik-bilik sel tumbuhan tempat butiran hijau kloroplas sibuk menangkap foton cahaya matahari.",
+      "pause": 0.25
+    },
+    {
+      "id": "dna",
+      "text": "Menyelam lebih dalam ke inti sel pada skala nanometer atau sepuluh pangkat minus sembilan meter, terlihatlah tangga berpilin ganda molekul DNA yang menyimpan cetak biru kehidupan.",
+      "pause": 0.25
+    },
+    {
+      "id": "atom",
+      "text": "Pada sepuluh pangkat minus sepuluh meter, kita menembus satu Atom Karbon: enam elektron berputar kencang mengelilingi ruang kosong yang nyaris hampa menuju inti atom yang sangat mungil di tengahnya.",
+      "pause": 0.25
+    },
+    {
+      "id": "kuark",
+      "text": "Dan di kedalaman terdalam sepuluh pangkat minus lima belas meter, inti proton terbelah memperlihatkan tiga partikel dasar Kuark yang diikat oleh gaya kuat gluon: fondasi terkecil penyusun alam semesta."
+    }
+  ]
+}
+

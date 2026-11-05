@@ -96,7 +96,7 @@ Default suara untuk Bahasa Indonesia maupun Inggris adalah **ElevenLabs George**
 
 Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`), `~/.hermes/elevenlabs.env`, atau `.env` di folder repo.
 
-## Status gaya (77 gaya: 74 siap pakai ✅, 3 belum diimplementasi ❌)
+## Status gaya (77 gaya: 75 siap pakai ✅, 2 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|:---:|---|---|---|
@@ -152,12 +152,12 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 | 50 | **Infografis Data** | `infografis-data` | ✅ | [Jika Dunia Hanya 100 Orang](styles/infografis-data/demo1/) (63 dtk) | [Harga Bensin 10 Tahun (2015–2025)](styles/infografis-data/demo2/) (63 dtk) | [Kirim Kucing ke Mana Aja (Tarif & Jarak)](styles/infografis-data/demo3/) (64 dtk) |
 | 51 | **3D Cutaway Explainer** | `cutaway-3d` | ✅ | [Isi Jam Tangan Mekanik (28.800 Detak/Jam)](styles/cutaway-3d/demo1/) (64 dtk) | [Mesin Jet Turbofan (Hisap, Tekan, Bakar)](styles/cutaway-3d/demo2/) (64 dtk) | [Mesin Espresso 9 Bar & Crema Emas](styles/cutaway-3d/demo3/) (65 dtk) |
 | 52 | **Blueprint** | `blueprint` | ✅ | [Bagaimana Piramida Giza Dibangun](styles/blueprint/demo1/) (63 dtk) | [Denah Rumah Tipe 36 (6×6 Meter)](styles/blueprint/demo2/) (63 dtk) | [Jembatan Gantung Tanpa Tiang Tengah](styles/blueprint/demo3/) (64 dtk) |
-| 53 | **Skala Kosmik** | `skala-kosmik` | ✅ | [Zoom Out dari Monas ke Ujung Alam Semesta](styles/skala-kosmik/demo/) (16 dtk) | — | — |
-| 54 | **Dunia 3D Painterly** | `dunia-3d-painterly` | ❌ | — | — | — |
-| 55 | **Diorama Miniatur Tilt-shift** | `diorama-miniatur` | ✅ | [Pasar Terapung Lok Baintan](styles/diorama-miniatur/demo/) (38 dtk) | — | — |
-| 56 | **Kawanan Partikel** | `partikel` | ✅ | [Ribuan Burung Terbang Tanpa Pemimpin](styles/partikel/demo/) (17 dtk) | [Kunang-Kunang: Cahaya yang Bernyanyi](styles/partikel/demo-kunang/) (20 dtk) | [Hujan: Satu Tetes, Ribuan Kehidupan](styles/partikel/demo-hujan/) (23 dtk) |
-| 57 | **Pop Art Sunburst** | `pop-art` | ✅ | [Kenapa Harga Selalu Berakhir 99?](styles/pop-art/demo/) (15 dtk) | — | — |
-| 58 | **Isometrik** | `isometrik` | ✅ | [Perjalanan Paketmu dari Gudang ke Pintu](styles/isometrik/demo/) (15 dtk) | — | — |
+| 53 | **Skala Kosmik** | `skala-kosmik` | ✅ | [Zoom Out dari Monas ke Ujung Alam Semesta](styles/skala-kosmik/demo1/) (63 dtk) | [Zoom In ke Dalam Sehelai Daun (Kuark)](styles/skala-kosmik/demo2/) (64 dtk) | [Seberapa Cepat Cahaya Sebenarnya?](styles/skala-kosmik/demo3/) (65 dtk) |
+| 54 | **Dunia 3D Painterly** | `dunia-3d-painterly` | ✅ | [Legenda Telaga Warna Puncak](styles/dunia-3d-painterly/demo1/) (64 dtk) | [Danau Kelimutu Flores (Tiga Kawah)](styles/dunia-3d-painterly/demo2/) (64 dtk) | [Lembah Harau & Tebing Dasar Laut Purba](styles/dunia-3d-painterly/demo3/) (65 dtk) |
+| 55 | **Diorama Miniatur Tilt-shift** | `diorama-miniatur` | ✅ | [Pasar Terapung Lok Baintan](styles/diorama-miniatur/demo1/) (64 dtk) | [Rumah Lanting & Kayu Ulin Tepian Banjar](styles/diorama-miniatur/demo2/) (64 dtk) | [Perahu Klotok Menembus Kabut Subuh](styles/diorama-miniatur/demo3/) (65 dtk) |
+| 56 | **Kawanan Partikel** | `partikel` | ✅ | [Ribuan Burung Terbang Tanpa Pemimpin](styles/partikel/demo1/) (64 dtk) | [Kunang-Kunang Hutan Bakau Serentak](styles/partikel/demo2/) (64 dtk) | [Hujan & Petrichor (Aroma Tanah Kering)](styles/partikel/demo3/) (65 dtk) |
+| 57 | **Pop Art Sunburst** | `pop-art` | ✅ | [Kenapa Harga Selalu Berakhir 99?](styles/pop-art/demo1/) (63 dtk) | [Jebakan Ukuran Sedang (Decoy Effect)](styles/pop-art/demo2/) (64 dtk) | [Jebakan Diskon Coret (Anchoring Bias)](styles/pop-art/demo3/) (65 dtk) |
+| 58 | **Isometrik** | `isometrik` | ✅ | [Perjalanan Paketmu dari Gudang ke Pintu](styles/isometrik/demo1/) (64 dtk) | [Perjalanan Setetes Air Keran (6 Tahap)](styles/isometrik/demo2/) (64 dtk) | [Dari Sawah ke Piringmu (Sebutir Beras)](styles/isometrik/demo3/) (65 dtk) |
 | 59 | **HUD Showreel** | `hud-showreel` | ✅ | [HP Bar: Nyawa Terakhirmu](styles/hud-showreel/demo/) (14 dtk) | [Skill Cooldown: Harga Sebuah Kemenangan](styles/hud-showreel/demo-skill/) (21 dtk) | — |
 | 60 | **Trailer Tipografi Gelap** | `trailer-gelap` | ❌ | — | — | — |
 | 61 | **Monoline Satu Garis** | `garis-tunggal` | ✅ | [Lingkaran Kebiasaan](styles/garis-tunggal/demo/) (18 dtk) | [Burung Satu Garis](styles/garis-tunggal/demo-burung/) (20 dtk) | [Tangan Satu Garis](styles/garis-tunggal/demo-tangan/) (19 dtk) |

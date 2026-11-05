@@ -1,0 +1,48 @@
+{
+  "title": "Perjalanan Setetes Air Keran — 6 Tahap dari Waduk Pegunungan ke Gelasmu",
+  "slug": "58_isometrik-air-pdam",
+  "style": "isometrik",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.15,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.1,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Saat kamu memutar keran di dapur pagi ini, air jernih yang mengucur telah menempuh perjalanan panjang melewati enam pos pengolahan.",
+      "pause": 0.25
+    },
+    {
+      "id": "waduk",
+      "text": "Semuanya berawal di waduk pegunungan yang menampung air hujan dan sungai, lalu menyalurkannya lewat pintu intake raksasa.",
+      "pause": 0.22
+    },
+    {
+      "id": "saring",
+      "text": "Di kolam koagulasi dan saringan pasir berlapis, lumpur halus serta kerikil diendapkan hingga air berubah bening.",
+      "pause": 0.22
+    },
+    {
+      "id": "klorin",
+      "text": "Air kemudian melewati ruang desinfeksi dan klorinasi berstandar laboratorium untuk mematikan bakteri serta kuman berbahaya.",
+      "pause": 0.22
+    },
+    {
+      "id": "menara",
+      "text": "Pompa bertekanan tinggi mendorong air naik ke menara tandon kota, lalu mengalirkannya lewat pipa bawah tanah ke ribuan rumah.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Hanya dengan satu putaran tangan di wastafel rumahmu, rekayasa hidrologi sepanjang puluhan kilometer itu hadir di dalam gelasmu."
+    }
+  ]
+}
+

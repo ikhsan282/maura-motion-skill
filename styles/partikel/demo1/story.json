@@ -1,0 +1,57 @@
+{
+  "title": "Ribuan Burung Terbang Tanpa Pemimpin — Rahasia 7 Tetangga pada Murmurasi Jalak",
+  "slug": "56_partikel-murmurasi-jalak",
+  "style": "partikel",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "dreamy",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu melihat ribuan burung berputar di langit senja bagaikan satu makhluk raksasa, padahal tidak ada satu pun yang memimpin?",
+      "pause": 0.25
+    },
+    {
+      "id": "jalak",
+      "text": "Fenomena alam yang menghipnotis ini disebut murmurasi burung jalak, di mana ribuan ekor terbang meliuk tanpa pernah saling bertabrakan.",
+      "pause": 0.22
+    },
+    {
+      "id": "reynolds",
+      "text": "Pada tahun seribu sembilan ratus delapan puluh enam, ilmuwan komputer Craig Reynolds membuktikan bahwa tarian rumit ini lahir dari tiga aturan sederhana.",
+      "pause": 0.22
+    },
+    {
+      "id": "aturan",
+      "text": "Pertama jaga jarak agar tidak bersenggolan, kedua samakan arah terbang, dan ketiga tetap merapat ke pusat kelompok.",
+      "pause": 0.22
+    },
+    {
+      "id": "tujuh",
+      "text": "Riset fisika modern mengungkap rahasia kuncinya: setiap burung hanya perlu memantau tepat tujuh tetangga terdekat di sekelilingnya.",
+      "pause": 0.22
+    },
+    {
+      "id": "elang",
+      "text": "Saat elang pemangsa tiba-tiba menyergap, belokan satu ekor di tepi kawanan langsung menjalar bak gelombang suara ke seluruh formasi.",
+      "pause": 0.22
+    },
+    {
+      "id": "emergensi",
+      "text": "Dalam ilmu sains, keajaiban ini disebut perilaku emergensi: kecerdasan kolektif tingkat tinggi yang muncul dari aturan lokal sederhana.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Tanpa komandan dan tanpa aba-aba, ribuan titik kecil yang saling menjaga mampu melahirkan harmoni seindah ini."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": "Pasar Terapung Lok Baintan — Tradisi Barter Subuh di Atas Sungai Martapura",
+  "slug": "55_diorama-miniatur-lok-baintan",
+  "style": "diorama-miniatur",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di sini, pasar tradisional tidak pernah buka di daratan. Seluruh pasarnya mengapung hidup di atas aliran sungai.",
+      "pause": 0.25
+    },
+    {
+      "id": "lokasi",
+      "text": "Selamat datang di Desa Lok Baintan, Kalimantan Selatan, pasar terapung legendaris di lekukan Sungai Martapura."
+    },
+    {
+      "id": "subuh",
+      "text": "Pasar ini mulai ramai selepas azan subuh, tepat sekitar pukul enam pagi saat kabut tipis masih menyelimuti air."
+    },
+    {
+      "id": "acil",
+      "text": "Kebanyakan pedagang di sini adalah perempuan tangguh yang akrab disapa acil dalam bahasa Banjar."
+    },
+    {
+      "id": "jukung",
+      "text": "Mereka mendayung jukung, perahu kayu ramping khas Banjar yang menjadi lapak sekaligus ruang hidup mereka."
+    },
+    {
+      "id": "tanggui",
+      "text": "Di kepala mereka tersemat tanggui, topi bundar lebar dari anyaman daun rumbia untuk menahan terik matahari pagi."
+    },
+    {
+      "id": "dagangan",
+      "text": "Hasil kebun segar seperti pisang, jeruk, sayur, dan kue basah dijajakan langsung dari haluan perahu."
+    },
+    {
+      "id": "barter",
+      "text": "Uniknya, antarpedagang masih melakukan barter hasil bumi secara langsung. Namanya tradisi bapanduk yang hangat."
+    },
+    {
+      "id": "sejarah",
+      "text": "Budaya niaga air ini telah bertahan sejak masa Kesultanan Banjar pada abad keenam belas."
+    },
+    {
+      "id": "batas",
+      "text": "Namun pasar di atas air ini memiliki batas waktu alami yang sangat singkat seiring naiknya matahari."
+    },
+    {
+      "id": "bubar",
+      "text": "Menjelang pukul sembilan pagi, rombongan perahu perlahan bubar dan mendayung pulang ke dermaga kampung."
+    },
+    {
+      "id": "sepi",
+      "text": "Sungai Martapura kembali tenang dan sepi, menyisakan riak air serta burung kuntul yang melintas rendah."
+    },
+    {
+      "id": "besok",
+      "text": "Hingga esok subuh tiba, ketika cahaya fajar kembali mengubah sungai ini menjadi pasar yang semarak."
+    }
+  ]
+}

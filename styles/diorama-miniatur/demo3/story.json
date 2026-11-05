@@ -1,0 +1,58 @@
+{
+  "title": "Perjalanan Perahu Klotok Menembus Kabut Subuh — Nadi Seribu Sungai Kalimantan",
+  "slug": "55_diorama-miniatur-perahu-klotok",
+  "style": "diorama-miniatur",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Sebelum jalan raya membelah daratan Kalimantan, sungai adalah satu-satunya jalan tol alami yang menghubungkan ratusan desa.",
+      "pause": 0.25
+    },
+    {
+      "id": "klotok",
+      "text": "Dan inilah rajanya jalur sungai Banjar: perahu klotok beratap kayu yang dinamai dari bunyi khas mesin dieselnya, klotok-klotok-klotok.",
+      "pause": 0.22
+    },
+    {
+      "id": "subuh",
+      "text": "Sejak pukul lima subuh saat bintang masih tampak, lampu rumah panggung menyala mengantar keberangkatan klotok pertama.",
+      "pause": 0.22
+    },
+    {
+      "id": "kabut",
+      "text": "Haluannya membelah selimut kabut pagi yang mengambang rendah di atas hangatnya air Sungai Martapura.",
+      "pause": 0.22
+    },
+    {
+      "id": "papasan",
+      "text": "Di sepanjang perjalanan, klotok berpapasan dengan rombongan acil berjukung yang membawa hasil kebun menuju pasar terapung.",
+      "pause": 0.22
+    },
+    {
+      "id": "kuntul",
+      "text": "Burung kuntul putih terbang rendah mengiringi laju perahu di antara barisan pohon nipah dan kelapa yang melambai.",
+      "pause": 0.22
+    },
+    {
+      "id": "fajar",
+      "text": "Saat matahari keemasan naik tinggi, kabut pun terangkat dan pantulan langit biru membuka panorama sungai yang luas.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Suara mesin klotok di pagi buta bukan sekadar bunyi perahu, melainkan detak jantung kehidupan kota seribu sungai."
+    }
+  ]
+}
+

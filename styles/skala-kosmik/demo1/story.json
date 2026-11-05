@@ -1,0 +1,42 @@
+{
+  "title": "Zoom Out dari Monas ke Ujung Alam Semesta — Perjalanan 10 Pangkat 26 Meter",
+  "slug": "53_skala-kosmik-monas-semesta",
+  "style": "skala-kosmik",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bayangkan kamu sedang berdiri tepat di pelataran Monumen Nasional, Jakarta, dalam bingkai seratus meter atau sepuluh pangkat dua meter. Sekarang tarik napas, dan lihat dirimu perlahan menghilang saat kamera melesat mundur sepuluh kali lipat setiap detiknya.",
+      "pause": 0.25
+    },
+    {
+      "id": "bumi",
+      "text": "Dalam sekejap, bundaran Jakarta menyusut menjadi titik di ujung Pulau Jawa, disusul bentangan kepulauan Indonesia, hingga pada skala sepuluh pangkat tujuh meter seluruh bulatan biru Planet Bumi dan orbit Bulan tampak mengapung hening di ruang hampa.",
+      "pause": 0.25
+    },
+    {
+      "id": "surya",
+      "text": "Kita mundur lagi menembus sepuluh pangkat tiga belas meter. Bumi kini hanyalah sebutir debu biru yang mengitari pijar Matahari bersama planet-planet lain di dalam piringan Tata Surya.",
+      "pause": 0.25
+    },
+    {
+      "id": "galaksi",
+      "text": "Pada jarak sepuluh pangkat dua puluh satu meter, bahkan Matahari kita ikut lenyap di antara pusaran empat ratus miliar bintang yang membentuk lengan spiral Galaksi Bima Sakti.",
+      "pause": 0.25
+    },
+    {
+      "id": "jaring",
+      "text": "Dan di puncak sepuluh pangkat dua puluh enam meter, tampaklah Jaring Kosmik alam semesta tempat miliaran galaksi terhubung bagaikan serabut saraf raksasa. Kita memang tak terlihat, namun dari titik sekecil itulah pikiran manusia sanggup memandang semuanya."
+    }
+  ]
+}

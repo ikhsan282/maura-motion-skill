@@ -1,0 +1,49 @@
+{
+  "title": "Kenapa Harga Selalu Berakhir 99? — Rahasia Efek Digit Kiri yang Mengelabui Otak",
+  "slug": "57_pop-art-harga-99",
+  "style": "pop-art",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "hype",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.1,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bertanya-tanya saat berkeliling mal, kenapa label harga barang hampir selalu ditulis Rp99.000, bukan digenapkan saja menjadi seratus ribu rupiah?",
+      "say": "Pernahkah kamu bertanya-tanya saat berkeliling mal, kenapa label harga barang hampir selalu ditulis sembilan puluh sembilan ribu rupiah, bukan digenapkan saja menjadi seratus ribu rupiah?",
+      "pause": 0.25
+    },
+    {
+      "id": "kiri",
+      "text": "Rahasianya terletak pada cara mata dan otak manusia memindai deretan angka secara cepat dari sebelah kiri terlebih dahulu.",
+      "pause": 0.22
+    },
+    {
+      "id": "baca",
+      "text": "Begitu melihat angka sembilan di depan, otak langsung mengelompokkannya ke kisaran sembilan puluhan ribu. Padahal nilainya sudah hampir menyentuh seratus ribu!",
+      "pause": 0.22
+    },
+    {
+      "id": "nama",
+      "text": "Dalam riset psikologi konsumen yang dipublikasikan oleh Thomas dan Morwitz tahun dua ribu lima, bias kognitif ini dinamakan efek digit kiri.",
+      "say": "Dalam riset psikologi konsumen yang dipublikasikan oleh Thomas dan Morwitz tahun dua ribu lima, bias kognitif ini dinamakan efek dijit kiri.",
+      "pause": 0.22
+    },
+    {
+      "id": "lawan",
+      "text": "Cara paling ampuh untuk melawan ilusi harga ini sangat mudah: selalu bulatkan nominalnya ke atas di dalam kepalamu sebelum memutuskan membayar di kasir.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Jadi ingat baik-baik saat melihat potongan seribu rupiah di ujung label harga: angka ganjil itu bukan diskon sungguhan, melainkan trik psikologi!"
+    }
+  ]
+}

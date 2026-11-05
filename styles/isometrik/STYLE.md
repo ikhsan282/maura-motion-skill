@@ -5,46 +5,21 @@ no: 58
 source: github:isometric-diorama (awesome-opus5-5-videos)
 family: 2D
 tech: canvas2d
-music: tech   voice: id-m   captions: bold
+music: tech   voice: el-id-m   captions: bold
 best_for: rantai pasok & logistik, cara kota/sistem bekerja, proses pabrik, ekonomi sederhana, perjalanan sebuah benda, sebelum-sesudah
 ---
 # Isometrik
 
-**Ciri khas (look):** proyeksi isometrik 2:1 di atas navy gelap #0F1530 dengan grid titik samar; blok-blok
-kecil berdetail rendah dengan tiga nada (atas terang, kiri sedang, kanan gelap) dan tepi tipis; lantai abu
-kebiruan, aspal #2B3358, taman hijau; aksen oranye #FF9F43, paket kraft #E0A86A, laser merah #FF4D5E, mint
-#5FE0B5. Label melayang bernomor (pil putih + lingkaran nomor + garis titik ke objek), kartu "Lacak paket"
-di atas dengan titik-titik progres dan penghitung mono.
+**Ciri khas (look):** Proyeksi isometrik `2:1` di atas latar navy gelap `#0F1530` ber-grid titik samar; blok bangunan & mesin 3-nada (atas terang, kiri sedang, kanan gelap) dengan garis tepi tipis; ban berjalan (*conveyor belt*), truk distribusi, kurir motor, pipa air, dan sawah bertingkat; serta kartu HUD pelacak progres 6 titik di bagian atas layar.
 
-**Gerak (motion):** kamera membuka dengan seluruh diorama (overview), menyelam dan mengikuti objek pahlawan
-(rata-rata posisi beberapa saat terakhir = gerak halus), lalu menarik mundur lagi untuk penutup. Objek
-berjalan di jalur berkunci (ban berjalan bergaris bergerak, truk, motor kurir, orang berjalan), laser scan
-+ "BEEP" di setiap titik, label pop dengan pegas dan berubah jadi centang, siang→malam (bintang, lampu jalan,
-lampu truk) saat perjalanan jauh.
-
-**Kenapa menarik:** kepuasan ala SimCity: seluruh sistem terbaca sekilas, dunia mini terasa hidup dan bisa
-"dijelajahi".
-
-**Cerita yang cocok:**
-- Paket online: "Paketmu berpindah tangan berkali-kali, tanpa pernah dibuka."
-- Sampah plastik: "Botol yang kamu buang pagi ini... sore ini sudah di mana?"
-- Air PDAM: "Air di keran-mu menempuh jalan sejauh ini."
-- Sebutir beras: "Dari sawah ke piringmu, beras ini singgah di tujuh tempat."
-- Listrik: "Lampu kamarmu menyala berkat pembangkit puluhan kilometer jauhnya."
-
-**Rumus hook:** "[Benda]mu [melakukan perjalanan/berpindah] [berkali-kali]... tanpa [hal yang mengejutkan]." /
-"Dari [titik A] ke [titik B]: [n] pemberhentian." / "Ikuti satu [benda] ini."
+**Gerak (motion):** Kamera membuka dengan *overview* seluruh diorama, menyelam mengikuti objek utama (*parcel*, tetes air, atau karung beras) melewati 6 pos pemeriksaan dengan pemindaian laser + `"BEEP"`, transisi siang ke malam lengkap dengan bintang dan sorot lampu jalan/truk, lalu menarik mundur kembali untuk kesimpulan.
 
 **Kit API (`styles/isometrik/kit.js`):**
-- `iso(gx,gy,gz)` → [x,y]; `U` (ukuran tile); `spring`, `springKeys`, `sp`, `pathAt(t,[[t,gx,gy,gz],...])`.
-- `box(ctx,gx,gy,gz,w,d,h,color,{top,alpha})` blok tiga nada; `slab(...)` lantai; `onPlane(ctx,gz,fn)` gambar di bidang atas.
-- `person(ctx,gx,gy,gz,color,t,{walk})`, `parcel(ctx,gx,gy,gz,{glow})`, `conveyor(ctx,a,b,row,t,{axis})`,
-  `truck(ctx,gx,gy,t,{night,moving})`, `bike(ctx,gx,gy,t,{rider})`, `tree`, `lamp(ctx,gx,gy,night)`, `house`.
-- `tag(ctx,x,y,n,str,{p,done})` label bernomor, `scan(ctx,x0,y0,x1,y1,age)`, `beep(ctx,x,y,age)`, `halo(ctx,x,y,r,a,rgb)`.
-- `stage(ctx,t,night)`: navy + grid titik + bintang saat malam. Urutan gambar: lantai dulu, lalu objek diurutkan (gx+gy).
+- Proyeksi & Path: `iso(gx,gy,gz)`, `U`, `spring`, `springKeys`, `sp`, `pathAt(t, keys)`
+- Primitif 3-Nada: `box`, `slab`, `onPlane`, `person`, `parcel`, `conveyor`, `truck`, `bike`, `tree`, `lamp`, `house`
+- HUD & Efek: `tag(ctx,x,y,n,str,opts)`, `scan`, `beep`, `halo`, `stage(ctx,t,night)`
 
-**Demo:** "Perjalanan Paketmu dari Gudang ke Pintu", 20,0 detik. Overview diorama dengan enam label (Gudang,
-Sortir, Truk, Hub kota, Kurir, Pintu) → gudang: diambil dari rak, dikemas, scan 1 → mesin sortir membaca label
-dan membelokkan paket ke truk → malam: truk melaju di jalan berlampu → hub kota, kurir motor mengantar →
-pindaian terakhir di pintu → overview lagi, lalu close-up paket di depan pintu dengan "?" ("Isinya:
-rahasiamu."). Enam pindaian dihitung di kartu Lacak paket.
+**3 Demo Siap Pakai (`el-id-m`, 64–65 detik):**
+1. **`demo1/` — Perjalanan Paketmu dari Gudang ke Pintu (~64 dtk)**: 6 titik pindaian (*Gudang → Sortir → Truk → Hub Kota → Kurir → Pintu*) yang dilalui paket belanja online semalaman tanpa pernah dibuka.
+2. **`demo2/` — Perjalanan Setetes Air PDAM (~64 dtk)**: 6 tahap pengolahan air bersih (*Waduk → Penyaringan → Klorinasi → Menara Air → Pipa Bawah Tanah → Keran Rumah*).
+3. **`demo3/` — Dari Sawah ke Piringmu: Rantai Pasok Beras (~65 dtk)**: 6 pemberhentian sebutir beras Nusantara (*Sawah Panen → Penggilingan → Gudang Beras → Truk Lintas Kota → Pasar Induk → Rumah*).

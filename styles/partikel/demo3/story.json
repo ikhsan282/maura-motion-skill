@@ -1,0 +1,57 @@
+{
+  "title": "Hujan & Petrichor — Mengapa Tanah Kering Wangi Saat Tetes Pertama Jatuh?",
+  "slug": "56_partikel-hujan-petrichor",
+  "style": "partikel",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "dreamy",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Satu tetes hujan hanyalah butiran air kecil, namun miliaran tetes yang turun bersama sanggup menghidupkan seluruh daratan.",
+      "pause": 0.25
+    },
+    {
+      "id": "siklus",
+      "text": "Perjalanan panjang ini dimulai saat panas matahari mengangkat miliaran partikel uap air dari permukaan samudra ke angkasa.",
+      "pause": 0.22
+    },
+    {
+      "id": "awan",
+      "text": "Di udara dingin, uap itu berkumpul mengelilingi inti debu mikroskopis hingga memadat menjadi gumpalan awan mendung.",
+      "pause": 0.22
+    },
+    {
+      "id": "jatuh",
+      "text": "Ketika butiran air terlalu berat untuk ditahan angin, gravitasi menariknya jatuh membelah langit sebagai rintik hujan.",
+      "pause": 0.22
+    },
+    {
+      "id": "bau",
+      "text": "Saat tetes hujan pertama menyentuh tanah kering, muncul aroma khas yang menenangkan bernama petrichor.",
+      "pause": 0.22
+    },
+    {
+      "id": "geosmin",
+      "text": "Aroma ini berasal dari senyawa organik geosmin buatan bakteri tanah Streptomyces serta minyak alami tumbuhan selama musim kemarau.",
+      "pause": 0.22
+    },
+    {
+      "id": "aerosol",
+      "text": "Tumbukan tetes air menjebak gelembung udara mikro di pori-pori tanah, lalu meletupkannya ke udara sebagai kabut aerosol wangi.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Dari samudra ke awan hingga wangi tanah yang basah, siklus partikel air ini berputar tanpa henti menjaga kehidupan."
+    }
+  ]
+}

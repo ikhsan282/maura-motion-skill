@@ -1,0 +1,48 @@
+{
+  "title": "Dari Sawah ke Piringmu — 6 Pemberhentian Sebutir Beras Nusantara",
+  "slug": "58_isometrik-rantai-beras",
+  "style": "isometrik",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.15,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.1,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Sebelum menjadi nasi hangat di piringmu, sebutir beras harus menempuh perjalanan panjang melewati enam pemberhentian penting.",
+      "pause": 0.25
+    },
+    {
+      "id": "sawah",
+      "text": "Semuanya dimulai di petak sawah hijau saat padi yang menguning dipanen petani, dirontokkan, lalu dijemur di bawah matahari.",
+      "pause": 0.22
+    },
+    {
+      "id": "giling",
+      "text": "Gabah kering kemudian masuk ke mesin penggilingan desa untuk dikupas kulit sekamnya hingga menjadi butiran beras putih bersih.",
+      "pause": 0.22
+    },
+    {
+      "id": "gudang",
+      "text": "Beras dikemas ke dalam karung-karung besar, ditimbang, lalu disimpan rapi di dalam gudang pangan untuk menjaga stok nasional.",
+      "pause": 0.22
+    },
+    {
+      "id": "truk",
+      "text": "Pada malam hari, truk logistik mengangkut ribuan karung beras melintasi jalan raya menuju pasar induk di pusat kota.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Dari pedagang pasar, kurir mengantarnya ke pintu rumahmu, menghidangkan kerja keras petani langsung ke meja makan keluarga."
+    }
+  ]
+}
+

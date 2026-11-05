@@ -1,0 +1,48 @@
+{
+  "title": "Jebakan Ukuran Sedang (Decoy Effect) — Kenapa Popcorn Sedang Hampir Semahal Jumbo?",
+  "slug": "57_pop-art-decoy-effect",
+  "style": "pop-art",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "hype",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.1,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu antre di bioskop atau kedai kopi, lalu heran kenapa ukuran sedang harganya hampir sama mahalnya dengan ukuran jumbo?",
+      "pause": 0.25
+    },
+    {
+      "id": "dua",
+      "text": "Bayangkan awalnya hanya ada dua pilihan: ukuran kecil seharga tiga puluh ribu rupiah, dan ukuran besar tujuh puluh ribu yang terasa terlalu mahal.",
+      "pause": 0.22
+    },
+    {
+      "id": "umpan",
+      "text": "Penjual lalu menyelipkan pilihan ketiga di tengah: ukuran sedang seharga enam puluh lima ribu rupiah yang tampak tanggung dan rugi jika dibeli.",
+      "pause": 0.22
+    },
+    {
+      "id": "banding",
+      "text": "Otakmu seketika berhenti membandingkan kecil dengan besar, dan fokus melihat selisih lima ribu rupiah antara sedang dan jumbo!",
+      "pause": 0.22
+    },
+    {
+      "id": "nama",
+      "text": "Dalam ilmu ekonomi perilaku yang dipopulerkan profesor Dan Ariely, strategi harga pembanding ini disebut efek umpan atau decoy effect.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Ukuran sedang itu memang tidak pernah dibuat supaya laku, melainkan dipasang sebagai umpan agar kamu merasa menang saat membeli yang paling mahal!"
+    }
+  ]
+}
+

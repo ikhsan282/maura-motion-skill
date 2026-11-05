@@ -1,0 +1,58 @@
+{
+  "title": "Rumah Lanting & Tepian Sungai Banjar — Arsitektur Kayu Ulin yang Hidup Bersama Air",
+  "slug": "55_diorama-miniatur-rumah-lanting",
+  "style": "diorama-miniatur",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "folk",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bagi masyarakat tepian sungai di Kalimantan Selatan, sungai bukanlah halaman belakang, melainkan beranda depan rumah mereka.",
+      "pause": 0.25
+    },
+    {
+      "id": "panggung",
+      "text": "Di sepanjang kelokan Sungai Martapura, deretan rumah panggung berdiri anggun menghadap langsung ke arah aliran air.",
+      "pause": 0.22
+    },
+    {
+      "id": "ulin",
+      "text": "Tiang-tiang penyangganya dibuat dari kayu ulin atau kayu besi Kalimantan yang justru semakin keras saat terendam air sungai.",
+      "pause": 0.22
+    },
+    {
+      "id": "batang",
+      "text": "Di depan tiap rumah terdapat batang, pelataran rakit kayu gelondongan yang mengapung naik turun mengikuti pasang surut.",
+      "pause": 0.22
+    },
+    {
+      "id": "aktivitas",
+      "text": "Dari pelataran apung inilah warga menambatkan jukung, menyambut perahu pedagang sayur, hingga bercengkerama di sore hari.",
+      "pause": 0.22
+    },
+    {
+      "id": "kebun",
+      "text": "Di belakang rumah, pohon kelapa dan rumpun nipah tumbuh subur menahan abrasi lumpur tepian sungai secara alami.",
+      "pause": 0.22
+    },
+    {
+      "id": "senja",
+      "text": "Saat matahari condong ke barat dan malam turun, jendela-jendela kayu menyala hangat memantul di permukaan sungai.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Sebuah kearifan arsitektur Nusantara yang tidak melawan gerak air, melainkan hidup berdampingan dengan irama sungai."
+    }
+  ]
+}
+

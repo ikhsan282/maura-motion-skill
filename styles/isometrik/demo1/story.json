@@ -1,0 +1,47 @@
+{
+  "title": "Perjalanan Paketmu dari Gudang ke Pintu — 6 Titik Pindaian Tanpa Pernah Dibuka",
+  "slug": "58_isometrik-paket-online",
+  "style": "isometrik",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "speed": 1.15,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.1,
+  "pause": 0.22,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Begitu kamu menekan tombol beli di ponselmu, paketmu langsung berpindah tangan berkali-kali melintasi kota tanpa pernah dibuka sedikit pun.",
+      "pause": 0.25
+    },
+    {
+      "id": "gudang",
+      "text": "Perjalanan dimulai di gudang penyimpanan raksasa: barang pesananmu diambil dari rak tinggi, dikemas rapat ke dalam kardus, lalu dipindai kode batangnya.",
+      "pause": 0.22
+    },
+    {
+      "id": "sortir",
+      "text": "Paket itu meluncur di atas ban berjalan menuju mesin sortir otomatis yang membaca labelnya dalam sekejap, lalu memilih jalur truk sesuai kode pos tujuan.",
+      "pause": 0.22
+    },
+    {
+      "id": "truk",
+      "text": "Saat kamu tertidur pulas semalaman, truk kargo antarkota melaju menembus jalan tol berlampu kuning membawa ribuan paket menuju hub kotamu.",
+      "pause": 0.22
+    },
+    {
+      "id": "kurir",
+      "text": "Begitu fajar menyingsing di gudang cabang, kurir motor memuat paketmu ke keranjang belakang dan mengantarnya sampai pindaian terakhir tepat di depan pintumu.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Enam sistem komputer dan puluhan pekerja tahu persis lokasinya setiap detik. Tak ada satu pun dari mereka yang tahu apa isinya."
+    }
+  ]
+}

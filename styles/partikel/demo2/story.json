@@ -1,0 +1,57 @@
+{
+  "title": "Kunang-Kunang Hutan Bakau — Rahasia Ribuan Cahaya yang Berkedip Serentak",
+  "slug": "56_partikel-kunang-kunang",
+  "style": "partikel",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "dreamy",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di tepian sungai bakau Kalimantan dan Asia Tenggara yang gelap gulita, ribuan pohon tiba-tiba menyala dan padam secara serentak.",
+      "pause": 0.25
+    },
+    {
+      "id": "cahaya",
+      "text": "Itu bukan lampu hias buatan manusia, melainkan koloni ribuan kunang-kunang yang berkedip dalam satu irama malam.",
+      "pause": 0.22
+    },
+    {
+      "id": "kimia",
+      "text": "Di dalam perut mungilnya terjadi reaksi bioluminesensi antara zat lusiferin, enzim lusiferase, dan oksigen yang menghasilkan cahaya dingin.",
+      "pause": 0.22
+    },
+    {
+      "id": "efisien",
+      "text": "Cahaya kunang-kunang memiliki efisiensi hampir seratus persen tanpa membuang panas sedikit pun, jauh melampaui bohlam buatan manusia.",
+      "pause": 0.22
+    },
+    {
+      "id": "acak",
+      "text": "Saat malam baru turun, tiap kunang-kunang awalnya berkedip sendiri-sendiri dengan ritme acak untuk memanggil pasangan.",
+      "pause": 0.22
+    },
+    {
+      "id": "sinkron",
+      "text": "Namun begitu melihat kedipan tetangga di dekatnya, mereka otomatis menggeser detak jam biologisnya sedikit demi sedikit.",
+      "pause": 0.22
+    },
+    {
+      "id": "kuramoto",
+      "text": "Dalam matematika, proses penyelarasan osilator ini disebut model Kuramoto, hingga seluruh hutan bakau berdenyut dalam satu fase.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Satu titik cahaya mungkin tampak redup sendirian, namun saat menyatu dalam irama yang kompak, mereka sanggup menerangi malam."
+    }
+  ]
+}

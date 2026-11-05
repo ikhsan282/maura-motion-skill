@@ -1,0 +1,57 @@
+{
+  "title": "Legenda Telaga Warna Puncak — Kalung Permata yang Berubah Menjadi Danau Berkilau",
+  "slug": "54_dunia-3d-painterly-telaga-warna",
+  "style": "dunia-3d-painterly",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "puncak",
+      "text": "Di lereng hijau Puncak Bogor yang berkabut, tersembunyi sebuah danau tenang yang airnya bisa memantulkan warna zamrud, biru toska, hingga keemasan.",
+      "pause": 0.22
+    },
+    {
+      "id": "kerajaan",
+      "text": "Menurut legenda Sunda kuno, dahulu kala berdiri kerajaan makmur Kutatanggeuhan yang dipimpin oleh Prabu Suwartalaya dan Ratu Purbamanah.",
+      "pause": 0.22
+    },
+    {
+      "id": "putri",
+      "text": "Sang Prabu memiliki putri tunggal bernama Gilang Rukmini yang sangat disayangi, namun tumbuh menjadi gadis yang manja dan keras kepala.",
+      "pause": 0.22
+    },
+    {
+      "id": "persembahan",
+      "text": "Menjelang ulang tahun sang putri yang ketujuh belas, rakyat dari seluruh penjuru negeri sukarela menyumbangkan emas dan permata lima warna.",
+      "pause": 0.22
+    },
+    {
+      "id": "kalung",
+      "text": "Kepingan zamrud, safir, rubi, kecubung, dan berlian itu dirangkai oleh ahli perhiasan istana menjadi seuntai kalung yang berkilau indah.",
+      "pause": 0.22
+    },
+    {
+      "id": "ditepis",
+      "text": "Namun saat kalung itu diserahkan di alun-alun kerajaan, sang putri justru menepisnya hingga putus dan butiran permatanya berhamburan ke tanah.",
+      "pause": 0.22
+    },
+    {
+      "id": "mata_air",
+      "text": "Tangis pilu Ratu dan seluruh rakyat seketika menggetarkan bumi, hingga mata air deras menyembur dari celah bebatuan tempat permata jatuh.",
+      "pause": 0.22
+    },
+    {
+      "id": "telaga",
+      "text": "Lembah kerajaan itu perlahan tenggelam menjadi Telaga Warna, di mana pantulan permata di dasarnya konon masih berpendar hingga hari ini."
+    }
+  ]
+}

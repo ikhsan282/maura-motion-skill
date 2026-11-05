@@ -1,0 +1,48 @@
+{
+  "title": "Jebakan Diskon Coret (Anchoring Bias) — Kenapa Rp500.000 Jadi Rp199.000 Terasa Murah?",
+  "slug": "57_pop-art-anchoring-bias",
+  "style": "pop-art",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "hype",
+    "db": -17
+  },
+  "lead": 0.3,
+  "tail": 1.1,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Saat melihat kemeja seharga lima ratus ribu rupiah dicoret merah menjadi seratus sembilan puluh sembilan ribu, kenapa tanganmu langsung gatal ingin checkout?",
+      "pause": 0.25
+    },
+    {
+      "id": "normal",
+      "text": "Padahal jika kemeja yang persis sama sejak awal dijual seratus sembilan puluh sembilan ribu tanpa coretan, kamu mungkin menganggapnya biasa saja.",
+      "pause": 0.22
+    },
+    {
+      "id": "jangkar",
+      "text": "Angka lima ratus ribu yang dilihat pertama kali bekerja sebagai jangkar di dalam kepalamu untuk menilai mahal atau murahnya barang itu.",
+      "pause": 0.22
+    },
+    {
+      "id": "hemat",
+      "text": "Akibatnya, kamu tidak lagi menilai kualitas kainnya, melainkan fokus pada ilusi bahwa kamu baru saja berhemat tiga ratus ribu rupiah!",
+      "pause": 0.22
+    },
+    {
+      "id": "nama",
+      "text": "Psikolog peraih Nobel, Daniel Kahneman dan Amos Tversky, menamai fenomena tertambatnya pikiran pada angka pertama ini sebagai bias jangkar atau anchoring bias.",
+      "pause": 0.22
+    },
+    {
+      "id": "akhir",
+      "text": "Sebelum tergiur label diskon raksasa, tutup angka coretannya dengan jarimu dan tanyakan: apakah barang ini tetap layak dibeli pada harga aslinya?"
+    }
+  ]
+}
+

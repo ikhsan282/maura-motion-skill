@@ -1,0 +1,43 @@
+{
+  "title": "Seberapa Cepat Cahaya Sebenarnya? — Dari 7,5 Kali Keliling Bumi hingga Ujung Bima Sakti",
+  "slug": "53_skala-kosmik-kecepatan-cahaya",
+  "style": "skala-kosmik",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "bumi",
+      "text": "Di dalam ruang hampa, seberkas foton cahaya melesat dengan kecepatan tiga ratus ribu kilometer setiap detiknya, batas kecepatan tertinggi di alam semesta. Di skala planet kita, cahaya sanggup mengelilingi khatulistiwa Bumi tujuh setengah kali hanya dalam satu detik.",
+      "pause": 0.25
+    },
+    {
+      "id": "bulan",
+      "text": "Namun begitu kita melangkah keluar dari atmosfer menuju Bulan yang berjarak tiga ratus delapan puluh empat ribu kilometer, foton cahaya yang tampak instan itu mulai membutuhkan waktu tempuh satu koma tiga detik.",
+      "pause": 0.25
+    },
+    {
+      "id": "surya",
+      "text": "Di skala Tata Surya, jarak seratus lima puluh juta kilometer dari permukaan Matahari menuju Bumi membuat cahaya membutuhkan delapan menit dua puluh detik. Artinya, kita selalu melihat Matahari sebagaimana wujudnya delapan menit yang lalu.",
+      "pause": 0.25
+    },
+    {
+      "id": "bintang",
+      "text": "Saat keluar menuju bintang tetangga terdekat, Proxima Centauri, skala ruang angkasa menjadi begitu luas hingga cahaya tercepat pun harus terbang selama empat koma dua tahun tanpa henti.",
+      "pause": 0.25
+    },
+    {
+      "id": "galaksi",
+      "text": "Dan untuk menyeberangi bentangan Galaksi Bima Sakti dari ujung ke ujung, seberkas cahaya membutuhkan waktu seratus ribu tahun. Di hadapan skala kosmik, kecepatan tercepat di semesta pun terasa merangkak pelan."
+    }
+  ]
+}
+

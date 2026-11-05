@@ -1,0 +1,57 @@
+{
+  "title": "Danau Kelimutu Flores — Misteri Tiga Kawah Gunung Berapi yang Berganti Warna",
+  "slug": "54_dunia-3d-painterly-kelimutu",
+  "style": "dunia-3d-painterly",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -16
+  },
+  "lead": 0.3,
+  "tail": 1.2,
+  "pause": 0.22,
+  "speed": 1.15,
+  "lines": [
+    {
+      "id": "puncak",
+      "text": "Di puncak Gunung Kelimutu di Pulau Flores, terdapat tiga danau kawah berdampingan yang warnanya bisa berubah sendiri dari waktu ke waktu.",
+      "pause": 0.22
+    },
+    {
+      "id": "adat_lio",
+      "text": "Masyarakat adat Lio meyakini ketiganya adalah tempat bersemayamnya arwah leluhur setelah meninggalkan dunia fana.",
+      "pause": 0.22
+    },
+    {
+      "id": "kawah_biru",
+      "text": "Kawah pertama di sisi barat bernama Tiwu Ata Mbupu, danau berwarna biru tenang bagi arwah para orang tua dan tetua bijaksana.",
+      "pause": 0.22
+    },
+    {
+      "id": "kawah_toska",
+      "text": "Tepat di sebelahnya terbentang Tiwu Nuwa Muri Koo Fai, kawah hijau toska tempat berkumpulnya jiwa para pemuda dan pemudi.",
+      "pause": 0.22
+    },
+    {
+      "id": "kawah_merah",
+      "text": "Sementara agak terpisah di sudut tenggara, terdapat Tiwu Ata Polo yang airnya kerap berwarna merah gelap atau cokelat pekat.",
+      "pause": 0.22
+    },
+    {
+      "id": "fumarol",
+      "text": "Secara ilmiah, perubahan warna ajaib ini dipicu oleh aktivitas gas fumarol gunung berapi di dasar masing-masing kawah.",
+      "pause": 0.22
+    },
+    {
+      "id": "mineral",
+      "text": "Semburan gas belerang dan hidrogen klorida bereaksi dengan mineral besi serta mangan di dalam air, menciptakan pigmen alami yang berbeda.",
+      "pause": 0.22
+    },
+    {
+      "id": "harmoni",
+      "text": "Perpaduan kearifan adat Lio dan geologi vulkanik ini menjadikan fajar di puncak Kelimutu salah satu lanskap paling magis di dunia."
+    }
+  ]
+}

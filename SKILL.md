@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 74 siap pakai ✅, 3 belum diimplementasi ❌)
+## Status gaya (77 gaya: 75 siap pakai ✅, 2 belum diimplementasi ❌)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -122,12 +122,12 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 50 | **Infografis Data** | infografis-data | ✅ ([demo1](styles/infografis-data/demo1/) · [demo2](styles/infografis-data/demo2/) · [demo3](styles/infografis-data/demo3/)) |
 | 51 | **3D Cutaway Explainer** | cutaway-3d | ✅ ([demo1](styles/cutaway-3d/demo1/) · [demo2](styles/cutaway-3d/demo2/) · [demo3](styles/cutaway-3d/demo3/)) |
 | 52 | **Blueprint** | blueprint | ✅ ([demo1](styles/blueprint/demo1/) · [demo2](styles/blueprint/demo2/) · [demo3](styles/blueprint/demo3/)) |
-| 53 | **Skala Kosmik** | skala-kosmik | ✅ ([styles/skala-kosmik](styles/skala-kosmik/)) |
-| 54 | **Dunia 3D Painterly** | dunia-3d-painterly | ❌ (belum diimplementasi) |
-| 55 | **Diorama Miniatur Tilt-shift** | diorama-miniatur | ✅ ([styles/diorama-miniatur](styles/diorama-miniatur/)) |
-| 56 | **Kawanan Partikel** | partikel | ✅ ([styles/partikel](styles/partikel/)) |
-| 57 | **Pop Art Sunburst** | pop-art | ✅ ([styles/pop-art](styles/pop-art/)) |
-| 58 | **Isometrik** | isometrik | ✅ ([styles/isometrik](styles/isometrik/)) |
+| 53 | **Skala Kosmik** | skala-kosmik | ✅ ([demo1](styles/skala-kosmik/demo1/) · [demo2](styles/skala-kosmik/demo2/) · [demo3](styles/skala-kosmik/demo3/)) |
+| 54 | **Dunia 3D Painterly** | dunia-3d-painterly | ✅ ([demo1](styles/dunia-3d-painterly/demo1/) · [demo2](styles/dunia-3d-painterly/demo2/) · [demo3](styles/dunia-3d-painterly/demo3/)) |
+| 55 | **Diorama Miniatur Tilt-shift** | diorama-miniatur | ✅ ([demo1](styles/diorama-miniatur/demo1/) · [demo2](styles/diorama-miniatur/demo2/) · [demo3](styles/diorama-miniatur/demo3/)) |
+| 56 | **Kawanan Partikel** | partikel | ✅ ([demo1](styles/partikel/demo1/) · [demo2](styles/partikel/demo2/) · [demo3](styles/partikel/demo3/)) |
+| 57 | **Pop Art Sunburst** | pop-art | ✅ ([demo1](styles/pop-art/demo1/) · [demo2](styles/pop-art/demo2/) · [demo3](styles/pop-art/demo3/)) |
+| 58 | **Isometrik** | isometrik | ✅ ([demo1](styles/isometrik/demo1/) · [demo2](styles/isometrik/demo2/) · [demo3](styles/isometrik/demo3/)) |
 | 59 | **HUD Showreel** | hud-showreel | ✅ ([styles/hud-showreel](styles/hud-showreel/)) |
 | 60 | **Trailer Tipografi Gelap** | trailer-gelap | ❌ (belum diimplementasi) |
 | 61 | **Monoline Satu Garis** | garis-tunggal | ✅ ([styles/garis-tunggal](styles/garis-tunggal/)) |
