@@ -1,0 +1,50 @@
+{
+  "title": "HP Bar: Nyawa Terakhirmu — Rahasia Psikologi Bar Hijau, Damage Ghost & Detik Kritis",
+  "slug": "hud-showreel-hp-bar",
+  "style": "hud-showreel",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "synthwave", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Satu tebasan musuh mendarat telak, dan bar nyawamu di layar langsung terkuras separuh dalam sekejap.",
+      "pause": 0.35
+    },
+    {
+      "id": "ghost",
+      "text": "Perhatikan bayangan merah yang tertinggal sesaat sebelum menyusut. Itulah damage ghost, trik visual agar matamu sempat membaca seberapa parah luka barusan.",
+      "pause": 0.35
+    },
+    {
+      "id": "heal",
+      "text": "Saat kamu meminum ramuan penyembuh dan menyalakan perisai biru, angka naik kembali ke delapan puluh ditambah lapisan pelindung sementara.",
+      "pause": 0.35
+    },
+    {
+      "id": "crit",
+      "text": "Namun serangan kritis bos berikutnya menghancurkan perisai dan menyisakan tepat satu poin nyawa yang berkedip merah menyala.",
+      "pause": 0.35
+    },
+    {
+      "id": "illusion",
+      "text": "Banyak game modern sengaja memberi bobot tersembunyi pada piksel terakhir ini, supaya kamu merasakan keajaiban lolos dari maut.",
+      "pause": 0.35
+    },
+    {
+      "id": "ko",
+      "text": "Tetapi jika satu tebasan lagi masuk tanpa tangkisan, bar menyentuh nol, layar meredup, dan tulisan K.O. menghentikan segalanya.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Sebatang bar sederhana di layar ternyata dirancang dengan psikologi presisi untuk memacu detak jantungmu di setiap pertarungan.",
+      "pause": 0.4
+    }
+  ]
+}

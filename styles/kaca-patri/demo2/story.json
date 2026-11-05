@@ -1,0 +1,51 @@
+{
+  "title": "Alkimia Kaca Permata — Rahasia Emas dan Kobalt yang Tidak Pudar Seribu Tahun",
+  "slug": "kaca-patri-alkimia-permata",
+  "style": "kaca-patri",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "ambient", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Lukisan kanvas paling terkenal di dunia bisa memudar dalam beberapa abad, tetapi kaca patri katedral tetap menyala secerah bara api meski telah berusia delapan ratus tahun.",
+      "pause": 0.35
+    },
+    {
+      "id": "lebur",
+      "text": "Rahasianya terletak pada dapur tungku bersuhu seribu empat ratus derajat Celcius. Warna kaca patri bukan dicat di luar permukaan, melainkan menyatu di dalam lelehan pasir silika.",
+      "pause": 0.35
+    },
+    {
+      "id": "emas",
+      "text": "Untuk menghasilkan warna merah rubi yang menyala megah, para ahli kaca abad pertengahan mencampurkan bubuk emas murni ke dalam adonan kaca cair.",
+      "pause": 0.35
+    },
+    {
+      "id": "kobalt",
+      "text": "Sementara warna biru langit yang paling dalam dan terkenal di Katedral Chartres lahir dari taburan mineral oksida kobalt, serta hijau zamrud dari oksida tembaga.",
+      "pause": 0.35
+    },
+    {
+      "id": "perak",
+      "text": "Pada abad keempat belas ditemukan pula teknik noda perak, yaitu mengoleskan senyawa perak yang saat dipanggang berubah menjadi kilau kuning keemasan di atas satu keping kaca.",
+      "pause": 0.35
+    },
+    {
+      "id": "nano",
+      "text": "Ilmuwan modern menemukan bahwa partikel emas dan perak di dalam kaca kuno itu berukuran nanometer, sehingga mampu memurnikan udara saat terkena sinar matahari.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Tanpa mengenal istilah nanoteknologi, para perajin kaca masa silam telah mengunci kemilau logam mulia di dalam kristal abadi yang tak lekang oleh waktu.",
+      "pause": 0.4
+    }
+  ]
+}
+

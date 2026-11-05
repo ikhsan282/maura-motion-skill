@@ -1,0 +1,40 @@
+{
+  "title": "Tangan Satu Garis — Rahasia Lima Jari, Genggaman Kuat & Kelenturan Manusia",
+  "slug": "61_garis-tunggal-tangan",
+  "style": "garis-tunggal",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.35,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Coba perhatikan telapak tanganmu sendiri. Seluruh peradaban manusia, dari kapak batu purba hingga layar sentuh modern, lahir dari gerak lentur satu anggota tubuh ini.",
+      "pause": 0.35
+    },
+    {
+      "id": "jari",
+      "text": "Dengan satu tarikan garis tanpa putus, pena ini menelusuri pergelangan lalu naik turun lima kali untuk melahirkan ibu jari, telunjuk, jari tengah, jari manis, dan kelingking.",
+      "pause": 0.35
+    },
+    {
+      "id": "genggam",
+      "text": "Ketika kelima jari itu melipat rapat dan ibu jari mengunci di atas buku-buku jari, lahirlah genggaman merah yang sanggup memegang palu, memanjat tebing, dan melindungi.",
+      "pause": 0.35
+    },
+    {
+      "id": "lambai",
+      "text": "Namun detik berikutnya, garis yang sama sanggup mengendur kembali, membuka telapak lebar-lebar, dan mengayun lembut menjadi lambaian sapaan hangat kepada sesama.",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Satu garis yang sama bisa membentuk kepalan sekuat baja maupun sapaan selembut angin. Begitu pula hidup manusia: kuat saat menggenggam tujuan, dan hangat saat berbagi.",
+      "pause": 0.4
+    }
+  ]
+}

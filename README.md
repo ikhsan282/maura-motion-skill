@@ -96,7 +96,7 @@ Default suara untuk Bahasa Indonesia maupun Inggris adalah **ElevenLabs George**
 
 Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`), `~/.hermes/elevenlabs.env`, atau `.env` di folder repo.
 
-## Status gaya (77 gaya: 75 siap pakai ✅, 2 belum diimplementasi ❌)
+## Status gaya (77 gaya: 77 siap pakai ✅)
 
 | No | Gaya | ID | Status | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|:---:|---|---|---|
@@ -158,12 +158,12 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 | 56 | **Kawanan Partikel** | `partikel` | ✅ | [Ribuan Burung Terbang Tanpa Pemimpin](styles/partikel/demo1/) (64 dtk) | [Kunang-Kunang Hutan Bakau Serentak](styles/partikel/demo2/) (64 dtk) | [Hujan & Petrichor (Aroma Tanah Kering)](styles/partikel/demo3/) (65 dtk) |
 | 57 | **Pop Art Sunburst** | `pop-art` | ✅ | [Kenapa Harga Selalu Berakhir 99?](styles/pop-art/demo1/) (63 dtk) | [Jebakan Ukuran Sedang (Decoy Effect)](styles/pop-art/demo2/) (64 dtk) | [Jebakan Diskon Coret (Anchoring Bias)](styles/pop-art/demo3/) (65 dtk) |
 | 58 | **Isometrik** | `isometrik` | ✅ | [Perjalanan Paketmu dari Gudang ke Pintu](styles/isometrik/demo1/) (64 dtk) | [Perjalanan Setetes Air Keran (6 Tahap)](styles/isometrik/demo2/) (64 dtk) | [Dari Sawah ke Piringmu (Sebutir Beras)](styles/isometrik/demo3/) (65 dtk) |
-| 59 | **HUD Showreel** | `hud-showreel` | ✅ | [HP Bar: Nyawa Terakhirmu](styles/hud-showreel/demo/) (14 dtk) | [Skill Cooldown: Harga Sebuah Kemenangan](styles/hud-showreel/demo-skill/) (21 dtk) | — |
-| 60 | **Trailer Tipografi Gelap** | `trailer-gelap` | ❌ | — | — | — |
-| 61 | **Monoline Satu Garis** | `garis-tunggal` | ✅ | [Lingkaran Kebiasaan](styles/garis-tunggal/demo/) (18 dtk) | [Burung Satu Garis](styles/garis-tunggal/demo-burung/) (20 dtk) | [Tangan Satu Garis](styles/garis-tunggal/demo-tangan/) (19 dtk) |
-| 62 | **Kaca Patri Mosaik** | `kaca-patri` | ❌ | — | — | — |
-| 63 | **Perkamen Ukiran Kuno** | `perkamen-ukiran` | ✅ | [Kamus Melayu Pertama Ditulis Pelaut Italia](styles/perkamen-ukiran/demo/) (45 dtk) | — | — |
-| 64 | **Toon 3D Gacha Reveal** | `gacha-3d` | ✅ | [Gacha Satwa Langka Indonesia](styles/gacha-3d/demo/) (19 dtk) | — | — |
+| 59 | **HUD Showreel** | `hud-showreel` | ✅ | [HP Bar: Nyawa Terakhirmu (Damage Ghost)](styles/hud-showreel/demo1/) (64 dtk) | [Skill Cooldown: Harga Sebuah Kemenangan](styles/hud-showreel/demo2/) (64 dtk) | [Nama Hari Kita Ternyata Angka](styles/hud-showreel/demo3/) (65 dtk) |
+| 60 | **Trailer Tipografi Gelap** | `trailer-gelap` | ✅ | [Pesan Terakhir yang Tak Sampai ke Titanic](styles/trailer-gelap/demo1/) (64 dtk) | [Letusan Tambora 1815 (Tanpa Musim Panas)](styles/trailer-gelap/demo2/) (64 dtk) | [Apollo 13: Empat Hari di Ambang Gelap](styles/trailer-gelap/demo3/) (65 dtk) |
+| 61 | **Monoline Satu Garis** | `garis-tunggal` | ✅ | [Lingkaran Kebiasaan (Habit Loop)](styles/garis-tunggal/demo1/) (64 dtk) | [Burung Satu Garis (Lepas Landas)](styles/garis-tunggal/demo2/) (64 dtk) | [Tangan Satu Garis (Genggam & Lambai)](styles/garis-tunggal/demo3/) (65 dtk) |
+| 62 | **Kaca Patri Mosaik** | `kaca-patri` | ✅ | [Jendela yang Bercerita (Katedral)](styles/kaca-patri/demo1/) (64 dtk) | [Alkimia Kaca Permata (Emas & Kobalt)](styles/kaca-patri/demo2/) (64 dtk) | [Geometri Jendela Mawar (Rose Window)](styles/kaca-patri/demo3/) (65 dtk) |
+| 63 | **Perkamen Ukiran Kuno** | `perkamen-ukiran` | ✅ | [Kamus Melayu Pertama Ditulis Pelaut Italia](styles/perkamen-ukiran/demo1/) (64 dtk) | [Pulau Run Ditukar Manhattan (Pala Banda)](styles/perkamen-ukiran/demo2/) (64 dtk) | [Herbarium Amboinense (Rumphius di Ambon)](styles/perkamen-ukiran/demo3/) (65 dtk) |
+| 64 | **Toon 3D Gacha Reveal** | `gacha-3d` | ✅ | [Gacha Satwa Langka Indonesia (Badak Jawa)](styles/gacha-3d/demo1/) (64 dtk) | [Psikologi Pity System & Rate 0,6%](styles/gacha-3d/demo2/) (64 dtk) | [Gacha Pusaka & Kuliner Nusantara](styles/gacha-3d/demo3/) (65 dtk) |
 | 65 | **Stickman Doodle** | `stickman-doodle` | ✅ | [Kenapa Kita Menunda-nunda?](styles/stickman-doodle/demo/) (15 dtk) | — | — |
 | 66 | **Stickman Subuh** | `stickman-subuh` | ✅ | [Stickman Subuh](styles/stickman-subuh/demo/) (18 dtk) | [Begadang vs Tidur Cukup](styles/stickman-subuh/demo-begadang/) (22 dtk) | [Stickman Subuh Tahajud](styles/stickman-subuh/demo-tahajud/) (21 dtk) |
 | 67 | **Stickman Pelukis** | `stickman-pelukis` | ✅ | [Sempurna vs Gerak Cepat](styles/stickman-pelukis/demo/) (25 dtk) | — | — |

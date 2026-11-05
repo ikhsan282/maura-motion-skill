@@ -1,0 +1,51 @@
+{
+  "title": "Geometri Jendela Mawar — Matematika Simetri dan Cahaya di Katedral Gotik",
+  "slug": "kaca-patri-jendela-mawar",
+  "style": "kaca-patri",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "ambient", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bagaimana mungkin dinding batu seberat ribuan ton bisa dilubangi menjadi roda kaca raksasa berdiameter tiga belas meter tanpa membuat atap katedral runtuh?",
+      "pause": 0.35
+    },
+    {
+      "id": "gelap",
+      "text": "Sebelum abad kedua belas, bangunan batu besar harus memiliki tembok tebal dengan celah jendela sempit agar tidak ambruk, sehingga ruangan di dalamnya selalu gelap dan dingin.",
+      "pause": 0.35
+    },
+    {
+      "id": "penyangga",
+      "text": "Terobosan besar datang lewat penemuan busur runcing dan iga penyangga terbang di luar gedung, yang memindahkan beban atap dari dinding langsung ke tiang luar.",
+      "pause": 0.35
+    },
+    {
+      "id": "kompas",
+      "text": "Dengan dinding yang bebas beban, arsitek merancang Jendela Mawar hanya berbekal sebilah jangka besi dan tali tambang untuk membagi lingkaran menjadi dua belas kelopak simetris.",
+      "pause": 0.35
+    },
+    {
+      "id": "batu",
+      "text": "Rangka batu berukir yang disebut tracery bekerja seperti jari-jari roda sepeda, menahan ribuan keping kaca tipis dari tekanan angin kencang di ketinggian.",
+      "pause": 0.35
+    },
+    {
+      "id": "optik",
+      "text": "Para perajin bahkan memperhitungkan ilusi optik: karena warna biru menyebar lebih luas daripada merah, mereka memberi bintik kobalt di sela kaca rubi agar warnanya tampak seimbang.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Jendela Mawar adalah bukti nyata bahwa keindahan paling memukau lahir ketika ketepatan geometri matematika berpadu dengan keberanian rekayasa struktur.",
+      "pause": 0.4
+    }
+  ]
+}
+

@@ -1,0 +1,50 @@
+{
+  "title": "Nama Hari Kita Ternyata Angka — Kode Bahasa Arab & Portugis di Balik Kalender",
+  "slug": "hud-showreel-nama-hari-angka",
+  "style": "hud-showreel",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "tech", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Senin, Selasa, Rabu, Kamis. Pernahkah kamu sadar bahwa nama-nama hari yang kita ucapkan setiap pagi sebenarnya adalah deretan angka?",
+      "pause": 0.35
+    },
+    {
+      "id": "ahad",
+      "text": "Dalam sistem kalender Timur Tengah kuno, hitungan dimulai dari Ahad yang berarti angka satu, disusul Senin dari kata Itsnain yang berarti dua.",
+      "pause": 0.35
+    },
+    {
+      "id": "selasa",
+      "text": "Urutan itu berlanjut presisi. Selasa berasal dari Tsalatsa yang artinya tiga, dan Rabu berasal dari Arba'a yang artinya empat.",
+      "pause": 0.35
+    },
+    {
+      "id": "kamis",
+      "text": "Lalu Kamis berakar dari kata Khamis yang berarti angka lima. Lima hari pertama dalam sepekan murni berupa nomor urut.",
+      "pause": 0.35
+    },
+    {
+      "id": "jumat",
+      "text": "Barulah pada hari keenam dan ketujuh polanya berubah. Jumat diambil dari Jumu'ah yang berarti berkumpul, sedangkan Sabtu dari Sabt yang berarti istirahat.",
+      "pause": 0.35
+    },
+    {
+      "id": "minggu",
+      "text": "Lalu dari mana datangnya kata Minggu? Kata itu masuk lewat pelaut Portugis abad keenam belas dari kata Domingo, yang menggeser sebutan Ahad di kota pelabuhan.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Jadi setiap kali kamu mengeluh hari Senin datang terlalu cepat, sesungguhnya kamu sedang menyebut hari nomor dua dalam arsip sejarah bahasa Nusantara.",
+      "pause": 0.4
+    }
+  ]
+}

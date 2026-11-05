@@ -1,0 +1,59 @@
+{
+  "title": "Gacha Pusaka & Kuliner Nusantara — Mengumpulkan Rendang, Keris, dan Pinisi Legendaris",
+  "slug": "64_gacha-3d_demo3",
+  "style": "gacha-3d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "hype", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bagaimana jadinya jika mahakarya budaya dan kuliner Nusantara dikemas menjadi kartu item legendaris di dalam panggung gacha tiga dimensi?",
+      "pause": 0.35
+    },
+    {
+      "id": "rendang",
+      "text": "Kapsul pertama mengeluarkan item penyembuh terbaik dari Sumatera Barat: Rendang Minangkabau yang dimasak perlahan selama berjam-jam dengan santan dan rempah.",
+      "pause": 0.3
+    },
+    {
+      "id": "awet",
+      "text": "Berkat proses karamelisasi rempah alami yang disebut marandang, rendang kering sanggup bertahan berminggu-minggu di suhu ruang tanpa bahan pengawet buatan.",
+      "pause": 0.3
+    },
+    {
+      "id": "keris",
+      "text": "Kapsul kedua memancarkan sinar ungu epik: Keris Pusaka Nusantara dengan motif lipatan logam pamor yang ditempa dari campuran besi dan batu meteorit.",
+      "pause": 0.3
+    },
+    {
+      "id": "unesco",
+      "text": "Pada tahun dua ribu lima, UNESCO resmi menetapkan Keris Indonesia sebagai Warisan Budaya Takbenda Dunia karena kerumitan seni tempa dan filosofinya.",
+      "pause": 0.3
+    },
+    {
+      "id": "pinisi",
+      "text": "Dan inilah kapsul emas bintang lima dari Sulawesi Selatan: Kapal Layar Pinisi karya para maestro pembuat perahu dari tanah Bulukumba.",
+      "pause": 0.3
+    },
+    {
+      "id": "pasak",
+      "text": "Lambung kayu raksasa Pinisi disatukan menggunakan pasak kayu besi tanpa sebatang pun paku logam, serta dibangun mengandalkan perhitungan tradisional di kepala.",
+      "pause": 0.3
+    },
+    {
+      "id": "samudra",
+      "text": "Dengan dua tiang utama dan tujuh helai layar megah, kapal Pinisi telah terbukti sanggup menyeberangi Samudra Pasifik hingga ke pelabuhan Vancouver dan Tokyo.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Tiga kapsul ini mengingatkan kita bahwa leluhur Nusantara telah mewariskan teknologi pangan, metalurgi, dan maritim kelas bintang lima dunia."
+    }
+  ]
+}
+

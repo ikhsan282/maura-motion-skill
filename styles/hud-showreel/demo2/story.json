@@ -1,0 +1,50 @@
+{
+  "title": "Skill Cooldown & Ekonomi Aksi — Mengapa Ultimate Terkuat Harus Dikunci Waktu?",
+  "slug": "hud-showreel-skill-cooldown",
+  "style": "hud-showreel",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "synthwave", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jurus paling mematikan di dalam game selalu terkunci di balik lingkaran hitung mundur bernama cooldown.",
+      "pause": 0.35
+    },
+    {
+      "id": "spam",
+      "text": "Bayangkan jika jurus pemungkas tidak punya waktu tunggu. Pertarungan akan selesai dalam dua detik hanya dengan menekan satu tombol berulang kali.",
+      "pause": 0.35
+    },
+    {
+      "id": "ulti",
+      "text": "Karena itulah sistem meminta lima detik pengisian daya. Saat bar ungu penuh seratus persen, ledakan damage meningkat tiga kali lipat.",
+      "pause": 0.35
+    },
+    {
+      "id": "combo",
+      "text": "Sambil menunggu ultimate pulih, pemain dipaksa merangkai tiga serangan dasar beruntun hingga kombo kali tiga menyala.",
+      "pause": 0.35
+    },
+    {
+      "id": "window",
+      "text": "Detik-detik ketika jurus utamamu sedang gelap juga menjadi celah emas bagi lawan untuk membalikkan keadaan.",
+      "pause": 0.35
+    },
+    {
+      "id": "level",
+      "text": "Saat poin pengalaman penuh dan karakter naik ke level dua belas, waktu tunggu dipangkas separuh menjadi dua setengah detik.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Cooldown bukanlah hukuman bagi pemain, melainkan detak irama yang mengubah adu tekan tombol menjadi strategi tingkat tinggi.",
+      "pause": 0.4
+    }
+  ]
+}

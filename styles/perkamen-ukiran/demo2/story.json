@@ -1,0 +1,59 @@
+{
+  "title": "Pulau Run Ditukar Manhattan — Peta Rahasia Pala Banda yang Mengubah Peta Dunia 1667",
+  "slug": "63_perkamen-ukiran_demo2",
+  "style": "perkamen-ukiran",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "folk", "db": -16 },
+  "lead": 0.4,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu bahwa gemerlap pulau Manhattan di New York dulunya rela dilepas oleh Belanda demi satu pulau karang kecil di Maluku?",
+      "pause": 0.35
+    },
+    {
+      "id": "pala",
+      "text": "Pada abad ketujuh belas, biji pala dan bunga fuli dari Kepulauan Banda dihargai lebih mahal daripada emas murni di pasar London dan Amsterdam.",
+      "pause": 0.3
+    },
+    {
+      "id": "run",
+      "text": "Seluruh kebun pala dunia sudah dikuasai kongsi dagang Belanda, kecuali satu titik kecil sepanjang tiga kilometer bernama Pulau Run yang dijaga Inggris.",
+      "pause": 0.3
+    },
+    {
+      "id": "perang",
+      "text": "Armada Inggris dan Belanda berkali-kali saling meriam di laut Banda hanya untuk memperebutkan hak memanen pohon pala di pulau mungil tersebut.",
+      "pause": 0.3
+    },
+    {
+      "id": "breda",
+      "text": "Akhirnya pada tahun enam belas enam puluh tujuh, kedua negara menandatangani Perjanjian Breda di atas lembaran perkamen bersegel lilin merah.",
+      "pause": 0.3
+    },
+    {
+      "id": "tukar",
+      "text": "Isi kesepakatannya mengejutkan sejarah: Inggris menyerahkan Pulau Run di Maluku kepada Belanda, dan sebagai gantinya Inggris mendapatkan koloni Nieuw Amsterdam.",
+      "say": "Isi kesepakatannya mengejutkan sejarah: Inggris menyerahkan Pulau Run di Maluku kepada Belanda, dan sebagai gantinya Inggris mendapatkan koloni Niu Amsterdam."
+    },
+    {
+      "id": "manhattan",
+      "text": "Inggris langsung mengubah nama Nieuw Amsterdam menjadi New York, sementara Belanda bersorak karena berhasil mengunci monopoli pala seratus persen.",
+      "say": "Inggris langsung mengubah nama Niu Amsterdam menjadi Niu York, sementara Belanda bersorak karena berhasil mengunci monopoli pala seratus persen."
+    },
+    {
+      "id": "pierre",
+      "text": "Namun monopoli itu runtuh seabad kemudian ketika botanikus Prancis menyelundupkan bibit pala keluar dari Maluku ke pulau-pulau tropis lain.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Kini Pulau Run kembali menjadi kampung nelayan yang tenang, tetapi jejaknya abadi sebagai pulau kecil Nusantara yang pernah setara dengan jantung kota New York."
+    }
+  ]
+}
+

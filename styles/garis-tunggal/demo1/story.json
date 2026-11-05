@@ -1,0 +1,40 @@
+{
+  "title": "Lingkaran Kebiasaan — Mengapa Otak Sulit Memutus Rutinitas tapi Mudah Membelokkannya",
+  "slug": "61_garis-tunggal-kebiasaan",
+  "style": "garis-tunggal",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.35,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Setiap kebiasaan manusia, baik maupun buruk, selalu dimulai dari satu titik kecil yang ditarik menjadi garis panjang tanpa putus di dalam saraf otak kita.",
+      "pause": 0.35
+    },
+    {
+      "id": "pemicu",
+      "text": "Tahap pertama disebut pemicu. Begitu layar ponsel menyala dengan titik merah notifikasi di atas meja, mata kita langsung menangkap sinyal darurat yang memancing rasa penasaran.",
+      "pause": 0.35
+    },
+    {
+      "id": "rutin",
+      "text": "Garis itu langsung mengalir ke tahap kedua, yaitu rutinitas. Ibu jari meraih layar dan menggulir tanpa sadar demi mengejar tahap ketiga: hadiah percikan dopamin sesaat yang membuat lingkaran berputar kembali ke ponsel.",
+      "pause": 0.35
+    },
+    {
+      "id": "ganti",
+      "text": "Riset membuktikan bahwa pemicu dan keinginan akan hadiah sangat sulit dihapus. Trik terbaik adalah mengganti rutinitas di tengahnya: saat muncul dorongan meraih ponsel, alihkan tanganmu untuk membuka halaman buku.",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Kamu tidak perlu mematahkan garis kebiasaanmu dengan paksaan keras. Cukup belokkan arahnya sedikit saja hari ini, maka ujung garis hidupmu akan tiba di tempat yang sama sekali baru.",
+      "pause": 0.4
+    }
+  ]
+}

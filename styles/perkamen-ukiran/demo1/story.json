@@ -1,0 +1,59 @@
+{
+  "title": "Kamus Melayu Pertama Ditulis Pelaut Italia — Catatan Antonio Pigafetta di Tidore 1521",
+  "slug": "63_perkamen-ukiran_demo1",
+  "style": "perkamen-ukiran",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "folk", "db": -16 },
+  "lead": 0.4,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kamus bahasa Melayu tertua yang pernah dicetak untuk orang Eropa ternyata ditulis oleh seorang pelaut muda asal Italia pada tahun lima belas dua puluh satu.",
+      "pause": 0.35
+    },
+    {
+      "id": "pigafetta",
+      "text": "Namanya Antonio Pigafetta, juru tulis dari kota Vicenza yang ikut berlayar bersama armada Ferdinand Magellan menyeberangi dua samudra raksasa.",
+      "say": "Namanya Antonio Pigafeta, juru tulis dari kota Visenza yang ikut berlayar bersama armada Ferdinand Magelan menyeberangi dua samudra raksasa."
+    },
+    {
+      "id": "armada",
+      "text": "Lima kapal kayu berangkat dari Spanyol, namun badai ganas, kelaparan, dan pertempuran di Filipina merenggut nyawa Magellan serta sebagian besar awaknya.",
+      "say": "Lima kapal kayu berangkat dari Spanyol, namun badai ganas, kelaparan, dan pertempuran di Filipina merenggut nyawa Magelan serta sebagian besar awaknya."
+    },
+    {
+      "id": "tidore",
+      "text": "Pada bulan November lima belas dua puluh satu, dua kapal yang tersisa akhirnya membuang sauh di perairan Pulau Tidore, jantung kepulauan penghasil cengkih.",
+      "pause": 0.3
+    },
+    {
+      "id": "pena",
+      "text": "Sementara para kelasi sibuk menimbang berkarung-karung rempah cengkih, Pigafetta justru duduk di geladak kapal sambil membuka buku perkamen dan pena bulunya.",
+      "say": "Sementara para kelasi sibuk menimbang berkarung-karung rempah cengkih, Pigafeta justru duduk di geladak kapal sambil membuka buku perkamen dan pena bulunya."
+    },
+    {
+      "id": "kata",
+      "text": "Ia menunjuk benda di sekitarnya, mendengar pengucapan penduduk lokal, lalu menggoreskan kata demi kata: mata, gigi, batu, kelapa, hingga beras.",
+      "pause": 0.3
+    },
+    {
+      "id": "jumlah",
+      "text": "Selama berinteraksi dari Brunei hingga Maluku, ia berhasil menyusun daftar empat ratus dua puluh enam kosakata Melayu lengkap dengan padanan bahasa Italia.",
+      "pause": 0.3
+    },
+    {
+      "id": "victoria",
+      "text": "Tiga tahun setelah pelayaran dimulai, hanya satu kapal bernama Victoria yang sanggup kembali ke Eropa bersama delapan belas orang penyintas dan buku harian itu.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Lima abad telah berlalu, dan catatan tangan Pigafetta membuktikan bahwa bahasa Melayu sudah menjadi jembatan perdagangan dunia jauh sebelum era modern.",
+      "say": "Lima abad telah berlalu, dan catatan tangan Pigafeta membuktikan bahwa bahasa Melayu sudah menjadi jembatan perdagangan dunia jauh sebelum era modern."
+    }
+  ]
+}

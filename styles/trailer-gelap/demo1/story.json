@@ -1,0 +1,51 @@
+{
+  "title": "Pesan Terakhir yang Tak Pernah Sampai ke Titanic — Tragedi Telegram Es Pukul 21:40",
+  "slug": "trailer-gelap-pesan-titanic",
+  "style": "trailer-gelap",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "cinematic", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pesan yang sebenarnya bisa menyelamatkan ribuan nyawa di kapal Titanic malam itu tidak pernah sampai ke tangan kapten.",
+      "pause": 0.35
+    },
+    {
+      "id": "malam",
+      "text": "Empat belas April seribu sembilan ratus dua belas. Samudra Atlantik Utara membeku tenang tanpa cahaya bulan, sementara Titanic melaju penuh di kecepatan dua puluh dua setengah knot.",
+      "pause": 0.35
+    },
+    {
+      "id": "mesaba",
+      "text": "Tepat pukul dua puluh satu lewat empat puluh menit, kapal uap Mesaba mengirim kawat darurat: bongkahan es raksasa menghadang persis di jalur pelayaran Titanic.",
+      "pause": 0.35
+    },
+    {
+      "id": "radio",
+      "text": "Namun di ruang radio yang sempit, operator Jack Phillips sedang kelelahan mengetik ratusan telegram pribadi milik penumpang kelas satu ke Cape Race.",
+      "pause": 0.35
+    },
+    {
+      "id": "tumpuk",
+      "text": "Karena kawat Mesaba tidak diawali kode wajib untuk kapten, kertas peringatan itu hanya ditindih pemberat di sudut meja kerja.",
+      "pause": 0.35
+    },
+    {
+      "id": "tabrak",
+      "text": "Dua jam kemudian, tepat pukul dua puluh tiga lewat empat puluh menit, lonceng pengintai berdentang tiga kali, tetapi haluan baja tak sempat lagi menghindar.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Selembar kertas kecil yang tertahan beberapa puluh meter dari anjungan akhirnya mengubah malam pelayaran perdana menjadi tragedi maritim paling dikenang sepanjang sejarah.",
+      "pause": 0.4
+    }
+  ]
+}
+

@@ -1,0 +1,58 @@
+{
+  "title": "Gacha Satwa Langka Indonesia — Dari Tarsius hingga Badak Jawa Bintang Lima",
+  "slug": "64_gacha-3d_demo1",
+  "style": "gacha-3d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "hype", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Hari ini kita memutar mesin gacha satwa endemik Indonesia, dan kapsul terakhir yang keluar memiliki tingkat kelangkaan bintang lima legendaris.",
+      "pause": 0.35
+    },
+    {
+      "id": "tarsius",
+      "text": "Kapsul pertama berwarna biru terbuka dan memunculkan Tarsius Sulawesi, primata mungil pemakan serangga yang panjang tubuhnya hanya seukuran genggaman jari.",
+      "pause": 0.3
+    },
+    {
+      "id": "mata",
+      "text": "Fakta paling mengejutkan dari Tarsius adalah ukuran satu bola matanya yang lebih besar daripada volume otaknya sendiri, serta kepalanya yang bisa berputar seratus delapan puluh derajat.",
+      "pause": 0.3
+    },
+    {
+      "id": "komodo",
+      "text": "Putaran kedua mengeluarkan cahaya ungu epik: Komodo dari Nusa Tenggara Timur, kadal purba terbesar di bumi yang mampu tumbuh sepanjang tiga meter.",
+      "pause": 0.3
+    },
+    {
+      "id": "bisa",
+      "text": "Selain gigitan bergerigi tajam, rahang bawah Komodo menyimpan kelenjar racun antikoagulan yang membuat mangsa kehilangan tekanan darah dengan sangat cepat.",
+      "pause": 0.3
+    },
+    {
+      "id": "badak",
+      "text": "Dan inilah kapsul emas bintang lima yang paling langka: Badak Jawa bercula satu yang kini hanya hidup di ujung barat Pulau Jawa, tepatnya di Taman Nasional Ujung Kulon.",
+      "pause": 0.3
+    },
+    {
+      "id": "populasi",
+      "text": "Populasi Badak Jawa di seluruh planet bumi saat ini diperkirakan hanya tersisa sekitar delapan puluh ekor saja di satu habitat tunggal.",
+      "pause": 0.3
+    },
+    {
+      "id": "ancaman",
+      "text": "Karena hanya tinggal di satu lokasi, satu wabah penyakit atau letusan Gunung Anak Krakatau saja bisa mengancam kelangsungan seluruh spesiesnya.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Di dalam game, status langka membuat kita bangga, tetapi di alam liar, status langka adalah alarm darurat agar mereka tidak benar-benar punah."
+    }
+  ]
+}

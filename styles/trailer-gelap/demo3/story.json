@@ -1,0 +1,51 @@
+{
+  "title": "Apollo 13: Empat Hari di Ambang Gelap — Penyelamatan Paling Mustahil di Antariksa",
+  "slug": "trailer-gelap-apollo-13",
+  "style": "trailer-gelap",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "cinematic", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Sejauh tiga ratus dua puluh ribu kilometer dari Bumi, sebuah tangki oksigen meledak di tengah ruang hampa yang membeku.",
+      "pause": 0.35
+    },
+    {
+      "id": "ledak",
+      "text": "Tiga belas April seribu sembilan ratus tujuh puluh, tepat pada jam kelima puluh lima misi Apollo tiga belas. Kalimat tenang terdengar di radio Houston: kami baru saja mengalami masalah.",
+      "pause": 0.35
+    },
+    {
+      "id": "sekoci",
+      "text": "Modul utama Odyssey kehilangan oksigen dan listrik dalam hitungan menit. Tiga astronot terpaksa mengungsi ke pendarat Bulan Aquarius yang sebenarnya hanya dirancang untuk dua orang.",
+      "pause": 0.35
+    },
+    {
+      "id": "daya",
+      "text": "Agar baterai cukup untuk perjalanan pulang empat hari, seluruh pemanas dan komputer dimatikan hingga pemakaian listrik ditekan ke dua belas ampere, setara satu pemanggang roti.",
+      "pause": 0.35
+    },
+    {
+      "id": "kotak",
+      "text": "Ancaman berikutnya datang dari gas karbon dioksida yang terus naik, sementara tabung penyaring cadangan berbentuk persegi tidak muat ke lubang sirkulasi yang bundar.",
+      "pause": 0.35
+    },
+    {
+      "id": "lakban",
+      "text": "Insinyur di darat memandu kru merakit adaptor darurat hanya dari sampul buku panduan, kantong plastik, kaus kaki, dan gulungan lakban perak.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Ketika parasut mereka mendarat selamat di Samudra Pasifik, dunia menyebut Apollo tiga belas sebagai kegagalan paling gemilang dalam sejarah penjelajahan antariksa.",
+      "pause": 0.4
+    }
+  ]
+}
+

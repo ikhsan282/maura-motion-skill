@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 75 siap pakai ✅, 2 belum diimplementasi ❌)
+## Status gaya (77 gaya: 77 siap pakai ✅)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -128,12 +128,12 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 56 | **Kawanan Partikel** | partikel | ✅ ([demo1](styles/partikel/demo1/) · [demo2](styles/partikel/demo2/) · [demo3](styles/partikel/demo3/)) |
 | 57 | **Pop Art Sunburst** | pop-art | ✅ ([demo1](styles/pop-art/demo1/) · [demo2](styles/pop-art/demo2/) · [demo3](styles/pop-art/demo3/)) |
 | 58 | **Isometrik** | isometrik | ✅ ([demo1](styles/isometrik/demo1/) · [demo2](styles/isometrik/demo2/) · [demo3](styles/isometrik/demo3/)) |
-| 59 | **HUD Showreel** | hud-showreel | ✅ ([styles/hud-showreel](styles/hud-showreel/)) |
-| 60 | **Trailer Tipografi Gelap** | trailer-gelap | ❌ (belum diimplementasi) |
-| 61 | **Monoline Satu Garis** | garis-tunggal | ✅ ([styles/garis-tunggal](styles/garis-tunggal/)) |
-| 62 | **Kaca Patri Mosaik** | kaca-patri | ❌ (belum diimplementasi) |
-| 63 | **Perkamen Ukiran Kuno** | perkamen-ukiran | ✅ ([styles/perkamen-ukiran](styles/perkamen-ukiran/)) |
-| 64 | **Toon 3D Gacha Reveal** | gacha-3d | ✅ ([styles/gacha-3d](styles/gacha-3d/)) |
+| 59 | **HUD Showreel** | hud-showreel | ✅ ([demo1](styles/hud-showreel/demo1/) · [demo2](styles/hud-showreel/demo2/) · [demo3](styles/hud-showreel/demo3/)) |
+| 60 | **Trailer Tipografi Gelap** | trailer-gelap | ✅ ([demo1](styles/trailer-gelap/demo1/) · [demo2](styles/trailer-gelap/demo2/) · [demo3](styles/trailer-gelap/demo3/)) |
+| 61 | **Monoline Satu Garis** | garis-tunggal | ✅ ([demo1](styles/garis-tunggal/demo1/) · [demo2](styles/garis-tunggal/demo2/) · [demo3](styles/garis-tunggal/demo3/)) |
+| 62 | **Kaca Patri Mosaik** | kaca-patri | ✅ ([demo1](styles/kaca-patri/demo1/) · [demo2](styles/kaca-patri/demo2/) · [demo3](styles/kaca-patri/demo3/)) |
+| 63 | **Perkamen Ukiran Kuno** | perkamen-ukiran | ✅ ([demo1](styles/perkamen-ukiran/demo1/) · [demo2](styles/perkamen-ukiran/demo2/) · [demo3](styles/perkamen-ukiran/demo3/)) |
+| 64 | **Toon 3D Gacha Reveal** | gacha-3d | ✅ ([demo1](styles/gacha-3d/demo1/) · [demo2](styles/gacha-3d/demo2/) · [demo3](styles/gacha-3d/demo3/)) |
 | 65 | **Stickman Doodle** | stickman-doodle | ✅ ([styles/stickman-doodle](styles/stickman-doodle/)) |
 | 66 | **Stickman Subuh** | stickman-subuh | ✅ ([styles/stickman-subuh](styles/stickman-subuh/)) |
 | 67 | **Stickman Pelukis** | stickman-pelukis | ✅ ([styles/stickman-pelukis](styles/stickman-pelukis/)) |

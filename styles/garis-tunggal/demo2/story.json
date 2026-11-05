@@ -1,0 +1,40 @@
+{
+  "title": "Burung Satu Garis — Bagaimana Satu Tarikan Kecil Melahirkan Kepakan Terbang Tinggi",
+  "slug": "61_garis-tunggal-burung",
+  "style": "garis-tunggal",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.35,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Banyak karya besar di dunia ini sering dikira lahir dari rencana rumit yang sempurna, padahal semuanya berawal dari satu tarikan garis kecil di atas kertas kosong.",
+      "pause": 0.35
+    },
+    {
+      "id": "paruh",
+      "text": "Ketika ujung pena mulai bergerak maju tanpa ragu, lengkungan pertamanya membentuk paruh mungil dan kepala burung yang menatap lurus ke arah cakrawala.",
+      "pause": 0.35
+    },
+    {
+      "id": "sayap",
+      "text": "Garis yang sama kemudian mengalir turun membentuk dada, lalu membentang lebar menjadi sepasang sayap lentur yang mulai mengepak menangkap hembusan angin.",
+      "pause": 0.35
+    },
+    {
+      "id": "terbang",
+      "text": "Begitu kepakan pertama menemukan ritmenya, arus udara hangat mengangkat tubuh burung itu melesat naik menembus awan dalam jalur merah yang tegas.",
+      "pause": 0.35
+    },
+    {
+      "id": "moral",
+      "text": "Kamu tidak perlu menunggu seluruh peta langit tergambar jelas sebelum bergerak. Satu garis keberanian hari ini sudah cukup untuk membuatmu lepas landas.",
+      "pause": 0.4
+    }
+  ]
+}

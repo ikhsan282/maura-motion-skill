@@ -1,0 +1,51 @@
+{
+  "title": "Letusan Tambora 1815 — Tahun Ketika Dunia Kehilangan Musim Panas",
+  "slug": "trailer-gelap-tambora-1815",
+  "style": "trailer-gelap",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "cinematic", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pada bulan Juni seribu delapan ratus enam belas, salju turun membekukan Eropa dan Amerika Utara. Namun sumber bencananya berasal dari sebuah pulau di Nusantara.",
+      "pause": 0.35
+    },
+    {
+      "id": "april",
+      "text": "Sepuluh April seribu delapan ratus lima belas. Gunung Tambora di Pulau Sumbawa meledak dengan kekuatan skala tujuh, letusan gunung berapi terbesar dalam sejarah manusia modern.",
+      "pause": 0.35
+    },
+    {
+      "id": "puncak",
+      "text": "Dalam satu malam yang mencekam, puncak gunung yang tadinya menjulang empat ribu tiga ratus meter runtuh kehilangan sepertiga tingginya.",
+      "pause": 0.35
+    },
+    {
+      "id": "abu",
+      "text": "Seratus lima puluh kilometer kubik batu apung dan gas belerang terlontar menembus lapisan stratosfer hingga ketinggian empat puluh tiga kilometer.",
+      "pause": 0.35
+    },
+    {
+      "id": "selimut",
+      "text": "Jutaan ton aerosol asam sulfat menyelimuti bola Bumi seperti tirai raksasa, memantulkan kembali cahaya matahari ke ruang angkasa.",
+      "pause": 0.35
+    },
+    {
+      "id": "beku",
+      "text": "Setahun kemudian, suhu rata-rata dunia anjlok, panen gandum gagal total di tiga benua, dan dunia mencatatnya sebagai tahun tanpa musim panas.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Letusan Tambora membuktikan bahwa satu gunung di kepulauan Indonesia sanggup mengubah iklim, sejarah pangan, dan wajah peradaban seluruh planet.",
+      "pause": 0.4
+    }
+  ]
+}
+

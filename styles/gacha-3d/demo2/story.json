@@ -1,0 +1,59 @@
+{
+  "title": "Psikologi Pity System & Rate 0,6% — Mengapa Kapsul Emas Membuat Otak Ketagihan?",
+  "slug": "64_gacha-3d_demo2",
+  "style": "gacha-3d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "hype", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bertanya mengapa kilatan cahaya emas saat membuka kapsul gacha terasa begitu mendebarkan hingga tangan sulit berhenti menekan tombol?",
+      "pause": 0.35
+    },
+    {
+      "id": "skinner",
+      "text": "Mesin gacha dirancang menggunakan prinsip psikologi jadwal penguatan acak, di mana hadiah yang tidak bisa ditebak justru memicu lonjakan dopamin tertinggi.",
+      "pause": 0.3
+    },
+    {
+      "id": "animasi",
+      "text": "Otak kita sebenarnya melepaskan dopamin paling banyak bukan ketika kartu karakter muncul, melainkan pada detik-detik kapsul bergetar dan berubah warna.",
+      "pause": 0.3
+    },
+    {
+      "id": "rate",
+      "text": "Di banyak game populer, peluang dasar mendapatkan karakter bintang lima hanyalah nol koma enam persen, atau rata-rata satu kali dalam seratus enam puluh putaran.",
+      "pause": 0.3
+    },
+    {
+      "id": "pity",
+      "text": "Agar pemain tidak putus asa dan berhenti bermain, pengembang menyisipkan mekanisme Pity System yang menjamin hadiah emas pada putaran ke-sembilan puluh.",
+      "pause": 0.3
+    },
+    {
+      "id": "sunk",
+      "text": "Namun di sinilah jebakan biaya tertanam bekerja: ketika hitungan sudah mencapai tujuh puluh kali gagal, pemain merasa rugi jika berhenti sebelum menyentuh batas jaminan.",
+      "pause": 0.3
+    },
+    {
+      "id": "permata",
+      "text": "Mata uang berlian atau kristal bertingkat juga sengaja dibuat berlapis agar otak kita kehilangan rasa sakit saat mengeluarkan uang asli.",
+      "pause": 0.3
+    },
+    {
+      "id": "regulasi",
+      "text": "Karena efeknya yang sangat kuat, banyak negara kini mewajibkan setiap game mempublikasikan angka persentase gacha secara transparan di dalam layar.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Memahami matematika di balik panggung gacha membuat kita tetap memegang kendali penuh: nikmati permainannya tanpa terjebak ilusi keberuntungan."
+    }
+  ]
+}
+

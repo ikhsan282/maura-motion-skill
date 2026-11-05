@@ -1,0 +1,59 @@
+{
+  "title": "Herbarium Amboinense — Rumphius, Naturalis Buta yang Mencatat Seribu Tumbuhan Maluku",
+  "slug": "63_perkamen-ukiran_demo3",
+  "style": "perkamen-ukiran",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "folk", "db": -16 },
+  "lead": 0.4,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Ensiklopedia tumbuhan Nusantara paling lengkap di abad ketujuh belas diselesaikan oleh seorang ilmuwan di Ambon yang kehilangan penglihatannya secara total.",
+      "pause": 0.35
+    },
+    {
+      "id": "rumphius",
+      "text": "Namanya Georg Eberhard Rumphius, naturalis kelahiran Jerman yang menetap di Pulau Ambon sejak tahun enam belas lima puluh empat dan jatuh cinta pada hutan Maluku.",
+      "say": "Namanya Georg Eberhard Rumpius, naturalis kelahiran Jerman yang menetap di Pulau Ambon sejak tahun enam belas lima puluh empat dan jatuh cinta pada hutan Maluku."
+    },
+    {
+      "id": "buta",
+      "text": "Pada usia empat puluh dua tahun, penyakit glaukoma merenggut kedua matanya hingga buta total, tepat ketika naskah besarnya baru berjalan separuh jalan.",
+      "pause": 0.3
+    },
+    {
+      "id": "raba",
+      "text": "Alih-alih menyerah, Rumphius melanjutkan penelitiannya dengan meraba tulang daun, mencium aroma getah, dan mengecap kulit kayu dari setiap tanaman.",
+      "say": "Alih-alih menyerah, Rumpius melanjutkan penelitiannya dengan meraba tulang daun, mencium aroma getah, dan mengecap kulit kayu dari setiap tanaman."
+    },
+    {
+      "id": "bencana",
+      "text": "Cobaan belum berhenti: gempa bumi dahsyat merenggut istri dan putrinya, lalu kebakaran besar di Ambon menghanguskan seluruh gambar ilustrasi aslinya.",
+      "pause": 0.3
+    },
+    {
+      "id": "ulang",
+      "text": "Dengan ingatan luar biasa, ia mendiktekan ulang deskripsi setiap pohon dalam bahasa Latin dan Melayu dibantu putranya serta juru gambar di Ambon.",
+      "pause": 0.3
+    },
+    {
+      "id": "tenggelam",
+      "text": "Bahkan ketika salinan naskahnya dikirim ke Belanda dan kapalnya tenggelam ditembak meriam Prancis, salinan cadangan di Batavia berhasil menyelamatkan karyanya.",
+      "pause": 0.3
+    },
+    {
+      "id": "terbit",
+      "text": "Enam jilid mahakarya Herbarium Amboinense akhirnya tercetak memuat seribu dua ratus spesies tumbuhan lengkap dengan kegunaan obat tradisional Maluku.",
+      "say": "Enam jilid mahakarya Herbarium Amboinense akhirnya tercetak memuat seribu dua ratus spesies tumbuhan lengkap dengan kegunaan obat tradisional Maluku."
+    },
+    {
+      "id": "akhir",
+      "text": "Dari sebuah rumah kecil di Ambon, ketekunan seorang ilmuwan tunanetra mewariskan fondasi botani tropis Indonesia bagi ilmu pengetahuan dunia."
+    }
+  ]
+}
+

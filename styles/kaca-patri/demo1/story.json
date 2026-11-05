@@ -1,0 +1,51 @@
+{
+  "title": "Jendela yang Bercerita — Bagaimana Kaca Patri Menjadi Buku Bergambar Abad Pertengahan",
+  "slug": "kaca-patri-jendela-bercerita",
+  "style": "kaca-patri",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "ambient", "db": -18 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Delapan ratus tahun yang lalu, sebelum mesin cetak ditemukan dan ketika sebagian besar penduduk belum bisa membaca huruf, jendela-jendela kaca inilah yang berbicara.",
+      "pause": 0.35
+    },
+    {
+      "id": "buku",
+      "text": "Buku tulis tangan di atas perkamen saat itu berharga setara sebuah rumah, sehingga rakyat biasa belajar sejarah dan moral lewat jendela katedral yang menyala.",
+      "pause": 0.35
+    },
+    {
+      "id": "baca",
+      "text": "Uniknya, panel kaca patri dirancang untuk dibaca dari baris paling bawah menuju ke atas, menuntun mata pengunjung menengadah ke arah kubah langit-langit.",
+      "pause": 0.35
+    },
+    {
+      "id": "timah",
+      "text": "Ribuan kepingan kaca permata dipotong satu per satu, lalu dirangkai menggunakan jalur timah hitam lentur yang sekaligus berfungsi sebagai garis tegas pembentuk wajah dan jubah.",
+      "pause": 0.35
+    },
+    {
+      "id": "cahaya",
+      "text": "Ketika matahari pagi bergerak menuju senja, berkas cahaya merah rubi dan biru kobalt ikut bergeser di lantai batu, seolah-olah gambar di jendela sedang bernapas hidup.",
+      "pause": 0.35
+    },
+    {
+      "id": "gilda",
+      "text": "Di bagian sudut bawah jendela, para tukang roti, pandai besi, dan penenun yang menyumbang biaya pembangunan turut diabadikan sedang bekerja dengan alat mereka.",
+      "pause": 0.35
+    },
+    {
+      "id": "akhir",
+      "text": "Kaca patri membuktikan bahwa jauh sebelum layar bioskop lahir, manusia sudah merancang layar raksasa bertenaga cahaya matahari untuk menyatukan ribuan orang dalam satu cerita.",
+      "pause": 0.4
+    }
+  ]
+}
+
