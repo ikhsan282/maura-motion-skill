@@ -1,33 +1,41 @@
 # Maura Motion Skill
 
-Library **77 gaya animasi** (74 gaya siap pakai + 3 gaya dalam katalog) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
+Library **77 gaya animasi siap pakai** (dengan 231 demo lengkap) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
 
 Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa saja.
 
-## Cara pakai (5 langkah)
+## Cara pakai
 
-1. **Pilih gaya** — buka `STYLES.md`, cari yang `best_for`-nya cocok (mudik/emosional → `anime`, dongeng plastisin 3D → `clay-stop-motion`, rute → `isometrik`, promo hype → `kinetic-type`).
-2. **Pelajari kit** — baca `styles/<gaya>/STYLE.md` (ciri visual, gerakan, API) + intip `demo1/` (atau `demo/`).
-3. **Tulis naskah** — bikin `story.json` (4–6 baris untuk 20 dtk, 8–12 baris untuk 40–90 dtk, baris 1 = hook).
-4. **Bangun scene** — tulis `scene.js` pakai fungsi dari `kit.js`, satu shot per baris naskah.
-5. **Render** — `node scripts/make.mjs <project>` → MP4 + narasi + musik + caption + QA sheet.
+**Sekali saja:** `node scripts/setup.mjs` (cek Node, ffmpeg, Chrome, Python venv, dan suara offline). Untuk suara manusia, isi `ELEVENLABS_API_KEY` (lihat [Narasi suara](#narasi-suara)).
+
+Lalu untuk setiap video:
+
+1. **Pilih gaya** — buka `STYLES.md`, lihat kolom *Paling cocok untuk* (mudik/emosional → `anime`, dongeng plastisin → `clay-stop-motion`, alur/logistik → `isometrik`, motivasi tipografi → `kinetic-type`, psikologi & kebiasaan → seri `stickman-*`).
+2. **Pelajari kit** — baca `styles/<gaya>/STYLE.md` (ciri visual, karakter, API `kit.js`) dan buka salah satu `demo1/`–`demo3/` sebagai contoh.
+3. **Tulis naskah** — buat folder proyek berisi `story.json`. Baris pertama = hook.
+   - Video pendek (≤ 20 dtk): 4–6 baris, ±40–50 kata.
+   - Video panjang (±60 dtk): 8 baris, ±140–170 kata, tambahkan `"maxDuration": 90`.
+4. **Bangun scene** — tulis `scene.js` dengan fungsi dari `kit.js`; tiap shot mengikuti `id` baris naskah (`C.<id>.start`).
+5. **Cek dulu, baru render** — lihat still beberapa detik untuk memastikan tata letak rapi, lalu render penuh → `out/<slug>.mp4` (narasi + caption per kata + musik + SFX, −14 LUFS).
 
 ```bash
-# setup pertama kali (cek Chrome, ffmpeg, Python venv, & dependensi audio)
-node scripts/setup.mjs
+# 1) cek visual dulu (narasi + PNG still di detik 2, 15, 40 → build/stills/sheet.png)
+node scripts/make.mjs styles/anime/demo1 --stills 2,15,40
 
-# render demo pendek (~17 dtk)
+# 2) render penuh
 node scripts/make.mjs styles/anime/demo1
 
-# render ulang paksa & simpan file build sementara (narration.wav, video.mp4, dll)
+# render ulang paksa & simpan file build (narration.wav, video.mp4, dll)
 node scripts/make.mjs styles/clay-stop-motion/demo2 --force --keep
 
-# render ulang visual/musik saja tanpa memanggil ulang TTS (hemat kuota ElevenLabs)
+# ganti visual/musik saja tanpa memanggil ulang TTS (hemat kuota ElevenLabs)
 node scripts/make.mjs examples/hello --no-tts --keep
 
-# render video panjang (atau set "maxDuration": 90 di story.json)
-AM_MAX_DURATION=90 node scripts/make.mjs styles/stickman-kisah/demo
+# ganti suara / musik
+node scripts/make.mjs styles/stickman-picturebook/demo1 --voice el-id-f --music lofi
 ```
+
+> Video > 20 dtk wajib punya `"maxDuration"` di `story.json` (atau set env `AM_MAX_DURATION=90`). Semua demo panjang di repo ini sudah memakainya.
 
 Detail lengkap: baca `SKILL.md`. Standar nulis cerita & gaya baru: `AUTHORING.md`.
 
@@ -79,7 +87,7 @@ Lalu beri prompt:
 | `SKILL.md` | Panduan pakai skill (pintu masuk agen) |
 | `AUTHORING.md` | Standar naskah & cara bikin gaya baru |
 | `STYLES.md` / `catalog.json` | Katalog 77 gaya + kecocokan topik |
-| `styles/<gaya>/` | `STYLE.md` + `kit.js` + `demo1/`..`demo3/` (atau `demo/`) per gaya |
+| `styles/<gaya>/` | `STYLE.md` + `kit.js` + `demo1/`..`demo3/` per gaya |
 | `examples/` | Contoh unggulan siap tonton: `hello` (*Halo Maura Motion*) & `clay-stop-motion-demo2` (*Sangkuriang & Perahu Terbalik*) |
 | `engine/` | Runtime + renderer (headless Chrome / Playwright → MP4) |
 | `audio/` | TTS (ElevenLabs default George + Kokoro/Piper/SAPI offline fallback), musik, SFX, mixing −14 LUFS |
