@@ -74,15 +74,15 @@ Sumber: **D** = 25 gaya di Drive, **SA** = Shorts Animator (oil/watercolour/goua
 | 66 | **Stickman Subuh** | `stickman-subuh` | C | Kriya | kebiasaan & disiplin, begadang vs tidur cukup, tahajud vs kesiangan, rutinitas pagi, motivasi santai | Begadang vs Tidur Cukup (siap render) | lofi · el-id-m |
 | 67 | **Stickman Pelukis** | `stickman-pelukis` | C | Kriya | perfeksionisme vs aksi, produktivitas kreator, mulai dulu perbaiki belakangan, motivasi kerja | Sempurna vs Gerak Cepat (siap render) | lofi · el-id-m |
 | 68 | **Stickman Kisah** | `stickman-kisah` | C | Sosial/Cerita | konflik moral sehari-hari, utang, empati sosial, konten 1 menit | Kisah Utang (siap render) | lofi · el-id-m |
-| 69 | **Stickman 3D World** | `stickman-3dworld` | C | Sosial/Cerita | prokrastinasi & fokus, lawan mager | Kenapa Kita Menunda-nunda (Dark Notebook) (siap render) | lofi · el-id-m |
-| 70 | **Stickman Beanie** | `stickman-beanie` | C | Sosial/Cerita | self-talk & mindset, lawan mager | Kupluk Merah vs Mager (siap render) | lofi · el-id-m |
-| 71 | **Stickman Caveman** | `stickman-caveman` | C | Sosial/Cerita | otak purba vs modern, lawan mager | Otak Gua vs Tugas (siap render) | lofi · el-id-m |
-| 72 | **Stickman Cinematic** | `stickman-cinematic` | C | Sosial/Cerita | motivasi malam hari, mimpi vs lelah | Kota Tidur, Mimpi Belum Selesai (siap render) | lofi · el-id-m |
-| 73 | **Stickman Duo** | `stickman-duo` | C | Sosial/Cerita | akuntabilitas & teman seperjuangan, lawan mager bareng | Gas Bareng, Jangan Mager (siap render) | lofi · el-id-m |
-| 74 | **Stickman Graffiti** | `stickman-graffiti` | C | Sosial/Cerita | motivasi kreator, keberanian mulai, gagal vs karya, personal branding jalanan | Coretan Pertama di Tembok Kota (siap render) | lofi · el-id-m |
-| 75 | **Stickman Lecture** | `stickman-lecture` | C | Sosial/Cerita | edukasi ringan, penjelasan konsep, tips produktivitas, konten guru/mentor | Kuliah Singkat: Kenapa Otak Kabur (siap render) | lofi · el-id-m |
-| 76 | **Stickman Minimal Dark** | `stickman-minimal-dark` | C | Sosial/Cerita | prokrastinasi, overthinking, kesehatan mental, self-improvement malam hari | Kenapa Kita Menunda-nunda (Minimal Dark) (siap render) | lofi · el-id-m |
-| 77 | **Stickman Picturebook** | `stickman-picturebook` | C | Sosial/Cerita | cerita anak-dewasa, dongeng motivasi, konten hangat, bedtime wisdom | Kenapa Kita Menunda-nunda (Picturebook) (siap render) | lofi · el-id-m |
+| 69 | **Stickman 3D World** | stickman-3dworld | C | 3D/Teknik | kebiasaan majemuk, timeboxing, fokus vs multitasking | Hukum Bunga Majemuk Kebiasaan (64 dtk) | lofi · el-id-m |
+| 70 | **Stickman Beanie** | stickman-beanie | C | Kriya | melawan mager, aturan 5 detik, paradoks pilihan, efek spotlight | Kupluk Merah vs Rebahan (64 dtk) | lofi · el-id-m |
+| 71 | **Stickman Caveman** | stickman-caveman | C | Kriya | evolusi otak purba vs distraksi modern, amigdala, dopamin instan | Otak Purba & Batu Tugas (64 dtk) | lofi · el-id-m |
+| 72 | **Stickman Cinematic** | stickman-cinematic | C | Sinematik | motivasi malam hari, pejuang sunyi, konsistensi jangka panjang | Kota Tidur, Mimpimu Belum Selesai (64 dtk) | lofi · el-id-m |
+| 73 | **Stickman Duo** | stickman-duo | C | Sosial/Cerita | akuntabilitas teman (body doubling), belajar dengan mengajar | Mager Sendirian vs Gas Bareng (64 dtk) | lofi · el-id-m |
+| 74 | **Stickman Graffiti** | stickman-graffiti | C | Kriya/Urban | motivasi kreator, The Taste Gap, mengubah gagal jadi karya | Tembok Ini Saksi Mimpimu (64 dtk) | lofi · el-id-m |
+| 75 | **Stickman Lecture** | stickman-lecture | C | Kriya | konsep ilmiah & metode belajar, kurva lupa Ebbinghaus, active recall | Kurva Lupa Ebbinghaus (64 dtk) | lofi · el-id-m |
+| 76 | **Stickman Minimal Dark** | stickman-minimal-dark | C | 2D/OLED | regulasi emosi, stop overthinking 2 pagi, lingkaran kendali Stoik | Kamu Bukan Pemalas (Regulasi Emosi) (64 dtk) | lofi · el-id-m |
+| 77 | **Stickman Picturebook** | stickman-picturebook | C | Kriya | dongeng kebijaksanaan, self-compassion, metafora pertumbuhan | Dongeng Batu yang Menyusut (64 dtk) | warm · el-id-m |
 
 ## Memilih gaya cepat
 
