@@ -1,12 +1,12 @@
-// 78 · STICKMAN OVERSIMPLIFIED — Demo 3: Ignaz Semmelweis 1847 & Cuci Tangan Medis
+// 78 · STICKMAN OVERSIMPLIFIED — Demo 3: Ignaz Semmelweis 1847 (8 Full-Screen Educational Scenes!)
 import * as K from '/styles/stickman-oversimplified/kit.js';
-const { clamp, ease } = AM.lib;
+const { clamp, lerp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -16,157 +16,204 @@ export async function setup(AM) {
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
 
-  let phase = 0;
-  if (t >= C.refleks.start) phase = 3;
-  else if (t >= C.klorin.start) phase = 2;
-  else if (t >= C.wina.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral.start) beat = 7;
+  else if (t >= C.kuman.start) beat = 6;
+  else if (t >= C.refleks.start) beat = 5;
+  else if (t >= C.ego.start) beat = 4;
+  else if (t >= C.klorin.start) beat = 3;
+  else if (t >= C.investigasi.start) beat = 2;
+  else if (t >= C.wina.start) beat = 1;
 
-  const isLab = phase === 1 || phase === 2;
-  const tags = [
-    'WINA 1847 • DOKTER YANG DITERTAWAKAN REKANNYA',
-    'MISTERI 2 BANGSAL • 18% VS 2% ANGKA KEMATIAN',
-    'SOLUSI KAPUR KLORIN • TURUN DRASTIS KE 1,2%',
-    'SEMMELWEIS REFLEX • DATA VS GENGSI ZAMAN',
-  ];
+  if (beat === 0) {
+    // BEAT 1 (hook): Vienna Street 1847 — Semmelweis holding wash basin while arrogant top-hat doctors laugh/walk away
+    const u = clamp((t - C.hook.start) / Math.max(1, C.hook.dur));
+    const zoom = lerp(1.28, 1.0, ease.outCubic(u));
 
-  K.oversimplifiedBg(ctx, t, {
-    mode: isLab ? 'lab' : 'street',
-    stageTag: tags[phase],
-    col: K.PAL.gold,
-  });
-
-  const headers = [
-    ['1847', 'DISURUH CUCI TANGAN MALAH TERSINGGUNG!', 'Kisah Tragis & Heroik Dokter Ignaz Semmelweis di Rumah Sakit Wina'],
-    ['MISTERI!', 'KENAPA BANGSAL DOKTER 3X LEBIH BERBAHAYA?', 'Dokter Memeriksa Pasien Langsung Setelah Otopsi Tanpa Cuci Tangan'],
-    ['18% -> 1%', 'CUCI TANGAN KLORIN MENYELAMATKAN IBU!', 'Angka Demam Nifas Anjlok Seketika, tapi Dokter Senior Menolak'],
-    ['TERBUKTI!', 'TEORI KUMAN PASTEUR MEMBUKTIKANNYA BENAR', 'Waspadai Semmelweis Reflex: Menolak Fakta Baru Demi Gengsi'],
-  ][phase];
-
-  K.oversimplifiedHeader(ctx, headers[0], headers[1], headers[2], { col: K.PAL.gold });
-
-  if (!isLab) {
-    const pose = phase === 0 ? 'shocked' : 'happy';
-    K.oversimplifiedStickman(ctx, 430, 810, pose, {
-      scale: 1.05,
-      t,
-      coatColor: K.PAL.coatTeal,
-      prop: 'wash_basin',
-      showLegs: true,
+    K.withCamera(ctx, { zoom, fx: 460, fy: 1040 }, () => {
+      K.drawStreetWorld(ctx, t);
+      K.drawStickman(ctx, 820 - u * 240, 1200, {
+        pose: 'skeptical',
+        hairStyle: 'tophat',
+        coatColor: K.PAL.coatGreen,
+        scale: 0.72,
+        t,
+        walkSpeed: 5.5,
+      });
+      K.drawStickman(ctx, 390, 1460, {
+        pose: 'shocked',
+        hairStyle: 'bowl',
+        coatColor: K.PAL.coatTeal,
+        prop: 'wash_basin',
+        scale: 1.18,
+        t,
+      });
     });
 
-    const bubbles = {
-      0: 'Teman-teman dokter, ayo cuci tangan dulu! Kok malah menertawakanku?!',
-      3: 'Data tidak pernah bohong! Cuci tangan menyelamatkan jutaan nyawa!',
-    };
-    K.oversimplifiedBubble(ctx, 540, 290, bubbles[phase], { col: K.PAL.gold });
-  } else {
-    K.oversimplifiedStickman(ctx, 325, 625, 'focused', {
-      scale: 0.86,
-      t: t + 0.6,
-      coatColor: K.PAL.coatGreen,
-      hairColor: K.PAL.hairGrey,
-      prop: 'none',
-      showLegs: false,
-      glasses: true,
+    K.drawEduBanner(ctx, 'WINA 1847', 'DISURUH CUCI TANGAN MALAH TERSINGGUNG!', 'Kisah Nyata Dokter Ignaz Semmelweis di Rumah Sakit Wina');
+    K.drawEduCallout(ctx, 540, 1510, 960, 155, {
+      tag: 'FAKTA MEDIS ABAD KE-19',
+      title: 'Tahun 1847: Belum Ada yang Tahu Tentang Bakteri & Kuman!',
+      desc: 'Dokter zaman dulu mengira penyakit berasal dari "udara buruk" (miasma), bukan tangan kotor',
+      stat: '1847 M',
+      a: pop(t, C.hook.start + 0.25),
+    });
+  } else if (beat === 1) {
+    // BEAT 2 (wina): Visual Data Comparison in Hospital Lab — Ward 1 (Doctors 18% Death) vs Ward 2 (Midwives 2% Death)
+    const u = clamp((t - C.wina.start) / Math.max(1, C.wina.dur));
+    K.withCamera(ctx, { zoom: lerp(1.0, 1.15, u), fx: 540, fy: 960 }, () => {
+      K.drawLabWorld(ctx, t);
+      // Doctor in Top Hat on Left (18% Danger)
+      K.drawStickman(ctx, 290, 1055, {
+        pose: 'skeptical',
+        hairStyle: 'tophat',
+        coatColor: K.PAL.coatBrown,
+        showLegs: false,
+        scale: 0.96,
+        t,
+      });
+      // Semmelweis on Right analyzing mortality gauge
+      K.drawStickman(ctx, 760, 1055, {
+        pose: 'focused',
+        hairStyle: 'bowl',
+        coatColor: K.PAL.coatTeal,
+        glasses: true,
+        showLegs: false,
+        scale: 1.05,
+        t,
+      });
+      K.drawGalvanometerRig(ctx, 535, 1050, t, { needleAngle: 0.56, jarColor: K.PAL.red, scale: 1.05 });
     });
 
-    K.oversimplifiedStickman(ctx, 735, 625, phase === 2 ? 'happy' : 'focused', {
-      scale: 0.96,
-      t,
-      coatColor: K.PAL.coatTeal,
-      hairColor: K.PAL.hairBrown,
-      prop: 'wash_basin',
-      showLegs: false,
-    });
-
-    K.drawLabApparatus(ctx, 565, 618, t, {
-      needleAngle: phase === 1 ? 0.52 : -0.52,
-      label: phase === 1 ? 'TINGKAT INFEKSI BANGSAL: 18,3% (TINGGI!)' : 'SETELAH CUCI KLORIN: 1,2% (AMAN!)',
-      jarColor: '#74c0fc',
-    });
-
-    const bubbles = {
-      1: 'Partikel dari ruang otopsi menempel di tangan yang belum dicuci!',
-      2: 'Begitu wajib cuci tangan pakai klorin, kematian turun dari 18% ke 1%!',
-    };
-    K.oversimplifiedBubble(ctx, 540, 272, bubbles[phase], { col: K.PAL.gold });
-  }
-
-  if (phase === 0) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'RUMAH SAKIT UMUM WINA • TAHUN 1847',
-      titleStr: 'Belum Ada yang Tahu Tentang Keberadaan Bakteri & Kuman',
-      subStr: 'Penyakit masih dianggap berasal dari "udara buruk" (miasma) di ruangan',
-      stat: 'ERA 1847',
-      statSub: 'SEBELUM KUMAN',
-      col: K.PAL.gold,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PIONIR ANTISEPTIK DUNIA',
-      titleStr: 'Ignaz Semmelweis Dijuluki "Penyelamat Para Ibu"',
-      subStr: 'Menemukan prosedur pencegahan infeksi jauh sebelum teori kuman populer',
-      stat: 'PIONIR',
-      statSub: 'HIGIENIS MEDIS',
-      col: K.PAL.amber,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'PERBANDINGAN DUA KLINIK BERSALIN WINA',
-      titleStr: 'Klinik Dokter 18% Kematian vs Klinik Bidan Hanya 2%',
-      subStr: 'Perbedaannya: bidan tidak melakukan otopsi, sedangkan dokter melakukannya tiap pagi',
+    K.drawEduBanner(ctx, '18% VS 2%', 'MISTERI DUA BANGSAL BERSALIN DI WINA', 'Mengapa Bangsal Dokter 3x Lebih Mematikan Daripada Bangsal Bidan?');
+    K.drawEduCallout(ctx, 540, 1455, 960, 165, {
+      tag: 'DATA OBSERVASI SEMMELWEIS',
+      title: 'Klinik 1 (Dokter): 18% Meninggal vs Klinik 2 (Bidan): Hanya 2%',
+      desc: 'Ibu-ibu yang hendak melahirkan sampai menangis memohon agar tidak masuk ke bangsal dokter!',
       stat: '18% vs 2%',
-      statSub: 'SELISIH TAJAM',
       col: K.PAL.red,
-      a: pop(t, C.wina.start),
+      a: pop(t, C.wina.start + 0.2),
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'TEMUAN PARTIKEL KADAVER',
-      titleStr: 'Tangan Dokter Membawa Kuman Tak Kasat Mata ke Pasien',
-      subStr: 'Terungkap saat rekan Semmelweis, Jakob Kolletschka, wafat akibat tergores pisau otopsi',
-      stat: 'BUKTI KUAT',
-      statSub: 'TRANSMISI KONTAK',
-      col: K.PAL.gold,
-      a: pop(t, C.wina.start + 0.5),
+  } else if (beat === 2) {
+    // BEAT 3 (investigasi): MICROSCOPIC GERM ZOOM ON HAND — Invisible Cadaverous Particles from Autopsy Room!
+    const u = clamp((t - C.investigasi.start) / Math.max(1, C.investigasi.dur));
+    const zoom = lerp(1.22, 1.0, ease.outCubic(u));
+
+    K.withCamera(ctx, { zoom, fx: 540, fy: 820 }, () => {
+      K.drawMicrobeZoomWorld(ctx, t, { cleansed: false });
     });
-  } else if (phase === 2) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'KEBIJAKAN CUCI TANGAN MEI 1847',
-      titleStr: 'Wajib Mencuci Tangan dengan Larutan Kalsium Hipoklorit',
-      subStr: 'Dalam beberapa bulan, angka kematian ibu melahirkan langsung turun drastis ke 1,2%',
+
+    K.drawEduBanner(ctx, 'PENYEBAB!', 'TANGAN DOKTER MEMBAWA PARTIKEL OTOPSI!', 'Memeriksa Pasien Langsung Setelah Membedah Jenazah Tanpa Cuci Tangan');
+    K.drawEduCallout(ctx, 540, 1465, 960, 165, {
+      tag: 'RANTAI PENULARAN INFEKSI (DEMAM NIFAS)',
+      title: 'Ruang Otopsi Pagi Hari -> Tangan Tak Dicuci -> Pasien Bersalin',
+      desc: 'Bidan tidak melakukan otopsi jenazah, itulah sebabnya bangsal bidan jauh lebih aman!',
+      stat: 'KUMAN!',
+      col: K.PAL.red,
+      a: pop(t, C.investigasi.start + 0.2),
+    });
+  } else if (beat === 3) {
+    // BEAT 4 (klorin): CHLORINE HANDWASHING BREAKTHROUGH — Sparkling Clean Hand + Mortality Plunges to 1.2%!
+    const u = clamp((t - C.klorin.start) / Math.max(1, C.klorin.dur));
+    if (u < 0.5) {
+      K.drawMicrobeZoomWorld(ctx, t, { cleansed: true });
+    } else {
+      K.withCamera(ctx, { zoom: 1.35, fx: 540, fy: 960 }, () => {
+        K.drawLabWorld(ctx, t);
+        K.drawStickman(ctx, 750, 1055, {
+          pose: 'excited',
+          hairStyle: 'bowl',
+          coatColor: K.PAL.coatTeal,
+          prop: 'wash_basin',
+          showLegs: false,
+          scale: 1.08,
+          t,
+        });
+        K.drawGalvanometerRig(ctx, 510, 1050, t, { needleAngle: -0.58, jarColor: '#38bdf8', scale: 1.1 });
+      });
+    }
+
+    K.drawEduBanner(ctx, 'SOLUSI!', 'CUCI TANGAN DENGAN LARUTAN KAPUR KLORIN', 'Kematian Ibu Melahirkan Langsung Anjlok Drastis dari 18% ke 1,2%!');
+    K.drawEduCallout(ctx, 540, 1465, 960, 165, {
+      tag: 'EKSPERIMEN ANTISEPTIK MEI 1847',
+      title: 'Kalsium Hipoklorit Membunuh Partikel Kuman di Tangan Dokter',
+      desc: 'Hanya dengan mencuci tangan sebelum memeriksa pasien, 90% kematian berhasil dicegah!',
       stat: 'TURUN 90%',
-      statSub: 'ANGKA KEMATIAN',
-      col: K.PAL.gold,
-      a: pop(t, C.klorin.start),
+      col: '#38bdf8',
+      a: pop(t, C.klorin.start + 0.2),
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PENOLAKAN AKIBAT GENGSI SOSIAL',
-      titleStr: '"Tangan Seorang Gentleman Tidak Mungkin Membawa Penyakit!"',
-      subStr: 'Ego komunitas medis abad ke-19 menolak menerima fakta bahwa merekalah penyebabnya',
-      stat: 'EGO TINGGI',
-      statSub: 'TOLAK FAKTA',
+  } else if (beat === 4) {
+    // BEAT 5 (ego): 3 Offended Senior Doctors in Tall Top Hats rejecting the data out of arrogance
+    const u = clamp((t - C.ego.start) / Math.max(1, C.ego.dur));
+    K.withCamera(ctx, { zoom: lerp(1.0, 1.12, u), fx: 540, fy: 1020 }, () => {
+      K.drawStreetWorld(ctx, t);
+      K.drawStickman(ctx, 280, 1410, { pose: 'skeptical', hairStyle: 'tophat', coatColor: '#1e293b', scale: 0.94, t });
+      K.drawStickman(ctx, 540, 1430, { pose: 'skeptical', hairStyle: 'tophat', coatColor: K.PAL.coatBrown, scale: 0.98, t: t + 1 });
+      K.drawStickman(ctx, 800, 1410, { pose: 'skeptical', hairStyle: 'tophat', coatColor: K.PAL.coatGreen, scale: 0.94, t: t + 2 });
+    });
+
+    K.drawEduBanner(ctx, 'EGO TINGGI', 'DOKTER SENIOR TERSINGGUNG & MENOLAK DATA!', '"Tangan Seorang Gentleman Terhormat Tidak Mungkin Kotor!"');
+    K.drawEduCallout(ctx, 540, 1475, 960, 160, {
+      tag: 'KONFLIK DATA ILMIAH VS GENGSI SOSIAL',
+      title: 'Mengakui Cuci Tangan = Mengakui Selama Ini Mereka Penyebabnya',
+      desc: 'Alih-alih berterima kasih, komunitas medis Wina justru memecat Ignaz Semmelweis!',
+      stat: 'DIPECAT!',
       col: K.PAL.red,
-      a: pop(t, C.klorin.start + 0.5),
+      a: pop(t, C.ego.start + 0.2),
+    });
+  } else if (beat === 5) {
+    // BEAT 6 (refleks): Chalkboard Psychology Explanation — What is the "Semmelweis Reflex"?
+    K.drawChalkboardWorld(ctx, t, { formula: '18,3% -> 1,2% (KLORIN)' });
+    K.drawStickman(ctx, 540, 1380, {
+      pose: 'focused',
+      hairStyle: 'bowl',
+      coatColor: K.PAL.coatTeal,
+      glasses: true,
+      scale: 1.18,
+      t,
+    });
+
+    K.drawEduBanner(ctx, 'PSIKOLOGI', 'APA ITU "EFEK REFLEKS SEMMELWEIS"?', 'Bias Kognitif Menolak Fakta Baru karena Bertentangan Norma Lama');
+    K.drawEduCallout(ctx, 540, 1475, 960, 165, {
+      tag: 'ISTILAH ILMIAH: SEMMELWEIS REFLEX',
+      title: 'Penolakan Refleks terhadap Bukti Nyata Demi Melindungi Ego',
+      desc: 'Terjadi ketika pakar menolak inovasi baru hanya karena merusak kebiasaan lama mereka',
+      stat: 'BIAS EGO',
+      col: K.PAL.amber,
+      a: pop(t, C.refleks.start + 0.2),
+    });
+  } else if (beat === 6) {
+    // BEAT 7 (kuman): Louis Pasteur & Joseph Lister (20 Years Later) proving Germ Theory!
+    K.drawBellLabsWorld(ctx, t, { propMode: 'medical' });
+    K.drawEduBanner(ctx, 'TERBUKTI!', 'LOUIS PASTEUR MEMBUKTIKAN TEORI KUMAN!', '20 Tahun Kemudian, Mikroskop Membuktikan Semmelweis 100% Benar');
+    K.drawEduCallout(ctx, 540, 1475, 960, 160, {
+      tag: 'REVOLUSI ANTISEPTIK MODERN',
+      title: 'Louis Pasteur & Joseph Lister Mengubah Standar Operasi Dunia',
+      desc: 'Sterilisasi alat bedah dan cuci tangan kini menjadi hukum wajib di setiap rumah sakit',
+      stat: '100% BENAR',
+      col: K.PAL.gold,
+      a: pop(t, C.kuman.start + 0.2),
     });
   } else {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'ISTILAH PSIKOLOGI: SEMMELWEIS REFLEX',
-      titleStr: 'Kecenderungan Menolak Bukti Baru karena Bertentangan Norma Lama',
-      subStr: 'Pelajaran penting bagi ilmuwan dan pemimpin agar selalu rendah hati di depan data',
-      stat: 'REFLEKS EGO',
-      statSub: 'BIAS KOGNITIF',
-      col: K.PAL.amber,
-      a: pop(t, C.refleks.start),
+    // BEAT 8 (moral): Lab Triumph — Semmelweis remembered as "Savior of Mothers"
+    K.drawLabWorld(ctx, t);
+    K.drawStickman(ctx, 540, 1360, {
+      pose: 'happy',
+      hairStyle: 'bowl',
+      coatColor: K.PAL.coatTeal,
+      prop: 'wash_basin',
+      scale: 1.18,
+      t,
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PEMBUKTIAN LOUIS PASTEUR & JOSEPH LISTER',
-      titleStr: 'Cuci Tangan & Sterilisasi Kini Menjadi Hukum Wajib Kedokteran',
-      subStr: 'Kebenaran ilmiah mungkin bisa ditolak sementara, namun pada akhirnya selalu menang',
-      stat: 'STANDAR EMAS',
-      statSub: 'MEDIS DUNIA',
+
+    K.drawEduBanner(ctx, 'PAHLAWAN', 'DIJULUKI "SANG PENYELAMAT PARA IBU"', 'Keberaniannya Memegang Teguh Data Menyelamatkan Jutaan Nyawa');
+    K.drawEduCallout(ctx, 540, 1480, 960, 160, {
+      tag: 'PELAJARAN PENTING SEMMELWEIS',
+      title: 'Jangan Biarkan Gengsi Menutup Matamu dari Kebenaran Data',
+      desc: 'Solusi paling menyelamatkan nyawa terkadang berawal dari hal sesederhana mencuci tangan!',
+      stat: 'RENDAH HATI',
       col: K.PAL.gold,
-      a: pop(t, C.refleks.start + 0.5),
+      a: pop(t, C.moral.start + 0.2),
     });
   }
 }

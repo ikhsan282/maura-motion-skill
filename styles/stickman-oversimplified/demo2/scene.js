@@ -1,12 +1,12 @@
-// 78 · STICKMAN OVERSIMPLIFIED — Demo 2: Serendipity Sains (Penisilin Fleming & Microwave Spencer)
+// 78 · STICKMAN OVERSIMPLIFIED — Demo 2: Serendipity Sains: Penisilin Fleming & Microwave (8 Full-Screen Scenes!)
 import * as K from '/styles/stickman-oversimplified/kit.js';
-const { clamp, ease } = AM.lib;
+const { clamp, lerp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -16,157 +16,160 @@ export async function setup(AM) {
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
 
-  let phase = 0;
-  if (t >= C.pasteur.start) phase = 3;
-  else if (t >= C.penisilin.start) phase = 2;
-  else if (t >= C.fleming.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral.start) beat = 7;
+  else if (t >= C.pelajaran.start) beat = 6;
+  else if (t >= C.pasteur.start) beat = 5;
+  else if (t >= C.microwave.start) beat = 4;
+  else if (t >= C.penisilin.start) beat = 3;
+  else if (t >= C.zona.start) beat = 2;
+  else if (t >= C.fleming.start) beat = 1;
 
-  const isLab = phase === 1 || phase === 2;
-  const tags = [
-    'LONDON 1928 • CAWAN KOTOR SEBELUM LIBURAN',
-    'LAB ST. MARY • ANOMALI JAMUR PENICILLIUM',
-    'PENISILIN & COKELAT RADAR PERCY SPENCER',
-    'PRINSIP PASTEUR • PIKIRAN YANG SIAP MENGAMATI',
-  ];
-
-  K.oversimplifiedBg(ctx, t, {
-    mode: isLab ? 'lab' : 'street',
-    stageTag: tags[phase],
-    col: K.PAL.amber,
-  });
-
-  const headers = [
-    ['1928', 'LUPA CUCI CAWAN MALAH SELAMATKAN DUNIA!', 'Kisah Nyata Serendipity Penemuan Antibiotik Penisilin'],
-    ['TUNGGU DULU!', 'BAKTERI MATI DI SEKELILING JAMUR BIRU', 'Alexander Fleming Memilih Mengamati Daripada Langsung Membuang'],
-    ['200 JUTA+', 'PENISILIN & OVEN MICROWAVE DARI KEBETULAN', 'Dari Jamur Cawan hingga Cokelat Meleleh di Saku Percy Spencer'],
-    ['SERENDIPITY', 'KEBERUNTUNGAN MILIK PIKIRAN YANG SIAP!', 'Jangan Buang Kegagalanmu Sebelum Memeriksa Anomalinya'],
-  ][phase];
-
-  K.oversimplifiedHeader(ctx, headers[0], headers[1], headers[2], { col: K.PAL.amber });
-
-  if (!isLab) {
-    const pose = phase === 0 ? 'happy' : 'excited';
-    K.oversimplifiedStickman(ctx, 430, 810, pose, {
-      scale: 1.05,
-      t,
-      coatColor: K.PAL.coatBlue,
-      prop: 'petri',
-      showLegs: true,
+  if (beat === 0) {
+    // BEAT 1 (hook): London Street 1928 — Alexander Fleming holding Petri dish
+    const u = clamp((t - C.hook.start) / Math.max(1, C.hook.dur));
+    K.withCamera(ctx, { zoom: lerp(1.26, 1.0, ease.outCubic(u)), fx: 460, fy: 1040 }, () => {
+      K.drawStreetWorld(ctx, t);
+      K.drawStickman(ctx, 410, 1460, {
+        pose: 'excited',
+        hairStyle: 'bowl',
+        coatColor: K.PAL.coatBlue,
+        prop: 'petri',
+        scale: 1.18,
+        t,
+      });
     });
 
-    const bubbles = {
-      0: 'Siapa sangka lupa nyuci cawan lab bisa menyelamatkan 200 juta nyawa?!',
-      3: 'Ingat kata Pasteur: keberuntungan cuma berpihak pada mata yang jeli!',
-    };
-    K.oversimplifiedBubble(ctx, 540, 290, bubbles[phase], { col: K.PAL.amber });
-  } else {
-    K.oversimplifiedStickman(ctx, 325, 625, 'focused', {
-      scale: 0.86,
-      t: t + 0.8,
-      coatColor: K.PAL.coatGreen,
-      hairColor: K.PAL.hairGrey,
-      prop: 'none',
-      showLegs: false,
-      glasses: true,
-    });
-
-    K.oversimplifiedStickman(ctx, 735, 625, phase === 2 ? 'excited' : 'shocked', {
-      scale: 0.96,
-      t,
-      coatColor: K.PAL.coatBlue,
-      hairColor: K.PAL.hairBrown,
-      prop: 'petri',
-      showLegs: false,
-    });
-
-    K.drawLabApparatus(ctx, 565, 618, t, {
-      needleAngle: phase === 2 ? 0.48 : 0.15,
-      label: phase === 1 ? 'ZONA BEBAS BAKTERI DI SEKITAR JAMUR' : 'EFEK ANTIBIOTIK PENICILLIUM NOTATUM',
-      jarColor: '#39a878',
-    });
-
-    const bubbles = {
-      1: 'Tunggu... kenapa semua bakteri di dekat jamur hijau ini mati bersih?!',
-      2: 'Cawan berjamur jadi Penisilin, cokelat meleleh jadi Oven Microwave!',
-    };
-    K.oversimplifiedBubble(ctx, 540, 272, bubbles[phase], { col: K.PAL.amber });
-  }
-
-  if (phase === 0) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'SEPTEMBER 1928 • RUMAH SAKIT ST. MARY LONDON',
-      titleStr: 'Alexander Fleming Menumpuk Cawan Petri Sebelum Berlibur',
-      subStr: 'Satu cawan biakan bakteri Staphylococcus tidak sengaja terbuka di dekat jendela',
-      stat: '1 CAWAN',
-      statSub: 'LUPA TERTUTUP',
-      col: K.PAL.amber,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'DAMPAK SEJARAH MEDIS MODERN',
-      titleStr: 'Menyelamatkan Lebih dari 200 Juta Jiwa di Seluruh Dunia',
-      subStr: 'Mengubah operasi bedah dan pengobatan infeksi manusia untuk selamanya',
+    K.drawEduBanner(ctx, '1928', 'LUPA CUCI CAWAN MALAH SELAMATKAN DUNIA!', 'Bagaimana Ketidaksengajaan di Lab Melahirkan Obat Penisilin');
+    K.drawEduCallout(ctx, 540, 1510, 960, 155, {
+      tag: 'PENEMUAN TAK SENGAJA (SERENDIPITY)',
+      title: '200 Juta Nyawa Diselamatkan Berkat Cawan yang Lupa Dicuci!',
+      desc: 'Alexander Fleming meninggalkan tumpukan cawan bakteri saat pergi berlibur musim panas',
       stat: '200 JUTA',
-      statSub: 'NYAWA SELAMAT',
-      col: K.PAL.gold,
-      a: pop(t, C.hook.start + 0.6),
+      a: pop(t, C.hook.start + 0.25),
     });
-  } else if (phase === 1) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'KALIMAT TERKENAL FLEMING: "THAT\'S FUNNY..."',
-      titleStr: 'Bukan Menggerutu, Fleming Justru Meneliti Lingkaran Jernihnya',
-      subStr: 'Jamur Penicillium notatum mengeluarkan zat yang meluruhkan dinding sel bakteri',
+  } else if (beat === 1) {
+    // BEAT 2 (fleming): Inside London Lab — Mold spore lands on Petri Dish
+    K.drawLabWorld(ctx, t);
+    K.drawStickman(ctx, 730, 1055, {
+      pose: 'shocked',
+      hairStyle: 'bowl',
+      coatColor: K.PAL.coatWhite,
+      prop: 'petri',
+      glasses: true,
+      showLegs: false,
+      scale: 1.08,
+      t,
+    });
+    K.drawGalvanometerRig(ctx, 480, 1050, t, { needleAngle: -0.35, jarColor: '#2d6a4f', scale: 1.0 });
+
+    K.drawEduBanner(ctx, 'LAB LONDON', 'CAWAN BAKTERI DITUMBUHI JAMUR HIJAU!', 'Spora Jamur Penicillium Notatum Masuk Lewat Jendela Lab');
+    K.drawEduCallout(ctx, 540, 1465, 960, 160, {
+      tag: 'SEPTEMBER 1928 • ST. MARY HOSPITAL',
+      title: '"Lucu Sekali..." — Kalimat Terkenal Fleming Saat Melihat Jamur',
+      desc: 'Alih-alih langsung mencuci cawan yang terkontaminasi, Fleming mengamatinya dengan teliti',
+      stat: 'JAMUR UNIK',
+      a: pop(t, C.fleming.start + 0.2),
+    });
+  } else if (beat === 2) {
+    // BEAT 3 (zona): Microscopic Zoom — Mold killing surrounding bacteria (Inhibition Zone!)
+    K.drawMicrobeZoomWorld(ctx, t, { cleansed: true });
+    K.drawEduBanner(ctx, 'MIKROSKOP', 'ZONA BENING: BAKTERI MATI DI SEKITAR JAMUR!', 'Jamur Mengeluarkan Zat Pembunuh Bakteri Staphylococcus');
+    K.drawEduCallout(ctx, 540, 1465, 960, 165, {
+      tag: 'CARA KERJA ANTIBIOTIK PENISILIN',
+      title: 'Zat Sekresi Jamur Menghancurkan Dinding Sel Bakteri Jahat',
+      desc: 'Di sekeliling koloni jamur terbentuk lingkaran jernih bebas kuman sama sekali!',
       stat: 'ZONA BERSIH',
-      statSub: 'BAKTERI MATI',
-      col: K.PAL.amber,
-      a: pop(t, C.fleming.start),
+      col: '#38bdf8',
+      a: pop(t, C.zona.start + 0.2),
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'KOLABORASI FLOREY & CHAIN (1940)',
-      titleStr: 'Dikembangkan Menjadi Obat Massal Tepat Saat Perang Dunia II',
-      subStr: 'Fleming, Florey, dan Chain dianugerahi Hadiah Nobel Kedokteran tahun 1945',
+  } else if (beat === 3) {
+    // BEAT 4 (penisilin): Nobel Prize & Mass Production of Penicillin
+    K.drawChalkboardWorld(ctx, t, { formula: 'PENICILLIUM -> ANTIBIOTIK' });
+    K.drawStickman(ctx, 540, 1380, {
+      pose: 'happy',
+      hairStyle: 'bowl',
+      coatColor: K.PAL.coatBlue,
+      prop: 'medal',
+      glasses: true,
+      scale: 1.2,
+      t,
+    });
+    K.drawEduBanner(ctx, 'PENISILIN', 'ANTIBIOTIK PERTAMA PENYELAMAT MANUSIA', 'Mengubah Infeksi Luka Ringan dari Vonis Mati Jadi Mudah Sembuh');
+    K.drawEduCallout(ctx, 540, 1475, 960, 160, {
+      tag: 'HADIAH NOBEL KEDOKTERAN 1945',
+      title: 'Fleming, Florey, dan Chain Meraih Nobel Berkat Penisilin',
+      desc: 'Menjadi senjata medis paling berharga sepanjang abad ke-20 hingga hari ini',
       stat: 'NOBEL 1945',
-      statSub: 'KEDOKTERAN',
       col: K.PAL.gold,
-      a: pop(t, C.fleming.start + 0.5),
+      a: pop(t, C.penisilin.start + 0.2),
     });
-  } else if (phase === 2) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'INSIDEN COKELAT MELELEH PERCY SPENCER (1945)',
-      titleStr: 'Berdiri di Depan Magnetron Radar Membuat Cokelat di Saku Lumer',
-      subStr: 'Spencer kemudian menguji biji jagung popcorn dan melahirkan oven microwave',
+  } else if (beat === 4) {
+    // BEAT 5 (microwave): 1945 Percy Spencer Radar Wave & Melting Chocolate Bar
+    K.drawAtomLatticeWorld(ctx, t);
+    K.drawEduBanner(ctx, '1945 RADAR', 'COKELAT MELELEH DI SAKU PERCY SPENCER!', 'Gelombang Mikro Magnetron Menggetarkan Molekul Air & Gula');
+    K.drawEduCallout(ctx, 540, 1465, 960, 165, {
+      tag: 'FISIKA OVEN MICROWAVE (1945)',
+      title: 'Gelombang Elektromagnetik -> Gesekan Molekul -> Panas Cepat!',
+      desc: 'Spencer mengetesnya dengan biji jagung popcorn sebelum menciptakan oven microwave pertama',
       stat: 'MICROWAVE',
-      statSub: 'DARI COKELAT',
       col: K.PAL.amber,
-      a: pop(t, C.penisilin.start),
+      a: pop(t, C.microwave.start + 0.2),
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PENEMUAN LAIN DARI KETIDAKSengajaan',
-      titleStr: 'Sinar-X Röntgen, Post-it Notes, hingga Kaca Pengaman Mobil',
-      subStr: 'Banyak inovasi terbesar manusia lahir ketika eksperimen berjalan di luar rencana',
-      stat: 'ANOMALI',
-      statSub: 'JADI INOVASI',
+  } else if (beat === 5) {
+    // BEAT 6 (pasteur): Louis Pasteur Quote on Prepared Mind
+    K.drawBellLabsWorld(ctx, t, { propMode: 'medical' });
+    K.drawEduBanner(ctx, 'SERENDIPITY', '"KEBERUNTUNGAN BERPIHAK PADA PIKIRAN SIAP"', 'Prinsip Emas Louis Pasteur tentang Penemuan Tak Sengaja');
+    K.drawEduCallout(ctx, 540, 1475, 960, 160, {
+      tag: 'RAHASIA SERENDIPITY ILMIAH',
+      title: 'Ketidaksengajaan + Ketelitian Mengamati = Terobosan Besar',
+      desc: 'Tanpa rasa ingin tahu, kejadian aneh hanya akan lewat begitu saja tanpa arti',
+      stat: 'OBSERVASI',
       col: K.PAL.gold,
-      a: pop(t, C.penisilin.start + 0.5),
+      a: pop(t, C.pasteur.start + 0.2),
+    });
+  } else if (beat === 6) {
+    // BEAT 7 (pelajaran): Scientist asking "Why?" instead of throwing away anomaly
+    K.withCamera(ctx, { zoom: 1.2, fx: 540, fy: 960 }, () => {
+      K.drawLabWorld(ctx, t);
+      K.drawStickman(ctx, 540, 1055, {
+        pose: 'excited',
+        hairStyle: 'bowl',
+        coatColor: K.PAL.coatBlue,
+        prop: 'petri',
+        showLegs: false,
+        scale: 1.15,
+        t,
+      });
+    });
+    K.drawEduBanner(ctx, 'POLA PIKIR', 'JANGAN LANGSUNG MEMBUANG ANOMALI!', 'Ilmuwan Sejati Selalu Bertanya: "Mengapa Hal Aneh Ini Terjadi?"');
+    K.drawEduCallout(ctx, 540, 1475, 960, 160, {
+      tag: 'BEDANYA ORANG BIASA VS PENEMU',
+      title: 'Orang Biasa Mengeluh Gagal, Penemu Menyelidiki Penyebabnya',
+      desc: 'X-Ray, Velcro, Teflon, hingga Post-it Notes semuanya lahir dari kejelian melihat anomali',
+      stat: 'KEINGINTAHUAN',
+      col: '#38bdf8',
+      a: pop(t, C.pelajaran.start + 0.2),
     });
   } else {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'KUTIPAN KLASIK LOUIS PASTEUR (1854)',
-      titleStr: '"Keberuntungan Hanya Berpihak pada Pikiran yang Siap"',
-      subStr: 'Tanpa rasa ingin tahu dan ketelitian, kebetulan emas hanya akan berakhir di tong sampah',
-      stat: 'PREPARED',
-      statSub: 'MINDSET JELI',
-      col: K.PAL.amber,
-      a: pop(t, C.pasteur.start),
+    // BEAT 8 (moral): Sunrise Horizon
+    K.drawSpaceAndSolarWorld(ctx, t, { mode: 'farm' });
+    K.drawStickman(ctx, 540, 1360, {
+      pose: 'happy',
+      hairStyle: 'bowl',
+      coatColor: K.PAL.coatBlue,
+      prop: 'medal',
+      scale: 1.18,
+      t,
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PESAN UNTUK KREATOR & PENELITI',
-      titleStr: 'Saat Hasil Kerjamu Melenceng, Tanyakan "Kenapa?" Sebelum Menghapusnya',
-      subStr: 'Kesalahan hari ini sering kali adalah pintu rahasia menuju penemuan esok hari',
-      stat: 'EUREKA!',
-      statSub: 'TEMUKAN POLA',
+    K.drawEduBanner(ctx, 'INSPIRASI', 'KEGAGALAN HARI INI BISA JADI PENEMUAN BESOK', 'Perhatikan Setiap Detail Kecil dalam Eksperimen & Karyamu');
+    K.drawEduCallout(ctx, 540, 1480, 960, 160, {
+      tag: 'PESAN PENUTUP',
+      title: 'Jangan Buru-Buru Membuang Hasil yang Terlihat Gagal',
+      desc: 'Bisa jadi di balik anomali kecil itulah tersembunyi terobosan terbesarmu!',
+      stat: 'TEROBOSAN',
       col: K.PAL.gold,
-      a: pop(t, C.pasteur.start + 0.5),
+      a: pop(t, C.moral.start + 0.2),
     });
   }
 }

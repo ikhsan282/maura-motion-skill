@@ -1,18 +1,21 @@
-// 78 · STICKMAN OVERSIMPLIFIED — Kit: Bean-Body Historical Cartoon ("Si Ilmuwan Muda & Dunia Sejarah Pop")
+// 78 · STICKMAN OVERSIMPLIFIED — Full-Screen Multi-Scene Educational Cartoon Kit
 import { clamp, lerp } from '/engine/lib/core.js';
 
 export const PAL = {
-  ink: '#22120a',
-  skin: '#faecd4',
-  skinShade: '#edd4b2',
-  hairBrown: '#4d2608',
-  hairGrey: '#b8b9c4',
+  ink: '#23120b',
+  skin: '#fbead2',
+  skinShade: '#e8cfa8',
+  hairBrown: '#4e2708',
+  hairGrey: '#b8bac6',
   coatBlue: '#0b488f',
+  coatBrown: '#6b3e16',
   coatGreen: '#3b6e1c',
   coatTeal: '#0d5669',
+  coatWhite: '#f4f5f7',
   gold: '#f7c625',
   amber: '#e88b1a',
   red: '#d93829',
+  green: '#2b9348',
   tealJar: '#53cbb8',
   skyTop: '#2976d6',
   skyBot: '#6cb0f0',
@@ -22,469 +25,259 @@ export const PAL = {
   wallStripe: '#ebd58d',
   woodTop: '#d48322',
   woodFront: '#a3560d',
-  cardBg: 'rgba(24, 18, 14, 0.90)',
   white: '#ffffff',
 };
 
 /**
- * Scene Background:
- * mode === 'street': 19th-century European cobblestone street with receding ochre/brick buildings & top-hat passerby
- * mode === 'lab': Vintage striped laboratory with big window, chemical bottle shelves, and wooden workbench
+ * Camera helper: applies smooth zoom & pan around a focal point (fx, fy)
  */
-export function oversimplifiedBg(ctx, t, {
-  mode = 'street',
-  stageTag = 'SEJARAH POP • OVERSIMPLIFIED',
-  col = PAL.gold,
-} = {}) {
+export function withCamera(ctx, { zoom = 1, fx = 540, fy = 960, dx = 0, dy = 0 } = {}, fn) {
   ctx.save();
-
-  if (mode === 'street') {
-    // 1. Bright blue sky gradient
-    const skyG = ctx.createLinearGradient(0, 0, 0, 680);
-    skyG.addColorStop(0, PAL.skyTop);
-    skyG.addColorStop(1, PAL.skyBot);
-    ctx.fillStyle = skyG;
-    ctx.fillRect(0, 0, 1080, 680);
-
-    // Fluffy white cloud
-    ctx.fillStyle = 'rgba(255,255,255,0.92)';
-    const cx = 760 + Math.sin(t * 0.4) * 18;
-    ctx.beginPath();
-    ctx.arc(cx, 130, 62, 0, Math.PI * 2);
-    ctx.arc(cx + 58, 120, 74, 0, Math.PI * 2);
-    ctx.arc(cx + 125, 136, 54, 0, Math.PI * 2);
-    ctx.arc(cx - 52, 142, 46, 0, Math.PI * 2);
-    ctx.fill();
-
-    // 2. Perspective 19th-Century Townhouses on left receding to right
-    const buildings = [
-      { x: 0, w: 195, topY: 18, botY: 580, col: '#e29f38', shutter: '#1d6ec2', rows: 3, cols: 1 },
-      { x: 195, w: 290, topY: 90, botY: 562, col: '#cc6733', shutter: '#227834', rows: 3, cols: 3 },
-      { x: 485, w: 235, topY: 175, botY: 545, col: '#ebbc4c', shutter: '#3b73b5', rows: 3, cols: 3 },
-      { x: 720, w: 210, topY: 245, botY: 534, col: '#d99a36', shutter: '#227834', rows: 2, cols: 3 },
-      { x: 930, w: 150, topY: 295, botY: 525, col: '#c97c3a', shutter: '#3b73b5', rows: 2, cols: 2 },
-    ];
-
-    buildings.forEach((b) => {
-      ctx.fillStyle = b.col;
-      ctx.beginPath();
-      ctx.moveTo(b.x, b.topY);
-      ctx.lineTo(b.x + b.w, b.topY + 48);
-      ctx.lineTo(b.x + b.w, b.botY - 8);
-      ctx.lineTo(b.x, b.botY);
-      ctx.closePath();
-      ctx.fill();
-      ctx.strokeStyle = 'rgba(34,18,10,0.35)';
-      ctx.lineWidth = 3;
-      ctx.stroke();
-
-      // Roof cornice line
-      ctx.strokeStyle = '#4a2a14';
-      ctx.lineWidth = 6;
-      ctx.beginPath();
-      ctx.moveTo(b.x, b.topY);
-      ctx.lineTo(b.x + b.w, b.topY + 48);
-      ctx.stroke();
-
-      // Windows with shutters
-      const winW = Math.max(18, (b.w / (b.cols + 1)) * 0.46);
-      const winH = Math.max(32, ((b.botY - b.topY - 90) / (b.rows + 0.6)) * 0.58);
-      for (let r = 0; r < b.rows; r++) {
-        for (let c = 0; c < b.cols; c++) {
-          const fracX = (c + 0.7) / (b.cols + 0.4);
-          const wx = b.x + fracX * b.w;
-          const slopeY = b.topY + fracX * 48;
-          const wy = slopeY + 34 + r * (winH + 26);
-          if (wy + winH > b.botY - 24) continue;
-
-          // Left & right shutters
-          ctx.fillStyle = b.shutter;
-          ctx.fillRect(wx - winW * 0.85, wy, winW * 0.35, winH);
-          ctx.fillRect(wx + winW * 0.5, wy, winW * 0.35, winH);
-
-          // White window frame & glass
-          ctx.fillStyle = '#d8e6f5';
-          ctx.fillRect(wx - winW * 0.5, wy, winW, winH);
-          ctx.strokeStyle = '#ffffff';
-          ctx.lineWidth = 2.5;
-          ctx.strokeRect(wx - winW * 0.5, wy, winW, winH);
-        }
-      }
-    });
-
-    // 3. Cobblestone Street Floor (y: 525..850)
-    const stG = ctx.createLinearGradient(0, 525, 0, 850);
-    stG.addColorStop(0, '#c9b79c');
-    stG.addColorStop(0.18, PAL.cobble);
-    stG.addColorStop(1, PAL.cobbleDark);
-    ctx.fillStyle = stG;
-    ctx.fillRect(0, 525, 1080, 335);
-
-    // Diagonal shadow cast on street
-    ctx.fillStyle = 'rgba(25, 24, 38, 0.32)';
-    ctx.beginPath();
-    ctx.moveTo(0, 625);
-    ctx.lineTo(860, 540);
-    ctx.lineTo(1080, 590);
-    ctx.lineTo(1080, 860);
-    ctx.lineTo(0, 860);
-    ctx.closePath();
-    ctx.fill();
-
-    // Cobblestone tile pattern
-    ctx.fillStyle = 'rgba(255,255,255,0.09)';
-    for (let row = 0; row < 8; row++) {
-      const ry = 565 + row * 34;
-      const tileW = 46 + row * 6;
-      const tileH = 16 + row * 1.5;
-      const offset = (row % 2) * (tileW * 0.5);
-      for (let colI = -1; colI < 22; colI++) {
-        const rx = colI * (tileW + 10) + offset;
-        ctx.beginPath();
-        ctx.roundRect(rx, ry, tileW, tileH, 6);
-        ctx.fill();
-      }
-    }
-
-    // Background Top-Hat Passerby walking slowly
-    const walkX = 820 - ((t * 28) % 640);
-    drawTopHatPasserby(ctx, walkX, 645, t);
-  } else {
-    // LABORATORY INTERIOR MODE
-    // 1. Striped yellow wallpaper
-    ctx.fillStyle = PAL.wallLight;
-    ctx.fillRect(0, 0, 1080, 620);
-    ctx.fillStyle = PAL.wallStripe;
-    for (let x = 0; x < 1080; x += 72) {
-      ctx.fillRect(x, 0, 36, 620);
-    }
-
-    // 2. Classic Laboratory Window on Left
-    ctx.save();
-    ctx.fillStyle = '#87b9eb';
-    ctx.fillRect(36, 185, 420, 270);
-    // Distant house silhouettes outside window
-    ctx.fillStyle = '#5f7696';
-    ctx.beginPath();
-    ctx.moveTo(40, 450);
-    ctx.lineTo(40, 350);
-    ctx.lineTo(120, 295);
-    ctx.lineTo(205, 350);
-    ctx.lineTo(205, 320);
-    ctx.lineTo(310, 270);
-    ctx.lineTo(410, 335);
-    ctx.lineTo(450, 335);
-    ctx.lineTo(450, 450);
-    ctx.closePath();
-    ctx.fill();
-
-    // Window white mullions & frame
-    ctx.strokeStyle = '#fcfaf2';
-    ctx.lineWidth = 14;
-    ctx.strokeRect(36, 185, 420, 270);
-    ctx.beginPath();
-    ctx.moveTo(246, 185);
-    ctx.lineTo(246, 455);
-    ctx.moveTo(36, 320);
-    ctx.lineTo(456, 320);
-    ctx.stroke();
-    ctx.strokeStyle = PAL.ink;
-    ctx.lineWidth = 3.5;
-    ctx.strokeRect(30, 180, 432, 280);
-    ctx.restore();
-
-    // 3. Shelves with Colorful Chemical Bottles on Right
-    const shelvesY = [285, 425];
-    shelvesY.forEach((sy, sIdx) => {
-      ctx.fillStyle = PAL.woodTop;
-      ctx.fillRect(680, sy, 370, 16);
-      ctx.strokeStyle = PAL.ink;
-      ctx.lineWidth = 3.5;
-      ctx.strokeRect(680, sy, 370, 16);
-
-      const bottles = [
-        { dx: 715, w: 46, h: 78, c: '#39a878' },
-        { dx: 795, w: 50, h: 98, c: '#e06d1f' },
-        { dx: 880, w: 48, h: 88, c: '#1877d9' },
-        { dx: 965, w: 44, h: 74, c: '#e6c629' },
-      ];
-      bottles.forEach((bt, bIdx) => {
-        if (sIdx === 1 && bIdx === 0) return;
-        ctx.fillStyle = bt.c;
-        ctx.beginPath();
-        ctx.moveTo(bt.dx, sy);
-        ctx.lineTo(bt.dx + 4, sy - bt.h * 0.68);
-        ctx.lineTo(bt.dx + 14, sy - bt.h * 0.72);
-        ctx.lineTo(bt.dx + 16, sy - bt.h);
-        ctx.lineTo(bt.dx + bt.w - 16, sy - bt.h);
-        ctx.lineTo(bt.dx + bt.w - 14, sy - bt.h * 0.72);
-        ctx.lineTo(bt.dx + bt.w - 4, sy - bt.h * 0.68);
-        ctx.lineTo(bt.dx + bt.w, sy);
-        ctx.closePath();
-        ctx.fill();
-        ctx.strokeStyle = PAL.ink;
-        ctx.lineWidth = 3.5;
-        ctx.stroke();
-      });
-    });
-
-    // Warm sunbeam diagonal from window
-    const beamG = ctx.createLinearGradient(150, 220, 620, 720);
-    beamG.addColorStop(0, 'rgba(255, 244, 175, 0.28)');
-    beamG.addColorStop(1, 'rgba(255, 244, 175, 0.0)');
-    ctx.fillStyle = beamG;
-    ctx.beginPath();
-    ctx.moveTo(140, 200);
-    ctx.lineTo(440, 200);
-    ctx.lineTo(740, 760);
-    ctx.lineTo(360, 760);
-    ctx.closePath();
-    ctx.fill();
-
-    // Wooden Dado Wainscoting & Lab Countertop
-    ctx.fillStyle = '#995314';
-    ctx.fillRect(0, 520, 1080, 110);
-    ctx.strokeStyle = PAL.ink;
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.moveTo(0, 520);
-    ctx.lineTo(1080, 520);
-    ctx.stroke();
-
-    // Lab Workbench Surface (y: 615..850)
-    ctx.fillStyle = PAL.woodTop;
-    ctx.fillRect(0, 615, 1080, 70);
-    ctx.fillStyle = PAL.woodFront;
-    ctx.fillRect(0, 685, 1080, 175);
-    ctx.strokeStyle = PAL.ink;
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.moveTo(0, 615);
-    ctx.lineTo(1080, 615);
-    ctx.moveTo(0, 685);
-    ctx.lineTo(1080, 685);
-    ctx.stroke();
-  }
-
-  // Dark lower stage panel for clean infographic cards (y: 845..1920)
-  const botG = ctx.createLinearGradient(0, 840, 0, 1920);
-  botG.addColorStop(0, '#171311');
-  botG.addColorStop(1, '#0e0b0a');
-  ctx.fillStyle = botG;
-  ctx.fillRect(0, 845, 1080, 1075);
-
-  ctx.strokeStyle = col;
-  ctx.lineWidth = 5;
-  ctx.beginPath();
-  ctx.moveTo(0, 845);
-  ctx.lineTo(1080, 845);
-  ctx.stroke();
-
-  // Stage tag pill at top-left of illustration
-  ctx.fillStyle = 'rgba(24, 18, 14, 0.88)';
-  ctx.beginPath();
-  ctx.roundRect(44, 190, 430, 34, 10);
-  ctx.fill();
-  ctx.strokeStyle = col;
-  ctx.lineWidth = 2.5;
-  ctx.stroke();
-
-  ctx.fillStyle = col;
-  ctx.font = '800 15px "Plus Jakarta Sans", "Inter", sans-serif';
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'middle';
-  ctx.fillText(stageTag, 60, 207, 398);
-
-  ctx.restore();
-}
-
-function drawTopHatPasserby(ctx, x, y, t) {
-  ctx.save();
-  ctx.translate(x, y);
-  const stride = Math.sin(t * 5) * 14;
-
-  // Shadow
-  ctx.fillStyle = 'rgba(0,0,0,0.28)';
-  ctx.beginPath();
-  ctx.ellipse(0, 0, 34, 8, 0, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Thin stick legs with knee bend
-  ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 5;
-  ctx.lineCap = 'round';
-  ctx.beginPath();
-  ctx.moveTo(-6, -75);
-  ctx.lineTo(-10 - stride * 0.5, -36);
-  ctx.lineTo(-4 - stride, 0);
-  ctx.moveTo(6, -75);
-  ctx.lineTo(10 + stride * 0.5, -36);
-  ctx.lineTo(4 + stride, 0);
-  ctx.stroke();
-
-  // Bean body in Victorian green/teal coat
-  ctx.fillStyle = PAL.coatGreen;
-  ctx.beginPath();
-  ctx.ellipse(0, -112, 24, 42, 0, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 4.5;
-  ctx.stroke();
-
-  // Head
-  ctx.fillStyle = PAL.skin;
-  ctx.beginPath();
-  ctx.ellipse(0, -172, 34, 28, 0, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.stroke();
-
-  // Snooty side eye
-  ctx.fillStyle = PAL.ink;
-  ctx.fillRect(-18, -176, 8, 3);
-
-  // Tall Victorian Top Hat
-  ctx.fillStyle = '#18181f';
-  ctx.beginPath();
-  ctx.roundRect(-26, -238, 52, 46, 4);
-  ctx.fill();
-  ctx.stroke();
-  // Green hat ribbon
-  ctx.fillStyle = '#3b8c2a';
-  ctx.fillRect(-25, -204, 50, 9);
-  // Hat brim
-  ctx.fillStyle = '#18181f';
-  ctx.beginPath();
-  ctx.ellipse(0, -193, 40, 7, 0, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.stroke();
-
+  ctx.translate(540 + dx, 960 + dy);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
   ctx.restore();
 }
 
 /**
- * Top Header Banner with Pop-History Badge
+ * Top Educational Floating Pill Banner (non-intrusive, keeps 100% full-screen cartoon world visible)
  */
-export function oversimplifiedHeader(ctx, badgeText, titleStr, subStr, { col = PAL.gold } = {}) {
+export function drawEduBanner(ctx, badgeText, titleText, subText, { col = PAL.gold } = {}) {
   ctx.save();
-  ctx.fillStyle = 'rgba(22, 16, 12, 0.92)';
+  // Soft shadow
+  ctx.fillStyle = 'rgba(15, 10, 8, 0.86)';
   ctx.strokeStyle = col;
   ctx.lineWidth = 4;
   ctx.beginPath();
-  ctx.roundRect(40, 34, 1000, 145, 22);
+  ctx.roundRect(42, 42, 996, 128, 24);
   ctx.fill();
   ctx.stroke();
 
-  // Left Year / Era Badge
+  // Year / Step Pill
   ctx.fillStyle = col;
   ctx.beginPath();
-  ctx.roundRect(62, 54, 185, 105, 16);
+  ctx.roundRect(62, 60, 176, 92, 16);
   ctx.fill();
   ctx.strokeStyle = PAL.ink;
   ctx.lineWidth = 3.5;
   ctx.stroke();
 
   ctx.fillStyle = PAL.ink;
-  ctx.font = '800 14px "JetBrains Mono", monospace';
+  ctx.font = '900 32px "Plus Jakarta Sans", "Inter", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText('ERA SEJARAH', 154, 78, 165);
+  ctx.fillText(badgeText, 150, 106, 160);
 
-  ctx.font = '900 32px "Plus Jakarta Sans", "Inter", sans-serif';
-  ctx.fillText(badgeText, 154, 118, 170);
-
-  // Main Title & Subtitle
+  // Title & Subtitle
   ctx.textAlign = 'left';
   ctx.fillStyle = PAL.white;
-  ctx.font = '900 32px "Plus Jakarta Sans", "Inter", sans-serif';
-  ctx.fillText(titleStr, 272, 92, 745);
+  ctx.font = '900 30px "Plus Jakarta Sans", "Inter", sans-serif';
+  ctx.fillText(titleText, 262, 88, 750);
 
-  ctx.fillStyle = '#f5d78e';
-  ctx.font = '600 20px "Plus Jakarta Sans", "Inter", sans-serif';
-  ctx.fillText(subStr, 272, 134, 745);
+  ctx.fillStyle = '#fde68a';
+  ctx.font = '700 20px "Plus Jakarta Sans", "Inter", sans-serif';
+  ctx.fillText(subText, 262, 130, 750);
   ctx.restore();
 }
 
 /**
- * Unique Character #78: Stickman OverSimplified ("Si Ilmuwan Muda Bean-Body")
- * - Wide oval cream head with bold dark outline
- * - Signature swept brown bowl-cut hair with wavy forehead line & hair-part strokes
- * - Rounded pill/bean torso in Prussian blue coat with 4 golden buttons
- * - Expressive cartoon eyes ('happy' ^^, 'excited' ><, 'focused' --, 'shocked' oo)
- * - Holds glowing solar chemical jar, petri dish, or points to lab apparatus
+ * Floating Educational Callout Card (placed contextually inside the scene without blocking the world)
  */
-export function oversimplifiedStickman(ctx, x, y, pose = 'happy', {
-  scale = 1,
-  t = 0,
+export function drawEduCallout(ctx, x, y, w, h, {
+  tag = 'FAKTA SAINS',
+  title = '',
+  desc = '',
+  stat = '',
+  col = PAL.gold,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(0.9 + 0.1 * a, 0.9 + 0.1 * a);
+  ctx.globalAlpha = clamp(a, 0, 1);
+
+  ctx.fillStyle = 'rgba(20, 15, 12, 0.90)';
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.roundRect(-w / 2, -h / 2, w, h, 22);
+  ctx.fill();
+  ctx.stroke();
+
+  // Tag pill
+  ctx.fillStyle = col;
+  ctx.beginPath();
+  ctx.roundRect(-w / 2 + 24, -h / 2 + 18, 290, 30, 8);
+  ctx.fill();
+  ctx.fillStyle = PAL.ink;
+  ctx.font = '900 14px "JetBrains Mono", monospace';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(tag, -w / 2 + 36, -h / 2 + 33, 266);
+
+  const textW = stat ? w - 240 : w - 56;
+  ctx.fillStyle = PAL.white;
+  ctx.font = '800 25px "Plus Jakarta Sans", "Inter", sans-serif';
+  ctx.fillText(title, -w / 2 + 24, -h / 2 + 78, textW);
+
+  ctx.fillStyle = '#e7dfd5';
+  ctx.font = '600 19px "Plus Jakarta Sans", "Inter", sans-serif';
+  ctx.fillText(desc, -w / 2 + 24, -h / 2 + 116, textW);
+
+  if (stat) {
+    ctx.fillStyle = col;
+    ctx.beginPath();
+    ctx.roundRect(w / 2 - 196, -h / 2 + 22, 172, h - 44, 16);
+    ctx.fill();
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    ctx.fillStyle = PAL.ink;
+    ctx.font = '900 26px "Plus Jakarta Sans", "Inter", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(stat, w / 2 - 110, 0, 156);
+  }
+
+  ctx.restore();
+}
+
+/**
+ * Signature Character: Stickman OverSimplified (Full-body or Counter-body)
+ * Supports multiple historical roles:
+ * - 'edmond' / 'young': swept brown bowl-cut hair
+ * - 'mentor' / 'dad': grey bowl-cut hair + spectacles
+ * - 'einstein': wild spiky white hair + mustache
+ * - 'tophat': tall Victorian top hat + skeptical/snooty face
+ * - 'bowler': 19th-century brown hat (Charles Fritts / Inspector)
+ */
+export function drawStickman(ctx, x, y, {
+  pose = 'happy', // 'happy' | 'excited' | 'focused' | 'shocked' | 'skeptical' | 'sad'
+  hairStyle = 'bowl', // 'bowl' | 'einstein' | 'tophat' | 'bowler'
   coatColor = PAL.coatBlue,
   hairColor = PAL.hairBrown,
-  prop = 'solar_jar', // 'solar_jar' | 'petri' | 'wash_basin' | 'none'
+  prop = 'none', // 'solar_jar' | 'wire_up' | 'medal' | 'cell_disc' | 'wash_basin' | 'petri' | 'chocolate'
+  scale = 1,
+  t = 0,
   showLegs = true,
+  walkSpeed = 0,
   glasses = false,
+  mustache = false,
 } = {}) {
   ctx.save();
   ctx.translate(x, y);
   ctx.scale(scale, scale);
 
-  const bob = Math.sin(t * 3.5) * 3.5;
+  const bob = walkSpeed > 0 ? Math.abs(Math.sin(t * walkSpeed)) * 6 : Math.sin(t * 3.2) * 3;
+  const stride = walkSpeed > 0 ? Math.sin(t * walkSpeed) * 24 : 0;
 
   if (showLegs) {
-    // Contact shadow on ground
-    ctx.fillStyle = 'rgba(12, 12, 24, 0.45)';
+    // Ground shadow
+    ctx.fillStyle = 'rgba(10, 10, 22, 0.35)';
     ctx.beginPath();
-    ctx.ellipse(0, 0, 74, 15, 0, 0, Math.PI * 2);
+    ctx.ellipse(0, 0, 72, 16, 0, 0, Math.PI * 2);
     ctx.fill();
 
     // Long thin stick legs
     ctx.strokeStyle = PAL.ink;
-    ctx.lineWidth = 8.5;
+    ctx.lineWidth = 9;
     ctx.lineCap = 'round';
     ctx.beginPath();
-    ctx.moveTo(-26, -155 + bob);
-    ctx.lineTo(-32, 0);
-    ctx.moveTo(26, -155 + bob);
-    ctx.lineTo(32, 0);
+    ctx.moveTo(-26, -185 + bob);
+    ctx.lineTo(-28 - stride * 0.5, -90);
+    ctx.lineTo(-30 - stride, 0);
+    ctx.moveTo(26, -185 + bob);
+    ctx.lineTo(28 + stride * 0.5, -90);
+    ctx.lineTo(30 + stride, 0);
     ctx.stroke();
 
-    // Flat oval shoes
+    // Shoes
     ctx.fillStyle = PAL.ink;
     ctx.beginPath();
-    ctx.roundRect(-56, -10, 36, 12, 5);
-    ctx.roundRect(20, -10, 36, 12, 5);
+    ctx.roundRect(-54 - stride, -12, 38, 13, 6);
+    ctx.roundRect(16 + stride, -12, 38, 13, 6);
     ctx.fill();
   }
 
   ctx.translate(0, bob);
-  const torsoY = showLegs ? -235 : -95;
-  const headY = torsoY - 132;
+  const torsoY = showLegs ? -275 : -98;
+  const headY = torsoY - 140;
 
-  // Left stick arm (hanging or gesturing)
-  ctx.strokeStyle = '#072f61';
-  ctx.lineWidth = 8;
+  // Left Arm
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 8.5;
   ctx.lineCap = 'round';
   ctx.beginPath();
-  ctx.moveTo(-58, torsoY - 45);
-  ctx.quadraticCurveTo(-84, torsoY + 5, -80, torsoY + 55);
+  ctx.moveTo(-60, torsoY - 48);
+  ctx.quadraticCurveTo(-92, torsoY + 10, -84, torsoY + 66);
   ctx.stroke();
-
-  // Round black hand fist
   ctx.fillStyle = PAL.ink;
   ctx.beginPath();
-  ctx.arc(-80, torsoY + 58, 9, 0, Math.PI * 2);
+  ctx.arc(-84, torsoY + 68, 10, 0, Math.PI * 2);
   ctx.fill();
+
+  // Right Arm (gesturing up if holding wire/medal/disc, else in front)
+  if (prop === 'wire_up' || prop === 'medal' || prop === 'cell_disc') {
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 8.5;
+    ctx.beginPath();
+    ctx.moveTo(58, torsoY - 42);
+    ctx.quadraticCurveTo(105, torsoY - 68, 128, torsoY - 118);
+    ctx.stroke();
+    ctx.fillStyle = PAL.ink;
+    ctx.beginPath();
+    ctx.arc(128, torsoY - 120, 10, 0, Math.PI * 2);
+    ctx.fill();
+
+    if (prop === 'wire_up') {
+      // Glowing orange copper wire in hand
+      ctx.strokeStyle = '#f59e0b';
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.moveTo(45, torsoY + 35);
+      ctx.bezierCurveTo(155, torsoY - 15, 165, torsoY - 95, 128, torsoY - 120);
+      ctx.stroke();
+    } else if (prop === 'medal') {
+      // Golden Nobel Medal
+      ctx.fillStyle = PAL.gold;
+      ctx.beginPath();
+      ctx.arc(132, torsoY - 134, 34, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = PAL.ink;
+      ctx.lineWidth = 5;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(132, torsoY - 134, 20, 0, Math.PI * 2);
+      ctx.stroke();
+    } else if (prop === 'cell_disc') {
+      // White circle disc with dark square solar wafer
+      ctx.fillStyle = PAL.white;
+      ctx.beginPath();
+      ctx.arc(132, torsoY - 134, 30, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = PAL.ink;
+      ctx.lineWidth = 4.5;
+      ctx.stroke();
+      ctx.fillStyle = '#1e293b';
+      ctx.fillRect(121, torsoY - 145, 22, 22);
+    }
+  }
 
   // BEAN / PILL TORSO
   ctx.fillStyle = coatColor;
   ctx.beginPath();
-  ctx.ellipse(0, torsoY, 64, 88, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, torsoY, 68, 94, 0, 0, Math.PI * 2);
   ctx.fill();
   ctx.strokeStyle = PAL.ink;
   ctx.lineWidth = 7.5;
   ctx.stroke();
 
-  // 4 Vertical Golden Buttons on Coat
+  // 4 Vertical Coat Buttons
   for (let i = 0; i < 4; i++) {
-    const by = torsoY - 44 + i * 28;
-    ctx.fillStyle = PAL.gold;
+    const by = torsoY - 46 + i * 30;
+    ctx.fillStyle = coatColor === PAL.coatWhite ? '#94a3b8' : PAL.gold;
     ctx.beginPath();
     ctx.arc(-4, by, 5.5, 0, Math.PI * 2);
     ctx.fill();
@@ -493,166 +286,241 @@ export function oversimplifiedStickman(ctx, x, y, pose = 'happy', {
     ctx.stroke();
   }
 
-  // Right arm holding prop in front of chest
+  // Chest Props (solar_jar, wash_basin, petri, chocolate)
   if (prop === 'solar_jar') {
-    const jarX = 36;
-    const jarY = torsoY - 12;
-
-    // Sunlight glow around electrode tip
-    const glow = ctx.createRadialGradient(jarX + 8, jarY - 52, 4, jarX + 8, jarY - 52, 68);
-    glow.addColorStop(0, 'rgba(255, 245, 158, 0.85)');
+    const jx = 38;
+    const jy = torsoY - 12;
+    const glow = ctx.createRadialGradient(jx + 8, jy - 54, 4, jx + 8, jy - 54, 72);
+    glow.addColorStop(0, 'rgba(255, 245, 158, 0.9)');
     glow.addColorStop(1, 'rgba(255, 245, 158, 0)');
     ctx.fillStyle = glow;
     ctx.beginPath();
-    ctx.arc(jarX + 8, jarY - 52, 68, 0, Math.PI * 2);
+    ctx.arc(jx + 8, jy - 54, 72, 0, Math.PI * 2);
     ctx.fill();
 
-    // Glass jar container
     ctx.fillStyle = '#d8edf7';
     ctx.beginPath();
-    ctx.roundRect(jarX - 32, jarY - 44, 64, 86, 10);
+    ctx.roundRect(jx - 32, jy - 44, 64, 88, 10);
     ctx.fill();
-    // Yellow chemical electrolyte inside
     ctx.fillStyle = '#ffca18';
     ctx.beginPath();
-    ctx.roundRect(jarX - 28, jarY - 12, 56, 50, 6);
+    ctx.roundRect(jx - 28, jy - 12, 56, 52, 6);
     ctx.fill();
     ctx.strokeStyle = PAL.ink;
-    ctx.lineWidth = 4;
-    ctx.strokeRect(jarX - 32, jarY - 44, 64, 86);
+    ctx.lineWidth = 4.5;
+    ctx.strokeRect(jx - 32, jy - 44, 64, 88);
 
-    // Two vertical silver electrodes inside jar
+    // Electrodes
     ctx.fillStyle = '#e2e8f0';
-    ctx.fillRect(jarX - 16, jarY - 54, 10, 68);
-    ctx.strokeRect(jarX - 16, jarY - 54, 10, 68);
-    ctx.fillRect(jarX + 8, jarY - 58, 10, 72);
-    ctx.strokeRect(jarX + 8, jarY - 58, 10, 72);
+    ctx.fillRect(jx - 16, jy - 56, 10, 70);
+    ctx.strokeRect(jx - 16, jy - 56, 10, 70);
+    ctx.fillRect(jx + 8, jy - 60, 10, 74);
+    ctx.strokeRect(jx + 8, jy - 60, 10, 74);
 
-    // Dark contact terminal at bottom of jar
     ctx.fillStyle = PAL.ink;
     ctx.beginPath();
-    ctx.arc(jarX, jarY + 30, 9, 0, Math.PI * 2);
-    ctx.fill();
-  } else if (prop === 'petri') {
-    const px = 42;
-    const py = torsoY + 4;
-    ctx.fillStyle = '#d8f3dc';
-    ctx.beginPath();
-    ctx.ellipse(px, py, 36, 22, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.strokeStyle = PAL.ink;
-    ctx.lineWidth = 4;
-    ctx.stroke();
-    // Penicillium mold spot with clear halo
-    ctx.fillStyle = '#2d6a4f';
-    ctx.beginPath();
-    ctx.arc(px - 8, py - 2, 10, 0, Math.PI * 2);
+    ctx.arc(jx, jy + 32, 9, 0, Math.PI * 2);
     ctx.fill();
   } else if (prop === 'wash_basin') {
     const bx = 42;
-    const by = torsoY + 8;
+    const by = torsoY + 10;
     ctx.fillStyle = '#74c0fc';
     ctx.beginPath();
-    ctx.roundRect(bx - 34, by - 18, 68, 36, 12);
+    ctx.roundRect(bx - 42, by - 20, 84, 42, 14);
     ctx.fill();
     ctx.strokeStyle = PAL.ink;
-    ctx.lineWidth = 4;
+    ctx.lineWidth = 4.5;
+    ctx.stroke();
+    // Bubbles
+    ctx.fillStyle = PAL.white;
+    ctx.beginPath();
+    ctx.arc(bx - 16, by - 22, 10, 0, Math.PI * 2);
+    ctx.arc(bx + 4, by - 26, 13, 0, Math.PI * 2);
+    ctx.arc(bx + 22, by - 20, 9, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+  } else if (prop === 'petri') {
+    const px = 44;
+    const py = torsoY + 8;
+    ctx.fillStyle = '#d8f3dc';
+    ctx.beginPath();
+    ctx.ellipse(px, py, 40, 24, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 4.5;
+    ctx.stroke();
+    ctx.fillStyle = '#2d6a4f';
+    ctx.beginPath();
+    ctx.arc(px - 10, py - 2, 11, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // EINSTEIN SPIKY WHITE HAIR HALO (drawn behind head)
+  if (hairStyle === 'einstein') {
+    ctx.fillStyle = '#f8fafc';
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 5.5;
+    ctx.beginPath();
+    const spikes = 18;
+    for (let i = 0; i <= spikes; i++) {
+      const a = Math.PI * 0.85 + (i / spikes) * Math.PI * 1.3;
+      const rOut = i % 2 === 0 ? 124 : 86;
+      const sx = Math.cos(a) * rOut;
+      const sy = headY - 6 + Math.sin(a) * (rOut * 0.88);
+      if (i === 0) ctx.moveTo(sx, sy);
+      else ctx.lineTo(sx, sy);
+    }
+    ctx.closePath();
+    ctx.fill();
     ctx.stroke();
   }
 
-  // HEAD (Wide Oval Pill/Bean Head)
+  // HEAD (Wide Oval Cream Head)
   ctx.fillStyle = PAL.skin;
   ctx.beginPath();
-  ctx.ellipse(0, headY, 84, 72, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, headY, 88, 74, 0, 0, Math.PI * 2);
   ctx.fill();
   ctx.strokeStyle = PAL.ink;
   ctx.lineWidth = 7.5;
   ctx.stroke();
 
-  // Signature Bowl-Cut Swept Hair Cap
-  ctx.fillStyle = hairColor;
-  ctx.beginPath();
-  ctx.arc(0, headY - 4, 84, Math.PI * 0.96, Math.PI * 2.04);
-  // Wavy lower fringe across forehead
-  ctx.lineTo(82, headY - 12);
-  ctx.lineTo(42, headY - 6);
-  ctx.lineTo(0, headY - 15);
-  ctx.lineTo(-42, headY - 6);
-  ctx.lineTo(-82, headY - 12);
-  ctx.closePath();
-  ctx.fill();
-  ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 7;
-  ctx.lineJoin = 'round';
-  ctx.stroke();
+  // HAIR / HAT STYLES
+  if (hairStyle === 'bowl') {
+    ctx.fillStyle = hairColor;
+    ctx.beginPath();
+    ctx.arc(0, headY - 4, 88, Math.PI * 0.96, Math.PI * 2.04);
+    ctx.lineTo(86, headY - 12);
+    ctx.lineTo(44, headY - 6);
+    ctx.lineTo(0, headY - 16);
+    ctx.lineTo(-44, headY - 6);
+    ctx.lineTo(-86, headY - 12);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 7;
+    ctx.lineJoin = 'round';
+    ctx.stroke();
 
-  // Hair part & brow accents on hair cap
-  ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 4.5;
-  ctx.beginPath();
-  ctx.moveTo(8, headY - 52);
-  ctx.lineTo(-4, headY - 24);
-  ctx.moveTo(-36, headY - 30);
-  ctx.lineTo(-8, headY - 28);
-  ctx.moveTo(6, headY - 28);
-  ctx.lineTo(36, headY - 30);
-  ctx.stroke();
-
-  // Optional Round Spectacles (for Father / Mentor)
-  if (glasses) {
-    ctx.fillStyle = 'rgba(255,255,255,0.35)';
+    // Hair part lines
     ctx.strokeStyle = PAL.ink;
     ctx.lineWidth = 4.5;
     ctx.beginPath();
-    ctx.arc(-20, headY + 4, 15, 0, Math.PI * 2);
-    ctx.arc(20, headY + 4, 15, 0, Math.PI * 2);
+    ctx.moveTo(8, headY - 54);
+    ctx.lineTo(-4, headY - 24);
+    ctx.moveTo(-38, headY - 30);
+    ctx.lineTo(-8, headY - 28);
+    ctx.moveTo(8, headY - 28);
+    ctx.lineTo(38, headY - 30);
+    ctx.stroke();
+  } else if (hairStyle === 'tophat') {
+    // Tall Victorian Top Hat
+    ctx.fillStyle = '#18181f';
+    ctx.beginPath();
+    ctx.roundRect(-58, headY - 158, 116, 104, 6);
     ctx.fill();
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 6;
+    ctx.stroke();
+    // Ribbon
+    ctx.fillStyle = coatColor === PAL.coatGreen ? '#3b8c2a' : '#991b1b';
+    ctx.fillRect(-56, headY - 76, 112, 16);
+    // Brim
+    ctx.fillStyle = '#18181f';
+    ctx.beginPath();
+    ctx.ellipse(0, headY - 54, 98, 16, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+  } else if (hairStyle === 'bowler') {
+    // Wide-brimmed 1880s inventor hat
+    ctx.fillStyle = '#432818';
+    ctx.beginPath();
+    ctx.arc(0, headY - 48, 68, Math.PI, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 6;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.ellipse(0, headY - 48, 108, 16, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+  } else if (hairStyle === 'einstein') {
+    // Forehead wrinkles
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.moveTo(-26, headY - 38);
+    ctx.lineTo(26, headY - 38);
+    ctx.moveTo(-18, headY - 26);
+    ctx.lineTo(22, headY - 26);
     ctx.stroke();
   }
 
-  // EXPRESSIVE EYES & MOUTH
+  if (glasses) {
+    ctx.fillStyle = 'rgba(255,255,255,0.4)';
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 4.5;
+    ctx.beginPath();
+    ctx.arc(-24, headY + 4, 17, 0, Math.PI * 2);
+    ctx.arc(24, headY + 4, 17, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(-7, headY + 4);
+    ctx.lineTo(7, headY + 4);
+    ctx.stroke();
+  }
+
+  // EYES
   ctx.strokeStyle = PAL.ink;
   ctx.lineWidth = 5.5;
   ctx.lineCap = 'round';
-
   if (pose === 'happy') {
-    // Happy curved arches ^ ^
     ctx.beginPath();
-    ctx.arc(-22, headY + 4, 12, Math.PI * 1.15, Math.PI * 1.85);
+    ctx.arc(-24, headY + 6, 13, Math.PI * 1.15, Math.PI * 1.85);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(22, headY + 4, 12, Math.PI * 1.15, Math.PI * 1.85);
+    ctx.arc(24, headY + 6, 13, Math.PI * 1.15, Math.PI * 1.85);
     ctx.stroke();
   } else if (pose === 'excited') {
-    // Squeezed > < eyes
     ctx.beginPath();
     ctx.moveTo(-36, headY - 4);
-    ctx.lineTo(-14, headY + 4);
-    ctx.lineTo(-36, headY + 12);
+    ctx.lineTo(-14, headY + 6);
+    ctx.lineTo(-36, headY + 14);
     ctx.moveTo(36, headY - 4);
-    ctx.lineTo(14, headY + 4);
-    ctx.lineTo(36, headY + 12);
+    ctx.lineTo(14, headY + 6);
+    ctx.lineTo(36, headY + 14);
+    ctx.stroke();
+  } else if (pose === 'skeptical') {
+    // Angry / skeptical furrowed brows & half-lidded eyes
+    ctx.fillStyle = PAL.ink;
+    ctx.beginPath();
+    ctx.arc(-24, headY + 6, 6, 0, Math.PI * 2);
+    ctx.arc(24, headY + 6, 6, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(-38, headY - 10);
+    ctx.lineTo(-10, headY - 2);
+    ctx.moveTo(38, headY - 10);
+    ctx.lineTo(10, headY - 2);
     ctx.stroke();
   } else if (pose === 'focused') {
-    // Calm horizontal bar eyes - -
     ctx.beginPath();
     ctx.moveTo(-34, headY + 4);
-    ctx.lineTo(-10, headY + 4);
-    ctx.moveTo(10, headY + 4);
+    ctx.lineTo(-12, headY + 4);
+    ctx.moveTo(12, headY + 4);
     ctx.lineTo(34, headY + 4);
     ctx.stroke();
   } else {
-    // Shocked round eyes
+    // Shocked / confused round dot eyes
     ctx.fillStyle = PAL.ink;
     ctx.beginPath();
-    ctx.arc(-22, headY + 4, 6, 0, Math.PI * 2);
-    ctx.arc(22, headY + 4, 6, 0, Math.PI * 2);
+    ctx.arc(-22, headY + 4, 6.5, 0, Math.PI * 2);
+    ctx.arc(22, headY + 4, 6.5, 0, Math.PI * 2);
     ctx.fill();
   }
 
-  // Mouth
+  // MOUTH
   if (pose === 'happy' || pose === 'excited') {
-    // Open D-mouth with white teeth & tongue
     const mw = pose === 'excited' ? 32 : 24;
     const mh = pose === 'excited' ? 22 : 16;
     ctx.fillStyle = '#4a1c12';
@@ -666,19 +534,37 @@ export function oversimplifiedStickman(ctx, x, y, pose = 'happy', {
     ctx.strokeStyle = PAL.ink;
     ctx.lineWidth = 4;
     ctx.stroke();
-
-    // Teeth bar
     ctx.fillStyle = PAL.white;
     ctx.fillRect(-mw + 3, headY + 25, (mw - 3) * 2, 5);
-    // Pink tongue
     ctx.fillStyle = '#e87a64';
     ctx.beginPath();
     ctx.ellipse(0, headY + 24 + mh - 5, mw * 0.45, 4, 0, 0, Math.PI * 2);
     ctx.fill();
-  } else {
-    // Simple curved smile
+  } else if (pose === 'shocked') {
+    // Wavy confused squiggle mouth ~
     ctx.beginPath();
-    ctx.arc(0, headY + 20, 14, Math.PI * 0.15, Math.PI * 0.85);
+    ctx.moveTo(-18, headY + 28);
+    ctx.quadraticCurveTo(-9, headY + 20, 0, headY + 28);
+    ctx.quadraticCurveTo(9, headY + 36, 18, headY + 28);
+    ctx.stroke();
+  } else if (pose === 'skeptical' || pose === 'sad') {
+    // Frown
+    ctx.beginPath();
+    ctx.arc(0, headY + 38, 16, Math.PI * 1.15, Math.PI * 1.85);
+    ctx.stroke();
+  } else {
+    ctx.beginPath();
+    ctx.arc(0, headY + 22, 14, Math.PI * 0.15, Math.PI * 0.85);
+    ctx.stroke();
+  }
+
+  if (mustache) {
+    ctx.fillStyle = '#d1d5db';
+    ctx.beginPath();
+    ctx.ellipse(0, headY + 20, 28, 9, 0, Math.PI, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 3;
     ctx.stroke();
   }
 
@@ -686,202 +572,921 @@ export function oversimplifiedStickman(ctx, x, y, pose = 'happy', {
 }
 
 /**
- * Laboratory Workbench Apparatus: Chemical Jar + Analog Galvanometer Dial
+ * SCENE A: Full-Screen 19th-Century European Cobblestone Street (y: 0..1920)
  */
-export function drawLabApparatus(ctx, x, y, t, {
-  needleAngle = -0.55,
-  label = 'GALVANOMETER (ARUS LISTRIK)',
+export function drawStreetWorld(ctx, t) {
+  ctx.save();
+  // Sky
+  const skyG = ctx.createLinearGradient(0, 0, 0, 1080);
+  skyG.addColorStop(0, PAL.skyTop);
+  skyG.addColorStop(1, PAL.skyBot);
+  ctx.fillStyle = skyG;
+  ctx.fillRect(0, 0, 1080, 1080);
+
+  // Fluffy Clouds
+  ctx.fillStyle = 'rgba(255,255,255,0.92)';
+  const cx = 760 + Math.sin(t * 0.35) * 24;
+  ctx.beginPath();
+  ctx.arc(cx, 250, 72, 0, Math.PI * 2);
+  ctx.arc(cx + 68, 236, 86, 0, Math.PI * 2);
+  ctx.arc(cx + 145, 256, 62, 0, Math.PI * 2);
+  ctx.arc(cx - 58, 264, 54, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Perspective 19th-Century Townhouses receding from left to right
+  const buildings = [
+    { x: 0, w: 220, topY: 160, botY: 1020, col: '#e29f38', shutter: '#1d6ec2', rows: 4, cols: 2 },
+    { x: 220, w: 300, topY: 260, botY: 995, col: '#cc6733', shutter: '#227834', rows: 4, cols: 3 },
+    { x: 520, w: 240, topY: 380, botY: 970, col: '#ebbc4c', shutter: '#3b73b5', rows: 3, cols: 3 },
+    { x: 760, w: 190, topY: 470, botY: 952, col: '#d99a36', shutter: '#227834', rows: 3, cols: 2 },
+    { x: 950, w: 130, topY: 540, botY: 940, col: '#c97c3a', shutter: '#3b73b5', rows: 2, cols: 2 },
+  ];
+
+  buildings.forEach((b) => {
+    ctx.fillStyle = b.col;
+    ctx.beginPath();
+    ctx.moveTo(b.x, b.topY);
+    ctx.lineTo(b.x + b.w, b.topY + 65);
+    ctx.lineTo(b.x + b.w, b.botY - 14);
+    ctx.lineTo(b.x, b.botY);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(34,18,10,0.4)';
+    ctx.lineWidth = 4;
+    ctx.stroke();
+
+    // Roof cornice
+    ctx.strokeStyle = '#4a2a14';
+    ctx.lineWidth = 8;
+    ctx.beginPath();
+    ctx.moveTo(b.x, b.topY);
+    ctx.lineTo(b.x + b.w, b.topY + 65);
+    ctx.stroke();
+
+    const winW = Math.max(22, (b.w / (b.cols + 1)) * 0.48);
+    const winH = Math.max(46, ((b.botY - b.topY - 120) / (b.rows + 0.6)) * 0.56);
+    for (let r = 0; r < b.rows; r++) {
+      for (let c = 0; c < b.cols; c++) {
+        const fracX = (c + 0.7) / (b.cols + 0.4);
+        const wx = b.x + fracX * b.w;
+        const slopeY = b.topY + fracX * 65;
+        const wy = slopeY + 42 + r * (winH + 34);
+        if (wy + winH > b.botY - 36) continue;
+
+        ctx.fillStyle = b.shutter;
+        ctx.fillRect(wx - winW * 0.85, wy, winW * 0.35, winH);
+        ctx.fillRect(wx + winW * 0.5, wy, winW * 0.35, winH);
+
+        ctx.fillStyle = '#d8e6f5';
+        ctx.fillRect(wx - winW * 0.5, wy, winW, winH);
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(wx - winW * 0.5, wy, winW, winH);
+      }
+    }
+  });
+
+  // Full Cobblestone Street Floor (y: 940..1920)
+  const stG = ctx.createLinearGradient(0, 940, 0, 1920);
+  stG.addColorStop(0, '#c9b79c');
+  stG.addColorStop(0.08, PAL.cobble);
+  stG.addColorStop(1, PAL.cobbleDark);
+  ctx.fillStyle = stG;
+  ctx.fillRect(0, 940, 1080, 980);
+
+  // Diagonal street shadow
+  ctx.fillStyle = 'rgba(20, 20, 34, 0.34)';
+  ctx.beginPath();
+  ctx.moveTo(0, 1140);
+  ctx.lineTo(940, 975);
+  ctx.lineTo(1080, 1020);
+  ctx.lineTo(1080, 1920);
+  ctx.lineTo(0, 1920);
+  ctx.closePath();
+  ctx.fill();
+
+  // Cobblestone tiles
+  ctx.fillStyle = 'rgba(255,255,255,0.08)';
+  for (let row = 0; row < 18; row++) {
+    const ry = 990 + row * 52;
+    const tileW = 54 + row * 5;
+    const tileH = 22 + row * 1.4;
+    const offset = (row % 2) * (tileW * 0.5);
+    for (let colI = -1; colI < 20; colI++) {
+      const rx = colI * (tileW + 12) + offset;
+      ctx.beginPath();
+      ctx.roundRect(rx, ry, tileW, tileH, 8);
+      ctx.fill();
+    }
+  }
+  ctx.restore();
+}
+
+/**
+ * SCENE B: Full-Screen 19th-Century Laboratory Interior (y: 0..1920)
+ */
+export function drawLabWorld(ctx, t) {
+  ctx.save();
+  // Striped wallpaper (y: 0..1040)
+  ctx.fillStyle = PAL.wallLight;
+  ctx.fillRect(0, 0, 1080, 1040);
+  ctx.fillStyle = PAL.wallStripe;
+  for (let x = 0; x < 1080; x += 76) {
+    ctx.fillRect(x, 0, 38, 1040);
+  }
+
+  // Tall Window on Left (y: 190..660)
+  ctx.fillStyle = '#87b9eb';
+  ctx.fillRect(42, 195, 430, 440);
+  ctx.fillStyle = '#5f7696';
+  ctx.beginPath();
+  ctx.moveTo(42, 635);
+  ctx.lineTo(42, 480);
+  ctx.lineTo(135, 410);
+  ctx.lineTo(225, 480);
+  ctx.lineTo(225, 430);
+  ctx.lineTo(335, 360);
+  ctx.lineTo(430, 445);
+  ctx.lineTo(472, 445);
+  ctx.lineTo(472, 635);
+  ctx.closePath();
+  ctx.fill();
+
+  ctx.strokeStyle = '#fcfaf2';
+  ctx.lineWidth = 16;
+  ctx.strokeRect(42, 195, 430, 440);
+  ctx.beginPath();
+  ctx.moveTo(257, 195);
+  ctx.lineTo(257, 635);
+  ctx.moveTo(42, 415);
+  ctx.lineTo(472, 415);
+  ctx.stroke();
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 4;
+  ctx.strokeRect(34, 188, 446, 454);
+
+  // Two Shelves of Chemical Bottles on Right
+  [380, 580].forEach((sy, sIdx) => {
+    ctx.fillStyle = PAL.woodTop;
+    ctx.fillRect(640, sy, 410, 20);
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 4;
+    ctx.strokeRect(640, sy, 410, 20);
+
+    const bottles = [
+      { dx: 675, w: 54, h: 108, c: '#39a878' },
+      { dx: 765, w: 58, h: 128, c: '#e06d1f' },
+      { dx: 860, w: 56, h: 118, c: '#1877d9' },
+      { dx: 955, w: 52, h: 98, c: '#e6c629' },
+    ];
+    bottles.forEach((bt) => {
+      ctx.fillStyle = bt.c;
+      ctx.beginPath();
+      ctx.moveTo(bt.dx, sy);
+      ctx.lineTo(bt.dx + 5, sy - bt.h * 0.68);
+      ctx.lineTo(bt.dx + 16, sy - bt.h * 0.72);
+      ctx.lineTo(bt.dx + 18, sy - bt.h);
+      ctx.lineTo(bt.dx + bt.w - 18, sy - bt.h);
+      ctx.lineTo(bt.dx + bt.w - 16, sy - bt.h * 0.72);
+      ctx.lineTo(bt.dx + bt.w - 5, sy - bt.h * 0.68);
+      ctx.lineTo(bt.dx + bt.w, sy);
+      ctx.closePath();
+      ctx.fill();
+      ctx.strokeStyle = PAL.ink;
+      ctx.lineWidth = 4;
+      ctx.stroke();
+    });
+  });
+
+  // Warm sunbeam diagonal from window onto table
+  const beamG = ctx.createLinearGradient(140, 240, 720, 1180);
+  beamG.addColorStop(0, 'rgba(255, 244, 165, 0.35)');
+  beamG.addColorStop(1, 'rgba(255, 244, 165, 0.0)');
+  ctx.fillStyle = beamG;
+  ctx.beginPath();
+  ctx.moveTo(120, 210);
+  ctx.lineTo(460, 210);
+  ctx.lineTo(880, 1180);
+  ctx.lineTo(380, 1180);
+  ctx.closePath();
+  ctx.fill();
+
+  // Wainscoting Dado Wall (y: 860..1080)
+  ctx.fillStyle = '#995314';
+  ctx.fillRect(0, 860, 1080, 220);
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 5;
+  ctx.beginPath();
+  ctx.moveTo(0, 860);
+  ctx.lineTo(1080, 860);
+  ctx.stroke();
+
+  // Full Wooden Laboratory Workbench Counter (y: 1050..1920)
+  ctx.fillStyle = PAL.woodTop;
+  ctx.fillRect(0, 1050, 1080, 110);
+  ctx.fillStyle = PAL.woodFront;
+  ctx.fillRect(0, 1160, 1080, 760);
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 5;
+  ctx.beginPath();
+  ctx.moveTo(0, 1050);
+  ctx.lineTo(1080, 1050);
+  ctx.moveTo(0, 1160);
+  ctx.lineTo(1080, 1160);
+  ctx.stroke();
+
+  ctx.restore();
+}
+
+/**
+ * Lab Galvanometer + Chemical Jar Apparatus (scalable for close-up zoom!)
+ */
+export function drawGalvanometerRig(ctx, x, y, t, {
+  needleAngle = 0.45,
   jarColor = PAL.tealJar,
+  scale = 1,
 } = {}) {
   ctx.save();
   ctx.translate(x, y);
+  ctx.scale(scale, scale);
 
   // 1. Chemical Jar on Left
   ctx.fillStyle = '#d4f1f9';
   ctx.beginPath();
-  ctx.roundRect(-145, -108, 92, 108, 10);
+  ctx.roundRect(-175, -135, 114, 135, 12);
   ctx.fill();
   ctx.fillStyle = jarColor;
-  ctx.fillRect(-143, -72, 88, 60);
+  ctx.fillRect(-171, -92, 106, 74);
   ctx.fillStyle = PAL.gold;
-  ctx.fillRect(-145, -14, 92, 14);
+  ctx.fillRect(-175, -18, 114, 18);
   ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 4;
-  ctx.strokeRect(-145, -108, 92, 108);
+  ctx.lineWidth = 5;
+  ctx.strokeRect(-175, -135, 114, 135);
 
-  // Two electrodes on top of jar
+  // Two electrodes
   ctx.fillStyle = '#cbd5e1';
-  ctx.fillRect(-126, -124, 16, 16);
-  ctx.strokeRect(-126, -124, 16, 16);
+  ctx.fillRect(-152, -155, 20, 20);
+  ctx.strokeRect(-152, -155, 20, 20);
   ctx.fillStyle = '#f8fafc';
-  ctx.fillRect(-90, -124, 16, 16);
-  ctx.strokeRect(-90, -124, 16, 16);
+  ctx.fillRect(-106, -155, 20, 20);
+  ctx.strokeRect(-106, -155, 20, 20);
 
-  // Copper wires arching to meter
+  // Arching copper wires
   ctx.strokeStyle = '#d97706';
-  ctx.lineWidth = 4.5;
+  ctx.lineWidth = 5;
   ctx.beginPath();
-  ctx.moveTo(-118, -124);
-  ctx.quadraticCurveTo(-75, -162, -32, -132);
-  ctx.moveTo(-82, -124);
-  ctx.quadraticCurveTo(-55, -150, -24, -132);
+  ctx.moveTo(-142, -155);
+  ctx.quadraticCurveTo(-90, -200, -35, -165);
+  ctx.moveTo(-96, -155);
+  ctx.quadraticCurveTo(-65, -185, -24, -165);
   ctx.stroke();
 
-  // 2. Wooden-Framed Analog Galvanometer on Right
+  // 2. Wooden Galvanometer Box on Right
   ctx.fillStyle = '#9c470b';
   ctx.beginPath();
-  ctx.roundRect(-36, -132, 210, 132, 8);
+  ctx.roundRect(-42, -168, 265, 168, 10);
   ctx.fill();
   ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 4;
+  ctx.lineWidth = 5;
   ctx.stroke();
 
   // White dial face
   ctx.fillStyle = '#f8f6f0';
-  ctx.fillRect(-18, -116, 174, 96);
+  ctx.fillRect(-20, -146, 221, 122);
 
-  // Dial arc & ticks
-  const dialCx = 69;
-  const dialCy = -32;
-  // Pink highlight wedge on right side of dial
-  ctx.fillStyle = 'rgba(239, 68, 68, 0.22)';
+  const dialCx = 90;
+  const dialCy = -40;
+  // Red deflection zone
+  ctx.fillStyle = 'rgba(239, 68, 68, 0.25)';
   ctx.beginPath();
   ctx.moveTo(dialCx, dialCy);
-  ctx.arc(dialCx, dialCy, 66, -Math.PI * 0.35, -Math.PI * 0.1);
+  ctx.arc(dialCx, dialCy, 84, -Math.PI * 0.36, -Math.PI * 0.08);
   ctx.closePath();
   ctx.fill();
 
+  // Scale arc & ticks
   ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 3;
-  ctx.beginPath();
-  ctx.arc(dialCx, dialCy, 66, -Math.PI * 0.88, -Math.PI * 0.12);
-  ctx.stroke();
-
-  // Animated Red Needle
-  const ang = needleAngle + Math.sin(t * 6) * 0.05;
-  ctx.strokeStyle = PAL.red;
-  ctx.lineWidth = 4.5;
-  ctx.beginPath();
-  ctx.moveTo(dialCx, dialCy);
-  ctx.lineTo(dialCx + Math.sin(ang) * 62, dialCy - Math.cos(ang) * 62);
-  ctx.stroke();
-
-  ctx.fillStyle = PAL.gold;
-  ctx.beginPath();
-  ctx.arc(dialCx, dialCy, 7, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 2.5;
-  ctx.stroke();
-
-  // Label plaque on workbench below meter
-  ctx.fillStyle = 'rgba(24, 18, 14, 0.88)';
-  ctx.beginPath();
-  ctx.roundRect(-145, 14, 320, 32, 8);
-  ctx.fill();
-  ctx.fillStyle = PAL.gold;
-  ctx.font = '800 14px "Plus Jakarta Sans", "Inter", sans-serif';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText(label, 15, 30, 300);
-
-  ctx.restore();
-}
-
-/**
- * Comic Pop-History Speech Bubble with Outlined Highlight Text
- */
-export function oversimplifiedBubble(ctx, x, y, textStr, {
-  col = PAL.gold,
-} = {}) {
-  ctx.save();
-  const w = 680;
-  const h = 68;
-  const bx = clamp(x - w / 2, 48, 1080 - w - 48);
-
-  ctx.fillStyle = 'rgba(22, 16, 12, 0.92)';
-  ctx.strokeStyle = col;
-  ctx.lineWidth = 4;
-  ctx.beginPath();
-  ctx.roundRect(bx, y - h / 2, w, h, 20);
-  ctx.fill();
-  ctx.stroke();
-
-  ctx.fillStyle = PAL.white;
-  ctx.font = '800 22px "Plus Jakarta Sans", "Inter", sans-serif';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText(textStr, bx + w / 2, y, w - 36);
-  ctx.restore();
-}
-
-/**
- * Lower Historical Fact Card
- */
-export function oversimplifiedCard(ctx, cx, cy, w, h, {
-  tag = '',
-  titleStr = '',
-  subStr = '',
-  stat = '',
-  statSub = '',
-  col = PAL.gold,
-  a = 1,
-} = {}) {
-  if (a <= 0.01) return;
-  ctx.save();
-  ctx.translate(cx, cy);
-  ctx.scale(0.92 + 0.08 * a, 0.92 + 0.08 * a);
-  ctx.globalAlpha = clamp(a, 0, 1);
-
-  ctx.fillStyle = 'rgba(28, 22, 18, 0.96)';
-  ctx.strokeStyle = col;
   ctx.lineWidth = 3.5;
   ctx.beginPath();
-  ctx.roundRect(-w / 2, -h / 2, w, h, 20);
-  ctx.fill();
+  ctx.arc(dialCx, dialCy, 84, -Math.PI * 0.88, -Math.PI * 0.12);
+  ctx.stroke();
+  for (let i = -4; i <= 4; i++) {
+    const ta = (i / 4) * 0.68;
+    ctx.beginPath();
+    ctx.moveTo(dialCx + Math.sin(ta) * 72, dialCy - Math.cos(ta) * 72);
+    ctx.lineTo(dialCx + Math.sin(ta) * 84, dialCy - Math.cos(ta) * 84);
+    ctx.stroke();
+  }
+
+  // Animated Red Needle
+  const ang = needleAngle + Math.sin(t * 7) * 0.05;
+  ctx.strokeStyle = PAL.red;
+  ctx.lineWidth = 5.5;
+  ctx.beginPath();
+  ctx.moveTo(dialCx, dialCy);
+  ctx.lineTo(dialCx + Math.sin(ang) * 78, dialCy - Math.cos(ang) * 78);
   ctx.stroke();
 
-  // Left accent bar
-  ctx.fillStyle = col;
+  ctx.fillStyle = PAL.gold;
   ctx.beginPath();
-  ctx.roundRect(-w / 2 + 16, -h / 2 + 18, 10, h - 36, 5);
+  ctx.arc(dialCx, dialCy, 9, 0, Math.PI * 2);
   ctx.fill();
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 3;
+  ctx.stroke();
 
-  const textLeft = -w / 2 + 44;
-  const maxTextW = stat ? w - 275 : w - 70;
+  ctx.restore();
+}
 
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'middle';
-  ctx.fillStyle = col;
-  ctx.font = '800 16px "JetBrains Mono", monospace';
-  ctx.fillText(tag, textLeft, -h / 2 + 38, maxTextW);
+/**
+ * SCENE C: 1884 Rooftop with Golden Selenium Solar Panels & Coal Smokestack
+ */
+export function drawRooftopWorld(ctx, t) {
+  ctx.save();
+  const skyG = ctx.createLinearGradient(0, 0, 0, 1020);
+  skyG.addColorStop(0, '#3a86db');
+  skyG.addColorStop(1, '#90c2f5');
+  ctx.fillStyle = skyG;
+  ctx.fillRect(0, 0, 1080, 1020);
 
-  ctx.fillStyle = PAL.white;
-  ctx.font = '800 24px "Plus Jakarta Sans", "Inter", sans-serif';
-  ctx.fillText(titleStr, textLeft, -2, maxTextW);
+  // Distant buildings & smoking coal chimney
+  ctx.fillStyle = '#d49b72';
+  ctx.fillRect(40, 480, 220, 520);
+  ctx.fillStyle = '#c48356';
+  ctx.fillRect(780, 560, 240, 440);
 
-  ctx.fillStyle = '#d6c7b2';
-  ctx.font = '500 18px "Plus Jakarta Sans", "Inter", sans-serif';
-  ctx.fillText(subStr, textLeft, h / 2 - 36, maxTextW);
-
-  if (stat) {
-    const bx = w / 2 - 118;
-    ctx.fillStyle = col;
+  // Coal Smokestack puffing grey smoke
+  ctx.fillStyle = '#cbd5e1';
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 4;
+  ctx.fillRect(465, 520, 58, 460);
+  ctx.strokeRect(465, 520, 58, 460);
+  for (let i = 0; i < 6; i++) {
+    const sy = 480 - i * 58 - ((t * 40) % 58);
+    const sx = 490 - i * 24 + Math.sin(t * 2 + i) * 14;
+    ctx.fillStyle = `rgba(210, 215, 225, ${0.75 - i * 0.1})`;
     ctx.beginPath();
-    ctx.roundRect(bx - 88, -h / 2 + 22, 176, h - 44, 14);
+    ctx.arc(sx, sy, 28 + i * 10, 0, Math.PI * 2);
     ctx.fill();
-    ctx.strokeStyle = PAL.ink;
-    ctx.lineWidth = 3;
+  }
+
+  // Brick rooftop parapet & grey roof floor (y: 940..1920)
+  ctx.fillStyle = '#a84a24';
+  ctx.fillRect(0, 910, 1080, 85);
+  ctx.fillStyle = '#6c6f5e';
+  ctx.fillRect(0, 995, 1080, 925);
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 5;
+  ctx.beginPath();
+  ctx.moveTo(0, 910);
+  ctx.lineTo(1080, 910);
+  ctx.moveTo(0, 995);
+  ctx.lineTo(1080, 995);
+  ctx.stroke();
+
+  // Golden Selenium Solar Arrays on Stands
+  const drawGoldPanel = (px, py) => {
+    ctx.save();
+    ctx.translate(px, py);
+    // Stand legs
+    ctx.strokeStyle = '#1e293b';
+    ctx.lineWidth = 10;
+    ctx.beginPath();
+    ctx.moveTo(-95, 60);
+    ctx.lineTo(-95, 165);
+    ctx.moveTo(95, 60);
+    ctx.lineTo(95, 165);
     ctx.stroke();
 
-    ctx.textAlign = 'center';
-    ctx.fillStyle = PAL.ink;
-    ctx.font = '900 26px "Plus Jakarta Sans", "Inter", sans-serif';
-    ctx.fillText(stat, bx, -10, 160);
+    // Tilted gold grid
+    ctx.fillStyle = '#facc15';
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    ctx.moveTo(-125, -90);
+    ctx.lineTo(125, -90);
+    ctx.lineTo(110, 75);
+    ctx.lineTo(-140, 75);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
 
-    if (statSub) {
-      ctx.font = '800 14px "JetBrains Mono", monospace';
-      ctx.fillText(statSub, bx, 24, 160);
+    // Grid cells
+    ctx.lineWidth = 2.5;
+    for (let r = 1; r < 5; r++) {
+      const ly = -90 + (r / 5) * 165;
+      ctx.beginPath();
+      ctx.moveTo(-125 - (r / 5) * 15, ly);
+      ctx.lineTo(125 - (r / 5) * 15, ly);
+      ctx.stroke();
+    }
+    for (let c = 1; c < 4; c++) {
+      const lx = -125 + (c / 4) * 250;
+      ctx.beginPath();
+      ctx.moveTo(lx, -90);
+      ctx.lineTo(lx - 15, 75);
+      ctx.stroke();
+    }
+    ctx.restore();
+  };
+
+  drawGoldPanel(210, 1020);
+  drawGoldPanel(530, 1020);
+  ctx.restore();
+}
+
+/**
+ * SCENE D: Chalkboard Classroom (customizable formula & topic!)
+ */
+export function drawChalkboardWorld(ctx, t, { formula = 'E = h · ν (FOTON)' } = {}) {
+  ctx.save();
+  // Dark green chalkboard (y: 0..1040)
+  ctx.fillStyle = '#092e1a';
+  ctx.fillRect(0, 0, 1080, 1040);
+
+  // Chalk squiggles, wave equations & yellow photon dots
+  ctx.strokeStyle = 'rgba(235, 245, 238, 0.8)';
+  ctx.lineWidth = 5;
+  for (let row = 0; row < 5; row++) {
+    const wy = 240 + row * 115;
+    ctx.beginPath();
+    for (let x = 60; x < 540; x += 20) {
+      const yOff = Math.sin((x + t * 90) * 0.06 + row) * 14;
+      if (x === 60) ctx.moveTo(x, wy + yOff);
+      else ctx.lineTo(x, wy + yOff);
+    }
+    ctx.stroke();
+  }
+
+  // Chalk formula
+  ctx.fillStyle = 'rgba(255,255,255,0.9)';
+  ctx.font = '900 48px "JetBrains Mono", monospace';
+  ctx.textAlign = 'left';
+  ctx.fillText(formula, 80, 820, 920);
+
+  // Glowing yellow photon particles flying right
+  ctx.fillStyle = PAL.gold;
+  for (let i = 0; i < 8; i++) {
+    const px = 620 + ((i * 67 + t * 80) % 380);
+    const py = 260 + (i % 4) * 130 + Math.sin(t * 4 + i) * 18;
+    ctx.beginPath();
+    ctx.arc(px, py, 12, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Wooden wainscoting & classroom desk/floor (y: 960..1920)
+  ctx.fillStyle = '#5c2d0c';
+  ctx.fillRect(0, 940, 1080, 260);
+  ctx.fillStyle = '#c87d20';
+  ctx.fillRect(0, 1200, 1080, 720);
+
+  // Teacher Desk on Left
+  ctx.fillStyle = '#b46212';
+  ctx.fillRect(0, 1080, 620, 440);
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 5;
+  ctx.strokeRect(0, 1080, 620, 440);
+
+  // Stack of physics books on desk
+  ctx.fillStyle = '#f8fafc';
+  ctx.fillRect(36, 985, 145, 95);
+  ctx.strokeRect(36, 985, 145, 95);
+  ctx.restore();
+}
+
+/**
+ * SCENE E: Microscopic Silicon Atom Lattice & Cute Electron Knock-Out Analogy!
+ */
+export function drawAtomLatticeWorld(ctx, t) {
+  ctx.save();
+  // Deep dark navy atomic space
+  ctx.fillStyle = '#070b19';
+  ctx.fillRect(0, 0, 1080, 1920);
+
+  // Grid of blue Silicon Atoms with covalent bonds
+  const cols = 5;
+  const rows = 8;
+  const startX = 130;
+  const startY = 250;
+  const gapX = 205;
+  const gapY = 205;
+
+  // Bonds
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 10;
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const ax = startX + c * gapX;
+      const ay = startY + r * gapY;
+      if (c < cols - 1) {
+        ctx.beginPath();
+        ctx.moveTo(ax, ay);
+        ctx.lineTo(ax + gapX, ay);
+        ctx.stroke();
+      }
+      if (r < rows - 1) {
+        ctx.beginPath();
+        ctx.moveTo(ax, ay);
+        ctx.lineTo(ax, ay + gapY);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // Silicon Atom Spheres
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const ax = startX + c * gapX + Math.sin(t * 3 + r + c) * 4;
+      const ay = startY + r * gapY + Math.cos(t * 3 + r - c) * 4;
+      const g = ctx.createRadialGradient(ax - 18, ay - 18, 8, ax, ay, 66);
+      g.addColorStop(0, '#3b82f6');
+      g.addColorStop(1, '#1d4ed8');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(ax, ay, 64, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = PAL.ink;
+      ctx.lineWidth = 5;
+      ctx.stroke();
+    }
+  }
+
+  // Curved Copper Wire Highway across the middle
+  ctx.strokeStyle = '#b45309';
+  ctx.lineWidth = 28;
+  ctx.beginPath();
+  ctx.moveTo(0, 860);
+  ctx.quadraticCurveTo(540, 680, 1080, 890);
+  ctx.stroke();
+  ctx.strokeStyle = '#f59e0b';
+  ctx.lineWidth = 14;
+  ctx.stroke();
+
+  // Golden Photon Ray striking from top-left!
+  const beamX = 420 + Math.sin(t * 4) * 60;
+  ctx.strokeStyle = PAL.gold;
+  ctx.lineWidth = 8;
+  ctx.setLineDash([18, 12]);
+  ctx.beginPath();
+  ctx.moveTo(120, 180);
+  ctx.lineTo(beamX, 580);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Cute Glowing Cyan Electron Character (with eyes & surprised mouth!) traveling along the wire
+  const u = (t * 0.38) % 1;
+  const ex = lerp(160, 920, u);
+  const ey = 760 - Math.sin(u * Math.PI) * 140 + Math.sin(t * 10) * 10;
+
+  // Outer glow
+  const eGlow = ctx.createRadialGradient(ex, ey, 10, ex, ey, 95);
+  eGlow.addColorStop(0, 'rgba(103, 232, 249, 0.8)');
+  eGlow.addColorStop(1, 'rgba(103, 232, 249, 0)');
+  ctx.fillStyle = eGlow;
+  ctx.beginPath();
+  ctx.arc(ex, ey, 95, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = '#67e8f9';
+  ctx.beginPath();
+  ctx.arc(ex, ey, 58, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 6;
+  ctx.stroke();
+
+  // Cute eyes & O-mouth on Electron
+  ctx.fillStyle = PAL.ink;
+  ctx.beginPath();
+  ctx.arc(ex - 16, ey - 8, 6, 0, Math.PI * 2);
+  ctx.arc(ex + 16, ey - 8, 6, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.ellipse(ex, ey + 14, 8, 11, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.restore();
+}
+
+/**
+ * SCENE F: Outdoor Academy / Bell Labs Lawn (supports 'ferris' for solar or 'medical' for Pasteur/Fleming!)
+ */
+export function drawBellLabsWorld(ctx, t, { propMode = 'ferris' } = {}) {
+  ctx.save();
+  // Sky & Brick University Building
+  ctx.fillStyle = '#4ea1f5';
+  ctx.fillRect(0, 0, 1080, 980);
+
+  // Brick building background
+  ctx.fillStyle = '#e5a93c';
+  ctx.fillRect(0, 320, 1080, 660);
+  ctx.fillStyle = '#7c2d12';
+  ctx.beginPath();
+  ctx.moveTo(0, 320);
+  ctx.lineTo(180, 210);
+  ctx.lineTo(1080, 240);
+  ctx.lineTo(1080, 320);
+  ctx.closePath();
+  ctx.fill();
+
+  // Green Lawn (y: 960..1920)
+  const lawnG = ctx.createLinearGradient(0, 960, 0, 1920);
+  lawnG.addColorStop(0, '#65d628');
+  lawnG.addColorStop(1, '#2b8a12');
+  ctx.fillStyle = lawnG;
+  ctx.fillRect(0, 960, 1080, 960);
+
+  // Three Scientists in White Lab Coats standing behind outdoor table
+  drawStickman(ctx, 180, 1340, { pose: 'happy', coatColor: PAL.coatWhite, hairColor: PAL.hairBrown, glasses: true, scale: 0.9, t });
+  drawStickman(ctx, 560, 1340, { pose: 'focused', coatColor: PAL.coatWhite, hairColor: PAL.hairGrey, glasses: true, scale: 0.88, t: t + 1 });
+  drawStickman(ctx, 890, 1340, { pose: 'happy', coatColor: PAL.coatWhite, hairColor: PAL.hairBrown, scale: 0.9, t: t + 2 });
+
+  // White Demonstration Table (y: 1120..1210)
+  ctx.fillStyle = '#f8fafc';
+  ctx.fillRect(0, 1120, 1080, 82);
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 5;
+  ctx.strokeRect(0, 1120, 1080, 82);
+
+  if (propMode === 'ferris') {
+    // Blue Silicon Solar Panel on Right of Table
+    ctx.fillStyle = '#1e3a8a';
+    ctx.strokeStyle = PAL.white;
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    ctx.moveTo(720, 940);
+    ctx.lineTo(980, 940);
+    ctx.lineTo(955, 1120);
+    ctx.lineTo(695, 1120);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    // Spinning Toy Ferris Wheel on Center-Left of Table!
+    const wheelCx = 390;
+    const wheelCy = 860;
+    const wheelR = 195;
+
+    ctx.strokeStyle = '#0284c7';
+    ctx.lineWidth = 14;
+    ctx.beginPath();
+    ctx.moveTo(wheelCx - 140, 1120);
+    ctx.lineTo(wheelCx, wheelCy);
+    ctx.lineTo(wheelCx + 140, 1120);
+    ctx.stroke();
+    ctx.fillStyle = '#0284c7';
+    ctx.fillRect(wheelCx - 175, 1095, 350, 28);
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 4;
+    ctx.strokeRect(wheelCx - 175, 1095, 350, 28);
+
+    ctx.save();
+    ctx.translate(wheelCx, wheelCy);
+    ctx.rotate(t * 1.4);
+    ctx.strokeStyle = '#dc2626';
+    ctx.lineWidth = 12;
+    ctx.beginPath();
+    ctx.arc(0, 0, wheelR, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.strokeStyle = '#facc15';
+    ctx.lineWidth = 5;
+    for (let i = 0; i < 8; i++) {
+      const a = (i / 8) * Math.PI * 2;
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(Math.cos(a) * wheelR, Math.sin(a) * wheelR);
+      ctx.stroke();
+    }
+    ctx.restore();
+  } else {
+    // Medical / Pasteur Flasks & Brass Microscope on Demonstration Table!
+    // Giant Glowing Erlenmeyer Flask on Left
+    ctx.fillStyle = '#38bdf8';
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.moveTo(320, 910);
+    ctx.lineTo(370, 910);
+    ctx.lineTo(370, 970);
+    ctx.lineTo(445, 1120);
+    ctx.lineTo(245, 1120);
+    ctx.lineTo(320, 970);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    // Giant Antiseptic Chlorine Basin on Right
+    ctx.fillStyle = '#74c0fc';
+    ctx.beginPath();
+    ctx.roundRect(650, 1020, 260, 100, 28);
+    ctx.fill();
+    ctx.stroke();
+  }
+
+  ctx.restore();
+}
+
+/**
+ * SCENE G: Vanguard 1 Satellite in Orbit + Modern Solar Farm Horizon
+ */
+export function drawSpaceAndSolarWorld(ctx, t, { mode = 'space' } = {}) {
+  ctx.save();
+  if (mode === 'space') {
+    // Deep space background with stars
+    ctx.fillStyle = '#041026';
+    ctx.fillRect(0, 0, 1080, 1920);
+    ctx.fillStyle = PAL.white;
+    for (let i = 0; i < 30; i++) {
+      const sx = (i * 173) % 1080;
+      const sy = (i * 293) % 1400;
+      ctx.fillRect(sx, sy, 4, 4);
+    }
+
+    // Curved Blue Earth Horizon at bottom
+    const earthG = ctx.createLinearGradient(0, 1280, 0, 1920);
+    earthG.addColorStop(0, '#38bdf8');
+    earthG.addColorStop(0.2, '#0284c7');
+    earthG.addColorStop(1, '#0369a1');
+    ctx.fillStyle = earthG;
+    ctx.beginPath();
+    ctx.arc(540, 2350, 1120, Math.PI * 1.15, Math.PI * 1.85);
+    ctx.fill();
+
+    // Floating Vanguard 1 Spherical Satellite with Solar Cells & 6 Antennas!
+    const satX = 560 + Math.sin(t * 1.5) * 28;
+    const satY = 920 + Math.cos(t * 1.2) * 24;
+    ctx.save();
+    ctx.translate(satX, satY);
+    ctx.rotate(Math.sin(t * 0.5) * 0.12);
+
+    // Long thin antennas
+    ctx.strokeStyle = '#94a3b8';
+    ctx.lineWidth = 5;
+    [[-320, -280], [340, -210], [-360, 140], [310, 260], [-140, 380], [180, -360]].forEach(([ax, ay]) => {
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(ax, ay);
+      ctx.stroke();
+    });
+
+    // Metallic sphere body
+    const sphG = ctx.createRadialGradient(-45, -45, 20, 0, 0, 165);
+    sphG.addColorStop(0, '#f8fafc');
+    sphG.addColorStop(1, '#64748b');
+    ctx.fillStyle = sphG;
+    ctx.beginPath();
+    ctx.arc(0, 0, 160, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 6;
+    ctx.stroke();
+
+    // Rectangular Solar Cell Windows on Satellite Sphere
+    ctx.fillStyle = '#0f172a';
+    ctx.strokeStyle = '#cbd5e1';
+    ctx.lineWidth = 4;
+    ctx.fillRect(-48, -148, 96, 46);
+    ctx.strokeRect(-48, -148, 96, 46);
+    ctx.fillRect(88, 12, 54, 72);
+    ctx.strokeRect(88, 12, 54, 72);
+    ctx.restore();
+  } else {
+    // Sunrise Sky over Vast Blue Solar Panel Farm
+    const sunG = ctx.createLinearGradient(0, 0, 0, 980);
+    sunG.addColorStop(0, '#d97706');
+    sunG.addColorStop(0.6, '#fde68a');
+    sunG.addColorStop(1, '#fffbeb');
+    ctx.fillStyle = sunG;
+    ctx.fillRect(0, 0, 1080, 980);
+
+    // Glowing Sun
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(680, 560, 58, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Endless rows of blue solar panels (y: 920..1920)
+    const farmG = ctx.createLinearGradient(0, 920, 0, 1920);
+    farmG.addColorStop(0, '#3b82f6');
+    farmG.addColorStop(1, '#1d4ed8');
+    ctx.fillStyle = farmG;
+    ctx.fillRect(0, 920, 1080, 1000);
+
+    // Perspective grid lines on solar farm
+    ctx.strokeStyle = 'rgba(15, 23, 42, 0.65)';
+    ctx.lineWidth = 4;
+    for (let r = 0; r < 14; r++) {
+      const ry = 940 + r * r * 5.2;
+      ctx.beginPath();
+      ctx.moveTo(0, ry);
+      ctx.lineTo(1080, ry);
+      ctx.stroke();
+    }
+    for (let c = -6; c <= 16; c++) {
+      ctx.beginPath();
+      ctx.moveTo(540 + (c - 5) * 65, 920);
+      ctx.lineTo(540 + (c - 5) * 260, 1920);
+      ctx.stroke();
+    }
+  }
+  ctx.restore();
+}
+
+/**
+ * SCENE H: Microscopic Bacteria / Germs on Hand vs Chlorine Wash (for Demo 2 & Demo 3!)
+ */
+export function drawMicrobeZoomWorld(ctx, t, { cleansed = false } = {}) {
+  ctx.save();
+  ctx.fillStyle = cleansed ? '#082f49' : '#1f0910';
+  ctx.fillRect(0, 0, 1080, 1920);
+
+  // Giant Magnifying Glass Lens Frame in Center (y: 340..1240)
+  const cx = 540;
+  const cy = 790;
+  const r = 410;
+
+  ctx.fillStyle = cleansed ? '#e0f2fe' : '#fef2f2';
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.strokeStyle = cleansed ? '#38bdf8' : PAL.gold;
+  ctx.lineWidth = 22;
+  ctx.stroke();
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 6;
+  ctx.stroke();
+
+  // Stylized Hand Outline inside Magnifying Glass
+  ctx.fillStyle = PAL.skin;
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 7;
+  ctx.beginPath();
+  ctx.roundRect(cx - 150, cy - 80, 300, 320, 70);
+  ctx.fill();
+  ctx.stroke();
+  // Fingers
+  [-115, -45, 25, 95].forEach((fx, idx) => {
+    const fh = idx === 1 || idx === 2 ? 210 : 175;
+    ctx.beginPath();
+    ctx.roundRect(cx + fx - 28, cy - 60 - fh, 56, fh + 30, 28);
+    ctx.fill();
+    ctx.stroke();
+  });
+
+  if (!cleansed) {
+    // Spiky Green/Purple Cartoon Germs with Evil Eyes on the Hand!
+    const germs = [
+      { gx: cx - 85, gy: cy - 120, col: '#65a30d', s: 1.0 },
+      { gx: cx + 55, gy: cy - 150, col: '#9333ea', s: 1.15 },
+      { gx: cx - 30, gy: cy + 30, col: '#dc2626', s: 1.2 },
+      { gx: cx + 90, gy: cy + 75, col: '#65a30d', s: 0.95 },
+      { gx: cx - 95, gy: cy + 125, col: '#9333ea', s: 1.05 },
+    ];
+    germs.forEach((g, i) => {
+      const jx = g.gx + Math.sin(t * 5 + i) * 10;
+      const jy = g.gy + Math.cos(t * 4 + i) * 10;
+      ctx.save();
+      ctx.translate(jx, jy);
+      ctx.scale(g.s, g.s);
+      ctx.fillStyle = g.col;
+      ctx.strokeStyle = PAL.ink;
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      for (let k = 0; k < 12; k++) {
+        const a = (k / 12) * Math.PI * 2;
+        const rad = k % 2 === 0 ? 44 : 28;
+        if (k === 0) ctx.moveTo(Math.cos(a) * rad, Math.sin(a) * rad);
+        else ctx.lineTo(Math.cos(a) * rad, Math.sin(a) * rad);
+      }
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Evil eyes
+      ctx.fillStyle = PAL.white;
+      ctx.beginPath();
+      ctx.arc(-10, -4, 7, 0, Math.PI * 2);
+      ctx.arc(10, -4, 7, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = PAL.ink;
+      ctx.beginPath();
+      ctx.arc(-10, -4, 3, 0, Math.PI * 2);
+      ctx.arc(10, -4, 3, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    });
+  } else {
+    // Sparkling Chlorine Bubbles & Clean Stars!
+    for (let i = 0; i < 9; i++) {
+      const bx = cx - 220 + ((i * 89) % 440);
+      const by = cy - 220 + (((i * 123) - t * 60) % 440);
+      ctx.fillStyle = 'rgba(56, 189, 248, 0.55)';
+      ctx.strokeStyle = '#0284c7';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.arc(bx, by, 26 + (i % 3) * 10, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
     }
   }
 

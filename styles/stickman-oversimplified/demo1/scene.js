@@ -1,12 +1,12 @@
-// 78 · STICKMAN OVERSIMPLIFIED — Demo 1: Edmond Becquerel 1839 & Listrik Tenaga Surya Pertama
+// 78 · STICKMAN OVERSIMPLIFIED — Demo 1: Edmond Becquerel 1839 (8 Full-Screen Educational Scenes!)
 import * as K from '/styles/stickman-oversimplified/kit.js';
-const { clamp, ease } = AM.lib;
+const { clamp, lerp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -16,162 +16,250 @@ export async function setup(AM) {
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
 
-  let phase = 0;
-  if (t >= C.einstein.start) phase = 3;
-  else if (t >= C.fotovoltaik.start) phase = 2;
-  else if (t >= C.lab.start) phase = 1;
+  // Determine which of the 8 educational story beats is active
+  let beat = 0;
+  if (t >= C.moral.start) beat = 7;
+  else if (t >= C.satelit.start) beat = 6;
+  else if (t >= C.einstein.start) beat = 5;
+  else if (t >= C.abaikan.start) beat = 4;
+  else if (t >= C.fotovoltaik.start) beat = 3;
+  else if (t >= C.cahaya.start) beat = 2;
+  else if (t >= C.lab.start) beat = 1;
 
-  const isLab = phase === 1 || phase === 2;
-  const tags = [
-    'PARIS 1839 • PENEMUAN REMAJA 19 TAHUN',
-    'LABORATORIUM AYAH • EKSPERIMEN TOPLES KIMIA',
-    'EFEK FOTOVOLTAIK • DISINGKIRKAN BATU BARA',
-    'WARISAN EINSTEIN & PANEL SURYA MODERN',
-  ];
+  if (beat === 0) {
+    // BEAT 1 (hook): Paris Street 1839 — Camera zooms out as 19yo Edmond holds solar jar & top-hat citizens walk past ignoring him
+    const u = clamp((t - C.hook.start) / Math.max(1, C.hook.dur));
+    const zoom = lerp(1.32, 1.0, ease.outCubic(u));
 
-  K.oversimplifiedBg(ctx, t, {
-    mode: isLab ? 'lab' : 'street',
-    stageTag: tags[phase],
-    col: K.PAL.gold,
-  });
-
-  const headers = [
-    ['1839', 'REMAJA 19 TAHUN PENEMU LISTRIK SURYA!', 'Edmond Becquerel Menciptakan Listrik dari Sinar Matahari Murni'],
-    ['LAB PARIS', 'JARUM LISTRIK MELONJAK DI LAB AYAHNYA', 'Dua Elektroda di Dalam Toples Kimia Bereaksi Terhadap Cahaya'],
-    ['DIABAIKAN!', 'DUNIA LEBIH MEMILIH MESIN UAP BATU BARA', 'Temuan Fotovoltaik Dianggap Mainan Aneh Selama Setengah Abad'],
-    ['MASA DEPAN', 'DIJELASKAN EINSTEIN & MENGUBAH DUNIA!', 'Dari Toples Kecil 1839 Menjadi Energi Satelit & Surya Global'],
-  ][phase];
-
-  K.oversimplifiedHeader(ctx, headers[0], headers[1], headers[2], { col: K.PAL.gold });
-
-  if (!isLab) {
-    // Street Scene (Phase 0 & Phase 3)
-    const pose = phase === 0 ? 'happy' : 'excited';
-    K.oversimplifiedStickman(ctx, 430, 810, pose, {
-      scale: 1.05,
-      t,
-      prop: 'solar_jar',
-      showLegs: true,
+    K.withCamera(ctx, { zoom, fx: 460, fy: 1020 }, () => {
+      K.drawStreetWorld(ctx, t);
+      // Background passersby ignoring Edmond
+      K.drawStickman(ctx, 790 - u * 260, 1180, {
+        pose: 'skeptical',
+        hairStyle: 'tophat',
+        coatColor: K.PAL.coatGreen,
+        scale: 0.65,
+        t,
+        walkSpeed: 6,
+      });
+      K.drawStickman(ctx, 920 - u * 220, 1220, {
+        pose: 'focused',
+        hairStyle: 'tophat',
+        coatColor: K.PAL.coatBrown,
+        scale: 0.62,
+        t: t + 1,
+        walkSpeed: 5.5,
+      });
+      // Young Edmond in foreground holding the glowing chemical jar
+      K.drawStickman(ctx, 390, 1460, {
+        pose: 'happy',
+        hairStyle: 'bowl',
+        coatColor: K.PAL.coatBlue,
+        prop: 'solar_jar',
+        scale: 1.18,
+        t,
+      });
     });
 
-    const bubbles = {
-      0: 'Tahun 1839, aku bikin listrik dari cahaya matahari di toples ini!',
-      3: 'Dulu dicuekin di jalanan Paris, sekarang menghidupi satelit dunia!',
-    };
-    K.oversimplifiedBubble(ctx, 540, 290, bubbles[phase], { col: K.PAL.gold });
-  } else {
-    // Laboratory Scene (Phase 1 & Phase 2)
-    // Father / Mentor with grey hair & glasses behind left counter
-    K.oversimplifiedStickman(ctx, 330, 625, 'focused', {
-      scale: 0.85,
-      t: t + 1.2,
-      coatColor: K.PAL.coatTeal,
-      hairColor: K.PAL.hairGrey,
-      prop: 'none',
-      showLegs: false,
-      glasses: true,
+    K.drawEduBanner(ctx, '1839', 'REMAJA 19 TAHUN PENEMU LISTRIK SURYA', 'Edmond Becquerel Menciptakan Listrik dari Cahaya di Paris');
+    K.drawEduCallout(ctx, 540, 1525, 960, 155, {
+      tag: 'FAKTA SEJARAH • PARIS 1839',
+      title: '115 Tahun Sebelum Panel Surya Silikon Modern Dibuat!',
+      desc: 'Edmond baru berusia 19 tahun saat menemukan efek listrik dari cahaya matahari',
+      stat: '19 THN',
+      a: pop(t, C.hook.start + 0.3),
+    });
+  } else if (beat === 1) {
+    // BEAT 2 (lab): Inside Father's Lab — Medium shot of Antoine César Becquerel (Father) & Young Edmond at workbench
+    const u = clamp((t - C.lab.start) / Math.max(1, C.lab.dur));
+    const zoom = lerp(1.0, 1.12, u);
+
+    K.withCamera(ctx, { zoom, fx: 540, fy: 920 }, () => {
+      K.drawLabWorld(ctx, t);
+      // Father / Mentor on left with spectacles & newspaper
+      K.drawStickman(ctx, 290, 1055, {
+        pose: 'focused',
+        hairStyle: 'bowl',
+        hairColor: K.PAL.hairGrey,
+        coatColor: K.PAL.coatTeal,
+        showLegs: false,
+        glasses: true,
+        scale: 0.96,
+        t,
+      });
+      // Edmond on right
+      K.drawStickman(ctx, 760, 1055, {
+        pose: 'happy',
+        hairStyle: 'bowl',
+        hairColor: K.PAL.hairBrown,
+        coatColor: K.PAL.coatBlue,
+        showLegs: false,
+        scale: 1.08,
+        t,
+      });
+      // Galvanometer rig on counter
+      K.drawGalvanometerRig(ctx, 540, 1050, t, { needleAngle: -0.52, scale: 1.0 });
     });
 
-    // Young Edmond behind right counter
-    K.oversimplifiedStickman(ctx, 735, 625, phase === 2 ? 'excited' : 'focused', {
-      scale: 0.96,
-      t,
-      coatColor: K.PAL.coatBlue,
-      hairColor: K.PAL.hairBrown,
-      prop: 'none',
-      showLegs: false,
+    K.drawEduBanner(ctx, 'LAB 1839', 'EKSPERIMEN DUA PELAT ELEKTRODA LOGAM', 'Mencelupkan Pelat Perak Klorida ke Dalam Toples Larutan Asam');
+    K.drawEduCallout(ctx, 540, 1440, 960, 160, {
+      tag: 'CARA KERJA EKSPERIMEN BECQUEREL',
+      title: '2 Pelat Logam + Larutan Elektrolit + Sinar Matahari',
+      desc: 'Dalam gelap jarum diam di nol; begitu terkena cahaya muncul beda potensial listrik',
+      stat: '2 PELAT',
+      a: pop(t, C.lab.start + 0.2),
+    });
+  } else if (beat === 2) {
+    // BEAT 3 (cahaya): TIGHT CAMERA ZOOM-IN onto Galvanometer Needle swinging wildly when sunbeam hits the jar!
+    const u = clamp((t - C.cahaya.start) / Math.max(1, C.cahaya.dur));
+    const zoom = lerp(1.25, 1.62, ease.outCubic(u));
+    const needleSwing = lerp(-0.55, 0.58, ease.outBack(clamp(u * 1.6, 0, 1), 2.1));
+
+    K.withCamera(ctx, { zoom, fx: 560, fy: 960 }, () => {
+      K.drawLabWorld(ctx, t);
+      K.drawStickman(ctx, 730, 1055, {
+        pose: u > 0.45 ? 'shocked' : 'excited',
+        hairStyle: 'bowl',
+        coatColor: K.PAL.coatBlue,
+        prop: 'wire_up',
+        showLegs: false,
+        scale: 1.12,
+        t,
+      });
+      K.drawGalvanometerRig(ctx, 510, 1050, t, { needleAngle: needleSwing, scale: 1.15 });
     });
 
-    // Lab Galvanometer & Chemical Jar on Workbench
-    const needle = phase === 1 ? -0.45 : 0.42;
-    K.drawLabApparatus(ctx, 575, 618, t, {
-      needleAngle: needle,
-      label: phase === 1 ? 'SINAR MATAHARI -> ARUS LISTRIK!' : 'EFEK FOTOVOLTAIK PERTAMA (1839)',
-    });
-
-    const bubbles = {
-      1: 'Lho?! Begitu kena sinar matahari dari jendela, jarumnya bergerak!',
-      2: 'Listrik murni dari cahaya! Tapi kata orang batu bara lebih penting...',
-    };
-    K.oversimplifiedBubble(ctx, 540, 272, bubbles[phase], { col: K.PAL.gold });
-  }
-
-  // Lower 2 Cards per Phase
-  if (phase === 0) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'PARIS, PRANCIS • TAHUN 1839',
-      titleStr: 'Alexandre-Edmond Becquerel Baru Berusia 19 Tahun',
-      subStr: 'Menemukan bahwa cahaya matahari dapat memicu arus listrik secara langsung',
-      stat: '19 TAHUN',
-      statSub: 'USIA PENEMU',
-      col: K.PAL.gold,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'MENDAHULUI ZAMANNYA',
-      titleStr: '115 Tahun Sebelum Panel Surya Modern Pertama Dibuat',
-      subStr: 'Penemuan ini terjadi bahkan sebelum lampu pijar Thomas Edison ditemukan',
-      stat: '1839 M',
-      statSub: 'AWAL SURYA',
+    K.drawEduBanner(ctx, 'LONJAKAN!', 'JARUM GALVANOMETER BERGERAK SENDIRI!', 'Sinar Matahari Memicu Arus Listrik Murni Tanpa Baterai');
+    K.drawEduCallout(ctx, 540, 1460, 960, 160, {
+      tag: 'BUKTI FISIKA • ARUS LISTRIK CAHAYA',
+      title: 'Cahaya Matahari -> Reaksi Elektrokimia -> Arus Listrik',
+      desc: 'Semakin kuat intensitas cahaya dari jendela, semakin besar simpangan jarum merah',
+      stat: 'CAHAYA->V',
       col: K.PAL.amber,
-      a: pop(t, C.hook.start + 0.6),
+      a: pop(t, C.cahaya.start + 0.2),
     });
-  } else if (phase === 1) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'EKSPERIMEN ELEKTRODA PERAK KLORIDA',
-      titleStr: 'Dua Pelat Logam Dicelupkan ke Larutan Asam di Meja Lab',
-      subStr: 'Ketika terpapar sinar matahari, muncul tegangan listrik di antara kedua elektroda',
-      stat: 'CAHAYA -> V',
-      statSub: 'TANPA BATERAI',
-      col: K.PAL.gold,
-      a: pop(t, C.lab.start),
+  } else if (beat === 3) {
+    // BEAT 4 (fotovoltaik): MICROSCOPIC ATOMIC LATTICE ZOOM — How Photovoltaic Effect actually works!
+    const u = clamp((t - C.fotovoltaik.start) / Math.max(1, C.fotovoltaik.dur));
+    const zoom = lerp(1.18, 1.0, ease.outCubic(u));
+
+    K.withCamera(ctx, { zoom, fx: 540, fy: 880 }, () => {
+      K.drawAtomLatticeWorld(ctx, t);
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'BUKTI PADA JARUM GALVANOMETER',
-      titleStr: 'Semakin Terang Cahayanya, Semakin Kuat Jarum Menyimpang',
-      subStr: 'Ayahnya, Antoine César Becquerel, turut menyaksikan keajaiban eksperimen tersebut',
-      stat: 'TERUKUR',
-      statSub: 'ARUS NYATA',
-      col: K.PAL.amber,
-      a: pop(t, C.lab.start + 0.5),
+
+    K.drawEduBanner(ctx, 'SAINS INTI', 'BAGAIMANA EFEK FOTOVOLTAIK BEKERJA?', 'Zoom Mikroskopis: Foton Cahaya Menabrak Elektron hingga Mengalir');
+    K.drawEduCallout(ctx, 540, 1450, 960, 165, {
+      tag: 'MEKANISME FISIKA FOTOVOLTAIK',
+      title: '1. Foton Menabrak Atom -> 2. Elektron Terlepas -> 3. Mengalir di Kabel',
+      desc: 'Aliran elektron yang bergerak searah melalui kawat tembaga inilah yang menjadi arus listrik!',
+      stat: 'ELEKTRON',
+      col: '#38bdf8',
+      a: pop(t, C.fotovoltaik.start + 0.2),
     });
-  } else if (phase === 2) {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'KELAHIRAN EFEK FOTOVOLTAIK (BECQUEREL EFFECT)',
-      titleStr: 'Konversi Langsung Foton Cahaya Menjadi Energi Listrik',
-      subStr: 'Prinsip dasar yang menjadi fondasi seluruh teknologi sel surya abad ke-21',
-      stat: 'FOTOVOLTAIK',
-      statSub: 'PRINSIP DASAR',
-      col: K.PAL.gold,
-      a: pop(t, C.fotovoltaik.start),
+  } else if (beat === 4) {
+    // BEAT 5 (abaikan): 1884 Rooftop Coal Era — 3 Skeptical Industrial Barons in Top Hats vs Early Solar Panels
+    const u = clamp((t - C.abaikan.start) / Math.max(1, C.abaikan.dur));
+
+    K.withCamera(ctx, { zoom: lerp(1.0, 1.1, u), fx: 540, fy: 1020 }, () => {
+      K.drawRooftopWorld(ctx, t);
+      // 3 Skeptical Coal Barons in tall top hats frowning
+      K.drawStickman(ctx, 320, 1340, {
+        pose: 'skeptical',
+        hairStyle: 'tophat',
+        coatColor: '#1e293b',
+        scale: 0.92,
+        t,
+      });
+      K.drawStickman(ctx, 560, 1360, {
+        pose: 'skeptical',
+        hairStyle: 'tophat',
+        coatColor: K.PAL.coatBrown,
+        scale: 0.88,
+        t: t + 1,
+      });
+      K.drawStickman(ctx, 810, 1340, {
+        pose: 'skeptical',
+        hairStyle: 'tophat',
+        coatColor: K.PAL.coatGreen,
+        scale: 0.94,
+        t: t + 2,
+      });
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'SKEPTISISME ERA REVOLUSI INDUSTRI',
-      titleStr: 'Dunia Abad ke-19 Sedang Mabuk Mesin Uap & Batu Bara',
-      subStr: 'Efisiensi awal yang masih 1% membuat para insinyur menganggapnya tidak praktis',
-      stat: 'DIABAIKAN',
-      statSub: 'DEMI BATU BARA',
+
+    K.drawEduBanner(ctx, 'ABAD KE-19', 'DIABAIKAN KARENA DEMAM BATU BARA!', 'Para Raja Industri Menganggap Panel Surya Hanya Mainan Mahal');
+    K.drawEduCallout(ctx, 540, 1480, 960, 160, {
+      tag: 'MENGAPA SEMPAT DIABAIKAN DUNIA?',
+      title: 'Efisiensi Awal Hanya 1% vs Batu Bara yang Murah & Melimpah',
+      desc: 'Dunia abad ke-19 belum memahami cara kerja kuantum untuk meningkatkan efisiensinya',
+      stat: 'EFISIENSI 1%',
       col: K.PAL.red,
-      a: pop(t, C.fotovoltaik.start + 0.5),
+      a: pop(t, C.abaikan.start + 0.2),
+    });
+  } else if (beat === 5) {
+    // BEAT 6 (einstein): Albert Einstein at the Chalkboard (1905/1921) holding up Golden Nobel Prize Medal!
+    const u = clamp((t - C.einstein.start) / Math.max(1, C.einstein.dur));
+
+    K.withCamera(ctx, { zoom: lerp(1.12, 1.0, u), fx: 540, fy: 960 }, () => {
+      K.drawChalkboardWorld(ctx, t);
+      K.drawStickman(ctx, 540, 1380, {
+        pose: 'happy',
+        hairStyle: 'einstein',
+        coatColor: '#6b634b',
+        prop: 'medal',
+        mustache: true,
+        scale: 1.22,
+        t,
+      });
+    });
+
+    K.drawEduBanner(ctx, '1905 / 1921', 'ALBERT EINSTEIN MEMECAHKAN MISTERINYA!', 'Meraih Hadiah Nobel Fisika Berkat Teori Efek Fotolistrik');
+    K.drawEduCallout(ctx, 540, 1475, 960, 160, {
+      tag: 'TEROBOSAN KUANTUM EINSTEIN (1905)',
+      title: 'Bukan Relativitas, Nobel Einstein Justru dari Efek Fotolistrik!',
+      desc: 'Membuktikan cahaya terdiri dari paket energi (foton) yang mampu menendang elektron keluar',
+      stat: 'NOBEL 1921',
+      col: K.PAL.gold,
+      a: pop(t, C.einstein.start + 0.2),
+    });
+  } else if (beat === 6) {
+    // BEAT 7 (satelit): Bell Labs 1954 & Vanguard 1 Space Satellite (1958)
+    const u = clamp((t - C.satelit.start) / Math.max(1, C.satelit.dur));
+    if (u < 0.48) {
+      K.drawBellLabsWorld(ctx, t);
+      K.drawEduBanner(ctx, 'BELL LABS', '1954: SEL SURYA SILIKON PRAKTIS PERTAMA', 'Mampu Memutar Bianglala Mainan dengan Efisiensi 6%');
+    } else {
+      K.drawSpaceAndSolarWorld(ctx, t, { mode: 'space' });
+      K.drawEduBanner(ctx, 'ANGKASA', '1958: SATELIT VANGUARD 1 MENGORBIT BUMI!', 'Baterai Kimia Habis 20 Hari, Panel Surya Bertahan 6 Tahun!');
+    }
+
+    K.drawEduCallout(ctx, 540, 1475, 960, 160, {
+      tag: 'PENYELAMAT EKSPLORASI ANTARIKSA',
+      title: 'Dari Kincir Mainan 1954 ke Satelit Luar Angkasa 1958',
+      desc: 'Tanpa temuan Edmond Becquerel 1839, satelit komunikasi & GPS tidak akan punya daya abadi',
+      stat: 'SATELIT',
+      col: '#38bdf8',
+      a: pop(t, C.satelit.start + 0.2),
     });
   } else {
-    K.oversimplifiedCard(ctx, 540, 995, 960, 175, {
-      tag: 'TEORI KUANTUM ALBERT EINSTEIN (1905)',
-      titleStr: 'Einstein Menjelaskan Efek Fotolistrik & Meraih Nobel Fisika',
-      subStr: 'Diikuti oleh Bell Labs (1954) yang menciptakan sel surya silikon praktis pertama',
-      stat: 'NOBEL 1921',
-      statSub: 'BUKTI FISIKA',
-      col: K.PAL.gold,
-      a: pop(t, C.einstein.start),
+    // BEAT 8 (moral): Vast Modern Solar Farm at Sunrise + Proud Edmond
+    K.drawSpaceAndSolarWorld(ctx, t, { mode: 'farm' });
+    K.drawStickman(ctx, 310, 1380, {
+      pose: 'excited',
+      hairStyle: 'bowl',
+      coatColor: K.PAL.coatBlue,
+      prop: 'solar_jar',
+      scale: 1.08,
+      t,
     });
-    K.oversimplifiedCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PELAJARAN DARI EDMOND BECQUEREL',
-      titleStr: 'Jangan Berhenti Berkarya Meski Dunia Belum Memahamimu',
-      subStr: 'Eksperimen kecil di meja belajarmu hari ini bisa menjadi solusi masa depan',
+
+    K.drawEduBanner(ctx, 'MASA KINI', 'SUMBER LISTRIK TERBERSIH & TERMURAH DUNIA', 'Toples Kimia Remaja 19 Tahun Kini Menerangi Seluruh Bumi');
+    K.drawEduCallout(ctx, 540, 1480, 960, 160, {
+      tag: 'PESAN INSPIRATIF EDMOND BECQUEREL',
+      title: 'Jangan Kecil Hati Jika Karya Mudamu Belum Dipahami Hari Ini',
+      desc: 'Terkadang idemu bukan salah atau aneh — melainkan mendahului zamannya!',
       stat: 'VISIONER',
-      statSub: 'LAMPAUI ZAMAN',
-      col: K.PAL.amber,
-      a: pop(t, C.einstein.start + 0.5),
+      col: K.PAL.gold,
+      a: pop(t, C.moral.start + 0.2),
     });
   }
 }
