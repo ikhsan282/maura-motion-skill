@@ -522,3 +522,4 @@ export function render(t) {
   for (const c of CLICKS) K.ring(ctx, p.x, p.y, t - c, { r: 65 });
   K.pointer(ctx, p.x, p.y, { press: p.press, scale: 1.05 });
 }
+
