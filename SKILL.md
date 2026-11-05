@@ -66,7 +66,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 - **Suara**: default `el-id-m` (George, ElevenLabs) untuk `lang: id` (otomatis fallback ke `id-m` offline jika `ELEVENLABS_API_KEY` tidak ditemukan). Offline gratis `id-f`/`id-m` buat produksi massal.
 - `AUTHORING.md` — cara nulis story, scene, atau gaya baru; standar kualitas.
 
-## Status gaya (77 gaya: 77 siap pakai ✅)
+## Status gaya (78 gaya: 78 siap pakai ✅)
 
 | No | Gaya | ID | Status |
 |:---:|---|---|---|
@@ -147,6 +147,7 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 75 | **Stickman Lecture** | stickman-lecture | ✅ ([demo1](styles/stickman-lecture/demo1/) · [demo2](styles/stickman-lecture/demo2/) · [demo3](styles/stickman-lecture/demo3/)) |
 | 76 | **Stickman Minimal Dark** | stickman-minimal-dark | ✅ ([demo1](styles/stickman-minimal-dark/demo1/) · [demo2](styles/stickman-minimal-dark/demo2/) · [demo3](styles/stickman-minimal-dark/demo3/)) |
 | 77 | **Stickman Picturebook** | stickman-picturebook | ✅ ([demo1](styles/stickman-picturebook/demo1/) · [demo2](styles/stickman-picturebook/demo2/) · [demo3](styles/stickman-picturebook/demo3/)) |
+| 78 | **Stickman OverSimplified** | stickman-oversimplified | ✅ ([demo1](styles/stickman-oversimplified/demo1/) · [demo2](styles/stickman-oversimplified/demo2/) · [demo3](styles/stickman-oversimplified/demo3/)) |
 
 ## Troubleshooting
 

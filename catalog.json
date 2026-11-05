@@ -1076,5 +1076,19 @@
   "story": "Dongeng Batu yang Menyusut (Langkah Awal)",
   "hook": "Pernahkah kamu menatap sebuah tugas besar dan merasa tugas itu seperti batu raksasa yang menutup seluruh jalanmu?",
   "concept": "Halaman buku dongeng ilustrasi klasik berbahan kertas krem hangat dengan jahitan tepi buku dan pita pembatas merah. Menampilkan Si Pangeran Kecil Buku Cerita (picturebookStickman) bermahkota kertas emas 3 puncak, berpipi merona hangat, berjubah merah tua berkibar, bertunik zamrud, dan membawa pena bulu emas atau lentera dongeng."
+ },
+ {
+  "no": 78,
+  "id": "stickman-oversimplified",
+  "name": "Stickman OverSimplified",
+  "source": "custom:oversimplified-pop-history",
+  "family": "craft",
+  "tech": "canvas2d",
+  "voice": "el-id-m",
+  "music": "lofi",
+  "captions": "clean",
+  "story": "Edmond Becquerel 1839 (Listrik Surya Pertama)",
+  "hook": "Pada tahun 1839, seorang remaja berusia 19 tahun berhasil menciptakan listrik dari cahaya matahari murni, namun seluruh dunia mengabaikannya!",
+  "concept": "Kartun sejarah pop ala OverSimplified dengan Si Ilmuwan Muda Bean-Body (oversimplifiedStickman): kepala bulat oval krem, rambut mangkok (bowl-cut) cokelat bergaris belahan khas, badan pil berseragam biru berkancing 4 emas, serta dua latar ikonik (jalanan batu cobblestone abad ke-19 dengan pejalan kaki bertopi tinggi dan laboratorium klasik dengan galvanometer jarum bergerak)."
  }
 ]

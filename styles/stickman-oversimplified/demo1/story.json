@@ -1,0 +1,59 @@
+{
+  "title": "Edmond Becquerel 1839 — Remaja 19 Tahun Penemu Listrik Tenaga Surya yang Diabaikan Dunia",
+  "slug": "stickman_oversimplified_edmond_becquerel",
+  "style": "stickman-oversimplified",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pada tahun seribu delapan ratus tiga puluh sembilan, seorang remaja berusia sembilan belas tahun berhasil menciptakan listrik dari cahaya matahari murni, namun seluruh dunia mengabaikannya!",
+      "say": "Pada tahun seribu delapan ratus tiga puluh sembilan, seorang remaja berusia sembilan belas tahun berhasil menciptakan listrik dari cahaya matahari murni, namun seluruh dunia mengabaikannya!"
+    },
+    {
+      "id": "lab",
+      "text": "Remaja bernama Edmond Becquerel itu sedang bereksperimen di laboratorium milik ayahnya di Paris dengan mencelupkan dua pelat logam ke dalam toples cairan kimia.",
+      "say": "Remaja bernama Edmon Bekerel itu sedang bereksperimen di laboratorium milik ayahnya di Paris dengan mencelupkan dua pelat logam ke dalam toples cairan kimia."
+    },
+    {
+      "id": "cahaya",
+      "text": "Saat berkas sinar matahari dari jendela menyinari toples tersebut, jarum pengukur listrik di mejanya tiba-tiba melonjak bergerak sendiri tanpa baterai!",
+      "say": "Saat berkas sinar matahari dari jendela menyinari toples tersebut, jarum pengukur listrik di mejanya tiba-tiba melonjak bergerak sendiri tanpa baterai!"
+    },
+    {
+      "id": "fotovoltaik",
+      "text": "Itulah momen kelahiran Efek Fotovoltaik pertama dalam sejarah manusia, cikal bakal dari seluruh panel surya modern yang kita gunakan hari ini.",
+      "say": "Itulah momen kelahiran Efek Fotovoltaik pertama dalam sejarah manusia, cikal bakal dari seluruh panel surya modern yang kita gunakan hari ini."
+    },
+    {
+      "id": "abaikan",
+      "text": "Sayangnya, para bangsawan dan ilmuwan era revolusi industri waktu itu sedang tergila-gila pada mesin uap batu bara dan menganggap temuan Becquerel cuma mainan aneh.",
+      "say": "Sayangnya, para bangsawan dan ilmuwan era revolusi industri waktu itu sedang tergila-gila pada mesin uap batu bara dan menganggap temuan Bekerel cuma mainan aneh."
+    },
+    {
+      "id": "einstein",
+      "text": "Butuh waktu enam puluh enam tahun sampai Albert Einstein akhirnya menjelaskan misteri fisika di balik lompatan elektron akibat partikel cahaya tersebut.",
+      "say": "Butuh waktu enam puluh enam tahun sampai Albert Einstain akhirnya menjelaskan misteri fisika di balik lompatan elektron akibat partikel cahaya tersebut."
+    },
+    {
+      "id": "satelit",
+      "text": "Kini, penemuan remaja yang sempat dianggap remeh di jalanan Paris itu justru menjadi sumber nyawa bagi ribuan satelit luar angkasa dan pembangkit energi bersih dunia.",
+      "say": "Kini, penemuan remaja yang sempat dianggap remeh di jalanan Paris itu justru menjadi sumber nyawa bagi ribuan satelit luar angkasa dan pembangkit energi bersih dunia."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan kecil hati jika karya mudamu belum dipahami hari ini; terkadang idemu bukan salah, melainkan mendahului zamannya!",
+      "say": "Jangan kecil hati jika karya mudamu belum dipahami hari ini; terkadang idemu bukan salah, melainkan mendahului zamannya!"
+    }
+  ]
+}
+

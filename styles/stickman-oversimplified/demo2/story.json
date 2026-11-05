@@ -1,0 +1,59 @@
+{
+  "title": "Ketidaksengajaan yang Mengubah Dunia — Dari Cawan Jamur Fleming hingga Cokelat Meleleh Microwave",
+  "slug": "stickman_oversimplified_serendipity_sains",
+  "style": "stickman-oversimplified",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu bahwa obat antibiotik yang menyelamatkan dua ratus juta nyawa manusia ditemukan gara-gara seorang ilmuwan lupa mencuci cawan kotor sebelum liburan?",
+      "say": "Tahukah kamu bahwa obat antibiotik yang menyelamatkan dua ratus juta nyawa manusia ditemukan gara-gara seorang ilmuwan lupa mencuci cawan kotor sebelum liburan?"
+    },
+    {
+      "id": "fleming",
+      "text": "Pada tahun seribu sembilan ratus dua puluh delapan, Alexander Fleming kembali ke laboratoriumnya di London dan mendapati cawan bakterinya telah ditumbuhi jamur biru kehijauan.",
+      "say": "Pada tahun seribu sembilan ratus dua puluh delapan, Aleksander Fleming kembali ke laboratoriumnya di London dan mendapati cawan bakterinya telah ditumbuhi jamur biru kehijauan."
+    },
+    {
+      "id": "zona",
+      "text": "Sebelum membuangnya ke tempat sampah, Fleming mengamati sesuatu yang ganjil: seluruh bakteri mematikan di sekeliling jamur itu mati bersih tak bersisa!",
+      "say": "Sebelum membuangnya ke tempat sampah, Fleming mengamati sesuatu yang ganjil: seluruh bakteri mematikan di sekeliling jamur itu mati bersih tak bersisa!"
+    },
+    {
+      "id": "penisilin",
+      "text": "Dari cawan yang tidak sengaja terkontaminasi itulah lahir Penisilin, antibiotik pertama di dunia yang mengubah infeksi luka ringan dari vonis mati menjadi penyakit biasa.",
+      "say": "Dari cawan yang tidak sengaja terkontaminasi itulah lahir Penisilin, antibiotik pertama di dunia yang mengubah infeksi luka ringan dari vonis mati menjadi penyakit biasa."
+    },
+    {
+      "id": "microwave",
+      "text": "Hal serupa terjadi pada insinyur Percy Spencer tahun seribu sembilan ratus empat puluh lima, ketika sebatang cokelat di saku celananya meleleh sendiri di dekat tabung radar militer.",
+      "say": "Hal serupa terjadi pada insinyur Persi Spenser tahun seribu sembilan ratus empat puluh lima, ketika sebatang cokelat di saku celananya meleleh sendiri di dekat tabung radar militer."
+    },
+    {
+      "id": "pasteur",
+      "text": "Dalam sejarah sains, fenomena ini disebut Serendipity. Namun seperti kata Louis Pasteur: keberuntungan hanya berpihak pada pikiran yang sudah siap mengamati.",
+      "say": "Dalam sejarah sains, fenomena ini disebut Serendipiti. Namun seperti kata Lui Paster: keberuntungan hanya berpihak pada pikiran yang sudah siap mengamati."
+    },
+    {
+      "id": "pelajaran",
+      "text": "Ilmuwan biasa akan langsung membuang cawan berjamur atau mengeluh saat cokelatnya meleleh, tetapi ilmuwan sejati selalu bertanya: mengapa hal aneh ini bisa terjadi?",
+      "say": "Ilmuwan biasa akan langsung membuang cawan berjamur atau mengeluh saat cokelatnya meleleh, tetapi ilmuwan sejati selalu bertanya: mengapa hal aneh ini bisa terjadi?"
+    },
+    {
+      "id": "moral",
+      "text": "Jangan buru-buru membuang kegagalan eksperimenmu; perhatikan anomali kecilnya, karena bisa jadi itulah terobosan terbesarmu!",
+      "say": "Jangan buru-buru membuang kegagalan eksperimenmu; perhatikan anomali kecilnya, karena bisa jadi itulah terobosan terbesarmu!"
+    }
+  ]
+}
+

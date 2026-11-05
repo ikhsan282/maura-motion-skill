@@ -82,7 +82,8 @@ Sumber: **D** = 25 gaya di Drive, **SA** = Shorts Animator (oil/watercolour/goua
 | 74 | **Stickman Graffiti** | stickman-graffiti | C | Kriya/Urban | motivasi kreator, The Taste Gap, mengubah gagal jadi karya | Tembok Ini Saksi Mimpimu (64 dtk) | lofi · el-id-m |
 | 75 | **Stickman Lecture** | stickman-lecture | C | Kriya | konsep ilmiah & metode belajar, kurva lupa Ebbinghaus, active recall | Kurva Lupa Ebbinghaus (64 dtk) | lofi · el-id-m |
 | 76 | **Stickman Minimal Dark** | stickman-minimal-dark | C | 2D/OLED | regulasi emosi, stop overthinking 2 pagi, lingkaran kendali Stoik | Kamu Bukan Pemalas (Regulasi Emosi) (64 dtk) | lofi · el-id-m |
-| 77 | **Stickman Picturebook** | stickman-picturebook | C | Kriya | dongeng kebijaksanaan, self-compassion, metafora pertumbuhan | Dongeng Batu yang Menyusut (64 dtk) | warm · el-id-m |
+| 77 | **Stickman Picturebook** | `stickman-picturebook` | C | Kriya | dongeng kebijaksanaan, self-compassion, metafora pertumbuhan | Dongeng Batu yang Menyusut (64 dtk) | warm · el-id-m |
+| 78 | **Stickman OverSimplified** | `stickman-oversimplified` | C | Sejarah Pop | sejarah penemuan sains, biografi ilmuwan muda, eksperimen laboratorium yang mengubah dunia | Edmond Becquerel 1839 (Listrik Surya) (64 dtk) | lofi · el-id-m |
 
 ## Memilih gaya cepat
 

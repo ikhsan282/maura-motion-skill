@@ -1,0 +1,59 @@
+{
+  "title": "Ignaz Semmelweis 1847 — Dokter yang Ditertawakan Hanya Karena Menyuruh Cuci Tangan",
+  "slug": "stickman_oversimplified_ignaz_semmelweis",
+  "style": "stickman-oversimplified",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bayangkan pada tahun seribu delapan ratus empat puluh tujuh, seorang dokter muda dipecat dan ditertawakan hanya karena menyuruh rekan dokternya mencuci tangan sebelum memeriksa pasien!",
+      "say": "Bayangkan pada tahun seribu delapan ratus empat puluh tujuh, seorang dokter muda dipecat dan ditertawakan hanya karena menyuruh rekan dokternya mencuci tangan sebelum memeriksa pasien!"
+    },
+    {
+      "id": "wina",
+      "text": "Di Rumah Sakit Umum Wina waktu itu, angka kematian ibu melahirkan di bangsal dokter mencapai delapan belas persen, tiga kali lebih tinggi daripada bangsal bidan.",
+      "say": "Di Rumah Sakit Umum Wina waktu itu, angka kematian ibu melahirkan di bangsal dokter mencapai delapan belas persen, tiga kali lebih tinggi daripada bangsal bidan."
+    },
+    {
+      "id": "investigasi",
+      "text": "Dokter Ignaz Semmelweis menemukan penyebabnya: para dokter memeriksa pasien langsung setelah melakukan otopsi di ruang jenazah tanpa pernah mencuci tangan mereka!",
+      "say": "Dokter Ignas Semelwais menemukan penyebabnya: para dokter memeriksa pasien langsung setelah melakukan otopsi di ruang jenazah tanpa pernah mencuci tangan mereka!"
+    },
+    {
+      "id": "klorin",
+      "text": "Semmelweis langsung mewajibkan setiap dokter mencuci tangan dengan larutan kapur klorin, dan hasilnya ajaib: angka kematian langsung anjlok hingga di bawah dua persen!",
+      "say": "Semelwais langsung mewajibkan setiap dokter mencuci tangan dengan larutan kapur klorin, dan hasilnya ajaib: angka kematian langsung anjlok hingga di bawah dua persen!"
+    },
+    {
+      "id": "ego",
+      "text": "Namun bukannya diberi penghargaan, para dokter senior bertopi tinggi justru tersinggung berat karena merasa tangan seorang bangsawan terhormat tidak mungkin kotor.",
+      "say": "Namun bukannya diberi penghargaan, para dokter senior bertopi tinggi justru tersinggung berat karena merasa tangan seorang bangsawan terhormat tidak mungkin kotor."
+    },
+    {
+      "id": "refleks",
+      "text": "Dalam psikologi modern, penolakan buta akibat gengsi dan ego terhadap bukti ilmiah baru ini diabadikan dengan nama Efek Refleks Semmelweis.",
+      "say": "Dalam psikologi modern, penolakan buta akibat gengsi dan ego terhadap bukti ilmiah baru ini diabadikan dengan nama Efek Refleks Semelwais."
+    },
+    {
+      "id": "kuman",
+      "text": "Dua puluh tahun kemudian, teori kuman Louis Pasteur dan Joseph Lister membuktikan bahwa Semmelweis seratus persen benar sejak awal.",
+      "say": "Dua puluh tahun kemudian, teori kuman Lui Paster dan Josef Lister membuktikan bahwa Semelwais seratus persen benar sejak awal."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan biarkan gengsi menutup matamu dari kebenaran data; terkadang solusi paling menyelamatkan nyawa adalah hal sesederhana mencuci tangan!",
+      "say": "Jangan biarkan gengsi menutup matamu dari kebenaran data; terkadang solusi paling menyelamatkan nyawa adalah hal sesederhana mencuci tangan!"
+    }
+  ]
+}
+

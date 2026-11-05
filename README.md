@@ -1,6 +1,6 @@
 # Maura Motion Skill
 
-Library **77 gaya animasi siap pakai** (dengan 231 demo lengkap) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
+Library **78 gaya animasi siap pakai** (dengan 234 demo lengkap) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
 
 Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa saja.
 
@@ -120,7 +120,7 @@ Catatan: Hermes butuh akses ke repo ini (`~/maura-motion-skill/`), Node 22+, ffm
 |---|---|
 | `SKILL.md` | Panduan pakai skill (pintu masuk agen) |
 | `AUTHORING.md` | Standar naskah & cara bikin gaya baru |
-| `STYLES.md` / `catalog.json` | Katalog 77 gaya + kecocokan topik |
+| `STYLES.md` / `catalog.json` | Katalog 78 gaya + kecocokan topik |
 | `styles/<gaya>/` | `STYLE.md` + `kit.js` + `demo1/`..`demo3/` per gaya |
 | `examples/` | Contoh unggulan siap tonton: `hello` (*Halo Maura Motion*) & `clay-stop-motion-demo2` (*Sangkuriang & Perahu Terbalik*) |
 | `engine/` | Runtime + renderer (headless Chrome / Playwright → MP4) |
@@ -138,7 +138,7 @@ Default suara untuk Bahasa Indonesia maupun Inggris adalah **ElevenLabs George**
 
 Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`), `~/.hermes/elevenlabs.env`, atau `.env` di folder repo.
 
-## Status gaya (77 gaya: 77 siap pakai ✅)
+## Status gaya (78 gaya: 78 siap pakai ✅)
 
 | No | Gaya | ID | Status | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|:---:|---|---|---|
@@ -219,6 +219,7 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 | 75 | **Stickman Lecture** | `stickman-lecture` | ✅ | [Kurva Lupa Ebbinghaus (Spaced Repetition)](styles/stickman-lecture/demo1/) (64 dtk) | [Jebakan Stabilo vs Active Recall](styles/stickman-lecture/demo2/) (64 dtk) | [Efek Zeigarnik & Aturan 5 Menit](styles/stickman-lecture/demo3/) (65 dtk) |
 | 76 | **Stickman Minimal Dark** | `stickman-minimal-dark` | ✅ | [Kamu Bukan Pemalas (Regulasi Emosi)](styles/stickman-minimal-dark/demo1/) (64 dtk) | [Hentikan Overthinking Jam 2 Pagi (Brain Dump)](styles/stickman-minimal-dark/demo2/) (64 dtk) | [Lingkaran Kendali Stoik (Epictetus)](styles/stickman-minimal-dark/demo3/) (65 dtk) |
 | 77 | **Stickman Picturebook** | `stickman-picturebook` | ✅ | [Dongeng Batu yang Menyusut (Langkah Awal)](styles/stickman-picturebook/demo1/) (64 dtk) | [Kisah Dua Benih di Taman (Akar Pohon Ek)](styles/stickman-picturebook/demo2/) (64 dtk) | [Lentera Seratus Langkah (Cahaya Berpindah)](styles/stickman-picturebook/demo3/) (65 dtk) |
+| 78 | **Stickman OverSimplified** | `stickman-oversimplified` | ✅ | [Edmond Becquerel 1839 (Listrik Surya Pertama)](styles/stickman-oversimplified/demo1/) (64 dtk) | [Serendipity Sains (Penisilin & Microwave)](styles/stickman-oversimplified/demo2/) (64 dtk) | [Ignaz Semmelweis 1847 (Cuci Tangan Medis)](styles/stickman-oversimplified/demo3/) (65 dtk) |
 
 ## Contoh hasil
 
