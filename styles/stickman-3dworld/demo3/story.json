@@ -1,0 +1,56 @@
+{
+  "title": "Ilusi Multitasking & Biaya Pindah Fokus — Apa yang Terjadi Saat Otak Membuka Terlalu Banyak Jendela?",
+  "slug": "stickman-3dworld-demo3",
+  "style": "stickman-3dworld",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Banyak orang bangga bisa mengerjakan empat hal sekaligus: mengetik laporan sambil membalas pesan dan mendengar rapat."
+    },
+    {
+      "id": "mitos",
+      "text": "Padahal menurut neurosains, otak manusia sebenarnya tidak bisa melakukan dua tugas berat secara bersamaan."
+    },
+    {
+      "id": "loncat",
+      "text": "Yang terjadi bukanlah multitasking, melainkan Context Switching: perhatian kita melompat bolak-balik dengan sangat cepat."
+    },
+    {
+      "id": "residu",
+      "text": "Profesor Sophie Leroy menyebut efek sampingnya sebagai Attention Residue, yaitu sisa perhatian yang tertinggal di tugas sebelumnya."
+    },
+    {
+      "id": "waktu23",
+      "text": "Riset Universitas California menemukan bahwa setelah satu interupsi singkat, otak butuh rata-rata dua puluh tiga menit untuk kembali ke fokus penuh."
+    },
+    {
+      "id": "pajak",
+      "text": "Akibatnya, melompat-lompat di antara banyak balok tugas memangkas produktivitas hingga empat puluh persen dan membuat kepala cepat lelah."
+    },
+    {
+      "id": "monotask",
+      "text": "Sebaliknya, teknik Monotasking meminta kita mengunci satu balok pekerjaan sampai tuntas sebelum menyentuh balok berikutnya."
+    },
+    {
+      "id": "dalam",
+      "text": "Saat seluruh energi diarahkan pada satu titik, kecepatan kerja meningkat dua kali lipat dengan tingkat kesalahan yang jauh lebih rendah."
+    },
+    {
+      "id": "aturan",
+      "text": "Tutup tab yang tidak perlu, balikkan layar ponselmu, dan berikan seratus persen perhatianmu pada satu tugas di depan mata."
+    },
+    {
+      "id": "moral",
+      "text": "Mengerjakan banyak hal sekaligus hanyalah cara tercepat untuk lelah; selesaikan satu demi satu untuk hasil yang luar biasa."
+    }
+  ]
+}
+

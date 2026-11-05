@@ -1,0 +1,58 @@
+{
+  "title": "Otak Purba & Batu Tugas — Mengapa Otak Manusia Gua Suka Menghemat Energi?",
+  "slug": "stickman_caveman_batu_tugas",
+  "style": "stickman-caveman",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kamu bukan pemalas, melainkan sedang membawa perangkat keras otak manusia purba berusia dua ratus ribu tahun di kepala.",
+      "say": "Kamu bukan pemalas, melainkan sedang membawa perangkat keras otak manusia purba berusia dua ratus ribu tahun di kepala."
+    },
+    {
+      "id": "kalori",
+      "text": "Di zaman gua dulu, makanan sangat langka sehingga menghemat kalori dan rebahan adalah strategi bertahan hidup paling cerdas.",
+      "say": "Di zaman gua dulu, makanan sangat langka sehingga menghemat kalori dan rebahan adalah strategi bertahan hidup paling cerdas."
+    },
+    {
+      "id": "batu",
+      "text": "Saat kamu melihat laporan atau tugas besar, Si Uga di dalam kepalamu membayangkannya seperti bongkahan batu raksasa yang menguras tenaga.",
+      "say": "Saat kamu melihat laporan atau tugas besar, Si Uga di dalam kepalamu membayangkannya seperti bongkahan batu raksasa yang menguras tenaga."
+    },
+    {
+      "id": "tolak",
+      "text": "Otak purbamu langsung membunyikan alarm bahaya kelelahan dan menyuruhmu kabur mencari hiburan yang hemat energi.",
+      "say": "Otak purbamu langsung membunyikan alarm bahaya kelelahan dan menyuruhmu kabur mencari hiburan yang hemat energi."
+    },
+    {
+      "id": "pecah",
+      "text": "Cara menjinakkan otak gua bukanlah dengan memaksanya mendorong batu besar, melainkan memecah batu itu menjadi kerikil lima menit.",
+      "say": "Cara menjinakkan otak gua bukanlah dengan memaksanya mendorong batu besar, melainkan memecah batu itu menjadi kerikil lima menit."
+    },
+    {
+      "id": "kecil",
+      "text": "Katakan pada dirimu, aku hanya akan membuka dokumen dan menulis dua kalimat pembuka, tidak lebih dari itu.",
+      "say": "Katakan pada dirimu, aku hanya akan membuka dokumen dan menulis dua kalimat pembuka, tidak lebih dari itu."
+    },
+    {
+      "id": "aman",
+      "text": "Karena langkah mikro tidak terasa mengancam cadangan energi, pertahanan otak purbamu akan melunak dan mengizinkanmu mulai bergerak.",
+      "say": "Karena langkah mikro tidak terasa mengancam cadangan energi, pertahanan otak purbamu akan melunak dan mengizinkanmu mulai bergerak."
+    },
+    {
+      "id": "moral",
+      "text": "Pecahkan batu tugasmu menjadi kerikil kecil hari ini, dan biarkan momentum membawamu sampai tuntas.",
+      "say": "Pecahkan batu tugasmu menjadi kerikil kecil hari ini, dan biarkan momentum membawamu sampai tuntas."
+    }
+  ]
+}

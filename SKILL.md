@@ -138,10 +138,10 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 66 | **Stickman Subuh** | stickman-subuh | ✅ ([demo1](styles/stickman-subuh/demo1/) · [demo2](styles/stickman-subuh/demo2/) · [demo3](styles/stickman-subuh/demo3/)) |
 | 67 | **Stickman Pelukis** | stickman-pelukis | ✅ ([demo1](styles/stickman-pelukis/demo1/) · [demo2](styles/stickman-pelukis/demo2/) · [demo3](styles/stickman-pelukis/demo3/)) |
 | 68 | **Stickman Kisah** | stickman-kisah | ✅ ([demo1](styles/stickman-kisah/demo1/) · [demo2](styles/stickman-kisah/demo2/) · [demo3](styles/stickman-kisah/demo3/)) |
-| 69 | **Stickman 3D World** | stickman-3dworld | ✅ ([styles/stickman-3dworld](styles/stickman-3dworld/)) |
-| 70 | **Stickman Beanie** | stickman-beanie | ✅ ([styles/stickman-beanie](styles/stickman-beanie/)) |
-| 71 | **Stickman Caveman** | stickman-caveman | ✅ ([styles/stickman-caveman](styles/stickman-caveman/)) |
-| 72 | **Stickman Cinematic** | stickman-cinematic | ✅ ([styles/stickman-cinematic](styles/stickman-cinematic/)) |
+| 69 | **Stickman 3D World** | stickman-3dworld | ✅ ([demo1](styles/stickman-3dworld/demo1/) · [demo2](styles/stickman-3dworld/demo2/) · [demo3](styles/stickman-3dworld/demo3/)) |
+| 70 | **Stickman Beanie** | stickman-beanie | ✅ ([demo1](styles/stickman-beanie/demo1/) · [demo2](styles/stickman-beanie/demo2/) · [demo3](styles/stickman-beanie/demo3/)) |
+| 71 | **Stickman Caveman** | stickman-caveman | ✅ ([demo1](styles/stickman-caveman/demo1/) · [demo2](styles/stickman-caveman/demo2/) · [demo3](styles/stickman-caveman/demo3/)) |
+| 72 | **Stickman Cinematic** | stickman-cinematic | ✅ ([demo1](styles/stickman-cinematic/demo1/) · [demo2](styles/stickman-cinematic/demo2/) · [demo3](styles/stickman-cinematic/demo3/)) |
 | 73 | **Stickman Duo** | stickman-duo | ✅ ([styles/stickman-duo](styles/stickman-duo/)) |
 | 74 | **Stickman Graffiti** | stickman-graffiti | ✅ ([styles/stickman-graffiti](styles/stickman-graffiti/)) |
 | 75 | **Stickman Lecture** | stickman-lecture | ✅ ([styles/stickman-lecture](styles/stickman-lecture/)) |

@@ -1,0 +1,59 @@
+{
+  "title": "Surat dari Dirimu Satu Tahun Lagi — Mengapa Pengorbanan Kecil Malam Ini Layak Diperjuangkan?",
+  "slug": "stickman_cinematic_surat_masa_depan",
+  "style": "stickman-cinematic",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu membayangkan apa yang akan dikatakan oleh dirimu satu tahun dari sekarang jika ia melihat pilihanmu malam ini?",
+      "say": "Pernahkah kamu membayangkan apa yang akan dikatakan oleh dirimu satu tahun dari sekarang jika ia melihat pilihanmu malam ini?"
+    },
+    {
+      "id": "asing",
+      "text": "Dalam psikologi, kita sering menunda pekerjaan dan memboroskan waktu karena otak memandang diri kita di masa depan seperti orang asing.",
+      "say": "Dalam psikologi, kita sering menunda pekerjaan dan memboroskan waktu karena otak memandang diri kita di masa depan seperti orang asing."
+    },
+    {
+      "id": "lempar",
+      "text": "Akibatnya, kita mudah sekali melempar beban dan berkata biar aku yang besok saja yang memikirkan dan membereskan masalah ini.",
+      "say": "Akibatnya, kita mudah sekali melempar beban dan berkata biar aku yang besok saja yang memikirkan dan membereskan masalah ini."
+    },
+    {
+      "id": "bayar",
+      "text": "Padahal orang yang akan bangun besok pagi dan menanggung rasa panik akibat tumpukan tugas itu tetaplah dirimu sendiri.",
+      "say": "Padahal orang yang akan bangun besok pagi dan menanggung rasa panik akibat tumpukan tugas itu tetaplah dirimu sendiri."
+    },
+    {
+      "id": "hadiah",
+      "text": "Ubah cara pandangmu malam ini: anggaplah setiap halaman yang kamu pelajari dan setiap meja yang kamu rapikan sebagai hadiah untuk dirimu esok hari.",
+      "say": "Ubah cara pandangmu malam ini: anggaplah setiap halaman yang kamu pelajari dan setiap meja yang kamu rapikan sebagai hadiah untuk dirimu esok hari."
+    },
+    {
+      "id": "harga",
+      "text": "Rasa lelah karena berdisiplin hanya berlangsung beberapa menit, sedangkan rasa sesal karena menyerah bisa menghantuimu berbulan-bulan.",
+      "say": "Rasa lelah karena berdisiplin hanya berlangsung beberapa menit, sedangkan rasa sesal karena menyerah bisa menghantuimu berbulan-bulan."
+    },
+    {
+      "id": "waktu",
+      "text": "Satu tahun dari hari ini pasti akan tiba, entah kamu mengisinya dengan langkah berani atau membiarkannya berlalu begitu saja.",
+      "say": "Satu tahun dari hari ini pasti akan tiba, entah kamu mengisinya dengan langkah berani atau membiarkannya berlalu begitu saja."
+    },
+    {
+      "id": "moral",
+      "text": "Berikan usaha terbaikmu malam ini, agar kelak dirimu di masa depan tersenyum dan berterima kasih padamu.",
+      "say": "Berikan usaha terbaikmu malam ini, agar kelak dirimu di masa depan tersenyum dan berterima kasih padamu."
+    }
+  ]
+}
+

@@ -1,0 +1,56 @@
+{
+  "title": "Paradoks Pilihan di Era Digital — Mengapa Makin Banyak Pilihan Justru Bikin Bingung & Batal?",
+  "slug": "stickman-beanie-demo2",
+  "style": "stickman-beanie",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu membuka aplikasi tontonan sambil makan malam, lalu menghabiskan tiga puluh menit hanya untuk memilih film sampai makananmu dingin?"
+    },
+    {
+      "id": "banyak",
+      "text": "Kita hidup di zaman serba ada: ribuan film, ratusan menu makanan, dan puluhan kursus online yang bisa dipilih kapan saja."
+    },
+    {
+      "id": "schwartz",
+      "text": "Namun psikolog Barry Schwartz menemukan fenomena unik yang disebut The Paradox of Choice, atau Paradoks Pilihan."
+    },
+    {
+      "id": "selai",
+      "text": "Dalam eksperimen terkenal di toko selai, meja dengan dua puluh empat rasa memang ramai dilihat, tetapi meja dengan enam rasa menghasilkan pembelian sepuluh kali lipat lebih banyak!"
+    },
+    {
+      "id": "lumpuh",
+      "text": "Terlalu banyak pilihan membuat otak mengalami Decision Fatigue, yaitu kelelahan mental akibat menimbang terlalu banyak kemungkinan."
+    },
+    {
+      "id": "menyesal",
+      "text": "Bahkan setelah memilih satu opsi, kita tetap gelisah karena takut pilihan lain yang tidak kita ambil ternyata lebih bagus."
+    },
+    {
+      "id": "tiga",
+      "text": "Solusinya sangat praktis: terapkan Aturan Tiga Pilihan untuk setiap keputusan harian maupun proyek kerjamu."
+    },
+    {
+      "id": "cukup",
+      "text": "Jadilah seorang Satisficer yang memilih opsi yang sudah cukup baik dan langsung dijalankan, bukan Maximizer yang habis waktu mencari yang sempurna."
+    },
+    {
+      "id": "hemat",
+      "text": "Simpan energi keputusanmu untuk hal-hal besar dalam hidup, dan sederhanakan pilihan kecil sehari-hari."
+    },
+    {
+      "id": "moral",
+      "text": "Kebebasan sejati bukanlah memiliki seribu pilihan yang membingungkan, melainkan ketenangan memilih satu hal dan menikmatinya sepenuh hati."
+    }
+  ]
+}
+

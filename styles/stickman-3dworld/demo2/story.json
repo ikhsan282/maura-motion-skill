@@ -1,0 +1,56 @@
+{
+  "title": "Kotak Parkinson & Fokus — Mengapa Pekerjaan Dua Jam Bisa Molor Menjadi Seminggu?",
+  "slug": "stickman-3dworld-demo2",
+  "style": "stickman-3dworld",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu diberi waktu satu minggu untuk tugas yang sebenarnya ringan, lalu tugas itu benar-benar baru selesai di malam terakhir?"
+    },
+    {
+      "id": "hukum",
+      "text": "Sejarawan Cyril Northcote Parkinson merumuskan hukum terkenal: pekerjaan akan selalu mengembang untuk menghabiskan seluruh waktu yang tersedia."
+    },
+    {
+      "id": "longgar",
+      "text": "Saat tenggat waktu terlalu longgar, kita cenderung menambah detail yang tidak perlu, menunda-nunda, dan bekerja dengan tempo lambat."
+    },
+    {
+      "id": "gas",
+      "text": "Tugas ibarat gas di dalam ruang tiga dimensi: jika diberi kotak sebesar kamar, ia menyebar; jika diberi kotak kecil, ia memadat."
+    },
+    {
+      "id": "kepepet",
+      "text": "Itulah sebabnya saat waktu tinggal dua jam sebelum dikumpulkan, tiba-tiba fokus kita meningkat tajam dan gangguan hilang seketika."
+    },
+    {
+      "id": "solusi",
+      "text": "Jangan tunggu kepepet di hari terakhir; kuncinya adalah memperkecil sendiri kotak waktu kita menggunakan teknik Timeboxing."
+    },
+    {
+      "id": "batas",
+      "text": "Tetapkan tenggat buatan yang ketat: misalnya laporan ini harus selesai tuntas dalam waktu sembilan puluh menit sebelum makan siang."
+    },
+    {
+      "id": "esensi",
+      "text": "Batas waktu yang padat memaksa otak membuang basa-basi dan langsung mengerjakan delapan puluh persen inti terpenting."
+    },
+    {
+      "id": "bebas",
+      "text": "Hasilnya, pekerjaan selesai jauh lebih cepat dengan kualitas terjaga, dan sisa harimu bebas digunakan untuk istirahat tanpa beban."
+    },
+    {
+      "id": "moral",
+      "text": "Kuasailah waktumu dengan memadatkan kotaknya, sebelum pekerjaanmu membengkak dan menghabiskan seluruh waktumu."
+    }
+  ]
+}
+

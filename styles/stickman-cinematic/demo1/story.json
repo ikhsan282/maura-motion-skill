@@ -1,0 +1,58 @@
+{
+  "title": "Kota Tidur, Mimpimu Belum Selesai — Kekuatan Satu Jam Hening Sebelum Terlelap",
+  "slug": "stickman_cinematic_kota_tidur",
+  "style": "stickman-cinematic",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Saat lampu-lampu kota mulai padam dan kebisingan siang hari mereda, ada satu jendela waktu emas yang sering kita sia-siakan.",
+      "say": "Saat lampu-lampu kota mulai padam dan kebisingan siang hari mereda, ada satu jendela waktu emas yang sering kita sia-siakan."
+    },
+    {
+      "id": "siang",
+      "text": "Sepanjang pagi hingga sore, waktumu habis terbagi untuk urusan kantor, tuntutan orang lain, dan ratusan pesan yang tidak ada habisnya.",
+      "say": "Sepanjang pagi hingga sore, waktumu habis terbagi untuk urusan kantor, tuntutan orang lain, dan ratusan pesan yang tidak ada habisnya."
+    },
+    {
+      "id": "hening",
+      "text": "Namun di keheningan malam sebelum kamu tidur, tidak ada lagi telepon berdering dan tidak ada seorang pun yang menuntut perhatianmu.",
+      "say": "Namun di keheningan malam sebelum kamu tidur, tidak ada lagi telepon berdering dan tidak ada seorang pun yang menuntut perhatianmu."
+    },
+    {
+      "id": "pilihan",
+      "text": "Perbedaan antara mereka yang jalan di tempat dan mereka yang melesat maju sering kali ditentukan oleh bagaimana mereka mengisi satu jam tenang ini.",
+      "say": "Perbedaan antara mereka yang jalan di tempat dan mereka yang melesat maju sering kali ditentukan oleh bagaimana mereka mengisi satu jam tenang ini."
+    },
+    {
+      "id": "langkah",
+      "text": "Kamu tidak perlu begadang semalaman yang merusak kesehatanmu; cukup dedikasikan empat puluh lima menit fokus murni untuk mimpimu sendiri.",
+      "say": "Kamu tidak perlu begadang semalaman yang merusak kesehatanmu; cukup dedikasikan empat puluh lima menit fokus murni untuk mimpimu sendiri."
+    },
+    {
+      "id": "akumulasi",
+      "text": "Satu bab buku yang kamu pelajari atau satu halaman karya yang kamu cicil setiap malam akan terkumpul menjadi tiga ratus jam keahlian dalam setahun.",
+      "say": "Satu bab buku yang kamu pelajari atau satu halaman karya yang kamu cicil setiap malam akan terkumpul menjadi tiga ratus jam keahlian dalam setahun."
+    },
+    {
+      "id": "tenang",
+      "text": "Tutup harimu dengan satu kemajuan nyata, lalu beristirahatlah dengan perasaan tenang karena kamu tidak mengkhianati cita-citamu.",
+      "say": "Tutup harimu dengan satu kemajuan nyata, lalu beristirahatlah dengan perasaan tenang karena kamu tidak mengkhianati cita-citamu."
+    },
+    {
+      "id": "moral",
+      "text": "Kota boleh tertidur, tetapi biarkan satu langkah kecilmu malam ini membuka jalan bagi masa depan yang kamu impikan.",
+      "say": "Kota boleh tertidur, tetapi biarkan satu langkah kecilmu malam ini membuka jalan bagi masa depan yang kamu impikan."
+    }
+  ]
+}

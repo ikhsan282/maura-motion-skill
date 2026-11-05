@@ -1,0 +1,59 @@
+{
+  "title": "Juara Ditempa Saat Lampu Panggung Mati — Mengapa Konsistensi di Saat Sepi Menentukan Hasil?",
+  "slug": "stickman_cinematic_lampu_panggung",
+  "style": "stickman-cinematic",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Semua orang menyukai gemerlap panggung kemenangan, tetapi sedikit yang betah bertahan di ruang latihan ketika lampu sorot dimatikan.",
+      "say": "Semua orang menyukai gemerlap panggung kemenangan, tetapi sedikit yang betah bertahan di ruang latihan ketika lampu sorot dimatikan."
+    },
+    {
+      "id": "pujian",
+      "text": "Mudah sekali bersemangat saat ada banyak orang yang memuji, menonton, dan memberi tepuk tangan atas setiap langkah kita.",
+      "say": "Mudah sekali bersemangat saat ada banyak orang yang memuji, menonton, dan memberi tepuk tangan atas setiap langkah kita."
+    },
+    {
+      "id": "sunyi",
+      "text": "Namun ujian sejati dimulai saat suasana menjadi sunyi: ketika karya pertamamu belum dilirik orang dan latihanmu terasa berulang-ulang.",
+      "say": "Namun ujian sejati dimulai saat suasana menjadi sunyi: ketika karya pertamamu belum dilirik orang dan latihanmu terasa berulang-ulang."
+    },
+    {
+      "id": "lelah",
+      "text": "Semua orang pasti merasakan lelah dan bosan, namun pemenang bukanlah mereka yang tidak pernah lelah, melainkan yang tetap melangkah meski tanpa penonton.",
+      "say": "Semua orang pasti merasakan lelah dan bosan, namun pemenang bukanlah mereka yang tidak pernah lelah, melainkan yang tetap melangkah meski tanpa penonton."
+    },
+    {
+      "id": "disiplin",
+      "text": "Motivasi hanyalah percikan api yang menyalakan mesin di awal, sedangkan disiplin adalah bahan bakar yang menjaga perjalananmu menembus malam.",
+      "say": "Motivasi hanyalah percikan api yang menyalakan mesin di awal, sedangkan disiplin adalah bahan bakar yang menjaga perjalananmu menembus malam."
+    },
+    {
+      "id": "akar",
+      "text": "Seperti pohon bambu yang menumbuhkan akar di bawah tanah bertahun-tahun sebelum menjulang tinggi, keahlianmu sedang menguat di balik layar.",
+      "say": "Seperti pohon bambu yang menumbuhkan akar di bawah tanah bertahun-tahun sebelum menjulang tinggi, keahlianmu sedang menguat di balik layar."
+    },
+    {
+      "id": "fokus",
+      "text": "Berhentilah mencari validasi instan di setiap prosesmu; biarkan kualitas karyamu yang kelak berbicara dengan sendirinya.",
+      "say": "Berhentilah mencari validasi instan di setiap prosesmu; biarkan kualitas karyamu yang kelak berbicara dengan sendirinya."
+    },
+    {
+      "id": "moral",
+      "text": "Cintai proses latihanmu di saat sepi, karena di sanalah mental seorang juara sejati sedang dibentuk.",
+      "say": "Cintai proses latihanmu di saat sepi, karena di sanalah mental seorang juara sejati sedang dibentuk."
+    }
+  ]
+}
+

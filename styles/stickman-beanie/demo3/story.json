@@ -1,0 +1,56 @@
+{
+  "title": "Efek Spotlight — Mengapa Kita Merasa Semua Orang Memperhatikan Kesalahan Kecil Kita?",
+  "slug": "stickman-beanie-demo3",
+  "style": "stickman-beanie",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu salah ucap saat presentasi atau tersandung kecil di tempat umum, lalu merasa seluruh ruangan menertawakanmu seharian?"
+    },
+    {
+      "id": "sorot",
+      "text": "Seolah-olah ada lampu sorot raksasa di atas kepalamu yang memamerkan setiap kesalahan kecilmu kepada dunia."
+    },
+    {
+      "id": "gilovich",
+      "text": "Dalam psikologi sosial, ilusi ini disebut The Spotlight Effect, yang diteliti oleh Profesor Thomas Gilovich di Universitas Cornell."
+    },
+    {
+      "id": "kaos",
+      "text": "Dalam eksperimennya, mahasiswa diminta masuk ke kelas mengenakan kaos bergambar wajah penyanyi jadul yang sangat mencolok dan memalukan."
+    },
+    {
+      "id": "tebak",
+      "text": "Para mahasiswa itu yakin bahwa minimal lima puluh persen isi ruangan memperhatikan dan menertawakan kaos mereka."
+    },
+    {
+      "id": "fakta",
+      "text": "Namun saat diuji, ternyata kurang dari dua puluh persen orang di ruangan itu yang sadar, bahkan sebagian besar tidak peduli sama sekali!"
+    },
+    {
+      "id": "pusat",
+      "text": "Mengapa demikian? Karena setiap manusia adalah tokoh utama di dalam kepalanya sendiri dan sibuk memikirkan urusannya masing-masing."
+    },
+    {
+      "id": "lupa",
+      "text": "Kesalahan kecil yang kamu sesali selama tiga malam berturut-turut sebenarnya sudah dilupakan orang lain dalam waktu tiga menit."
+    },
+    {
+      "id": "bebas",
+      "text": "Kebenaran ini bukan alasan untuk sedih, melainkan kabar paling membebaskan agar kamu berani tampil dan mencoba hal baru!"
+    },
+    {
+      "id": "moral",
+      "text": "Matikan lampu sorot imajiner di kepalamu; beranilah berkarya, bertanya, dan melangkah tanpa takut dihakimi orang lain."
+    }
+  ]
+}
+

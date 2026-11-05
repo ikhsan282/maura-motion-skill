@@ -2,27 +2,30 @@
 id: stickman-3dworld
 name: Stickman 3D World
 no: 69
-source: custom:stickman-duel-kit
-family: craft
+source: custom:stickman-3d-mannequin
+family: 3d
 tech: canvas2d
-music: lofi   voice: el-id-m   captions: hand
-best_for: prokrastinasi & fokus, lawan mager
+music: lofi   voice: el-id-m   captions: clean
+best_for: simulasi ruang 3D, progres bertingkat, manajemen waktu, beban kognitif, kebiasaan 1%
 ---
 # Stickman 3D World
 
-**Ciri khas (look):** notebook doodle gelap (#0e1626): panel sketsa tangan per baris — tulisan PEMALAS? dicoret merah, awan rasa-tak-enak, alarm amigdala KABUR!, HP lega lalu hujan rasa bersalah, timer biru 5 menit, dorong batu TUGAS yang menyusut jadi kerikil. Semua boil (wobble tangan).
+**Karakter Unik ("Si Manekin Sendi Bola 3D" — `K.mannequin3DStickman`):**
+- Dirancang menyerupai **manekin kayu/metalik 3D (artist poser mannequin)**:
+  - **Kepala bola 3D berbayang** (*radial gradient*) dengan garis kontur ekuator/meridian 3D dan visor siber bercahaya.
+  - **Sendi Bola 3D (`ball-and-socket joints`)**: bahu, siku, pinggul, lutut, dan pergelangan kaki berupa bola 3D mengilap.
+  - **Tungkai Silinder 3D Bergradasi** & pelat dada berinti emas, lengkap dengan bayangan elips perspektif di lantai.
 
-**Gerak (motion):** scroll vertikal halaman notebook, satu panel doodle per baris; Sketch bertahap (tulis→coret→gambar), pop outBack, kamera geser ke bawah mengikuti panel.
-
-**Kenapa menarik:** kontras coret-merah + hujan rasa bersalah yang langsung kebaca; batu TUGAS menyusut = payoff visual trik 5 menit.
-
-**Cerita yang cocok:**
-- prokrastinasi & fokus, lawan mager, trik 5 menit, amigdala vs korteks, mulai dulu mood nyusul
-
-**Rumus hook:** "Kamu bukan pemalas. Otakmu cuma [pelarian]." / "[Beban besar] ... menyusut jadi [kecil]."
+**Ciri khas (look):** Dunia perspektif 3D dengan garis cakrawala berpendar (`horizonY`), grid lantai menuju satu titik hilang (*vanishing point*), serta balok/tangga/podium 3D (`draw3dBox`) berwajah atas, depan, dan samping.
 
 **Kit API (`styles/stickman-3dworld/kit.js`):**
-- Sketch (text/line bertahap, boil), Pen, stickDraw, bubble, notebook/notebookTile, cam, viewRect
-- Props: `PAL`, `Sketch`, `Pen`, `stick`, `stickDraw`, `bubble`, `notebook`, `viewRect`, `cam`, `mline`, `mtext`.
+- `K.world3dBg(ctx, t, { horizonY, floorY, accent })`
+- `K.world3dHeader(ctx, badge, mainTitle, subTitle, { rightStat, col, a })`
+- `K.draw3dBox(ctx, x, bottomY, w, h, depth, { col, label, subLabel, a })`
+- `K.mannequin3DStickman(ctx, x, floorY, pose, { facing, col, t, a, label })`
+- `K.world3dCard(ctx, x, y, w, h, { tag, titleStr, subStr, stat, statSub, col, a })`
 
-**Demo:** "Kenapa Kita Menunda-nunda" — 5 baris, voice el-id-m (ElevenLabs George), musik lofi. Hook: "Kamu bukan pemalas. Otakmu cuma kabur dari rasa tidak enak."
+**3 Demo (64–65 dtk, voice `el-id-m`):**
+1. `demo1`: *Hukum Bunga Majemuk Kebiasaan — Mengapa Lebih Baik 1% Setiap Hari Mengubah Hidup 37 Kali Lipat?*
+2. `demo2`: *Kotak Parkinson & Fokus — Mengapa Pekerjaan Dua Jam Bisa Molor Menjadi Seminggu?*
+3. `demo3`: *Ilusi Multitasking & Biaya Pindah Fokus — Apa yang Terjadi Saat Otak Membuka Terlalu Banyak Jendela?*

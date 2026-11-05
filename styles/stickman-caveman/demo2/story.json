@@ -1,0 +1,59 @@
+{
+  "title": "Harimau Sabertooth vs Notifikasi — Mengapa Email Kerja Memicu Alarm Amigdala?",
+  "slug": "stickman_caveman_harimau_notifikasi",
+  "style": "stickman-caveman",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa jantungmu tiba-tiba berdebar kencang dan tanganmu terasa dingin hanya karena melihat pesan panggilan dari atasan atau klien?",
+      "say": "Mengapa jantungmu tiba-tiba berdebar kencang dan tanganmu terasa dingin hanya karena melihat pesan panggilan dari atasan atau klien?"
+    },
+    {
+      "id": "sabertooth",
+      "text": "Jawabannya ada pada amigdala, pusat alarm purba yang dulu bertugas menyelamatkan manusia gua dari terkaman harimau bergigi pedang.",
+      "say": "Jawabannya ada pada amigdala, pusat alarm purba yang dulu bertugas menyelamatkan manusia gua dari terkaman harimau bergigi pedang."
+    },
+    {
+      "id": "buta",
+      "text": "Masalahnya, amigdala tidak bisa membedakan antara auman predator di semak-semak dengan bunyi notifikasi revisi di layar ponselmu.",
+      "say": "Masalahnya, amigdala tidak bisa membedakan antara auman predator di semak-semak dengan bunyi notifikasi revisi di layar ponselmu."
+    },
+    {
+      "id": "bajak",
+      "text": "Saat alarm lawan-atau-lari menyala, aliran darah ditarik dari otak berpikir logis menuju otot kaki, membuat pikiranmu mendadak buntu.",
+      "say": "Saat alarm lawan-atau-lari menyala, aliran darah ditarik dari otak berpikir logis menuju otot kaki, membuat pikiranmu mendadak buntu."
+    },
+    {
+      "id": "napas",
+      "text": "Untuk mematikan sirene palsu ini, kirimkan sinyal aman melalui tubuhmu dengan tarik napas empat detik dan embuskan perlahan delapan detik.",
+      "say": "Untuk mematikan sirene palsu ini, kirimkan sinyal aman melalui tubuhmu dengan tarik napas empat detik dan embuskan perlahan delapan detik."
+    },
+    {
+      "id": "vagus",
+      "text": "Embusan napas yang panjang mengaktifkan saraf vagus, memberitahu Si Uga di kepalamu bahwa tidak ada harimau yang sedang mengincar nyawamu.",
+      "say": "Embusan napas yang panjang mengaktifkan saraf vagus, memberitahu Si Uga di kepalamu bahwa tidak ada harimau yang sedang mengincar nyawamu."
+    },
+    {
+      "id": "label",
+      "text": "Beri nama pada perasaanmu secara tertulis, karena menyebutkan emosi secara sadar terbukti langsung menurunkan ketegangan amigdala.",
+      "say": "Beri nama pada perasaanmu secara tertulis, karena menyebutkan emosi secara sadar terbukti langsung menurunkan ketegangan amigdala."
+    },
+    {
+      "id": "moral",
+      "text": "Tenangkan dulu penjaga gua di kepalamu dengan napas teratur, baru hadapi setiap tantangan dengan pikiran jernih.",
+      "say": "Tenangkan dulu penjaga gua di kepalamu dengan napas teratur, baru hadapi setiap tantangan dengan pikiran jernih."
+    }
+  ]
+}
+

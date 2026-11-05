@@ -1,0 +1,59 @@
+{
+  "title": "Jebakan Buah Beri Digital — Mengapa Otak Purba Ketagihan Dopamin Instan?",
+  "slug": "stickman_caveman_buah_beri_dopamin",
+  "style": "stickman-caveman",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa jari kita begitu mudah terpikat menggulir video pendek berjam-jam, namun cepat bosan saat membaca buku atau belajar keahlian baru?",
+      "say": "Mengapa jari kita begitu mudah terpikat menggulir video pendek berjam-jam, namun cepat bosan saat membaca buku atau belajar keahlian baru?"
+    },
+    {
+      "id": "beri",
+      "text": "Di alam liar purba, menemukan semak buah beri manis atau informasi baru yang mengejutkan adalah penemuan langka yang dipuji oleh hormon dopamin.",
+      "say": "Di alam liar purba, menemukan semak buah beri manis atau informasi baru yang mengejutkan adalah penemuan langka yang dipuji oleh hormon dopamin."
+    },
+    {
+      "id": "algoritma",
+      "text": "Sayangnya, aplikasi modern menyulap mekanisme berburu itu menjadi mesin penjual otomatis yang membanjiri otak dengan ribuan kejutan instan tanpa henti.",
+      "say": "Sayangnya, aplikasi modern menyulap mekanisme berburu itu menjadi mesin penjual otomatis yang membanjiri otak dengan ribuan kejutan instan tanpa henti."
+    },
+    {
+      "id": "tumpul",
+      "text": "Ketika reseptor dopamin terus dihujani rangsangan berlebih, otak menjadi kebal sehingga pekerjaan normal sehari-hari terasa hambar dan membosankan.",
+      "say": "Ketika reseptor dopamin terus dihujani rangsangan berlebih, otak menjadi kebal sehingga pekerjaan normal sehari-hari terasa hambar dan membosankan."
+    },
+    {
+      "id": "pagi",
+      "text": "Kembalikan kepekaan fokusmu dengan aturan berburu dulu baru berpesta: jangan sentuh hiburan instan di satu jam pertama setelah bangun pagi.",
+      "say": "Kembalikan kepekaan fokusmu dengan aturan berburu dulu baru berpesta: jangan sentuh hiburan instan di satu jam pertama setelah bangun pagi."
+    },
+    {
+      "id": "usaha",
+      "text": "Saat kamu menuntaskan pekerjaan berat terlebih dahulu, otak mengeluarkan dopamin alami yang stabil dan menghadirkan rasa bangga yang bertahan lama.",
+      "say": "Saat kamu menuntaskan pekerjaan berat terlebih dahulu, otak mengeluarkan dopamin alami yang stabil dan menghadirkan rasa bangga yang bertahan lama."
+    },
+    {
+      "id": "jarak",
+      "text": "Pasang hambatan fisik seperti menaruh ponsel di ruangan lain agar Si Uga tidak tergoda memetik buah beri digital di tengah jam kerja.",
+      "say": "Pasang hambatan fisik seperti menaruh ponsel di ruangan lain agar Si Uga tidak tergoda memetik buah beri digital di tengah jam kerja."
+    },
+    {
+      "id": "moral",
+      "text": "Utamakan buruan besar yang membangun masa depanmu, dan jadikan hiburan sebagai hadiah setelah tugasmu selesai.",
+      "say": "Utamakan buruan besar yang membangun masa depanmu, dan jadikan hiburan sebagai hadiah setelah tugasmu selesai."
+    }
+  ]
+}
+

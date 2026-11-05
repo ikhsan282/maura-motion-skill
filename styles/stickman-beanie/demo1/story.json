@@ -1,0 +1,55 @@
+{
+  "title": "Kupluk Merah vs Jebakan Rebahan — Mengapa Otak Suka Menawar Lima Menit Lagi?",
+  "slug": "stickman-beanie-demo1",
+  "style": "stickman-beanie",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kamu bukan pemalas, katamu sambil merapikan kupluk merahmu, tetapi mengapa janji istirahat lima menit selalu berubah menjadi dua jam?"
+    },
+    {
+      "id": "tawar",
+      "text": "Setiap kali hendak bangkit menuju meja belajar, muncul suara halus di kepala yang berbisik: tanggung, satu video lagi saja."
+    },
+    {
+      "id": "jeda",
+      "text": "Riset perilaku menunjukkan bahwa jika kamu memberi jeda lebih dari lima detik antara niat dan gerakan fisik, otakmu langsung mencari alasan."
+    },
+    {
+      "id": "rem",
+      "text": "Dalam lima detik itu, bagian otak yang menyukai kenyamanan langsung menginjak rem darurat dan membujukmu tetap rebahan."
+    },
+    {
+      "id": "roket",
+      "text": "Cara mematahkannya adalah Aturan Hitung Mundur Lima Detik dari Mel Robbins: hitung lima, empat, tiga, dua, satu, lalu langsung berdiri!"
+    },
+    {
+      "id": "alasan",
+      "text": "Menghitung mundur secara terbalik memutus pola melamun di basal ganglia dan mengalihkan kendali ke korteks prefrontal."
+    },
+    {
+      "id": "lingkungan",
+      "text": "Selain itu, jangan pernah belajar di atas kasur; pisahkan zona istirahat dan zona kerja agar otakmu tidak bingung."
+    },
+    {
+      "id": "sepatu",
+      "text": "Bahkan memakai kupluk atau sepatu saat hendak mulai bekerja memberi sinyal fisik pada otak bahwa mode serius sudah aktif."
+    },
+    {
+      "id": "momentum",
+      "text": "Begitu kakimu melangkah duduk di meja dan membuka laptop, delapan puluh persen rasa malas tadi langsung menguap."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan bernegosiasi dengan kasurmu; hitung mundur tiga, dua, satu, dan biarkan gerakan fisikmu memimpin pikiranmu."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Hukum Bunga Majemuk Kebiasaan — Mengapa Lebih Baik 1% Setiap Hari Mengubah Hidup 37 Kali Lipat?",
+  "slug": "stickman-3dworld-demo1",
+  "style": "stickman-3dworld",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Banyak orang gagal berubah karena ingin lompatan seratus persen dalam semalam, lalu menyerah di hari ketiga."
+    },
+    {
+      "id": "kecil",
+      "text": "Dalam buku Atomic Habits, James Clear menjelaskan bahwa perubahan satu persen setiap hari hampir tidak terasa di minggu pertama."
+    },
+    {
+      "id": "matematika",
+      "text": "Namun secara matematika, satu koma nol satu dipangkatkan tiga ratus enam puluh lima hari menghasilkan angka tiga puluh tujuh koma tujuh delapan."
+    },
+    {
+      "id": "turun",
+      "text": "Sebaliknya, jika kita membiarkan diri memburuk satu persen saja setiap hari, kemampuan kita menyusut hingga nyaris mendekati nol."
+    },
+    {
+      "id": "lembah",
+      "text": "Tantangan terbesarnya adalah Lembah Kekecewaan di bulan pertama, ketika usaha keras belum menampakkan hasil yang mencolok."
+    },
+    {
+      "id": "es",
+      "text": "Seperti es batu di ruangan bersuhu minus lima derajat yang dinaikkan satu derajat demi satu derajat: belum mencair sampai menyentuh titik nol."
+    },
+    {
+      "id": "tangga",
+      "text": "Setiap anak tangga kecil yang kamu naiki hari ini sedang menyimpan energi potensial untuk lompatan besar di masa depan."
+    },
+    {
+      "id": "sistem",
+      "text": "Pemenang dan pecundang sebenarnya memiliki target yang sama; yang membedakan mereka adalah sistem kebiasaan harian yang dijalankan."
+    },
+    {
+      "id": "praktik",
+      "text": "Baca dua halaman buku, rapikan meja lima menit, atau berjalan kaki sepuluh menit tanpa putus setiap hari."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan meremehkan langkah satu persen hari ini, karena waktu akan melipatgandakannya menjadi tiga puluh tujuh kali lipat."
+    }
+  ]
+}
