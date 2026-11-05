@@ -346,18 +346,38 @@ export class Pen {
  *   glasses, pointer (length), blink, col}. Angles: 0 = hanging down, positive swings toward +x. Returns [[pts, w, col], ...].
  */
 export function stick(p) {
-  const { x, y, s = 1, lean = 0, tilt = 0, look = 0, face = 'smile', mouth = 0, hair = 'tuft', glasses = false, pointer = 0, blink = 0, col = PAL.lead } = p;
+  const {
+    x, y, s = 1, lean = 0, tilt = 0, look = 0,
+    face = 'smile', mouth = 0, hair = 'tuft',
+    glasses = false, tie = true, blush = true, shoes = true,
+    pointer = 0, blink = 0, col = PAL.lead,
+  } = p;
   const arms = p.arms || [[0.35, 0.2], [-0.35, -0.2]], legs = p.legs || [[0.18, 0], [-0.18, 0]];
   const out = []; const W0 = 6.5 * s;
   const R = (px, py, ox = 0, oy = 0) => { const X = px, Y = py; return [x + (ox + X * Math.cos(lean) - Y * Math.sin(lean)) * s, y + (oy + X * Math.sin(lean) + Y * Math.cos(lean)) * s]; };
-  const hip = [0, -118], neck = [0, -246], hc = [0, -300], hr = 50;
+  const hip = [0, -118], neck = [0, -246], hc = [0, -300], hr = 52;
   const L = (pts, w = W0, c = col) => out.push([pts, w, c]);
-  // legs
-  for (const [a1, a2] of legs) { const k = [hip[0] + Math.sin(a1) * 62, hip[1] + Math.cos(a1) * 62], f = [k[0] + Math.sin(a1 + a2) * 60, k[1] + Math.cos(a1 + a2) * 60]; L([R(...hip), R(...k), R(...f), R(f[0] + (a1 >= 0 ? 16 : -16), f[1])]); }
+  // legs + signature blue doodle sneakers
+  for (const [a1, a2] of legs) {
+    const k = [hip[0] + Math.sin(a1) * 62, hip[1] + Math.cos(a1) * 62];
+    const f = [k[0] + Math.sin(a1 + a2) * 60, k[1] + Math.cos(a1 + a2) * 60];
+    const dir = a1 >= 0 ? 1 : -1;
+    L([R(...hip), R(...k), R(...f)]);
+    if (shoes) {
+      L([R(f[0] - 4 * dir, f[1]), R(f[0] + 22 * dir, f[1]), R(f[0] + 20 * dir, f[1] - 10), R(f[0] - 4 * dir, f[1] - 8), R(f[0] - 4 * dir, f[1])], W0 * 0.85, PAL.blue);
+    } else {
+      L([R(...f), R(f[0] + 16 * dir, f[1])]);
+    }
+  }
   L([R(...hip), R(...neck)]); // spine
+  // Signature red doodle necktie on chest
+  if (tie) {
+    L([R(-10, -242), R(0, -232), R(10, -242)], W0 * 0.65, PAL.red);
+    L([R(0, -232), R(-9, -182), R(0, -168), R(9, -182), R(0, -232)], W0 * 0.72, PAL.red);
+  }
   // arms
   const hands = [];
-  arms.forEach(([a1, a2], i) => { const sh = [0, -232]; const e = [sh[0] + Math.sin(a1) * 58, sh[1] + Math.cos(a1) * 58], h = [e[0] + Math.sin(a1 + a2) * 56, e[1] + Math.cos(a1 + a2) * 56]; L([R(...sh), R(...e), R(...h)]); hands.push([h, a1 + a2]); });
+  arms.forEach(([a1, a2]) => { const sh = [0, -232]; const e = [sh[0] + Math.sin(a1) * 58, sh[1] + Math.cos(a1) * 58], h = [e[0] + Math.sin(a1 + a2) * 56, e[1] + Math.cos(a1 + a2) * 56]; L([R(...sh), R(...e), R(...h)]); hands.push([h, a1 + a2]); });
   if (pointer) { const [h, a] = hands[0]; L([R(...h), R(h[0] + Math.sin(a) * pointer, h[1] + Math.cos(a) * pointer)], W0 * 0.7, PAL.wood2); }
   // head (rotates with tilt around the neck)
   const H = (px, py) => { const dx = px, dy = py - neck[1]; return R(neck[0] + dx * Math.cos(tilt) - dy * Math.sin(tilt), neck[1] + dx * Math.sin(tilt) + dy * Math.cos(tilt)); };
@@ -369,6 +389,10 @@ export function stick(p) {
   if (blink > 0.5 || face === 'happy') { L(arc(hc[0] - 17 + ex, ey + 4, 8, 7, Math.PI * 1.1, Math.PI * 1.9, 6), W0 * 0.8); L(arc(hc[0] + 17 + ex, ey + 4, 8, 7, Math.PI * 1.1, Math.PI * 1.9, 6), W0 * 0.8); }
   else { L(circ(hc[0] - 17 + ex, ey, big ? 7 : 3.5, 0, 0.3, 8), big ? W0 * 0.7 : W0 * 1.1); L(circ(hc[0] + 17 + ex, ey, big ? 7 : 3.5, 0, 0.3, 8), big ? W0 * 0.7 : W0 * 1.1); }
   if (glasses) { L(circ(hc[0] - 18 + ex, ey, 14, 0, 0.2, 14), W0 * 0.6); L(circ(hc[0] + 18 + ex, ey, 14, 0, 0.2, 14), W0 * 0.6); }
+  if (blush) {
+    L([H(-34 + ex * 0.5, ey + 15), H(-24 + ex * 0.5, ey + 13)], W0 * 0.65, PAL.pink);
+    L([H(24 + ex * 0.5, ey + 13), H(34 + ex * 0.5, ey + 15)], W0 * 0.65, PAL.pink);
+  }
   // brows
   if (face === 'worried') { L([H(-30 + ex, ey - 22), H(-8 + ex, ey - 28)], W0 * 0.7); L([H(8 + ex, ey - 28), H(30 + ex, ey - 22)], W0 * 0.7); }
   if (face === 'skeptic') { L([H(-30 + ex, ey - 18), H(-8 + ex, ey - 18)], W0 * 0.7); L([H(8 + ex, ey - 30), H(30 + ex, ey - 22)], W0 * 0.7); }
@@ -384,7 +408,7 @@ export function stick(p) {
   else L(arc(mx, my - 6, 14, 10, 0.3, Math.PI - 0.3, 10), W0 * 0.8);
   // hair
   const top = hc[1] - hr;
-  if (hair === 'tuft') { L([H(-6, top + 2), H(-14, top - 22)], W0 * 0.8); L([H(4, top), H(4, top - 26)], W0 * 0.8); L([H(12, top + 2), H(22, top - 20)], W0 * 0.8); }
+  if (hair === 'tuft') { L([H(-8, top + 2), H(-18, top - 24)], W0 * 0.85); L([H(2, top), H(4, top - 30)], W0 * 0.85); L([H(12, top + 2), H(24, top - 22)], W0 * 0.85); }
   else if (hair === 'spiky') L([H(-40, top + 22), H(-30, top - 10), H(-16, top + 6), H(-4, top - 18), H(8, top + 4), H(22, top - 16), H(30, top + 8), H(44, top - 4), H(44, top + 22)], W0 * 0.8);
   else if (hair === 'pony') { L(arc(hc[0], hc[1], hr + 2, hr + 2, Math.PI * 1.05, Math.PI * 1.95, 14), W0 * 0.8); L([H(-hr, hc[1] - 10), H(-hr - 28, hc[1] + 10), H(-hr - 22, hc[1] + 44)], W0 * 0.8); }
   else if (hair === 'bun') { L(circ(hc[0], top - 14, 16, 0, 0.2, 14), W0 * 0.8); }
@@ -435,11 +459,13 @@ export function mline(ctx, pts, { w = 6, col = PAL.ink, alpha = 1, seed = 1, u =
   ctx.strokeStyle = col; ctx.globalAlpha = alpha; ctx.lineWidth = w; ctx.stroke(); ctx.restore();
 }
 /** Marker text drawn immediately (with boil). */
-export function mtext(ctx, str, x, y, { size = 64, col = PAL.ink, align = 'center', alpha = 1, font = 'Patrick Hand', weight = 400, rot = 0 } = {}) {
+export function mtext(ctx, str, x, y, { size = 64, col = PAL.ink, align = 'center', alpha = 1, font = 'Patrick Hand', weight = 400, rot = 0, maxW = 0 } = {}) {
   if (alpha <= 0) return;
   const fb = Math.floor(BOIL.t * BOIL.fps);
   ctx.save(); ctx.translate(x + (hrand(fb, x) - 0.5) * BOIL.amp, y + (hrand(fb, y) - 0.5) * BOIL.amp); ctx.rotate(rot + (hrand(fb, size) - 0.5) * 0.015); ctx.globalAlpha = alpha;
-  ctx.font = `${weight} ${size}px '${font}'`; ctx.textAlign = align; ctx.textBaseline = 'middle'; ctx.fillStyle = col; ctx.fillText(str, 0, 0); ctx.restore();
+  ctx.font = `${weight} ${size}px '${font}'`; ctx.textAlign = align; ctx.textBaseline = 'middle'; ctx.fillStyle = col;
+  if (maxW > 0) ctx.fillText(str, 0, 0, maxW); else ctx.fillText(str, 0, 0);
+  ctx.restore();
 }
 
 // ---------------------------------------------------------------- notebook paper
@@ -471,6 +497,15 @@ export function cam(ctx, x, y, z = 1, rot = 0, fy = 760) { ctx.setTransform(1, 0
 export function stickDraw(ctx, pose, t, { reveal = 1, alpha = 1, w = 1 } = {}) {
   const parts = stick({ col: PAL.ink, ...pose }); let budget = reveal * parts.length, tip = null;
   ctx.save(); ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  // Paper fill inside head circle so blue ruled notebook lines don't obscure facial expressions
+  if (reveal > 0.25) {
+    const s = pose.s ?? 1, lean = pose.lean ?? 0, tilt = pose.tilt ?? 0;
+    const R = (px, py) => [pose.x + (px * Math.cos(lean) - py * Math.sin(lean)) * s, pose.y + (px * Math.sin(lean) + py * Math.cos(lean)) * s];
+    const [hx, hy] = R(Math.sin(tilt) * 54, -246 - Math.cos(tilt) * 54);
+    ctx.fillStyle = PAL.paper;
+    ctx.globalAlpha = alpha * 0.94;
+    ctx.beginPath(); ctx.arc(hx, hy, 50 * s, 0, TAU); ctx.fill();
+  }
   parts.forEach(([pts, lw, col], i) => {
     if (budget <= 0) return; const u = clamp(budget); budget -= 1;
     const tr = track(pts, 5);
@@ -563,3 +598,57 @@ export function brainGuy(ctx, x, y, t, { s = 1, run = 0, face = 'shock', look = 
   const ph = run * TAU;
   for (const [o, side] of [[0, 1], [Math.PI, -1]]) { const sw = Math.sin(ph + o) * (run ? 0.8 : 0.1); const hip = P(side * 20, -66), knee = P(side * 20 + Math.sin(sw) * 34, -66 + Math.cos(sw) * 34), foot = P(side * 20 + Math.sin(sw) * 34 + Math.sin(sw - 0.6) * 32, -66 + Math.cos(sw) * 34 + Math.cos(sw - 0.6) * 32); mline(ctx, [hip, knee, foot, [foot[0] + 14 * s, foot[1]]], { w: 6 * s, seed: 320 + side }); }
 }
+
+/** Hand-drawn notebook banner header with highlighter strip and boiling marker outline. */
+export function doodleHeader(ctx, tag, mainTitle, subTitle, { x = 565, y = 210, w = 850, h = 152, col = PAL.red, a = 1 } = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.globalAlpha = a;
+  const left = x - w / 2, top = y - h / 2;
+  ctx.fillStyle = '#fffdf7';
+  ctx.fillRect(left, top, w, h);
+  // Yellow highlighter strip behind main title
+  ctx.fillStyle = 'rgba(246, 210, 74, 0.42)';
+  ctx.fillRect(left + 26, top + 34, w - 52, 50);
+  mline(ctx, G.rect(left, top, w, h), { w: 6, col: PAL.ink, seed: 801, alpha: a });
+
+  // Tag pill on top
+  ctx.fillStyle = col;
+  ctx.fillRect(x - 280, top - 18, 560, 34);
+  mline(ctx, G.rect(x - 280, top - 18, 560, 34), { w: 4.5, col: PAL.ink, seed: 802, alpha: a });
+  mtext(ctx, tag, x, top - 1, { size: 22, col: '#ffffff', font: 'Permanent Marker', alpha: a, maxW: 530 });
+
+  mtext(ctx, mainTitle, x, top + 58, { size: 42, col: PAL.ink, font: 'Permanent Marker', alpha: a, maxW: w - 60 });
+  if (subTitle) mtext(ctx, subTitle, x, top + 114, { size: 30, col: PAL.blue, font: 'Patrick Hand', alpha: a, maxW: w - 70 });
+  ctx.restore();
+}
+
+/** Sketchy hand-drawn notebook card with stat badge on the right. */
+export function doodleCard(ctx, x, y, w, h, { tag = '', titleStr = '', subStr = '', stat = '', statSub = '', col = PAL.blue, a = 1, seed = 900 } = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.globalAlpha = a;
+  const left = x - w / 2, top = y - h / 2;
+  ctx.fillStyle = '#fffdf7';
+  ctx.fillRect(left, top, w, h);
+  ctx.fillStyle = col;
+  ctx.fillRect(left + 12, top + 14, 10, h - 28);
+  mline(ctx, G.rect(left, top, w, h), { w: 5.5, col: PAL.ink, seed, alpha: a });
+
+  const tx = left + 36;
+  const textMaxW = stat ? w - 265 : w - 65;
+  if (tag) mtext(ctx, tag, tx, top + 34, { size: 22, col, align: 'left', font: 'Permanent Marker', alpha: a, maxW: textMaxW });
+  if (titleStr) mtext(ctx, titleStr, tx, top + 76, { size: 31, col: PAL.ink, align: 'left', font: 'Permanent Marker', alpha: a, maxW: textMaxW });
+  if (subStr) mtext(ctx, subStr, tx, top + h - 32, { size: 26, col: '#4a4a52', align: 'left', font: 'Patrick Hand', alpha: a, maxW: textMaxW });
+
+  if (stat) {
+    const sx = left + w - 122;
+    ctx.fillStyle = 'rgba(246, 210, 74, 0.38)';
+    ctx.fillRect(sx - 92, top + 16, 184, h - 32);
+    mline(ctx, G.rect(sx - 92, top + 16, 184, h - 32), { w: 4.5, col, seed: seed + 1, alpha: a });
+    mtext(ctx, stat, sx, top + h * 0.44, { size: 34, col, font: 'Permanent Marker', alpha: a, maxW: 165 });
+    if (statSub) mtext(ctx, statSub, sx, top + h * 0.76, { size: 21, col: PAL.ink, font: 'Patrick Hand', alpha: a, maxW: 165 });
+  }
+  ctx.restore();
+}
+

@@ -1,0 +1,56 @@
+{
+  "title": "Baret di Parkiran & Selembar Kertas — Berani Tanggung Jawab Saat Tidak Ada yang Melihat",
+  "slug": "stickman-kisah-demo3",
+  "style": "stickman-kisah",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kejujuran sejati tidak diuji saat ada kamera atau satpam yang mengawasi, melainkan saat parkiran sepi dan tidak ada seorang pun yang melihat."
+    },
+    {
+      "id": "insiden",
+      "text": "Sore itu di parkiran yang lengang, Dimas tanpa sengaja menyerempet bemper mobil sedan di sebelahnya hingga tergores cukup dalam."
+    },
+    {
+      "id": "godaan",
+      "text": "Temannya berbisik menyuruh cepat pergi: ayo jalan saja, parkiran kosong, tidak ada saksi dan tidak ada kamera pengawas!"
+    },
+    {
+      "id": "nurani",
+      "text": "Dimas terdiam sejenak. Ia sadar bisa saja kabur dengan aman, tetapi suara hatinya menolak meninggalkan kerugian bagi orang lain."
+    },
+    {
+      "id": "surat",
+      "text": "Ia pun mengambil secarik kertas, menulis permohonan maaf beserta nomor teleponnya, lalu menyelipkannya di kaca depan mobil tersebut."
+    },
+    {
+      "id": "telepon",
+      "text": "Malam harinya telepon Dimas berdering. Pemilik mobil menghubungi dengan nada suara yang awalnya terdengar serius."
+    },
+    {
+      "id": "kejutan",
+      "text": "Dimas langsung meminta maaf dan menyatakan siap menanggung biaya bengkel, meskipun tabungannya saat itu sangat pas-pasan."
+    },
+    {
+      "id": "maaf",
+      "text": "Tak disangka, pemilik mobil justru tersenyum hangat: terima kasih sudah jujur, biaya catnya biar saya tanggung sendiri."
+    },
+    {
+      "id": "pelajaran",
+      "text": "Bukan nilai uang ganti ruginya yang membuat pemilik mobil tersentuh, melainkan keberanian bertanggung jawab di tengah kesempatan untuk lari."
+    },
+    {
+      "id": "moral",
+      "text": "Baret pada bodi mobil bisa dipoles dalam sehari, tetapi baret pada hati nurani karena pengecut akan membekas selamanya."
+    }
+  ]
+}
+

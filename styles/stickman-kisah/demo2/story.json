@@ -1,0 +1,56 @@
+{
+  "title": "Satu Langkah Menyerobot Antrean — Ujian Kecil yang Membuka Karakter Asli Seseorang",
+  "slug": "stickman-kisah-demo2",
+  "style": "stickman-kisah",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Jika ingin melihat karakter asli seseorang, jangan lihat saat ia di panggung besar, tetapi lihatlah bagaimana ia berdiri di dalam antrean."
+    },
+    {
+      "id": "pagi",
+      "text": "Pagi itu di depan loket pelayanan, puluhan warga sudah berdiri tertib menunggu giliran sejak pukul tujuh pagi."
+    },
+    {
+      "id": "serobot",
+      "text": "Tiba-tiba seorang pria berkacamata hitam langsung melangkah masuk ke paling depan sambil berkata: cuma mau tanya sebentar kok!"
+    },
+    {
+      "id": "diam",
+      "text": "Banyak orang di belakang mengelus dada dan kesal dalam hati, tetapi enggan menegur karena malas berdebat."
+    },
+    {
+      "id": "tegur",
+      "text": "Namun Raka maju selangkah dan menegur dengan suara tenang tetapi tegas: maaf Pak, semua di sini juga sedang buru-buru."
+    },
+    {
+      "id": "alasan",
+      "text": "Penyerobot itu sempat berkilah bahwa urusannya cuma satu menit, seolah waktu orang lain tidak berharga."
+    },
+    {
+      "id": "kompak",
+      "text": "Ketika warga lain ikut mengangguk mendukung Raka, pria itu akhirnya tertunduk malu dan berjalan menuju barisan paling belakang."
+    },
+    {
+      "id": "budaya",
+      "text": "Budaya antre bukanlah aturan sepele, melainkan kontrak sosial paling dasar tentang keadilan dan rasa hormat."
+    },
+    {
+      "id": "tegas",
+      "text": "Menegur pelanggaran dengan sopan bukanlah sikap mencari ribut, melainkan cara menjaga agar ketertiban tidak kalah oleh keegoisan."
+    },
+    {
+      "id": "moral",
+      "text": "Menghargai antrean berarti mengakui bahwa waktu dan hak orang lain sama berharganya dengan waktu kita sendiri."
+    }
+  ]
+}
+

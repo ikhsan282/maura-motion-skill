@@ -1,0 +1,56 @@
+{
+  "title": "10.000 Jam vs 10.000 Goresan Sadar — Rahasia Deliberate Practice Para Maestro",
+  "slug": "stickman-pelukis-demo3",
+  "style": "stickman-pelukis",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Banyak orang menggambar hal yang sama selama sepuluh tahun, tetapi kemampuannya tetap jalan di tempat. Mengapa?"
+    },
+    {
+      "id": "mitos",
+      "text": "Kita sering mendengar aturan sepuluh ribu jam, seolah-olah asal mengulang lama pasti otomatis menjadi ahli."
+    },
+    {
+      "id": "riset",
+      "text": "Psikolog Anders Ericsson menemukan bahwa pengulangan otomatis di zona nyaman tidak meningkatkan keahlian sedikit pun."
+    },
+    {
+      "id": "nyaman",
+      "text": "Pelukis yang hanya mau menggambar bentuk yang sudah ia kuasai sebenarnya sedang berhenti belajar."
+    },
+    {
+      "id": "sadar",
+      "text": "Kunci sejati para maestro adalah Deliberate Practice, yaitu latihan terarah yang sengaja menantang titik terlemah."
+    },
+    {
+      "id": "target",
+      "text": "Jika lemah di perspektif, lukislah gedung; jika lemah di pencahayaan, lukislah pantulan cahaya senja di atas air."
+    },
+    {
+      "id": "evaluasi",
+      "text": "Setiap kanvas dijadikan laboratorium kecil: coba teknik baru, amati bagian yang janggal, lalu perbaiki di kanvas berikutnya."
+    },
+    {
+      "id": "lonjakan",
+      "text": "Seratus jam latihan yang penuh kesadaran dan koreksi jauh mengalahkan ribuan jam coretan tanpa arah."
+    },
+    {
+      "id": "mental",
+      "text": "Rasa sulit saat mempelajari teknik baru bukanlah tanda bakatmu kurang, melainkan tanda jaringan otakmu sedang bertumbuh."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan sekadar menghitung berapa lama kamu berlatih, tetapi pastikan setiap goresan membawa tantangan baru."
+    }
+  ]
+}
+

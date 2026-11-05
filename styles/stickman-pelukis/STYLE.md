@@ -6,37 +6,24 @@ source: custom:perfectionist-vs-action-taker
 family: craft
 tech: canvas2d
 music: lofi   voice: el-id-m   captions: clean
-best_for: perfeksionisme vs aksi, produktivitas kreator, mulai dulu perbaiki belakangan, motivasi kerja
+best_for: perfeksionisme vs aksi, produktivitas kreator, eksperimen kuantitas vs kualitas, latihan terarah
 ---
 # Stickman Pelukis
 
-**Ciri khas (look):** studio lukis gelap (#100F12), dua lampu gantung sorot hangat, kabinet kerja tengah
-(kiri rapi: cangkir kuas + palet; kanan berantakan: cipratan cat), 2 easel kayu, tumpukan kanvas lantai
-(#1–#16), lukisan pemandangan 3 tier (sketsa → gunung salju → sunset ungu). Karakter stickman putih
-outline tebal + glow, kuas di tangan kanan, bisa angkat lukisan ke atas kepala + sparkle.
+**Karakter Unik:**
+- **Si Maestro Berbaret (`role: 'prolific'`)**: Mengenakan **topi baret pelukis miring bertangkai** (*crimson artist beret*), syal leher merah koral yang berkibar, celemek lukis penuh bercak cat warna-warni, **palet kayu berbentuk kacang** dengan 4 warna cat di tangan kiri, dan kuas lukis besar di tangan kanan.
+- **Si Perfeksionis Loupe (`role: 'perfectionist'`)**: Mengenakan **kacamata loupe/monokel pembesar**, dasi kupu-kupu kaku, baret biru rapi, kuas detail tipis, serta tetesan keringat ragu-ragu.
 
-**Gerak (motion):** kiri `paintCareful` (bungkuk, tangan kiri di dahi, dab halus) vs kanan `paintFast`
-(sapuan lebar + lutut mantul). `tossCanvas` lempar kanvas ke tumpukan, `inspectArt` mundur menilai,
-`holdPaintingUp` / `showPaintingProud` angkat karya. Counter kabinet #1→#16, cipratan nambah.
-
-**Kenapa menarik:** kontras langsung kebaca: satu teliti satu karya vs satu cepat enam belas karya.
-Tumpukan kanvas yang tumbuh = progres visual yang memuaskan.
-
-**Cerita yang cocok:**
-- Perfeksionis vs action taker: "Satu kanvas dua minggu, atau enam belas kanvas dua minggu?"
-- Mulai dulu, bagus belakangan.
-- Kreator: upload dulu, algoritma belakangan.
-
-**Rumus hook:** "[X] dalam [waktu], atau [10X] dalam [waktu yang sama]?" / "Sempurna itu hasil dari
-banyak percobaan."
+**Ciri khas (look):** Studio lukis *atelier* gelap (`#100f14`), dua lampu gantung sorot hangat, kabinet kuas & cat di tengah, dua easel kayu di kiri dan kanan, tumpukan kanvas selesai (`#1–#16`) di lantai kanan, serta lukisan lanskap 4 tingkat (`tier 0` garis bantu → `tier 1` sketsa → `tier 2` gunung salju → `tier 3` mahakarya senja keemasan dengan kilau *sparkle*).
 
 **Kit API (`styles/stickman-pelukis/kit.js`):**
-- `StickmanKit.createPerfectionistScene(kit, {})`: lampu, header ID, kabinet, 2 easel, tumpukan
-  kanvas, 2 karakter + timeline 14,7 dtk. Header/watermark sudah Bahasa Indonesia.
-- Motion artist: `paintCareful`, `paintFast`, `tossCanvas`, `inspectArt`, `holdPaintingUp`,
-  `showPaintingProud` (+ 44 motion dasar: basic/emosi/aksi/interaksi/Fajr).
-- Props: `hangingLamp`, `artCabinet` (leftCountText/rightCountText/splatterLevel), `easel`
-  (tier/progress/hasCanvas), `canvasPile` (count/flyingCanvas), `sparkle`, `drawLandscapeArtwork`.
-- Style karakter `neuron`: outline tebal + glow + `handProps` (kuas kanan, `overheadCanvas`).
+- `K.pelukisBg(ctx, t, { floorY, leftHighlight, rightHighlight })`
+- `K.pelukisHeader(ctx, leftScore, rightScore, mainTitle, subTitle, opts)`
+- `K.studioStage(ctx, floorY, { leftTier, leftProg, leftLabel, rightTier, rightProg, rightLabel, pileCount, splatter, t })`
+- `K.pelukisStickman(ctx, x, floorY, pose, { role: 'prolific'|'perfectionist', facing, t, a, holdTier })`
+- `K.pelukisCard(ctx, x, y, w, h, { tag, titleStr, subStr, stat, statSub, col, a })`
 
-**Demo:** "Sempurna vs Gerak Cepat", 5 baris ID, voice el-id-m (ElevenLabs George), musik lofi.
+**3 Demo (64–65 dtk, voice `el-id-m`):**
+1. `demo1`: *Eksperimen Keramik & Kanvas — Mengapa Kuantitas Melahirkan Kualitas?*
+2. `demo2`: *Kutukan Kanvas Putih — Mengalahkan Perfeksionisme dengan Draf Buruk Pertama*
+3. `demo3`: *10.000 Jam vs 10.000 Goresan Sadar — Rahasia Deliberate Practice Para Maestro*

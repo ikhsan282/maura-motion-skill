@@ -1,0 +1,56 @@
+{
+  "title": "Kutukan Kanvas Putih — Mengalahkan Perfeksionisme dengan Draf Buruk Pertama",
+  "slug": "stickman-pelukis-demo2",
+  "style": "stickman-pelukis",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa hal paling menakutkan bagi seorang pelukis maupun penulis adalah lembaran kanvas putih yang masih bersih?"
+    },
+    {
+      "id": "ideal",
+      "text": "Di dalam kepala kita, ide karya selalu tampak sempurna, megah, dan tanpa cacat sedikit pun."
+    },
+    {
+      "id": "takut",
+      "text": "Namun begitu kuas menyentuh kanvas, goresan pertama hampir selalu terlihat kaku dan jauh dari bayangan."
+    },
+    {
+      "id": "hapus",
+      "text": "Si Perfeksionis langsung kecewa, menghapus goresannya, lalu kembali menatap kanvas kosong selama berjam-jam."
+    },
+    {
+      "id": "rahasia",
+      "text": "Para maestro punya rahasia sederhana untuk mematahkan kutukan ini: izinkan dirimu membuat draf pertama yang buruk."
+    },
+    {
+      "id": "kotor",
+      "text": "Langkah pertama mereka adalah segera mengotori kanvas dengan sapuan warna dasar agar rasa takut merusak putihnya hilang."
+    },
+    {
+      "id": "revisi",
+      "text": "Otak manusia jauh lebih pandai memperbaiki sketsa yang sudah ada di depan mata daripada mengarang di ruang hampa."
+    },
+    {
+      "id": "lapisan",
+      "text": "Lukisan pemandangan yang indah bukanlah satu goresan ajaib, melainkan tumpukan lapisan cat yang terus disempurnakan."
+    },
+    {
+      "id": "aturan",
+      "text": "Kamu tidak akan pernah bisa mengedit halaman kosong, dan kamu tidak bisa memoles kanvas yang belum disentuh."
+    },
+    {
+      "id": "moral",
+      "text": "Goreskan saja kuasmu hari ini; lebih baik satu karya selesai yang terus diperbaiki daripada mahakarya yang hanya ada di mimpi."
+    }
+  ]
+}
+

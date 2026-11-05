@@ -1,0 +1,58 @@
+{
+  "title": "Kenapa Kita Menunda-nunda? — Drama Amigdala, Awan Bersalah & Aturan Lima Menit",
+  "slug": "65_stickman-doodle_demo1",
+  "style": "stickman-doodle",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Kamu sebenarnya bukan pemalas; saat kamu menunda pekerjaan penting, otakmu hanya sedang berusaha kabur dari rasa tidak nyaman.",
+      "pause": 0.35
+    },
+    {
+      "id": "otak",
+      "text": "Dalam ilmu psikologi emosi, menunda tugas bukanlah masalah manajemen jadwal, melainkan cara otak menghindari rasa takut gagal dan kebosanan.",
+      "pause": 0.3
+    },
+    {
+      "id": "amigdala",
+      "text": "Begitu melihat tumpukan tugas yang terasa berat, pusat alarm di otak yang bernama amigdala langsung membunyikan sirene bahaya dan berteriak kabur.",
+      "pause": 0.3
+    },
+    {
+      "id": "lega",
+      "text": "Kita pun refleks membuka layar ponsel untuk mencari pelarian instan yang membuat perasaan terasa lega selama beberapa menit pertama.",
+      "pause": 0.3
+    },
+    {
+      "id": "bersalah",
+      "text": "Namun kelegaan semu itu segera berubah menjadi awan rasa bersalah yang menghujani pikiran, sementara tenggat waktu semakin menghimpit.",
+      "pause": 0.3
+    },
+    {
+      "id": "lima",
+      "text": "Cara paling ampuh memutus lingkaran ini adalah berhenti menunggu datangnya mood, lalu menerapkan aturan sederhana bernama lima menit saja.",
+      "say": "Cara paling ampuh memutus lingkaran ini adalah berhenti menunggu datangnya mud, lalu menerapkan aturan sederhana bernama lima menit saja."
+    },
+    {
+      "id": "zeigarnik",
+      "text": "Katakan pada otakmu bahwa kamu hanya perlu mengerjakan tugas itu selama lima menit, dan boleh berhenti jika memang masih terasa berat.",
+      "pause": 0.3
+    },
+    {
+      "id": "moral",
+      "text": "Ajaibnya, begitu langkah pertama dimulai, kecemasan amigdala langsung reda dan batu beban yang tadinya tampak raksasa menyusut menjadi kerikil kecil.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Musuh terbesarmu bukanlah seluruh tumpukan pekerjaan itu, melainkan gesekan di lima menit pertama sebelum tanganmu mulai bergerak."
+    }
+  ]
+}

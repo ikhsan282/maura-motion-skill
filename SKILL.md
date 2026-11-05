@@ -134,10 +134,10 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 62 | **Kaca Patri Mosaik** | kaca-patri | ✅ ([demo1](styles/kaca-patri/demo1/) · [demo2](styles/kaca-patri/demo2/) · [demo3](styles/kaca-patri/demo3/)) |
 | 63 | **Perkamen Ukiran Kuno** | perkamen-ukiran | ✅ ([demo1](styles/perkamen-ukiran/demo1/) · [demo2](styles/perkamen-ukiran/demo2/) · [demo3](styles/perkamen-ukiran/demo3/)) |
 | 64 | **Toon 3D Gacha Reveal** | gacha-3d | ✅ ([demo1](styles/gacha-3d/demo1/) · [demo2](styles/gacha-3d/demo2/) · [demo3](styles/gacha-3d/demo3/)) |
-| 65 | **Stickman Doodle** | stickman-doodle | ✅ ([styles/stickman-doodle](styles/stickman-doodle/)) |
-| 66 | **Stickman Subuh** | stickman-subuh | ✅ ([styles/stickman-subuh](styles/stickman-subuh/)) |
-| 67 | **Stickman Pelukis** | stickman-pelukis | ✅ ([styles/stickman-pelukis](styles/stickman-pelukis/)) |
-| 68 | **Stickman Kisah** | stickman-kisah | ✅ ([styles/stickman-kisah](styles/stickman-kisah/)) |
+| 65 | **Stickman Doodle** | stickman-doodle | ✅ ([demo1](styles/stickman-doodle/demo1/) · [demo2](styles/stickman-doodle/demo2/) · [demo3](styles/stickman-doodle/demo3/)) |
+| 66 | **Stickman Subuh** | stickman-subuh | ✅ ([demo1](styles/stickman-subuh/demo1/) · [demo2](styles/stickman-subuh/demo2/) · [demo3](styles/stickman-subuh/demo3/)) |
+| 67 | **Stickman Pelukis** | stickman-pelukis | ✅ ([demo1](styles/stickman-pelukis/demo1/) · [demo2](styles/stickman-pelukis/demo2/) · [demo3](styles/stickman-pelukis/demo3/)) |
+| 68 | **Stickman Kisah** | stickman-kisah | ✅ ([demo1](styles/stickman-kisah/demo1/) · [demo2](styles/stickman-kisah/demo2/) · [demo3](styles/stickman-kisah/demo3/)) |
 | 69 | **Stickman 3D World** | stickman-3dworld | ✅ ([styles/stickman-3dworld](styles/stickman-3dworld/)) |
 | 70 | **Stickman Beanie** | stickman-beanie | ✅ ([styles/stickman-beanie](styles/stickman-beanie/)) |
 | 71 | **Stickman Caveman** | stickman-caveman | ✅ ([styles/stickman-caveman](styles/stickman-caveman/)) |

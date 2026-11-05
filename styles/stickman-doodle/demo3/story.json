@@ -1,0 +1,59 @@
+{
+  "title": "Gaji Naik tapi Tabungan Nol — Mengenal Efek Diderot dan Inflasi Gaya Hidup",
+  "slug": "65_stickman-doodle_demo3",
+  "style": "stickman-doodle",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa ketika penghasilan bulanan kita naik dua kali lipat, saldo tabungan di akhir bulan sering kali tetap saja habis tak bersisa?",
+      "pause": 0.35
+    },
+    {
+      "id": "diderot",
+      "text": "Penyebab pertamanya ditemukan oleh filsuf Prancis Denis Diderot pada abad kedelapan belas setelah ia menerima hadiah sebuah jubah tidur beludru merah.",
+      "say": "Penyebab pertamanya ditemukan oleh filsuf Prancis Denis Didero pada abad kedelapan belas setelah ia menerima hadiah sebuah jubah tidur beludru merah."
+    },
+    {
+      "id": "domino",
+      "text": "Karena jubah barunya tampak begitu mewah, meja kayu, permadani, dan kursi lamanya mendadak terlihat kumuh hingga ia berutang mengganti seluruh isi rumahnya.",
+      "pause": 0.3
+    },
+    {
+      "id": "creep",
+      "text": "Di zaman modern, efek domino belanja ini menyatu dengan inflasi gaya hidup, di mana kemewahan kemarin berubah menjadi kebutuhan standar hari ini.",
+      "pause": 0.3
+    },
+    {
+      "id": "bocor",
+      "text": "Begitu gaji bertambah, tanpa sadar kita menaikkan kelas kopi harian, menambah langganan aplikasi, dan memperbarui gawai yang sebenarnya masih berfungsi baik.",
+      "pause": 0.3
+    },
+    {
+      "id": "hedonic",
+      "text": "Otak kita terjebak di atas roda treadmill hedonis: kepuasan barang baru menguap dalam hitungan minggu, sementara tagihan bulanan menetap selamanya.",
+      "say": "Otak kita terjebak di atas roda tredmil hedonis: kepuasan barang baru menguap dalam hitungan minggu, sementara tagihan bulanan menetap selamanya."
+    },
+    {
+      "id": "kunci",
+      "text": "Cara paling efektif menghentikan kebocoran ini adalah membalik urutan: sisihkan minimal dua puluh persen di hari gajian sebelum satu rupiah pun dibelanjakan.",
+      "pause": 0.3
+    },
+    {
+      "id": "jeda",
+      "text": "Terapkan juga aturan jeda tujuh puluh dua jam sebelum membeli barang komplementer agar dorongan impulsif di otak sempat mereda.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Kekayaan sejati tidak diukur dari seberapa besar uang yang masuk ke rekeningmu, melainkan seberapa besar jarak antara penghasilan dan gengsimu."
+    }
+  ]
+}
+

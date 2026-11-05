@@ -1,0 +1,58 @@
+{
+  "title": "Alarm yang Sama, Subuh yang Sama — Bagaimana 40 Hari Mengubah Beban Menjadi Panggilan Hati",
+  "slug": "66_stickman-subuh_demo1",
+  "style": "stickman-subuh",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Dua kamar yang berdampingan, jam alarm yang berdering pada detik yang sama, namun melahirkan dua perjalanan hidup yang sangat berbeda.",
+      "pause": 0.35
+    },
+    {
+      "id": "hari1",
+      "text": "Pada hari pertama hingga hari ketujuh, bangun saat langit masih gelap gulita terasa begitu berat bagi tubuh yang masih ingin terlelap.",
+      "pause": 0.3
+    },
+    {
+      "id": "snooze",
+      "text": "Di kamar kanan, jari tangan refleks menekan tombol tunda berkali-kali, sementara di kamar kiri, kaki dipaksa melangkah menuju air wudu.",
+      "pause": 0.3
+    },
+    {
+      "id": "hari20",
+      "text": "Memasuki hari kedua puluh, jam biologis di dalam hipotalamus otak mulai menyesuaikan ritme pelepasan hormon kortisol pagi lebih awal.",
+      "pause": 0.3
+    },
+    {
+      "id": "ringan",
+      "text": "Langkah menuju sajadah tidak lagi membutuhkan perdebatan panjang di dalam pikiran, karena jalur saraf kebiasaan baru sudah terbentuk kuat.",
+      "pause": 0.3
+    },
+    {
+      "id": "hari40",
+      "text": "Dan pada hari keempat puluh, keajaiban disiplin itu terjadi: mata terbuka dengan segar lima menit sebelum alarm sempat berbunyi.",
+      "pause": 0.3
+    },
+    {
+      "id": "sujud",
+      "text": "Ketika dahi menyentuh sajadah dalam keheningan Subuh, aliran darah ke korteks prefrontal meningkat dan menghadirkan ketenangan batin yang jernih.",
+      "pause": 0.3
+    },
+    {
+      "id": "menular",
+      "text": "Konsistensi itu bahkan menular secara diam-diam, membangunkan kesadaran di kamar sebelah untuk ikut bangkit meninggalkan selimutnya.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Awalnya kamu yang memaksa diri menjaga waktu Subuh, namun pada akhirnya waktu Subuh itulah yang akan menjaga seluruh harimu."
+    }
+  ]
+}

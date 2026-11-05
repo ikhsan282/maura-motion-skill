@@ -1,0 +1,55 @@
+{
+  "title": "Eksperimen Keramik & Kanvas — Mengapa Kuantitas Melahirkan Kualitas?",
+  "slug": "stickman-pelukis-demo1",
+  "style": "stickman-pelukis",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Satu kanvas dalam dua minggu, atau enam belas kanvas dalam dua minggu? Siapa yang menghasilkan lukisan terbaik?"
+    },
+    {
+      "id": "studi",
+      "text": "Dalam buku Art and Fear, diceritakan seorang dosen seni yang membagi kelasnya menjadi dua kelompok eksperimen."
+    },
+    {
+      "id": "kiri",
+      "text": "Kelompok kiri dinilai murni dari kualitas: mereka hanya perlu mengumpulkan satu karya paling sempurna di akhir semester."
+    },
+    {
+      "id": "kanan",
+      "text": "Kelompok kanan dinilai murni dari kuantitas: makin banyak jumlah kanvas yang diselesaikan, makin tinggi nilai mereka."
+    },
+    {
+      "id": "minggu1",
+      "text": "Minggu pertama berjalan: Si Perfeksionis di kiri sibuk mengukur garis dan takut salah, baru menghasilkan satu sketsa tipis."
+    },
+    {
+      "id": "tumpuk",
+      "text": "Sebaliknya, Si Maestro Berbaret di kanan terus melukis cepat; kanvas pertama miring, kanvas kelima mulai rapi, kanvas kesepuluh makin hidup."
+    },
+    {
+      "id": "evaluasi",
+      "text": "Setiap kanvas yang gagal menjadi guru langsung bagi tangannya untuk memperbaiki komposisi, warna, dan sapuan kuas berikutnya."
+    },
+    {
+      "id": "hasil",
+      "text": "Saat hari penilaian tiba, seluruh karya terbaik dan paling memukau justru lahir dari kelompok kuantitas di sebelah kanan."
+    },
+    {
+      "id": "mengapa",
+      "text": "Kelompok yang mengejar sempurna sejak awal justru lumpuh oleh teori tanpa sempat melatih otot praktiknya."
+    },
+    {
+      "id": "moral",
+      "text": "Kesempurnaan bukanlah syarat untuk memulai, melainkan hadiah dari keberanian menyelesaikan banyak percobaan."
+    }
+  ]
+}

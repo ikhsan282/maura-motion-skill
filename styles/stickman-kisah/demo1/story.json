@@ -1,0 +1,55 @@
+{
+  "title": "Kisah Utang & Amplop Cokelat — Mengapa yang Meminjam Lebih Galak Saat Ditagih?",
+  "slug": "stickman-kisah-demo1",
+  "style": "stickman-kisah",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.0,
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Waktu meminjam uang, suaranya pelan dan janjinya manis sekali. Giliran ditagih, mengapa justru yang berutang lebih galak?"
+    },
+    {
+      "id": "datang",
+      "text": "Sebulan lalu, Andi datang menemui Budi dengan wajah memelas. Ia butuh uang darurat dan berjanji akan mengembalikan minggu depan."
+    },
+    {
+      "id": "percaya",
+      "text": "Karena menghargai persahabatan, Budi menyerahkan amplop cokelat berisi tabungannya tanpa ragu dan tanpa surat perjanjian."
+    },
+    {
+      "id": "tagih1",
+      "text": "Minggu depan tiba. Saat Budi bertanya baik-baik, Andi malah membuang muka dan menjawab enteng bahwa uangnya belum ada."
+    },
+    {
+      "id": "alasan",
+      "text": "Bulan berganti bulan, pesan tak dibalas, namun Andi tampak santai memamerkan barang baru dan liburan di media sosial."
+    },
+    {
+      "id": "malu",
+      "text": "Anehnya, lama-kelamaan justru Budi yang merasa sungkan dan malu saat hendak meminta kembali uang miliknya sendiri."
+    },
+    {
+      "id": "psikologi",
+      "text": "Dalam psikologi, sikap marah saat ditagih adalah mekanisme pertahanan ego untuk menutupi rasa bersalah dengan menyalahkan penagih."
+    },
+    {
+      "id": "tegas",
+      "text": "Sampai akhirnya Budi tegas mengambil sikap: yang dirusak oleh utang macet sebenarnya bukanlah dompet, melainkan rasa percaya."
+    },
+    {
+      "id": "batas",
+      "text": "Menolong teman adalah kebaikan mulia, tetapi meminjamkan uang harus selalu disertai catatan jelas dan batas kemampuan ikhlas."
+    },
+    {
+      "id": "moral",
+      "text": "Ingatlah, utang bukan sekadar urusan angka, melainkan urusan harga diri; siapa yang meremehkan janji sedang menghancurkan kepercayaannya sendiri."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Jebakan Dunning-Kruger — Mengapa Makin Sedikit Tahu Justru Makin Percaya Diri?",
+  "slug": "65_stickman-doodle_demo2",
+  "style": "stickman-doodle",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu baru menonton satu video tutorial berdurasi sepuluh menit, lalu langsung merasa sudah paling ahli dan siap menggurui semua orang?",
+      "pause": 0.35
+    },
+    {
+      "id": "puncak",
+      "text": "Fenomena lucu ini dikenal sebagai Efek Dunning-Kruger, ketika sedikit pengetahuan justru melambungkan rasa percaya diri ke titik tertinggi.",
+      "say": "Fenomena lucu ini dikenal sebagai Efek Daning Kruger, ketika sedikit pengetahuan justru melambungkan rasa percaya diri ke titik tertinggi."
+    },
+    {
+      "id": "gunung",
+      "text": "Para psikolog menyebut fase awal ini sebagai Puncak Gunung Kebodohan, karena kita belum cukup tahu untuk menyadari betapa banyak hal yang belum kita kuasai.",
+      "pause": 0.3
+    },
+    {
+      "id": "lembah",
+      "text": "Namun begitu kita mulai terjun langsung dan menghadapi kerumitan nyata, rasa percaya diri itu langsung terjun bebas ke Lembah Keputusasaan.",
+      "pause": 0.3
+    },
+    {
+      "id": "sadar",
+      "text": "Di dasar lembah inilah banyak pemula menyerah dan merasa dirinya tidak berbakat, padahal mereka sebenarnya sedang mengalami proses belajar yang wajar.",
+      "pause": 0.3
+    },
+    {
+      "id": "lereng",
+      "text": "Jika kita terus tekun berlatih melewati rasa canggung itu, kita akan mulai mendaki Lereng Pencerahan secara perlahan namun pasti.",
+      "pause": 0.3
+    },
+    {
+      "id": "ahli",
+      "text": "Uniknya, para pakar yang sudah bertahun-tahun mendalami bidangnya justru sering merendah karena mereka sadar betapa luasnya ilmu yang masih tersisa.",
+      "pause": 0.3
+    },
+    {
+      "id": "resep",
+      "text": "Kunci agar tidak terjebak di puncak semu adalah selalu menguji pemahaman lewat praktik nyata dan membuka telinga terhadap masukan orang lain.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Jadi ketika kamu mulai merasa bingung saat mempelajari hal baru, tersenyumlah, karena itu tandanya ilmumu sedang benar-benar bertambah."
+    }
+  ]
+}
+

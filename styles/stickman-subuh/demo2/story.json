@@ -1,0 +1,58 @@
+{
+  "title": "Begadang Scroll HP vs Tidur Tepat Waktu — Apa yang Terjadi pada Otak Saat Jam Tiga Pagi?",
+  "slug": "66_stickman-subuh_demo2",
+  "style": "stickman-subuh",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": { "preset": "lofi", "db": -17 },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pukul dua belas malam: di kamar kiri lampu sudah dipadamkan untuk tidur, sedangkan di kamar kanan wajah masih disorot cahaya biru layar ponsel.",
+      "pause": 0.35
+    },
+    {
+      "id": "melatonin",
+      "text": "Cahaya gelombang biru dari layar ponsel menipu kelenjar pineal di otak sehingga mengira hari masih siang dan menahan produksi hormon melatonin.",
+      "pause": 0.3
+    },
+    {
+      "id": "glimfatik",
+      "text": "Padahal antara pukul sebelas malam hingga tiga dini hari, sistem glimfatik otak sedang bekerja mencuci bersih plak sisa metabolisme seharian.",
+      "pause": 0.3
+    },
+    {
+      "id": "sampah",
+      "text": "Saat kita terus begadang, truk pembersih mikroskopis di dalam otak gagal beroperasi, sehingga racun kelelahan menumpuk di sela-sela sel saraf.",
+      "pause": 0.3
+    },
+    {
+      "id": "subuh",
+      "text": "Akibatnya ketika azan Subuh berkumandang pukul setengah lima pagi, orang yang tidur tepat waktu bangun dengan sel saraf yang segar bugar.",
+      "pause": 0.3
+    },
+    {
+      "id": "kabut",
+      "text": "Sebaliknya, orang yang baru terlelap pukul dua pagi akan bangun dengan kepala berat, emosi mudah meledak, dan kabut otak sepanjang siang.",
+      "pause": 0.3
+    },
+    {
+      "id": "hutang",
+      "text": "Tidur balas dendam di siang hari pun tidak mampu menggantikan kualitas tidur gelombang dalam yang hilang pada tengah malam.",
+      "pause": 0.3
+    },
+    {
+      "id": "aturan",
+      "text": "Mulailah menerapkan jam malam digital satu jam sebelum tidur dengan meletakkan ponsel jauh dari jangkauan tempat tidurmu.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Pagi yang produktif dan Subuh yang khusyuk tidak dimulai saat alarm berbunyi, melainkan dimulai sejak kamu berani menutup layar malam sebelumnya."
+    }
+  ]
+}

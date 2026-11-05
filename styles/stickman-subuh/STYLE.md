@@ -6,33 +6,22 @@ source: custom:stickman-duel-kit
 family: craft
 tech: canvas2d
 music: lofi   voice: el-id-m   captions: clean
-best_for: kebiasaan & disiplin, begadang vs tidur cukup, tahajud vs kesiangan, rutinitas pagi, motivasi santai
+best_for: Disiplin waktu Subuh, perbandingan begadang vs tidur cukup, keheningan tahajud & gelombang otak, serta pembentukan kebiasaan 40 hari
 ---
-# Stickman Subuh
+# Stickman Subuh (`stickman-subuh`)
 
-**Ciri khas (look):** split-screen monokrom (#0D0D0D), dua kamar berdampingan dipisah garis tengah. Properti lengkap:
-kasur + bantal + selimut, nakas + HP menyala, sajadah, kalender dinding HARI 1–40 (halaman sobek), jam digital
-(SUBUH 4:40), jendela malam, pantulan lantai 0.16. Karakter stickman putih minimalist dengan ghosting trail.
-
-**Gerak (motion):** timeline Day 1 → Day 40: tidur di ATAS kasur (offsetY presisi permukaan matras), bangun duduk,
-duduk tepi kasur gosok mata, jalan ke sajadah, takbir → ruku → sujud. Kalender sobek + jam mundur, label berubah
-("MENIT PERTAMA" → "SEBELUM ALARM BERBUNYI"), riak alarm berhenti di klimaks.
-
-**Kenapa menarik:** kontras kiri-kanan yang langsung kebaca: satu disiplin, satu tidak. Progres 40 hari dalam
-13 detik bikin penonton penasaran sampai akhir.
-
-**Cerita yang cocok:**
-- Begadang vs Tidur Cukup: "Jam 12 malam. Satu tidur, satu masih main HP."
-- Tahajud vs Kesiangan: "Jam 3 pagi. Satu bangun, satu tetap tidur."
-- Alarm vs Disiplin: "ALARM YANG SAMA. SUBUH YANG SAMA."
-
-**Rumus hook:** "Jam [X]. Satu [kebiasaan baik], satu [kebiasaan buruk]." / "HARI 1 ... HARI 40 ..."
+**Karakter Unik ("Si Fajar Berpeci" vs "Si Rebahan Malam"):**
+- **Si Fajar Berpeci (`role: 'peci'`)**: Stickman monokrom putih bersih dengan **peci/kopiah berlis emas**, sabuk sarung zamrud (`#4ce0b3`), efek *onion-skin ghost trail* saat melangkah, pantulan cermin di lantai (`0.18` mirror reflection), serta halo cahaya hangat saat ruku dan sujud di atas sajadah.
+- **Si Rebahan Malam (`role: 'sleepy'`)**: Stickman kontras di kamar sebelah dengan rambut acak-acakan bangun tidur, kantung mata lelah, dan sorot cahaya biru layar HP saat begadang.
 
 **Kit API (`styles/stickman-subuh/kit.js`):**
-- `StickmanKit.createFajrScene(kit, { day })`: bangun seluruh scene (header, label, kalender, jam, jendela,
-  nakas, 2 kasur, 2 sajadah, riak, 2 karakter + timeline Day 1→40).
-- Motion: `sleep` (offsetY 10 = permukaan kasur), `wakeUp`, `turnOffAlarm`, `takbir`, `ruku`, `sujud`, `pray` (loop).
-- Props: `bed`, `nightstand` (HP glowing), `prayerMat`, `flipCalendar` (day + fallingPages), `digitalClock`
-  (time + subText), `nightWindow`, `soundwaveRipple`, `typewriterText`.
+- `PAL`, `cam`, `pop`, `pr`, `bg(ctx, t, opts)`
+- `subuhHeader(ctx, tag, mainTitle, subTitle, opts)` — panel atas lengkap dengan Kalender Hari (`H-1` s/d `H-40`) dan Jam Digital (`04:42`)
+- `drawRoomHalf(ctx, side, floorY, opts)` — kamar kiri/kanan dengan jendela bulan sabit, kasur, sajadah, dan riak gelombang alarm
+- `subuhStickman(ctx, x, floorY, pose, opts)` — karakter berpeci (`'peci'`) vs begadang (`'sleepy'`) dengan pose `'sleep'`, `'phone-bed'`, `'wake-sit'`, `'walk'`, `'pray-takbir'`, `'pray-ruku'`, `'pray-sujud'`, lengkap dengan pantulan lantai & *ghosting*
+- `subuhCard(ctx, x, y, w, h, opts)` — kartu metrik neurosains & kebiasaan di bawah lantai reflektif
 
-**Demo:** "Begadang vs Tidur Cukup", "Tahajud vs Kesiangan" — 5 baris, voice el-id-m (ElevenLabs George), musik lofi.
+**Demos:**
+- `demo1` — *Alarm yang Sama, Subuh yang Sama — Bagaimana 40 Hari Mengubah Beban Menjadi Panggilan Hati* (~64 dtk)
+- `demo2` — *Begadang Scroll HP vs Tidur Tepat Waktu — Apa yang Terjadi pada Otak Saat Jam Tiga Pagi?* (~64 dtk)
+- `demo3` — *Keheningan Sepertiga Malam — Sains Gelombang Otak Alfa, Fokus, dan Ketenangan Tahajud* (~65 dtk)

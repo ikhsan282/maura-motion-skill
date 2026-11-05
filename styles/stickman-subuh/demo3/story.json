@@ -1,0 +1,61 @@
+{
+  "title": "Keheningan Sepertiga Malam — Sains Gelombang Otak Alfa, Fokus, dan Ketenangan Tahajud",
+  "slug": "66_stickman-subuh_demo3",
+  "style": "stickman-subuh",
+  "lang": "id",
+  "voice": "el-id-m",
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.35,
+  "tail": 1.6,
+  "pause": 0.25,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa pukul tiga dini hari, saat seluruh kota sedang terlelap dalam keheningan, justru menjadi waktu paling jernih bagi pikiran dan jiwa manusia?",
+      "pause": 0.35
+    },
+    {
+      "id": "sunyi",
+      "text": "Pada sepertiga malam terakhir, kebisingan akustik lingkungan dan paparan notifikasi digital berada di titik paling rendah sepanjang dua puluh empat jam.",
+      "pause": 0.3
+    },
+    {
+      "id": "alfa",
+      "text": "Saat seseorang bangun perlahan setelah tidur cukup lalu mengambil air wudu, gelombang otaknya berada di perbatasan ideal antara gelombang Teta dan Alfa.",
+      "pause": 0.3
+    },
+    {
+      "id": "tahajud",
+      "text": "Dalam kondisi hening tanpa distraksi ini, gerakan ruku dan sujud yang tuma'ninah menurunkan aktivitas saraf simpatis pemicu kecemasan harian.",
+      "say": "Dalam kondisi hening tanpa distraksi ini, gerakan ruku dan sujud yang tumaninah menurunkan aktivitas saraf simpatis pemicu kecemasan harian."
+    },
+    {
+      "id": "kortisol",
+      "text": "Berbagai riset psikoneuroimunologi menunjukkan bahwa rutinitas ibadah malam yang tenang membantu menstabilkan ritme hormon kortisol dan daya tahan tubuh.",
+      "pause": 0.3
+    },
+    {
+      "id": "fokus",
+      "text": "Setelah menunaikan tahajud, tersisa waktu emas menjelang Subuh di mana kemampuan fokus mendalam dan daya ingat otak bekerja tanpa gangguan.",
+      "pause": 0.3
+    },
+    {
+      "id": "kontras",
+      "text": "Bandingkan dengan mereka yang baru terbangun tergesa-gesa saat matahari sudah tinggi: hari langsung dimulai dalam mode reaktif dan terburu-buru.",
+      "pause": 0.3
+    },
+    {
+      "id": "kunci",
+      "text": "Rahasia agar sanggup bangun di sepertiga malam bukanlah memaksakan begadang, melainkan tidur lebih awal dengan niat yang kuat sejak malam hari.",
+      "pause": 0.3
+    },
+    {
+      "id": "akhir",
+      "text": "Siapa yang mampu menaklukkan dinginnya selimut di keheningan sepertiga malam, akan melangkah menghadapi hiruk-pikuk dunia dengan hati yang jauh lebih tenang."
+    }
+  ]
+}
