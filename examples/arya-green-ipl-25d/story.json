@@ -1,0 +1,58 @@
+{
+  "title": "Arya Green IPL — Solusi Cerdas & Transparan Iuran Perumahan Modern (2.5D)",
+  "slug": "arya_green_ipl_25d",
+  "style": "explainer-25d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Masih zaman nagih iuran warga pintu ke pintu pakai buku tulis kusut dan bukti transfer numpuk di chat? Kenalkan: Arya Green IPL!",
+      "say": "Masih zaman nagih iuran warga pintu ke pintu pakai buku tulis kusut dan bukti transfer numpuk di chat? Kenalkan: Arya Green IPL!"
+    },
+    {
+      "id": "tagihan",
+      "text": "Tagihan bulanan dibuat otomatis sesuai tipe rumah warga, lengkap dengan rincian komponen biaya IPL dan notifikasi pengingat jatuh tempo berkala.",
+      "say": "Tagihan bulanan dibuat otomatis sesuai tipe rumah warga, lengkap dengan rincian komponen biaya IPL dan notifikasi pengingat jatuh tempo berkala."
+    },
+    {
+      "id": "qris",
+      "text": "Warga cukup satu klik scan QRIS dinamis dari bank atau e-wallet apa saja tanpa biaya transfer; status lunas seketika dan kwitansi digital resmi langsung terbit!",
+      "say": "Warga cukup satu klik scan QRIS dinamis dari bank atau e-wallet apa saja tanpa biaya transfer; status lunas seketika dan kwitansi digital resmi langsung terbit!"
+    },
+    {
+      "id": "kas",
+      "text": "Setiap pembayaran otomatis tercatat di buku kas digital; laporan arus kas, persetujuan pengeluaran, dan rekap tunggakan tersaji transparan tanpa ada selisih angka.",
+      "say": "Setiap pembayaran otomatis tercatat di buku kas digital; laporan arus kas, persetujuan pengeluaran, dan rekap tunggakan tersaji transparan tanpa ada selisih angka."
+    },
+    {
+      "id": "botwa",
+      "text": "Kian canggih lewat Bot AI WhatsApp dan Portal PWA: kenali unit rumah suami-istri otomatis, cek tagihan, minta QRIS instan, pantau kas, lapor aduan fasilitas, hingga cek agenda warga cukup dari chat!",
+      "say": "Kian canggih lewat Bot AI WhatsApp dan Portal PWA: kenali unit rumah suami-istri otomatis, cek tagihan, minta QRIS instan, pantau kas, lapor aduan fasilitas, hingga cek agenda warga cukup dari chat!"
+    },
+    {
+      "id": "bendahara",
+      "text": "Bagi Bendahara, tidak ada lagi pusing mencocokkan mutasi bank berjam-jam: verifikasi pembayaran sekali klik, pantau tunggakan otomatis, dan laporan kas rapi siap di-export ke Excel!",
+      "say": "Bagi Bendahara, tidak ada lagi pusing mencocokkan mutasi bank berjam-jam: verifikasi pembayaran sekali klik, pantau tunggakan otomatis, dan laporan kas rapi siap di-export ke Excel!"
+    },
+    {
+      "id": "kuis",
+      "text": "Kuis lingkungan 2.5D: apa penyebab utama kas RT sering dicurigai warga? A: Laporan manual tidak transparan, B: Kwitansi sering tercecer, atau C: Semua benar?",
+      "say": "Kuis lingkungan 2.5D: apa penyebab utama kas RT sering dicurigai warga? A: Laporan manual tidak transparan, B: Kwitansi sering tercecer, atau C: Semua benar?"
+    },
+    {
+      "id": "jawaban",
+      "text": "Jawabannya C: semua benar! Hentikan keributan kas lingkungan dan beralih ke sistem digital modern dengan Arya Green IPL!",
+      "say": "Jawabannya C: semua benar! Hentikan keributan kas lingkungan dan beralih ke sistem digital modern dengan Arya Green IPL!"
+    }
+  ]
+}
