@@ -1,0 +1,59 @@
+{
+  "title": "Dopamin & Jebakan Algoritma — Cara Layar Kaca Membajak Otakmu",
+  "slug": "synthwave_jebakan_algoritma",
+  "style": "synthwave-neon",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "synthwave",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa jempolmu seolah bergerak sendiri membuka aplikasi media sosial, bahkan saat kamu baru saja meletakkan ponsel semenit lalu?",
+      "say": "Mengapa jempolmu seolah bergerak sendiri membuka aplikasi media sosial, bahkan saat kamu baru saja meletakkan ponsel semenit lalu?"
+    },
+    {
+      "id": "masalah",
+      "text": "Itu bukan kelemahan tekadmu; di balik layar kaca, ribuan ilmuwan data merancang algoritma canggih untuk meretas kimiawi otakmu.",
+      "say": "Itu bukan kelemahan tekadmu; di balik layar kaca, ribuan ilmuwan data merancang algoritma canggih untuk meretas kimiawi otakmu."
+    },
+    {
+      "id": "kasino",
+      "text": "Algoritma modern meniru persis cara kerja mesin judi kasino: hadiah tak terduga yang memicu rasa penasaran tanpa henti.",
+      "say": "Algoritma modern meniru persis cara kerja mesin judi kasino: hadiah tak terduga yang memicu rasa penasaran tanpa henti."
+    },
+    {
+      "id": "notifikasi",
+      "text": "Titik merah notifikasi dan bunyi denting ponsel sengaja dirancang sebagai lonceng alarm biologis yang memancing hormon dopaminmu.",
+      "say": "Titik merah notifikasi dan bunyi denting ponsel sengaja dirancang sebagai lonceng alarm biologis yang memancing hormon dopaminmu."
+    },
+    {
+      "id": "lingkaran",
+      "text": "Setiap sapuan layar menciptakan siklus tak berujung: rasa gelisah sesaat, sentuhan jari, lonjakan dopamin singkat, lalu hampa kembali.",
+      "say": "Setiap sapuan layar menciptakan siklus tak berujung: rasa gelisah sesaat, sentuhan jari, lonjakan dopamin singkat, lalu hampa kembali."
+    },
+    {
+      "id": "bahaya",
+      "text": "Akibatnya, daya konsentrasi manusia hancur terpotong-potong dan kemampuan berpikir jernih terkikis oleh kecanduan stimulus instan.",
+      "say": "Akibatnya, daya konsentrasi manusia hancur terpotong-potong dan kemampuan berpikir jernih terkikis oleh kecanduan stimulus instan."
+    },
+    {
+      "id": "rebut",
+      "text": "Rebut kembali kedaulatan pikiranmu: matikan notifikasi yang tidak penting dan buat zona bebas ponsel satu jam sebelum tidur.",
+      "say": "Rebut kembali kedaulatan pikiranmu: matikan notifikasi yang tidak penting dan buat zona bebas ponsel satu jam sebelum tidur."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan biarkan perhatianmu dijual sebagai komoditas; jadilah tuan yang mengendalikan teknologi, bukan budak dari layarmu!",
+      "say": "Jangan biarkan perhatianmu dijual sebagai komoditas; jadilah tuan yang mengendalikan teknologi, bukan budak dari layarmu!"
+    }
+  ]
+}
+

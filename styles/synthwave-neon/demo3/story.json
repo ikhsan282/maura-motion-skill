@@ -1,0 +1,59 @@
+{
+  "title": "Revolusi Kriptografi & Privasi Digital — Perisai Matematika Penjaga Dunia Modern",
+  "slug": "synthwave_revolusi_kriptografi",
+  "style": "synthwave-neon",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "synthwave",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa kita bisa berbelanja online dan mentransfer uang lewat internet publik tanpa takut disadap oleh para peretas jahat?",
+      "say": "Mengapa kita bisa berbelanja online dan mentransfer uang lewat internet publik tanpa takut disadap oleh para peretas jahat?"
+    },
+    {
+      "id": "masalah",
+      "text": "Padahal di dunia siber, seluruh kabel serat optik bawah laut dan frekuensi nirkabel terbuka bebas bagi siapa saja yang ingin mencuri datamu.",
+      "say": "Padahal di dunia siber, seluruh kabel serat optik bawah laut dan frekuensi nirkabel terbuka bebas bagi siapa saja yang ingin mencuri datamu."
+    },
+    {
+      "id": "revolusi",
+      "text": "Penyelamat peradaban modern kita adalah keajaiban matematika murni: Kriptografi Kunci Publik yang dirumuskan tahun 1970-an!",
+      "say": "Penyelamat peradaban modern kita adalah keajaiban matematika murni: Kriptografi Kunci Publik yang dirumuskan tahun 1970-an!"
+    },
+    {
+      "id": "gembok",
+      "text": "Bayangkan kamu membagikan gembok terbuka kepada seluruh dunia, namun anak kuncinya tetap kamu simpan aman di dalam sakumu.",
+      "say": "Bayangkan kamu membagikan gembok terbuka kepada seluruh dunia, namun anak kuncinya tetap kamu simpan aman di dalam sakumu."
+    },
+    {
+      "id": "enkripsi",
+      "text": "Siapapun bisa mengunci pesan rahasia dengan gembok publikmu, namun hanya anak kunci pribadimu yang mampu membuka gembok tersebut.",
+      "say": "Siapapun bisa mengunci pesan rahasia dengan gembok publikmu, namun hanya anak kunci pribadimu yang mampu membuka gembok tersebut."
+    },
+    {
+      "id": "matematika",
+      "text": "Kekuatan perisai ini bertumpu pada bilangan prima raksasa: butuh jutaan tahun bagi superkomputer tercepat untuk memecahkan sandinya.",
+      "say": "Kekuatan perisai ini bertumpu pada bilangan prima raksasa: butuh jutaan tahun bagi superkomputer tercepat untuk memecahkan sandinya."
+    },
+    {
+      "id": "fondasi",
+      "text": "Tanpa enkripsi matematika ini, seluruh sistem perbankan global, privasi pesanmu, dan perdagangan internet akan hancur dalam hitungan detik.",
+      "say": "Tanpa enkripsi matematika ini, seluruh sistem perbankan global, privasi pesanmu, dan perdagangan internet akan hancur dalam hitungan detik."
+    },
+    {
+      "id": "moral",
+      "text": "Di rimba belantara dunia digital yang liar, sebaris kode enkripsi adalah benteng pelindung terakhir kebebasan dan privasimu!",
+      "say": "Di rimba belantara dunia digital yang liar, sebaris kode enkripsi adalah benteng pelindung terakhir kebebasan dan privasimu!"
+    }
+  ]
+}
+

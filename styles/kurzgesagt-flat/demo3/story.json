@@ -1,0 +1,59 @@
+{
+  "title": "Paradoks Kesepian — Mengapa Otak Prasejarah Membenci Isolasi Sosial?",
+  "slug": "kurzgesagt_paradoks_kesepian",
+  "style": "kurzgesagt-flat",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa kesepian terasa begitu menyakitkan secara fisik, seolah ada rasa hampa yang meremukkan dadamu?",
+      "say": "Mengapa kesepian terasa begitu menyakitkan secara fisik, seolah ada rasa hampa yang meremukkan dadamu?"
+    },
+    {
+      "id": "purba",
+      "text": "Ratusan ribu tahun lalu di savana Afrika, bertahan hidup sendirian adalah vonis mati instan bagi manusia purba.",
+      "say": "Ratusan ribu tahun lalu di savana Afrika, bertahan hidup sendirian adalah vonis mati instan bagi manusia purba."
+    },
+    {
+      "id": "ancaman",
+      "text": "Tanpa perlindungan klan, manusia purba sama sekali tidak berdaya menghadapi dinginnya malam dan terkaman predator buas.",
+      "say": "Tanpa perlindungan klan, manusia purba sama sekali tidak berdaya menghadapi dinginnya malam dan terkaman predator buas."
+    },
+    {
+      "id": "alarm",
+      "text": "Maka evolusi menanamkan kesepian bukan sebagai kelemahan, melainkan sebagai sistem alarm darurat biologis yang setara dengan rasa lapar atau haus!",
+      "say": "Maka evolusi menanamkan kesepian bukan sebagai kelemahan, melainkan sebagai sistem alarm darurat biologis yang setara dengan rasa lapar atau haus!"
+    },
+    {
+      "id": "bahaya",
+      "text": "Saat otak mendeteksi isolasi, tubuhmu otomatis masuk ke mode bertahan hidup ekstrem: memompa hormon stres kortisol dan merusak imunitas.",
+      "say": "Saat otak mendeteksi isolasi, tubuhmu otomatis masuk ke mode bertahan hidup ekstrem: memompa hormon stres kortisol dan merusak imunitas."
+    },
+    {
+      "id": "modern",
+      "text": "Di dunia modern, kita tinggal di kota padat dan terhubung lewat layar kaca, namun jutaan orang justru merasa semakin terasing.",
+      "say": "Di dunia modern, kita tinggal di kota padat dan terhubung lewat layar kaca, namun jutaan orang justru merasa semakin terasing."
+    },
+    {
+      "id": "solusi",
+      "text": "Otak biologis kita tidak bisa ditipu oleh notifikasi media sosial; ia mendambakan tatapan mata, tawa bersama, dan kehangatan koneksi nyata.",
+      "say": "Otak biologis kita tidak bisa ditipu oleh notifikasi media sosial; ia mendambakan tatapan mata, tawa bersama, dan kehangatan koneksi nyata."
+    },
+    {
+      "id": "moral",
+      "text": "Kesepian bukan tanda bahwa kamu cacat; ia hanyalah panggilan alami tubuhmu yang berbisik: cari klanmu dan pulanglah ke sesama.",
+      "say": "Kesepian bukan tanda bahwa kamu cacat; ia hanyalah panggilan alami tubuhmu yang berbisik: cari klanmu dan pulanglah ke sesama."
+    }
+  ]
+}
+

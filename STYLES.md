@@ -1,6 +1,6 @@
 # Maura Motion: daftar gaya
 
-77 gaya. Sebut gaya dengan nama atau nomornya ("gaya 11", "wayang kulit"). Setiap gaya punya `styles/<id>/STYLE.md` (ciri khas, gerak, rumus hook, API kit) dan contoh video di `styles/<id>/demo/out/`.
+82 gaya. Sebut gaya dengan nama atau nomornya ("gaya 11", "wayang kulit"). Setiap gaya punya `styles/<id>/STYLE.md` (ciri khas, gerak, rumus hook, API kit) dan contoh video di `styles/<id>/demo/out/`.
 
 Sumber: **D** = 25 gaya di Drive, **SA** = Shorts Animator (oil/watercolour/gouache/pastel/ink), **GH** = gaya visual dari 703 prompt *awesome-opus5-5-videos*, **C** = Custom Maura Motion kit.
 
@@ -84,14 +84,18 @@ Sumber: **D** = 25 gaya di Drive, **SA** = Shorts Animator (oil/watercolour/goua
 | 76 | **Stickman Minimal Dark** | stickman-minimal-dark | C | 2D/OLED | regulasi emosi, stop overthinking 2 pagi, lingkaran kendali Stoik | Kamu Bukan Pemalas (Regulasi Emosi) (64 dtk) | lofi · el-id-m |
 | 77 | **Stickman Picturebook** | `stickman-picturebook` | C | Kriya | dongeng kebijaksanaan, self-compassion, metafora pertumbuhan | Dongeng Batu yang Menyusut (64 dtk) | warm · el-id-m |
 | 78 | **Stickman OverSimplified** | `stickman-oversimplified` | C | Sejarah Pop | sejarah penemuan sains, biografi ilmuwan muda, eksperimen laboratorium yang mengubah dunia | Edmond Becquerel 1839 (Listrik Surya) (64 dtk) | lofi · el-id-m |
+| 79 | **Kurzgesagt Flat Motion** | `kurzgesagt-flat` | C | 2D Sains | sains populer mendalam, astrofisika, biologi neurologi, evolusi manusia, eksistensialisme positif | Sistem Pembersih Sampah Otak (68 dtk) | ambient · el-id-m |
+| 80 | **Whiteboard Explainer Pro** | `whiteboard-explainer` | C | Kriya/Doodle | metode belajar & sains berpikir, produktivitas, psikologi kognitif, ringkasan buku bisnis | Teknik Feynman (64 dtk) | lofi · el-id-m |
+| 81 | **Isometric Low-Poly 3D** | `isometric-lowpoly` | C | 3D/Teknik | arsitektur sistem, miniatur mesin produktivitas, struktur bertingkat, perencanaan finansial | Pabrik Kebiasaan Otomatis (66 dtk) | tech · el-id-m |
+| 82 | **Cyberpunk Retro Synthwave** | `synthwave-neon` | C | Retro Digital | keamanan siber, sains AI, psikologi algoritma layar kaca, matematika kriptografi | Dopamin & Jebakan Algoritma (64 dtk) | synthwave · el-id-m |
 
 ## Memilih gaya cepat
 
 - **Legenda & budaya Nusantara:** wayang-kulit, wayang-golek, wayang-beber, batik-hidup, kertas-guntingan, buku-pop-up, kotak-cahaya-kertas, lukis-pedesaan, cat-air
 - **Dongeng anak:** boneka-rajut, clay-stop-motion, gouache-dongeng, pastel-krayon, kartun-jadul, origami, stickman-picturebook
-- **Sejarah & dokumenter:** noir-dokumenter, perkamen-ukiran, lukisan-minyak, trailer-gelap, vhs-arsip, scrapbook, sumi-e, lukisan-gua-purba, vas-yunani
-- **Sains & cara kerja:** flat-vector, blueprint, cutaway-3d, math-3b1b, skala-kosmik, partikel, papan-tulis-kapur, sketsa-pensil
-- **Teknologi & produk:** product-light, dark-glow-ui, ui-morph, terminal-ascii, isometrik, chrome-y2k
+- **Sejarah & dokumenter:** noir-dokumenter, perkamen-ukiran, lukisan-minyak, trailer-gelap, vhs-arsip, scrapbook, sumi-e, lukisan-gua-purba, vas-yunani, stickman-oversimplified
+- **Sains & cara kerja:** isometric-lowpoly, whiteboard-explainer, kurzgesagt-flat, flat-vector, blueprint, cutaway-3d, math-3b1b, skala-kosmik, partikel, papan-tulis-kapur, sketsa-pensil
+- **Teknologi & produk:** synthwave-neon, product-light, dark-glow-ui, ui-morph, terminal-ascii, isometrik, chrome-y2k
 - **Uang, psikologi, kebiasaan & cerita sosial:** stickman-doodle, stickman-subuh, stickman-pelukis, stickman-kisah, stickman-beanie, stickman-duo, stickman-lecture, stickman-minimal-dark, neo-brutalist, pop-art, kinetic-type, garis-tunggal, infografis-data
-- **Hype & aksi:** manga-action, gacha-3d, kartun-outline-tebal, synthwave, pixel-retro, hud-showreel, stickman-graffiti
+- **Hype & aksi:** synthwave-neon, manga-action, gacha-3d, kartun-outline-tebal, synthwave, pixel-retro, hud-showreel, stickman-graffiti
 - **Emosional & sinematik:** anime, kartun-3d-sinematik, dunia-3d-painterly, diorama-miniatur, tinta-novel-grafis, editorial-serif, stickman-cinematic

@@ -1,0 +1,59 @@
+{
+  "title": "Hukum Moore & Ledakan Komputasi — Dari Tabung Hampa ke Lompatan AI Super",
+  "slug": "synthwave_hukum_moore",
+  "style": "synthwave-neon",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "synthwave",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tahukah kamu bahwa ponsel murah di sakumu memiliki daya komputasi jutaan kali lipat lebih kuat daripada komputer Apollo 11 yang pergi ke Bulan?",
+      "say": "Tahukah kamu bahwa ponsel murah di sakumu memiliki daya komputasi jutaan kali lipat lebih kuat daripada komputer Apollo 11 yang pergi ke Bulan?"
+    },
+    {
+      "id": "hukum",
+      "text": "Keajaiban teknologi ini dipicu oleh Hukum Moore: jumlah transistor dalam chip silikon berlipat ganda setiap dua tahun dengan harga yang semakin murah.",
+      "say": "Keajaiban teknologi ini dipicu oleh Hukum Moore: jumlah transistor dalam chip silikon berlipat ganda setiap dua tahun dengan harga yang semakin murah."
+    },
+    {
+      "id": "eksponensial",
+      "text": "Otak kita terbiasa berpikir linier, padahal komputasi melesat eksponensial: dari ribuan, jutaan, hingga kini miliaran transistor dalam satu keping kuku.",
+      "say": "Otak kita terbiasa berpikir linier, padahal komputasi melesat eksponensial: dari ribuan, jutaan, hingga kini miliaran transistor dalam satu keping kuku."
+    },
+    {
+      "id": "perjalanan",
+      "text": "Komputer purba tahun 1950-an membutuhkan ruang sebesar gedung olahraga, namun kini chip mikro superkomputer muat di ujung sebutir beras.",
+      "say": "Komputer purba tahun 1950-an membutuhkan ruang sebesar gedung olahraga, namun kini chip mikro superkomputer muat di ujung sebutir beras."
+    },
+    {
+      "id": "ledakan",
+      "text": "Ledakan kekuatan pemrosesan inilah yang melahirkan era kecerdasan buatan modern: melatih miliaran parameter bahasa dalam hitungan detik.",
+      "say": "Ledakan kekuatan pemrosesan inilah yang melahirkan era kecerdasan buatan modern: melatih miliaran parameter bahasa dalam hitungan detik."
+    },
+    {
+      "id": "batas",
+      "text": "Namun silikon mulai membentur batas fisik kuantum: ukuran transistor telah sekecil untaian atom di mana elektron mulai tembus pandang.",
+      "say": "Namun silikon mulai membentur batas fisik kuantum: ukuran transistor telah sekecil untaian atom di mana elektron mulai tembus pandang."
+    },
+    {
+      "id": "kuantum",
+      "text": "Maka gerbang masa depan terbuka: komputasi kuantum dan sirkuit optik cahaya bersiap menggantikan chip silikon tradisional.",
+      "say": "Maka gerbang masa depan terbuka: komputasi kuantum dan sirkuit optik cahaya bersiap menggantikan chip silikon tradisional."
+    },
+    {
+      "id": "moral",
+      "text": "Kita bukan sekadar menciptakan mesin pintar; kita sedang melipatgandakan batas terjauh dari rasa ingin tahu manusia!",
+      "say": "Kita bukan sekadar menciptakan mesin pintar; kita sedang melipatgandakan batas terjauh dari rasa ingin tahu manusia!"
+    }
+  ]
+}
+

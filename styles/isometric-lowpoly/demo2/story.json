@@ -1,0 +1,59 @@
+{
+  "title": "Benteng Time-Blocking — Cara Melindungi Fokus dari Tsunami Interupsi",
+  "slug": "isometric_benteng_timeblocking",
+  "style": "isometric-lowpoly",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu merasa hari kerjamu baru saja dimulai, namun tiba-tiba jam lima sore sudah tiba tanpa ada satupun target besar yang tuntas?",
+      "say": "Pernahkah kamu merasa hari kerjamu baru saja dimulai, namun tiba-tiba jam lima sore sudah tiba tanpa ada satupun target besar yang tuntas?"
+    },
+    {
+      "id": "masalah",
+      "text": "Daftar to-do list biasa sebenarnya adalah jebakan: ia membiarkan setiap pesan masuk dan rapat mendadak membajak seluruh energimu.",
+      "say": "Daftar to-do list biasa sebenarnya adalah jebakan: ia membiarkan setiap pesan masuk dan rapat mendadak membajak seluruh energimu."
+    },
+    {
+      "id": "benteng",
+      "text": "Time-Blocking mengubah total caramu bekerja: alih-alih pasif membuat daftar, kamu membangun benteng waktu tiga dimensi di kalendermu!",
+      "say": "Time-Blocking mengubah total caramu bekerja: alih-alih pasif membuat daftar, kamu membangun benteng waktu tiga dimensi di kalendermu!"
+    },
+    {
+      "id": "blok1",
+      "text": "Blok pertama: Zona Deep Work. Kunci dua jam di pagi hari untuk tugas tersulitmu; matikan seluruh notifikasi dan pasang tanda dilarang mengganggu.",
+      "say": "Blok pertama: Zona Deep Work. Kunci dua jam di pagi hari untuk tugas tersulitmu; matikan seluruh notifikasi dan pasang tanda dilarang mengganggu."
+    },
+    {
+      "id": "blok2",
+      "text": "Blok kedua: Zona Reaktif. Kumpulkan seluruh urusan email, pesan singkat, dan telepon dalam satu waktu padat di siang hari.",
+      "say": "Blok kedua: Zona Reaktif. Kumpulkan seluruh urusan email, pesan singkat, dan telepon dalam satu waktu padat di siang hari."
+    },
+    {
+      "id": "blok3",
+      "text": "Blok ketiga: Zona Penyangga. Sediakan waktu jeda tiga puluh menit antar-kegiatan agar jadwalmu tidak hancur saat ada hal tak terduga.",
+      "say": "Blok ketiga: Zona Penyangga. Sediakan waktu jeda tiga puluh menit antar-kegiatan agar jadwalmu tidak hancur saat ada hal tak terduga."
+    },
+    {
+      "id": "hasil",
+      "text": "Hasilnya: kamu bukan lagi pemadam kebakaran yang panik dikejar waktu, melainkan kapten yang memegang penuh kendali harinya.",
+      "say": "Hasilnya: kamu bukan lagi pemadam kebakaran yang panik dikejar waktu, melainkan kapten yang memegang penuh kendali harinya."
+    },
+    {
+      "id": "moral",
+      "text": "Jika kamu tidak memblokir waktumu untuk hal penting, orang lain yang akan mengisi hari-harimu dengan agenda mereka!",
+      "say": "Jika kamu tidak memblokir waktumu untuk hal penting, orang lain yang akan mengisi hari-harimu dengan agenda mereka!"
+    }
+  ]
+}
+

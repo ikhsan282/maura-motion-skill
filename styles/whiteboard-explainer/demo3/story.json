@@ -1,0 +1,59 @@
+{
+  "title": "Efek Zeigarnik — Mengapa Tugas Menggantung Menguras Energi Mentalmu?",
+  "slug": "whiteboard_efek_zeigarnik",
+  "style": "whiteboard-explainer",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu berniat tidur nyenyak di malam hari, namun otakmu justru terus memutar ulang daftar tugas yang belum selesai?",
+      "say": "Pernahkah kamu berniat tidur nyenyak di malam hari, namun otakmu justru terus memutar ulang daftar tugas yang belum selesai?"
+    },
+    {
+      "id": "masalah",
+      "text": "Kita sering kehabisan energi bukan karena kelelahan fisik, melainkan karena otak kita menahan puluhan tab mental yang terbuka sekaligus.",
+      "say": "Kita sering kehabisan energi bukan karena kelelahan fisik, melainkan karena otak kita menahan puluhan tab mental yang terbuka sekaligus."
+    },
+    {
+      "id": "zeigarnik",
+      "text": "Psikolog Bluma Zeigarnik menemukan fenomena ini: otak manusia secara biologis dirancang untuk terus terobsesi pada tugas yang menggantung!",
+      "say": "Psikolog Bluma Zeigarnik menemukan fenomena ini: otak manusia secara biologis dirancang untuk terus terobsesi pada tugas yang menggantung!"
+    },
+    {
+      "id": "kafe",
+      "text": "Zeigarnik mengamati pelayan kafe yang hafal puluhan pesanan rumit, namun langsung melupakan segalanya begitu bon meja dibayar lunas.",
+      "say": "Zeigarnik mengamati pelayan kafe yang hafal puluhan pesanan rumit, namun langsung melupakan segalanya begitu bon meja dibayar lunas."
+    },
+    {
+      "id": "bahaya",
+      "text": "Tugas yang belum selesai menciptakan ketegangan kognitif di memori kerja, memicu kecemasan dan kelelahan mental tanpa kamu sadari.",
+      "say": "Tugas yang belum selesai menciptakan ketegangan kognitif di memori kerja, memicu kecemasan dan kelelahan mental tanpa kamu sadari."
+    },
+    {
+      "id": "solusi",
+      "text": "Kabar baiknya, kamu tidak harus menyelesaikan seluruh pekerjaan raksasa itu malam ini juga untuk menenangkan pikiranmu.",
+      "say": "Kabar baiknya, kamu tidak harus menyelesaikan seluruh pekerjaan raksasa itu malam ini juga untuk menenangkan pikiranmu."
+    },
+    {
+      "id": "tuliskan",
+      "text": "Cukup tuliskan satu tindakan kecil pertama yang akan kamu lakukan besok pagi; otakmu akan merasa tugas itu aman dan berhenti panik.",
+      "say": "Cukup tuliskan satu tindakan kecil pertama yang akan kamu lakukan besok pagi; otakmu akan merasa tugas itu aman dan berhenti panik."
+    },
+    {
+      "id": "moral",
+      "text": "Keluarkan beban dari kepalamu ke atas kertas, tutup tab mentalmu malam ini, dan berikan dirimu hak untuk istirahat tenang!",
+      "say": "Keluarkan beban dari kepalamu ke atas kertas, tutup tab mentalmu malam ini, dan berikan dirimu hak untuk istirahat tenang!"
+    }
+  ]
+}
+

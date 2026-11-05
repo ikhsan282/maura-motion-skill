@@ -1,0 +1,59 @@
+{
+  "title": "Prinsip Pareto 80/20 — Cara Bekerja Lebih Sedikit dengan Hasil Maksimal",
+  "slug": "whiteboard_prinsip_pareto",
+  "style": "whiteboard-explainer",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa kita sering merasa lelah luar biasa bekerja dari pagi hingga larut malam, namun hasil yang didapat terasa sangat kecil?",
+      "say": "Mengapa kita sering merasa lelah luar biasa bekerja dari pagi hingga larut malam, namun hasil yang didapat terasa sangat kecil?"
+    },
+    {
+      "id": "masalah",
+      "text": "Kita terjebak dalam jebakan kesibukan semu: memperlakukan semua tugas seolah sama pentingnya dan mencoba mengerjakan semuanya.",
+      "say": "Kita terjebak dalam jebakan kesibukan semu: memperlakukan semua tugas seolah sama pentingnya dan mencoba mengerjakan semuanya."
+    },
+    {
+      "id": "pareto",
+      "text": "Seorang ekonom bernama Vilfredo Pareto membongkar hukum alamiah ini: delapan puluh persen hasilmu lahir dari dua puluh persen tindakan kunci!",
+      "say": "Seorang ekonom bernama Vilfredo Pareto membongkar hukum alamiah ini: delapan puluh persen hasilmu lahir dari dua puluh persen tindakan kunci!"
+    },
+    {
+      "id": "analisis",
+      "text": "Perhatikan bisnismu: 80 persen keuntungan biasanya disumbang oleh 20 persen pelanggan setia yang paling puas.",
+      "say": "Perhatikan bisnismu: delapan puluh persen keuntungan biasanya disumbang oleh dua puluh persen pelanggan setia yang paling puas."
+    },
+    {
+      "id": "distraksi",
+      "text": "Sebaliknya, 80 persen kecemasan dan waktu terbuangmu dipicu oleh 20 persen kebiasaan buruk, seperti terus mengecek media sosial.",
+      "say": "Sebaliknya, delapan puluh persen kecemasan dan waktu terbuangmu dipicu oleh dua puluh persen kebiasaan buruk, seperti terus mengecek media sosial."
+    },
+    {
+      "id": "fokus",
+      "text": "Rahasia produktivitas orang sukses bukanlah menambah jam lembur, melainkan memangkas secara kejam tugas-tugas yang tidak berdampak besar.",
+      "say": "Rahasia produktivitas orang sukses bukanlah menambah jam lembur, melainkan memangkas secara kejam tugas-tugas yang tidak berdampak besar."
+    },
+    {
+      "id": "eksekusi",
+      "text": "Tentukan dua puluh persen prioritas terpentingmu setiap pagi, selesaikan sebelum makan siang, dan saksikan produktivitasmu melesat tajam.",
+      "say": "Tentukan dua puluh persen prioritas terpentingmu setiap pagi, selesaikan sebelum makan siang, dan saksikan produktivitasmu melesat tajam."
+    },
+    {
+      "id": "moral",
+      "text": "Berhentilah membanggakan diri sebagai orang yang selalu sibuk; jadilah orang yang efektif dan menghasilkan dampak nyata!",
+      "say": "Berhentilah membanggakan diri sebagai orang yang selalu sibuk; jadilah orang yang efektif dan menghasilkan dampak nyata!"
+    }
+  ]
+}
+

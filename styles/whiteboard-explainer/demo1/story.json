@@ -1,0 +1,59 @@
+{
+  "title": "Teknik Feynman — Cara Memahami Konsep Apapun 10x Lebih Cepat",
+  "slug": "whiteboard_teknik_feynman",
+  "style": "whiteboard-explainer",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa kita sering merasa sudah belajar berjam-jam, namun saat ditanya materinya kepala kita langsung mendadak kosong?",
+      "say": "Mengapa kita sering merasa sudah belajar berjam-jam, namun saat ditanya materinya kepala kita langsung mendadak kosong?"
+    },
+    {
+      "id": "masalah",
+      "text": "Itulah yang disebut Ilusi Kompetensi: otak kita mengira sudah paham hanya karena kita membaca ulang dan menggarisbawahi buku.",
+      "say": "Itulah yang disebut Ilusi Kompetensi: otak kita mengira sudah paham hanya karena kita membaca ulang dan menggarisbawahi buku."
+    },
+    {
+      "id": "feynman",
+      "text": "Fisikawan jenius Richard Feynman membongkar rahasianya: jika kamu tidak bisa menjelaskannya dengan bahasa sederhana, kamu belum paham!",
+      "say": "Fisikawan jenius Richard Feynman membongkar rahasianya: jika kamu tidak bisa menjelaskannya dengan bahasa sederhana, kamu belum paham!"
+    },
+    {
+      "id": "langkah1",
+      "text": "Langkah pertama: tuliskan topik yang ingin kamu kuasai di atas kertas kosong atau papan tulis dengan huruf tebal.",
+      "say": "Langkah pertama: tuliskan topik yang ingin kamu kuasai di atas kertas kosong atau papan tulis dengan huruf tebal."
+    },
+    {
+      "id": "langkah2",
+      "text": "Langkah kedua: ajarkan materi tersebut seolah-olah kamu sedang menjelaskannya kepada anak kecil berusia 12 tahun tanpa istilah asing rumit.",
+      "say": "Langkah kedua: ajarkan materi tersebut seolah-olah kamu sedang menjelaskannya kepada anak kecil berusia dua belas tahun tanpa istilah asing rumit."
+    },
+    {
+      "id": "langkah3",
+      "text": "Langkah ketiga: saat kamu mulai terbata-bata atau bingung, tandai titik tersebut! Di sanalah letak lubang pemahaman yang harus kamu baca ulang.",
+      "say": "Langkah ketiga: saat kamu mulai terbata-bata atau bingung, tandai titik tersebut! Di sanalah letak lubang pemahaman yang harus kamu baca ulang."
+    },
+    {
+      "id": "langkah4",
+      "text": "Langkah keempat: sederhanakan lagi menggunakan perumpamaan dan analogi nyata hingga semuanya terdengar sangat mudah dipahami.",
+      "say": "Langkah keempat: sederhanakan lagi menggunakan perumpamaan dan analogi nyata hingga semuanya terdengar sangat mudah dipahami."
+    },
+    {
+      "id": "moral",
+      "text": "Kecerdasan sejati bukanlah menghafal jargon rumit, melainkan kemampuan mengubah hal rumit menjadi pemahaman yang jernih!",
+      "say": "Kecerdasan sejati bukanlah menghafal jargon rumit, melainkan kemampuan mengubah hal rumit menjadi pemahaman yang jernih!"
+    }
+  ]
+}
+

@@ -1,0 +1,59 @@
+{
+  "title": "Piramida Keuangan Pribadi — Cara Membangun Benteng Finansial Anti-Runtuh",
+  "slug": "isometric_piramida_keuangan",
+  "style": "isometric-lowpoly",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa banyak orang berpenghasilan besar tetap merasa cemas setiap akhir bulan dan takut jatuh miskin dalam sekejap?",
+      "say": "Mengapa banyak orang berpenghasilan besar tetap merasa cemas setiap akhir bulan dan takut jatuh miskin dalam sekejap?"
+    },
+    {
+      "id": "masalah",
+      "text": "Mereka terjebak nafsu cepat kaya: terburu-buru investasi berisiko tinggi tanpa memiliki benteng pertahanan paling dasar.",
+      "say": "Mereka terjebak nafsu cepat kaya: terburu-buru investasi berisiko tinggi tanpa memiliki benteng pertahanan paling dasar."
+    },
+    {
+      "id": "piramida",
+      "text": "Keuangan pribadi mirip seperti membangun gedung pencakar langit: kekuatannya bukan pada atapnya, melainkan pada kokohnya fondasi bawah!",
+      "say": "Keuangan pribadi mirip seperti membangun gedung pencakar langit: kekuatannya bukan pada atapnya, melainkan pada kokohnya fondasi bawah!"
+    },
+    {
+      "id": "tingkat1",
+      "text": "Lantai pertama: Pondasi Arus Kas. Pastikan pengeluaranmu selalu lebih kecil dari pemasukan dan lunasi seluruh utang konsumtif.",
+      "say": "Lantai pertama: Pondasi Arus Kas. Pastikan pengeluaranmu selalu lebih kecil dari pemasukan dan lunasi seluruh utang konsumtif."
+    },
+    {
+      "id": "tingkat2",
+      "text": "Lantai kedua: Benteng Dana Darurat. Kunci tiga hingga enam bulan biaya hidup dalam tabungan cair yang aman dari godaan belanja.",
+      "say": "Lantai kedua: Benteng Dana Darurat. Kunci tiga hingga enam bulan biaya hidup dalam tabungan cair yang aman dari godaan belanja."
+    },
+    {
+      "id": "tingkat3",
+      "text": "Lantai ketiga: Perisai Proteksi Asuransi. Lindungi dirimu agar tabungan bertahun-tahun tidak lenyap dalam semalam akibat biaya rumah sakit.",
+      "say": "Lantai ketiga: Perisai Proteksi Asuransi. Lindungi dirimu agar tabungan bertahun-tahun tidak lenyap dalam semalam akibat biaya rumah sakit."
+    },
+    {
+      "id": "tingkat4",
+      "text": "Lantai teratas: Mesin Investasi Majemuk. Di sinilah uangmu mulai bekerja menghasilkan aset pasif dan bunga majemuk tanpa henti.",
+      "say": "Lantai teratas: Mesin Investasi Majemuk. Di sinilah uangmu mulai bekerja menghasilkan aset pasif dan bunga majemuk tanpa henti."
+    },
+    {
+      "id": "moral",
+      "text": "Kekayaan sejati bukanlah pamer kemewahan semu; ia adalah tidur nyenyak di atas fondasi finansial yang tak tergoyahkan!",
+      "say": "Kekayaan sejati bukanlah pamer kemewahan semu; ia adalah tidur nyenyak di atas fondasi finansial yang tak tergoyahkan!"
+    }
+  ]
+}
+

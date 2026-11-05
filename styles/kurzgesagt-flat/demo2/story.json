@@ -1,0 +1,59 @@
+{
+  "title": "Skala Waktu Kosmik — Mengapa Peradaban Manusia Hanyalah Kedipan Mata di Alam Semesta?",
+  "slug": "kurzgesagt_skala_waktu_kosmik",
+  "style": "kurzgesagt-flat",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bayangkan jika seluruh usia alam semesta, yaitu tiga belas koma delapan miliar tahun, dimampatkan menjadi satu tahun kalender biasa.",
+      "say": "Bayangkan jika seluruh usia alam semesta, yaitu tiga belas koma delapan miliar tahun, dimampatkan menjadi satu tahun kalender biasa."
+    },
+    {
+      "id": "bigbang",
+      "text": "Pada detik pertama 1 Januari, Ledakan Dahsyat terjadi melahirkan ruang, waktu, dan seluruh materi purba dalam kilatan energi raksasa.",
+      "say": "Pada detik pertama satu Januari, Ledakan Dahsyat terjadi melahirkan ruang, waktu, dan seluruh materi purba dalam kilatan energi raksasa."
+    },
+    {
+      "id": "galaksi",
+      "text": "Butuh waktu berbulan-bulan hingga bulan Mei bagi galaksi Bima Sakti kita untuk berputar memadat di tengah kekosongan kosmik.",
+      "say": "Butuh waktu berbulan-bulan hingga bulan Mei bagi galaksi Bima Sakti kita untuk berputar memadat di tengah kekosongan kosmik."
+    },
+    {
+      "id": "bumi",
+      "text": "Matahari dan planet Bumi kita yang indah baru terbentuk pada awal September, sementara kehidupan mikrobial pertama baru muncul di akhir bulan.",
+      "say": "Matahari dan planet Bumi kita yang indah baru terbentuk pada awal September, sementara kehidupan mikrobial pertama baru muncul di akhir bulan."
+    },
+    {
+      "id": "dinosaurus",
+      "text": "Dinosaurus bahkan baru menjelajah bumi pada tanggal 26 Desember, lalu musnah akibat hantaman asteroid raksasa hanya empat hari kemudian.",
+      "say": "Dinosaurus bahkan baru menjelajah bumi pada tanggal dua puluh enam Desember, lalu musnah akibat hantaman asteroid raksasa hanya empat hari kemudian."
+    },
+    {
+      "id": "manusia",
+      "text": "Lalu di manakah manusia? Spesies kita baru muncul di detik-detik terakhir malam tahun baru: tanggal 31 Desember pukul 23 lewat 59 menit!",
+      "say": "Lalu di manakah manusia? Spesies kita baru muncul di detik-detik terakhir malam tahun baru: tanggal tiga puluh satu Desember pukul dua puluh tiga lewat lima puluh sembilan menit!"
+    },
+    {
+      "id": "sejarah",
+      "text": "Seluruh sejarah peradaban, piramida Mesir, revolusi industri, hingga ponsel pintarmu, hanyalah terjadi dalam 14 detik terakhir sebelum tengah malam.",
+      "say": "Seluruh sejarah peradaban, piramida Mesir, revolusi industri, hingga ponsel pintarmu, hanyalah terjadi dalam empat belas detik terakhir sebelum tengah malam."
+    },
+    {
+      "id": "moral",
+      "text": "Kita memang hanyalah kedipan mata di panggung kosmik, namun kita adalah cara bagi alam semesta untuk mengagumi keindahan dirinya sendiri!",
+      "say": "Kita memang hanyalah kedipan mata di panggung kosmik, namun kita adalah cara bagi alam semesta untuk mengagumi keindahan dirinya sendiri!"
+    }
+  ]
+}
+

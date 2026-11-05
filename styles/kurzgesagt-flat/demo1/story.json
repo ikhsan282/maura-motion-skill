@@ -1,0 +1,59 @@
+{
+  "title": "Sistem Pembersih Sampah Otak — Mengapa Kurang Tidur Menumpuk Racun Biologis?",
+  "slug": "kurzgesagt_sistem_pembersih_otak",
+  "style": "kurzgesagt-flat",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "ambient",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa manusia rela menghabiskan sepertiga hidupnya terpejam dan tak berdaya hanya untuk tidur?",
+      "say": "Mengapa manusia rela menghabiskan sepertiga hidupnya terpejam dan tak berdaya hanya untuk tidur?"
+    },
+    {
+      "id": "pabrik",
+      "text": "Sepanjang hari saat kamu berpikir, miliaran neuron di otakmu bekerja keras membakar energi seperti pabrik yang sangat sibuk.",
+      "say": "Sepanjang hari saat kamu berpikir, miliaran neuron di otakmu bekerja keras membakar energi seperti pabrik yang sangat sibuk."
+    },
+    {
+      "id": "sampah",
+      "text": "Setiap aktivitas seluler ini menghasilkan sampah metabolik beracun, terutama protein beta-amiloid yang memicu kabut pikiran dan kelelahan mental.",
+      "say": "Setiap aktivitas seluler ini menghasilkan sampah metabolik beracun, terutama protein beta-amiloid yang memicu kabut pikiran dan kelelahan mental."
+    },
+    {
+      "id": "sempit",
+      "text": "Di siang hari, sel-sel otak tersusun sangat padat sehingga cairan pembersih tidak memiliki ruang untuk membilas racun tersebut.",
+      "say": "Di siang hari, sel-sel otak tersusun sangat padat sehingga cairan pembersih tidak memiliki ruang untuk membilas racun tersebut."
+    },
+    {
+      "id": "menyusut",
+      "text": "Namun saat kamu tertidur lelap, sebuah keajaiban biologis terjadi: sel-sel otakmu menyusut hingga enam puluh persen!",
+      "say": "Namun saat kamu tertidur lelap, sebuah keajaiban biologis terjadi: sel-sel otakmu menyusut hingga enam puluh persen!"
+    },
+    {
+      "id": "gliatik",
+      "text": "Saluran antarsel terbuka lebar, memungkinkan Sistem Gliatik membanjiri otak dengan gelombang cairan serebrospinal yang membasuh bersih seluruh sampah.",
+      "say": "Saluran antarsel terbuka lebar, memungkinkan Sistem Gliatik membanjiri otak dengan gelombang cairan serebrospinal yang membasuh bersih seluruh sampah."
+    },
+    {
+      "id": "arsip",
+      "text": "Bersamaan dengan itu, otak menyortir ingatan harianmu: membuang memori remeh dan mengunci pengetahuan penting ke memori jangka panjang.",
+      "say": "Bersamaan dengan itu, otak menyortir ingatan harianmu: membuang memori remeh dan mengunci pengetahuan penting ke memori jangka panjang."
+    },
+    {
+      "id": "moral",
+      "text": "Tidur bukanlah pemborosan waktu; ia adalah jadwal servis biologis terpenting yang menjaga otakmu tetap waras dan tajam!",
+      "say": "Tidur bukanlah pemborosan waktu; ia adalah jadwal servis biologis terpenting yang menjaga otakmu tetap waras dan tajam!"
+    }
+  ]
+}
+

@@ -1,0 +1,59 @@
+{
+  "title": "Pabrik Kebiasaan Otomatis — Cara Membangun Rutinitas Tanpa Rasa Malas",
+  "slug": "isometric_pabrik_kebiasaan",
+  "style": "isometric-lowpoly",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa membangun kebiasaan baru terasa sangat berat, sementara kebiasaan buruk justru berjalan otomatis tanpa perlu dipikirkan?",
+      "say": "Mengapa membangun kebiasaan baru terasa sangat berat, sementara kebiasaan buruk justru berjalan otomatis tanpa perlu dipikirkan?"
+    },
+    {
+      "id": "masalah",
+      "text": "Kesalahan terbesar kita adalah terlalu mengandalkan motivasi: motivasi itu emosi sesaat yang selalu habis begitu kamu merasa lelah.",
+      "say": "Kesalahan terbesar kita adalah terlalu mengandalkan motivasi: motivasi itu emosi sesaat yang selalu habis begitu kamu merasa lelah."
+    },
+    {
+      "id": "arsitektur",
+      "text": "Otak kita sebenarnya dirancang seperti mesin pabrik otomatis dengan 4 stasiun kerja: Pemicu, Keinginan, Tindakan, dan Hadiah!",
+      "say": "Otak kita sebenarnya dirancang seperti mesin pabrik otomatis dengan empat stasiun kerja: Pemicu, Keinginan, Tindakan, dan Hadiah!"
+    },
+    {
+      "id": "stasiun1",
+      "text": "Stasiun pertama: buat pemicunya sangat mencolok. Letakkan sepatu lari tepat di depan pintu atau botol air minum di meja kerja.",
+      "say": "Stasiun pertama: buat pemicunya sangat mencolok. Letakkan sepatu lari tepat di depan pintu atau botol air minum di meja kerja."
+    },
+    {
+      "id": "stasiun2",
+      "text": "Stasiun kedua: buat tindakannya menarik. Gandengkan kebiasaan baru dengan hal favoritmu agar dopamin otak langsung terpompa.",
+      "say": "Stasiun kedua: buat tindakannya menarik. Gandengkan kebiasaan baru dengan hal favoritmu agar dopamin otak langsung terpompa."
+    },
+    {
+      "id": "stasiun3",
+      "text": "Stasiun ketiga: buat tindakannya sangat mudah. Pangkas langkah awal hingga hanya butuh waktu kurang dari dua menit untuk dimulai.",
+      "say": "Stasiun ketiga: buat tindakannya sangat mudah. Pangkas langkah awal hingga hanya butuh waktu kurang dari dua menit untuk dimulai."
+    },
+    {
+      "id": "stasiun4",
+      "text": "Stasiun keempat: berikan kepuasan seketika. Rayakan kemenangan kecilmu agar otak merekam rutinitas ini sebagai hal berharga.",
+      "say": "Stasiun keempat: berikan kepuasan seketika. Rayakan kemenangan kecilmu agar otak merekam rutinitas ini sebagai hal berharga."
+    },
+    {
+      "id": "moral",
+      "text": "Kamu tidak butuh kemauan baja; kamu hanya butuh arsitektur sistem yang membuat sukses terjadi secara otomatis!",
+      "say": "Kamu tidak butuh kemauan baja; kamu hanya butuh arsitektur sistem yang membuat sukses terjadi secara otomatis!"
+    }
+  ]
+}
+
