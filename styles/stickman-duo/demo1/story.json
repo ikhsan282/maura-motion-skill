@@ -1,0 +1,58 @@
+{
+  "title": "Mager Sendirian vs Gas Bareng — Mengapa Partner Akuntabilitas Menaikkan Peluang Sukses ke 95%?",
+  "slug": "stickman_duo_partner_akuntabilitas",
+  "style": "stickman-duo",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu berjanji pada diri sendiri untuk bangun pagi dan olahraga, namun begitu alarm berbunyi kamu langsung mematikannya tanpa rasa bersalah?",
+      "say": "Pernahkah kamu berjanji pada diri sendiri untuk bangun pagi dan olahraga, namun begitu alarm berbunyi kamu langsung mematikannya tanpa rasa bersalah?"
+    },
+    {
+      "id": "batal",
+      "text": "Saat kita hanya berjanji di dalam kepala sendiri, tidak ada saksi yang tahu ketika kita diam-diam membatalkan rencana tersebut.",
+      "say": "Saat kita hanya berjanji di dalam kepala sendiri, tidak ada saksi yang tahu ketika kita diam-diam membatalkan rencana tersebut."
+    },
+    {
+      "id": "astd",
+      "text": "Penelitian American Society of Training and Development menemukan bahwa sekadar punya niat hanya memberi peluang berhasil sebesar sepuluh persen.",
+      "say": "Penelitian American Society of Training and Development menemukan bahwa sekadar punya niat hanya memberi peluang berhasil sebesar sepuluh persen."
+    },
+    {
+      "id": "janji",
+      "text": "Namun ketika kamu memiliki satu sahabat akuntabilitas dan menjadwalkan laporan rutin dengannya, peluang keberhasilanmu melonjak hingga sembilan puluh lima persen!",
+      "say": "Namun ketika kamu memiliki satu sahabat akuntabilitas dan menjadwalkan laporan rutin dengannya, peluang keberhasilanmu melonjak hingga sembilan puluh lima persen!"
+    },
+    {
+      "id": "sosial",
+      "text": "Otak manusia sangat menjaga reputasi sosial; kita mungkin mudah mengingkari janji pada diri sendiri, tetapi kita segan mengecewakan sahabat yang sudah menunggu.",
+      "say": "Otak manusia sangat menjaga reputasi sosial; kita mungkin mudah mengingkari janji pada diri sendiri, tetapi kita segan mengecewakan sahabat yang sudah menunggu."
+    },
+    {
+      "id": "aturan",
+      "text": "Carilah satu teman seperjuangan seperti Raka dan Bima, lalu kirimkan tiga target harianmu setiap pagi dan laporkan hasilnya setiap malam.",
+      "say": "Carilah satu teman seperjuangan seperti Raka dan Bima, lalu kirimkan tiga target harianmu setiap pagi dan laporkan hasilnya setiap malam."
+    },
+    {
+      "id": "ringan",
+      "text": "Saat salah satu sedang lelah atau kehilangan semangat, kehadiran sahabat akan menarikmu kembali ke jalur yang benar.",
+      "say": "Saat salah satu sedang lelah atau kehilangan semangat, kehadiran sahabat akan menarikmu kembali ke jalur yang benar."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan berjuang sendirian di dalam kamar; gandeng satu sahabat akuntabilitas hari ini dan melesatlah bersama!",
+      "say": "Jangan berjuang sendirian di dalam kamar; gandeng satu sahabat akuntabilitas hari ini dan melesatlah bersama!"
+    }
+  ]
+}

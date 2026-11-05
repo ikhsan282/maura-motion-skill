@@ -142,8 +142,8 @@ Buka QA sheet, lalu lapor dua baris: gaya, durasi, isinya apa. "Mau diubah apa? 
 | 70 | **Stickman Beanie** | stickman-beanie | ✅ ([demo1](styles/stickman-beanie/demo1/) · [demo2](styles/stickman-beanie/demo2/) · [demo3](styles/stickman-beanie/demo3/)) |
 | 71 | **Stickman Caveman** | stickman-caveman | ✅ ([demo1](styles/stickman-caveman/demo1/) · [demo2](styles/stickman-caveman/demo2/) · [demo3](styles/stickman-caveman/demo3/)) |
 | 72 | **Stickman Cinematic** | stickman-cinematic | ✅ ([demo1](styles/stickman-cinematic/demo1/) · [demo2](styles/stickman-cinematic/demo2/) · [demo3](styles/stickman-cinematic/demo3/)) |
-| 73 | **Stickman Duo** | stickman-duo | ✅ ([styles/stickman-duo](styles/stickman-duo/)) |
-| 74 | **Stickman Graffiti** | stickman-graffiti | ✅ ([styles/stickman-graffiti](styles/stickman-graffiti/)) |
+| 73 | **Stickman Duo** | stickman-duo | ✅ ([demo1](styles/stickman-duo/demo1/) · [demo2](styles/stickman-duo/demo2/) · [demo3](styles/stickman-duo/demo3/)) |
+| 74 | **Stickman Graffiti** | stickman-graffiti | ✅ ([demo1](styles/stickman-graffiti/demo1/) · [demo2](styles/stickman-graffiti/demo2/) · [demo3](styles/stickman-graffiti/demo3/)) |
 | 75 | **Stickman Lecture** | stickman-lecture | ✅ ([styles/stickman-lecture](styles/stickman-lecture/)) |
 | 76 | **Stickman Minimal Dark** | stickman-minimal-dark | ✅ ([styles/stickman-minimal-dark](styles/stickman-minimal-dark/)) |
 | 77 | **Stickman Picturebook** | stickman-picturebook | ✅ ([styles/stickman-picturebook](styles/stickman-picturebook/)) |

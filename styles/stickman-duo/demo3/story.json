@@ -1,0 +1,59 @@
+{
+  "title": "Rahasia Protégé Effect — Mengapa Mengajari Teman Adalah Cara Tercepat Menguasai Ilmu?",
+  "slug": "stickman_duo_protege_effect",
+  "style": "stickman-duo",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu merasa sudah paham saat membaca buku sendirian, tetapi mendadak gagap ketika diminta menjelaskannya kembali kepada temanmu?",
+      "say": "Pernahkah kamu merasa sudah paham saat membaca buku sendirian, tetapi mendadak gagap ketika diminta menjelaskannya kembali kepada temanmu?"
+    },
+    {
+      "id": "ilusi",
+      "text": "Membaca berulang-ulang di dalam hati sering menciptakan ilusi kompetensi: kita merasa hafal istilahnya, padahal belum memahami cara kerjanya.",
+      "say": "Membaca berulang-ulang di dalam hati sering menciptakan ilusi kompetensi: kita merasa hafal istilahnya, padahal belum memahami cara kerjanya."
+    },
+    {
+      "id": "protege",
+      "text": "Dalam psikologi pendidikan, cara paling ampuh untuk mengunci ingatan hingga sembilan puluh persen adalah melalui The Protégé Effect, yaitu belajar dengan cara mengajar.",
+      "say": "Dalam psikologi pendidikan, cara paling ampuh untuk mengunci ingatan hingga sembilan puluh persen adalah melalui The Protege Effect, yaitu belajar dengan cara mengajar."
+    },
+    {
+      "id": "feynman",
+      "text": "Fisikawan peraih Nobel Richard Feynman selalu menguji pemahamannya dengan menjelaskan topik rumit menggunakan bahasa sederhana kepada rekannya.",
+      "say": "Fisikawan peraih Nobel Richard Feynman selalu menguji pemahamannya dengan menjelaskan topik rumit menggunakan bahasa sederhana kepada rekannya."
+    },
+    {
+      "id": "celah",
+      "text": "Saat temanmu bertanya mengapa bisa begitu, pertanyaan polosnya langsung menyingkap bagian mana yang sebenarnya belum kamu kuasai.",
+      "say": "Saat temanmu bertanya mengapa bisa begitu, pertanyaan polosnya langsung menyingkap bagian mana yang sebenarnya belum kamu kuasai."
+    },
+    {
+      "id": "gantian",
+      "text": "Buatlah ritual belajar berpasangan: kamu merangkum bab pertama selama lima menit kepada sahabatmu, lalu sahabatmu menjelaskan bab kedua kepadamu.",
+      "say": "Buatlah ritual belajar berpasangan: kamu merangkum bab pertama selama lima menit kepada sahabatmu, lalu sahabatmu menjelaskan bab kedua kepadamu."
+    },
+    {
+      "id": "untung",
+      "text": "Dengan metode tukar penjelasan ini, kalian berdua menghemat waktu separuh sekaligus menggandakan daya ingat berkali-kali lipat.",
+      "say": "Dengan metode tukar penjelasan ini, kalian berdua menghemat waktu separuh sekaligus menggandakan daya ingat berkali-kali lipat."
+    },
+    {
+      "id": "moral",
+      "text": "Jika kamu ingin menguasai sebuah ilmu secara mendalam, ajarkanlah ilmu itu kepada sahabatmu hari ini!",
+      "say": "Jika kamu ingin menguasai sebuah ilmu secara mendalam, ajarkanlah ilmu itu kepada sahabatmu hari ini!"
+    }
+  ]
+}
+

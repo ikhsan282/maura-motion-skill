@@ -1,0 +1,59 @@
+{
+  "title": "Jangan Hapus Gagalmu, Timpa dengan Karya — Seni Mengubah Kesalahan Menjadi Mahakarya",
+  "slug": "stickman_graffiti_timpa_dengan_karya",
+  "style": "stickman-graffiti",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Dalam seni grafiti jalanan, tidak ada tombol kembali atau penghapus karet ketika cat semprotmu tidak sengaja meleleh ke luar garis.",
+      "say": "Dalam seni grafiti jalanan, tidak ada tombol kembali atau penghapus karet ketika cat semprotmu tidak sengaja meleleh ke luar garis."
+    },
+    {
+      "id": "panik",
+      "text": "Pemula biasanya langsung panik dan meninggalkan temboknya begitu saja saat melakukan satu kesalahan kecil di tengah jalan.",
+      "say": "Pemula biasanya langsung panik dan meninggalkan temboknya begitu saja saat melakukan satu kesalahan kecil di tengah jalan."
+    },
+    {
+      "id": "rahasia",
+      "text": "Sebaliknya, seniman mural berpengalaman tahu satu rahasia penting: cat semprot yang salah selalu bisa ditimpa dengan lapisan warna baru yang lebih tegas.",
+      "say": "Sebaliknya, seniman mural berpengalaman tahu satu rahasia penting: cat semprot yang salah selalu bisa ditimpa dengan lapisan warna baru yang lebih tegas."
+    },
+    {
+      "id": "lelehan",
+      "text": "Bahkan lelehan cat yang tidak sengaja sering kali dijadikan efek bayangan tiga dimensi yang justru membuat mural terlihat jauh lebih hidup.",
+      "say": "Bahkan lelehan cat yang tidak sengaja sering kali dijadikan efek bayangan tiga dimensi yang justru membuat mural terlihat jauh lebih hidup."
+    },
+    {
+      "id": "hidup",
+      "text": "Begitu pula dalam perjalanan karier dan belajarmu: satu proyek yang gagal bukanlah noda permanen yang menghentikan masa depanmu.",
+      "say": "Begitu pula dalam perjalanan karier dan belajarmu: satu proyek yang gagal bukanlah noda permanen yang menghentikan masa depanmu."
+    },
+    {
+      "id": "lapisan",
+      "text": "Jangan habiskan waktumu menyesali coretan kemarin; gunakan pelajaran dari kegagalan itu sebagai lapisan dasar untuk melukis karya yang lebih matang.",
+      "say": "Jangan habiskan waktumu menyesali coretan kemarin; gunakan pelajaran dari kegagalan itu sebagai lapisan dasar untuk melukis karya yang lebih matang."
+    },
+    {
+      "id": "tebal",
+      "text": "Semakin banyak lapisan percobaan dan perbaikan yang kamu tumpuk di atas tembokmu, semakin kaya dan berkarakter hasil akhirnya.",
+      "say": "Semakin banyak lapisan percobaan dan perbaikan yang kamu tumpuk di atas tembokmu, semakin kaya dan berkarakter hasil akhirnya."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan takut berbuat salah; timpa kegagalan kemarin dengan karya baru yang lebih berani hari ini!",
+      "say": "Jangan takut berbuat salah; timpa kegagalan kemarin dengan karya baru yang lebih berani hari ini!"
+    }
+  ]
+}
+

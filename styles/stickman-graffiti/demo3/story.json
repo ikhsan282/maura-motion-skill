@@ -1,0 +1,59 @@
+{
+  "title": "Temukan Ciri Khasmu Sendiri — Mengapa Keaslian Lebih Kuat daripada Meniru Tren?",
+  "slug": "stickman_graffiti_ciri_khas",
+  "style": "stickman-graffiti",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di tengah ribuan mural yang memenuhi tembok kota, mengapa ada karya yang langsung dikenali hanya dalam satu detik bahkan sebelum kita membaca namanya?",
+      "say": "Di tengah ribuan mural yang memenuhi tembok kota, mengapa ada karya yang langsung dikenali hanya dalam satu detik bahkan sebelum kita membaca namanya?"
+    },
+    {
+      "id": "tiru",
+      "text": "Banyak pemula terjebak menjadi fotokopi orang lain: mengikuti gaya bicara, warna, dan tren yang sama persis sampai kehilangan jati dirinya sendiri.",
+      "say": "Banyak pemula terjebak menjadi fotokopi orang lain: mengikuti gaya bicara, warna, dan tren yang sama persis sampai kehilangan jati dirinya sendiri."
+    },
+    {
+      "id": "aturan",
+      "text": "Dalam dunia kreatif, menjadi tiruan nomor dua terbaik tidak akan pernah sekuat menjadi versi asli nomor satu dari dirimu sendiri.",
+      "say": "Dalam dunia kreatif, menjadi tiruan nomor dua terbaik tidak akan pernah sekuat menjadi versi asli nomor satu dari dirimu sendiri."
+    },
+    {
+      "id": "campur",
+      "text": "Ciri khas atau signature style sebenarnya bukanlah bakat magis dari lahir, melainkan perpaduan unik dari tiga hal yang paling kamu cintai.",
+      "say": "Ciri khas atau signature style sebenarnya bukanlah bakat magis dari lahir, melainkan perpaduan unik dari tiga hal yang paling kamu cintai."
+    },
+    {
+      "id": "unik",
+      "text": "Bahkan kebiasaan atau keterbatasan yang dulu kamu anggap sebagai kekurangan sering kali justru menjadi cap jempol yang membedakan karyamu dari jutaan orang.",
+      "say": "Bahkan kebiasaan atau keterbatasan yang dulu kamu anggap sebagai kekurangan sering kali justru menjadi cap jempol yang membedakan karyamu dari jutaan orang."
+    },
+    {
+      "id": "konsisten",
+      "text": "Setelah kamu menemukan perpaduan warna dan gayamu, ulangi secara konsisten hingga audiens langsung teringat namamu saat melihat goresanmu.",
+      "say": "Setelah kamu menemukan perpaduan warna dan gayamu, ulangi secara konsisten hingga audiens langsung teringat namamu saat melihat goresanmu."
+    },
+    {
+      "id": "waktu",
+      "text": "Tren musiman akan datang dan pergi dengan cepat, tetapi karakter yang jujur dan otentik akan bertahan melintasi waktu.",
+      "say": "Tren musiman akan datang dan pergi dengan cepat, tetapi karakter yang jujur dan otentik akan bertahan melintasi waktu."
+    },
+    {
+      "id": "moral",
+      "text": "Berhentilah bersembunyi di balik bayangan orang lain; bubuhkan tanda tangan keaslianmu dan banggalah pada warna unikmu sendiri!",
+      "say": "Berhentilah bersembunyi di balik bayangan orang lain; bubuhkan tanda tangan keaslianmu dan banggalah pada warna unikmu sendiri!"
+    }
+  ]
+}
+

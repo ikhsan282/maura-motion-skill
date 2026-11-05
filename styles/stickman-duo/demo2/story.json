@@ -1,0 +1,59 @@
+{
+  "title": "Efek Body Doubling — Mengapa Kerja Satu Meja Bareng Sahabat Bikin Fokus Dua Kali Lipat?",
+  "slug": "stickman_duo_body_doubling",
+  "style": "stickman-duo",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa tugas yang terasa sangat berat saat dikerjakan sendirian di kamar tiba-tiba terasa mudah saat kamu duduk satu meja bersama teman yang sedang fokus?",
+      "say": "Mengapa tugas yang terasa sangat berat saat dikerjakan sendirian di kamar tiba-tiba terasa mudah saat kamu duduk satu meja bersama teman yang sedang fokus?"
+    },
+    {
+      "id": "nama",
+      "text": "Dalam psikologi kognitif, fenomena unik ini dikenal dengan istilah Body Doubling atau efek pendampingan fisik.",
+      "say": "Dalam psikologi kognitif, fenomena unik ini dikenal dengan istilah Body Doubling atau efek pendampingan fisik."
+    },
+    {
+      "id": "cermin",
+      "text": "Saat mata kita melihat sahabat di sebelah sedang serius mengetik atau membaca, sel neuron cermin di otak kita otomatis ikut menyala dan meniru ketenangannya.",
+      "say": "Saat mata kita melihat sahabat di sebelah sedang serius mengetik atau membaca, sel neuron cermin di otak kita otomatis ikut menyala dan meniru ketenangannya."
+    },
+    {
+      "id": "jangkar",
+      "text": "Kehadiran orang lain berfungsi sebagai jangkar perhatian yang menahan tanganmu agar tidak tergoda membuka ponsel atau rebahan.",
+      "say": "Kehadiran orang lain berfungsi sebagai jangkar perhatian yang menahan tanganmu agar tidak tergoda membuka ponsel atau rebahan."
+    },
+    {
+      "id": "aturan",
+      "text": "Agar sesi kerja berdua tidak berubah menjadi obrolan berjam-jam, terapkan aturan lima puluh menit hening dan sepuluh menit istirahat mengobrol.",
+      "say": "Agar sesi kerja berdua tidak berubah menjadi obrolan berjam-jam, terapkan aturan lima puluh menit hening dan sepuluh menit istirahat mengobrol."
+    },
+    {
+      "id": "sebut",
+      "text": "Di awal sesi, sebutkan dengan jelas satu target yang ingin diselesaikan masing-masing, lalu nyalakan penghitung waktu bersama-sama.",
+      "say": "Di awal sesi, sebutkan dengan jelas satu target yang ingin diselesaikan masing-masing, lalu nyalakan penghitung waktu bersama-sama."
+    },
+    {
+      "id": "virtual",
+      "text": "Jika kalian terpisah jarak, menyalakan panggilan video tanpa suara sambil fokus di meja masing-masing juga memberikan efek fokus yang sama kuatnya.",
+      "say": "Jika kalian terpisah jarak, menyalakan panggilan video tanpa suara sambil fokus di meja masing-masing juga memberikan efek fokus yang sama kuatnya."
+    },
+    {
+      "id": "moral",
+      "text": "Ubah rasa malas menjadi energi fokus bersama melalui sesi Body Doubling dengan sahabatmu hari ini!",
+      "say": "Ubah rasa malas menjadi energi fokus bersama melalui sesi Body Doubling dengan sahabatmu hari ini!"
+    }
+  ]
+}
+

@@ -1,0 +1,58 @@
+{
+  "title": "Tembok Ini Saksi Mimpimu — Mengapa Coretan Pertama Tidak Perlu Menunggu Sempurna?",
+  "slug": "stickman_graffiti_tembok_mimpimu",
+  "style": "stickman-graffiti",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -17
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Di hadapan tembok kosong yang luas, banyak kreator berdiri membeku sambil memegang kaleng cat hanya karena takut garis pertamanya terlihat miring.",
+      "say": "Di hadapan tembok kosong yang luas, banyak kreator berdiri membeku sambil memegang kaleng cat hanya karena takut garis pertamanya terlihat miring."
+    },
+    {
+      "id": "selera",
+      "text": "Penulis Ira Glass menyebut fenomena ini sebagai The Taste Gap: selera senimu sudah tinggi, namun jam terbang tanganmu masih butuh waktu untuk mengejarnya.",
+      "say": "Penulis Ira Glass menyebut fenomena ini sebagai The Taste Gap: selera senimu sudah tinggi, namun jam terbang tanganmu masih butuh waktu untuk mengejarnya."
+    },
+    {
+      "id": "batal",
+      "text": "Jika kamu terus menunggu sampai merasa seratus persen siap sebelum menyemprotkan warna pertama, tembok impianmu akan selamanya tetap gelap dan kosong.",
+      "say": "Jika kamu terus menunggu sampai merasa seratus persen siap sebelum menyemprotkan warna pertama, tembok impianmu akan selamanya tetap gelap dan kosong."
+    },
+    {
+      "id": "kotor",
+      "text": "Karya yang selesai meski masih kasar jauh lebih berharga daripada mahakarya sempurna yang hanya berputar-putar di dalam angan-angan.",
+      "say": "Karya yang selesai meski masih kasar jauh lebih berharga daripada mahakarya sempurna yang hanya berputar-putar di dalam angan-angan."
+    },
+    {
+      "id": "semprot",
+      "text": "Kocok kaleng piloxmu sekarang dan buatlah sketsa garis dasar di tembok itu, karena tangan manusia hanya bisa belajar sambil bergerak.",
+      "say": "Kocok kaleng piloxmu sekarang dan buatlah sketsa garis dasar di tembok itu, karena tangan manusia hanya bisa belajar sambil bergerak."
+    },
+    {
+      "id": "volume",
+      "text": "Satu-satunya jembatan untuk menutup jarak antara selera dan keahlianmu adalah menghasilkan volume karya dari minggu ke minggu tanpa henti.",
+      "say": "Satu-satunya jembatan untuk menutup jarak antara selera dan keahlianmu adalah menghasilkan volume karya dari minggu ke minggu tanpa henti."
+    },
+    {
+      "id": "bangga",
+      "text": "Kelak saat kamu menoleh ke belakang, tembok pertama yang penuh coretan berani itulah yang menjadi saksi bisu lahirnya keahlianmu.",
+      "say": "Kelak saat kamu menoleh ke belakang, tembok pertama yang penuh coretan berani itulah yang menjadi saksi bisu lahirnya keahlianmu."
+    },
+    {
+      "id": "moral",
+      "text": "Jangan takut memulai dari sketsa yang belum rapi; semprotkan warna pertamamu hari ini dan biarkan dunia melihat karyamu!",
+      "say": "Jangan takut memulai dari sketsa yang belum rapi; semprotkan warna pertamamu hari ini dan biarkan dunia melihat karyamu!"
+    }
+  ]
+}
