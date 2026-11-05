@@ -1,0 +1,59 @@
+{
+  "title": "Trik Sayuran Kulkas Awet Segar Hingga 1 Bulan — Anti Kuning & Busuk",
+  "slug": "kebun_sayuran_awet_kulkas",
+  "style": "kebun-lifehacks",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Baru beli sayuran tiga hari, tapi pas dibuka di kulkas sudah lembek, kuning, dan berlendir? Ini rahasia pedagang biar awet sebulan!",
+      "say": "Baru beli sayuran tiga hari, tapi pas dibuka di kulkas sudah lembek, kuning, dan berlendir? Ini rahasia pedagang biar awet sebulan!"
+    },
+    {
+      "id": "langkah1",
+      "text": "Langkah pertama: jangan pernah mencuci sayuran sebelum masuk kulkas! Air basah memicu pembusukan dan jamur tumbuh dua kali lebih cepat.",
+      "say": "Langkah pertama: jangan pernah mencuci sayuran sebelum masuk kulkas! Air basah memicu pembusukan dan jamur tumbuh dua kali lebih cepat."
+    },
+    {
+      "id": "langkah2",
+      "text": "Langkah kedua: potong pangkal tangkai sekitar satu sentimeter dan singkirkan daun yang sudah layu agar tidak menular ke daun sehat.",
+      "say": "Langkah kedua: potong pangkal tangkai sekitar satu sentimeter dan singkirkan daun yang sudah layu agar tidak menular ke daun sehat."
+    },
+    {
+      "id": "langkah3",
+      "text": "Langkah ketiga: bungkus daun sayuran dengan tisu dapur kering atau handuk bersih untuk menyerap tetesan uap embun kulkas.",
+      "say": "Langkah ketiga: bungkus daun sayuran dengan tisu dapur kering atau handuk bersih untuk menyerap tetesan uap embun kulkas."
+    },
+    {
+      "id": "langkah4",
+      "text": "Langkah keempat: simpan dalam wadah kotak kedap udara atau kantong ziplock berventilasi udara minimal.",
+      "say": "Langkah keempat: simpan dalam wadah kotak kedap udara atau kantong ziplock berventilasi udara minimal."
+    },
+    {
+      "id": "langkah5",
+      "text": "Langkah kelima: tempatkan di rak laci bawah khusus sayur dengan suhu stabil, bukan di rak paling atas dekat freezer!",
+      "say": "Langkah kelima: tempatkan di rak laci bawah khusus sayur dengan suhu stabil, bukan di rak paling atas dekat freezer!"
+    },
+    {
+      "id": "kuis",
+      "text": "Kuis kulkas: menurutmu, buah apa yang jika disimpan bareng sayur hijau bisa bikin sayuran cepat busuk dan kuning? A: Pisang, B: Jeruk, C: Semangka?",
+      "say": "Kuis kulkas: menurutmu, buah apa yang jika disimpan bareng sayur hijau bisa bikin sayuran cepat busuk dan kuning? A: Pisang, B: Jeruk, C: Semangka?"
+    },
+    {
+      "id": "jawaban",
+      "text": "Jawabannya A: Pisang! Pisang melepas gas etilen tinggi yang mematangkan dan membusukkan sayur di sekitarnya. Sudah pisahkan sayurmu hari ini?",
+      "say": "Jawabannya A: Pisang! Pisang melepas gas etilen tinggi yang mematangkan dan membusukkan sayur di sekitarnya. Sudah pisahkan sayurmu hari ini?"
+    }
+  ]
+}
+

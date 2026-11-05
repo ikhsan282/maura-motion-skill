@@ -1,0 +1,59 @@
+{
+  "title": "Cara Kerja Algoritma Rekomendasi — Mengapa AI Tahu Isi Pikiranmu?",
+  "slug": "explainer_algoritma_ai",
+  "style": "explainer-25d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Miliaran video diunggah ke internet tiap detik, tapi mengapa beranda feed medsosmu selalu menyajikan konten yang pas dengan seleramu? Ini rahasia empat layer algoritma AI!",
+      "say": "Miliaran video diunggah ke internet tiap detik, tapi mengapa beranda feed medsosmu selalu menyajikan konten yang pas dengan seleramu? Ini rahasia empat layer algoritma AI!"
+    },
+    {
+      "id": "layer1",
+      "text": "Layer pertama adalah Pengumpulan Sinyal: bukan cuma like, AI mencatat watch time, durasi tonton ulang, kecepatan scroll, hingga di detik berapa kamu skip video.",
+      "say": "Layer pertama adalah Pengumpulan Sinyal: bukan cuma like, AI mencatat watch time, durasi tonton ulang, kecepatan scroll, hingga di detik berapa kamu skip video."
+    },
+    {
+      "id": "layer2",
+      "text": "Layer kedua adalah Ruang Vektor 2.5D: setiap video dan profil pengguna diubah menjadi titik koordinat matematika berdasarkan kemiripan topik dan audio.",
+      "say": "Layer kedua adalah Ruang Vektor 2.5D: setiap video dan profil pengguna diubah menjadi titik koordinat matematika berdasarkan kemiripan topik dan audio."
+    },
+    {
+      "id": "layer3",
+      "text": "Layer ketiga adalah Collaborative Filtering: AI mencocokkan pola tontonmu dengan ratusan ribu pengguna lain yang punya koordinat ketertarikan serupa.",
+      "say": "Layer ketiga adalah Collaborative Filtering: AI mencocokkan pola tontonmu dengan ratusan ribu pengguna lain yang punya koordinat ketertarikan serupa."
+    },
+    {
+      "id": "layer4",
+      "text": "Layer keempat adalah Model Prediksi Skor: AI menghitung probabilitas 0 sampai 1; video dengan probabilitas ditonton habis tertinggi akan langsung dimunculkan!",
+      "say": "Layer keempat adalah Model Prediksi Skor: AI menghitung probabilitas 0 sampai 1; video dengan probabilitas ditonton habis tertinggi akan langsung dimunculkan!"
+    },
+    {
+      "id": "delivery",
+      "text": "Dan seluruh proses penyaringan jutaan video ini terjadi hanya dalam waktu kurang dari lima puluh milidetik, tepat saat jempolmu menggeser layar ke atas!",
+      "say": "Dan seluruh proses penyaringan jutaan video ini terjadi hanya dalam waktu kurang dari lima puluh milidetik, tepat saat jempolmu menggeser layar ke atas!"
+    },
+    {
+      "id": "kuis",
+      "text": "Kuis algoritma 2.5D: metrik penonton apa yang diberi bobot penilaian paling tinggi oleh AI video pendek saat ini? A: Completion rate & loop tonton ulang, B: Jumlah tombol like, C: Jumlah komentar?",
+      "say": "Kuis algoritma 2.5D: metrik penonton apa yang diberi bobot penilaian paling tinggi oleh AI video pendek saat ini? A: Completion rate & loop tonton ulang, B: Jumlah tombol like, C: Jumlah komentar?"
+    },
+    {
+      "id": "jawaban",
+      "text": "Jawabannya A: Completion rate dan replay loop! Video yang ditonton tuntas sampai habis akan disebarkan AI ke audiens yang jauh lebih luas.",
+      "say": "Jawabannya A: Completion rate dan replay loop! Video yang ditonton tuntas sampai habis akan disebarkan AI ke audiens yang jauh lebih luas."
+    }
+  ]
+}
+

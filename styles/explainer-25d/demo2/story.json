@@ -1,0 +1,59 @@
+{
+  "title": "Tiga Lapisan Otak Manusia — Mengapa Emosi & Malas Sering Mengalahkan Logika?",
+  "slug": "explainer_triune_brain",
+  "style": "explainer-25d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Pernahkah kamu bertekad belajar produktif, tapi lima menit kemudian tanganmu sudah otomatis membuka media sosial? Ini perang tiga lapisan otakmu!",
+      "say": "Pernahkah kamu bertekad belajar produktif, tapi lima menit kemudian tanganmu sudah otomatis membuka media sosial? Ini perang tiga lapisan otakmu!"
+    },
+    {
+      "id": "lapisan1",
+      "text": "Lapisan paling bawah adalah Otak Reptil atau batang otak: berumur 500 juta tahun, mengatur detak jantung, pernapasan, dan insting bertahan hidup otomatis.",
+      "say": "Lapisan paling bawah adalah Otak Reptil atau batang otak: berumur 500 juta tahun, mengatur detak jantung, pernapasan, dan insting bertahan hidup otomatis."
+    },
+    {
+      "id": "lapisan2",
+      "text": "Lapisan kedua adalah Sistem Limbik atau otak mamalia: pusat emosi, rasa takut amigdala, serta pengejar kenikmatan dopamin jangka pendek.",
+      "say": "Lapisan kedua adalah Sistem Limbik atau otak mamalia: pusat emosi, rasa takut amigdala, serta pengejar kenikmatan dopamin jangka pendek."
+    },
+    {
+      "id": "lapisan3",
+      "text": "Lapisan teratas adalah Neokorteks: bagian paling modern yang mengendalikan logika, berpikir kritis, bahasa, dan perencanaan masa depanmu.",
+      "say": "Lapisan teratas adalah Neokorteks: bagian paling modern yang mengendalikan logika, berpikir kritis, bahasa, dan perencanaan masa depanmu."
+    },
+    {
+      "id": "pembajakan",
+      "text": "Masalahnya: saat kamu stres atau bosan, amigdala membajak seluruh energi dalam 0.1 detik, mematikan logika neokorteks seketika!",
+      "say": "Masalahnya: saat kamu stres atau bosan, amigdala membajak seluruh energi dalam 0.1 detik, mematikan logika neokorteks seketika!"
+    },
+    {
+      "id": "solusi",
+      "text": "Solusinya adalah aturan jeda lima detik: tarik napas dalam untuk mengalirkan oksigen kembali ke neokorteks sebelum kamu menuruti rasa malas.",
+      "say": "Solusinya adalah aturan jeda lima detik: tarik napas dalam untuk mengalirkan oksigen kembali ke neokorteks sebelum kamu menuruti rasa malas."
+    },
+    {
+      "id": "kuis",
+      "text": "Kuis neurologi 2.5D: meskipun berat otak hanya sekitar 2% dari tubuh, berapa persen total energi kalori harian yang disedotnya? A: 20%, B: 5%, atau C: 50%?",
+      "say": "Kuis neurologi 2.5D: meskipun berat otak hanya sekitar 2% dari tubuh, berapa persen total energi kalori harian yang disedotnya? A: 20%, B: 5%, atau C: 50%?"
+    },
+    {
+      "id": "jawaban",
+      "text": "Jawabannya A: 20% energi tubuh diserap otak, terutama neokorteks! Jadi wajar jika berpikir keras terasa melelahkan. Beri jeda otakmu hari ini!",
+      "say": "Jawabannya A: 20% energi tubuh diserap otak, terutama neokorteks! Jadi wajar jika berpikir keras terasa melelahkan. Beri jeda otakmu hari ini!"
+    }
+  ]
+}
+

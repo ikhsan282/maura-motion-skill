@@ -1,0 +1,58 @@
+{
+  "title": "Trik Basmi Kutu Putih Tanpa Racun Kimia — Daun Bersih Bebas Hama",
+  "slug": "kebun_basmi_kutu_putih",
+  "style": "kebun-lifehacks",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Daun tanaman kesayanganmu tiba-tiba penuh bercak putih seperti kapas dan semut bergerombol? Awas, itu kutu putih perusak tanaman!",
+      "say": "Daun tanaman kesayanganmu tiba-tiba penuh bercak putih seperti kapas dan semut bergerombol? Awas, itu kutu putih perusak tanaman!"
+    },
+    {
+      "id": "langkah1",
+      "text": "Langkah pertama: jangan buru-buru menyemprot racun pestisida kimia keras yang bisa merusak daun dan berbahaya bagi hewan peliharaan.",
+      "say": "Langkah pertama: jangan buru-buru menyemprot racun pestisida kimia keras yang bisa merusak daun dan berbahaya bagi hewan peliharaan."
+    },
+    {
+      "id": "langkah2",
+      "text": "Langkah kedua: siapkan botol semprot berisi satu liter air bersih, lalu masukkan satu sendok teh sabun cuci piring lembut.",
+      "say": "Langkah kedua: siapkan botol semprot berisi satu liter air bersih, lalu masukkan satu sendok teh sabun cuci piring lembut."
+    },
+    {
+      "id": "langkah3",
+      "text": "Langkah ketiga: tambahkan satu sendok teh minyak goreng dapur sebagai perekat alami agar lapisan lilin pelindung kutu cepat larut.",
+      "say": "Langkah ketiga: tambahkan satu sendok teh minyak goreng dapur sebagai perekat alami agar lapisan lilin pelindung kutu cepat larut."
+    },
+    {
+      "id": "langkah4",
+      "text": "Langkah keempat: kocok botol semprot secara merata hingga larutan sabun dan minyak menyatu menjadi cairan emulsi putih keruh.",
+      "say": "Langkah keempat: kocok botol semprot secara merata hingga larutan sabun dan minyak menyatu menjadi cairan emulsi putih keruh."
+    },
+    {
+      "id": "langkah5",
+      "text": "Langkah kelima: semprotkan merata ke bagian koloni di balik daun pada pagi atau sore hari, saat matahari tidak menyengat.",
+      "say": "Langkah kelima: semprotkan merata ke bagian koloni di balik daun pada pagi atau sore hari, saat matahari tidak menyengat."
+    },
+    {
+      "id": "kuis",
+      "text": "Kuis tanaman: menurutmu, kenapa semut hitam sering mengerubungi kutu putih di batang daun? A: Menggembala kutu demi cairan manis, B: Memangsa dan memakan kutu, C: Membersihkan kotoran daun?",
+      "say": "Kuis tanaman: menurutmu, kenapa semut hitam sering mengerubungi kutu putih di batang daun? A: Menggembala kutu demi cairan manis, B: Memangsa dan memakan kutu, C: Membersihkan kotoran daun?"
+    },
+    {
+      "id": "jawaban",
+      "text": "Jawabannya A: Semut menggembala dan melindungi kutu demi mengisap embun madu manis! Semprot sekarang juga dan selamatkan tanamanmu!",
+      "say": "Jawabannya A: Semut menggembala dan melindungi kutu demi mengisap embun madu manis! Semprot sekarang juga dan selamatkan tanamanmu!"
+    }
+  ]
+}

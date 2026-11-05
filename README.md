@@ -1,6 +1,6 @@
 # Maura Motion Skill
 
-Library **78 gaya animasi siap pakai** (dengan 234 demo lengkap) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
+Library **84 gaya animasi siap pakai** (dengan 252 demo lengkap) untuk video narasi vertikal (TikTok, Reels, YouTube Shorts) — digambar full pakai kode (Canvas 2D, Three.js 3D, WebGL Shader, & Painterly Pass), bukan AI generate gambar statis. Pilih gaya, kasih topik/naskah, langsung jadi MP4 + narasi Bahasa Indonesia/Inggris + caption per kata + musik & SFX (−14 LUFS).
 
 Dibangun untuk kebutuhan konten **Maura Group** (Maura Trans, Maura Printing), tapi gayanya umum — bisa dipakai untuk topik apa saja.
 
@@ -65,7 +65,7 @@ Tidak semua AI coding agent memiliki kapasitas reasoning visual dan context wind
 
 | Peringkat / Tier | AI Agent | Level Kompleksitas | Gaya yang Direkomendasikan | Catatan Performa |
 |:---:|---|---|---|---|
-| **Tier 1 (Heavy / Full Power)** 🏆 | **Claude Code** / **Google Antigravity** | **Semua Gaya (1–77)**<br>*(Ringan s.d. Sangat Berat)* | • **3D & Shader**: `clay-stop-motion`, `dunia-blok`, `low-poly`, `cutaway-3d`, `psychedelic-shader`<br>• **Painterly / Seni Rupa**: `anime`, `lukisan-minyak`, `cat-air`, `wayang-kulit`<br>• **Motion Kompleks**: Seri `stickman-*`, `isometrik`, `kinetic-type` | Model reasoning besar (Claude 3.7 Sonnet / Opus, Gemini Pro). Mampu menyusun matematika 3D, rigging stickman multi-joint, koreografi kamera, dan debugging render otomatis. |
+| **Tier 1 (Heavy / Full Power)** 🏆 | **Claude Code** / **Google Antigravity** | **Semua Gaya (1–84)**<br>*(Ringan s.d. Sangat Berat)* | • **3D & Shader**: `clay-stop-motion`, `dunia-blok`, `low-poly`, `cutaway-3d`, `psychedelic-shader`<br>• **Painterly / Seni Rupa**: `anime`, `lukisan-minyak`, `cat-air`, `wayang-kulit`<br>• **Motion Kompleks**: Seri `stickman-*`, `isometrik`, `kinetic-type`, `explainer-25d` | Model reasoning besar (Claude 3.7 Sonnet / Opus, Gemini Pro). Mampu menyusun matematika 3D, rigging stickman multi-joint, koreografi kamera, dan debugging render otomatis. |
 | **Tier 2 (Balanced / Mid-to-Heavy)** ⚡ | **Codex CLI** (OpenAI o3-mini / GPT-4o) | **Gaya 2D Kompleks & Semi-3D**<br>*(Menengah s.d. Berat)* | • **2D Vektor & Layout**: `flat-vector`, `neo-brutalist`, `infografis-data`, `blueprint`<br>• **Tipografi & Retro**: `kinetic-type`, `terminal-ascii`, `vhs-arsip`, `retro-pixel`<br>• **Kriya & Stickman**: `stickman-doodle`, `stickman-subuh`, `kertas-guntingan` | Sangat cepat dalam logika naskah dan scene 2D terstruktur. Untuk gaya 3D berat atau shader kompleks, disarankan cek `--stills` terlebih dahulu untuk memastikan koordinat visual pas. |
 | **Tier 3 (Lightweight / Fast Bot)** ⚡ | **Hermes** (Worker Gateway / LLM Ringan) | **Gaya 2D Sederhana & Cepat**<br>*(Ringan)* | • **2D Dasar**: `flat-vector`, `swiss-bauhaus`<br>• **Tipografi Bersih**: `kinetic-type`, `trailer-gelap`<br>• **Doodle Minimalis**: `stickman-minimal-dark`, `garis-tunggal` | Cocok untuk automated pipeline / bot chat instan. Kurang ideal untuk gaya 3D Three.js atau lukisan berlapis banyak karena rawan timeout atau inkonsistensi koordinat. |
 
@@ -73,7 +73,7 @@ Tidak semua AI coding agent memiliki kapasitas reasoning visual dan context wind
 
 - **Hermes (Chat / Worker Otomatis)**: Fokus pada tugas cepat, eksekusi naskah pendek, bot Telegram/Discord. Gunakan gaya deklaratif sederhana (`flat-vector`, `kinetic-type`, `stickman-minimal-dark`). Berikan prompt spesifik (misal: "5 baris naskah").
 - **Codex CLI (Terminal Power-User)**: Sangat cocok untuk video explainer berbasis data, infografis, dan konten edukasi harian (`infografis-data`, `blueprint`, `neo-brutalist`, `stickman-doodle`). Manfaatkan alur iteratif Codex: jalankan `--stills 2,15,40` untuk inspeksi visual sebelum render akhir MP4 (lihat panduan lengkap di [CODEX.md](CODEX.md)).
-- **Claude Code / Antigravity (Studio Full-Stack Creative)**: Mampu menangani seluruh 77 gaya tanpa batasan, termasuk kalkulasi rotasi 3D Three.js, stop-motion plastisin, dan layering cat air/minyak untuk video 60–90 detik. Cukup berikan topik cerita dan target emosi, agent akan merancang naskah dan koreografi visual secara menyeluruh.
+- **Claude Code / Antigravity (Studio Full-Stack Creative)**: Mampu menangani seluruh 84 gaya tanpa batasan, termasuk kalkulasi rotasi 3D Three.js, stop-motion plastisin, dan layering cat air/minyak untuk video 60–90 detik. Cukup berikan topik cerita dan target emosi, agent akan merancang naskah dan koreografi visual secara menyeluruh.
 
 ### Cara Menjalankan per Agent
 
@@ -120,7 +120,7 @@ Catatan: Hermes butuh akses ke repo ini (`~/maura-motion-skill/`), Node 22+, ffm
 |---|---|
 | `SKILL.md` | Panduan pakai skill (pintu masuk agen) |
 | `AUTHORING.md` | Standar naskah & cara bikin gaya baru |
-| `STYLES.md` / `catalog.json` | Katalog 78 gaya + kecocokan topik |
+| `STYLES.md` / `catalog.json` | Katalog 84 gaya + kecocokan topik |
 | `styles/<gaya>/` | `STYLE.md` + `kit.js` + `demo1/`..`demo3/` per gaya |
 | `examples/` | Contoh unggulan siap tonton: `hello` (*Halo Maura Motion*) & `clay-stop-motion-demo2` (*Sangkuriang & Perahu Terbalik*) |
 | `engine/` | Runtime + renderer (headless Chrome / Playwright → MP4) |
@@ -138,7 +138,7 @@ Default suara untuk Bahasa Indonesia maupun Inggris adalah **ElevenLabs George**
 
 Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`), `~/.hermes/elevenlabs.env`, atau `.env` di folder repo.
 
-## Status gaya (78 gaya: 78 siap pakai ✅)
+## Status gaya (84 gaya: 84 siap pakai ✅)
 
 | No | Gaya | ID | Status | Demo 1 | Demo 2 | Demo 3 |
 |:---:|---|---|:---:|---|---|---|
@@ -220,6 +220,12 @@ Key `ELEVENLABS_API_KEY` dibaca otomatis dari `~/.env` (`C:\Users\<user>\.env`),
 | 76 | **Stickman Minimal Dark** | `stickman-minimal-dark` | ✅ | [Kamu Bukan Pemalas (Regulasi Emosi)](styles/stickman-minimal-dark/demo1/) (64 dtk) | [Hentikan Overthinking Jam 2 Pagi (Brain Dump)](styles/stickman-minimal-dark/demo2/) (64 dtk) | [Lingkaran Kendali Stoik (Epictetus)](styles/stickman-minimal-dark/demo3/) (65 dtk) |
 | 77 | **Stickman Picturebook** | `stickman-picturebook` | ✅ | [Dongeng Batu yang Menyusut (Langkah Awal)](styles/stickman-picturebook/demo1/) (64 dtk) | [Kisah Dua Benih di Taman (Akar Pohon Ek)](styles/stickman-picturebook/demo2/) (64 dtk) | [Lentera Seratus Langkah (Cahaya Berpindah)](styles/stickman-picturebook/demo3/) (65 dtk) |
 | 78 | **Stickman OverSimplified** | `stickman-oversimplified` | ✅ | [Edmond Becquerel 1839 (Listrik Surya Pertama)](styles/stickman-oversimplified/demo1/) (64 dtk) | [Serendipity Sains (Penisilin & Microwave)](styles/stickman-oversimplified/demo2/) (64 dtk) | [Ignaz Semmelweis 1847 (Cuci Tangan Medis)](styles/stickman-oversimplified/demo3/) (65 dtk) |
+| 79 | **Kurzgesagt Flat Motion** | `kurzgesagt-flat` | ✅ | [Sistem Pembersih Sampah Otak](styles/kurzgesagt-flat/demo1/) (68 dtk) | [Skala Waktu Kosmik 13.8 Miliar Tahun](styles/kurzgesagt-flat/demo2/) (75 dtk) | [Paradoks Kesepian Manusia Prasejarah](styles/kurzgesagt-flat/demo3/) (78 dtk) |
+| 80 | **Whiteboard Explainer Pro** | `whiteboard-explainer` | ✅ | [Teknik Belajar Richard Feynman](styles/whiteboard-explainer/demo1/) (64 dtk) | [Hukum Pareto 80/20](styles/whiteboard-explainer/demo2/) (68 dtk) | [Aturan 2 Menit Melawan Distraksi](styles/whiteboard-explainer/demo3/) (68 dtk) |
+| 81 | **Isometric Low-Poly 3D** | `isometric-lowpoly` | ✅ | [Pabrik Kebiasaan Otomatis](styles/isometric-lowpoly/demo1/) (66 dtk) | [Siklus Tidur REM 90 Menit](styles/isometric-lowpoly/demo2/) (75 dtk) | [Efek Bola Salju Bunga Majemuk](styles/isometric-lowpoly/demo3/) (77 dtk) |
+| 82 | **Cyberpunk Retro Synthwave** | `synthwave-neon` | ✅ | [Dopamin & Jebakan Algoritma Medsos](styles/synthwave-neon/demo1/) (64 dtk) | [Anatomi Serangan Phishing Siber](styles/synthwave-neon/demo2/) (73 dtk) | [Evolusi Kecerdasan Buatan & Neural Net](styles/synthwave-neon/demo3/) (77 dtk) |
+| 83 | **Kebun & Lifehacks Santai** | `kebun-lifehacks` | ✅ | [Trik Basmi Kutu Putih Tanpa Racun Kimia](styles/kebun-lifehacks/demo1/) (71 dtk) | [Trik Sayur Kulkas Tahan 1 Bulan](styles/kebun-lifehacks/demo2/) (68 dtk) | [Trik Hemat Listrik AC Rumah 40%](styles/kebun-lifehacks/demo3/) (78 dtk) |
+| 84 | **Modern Explainer 2.5D** | `explainer-25d` | ✅ | [Piramida Keuangan Pribadi 5 Tingkat](styles/explainer-25d/demo1/) (76 dtk) | [Tiga Lapisan Otak Manusia (Triune Brain)](styles/explainer-25d/demo2/) (82 dtk) | [Cara Kerja Algoritma Rekomendasi AI](styles/explainer-25d/demo3/) (87 dtk) |
 
 ## Contoh hasil
 

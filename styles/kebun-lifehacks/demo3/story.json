@@ -1,0 +1,59 @@
+{
+  "title": "Trik Hemat Listrik AC Rumah Hingga 40% — Tagihan Bulanan Terjun Bebas",
+  "slug": "kebun_hemat_listrik_ac",
+  "style": "kebun-lifehacks",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "lofi",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tagihan listrik bulanan melonjak bikin dompet menjerit gara-gara AC nyala seharian? Jangan panik, terapkan lima trik cerdas ini!",
+      "say": "Tagihan listrik bulanan melonjak bikin dompet menjerit gara-gara AC nyala seharian? Jangan panik, terapkan lima trik cerdas ini!"
+    },
+    {
+      "id": "langkah1",
+      "text": "Langkah pertama: jangan pernah menyetel suhu di 16 derajat saat baru masuk kamar! Setel langsung di 24 atau 25 derajat Celcius.",
+      "say": "Langkah pertama: jangan pernah menyetel suhu di 16 derajat saat baru masuk kamar! Setel langsung di 24 atau 25 derajat Celcius."
+    },
+    {
+      "id": "langkah2",
+      "text": "Langkah kedua: aktifkan mode Dry saat cuaca lembap atau habis hujan; udara ruangan jadi sejuk tanpa kompresor bekerja terlalu berat.",
+      "say": "Langkah kedua: aktifkan mode Dry saat cuaca lembap atau habis hujan; udara ruangan jadi sejuk tanpa kompresor bekerja terlalu berat."
+    },
+    {
+      "id": "langkah3",
+      "text": "Langkah ketiga: cuci saringan filter jaring AC minimal dua minggu sekali; debu tebal menghambat hembusan angin dan bikin boros daya!",
+      "say": "Langkah ketiga: cuci saringan filter jaring AC minimal dua minggu sekali; debu tebal menghambat hembusan angin dan bikin boros daya!"
+    },
+    {
+      "id": "langkah4",
+      "text": "Langkah keempat: nyalakan kipas angin kecepatan rendah bersamaan dengan AC agar sirkulasi udara dingin tersebar cepat dan merata.",
+      "say": "Langkah keempat: nyalakan kipas angin kecepatan rendah bersamaan dengan AC agar sirkulasi udara dingin tersebar cepat dan merata."
+    },
+    {
+      "id": "langkah5",
+      "text": "Langkah kelima: pastikan pintu dan ventilasi tertutup rapat, serta pasang gorden tebal agar panas matahari siang tidak tembus.",
+      "say": "Langkah kelima: pastikan pintu dan ventilasi tertutup rapat, serta pasang gorden tebal agar panas matahari siang tidak tembus."
+    },
+    {
+      "id": "kuis",
+      "text": "Kuis hemat daya: menurutmu, apa yang paling menyedot watt listrik AC paling besar? A: Tarikan awal kompresor mati-nyala, B: Suhu konstan 25 derajat, C: Putaran kipas level 2?",
+      "say": "Kuis hemat daya: menurutmu, apa yang paling menyedot watt listrik AC paling besar? A: Tarikan awal kompresor mati-nyala, B: Suhu konstan 25 derajat, C: Putaran kipas level 2?"
+    },
+    {
+      "id": "jawaban",
+      "text": "Jawabannya A: Tarikan awal kompresor saat mati-nyala berulang kali! Jadi jangan matikan AC kalau cuma keluar sebentar. Berapa derajat suhu AC-mu malam ini?",
+      "say": "Jawabannya A: Tarikan awal kompresor saat mati-nyala berulang kali! Jadi jangan matikan AC kalau cuma keluar sebentar. Berapa derajat suhu AC-mu malam ini?"
+    }
+  ]
+}
+

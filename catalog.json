@@ -1146,5 +1146,33 @@
     "story": "Dopamin & Jebakan Algoritma (The Cyber Dopamine Loop)",
     "hook": "Mengapa jempolmu seolah bergerak sendiri membuka aplikasi media sosial, bahkan saat kamu baru saja meletakkan ponsel semenit lalu?",
     "concept": "Estetika cyberpunk retro synthwave 80-an dengan grid lantai neon perspektif 3D berkecepatan tinggi, matahari bergaris horizontal, pegunungan kawat wireframe, hologram HUD interaktif, serta avatar siber berhelm visor bercahaya."
+  },
+  {
+    "no": 83,
+    "id": "kebun-lifehacks",
+    "name": "Kebun & Lifehacks Santai",
+    "source": "custom:kebun-lifehacks",
+    "family": "2D",
+    "tech": "canvas2d",
+    "voice": "el-id-m",
+    "music": "lofi",
+    "captions": "clean",
+    "story": "Trik Basmi Kutu Putih Tanpa Racun Kimia (Daun Bersih Bebas Hama)",
+    "hook": "Daun tanaman kesayanganmu tiba-tiba penuh bercak putih seperti kapas dan semut bergerombol? Awas, itu kutu putih perusak tanaman!",
+    "concept": "Gaya tips berkebun dan lifehacks rumah tangga santai dengan pemandangan teras kebun tanah liat bertingkat, kartu frosted glass langkah 1-5, kuis interaktif dengan bar hitungan mundur, kotak narasi karaoke panggung tengah berpenyorot kuning, dan maskot tunas jeruk imut yang interaktif."
+  },
+  {
+    "no": 84,
+    "id": "explainer-25d",
+    "name": "Modern Explainer 2.5D",
+    "source": "custom:explainer-25d",
+    "family": "2.5D",
+    "tech": "canvas2d",
+    "voice": "el-id-m",
+    "music": "tech",
+    "captions": "clean",
+    "story": "Piramida Keuangan Pribadi (The 2.5D Wealth Hierarchy)",
+    "hook": "Mengapa banyak orang yang mulai investasi saham dan kripto justru berakhir panik dan terlilit utang? Masalahnya ada pada pondasi piramida yang terbalik!",
+    "concept": "Gaya video essay edukasi premium 2.5D berkedalaman nyata dengan mesin proyeksi kamera 3D tanpa library eksternal, lantai grid perspektif cakrawala, balok berketebalan 3-wajah mekar (exploded stack), laser konektor bercahaya, dan kartu kuis interaktif."
   }
 ]

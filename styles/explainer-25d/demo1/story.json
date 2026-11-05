@@ -1,0 +1,58 @@
+{
+  "title": "Piramida Keuangan Pribadi — Mengapa 80% Orang Terjebak Runtuh Finansial?",
+  "slug": "explainer_piramida_keuangan",
+  "style": "explainer-25d",
+  "lang": "id",
+  "voice": "el-id-m",
+  "speed": 1.08,
+  "maxDuration": 90,
+  "music": {
+    "preset": "tech",
+    "db": -16
+  },
+  "lead": 0.4,
+  "tail": 1.2,
+  "pause": 0.28,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Mengapa banyak orang yang mulai investasi saham dan kripto justru berakhir panik dan terlilit utang? Masalahnya ada pada pondasi piramida yang terbalik!",
+      "say": "Mengapa banyak orang yang mulai investasi saham dan kripto justru berakhir panik dan terlilit utang? Masalahnya ada pada pondasi piramida yang terbalik!"
+    },
+    {
+      "id": "level1",
+      "text": "Tingkat pertama adalah pondasi paling dasar: cashflow bulanan yang positif dan pelunasan tuntas seluruh utang konsumtif berbunga tinggi.",
+      "say": "Tingkat pertama adalah pondasi paling dasar: cashflow bulanan yang positif dan pelunasan tuntas seluruh utang konsumtif berbunga tinggi."
+    },
+    {
+      "id": "level2",
+      "text": "Tingkat kedua adalah dana darurat cair minimal tiga hingga enam bulan pengeluaran rutin, tersimpan aman di rekening yang mudah diakses.",
+      "say": "Tingkat kedua adalah dana darurat cair minimal tiga hingga enam bulan pengeluaran rutin, tersimpan aman di rekening yang mudah diakses."
+    },
+    {
+      "id": "level3",
+      "text": "Tingkat ketiga adalah manajemen proteksi asuransi kesehatan, agar tabungan dan asetmu tidak lenyap seketika saat musibah medis datang.",
+      "say": "Tingkat ketiga adalah manajemen proteksi asuransi kesehatan, agar tabungan dan asetmu tidak lenyap seketika saat musibah medis datang."
+    },
+    {
+      "id": "level4",
+      "text": "Tingkat keempat barulah investasi pasif jangka panjang, seperti reksadana indeks dan obligasi negara untuk mengalahkan inflasi tahunan.",
+      "say": "Tingkat keempat barulah investasi pasif jangka panjang, seperti reksadana indeks dan obligasi negara untuk mengalahkan inflasi tahunan."
+    },
+    {
+      "id": "level5",
+      "text": "Dan di puncak teratas adalah aset pertumbuhan agresif berisiko tinggi; jangan pernah menaruh modal di puncak jika pondasi bawahmu masih bolong!",
+      "say": "Dan di puncak teratas adalah aset pertumbuhan agresif berisiko tinggi; jangan pernah menaruh modal di puncak jika pondasi bawahmu masih bolong!"
+    },
+    {
+      "id": "kuis",
+      "text": "Kuis finansial 2.5D: menurut aturan alokasi budgeting 50-30-20 yang populer, berapa porsi ideal untuk tabungan dan investasi? A: 20%, B: 50%, atau C: 5%?",
+      "say": "Kuis finansial 2.5D: menurut aturan alokasi budgeting 50-30-20 yang populer, berapa porsi ideal untuk tabungan dan investasi? A: 20%, B: 50%, atau C: 5%?"
+    },
+    {
+      "id": "jawaban",
+      "text": "Jawabannya A: 20% untuk tabungan dan investasi masa depan! Sudah seimbang piramida keuanganmu bulan ini?",
+      "say": "Jawabannya A: 20% untuk tabungan dan investasi masa depan! Sudah seimbang piramida keuanganmu bulan ini?"
+    }
+  ]
+}
