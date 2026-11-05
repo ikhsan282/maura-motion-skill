@@ -59,13 +59,25 @@ Skill ini dirancang untuk dijalankan **bareng AI coding agent**. Kamu cukup ceri
 | Revisi visual | "di detik 7 teksnya numpuk, benerin" |
 | Tambah demo | "buatkan `demo2` dan `demo3` di gaya ini" |
 
-### Pakai Hermes
+### Rekomendasi & Ranking AI Agent
 
-Hermes (gateway + kanban) bisa menjalankan skill ini sebagai worker. Cukup kirim prompt seperti di atas ke chat Hermes — Hermes yang akan baca `SKILL.md`, tulis naskah & scene, render, dan kirim MP4-nya ke chat.
+Tidak semua AI coding agent memiliki kapasitas reasoning visual dan context window yang sama untuk menyusun ratusan baris koordinat Canvas / WebGL / Three.js. Pilih agent sesuai kompleksitas gaya yang ingin kamu render:
 
-Catatan: Hermes butuh akses ke repo ini (`~/maura-motion-skill/`), Node 22+, ffmpeg, Chrome, dan Python 3.10+. Setup sekali: `node scripts/setup.mjs`. Untuk suara manusia (ElevenLabs), taruh key `ELEVENLABS_API_KEY` di `~/.env`, `~/.hermes/elevenlabs.env`, atau `.env` di root repo.
+| Peringkat / Tier | AI Agent | Level Kompleksitas | Gaya yang Direkomendasikan | Catatan Performa |
+|:---:|---|---|---|---|
+| **Tier 1 (Heavy / Full Power)** 🏆 | **Claude Code** / **Google Antigravity** | **Semua Gaya (1–77)**<br>*(Ringan s.d. Sangat Berat)* | • **3D & Shader**: `clay-stop-motion`, `dunia-blok`, `low-poly`, `cutaway-3d`, `psychedelic-shader`<br>• **Painterly / Seni Rupa**: `anime`, `lukisan-minyak`, `cat-air`, `wayang-kulit`<br>• **Motion Kompleks**: Seri `stickman-*`, `isometrik`, `kinetic-type` | Model reasoning besar (Claude 3.7 Sonnet / Opus, Gemini Pro). Mampu menyusun matematika 3D, rigging stickman multi-joint, koreografi kamera, dan debugging render otomatis. |
+| **Tier 2 (Balanced / Mid-to-Heavy)** ⚡ | **Codex CLI** (OpenAI o3-mini / GPT-4o) | **Gaya 2D Kompleks & Semi-3D**<br>*(Menengah s.d. Berat)* | • **2D Vektor & Layout**: `flat-vector`, `neo-brutalist`, `infografis-data`, `blueprint`<br>• **Tipografi & Retro**: `kinetic-type`, `terminal-ascii`, `vhs-arsip`, `retro-pixel`<br>• **Kriya & Stickman**: `stickman-doodle`, `stickman-subuh`, `kertas-guntingan` | Sangat cepat dalam logika naskah dan scene 2D terstruktur. Untuk gaya 3D berat atau shader kompleks, disarankan cek `--stills` terlebih dahulu untuk memastikan koordinat visual pas. |
+| **Tier 3 (Lightweight / Fast Bot)** ⚡ | **Hermes** (Worker Gateway / LLM Ringan) | **Gaya 2D Sederhana & Cepat**<br>*(Ringan)* | • **2D Dasar**: `flat-vector`, `swiss-bauhaus`<br>• **Tipografi Bersih**: `kinetic-type`, `trailer-gelap`<br>• **Doodle Minimalis**: `stickman-minimal-dark`, `garis-tunggal` | Cocok untuk automated pipeline / bot chat instan. Kurang ideal untuk gaya 3D Three.js atau lukisan berlapis banyak karena rawan timeout atau inkonsistensi koordinat. |
 
-### Pakai Claude Code / Antigravity
+#### Panduan Khusus per Agent:
+
+- **Hermes (Chat / Worker Otomatis)**: Fokus pada tugas cepat, eksekusi naskah pendek, bot Telegram/Discord. Gunakan gaya deklaratif sederhana (`flat-vector`, `kinetic-type`, `stickman-minimal-dark`). Berikan prompt spesifik (misal: "5 baris naskah").
+- **Codex CLI (Terminal Power-User)**: Sangat cocok untuk video explainer berbasis data, infografis, dan konten edukasi harian (`infografis-data`, `blueprint`, `neo-brutalist`, `stickman-doodle`). Manfaatkan alur iteratif Codex: jalankan `--stills 2,15,40` untuk inspeksi visual sebelum render akhir MP4 (lihat panduan lengkap di [CODEX.md](CODEX.md)).
+- **Claude Code / Antigravity (Studio Full-Stack Creative)**: Mampu menangani seluruh 77 gaya tanpa batasan, termasuk kalkulasi rotasi 3D Three.js, stop-motion plastisin, dan layering cat air/minyak untuk video 60–90 detik. Cukup berikan topik cerita dan target emosi, agent akan merancang naskah dan koreografi visual secara menyeluruh.
+
+### Cara Menjalankan per Agent
+
+#### 1. Pakai Claude Code / Antigravity
 
 Clone repo ini, lalu jalankan agen AI dari dalam folder repo:
 
@@ -77,8 +89,30 @@ node scripts/setup.mjs
 
 Lalu beri prompt:
 
+> Baca SKILL.md. Buatkan video gaya `clay-stop-motion` tentang "Sangkuriang & Perahu Terbalik".
+> Naskah Bahasa Indonesia 8 baris (~60 dtk), suara ElevenLabs (George), kirim hasilnya.
+
+#### 2. Pakai Codex CLI
+
+Buka Codex CLI dari dalam folder repo:
+
+```bash
+cd maura-motion-skill
+codex
+```
+
+Lalu beri prompt:
+
 > Baca SKILL.md. Buatkan video gaya `infografis-data` tentang "harga bensin 10 tahun".
-> Naskah Bahasa Indonesia 8 baris, render MP4 + narasi ElevenLabs (George), kirim hasilnya.
+> Naskah Bahasa Indonesia 8 baris, cek --stills dulu sebelum render full MP4.
+
+*(Panduan lengkap Codex: lihat [CODEX.md](CODEX.md))*
+
+#### 3. Pakai Hermes
+
+Hermes (gateway + kanban) bisa menjalankan skill ini sebagai worker. Cukup kirim prompt ke chat Hermes — Hermes yang akan baca `SKILL.md`, tulis naskah & scene, render, dan kirim MP4-nya ke chat.
+
+Catatan: Hermes butuh akses ke repo ini (`~/maura-motion-skill/`), Node 22+, ffmpeg, Chrome, dan Python 3.10+. Setup sekali: `node scripts/setup.mjs`. Untuk suara manusia (ElevenLabs), taruh key `ELEVENLABS_API_KEY` di `~/.env`, `~/.hermes/elevenlabs.env`, atau `.env` di root repo.
 
 ## Struktur
 
