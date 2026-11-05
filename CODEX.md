@@ -27,9 +27,9 @@ Tanpa key pun bisa render — pakai suara offline (Kokoro/Piper).
 
 | # | Langkah | File |
 |---|---|---|
-| 1 | Pilih gaya | `STYLES.md` — cari `best_for` yang cocok |
-| 2 | Pelajari kit | `styles/<gaya>/STYLE.md` + intip `demo/` |
-| 3 | Tulis naskah | `story.json` — 5 baris ≈ 20 dtk, baris 1 = hook |
+| 1 | Pilih gaya | `STYLES.md` — cari kolom *Paling cocok untuk* |
+| 2 | Pelajari kit | `styles/<gaya>/STYLE.md` + intip `demo1/`..`demo3/` |
+| 3 | Tulis naskah | `story.json` — 4–6 baris (≤ 20 dtk) atau 8 baris (~60 dtk, "maxDuration": 90), baris 1 = hook |
 | 4 | Bangun scene | `scene.js` — 1 shot per baris, pakai fungsi `kit.js` |
 | 5 | Render | `node scripts/make.mjs <project>` → MP4 |
 
@@ -37,16 +37,16 @@ Perintah render yang sering dipakai:
 
 ```bash
 # render biasa (maks 20 dtk)
-node scripts/make.mjs styles/flat-vector/demo
+node scripts/make.mjs styles/flat-vector/demo1
 
 # video panjang (sampai 120 dtk)
-AM_MAX_DURATION=120 node scripts/make.mjs styles/stickman-kisah/demo
+AM_MAX_DURATION=90 node scripts/make.mjs styles/stickman-kisah/demo1
 
 # cek visual dulu sebelum render full (hemat waktu!)
-node scripts/make.mjs <project> --stills 1,5,9 --force
+node scripts/make.mjs <project> --stills 2,15,40
 
 # ganti suara / musik
-node scripts/make.mjs <project> --voice id-f --music lofi
+node scripts/make.mjs <project> --voice el-id-f --music lofi
 ```
 
 ## 3. Prompt ke Codex (copy-paste)
@@ -63,7 +63,7 @@ Render MP4 + narasi + musik.
 Variasi yang sering dipakai:
 
 - Ganti gaya: `"pakai gaya kinetic-type tentang fokus satu hal"`
-- Topik bebas: `"buatkan video tentang mudik"` (Codex pilihkan gaya dari `best_for`)
+- Topik bebas: `"buatkan video tentang mudik"` (Codex pilihkan gaya yang cocok dari `STYLES.md`)
 - Video panjang: `"buatkan 60 detik tentang kirim kucing, gaya infografis-data"`
 - Revisi: `"di detik 7 teksnya numpuk, benerin lalu render ulang"`
 - Demo baru: `"jadikan demo resmi gaya ini, catat di STYLE.md + README.md"`
@@ -82,7 +82,7 @@ Variasi yang sering dipakai:
 ```
 Kamu: Baca SKILL.md. Gaya apa yang paling gampang untuk pemula?
 
-Codex: flat-vector — kotak, lingkaran, teks. Lihat styles/flat-vector/demo/.
+Codex: flat-vector — kotak, lingkaran, teks. Lihat styles/flat-vector/demo1/.
 
 Kamu: Buatkan video gaya flat-vector tentang "peta isi kepala pas macet".
       5 baris, Bahasa Indonesia.
@@ -100,8 +100,8 @@ Codex: (cek story.json — ternyata memang typo, benerin, render ulang)
 
 | Gejala | Obat |
 |---|---|
-| `no story.json` | path proyek salah — pakai path dari root repo, mis. `styles/kinetic-type/demo` |
-| Render kepotong 20 dtk | tambah `AM_MAX_DURATION=120` di depan perintah |
+| `no story.json` | path proyek salah — pakai path dari root repo, mis. `styles/kinetic-type/demo1` |
+| Render kepotong / error TOO LONG | tambah "maxDuration": 90 di story.json atau pasang `AM_MAX_DURATION=90` |
 | Suara 401 / model error | cek `ELEVENLABS_API_KEY`, pakai model `eleven_multilingual_v2` |
 | Teks numpuk di video | cek `--stills` dulu, perbaiki koordinat x/y di `scene.js`, render ulang |
 | `write_file` nolak overwrite | baca file dulu (`read`), baru tulis ulang |

@@ -15,7 +15,7 @@ styles/<id>/
     out/<slug>.mp4  the finished short
 ```
 
-Reference implementation: `styles/wayang-kulit/` (kit.js + demo/scene.js). Read it before you start: it
+Reference implementation: `styles/wayang-kulit/` (kit.js + demo1/scene.js). Read it before you start: it
 shows the shot table, cue timing, hand-held props, camera, titles, SFX and the per-cut flash.
 
 ## 1. Commands
@@ -25,7 +25,7 @@ SK=/home/claude/maura-motion            # the skill root (on a user's machine: ~
 python3 $SK/audio/tts.py <demo>        # narrate story.json -> build/narration.wav + build/timeline.json (cue times)
 node $SK/engine/render.mjs <demo> --stills 0.5,3,7.2,12    # PNG stills + build/stills/sheet.png (look at it!)
 node $SK/engine/render.mjs <demo> --range 10:14            # render a few seconds of motion -> build/video.mp4
-node $SK/scripts/make.mjs <demo>       # everything: narrate, render, score, mix (-14 LUFS), mux -> demo/out/<slug>.mp4
+node $SK/scripts/make.mjs <demo>       # everything: narrate, render, score, mix (-14 LUFS), mux -> <demo>/out/<slug>.mp4
 python3 $SK/audio/music.py x --list    # music presets
 ```
 Stills/renders wait for a free slot automatically (shared machine). Narration is cached: re-running is free
@@ -44,12 +44,14 @@ unless the lines change.
   ]
 }
 ```
-- **Bahasa Indonesia**, natural spoken register ("kamu"), **4–6 lines, 38–48 words → 15–20 s. HARD LIMIT: the finished video is ≤ 20.0 s** (lead 0.3, pause 0.2, tail 1.0). `tts.py` refuses to pass a story over 20 s.
+- **Bahasa Indonesia**, natural spoken register ("kamu").
+  - **Short format (≤ 20 s)**: 4–6 lines, 38–48 words.
+  - **Long format (60–90 s)**: ~8 lines, 140–170 words. **Important:** Add `"maxDuration": 90` to story.json (or pass `AM_MAX_DURATION=90`), otherwise `tts.py` caps audio at 20 s.
 - `id` per line (short, unique): your shots key off these cue ids.
 - `say` = what the narrator pronounces when it differs from the caption (foreign names, English words,
   abbreviations, numbers you want read a certain way). The narrator reads Indonesian phonetically:
   write English words the way an Indonesian would say them (`"say": "...tombol lek..."`).
-- Voices: `id-m` (male, default), `id-f` (female), `id-m2` (deeper male), `id-f2` (soft female). English: `en-m`, `en-f`, `en-story`.
+- Voices: `el-id-m` (George, default ElevenLabs), `el-id-f` (Alice), offline fallback: `id-m`, `id-f`, `id-m2`, `id-f2`. English: `en-m`, `en-f`, `en-story`.
 - Music presets: gamelan, gamelan-pelog, lofi, cinematic, synthwave, darksynth, musicbox, folk, ambient,
   dreamy, ragtime, anime, tech, playful, noir, hype, tribal, japanese, chiptune. `db` (default -17) sets level under the voice.
 - `"captions": false` turns burnt-in captions off (only for styles whose visuals ARE the words, e.g. kinetic type).
@@ -159,7 +161,7 @@ Your JS "draw" time is small; the real cost is paid at capture, when Skia raster
 
 ## 5. Finish
 1. `node $SK/scripts/make.mjs <demo>` → open `build/qa_sheet.jpg` (8 frames of the real file) and fix anything wrong.
-2. Check the result: `ffprobe` duration 15–20 s (never above 20.0), 1080×1920, audio present.
+2. Check the result: `ffprobe` duration matches story (15–20 s for short, ~64 s for long), 1080×1920, audio present.
 3. Write `styles/<id>/STYLE.md` (template below). Keep kit.js reusable: a future short in this style should
    only need a new story.json + scene.js that imports the kit.
 
@@ -182,5 +184,5 @@ best_for: <kinds of stories, comma separated>
 **Cerita yang cocok:** 4–6 story ideas with a one-line hook each.
 **Rumus hook:** 2–3 hook templates for this style.
 **Kit API:** each exported function, one line each.
-**Demo:** title, length, what happens.
+**Demos:** demo1, demo2, demo3 with titles, duration, and concept.
 ```
