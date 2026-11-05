@@ -37,11 +37,90 @@ function roundRect(ctx, x, y, w, h, r = 14) {
 }
 
 /**
+ * Camera zoom & pan helper for dynamic cinematic storytelling
+ */
+export function withCamera(ctx, { zoom = 1, fx = 540, fy = 850, dx = 0, dy = 0 } = {}, fn) {
+  ctx.save();
+  ctx.translate(540 + dx, 850 + dy);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
+/**
+ * Educational Floating Callout Card on the lower area (y: 1470..1640)
+ */
+export function world3dCallout(ctx, x, y, w, h, {
+  tag = 'DIMENSI 3D',
+  title = '',
+  desc = '',
+  stat = '',
+  statSub = '',
+  col = PAL.cyan,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(0.92 + 0.08 * a, 0.92 + 0.08 * a);
+  ctx.globalAlpha = clamp(a, 0, 1);
+
+  ctx.fillStyle = 'rgba(10, 18, 30, 0.92)';
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 3.5;
+  roundRect(ctx, -w / 2, -h / 2, w, h, 20);
+  ctx.fill();
+  ctx.stroke();
+
+  // Tag pill
+  ctx.fillStyle = col;
+  roundRect(ctx, -w / 2 + 22, -h / 2 + 18, 270, 28, 8);
+  ctx.fill();
+  ctx.fillStyle = '#061018';
+  ctx.font = '900 13px ui-monospace, monospace';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(tag, -w / 2 + 34, -h / 2 + 32, 246);
+
+  const textW = stat ? w - 240 : w - 54;
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '800 24px system-ui, sans-serif';
+  ctx.fillText(title, -w / 2 + 22, -h / 2 + 76, textW);
+
+  ctx.fillStyle = '#9cb0c9';
+  ctx.font = '600 18px system-ui, sans-serif';
+  ctx.fillText(desc, -w / 2 + 22, -h / 2 + 116, textW);
+
+  if (stat) {
+    ctx.fillStyle = rgba(col, 0.16);
+    roundRect(ctx, w / 2 - 192, -h / 2 + 20, 170, h - 40, 14);
+    ctx.fill();
+    ctx.strokeStyle = col;
+    ctx.lineWidth = 2.5;
+    roundRect(ctx, w / 2 - 192, -h / 2 + 20, 170, h - 40, 14);
+    ctx.stroke();
+
+    ctx.fillStyle = col;
+    ctx.font = '900 28px ui-monospace, monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(stat, w / 2 - 107, -4, 150);
+    if (statSub) {
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '700 13px ui-monospace, monospace';
+      ctx.fillText(statSub, w / 2 - 107, 26, 150);
+    }
+  }
+
+  ctx.restore();
+}
+
+/**
  * Draw 3D Perspective World background with horizon glow, vanishing-point floor grid,
  * and floating 3D depth particles.
  */
 export function world3dBg(ctx, t = 0, {
-  horizonY = 485, floorY = 770, accent = PAL.cyan,
+  horizonY = 560, floorY = 1240, accent = PAL.cyan,
 } = {}) {
   const W = 1080, H = 1920;
   ctx.save();
@@ -64,25 +143,26 @@ export function world3dBg(ctx, t = 0, {
   // Vanishing-point perspective rays from (540, horizonY)
   ctx.save();
   ctx.beginPath();
-  ctx.rect(0, horizonY, W, 420);
+  ctx.rect(0, horizonY, W, floorY - horizonY + 220);
   ctx.clip();
 
   ctx.strokeStyle = rgba(accent, 0.22);
   ctx.lineWidth = 2;
-  for (let i = -8; i <= 8; i++) {
+  for (let i = -10; i <= 10; i++) {
     ctx.beginPath();
-    ctx.moveTo(540 + i * 24, horizonY);
-    ctx.lineTo(540 + i * 195, horizonY + 420);
+    ctx.moveTo(540 + i * 20, horizonY);
+    ctx.lineTo(540 + i * 195, floorY + 220);
     ctx.stroke();
   }
 
-  // Horizontal perspective depth lines (closer together near horizon, wider near viewer)
+  // Horizontal perspective depth lines
   const drift = (t * 0.35) % 1;
-  for (let j = 0; j < 9; j++) {
-    const u = (j + drift) / 9;
-    const py = horizonY + Math.pow(u, 2.1) * 410;
-    ctx.strokeStyle = rgba(accent, 0.08 + u * 0.25);
-    ctx.lineWidth = 1 + u * 2;
+  const floorSpan = floorY - horizonY + 220;
+  for (let j = 0; j < 14; j++) {
+    const u = (j + drift) / 14;
+    const py = horizonY + Math.pow(u, 2.0) * floorSpan;
+    ctx.strokeStyle = rgba(accent, 0.08 + u * 0.28);
+    ctx.lineWidth = 1 + u * 2.5;
     ctx.beginPath();
     ctx.moveTo(0, py);
     ctx.lineTo(W, py);
@@ -91,19 +171,19 @@ export function world3dBg(ctx, t = 0, {
   ctx.restore();
 
   // Glowing horizon beam
-  const hg = ctx.createLinearGradient(0, horizonY - 18, 0, horizonY + 18);
+  const hg = ctx.createLinearGradient(0, horizonY - 24, 0, horizonY + 24);
   hg.addColorStop(0, rgba(accent, 0));
-  hg.addColorStop(0.5, rgba(accent, 0.55));
+  hg.addColorStop(0.5, rgba(accent, 0.6));
   hg.addColorStop(1, rgba(accent, 0));
   ctx.fillStyle = hg;
-  ctx.fillRect(0, horizonY - 18, W, 36);
+  ctx.fillRect(0, horizonY - 24, W, 48);
 
   // Main stage platform rim at floorY
-  ctx.strokeStyle = rgba(accent, 0.5);
+  ctx.strokeStyle = rgba(accent, 0.6);
   ctx.lineWidth = 4;
   ctx.beginPath();
-  ctx.moveTo(40, floorY);
-  ctx.lineTo(1040, floorY);
+  ctx.moveTo(0, floorY);
+  ctx.lineTo(W, floorY);
   ctx.stroke();
 
   ctx.restore();

@@ -1,6 +1,15 @@
 // 73 · STICKMAN DUO — Kit: "Duo Sahabat Raka & Bima" (Si Topi Baseball Balik Vest Merah vs Si Kacamata Biru Jaket Kerah)
 import { clamp } from '/engine/lib/core.js';
 
+export function withCamera(ctx, { zoom = 1, panX = 0, panY = 0, fx = 540, fy = 880 } = {}, fn) {
+  ctx.save();
+  ctx.translate(fx + panX, fy + panY);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
 export const PAL = {
   bg: '#f4f6fa',
   stageLeft: '#fff8f6',
@@ -18,7 +27,7 @@ export const PAL = {
 };
 
 export function duoBg(ctx, t, {
-  floorY = 760,
+  floorY = 1230,
   episodeTag = 'EPISODE 01 • DUO AKUNTABILITAS',
   col = PAL.blue,
 } = {}) {
@@ -34,8 +43,8 @@ export function duoBg(ctx, t, {
     }
   }
 
-  // Main Split-Studio Stage Card (x: 60, y: 225, w: 960, h: 610)
-  const sx = 60, sy = 225, sw = 960, sh = 610;
+  // Main Split-Studio Stage Card (x: 60, y: 225, w: 960, h: 1180)
+  const sx = 60, sy = 225, sw = 960, sh = 1180;
   ctx.fillStyle = PAL.ink;
   ctx.beginPath();
   ctx.roundRect(sx + 8, sy + 10, sw, sh, 28);
@@ -64,15 +73,15 @@ export function duoBg(ctx, t, {
 
   // Acoustic studio wall panels on left & right background
   ctx.fillStyle = 'rgba(230, 57, 70, 0.07)';
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     ctx.beginPath();
-    ctx.roundRect(95 + i * 52, sy + 95, 36, 140, 8);
+    ctx.roundRect(95 + i * 52, sy + 95, 36, 260, 8);
     ctx.fill();
   }
   ctx.fillStyle = 'rgba(37, 99, 235, 0.07)';
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     ctx.beginPath();
-    ctx.roundRect(845 + i * 52, sy + 95, 36, 140, 8);
+    ctx.roundRect(795 + i * 52, sy + 95, 36, 260, 8);
     ctx.fill();
   }
 
@@ -569,6 +578,78 @@ export function duoCard(ctx, cx, cy, w, h, {
     ctx.fillStyle = col;
     ctx.font = '800 13.5px "JetBrains Mono", monospace';
     ctx.fillText(statSub, sx + sw / 2, sy + 98, sw - 16);
+  }
+  ctx.restore();
+}
+
+export function duoCallout(ctx, cx, cy, w, h, {
+  tag = 'DUO AKUNTABILITAS',
+  title = '',
+  desc = '',
+  stat = '',
+  col = PAL.blue,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.globalAlpha = clamp(a, 0, 1);
+  const x = cx - w / 2, y = cy - h / 2;
+
+  // Background Drop Shadow
+  ctx.fillStyle = PAL.ink;
+  ctx.beginPath();
+  ctx.roundRect(x + 7, y + 8, w, h, 20);
+  ctx.fill();
+
+  // White Card Surface
+  ctx.fillStyle = PAL.cardBg;
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.roundRect(x, y, w, h, 20);
+  ctx.fill();
+  ctx.stroke();
+
+  // Color Accent Bar on Left
+  ctx.fillStyle = col;
+  ctx.beginPath();
+  ctx.roundRect(x + 18, y + 20, 10, h - 40, 5);
+  ctx.fill();
+
+  const maxTextW = stat ? w - 260 : w - 70;
+  ctx.textAlign = 'left';
+
+  // Tag
+  ctx.fillStyle = col;
+  ctx.font = '800 15px "JetBrains Mono", monospace';
+  ctx.fillText(tag, x + 44, y + 42, maxTextW);
+
+  // Title
+  ctx.fillStyle = PAL.ink;
+  ctx.font = '800 23px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(title, x + 44, y + 84, maxTextW);
+
+  // Desc
+  ctx.fillStyle = PAL.muted;
+  ctx.font = '600 15px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(desc, x + 44, y + 124, maxTextW);
+
+  // Right Stat Box
+  if (stat) {
+    const sw = 185, sh = h - 34;
+    const sx = x + w - sw - 20, sy = y + 17;
+    ctx.fillStyle = col === PAL.red ? PAL.redSoft : col === PAL.blue ? PAL.blueSoft : '#ccfbf1';
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 3.5;
+    ctx.beginPath();
+    ctx.roundRect(sx, sy, sw, sh, 14);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = PAL.ink;
+    ctx.font = '900 26px "JetBrains Mono", monospace';
+    ctx.fillText(stat, sx + sw / 2, sy + sh / 2 + 9, sw - 16);
   }
   ctx.restore();
 }

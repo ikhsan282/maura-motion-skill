@@ -35,17 +35,17 @@ function roundRect(ctx, x, y, w, h, r = 14) {
 }
 
 /**
- * Draw warm dot-grid studio paper background + framed comic stage panel.
+ * Draw warm dot-grid studio paper background (Full-Screen 1080x1920 Standard!).
  */
 export function beanieBg(ctx, t = 0, {
-  floorY = 755, stageTag = 'CATATAN SELF-TALK HARIAN', col = PAL.beanie,
+  floorY = 1240, stageTag = 'CATATAN SELF-TALK HARIAN', col = PAL.beanie,
 } = {}) {
   const W = 1080, H = 1920;
   ctx.save();
   ctx.fillStyle = PAL.paper;
   ctx.fillRect(0, 0, W, H);
 
-  // Subtle dot-grid pattern across the page
+  // Subtle dot-grid pattern across the entire page
   ctx.fillStyle = 'rgba(30, 30, 36, 0.14)';
   for (let y = 36; y < H; y += 48) {
     for (let x = 36; x < W; x += 48) {
@@ -53,17 +53,18 @@ export function beanieBg(ctx, t = 0, {
     }
   }
 
-  // Framed Comic Stage Box (y = 225..805) with hard comic drop shadow
+  // Framed Comic Stage Box expanding full vertical canvas (y = 225..1390)
+  const sh = floorY - 225 + 150;
   ctx.fillStyle = 'rgba(30, 30, 36, 0.12)';
-  roundRect(ctx, 54, 237, 984, 578, 22);
+  roundRect(ctx, 54, 237, 984, sh, 24);
   ctx.fill();
 
   ctx.fillStyle = PAL.panel;
-  roundRect(ctx, 42, 225, 984, 578, 22);
+  roundRect(ctx, 42, 225, 984, sh, 24);
   ctx.fill();
   ctx.strokeStyle = PAL.ink;
   ctx.lineWidth = 4.5;
-  roundRect(ctx, 42, 225, 984, 578, 22);
+  roundRect(ctx, 42, 225, 984, sh, 24);
   ctx.stroke();
 
   // Subtle grid inside stage panel
@@ -78,17 +79,17 @@ export function beanieBg(ctx, t = 0, {
 
   // Stage top tag pill
   ctx.fillStyle = col;
-  roundRect(ctx, 74, 248, 360, 40, 10);
+  roundRect(ctx, 74, 248, 380, 42, 12);
   ctx.fill();
   ctx.strokeStyle = PAL.ink;
   ctx.lineWidth = 3;
-  roundRect(ctx, 74, 248, 360, 40, 10);
+  roundRect(ctx, 74, 248, 380, 42, 12);
   ctx.stroke();
   ctx.fillStyle = '#ffffff';
   ctx.font = '800 17px ui-monospace, monospace';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText(stageTag, 254, 268, 340);
+  ctx.fillText(stageTag, 264, 269, 360);
 
   // Studio floor line inside comic panel
   ctx.strokeStyle = PAL.ink;
@@ -97,6 +98,99 @@ export function beanieBg(ctx, t = 0, {
   ctx.moveTo(68, floorY);
   ctx.lineTo(1000, floorY);
   ctx.stroke();
+
+  ctx.restore();
+}
+
+/**
+ * Camera helper for dynamic zoom & focus in stickman-beanie
+ */
+export function withCamera(ctx, { zoom = 1, fx = 540, fy = 850, dx = 0, dy = 0 } = {}, fn) {
+  ctx.save();
+  ctx.translate(540 + dx, 850 + dy);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
+/**
+ * Floating Callout Card on the lower area (y: 1485, h: 165)
+ */
+export function beanieCallout(ctx, x, y, w, h, {
+  tag = 'SELF-TALK',
+  title = '',
+  desc = '',
+  stat = '',
+  statSub = '',
+  col = PAL.beanie,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(0.92 + 0.08 * a, 0.92 + 0.08 * a);
+  ctx.globalAlpha = clamp(a, 0, 1);
+
+  // Hard comic drop shadow
+  ctx.fillStyle = PAL.ink;
+  roundRect(ctx, -w / 2 + 8, -h / 2 + 8, w, h, 20);
+  ctx.fill();
+
+  ctx.fillStyle = '#ffffff';
+  roundRect(ctx, -w / 2, -h / 2, w, h, 20);
+  ctx.fill();
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 4.5;
+  roundRect(ctx, -w / 2, -h / 2, w, h, 20);
+  ctx.stroke();
+
+  // Left color stripe
+  ctx.fillStyle = col;
+  roundRect(ctx, -w / 2 + 18, -h / 2 + 18, 10, h - 36, 5);
+  ctx.fill();
+
+  const textW = stat ? w - 260 : w - 64;
+  const tx = -w / 2 + 42;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+
+  if (tag) {
+    ctx.fillStyle = col;
+    ctx.font = '800 17px ui-monospace, monospace';
+    ctx.fillText(tag, tx, -h / 2 + 34, textW);
+  }
+  if (title) {
+    ctx.fillStyle = PAL.ink;
+    ctx.font = '900 25px system-ui, sans-serif';
+    ctx.fillText(title, tx, -h / 2 + 76, textW);
+  }
+  if (desc) {
+    ctx.fillStyle = PAL.muted;
+    ctx.font = '600 18px system-ui, sans-serif';
+    ctx.fillText(desc, tx, -h / 2 + 116, textW);
+  }
+
+  if (stat) {
+    const bx = w / 2 - 200, by = -h / 2 + 18, bw = 180, bh = h - 36;
+    ctx.fillStyle = PAL.hoodie;
+    roundRect(ctx, bx, by, bw, bh, 14);
+    ctx.fill();
+    ctx.strokeStyle = PAL.ink;
+    ctx.lineWidth = 3.5;
+    roundRect(ctx, bx, by, bw, bh, 14);
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = PAL.ink;
+    ctx.font = '900 28px ui-monospace, monospace';
+    ctx.fillText(stat, bx + bw / 2, by + bh * 0.44, bw - 16);
+    if (statSub) {
+      ctx.fillStyle = PAL.beanieDark;
+      ctx.font = '800 13px ui-monospace, monospace';
+      ctx.fillText(statSub, bx + bw / 2, by + bh * 0.77, bw - 16);
+    }
+  }
 
   ctx.restore();
 }
@@ -196,33 +290,33 @@ export function beanieProps(ctx, floorY = 755, theme = 'desk', {
 
   if (theme === 'desk') {
     // Study Desk on Right (x = 760)
-    const dx = 760, dw = 250, dh = 115;
+    const dx = 760, dw = 320, dh = 150;
     ctx.fillStyle = '#e6b87d';
     ctx.strokeStyle = PAL.ink;
     ctx.lineWidth = 4;
-    roundRect(ctx, dx - dw / 2, floorY - dh, dw, 18, 6);
+    roundRect(ctx, dx - dw / 2, floorY - dh, dw, 22, 8);
     ctx.fill();
     ctx.stroke();
     // Desk legs
     ctx.beginPath();
-    ctx.moveTo(dx - dw / 2 + 24, floorY - dh + 18); ctx.lineTo(dx - dw / 2 + 24, floorY);
-    ctx.moveTo(dx + dw / 2 - 24, floorY - dh + 18); ctx.lineTo(dx + dw / 2 - 24, floorY);
+    ctx.moveTo(dx - dw / 2 + 28, floorY - dh + 22); ctx.lineTo(dx - dw / 2 + 28, floorY);
+    ctx.moveTo(dx + dw / 2 - 28, floorY - dh + 22); ctx.lineTo(dx + dw / 2 - 28, floorY);
     ctx.stroke();
 
     // Open Laptop on desk
     ctx.fillStyle = '#384252';
     ctx.beginPath();
-    ctx.moveTo(dx - 65, floorY - dh);
-    ctx.lineTo(dx - 82, floorY - dh - 58);
-    ctx.lineTo(dx + 8, floorY - dh - 58);
-    ctx.lineTo(dx + 22, floorY - dh);
+    ctx.moveTo(dx - 85, floorY - dh);
+    ctx.lineTo(dx - 105, floorY - dh - 75);
+    ctx.lineTo(dx + 12, floorY - dh - 75);
+    ctx.lineTo(dx + 30, floorY - dh);
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
 
     // Red Coffee Mug + Steam
     ctx.fillStyle = PAL.beanie;
-    roundRect(ctx, dx + 52, floorY - dh - 32, 30, 32, 5);
+    roundRect(ctx, dx + 65, floorY - dh - 42, 38, 42, 6);
     ctx.fill();
     ctx.stroke();
   } else if (theme === 'choices') {

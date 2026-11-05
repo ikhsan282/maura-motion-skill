@@ -16,7 +16,7 @@ export const PAL = {
 };
 
 export function cinematicBg(ctx, t, {
-  floorY = 760,
+  floorY = 1230,
   sceneCode = 'SCENE 01 • TAKE 04 • ANAMORPHIC 2.39:1',
   col = PAL.sunsetOrange,
 } = {}) {
@@ -29,8 +29,8 @@ export function cinematicBg(ctx, t, {
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, 1080, 1920);
 
-  // Main Widescreen Cinema Viewport (x: 60, y: 225, w: 960, h: 610)
-  const sx = 60, sy = 225, sw = 960, sh = 610;
+  // Main Widescreen Cinema Viewport (Full-Screen height y: 225..1390)
+  const sx = 46, sy = 225, sw = 988, sh = floorY - sy + 155;
   ctx.fillStyle = 'rgba(0,0,0,0.55)';
   ctx.beginPath();
   ctx.roundRect(sx + 8, sy + 12, sw, sh, 26);
@@ -51,8 +51,8 @@ export function cinematicBg(ctx, t, {
   ctx.fillRect(sx, sy, sw, sh);
 
   // Giant glowing setting sun / golden orb near horizon
-  const sunX = 680, sunY = floorY - 125;
-  const rg = ctx.createRadialGradient(sunX, sunY, 15, sunX, sunY, 290);
+  const sunX = 680, sunY = floorY - 145;
+  const rg = ctx.createRadialGradient(sunX, sunY, 15, sunX, sunY, 320);
   rg.addColorStop(0, 'rgba(255, 235, 165, 0.95)');
   rg.addColorStop(0.28, 'rgba(255, 154, 60, 0.65)');
   rg.addColorStop(0.65, 'rgba(158, 42, 91, 0.18)');
@@ -63,29 +63,28 @@ export function cinematicBg(ctx, t, {
   // Sun disc
   ctx.fillStyle = 'rgba(255, 236, 179, 0.88)';
   ctx.beginPath();
-  ctx.arc(sunX, sunY, 68, 0, Math.PI * 2);
+  ctx.arc(sunX, sunY, 78, 0, Math.PI * 2);
   ctx.fill();
 
-  // Anamorphic horizontal cyan/gold lens flare across the sun
-  const fg = ctx.createLinearGradient(sunX - 380, 0, sunX + 320, 0);
+  // Anamorphic horizontal lens flare
+  const fg = ctx.createLinearGradient(sunX - 420, 0, sunX + 380, 0);
   fg.addColorStop(0, 'rgba(77, 238, 234, 0)');
   fg.addColorStop(0.35, 'rgba(77, 238, 234, 0.38)');
   fg.addColorStop(0.5, 'rgba(255, 255, 255, 0.75)');
   fg.addColorStop(0.65, 'rgba(255, 138, 61, 0.38)');
   fg.addColorStop(1, 'rgba(255, 138, 61, 0)');
   ctx.fillStyle = fg;
-  ctx.fillRect(sunX - 380, sunY - 4, 700, 8);
+  ctx.fillRect(sunX - 420, sunY - 4, 800, 8);
 
   // Distant sleeping city skyline silhouettes
   const buildings = [
-    [70, 145, 70], [135, 210, 85], [215, 160, 65], [275, 240, 92],
-    [360, 130, 75], [430, 185, 80], [505, 125, 70], [570, 170, 85],
-    [650, 115, 75], [720, 200, 90], [805, 150, 75], [875, 230, 85], [955, 165, 70],
+    [50, 165, 75], [125, 230, 85], [210, 180, 70], [280, 270, 95],
+    [375, 150, 80], [455, 210, 85], [540, 145, 75], [615, 195, 90],
+    [705, 135, 80], [785, 225, 95], [880, 175, 80], [960, 260, 90],
   ];
   ctx.fillStyle = '#120a21';
   for (const [bx, bh, bw] of buildings) {
     ctx.fillRect(bx, floorY - bh, bw, bh);
-    // Tiny lit windows in the sleeping city
     ctx.fillStyle = 'rgba(255, 209, 102, 0.42)';
     for (let wy = floorY - bh + 18; wy < floorY - 24; wy += 26) {
       for (let wx = bx + 12; wx < bx + bw - 16; wx += 20) {
@@ -106,45 +105,102 @@ export function cinematicBg(ctx, t, {
 
   // Glowing horizon rim line on the rooftop
   ctx.strokeStyle = col;
-  ctx.lineWidth = 3.5;
+  ctx.lineWidth = 4;
   ctx.beginPath();
   ctx.moveTo(sx, floorY);
   ctx.lineTo(sx + sw, floorY);
   ctx.stroke();
 
-  // Top & Bottom Cinema Letterbox Bars inside viewport
+  // Top Cinema Viewfinder bar
   ctx.fillStyle = '#080510';
   ctx.fillRect(sx, sy, sw, 52);
-  ctx.fillRect(sx, sy + sh - 42, sw, 42);
-
-  // Camera viewfinder metadata on top letterbox bar
-  ctx.fillStyle = PAL.sunsetGold;
+  ctx.fillStyle = PAL.rimCyan;
   ctx.font = '800 15px "JetBrains Mono", monospace';
   ctx.textAlign = 'left';
-  ctx.fillText(`● REC  ${sceneCode}`, sx + 26, sy + 32);
-
-  ctx.fillStyle = PAL.rimCyan;
-  ctx.textAlign = 'right';
-  ctx.fillText('ISO 800 • 24 FPS • SHUTTER 1/48', sx + sw - 26, sy + 32);
-
-  // Floating golden dust motes
-  ctx.fillStyle = 'rgba(255, 209, 102, 0.55)';
-  for (let i = 0; i < 12; i++) {
-    const mx = sx + ((i * 97 + t * 18) % sw);
-    const my = sy + 70 + ((i * 53 + Math.sin(t * 2 + i) * 15) % (floorY - sy - 90));
-    ctx.beginPath();
-    ctx.arc(mx, my, 2.2, 0, Math.PI * 2);
-    ctx.fill();
-  }
+  ctx.textBaseline = 'middle';
+  ctx.fillText(sceneCode, sx + 24, sy + 26);
 
   ctx.restore();
+}
 
-  // Outer Cinema Frame Stroke
+/**
+ * Camera zoom & pan helper for stickman-cinematic
+ */
+export function withCamera(ctx, { zoom = 1, fx = 540, fy = 850, dx = 0, dy = 0 } = {}, fn) {
+  ctx.save();
+  ctx.translate(540 + dx, 850 + dy);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
+/**
+ * Cinematic Floating Callout Card on the lower area (y: 1485, h: 165)
+ */
+export function cinematicCallout(ctx, x, y, w, h, {
+  tag = 'KOTA TIDUR',
+  title = '',
+  desc = '',
+  stat = '',
+  statSub = '',
+  col = PAL.sunsetOrange,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(0.92 + 0.08 * a, 0.92 + 0.08 * a);
+  ctx.globalAlpha = clamp(a, 0, 1);
+
+  ctx.fillStyle = PAL.cardBg;
   ctx.strokeStyle = col;
-  ctx.lineWidth = 4;
+  ctx.lineWidth = 3.5;
   ctx.beginPath();
-  ctx.roundRect(sx, sy, sw, sh, 26);
+  ctx.roundRect(-w / 2, -h / 2, w, h, 20);
+  ctx.fill();
   ctx.stroke();
+
+  // Tag pill
+  ctx.fillStyle = col;
+  ctx.beginPath();
+  ctx.roundRect(-w / 2 + 22, -h / 2 + 18, 290, 30, 8);
+  ctx.fill();
+  ctx.fillStyle = '#0f0a1c';
+  ctx.font = '900 13px "JetBrains Mono", monospace';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(tag, -w / 2 + 34, -h / 2 + 33, 266);
+
+  const textW = stat ? w - 240 : w - 56;
+  ctx.fillStyle = PAL.ink;
+  ctx.font = '900 25px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(title, -w / 2 + 22, -h / 2 + 76, textW);
+
+  ctx.fillStyle = PAL.muted;
+  ctx.font = '600 18px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(desc, -w / 2 + 22, -h / 2 + 116, textW);
+
+  if (stat) {
+    ctx.fillStyle = 'rgba(255, 138, 61, 0.16)';
+    ctx.beginPath();
+    ctx.roundRect(w / 2 - 192, -h / 2 + 20, 170, h - 40, 14);
+    ctx.fill();
+    ctx.strokeStyle = col;
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+
+    ctx.fillStyle = col;
+    ctx.font = '900 28px "Plus Jakarta Sans", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(stat, w / 2 - 107, -4, 150);
+    if (statSub) {
+      ctx.fillStyle = PAL.sunsetGold;
+      ctx.font = '800 13px "JetBrains Mono", monospace';
+      ctx.fillText(statSub, w / 2 - 107, 26, 150);
+    }
+  }
+
   ctx.restore();
 }
 

@@ -1,12 +1,12 @@
-// 72 · STICKMAN CINEMATIC — Demo 1: Kota Tidur, Mimpimu Belum Selesai (Kekuatan 45 Menit Hening)
+// 72 · STICKMAN CINEMATIC — Demo 1: Kota Tidur, Mimpimu Belum Selesai (Full-Screen 1080x1920 8-Beat Standard)
 import * as K from '/styles/stickman-cinematic/kit.js';
-const { clamp, ease } = AM.lib;
+const { clamp, lerp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -15,124 +15,90 @@ export async function setup(AM) {
 
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
-  const floorY = 760;
+  const floorY = 1230;
 
-  let phase = 0;
-  if (t >= C.tenang.start) phase = 3;
-  else if (t >= C.langkah.start) phase = 2;
-  else if (t >= C.hening.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral?.start) beat = 7;
+  else if (t >= C.tenang?.start) beat = 6;
+  else if (t >= C.akumulasi?.start) beat = 5;
+  else if (t >= C.langkah?.start) beat = 4;
+  else if (t >= C.pilihan?.start) beat = 3;
+  else if (t >= C.hening?.start) beat = 2;
+  else if (t >= C.siang?.start) beat = 1;
 
-  const scenes = [
-    'SCENE 01 • KOTA MULAI TERTIDUR • 21:30',
-    'SCENE 02 • KEHENINGAN TANPA INTERUPSI',
-    'SCENE 03 • 45 MENIT UNTUK MIMPIMU SENDIRI',
-    'SCENE 04 • ISTIRAHAT DENGAN HATI TENANG',
+  let zoom = 1.0, fx = 540, fy = 880;
+  if (beat === 1 || beat === 2) {
+    zoom = 1.15; fx = 500; fy = 920;
+  } else if (beat >= 4) {
+    zoom = 1.16; fx = 560; fy = 940;
+  }
+
+  const tags = [
+    'SCENE 01 • LAMPU KOTA MULAI PADAM',
+    'SCENE 02 • SIANG HARI TERSITA ORANG LAIN',
+    'SCENE 03 • KEHENINGAN EMAS SEBELUM TIDUR',
+    'SCENE 04 • PILIHAN DUA JALAN DI MALAM HARI',
+    'SCENE 05 • 45 MENIT FOKUS MURNI UNTUK MIMPI',
+    'SCENE 06 • AKUMULASI 300 JAM DALAM SETAHUN',
+    'SCENE 07 • ISTIRAHAT TENANG TANPA PENYESALAN',
+    'SCENE 08 • NYALAKAN LAMPU BELAJARMU!',
   ];
 
-  K.cinematicBg(ctx, t, { floorY, sceneCode: scenes[phase], col: phase >= 2 ? K.PAL.rimCyan : K.PAL.sunsetOrange });
+  K.withCamera(ctx, { zoom, fx, fy }, () => {
+    K.cinematicBg(ctx, t, { floorY, sceneCode: tags[beat], col: beat >= 4 ? K.PAL.rimCyan : K.PAL.sunsetOrange });
+    K.cinematicProps(ctx, floorY, 'rooftop', { phase: beat >= 4 ? 2 : 0, t });
+
+    const charX = beat <= 2 ? 380 : 480;
+    const pose = beat === 0 ? 'gaze' : beat <= 2 ? 'walk' : beat <= 4 ? 'think' : 'look-up';
+    K.cinematicStickman(ctx, charX, floorY, pose, { facing: 1, t });
+
+    const bubbles = [
+      'Kota sudah tidur, kamu mau ke mana?',
+      'Siang hari milik tuntutan orang lain...',
+      'Malam ini milik masa depanmu sendiri!',
+      'Scroller tanpa ujung vs bangun karya nyata?',
+      'Cukup 45 menit fokus, jangan rusak tidurmu!',
+      '1 halaman per malam = 300 jam keahlian!',
+      'Tidur dengan rasa tenang & bangga!',
+      'Nyalakan mimpimu di keheningan malam!',
+    ];
+    K.cinematicBubble(ctx, charX + 50, floorY - 420, bubbles[beat], {
+      tailX: charX + 15, tailY: floorY - 340, col: beat >= 4 ? K.PAL.rimCyan : K.PAL.sunsetOrange,
+    });
+  });
 
   const headers = [
-    ['MALAM', 'KOTA TIDUR, MIMPIMU BELUM SELESAI', 'Menemukan Jendela Waktu Emas Saat Kebisingan Mereda'],
-    ['HENING', 'WAKTU MILIKMU SEPENUHNYA', 'Siang Hari Milik Tuntutan Luar • Malam Hari Milik Visimu'],
-    ['45 MNT', 'BUKAN BEGADANG, MELAINKAN FOKUS', '45 Menit Setiap Malam = 270+ Jam Keahlian Dalam Setahun'],
-    ['MAJU!', 'SATU LANGKAH SEBELUM TERLELAP', 'Tidur Nyenyak Setelah Melangkah Maju untuk Cita-Citamu'],
-  ][phase];
+    ['00:00', 'KOTA TIDUR, MIMPIMU HIDUP', 'Kekuatan Satu Jam Hening Sebelum Terlelap'],
+    ['SIANG', 'WAKTU TERBAGI UNTUK DUNIA', 'Tuntutan Kantor & Ratusan Notifikasi Tanpa Henti'],
+    ['HENING', 'JENDELA EMAS TANPA GANGGUAN', 'Tidak Ada Telepon Berdering di Tengah Malam'],
+    ['PILIHAN', 'DUA JALAN DI UJUNG HARI', 'Jalan di Tempat vs Melesat Maju dalam Senyap'],
+    ['45 MNT', 'FOKUS MURNI TANPA BEGADANG', 'Dedikasikan Waktu Singkat Khusus Cita-Citamu'],
+    ['300 JAM', 'KEAJAIBAN AKUMULASI TAHUNAN', 'Cicilan Kecil Menghasilkan Lompatan Kemampuan'],
+    ['TENANG', 'TIDUR NYENYAK PENUH ARTI', 'Tutup Hari dengan Rasa Puas Tanpa Beban Moral'],
+    ['KARYA', 'JADILAH PEJUANG KEHENINGAN', 'Masa Depanmu Dibangun Saat yang Lain Tertidur!'],
+  ][beat];
 
   K.cinematicHeader(ctx, headers[0], headers[1], headers[2], {
-    col: phase >= 2 ? K.PAL.rimCyan : K.PAL.sunsetOrange,
+    col: beat >= 4 ? K.PAL.rimCyan : K.PAL.sunsetOrange,
   });
 
-  K.cinematicProps(ctx, floorY, 'rooftop', { phase, t });
+  const callouts = [
+    { tag: 'WAKTU EMAS', title: 'Lampu Padam, Kebisingan Siang Mereda', desc: 'Momen transisi terbaik untuk memikirkan arah hidup yang sesungguhnya', stat: 'GOLDEN HOUR', col: K.PAL.sunsetOrange, c: C.hook },
+    { tag: 'DISTRAKSI SIANG', title: 'Energi Terkuras Mengurusi Kepentingan Luar', desc: 'Seringkali kita tidur dengan perasaan lelah tapi belum mengerjakan mimpi kita', stat: 'SIANG', col: K.PAL.sunsetGold, c: C.siang },
+    { tag: 'KEHENINGAN MALAM', title: 'Tidak Ada yang Menuntut Perhatianmu', desc: 'Waktu terbaik otak untuk melakukan deep focus tanpa interupsi', stat: 'HENING', col: K.PAL.rimCyan, c: C.hening },
+    { tag: 'PERBEDAAN NASIB', title: 'Bagaimana Kamu Menghabiskan 1 Jam Ini?', desc: 'Scroller pasif kehilangan waktu, pejuang senyap mengumpulkan modal hidup', stat: 'PILIHAN', col: K.PAL.sunsetOrange, c: C.pilihan },
+    { tag: '45 MENIT FOKUS', title: 'Kesehatan Tetap Terjaga, Hasil Tetap Nyata', desc: 'Jangan begadang merusak tubuh, gunakan waktu terukur dengan intensitas penuh', stat: '45 MNT', col: K.PAL.rimCyan, c: C.langkah },
+    { tag: 'HUKUM AKUMULASI', title: '1 Halaman Tiap Malam = 300 Jam Setahun', desc: 'Kemampuan langka selalu lahir dari konsistensi sunyi yang tidak dipamerkan', stat: '300 JAM', col: K.PAL.sunsetGold, c: C.akumulasi },
+    { tag: 'KEDAMAIAN BATIN', title: 'Tidur dengan Senyum karena Ada Kemajuan', desc: 'Tidak ada obat tidur yang lebih manjur daripada hari yang tuntas dengan baik', stat: 'TENANG', col: K.PAL.rimCyan, c: C.tenang },
+    { tag: 'PESAN JUARA', title: 'Nyalakan Lampu Kerjamu di Keheningan', desc: 'Dunia boleh terlelap, tapi mimpimu pantas mendapatkan perhatianmu malam ini!', stat: 'BANGKIT', col: K.PAL.sunsetOrange, c: C.moral },
+  ][beat];
 
-  const charX = phase <= 1 ? 370 : 430;
-  const pose = phase === 0 ? 'stand' : phase === 1 ? 'lookUp' : phase === 2 ? 'walk' : 'triumph';
-  K.cinematicStickman(ctx, charX, floorY, pose, { facing: 1, t });
-
-  const bubbles = [
-    'Seharian sibuk urusan orang, kapan buat mimpiku?',
-    'Malam sepi... nggak ada notifikasi yang ganggu.',
-    'Cukup 45 menit fokus penuh sebelum tidur!',
-    'Satu langkah beres, sekarang waktunya istirahat tenang!',
-  ];
-  K.cinematicBubble(ctx, charX, 360, bubbles[phase], {
-    tailX: charX, tailY: 435, col: phase >= 2 ? K.PAL.rimCyan : K.PAL.sunsetOrange,
+  K.cinematicCallout(ctx, 540, 1485, 960, 165, {
+    tag: callouts.tag,
+    title: callouts.title,
+    desc: callouts.desc,
+    stat: callouts.stat,
+    col: callouts.col,
+    a: pop(t, callouts.c ? callouts.c.start + 0.15 : 0),
   });
-
-  if (phase === 0) {
-    K.cinematicCard(ctx, 540, 995, 960, 175, {
-      tag: 'PARADOKS KESIBUKAN SIANG HARI',
-      titleStr: 'Sibuk Seharian Namun Merasa Jalan di Tempat',
-      subStr: 'Sebagian besar energi siang hari habis untuk merespons agenda dan pesan orang lain',
-      stat: 'REAKTIF',
-      statSub: 'SIANG HARI',
-      col: K.PAL.sunsetOrange,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.cinematicCard(ctx, 540, 1210, 960, 175, {
-      tag: 'JENDELA EMAS SEBELUM ISTIRAHAT',
-      titleStr: '1 Jam Tenang Sebelum Tidur Sering Habis untuk Scroll',
-      subStr: 'Mengubah satu jam pasif menjadi 45 menit terarah mengubah lintasan hidupmu',
-      stat: '1 JAM',
-      statSub: 'WAKTU KRITIS',
-      col: K.PAL.sunsetGold,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.cinematicCard(ctx, 540, 995, 960, 175, {
-      tag: 'KEUNGGULAN JAM TENANG (QUIET HOURS)',
-      titleStr: 'Nol Panggilan Telepon, Nol Rapat Mendadak',
-      subStr: 'Ketika dunia sekitar hening, gelombang perhatian otak mencapai kedalaman maksimal',
-      stat: '0 GANGGUAN',
-      statSub: 'FOKUS MURNI',
-      col: K.PAL.rimCyan,
-      a: pop(t, C.hening.start),
-    });
-    K.cinematicCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PEMBEDA MEREKA YANG MELESAT MAJU',
-      titleStr: 'Membangun Proyek Impian di Luar Jam Kerja Utama',
-      subStr: 'Banyak karya besar lahir dari meja belajar yang menyala tenang di malam hari',
-      stat: 'VISI PRIBADI',
-      statSub: 'WAKTU UTUH',
-      col: K.PAL.sunsetOrange,
-      a: pop(t, C.hening.start + 0.5),
-    });
-  } else if (phase === 2) {
-    K.cinematicCard(ctx, 540, 995, 960, 175, {
-      tag: 'ATURAN 45 MENIT TANPA BEGADANG',
-      titleStr: 'Bukan Mengorbankan Tidur, Melainkan Mengganti Scroll',
-      subStr: 'Fokus 45 menit pada pukul 21.00–21.45 lalu tidur tepat waktu pukul 22.00',
-      stat: '45 MENIT',
-      statSub: 'SEHAT & FOKUS',
-      col: K.PAL.rimCyan,
-      a: pop(t, C.langkah.start),
-    });
-    K.cinematicCard(ctx, 540, 1210, 960, 175, {
-      tag: 'AKUMULASI 365 MALAM',
-      titleStr: '45 Menit x 365 Hari = 273 Jam Keahlian Baru Setahun',
-      subStr: 'Setara dengan hampir 7 minggu kerja penuh yang didedikasikan khusus untuk mimpimu',
-      stat: '273 JAM',
-      statSub: 'PER TAHUN',
-      col: K.PAL.sunsetGold,
-      a: pop(t, C.langkah.start + 0.5),
-    });
-  } else {
-    K.cinematicCard(ctx, 540, 995, 960, 175, {
-      tag: 'KEPUASAN BATIN SEBELUM TIDUR',
-      titleStr: 'Menutup Hari dengan Rasa Bangga, Bukan Penyesalan',
-      subStr: 'Tidur terasa jauh lebih nyenyak saat kita tahu hari ini kita melangkah maju',
-      stat: 'TENANG',
-      statSub: 'TIDUR BERKUALITAS',
-      col: K.PAL.rimCyan,
-      a: pop(t, C.tenang.start),
-    });
-    K.cinematicCard(ctx, 540, 1210, 960, 175, {
-      tag: 'MONOLOG AKHIR MALAM INI',
-      titleStr: 'Satu Halaman Hari Ini Adalah Fondasi Masa Depanmu',
-      subStr: 'Teruslah melangkah dengan tenang, fajar keberhasilan sedang menunggumu',
-      stat: 'KONSISTEN',
-      statSub: 'SAMPAI PUNCAK',
-      col: K.PAL.sunsetGold,
-      a: pop(t, C.tenang.start + 0.5),
-    });
-  }
 }

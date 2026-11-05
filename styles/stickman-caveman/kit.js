@@ -21,7 +21,7 @@ export const PAL = {
 };
 
 export function cavemanBg(ctx, t, {
-  floorY = 760,
+  floorY = 1240,
   stageTag = 'GUA EVOLUSI • OTAK PURBA DI ERA MODERN',
   col = PAL.ochre,
 } = {}) {
@@ -44,8 +44,8 @@ export function cavemanBg(ctx, t, {
     ctx.stroke();
   }
 
-  // Main Cave Stage Panel
-  const sx = 60, sy = 225, sw = 960, sh = 610;
+  // Main Cave Stage Panel (Full-Screen height!)
+  const sx = 46, sy = 225, sw = 988, sh = floorY - sy + 150;
   ctx.fillStyle = 'rgba(0,0,0,0.45)';
   ctx.beginPath();
   ctx.roundRect(sx + 10, sy + 12, sw, sh, 28);
@@ -65,8 +65,8 @@ export function cavemanBg(ctx, t, {
 
   // Warm campfire radial glow inside the cave stage
   const flicker = 0.88 + 0.12 * Math.sin(t * 9.5);
-  const fg = ctx.createRadialGradient(540, floorY - 40, 20, 540, floorY - 40, 390);
-  fg.addColorStop(0, `rgba(255, 130, 40, ${0.22 * flicker})`);
+  const fg = ctx.createRadialGradient(540, floorY - 80, 20, 540, floorY - 80, 520);
+  fg.addColorStop(0, `rgba(255, 130, 40, ${0.24 * flicker})`);
   fg.addColorStop(0.6, `rgba(230, 138, 46, ${0.08 * flicker})`);
   fg.addColorStop(1, 'rgba(0,0,0,0)');
   ctx.fillStyle = fg;
@@ -79,7 +79,7 @@ export function cavemanBg(ctx, t, {
   ctx.strokeStyle = 'rgba(246,231,203,0.18)';
   ctx.lineWidth = 2;
   const stalactites = [
-    [680, 46, 26], [735, 72, 32], [790, 40, 22], [855, 85, 36], [915, 52, 26], [960, 64, 28],
+    [680, 56, 30], [745, 92, 38], [810, 50, 26], [885, 110, 42], [955, 65, 30], [1000, 80, 32],
   ];
   for (const [cx, h, w] of stalactites) {
     ctx.beginPath();
@@ -91,57 +91,110 @@ export function cavemanBg(ctx, t, {
     ctx.stroke();
   }
 
-  // Cave paintings (ochre handprint & simple deer silhouette on background wall)
-  ctx.save();
-  ctx.globalAlpha = 0.14;
-  ctx.strokeStyle = PAL.ochre;
-  ctx.lineWidth = 4;
-  ctx.lineCap = 'round';
-  // Prehistoric deer glyph on cave wall
-  const gx = 175, gy = 390;
-  ctx.beginPath();
-  ctx.moveTo(gx, gy); ctx.lineTo(gx + 55, gy - 5);
-  ctx.moveTo(gx + 50, gy - 5); ctx.lineTo(gx + 68, gy - 32);
-  ctx.moveTo(gx + 65, gy - 28); ctx.lineTo(gx + 52, gy - 48);
-  ctx.moveTo(gx + 65, gy - 28); ctx.lineTo(gx + 80, gy - 45);
-  ctx.moveTo(gx + 8, gy); ctx.lineTo(gx - 5, gy + 38);
-  ctx.moveTo(gx + 22, gy); ctx.lineTo(gx + 18, gy + 36);
-  ctx.moveTo(gx + 46, gy - 4); ctx.lineTo(gx + 44, gy + 36);
-  ctx.moveTo(gx + 55, gy - 5); ctx.lineTo(gx + 68, gy + 35);
-  ctx.stroke();
-  ctx.restore();
-
   // Rocky cave floor line
   ctx.strokeStyle = PAL.muted;
   ctx.lineWidth = 5;
   ctx.lineCap = 'round';
   ctx.beginPath();
-  ctx.moveTo(100, floorY);
-  ctx.lineTo(980, floorY);
+  ctx.moveTo(70, floorY);
+  ctx.lineTo(1010, floorY);
   ctx.stroke();
 
-  // Small scattered floor pebbles
-  ctx.fillStyle = PAL.rockDark;
-  for (const px of [145, 290, 520, 670, 895]) {
-    ctx.beginPath();
-    ctx.ellipse(px, floorY + 12, 12, 5, 0, 0, Math.PI * 2);
-    ctx.fill();
-  }
-
-  // Stage top-left stone badge
-  ctx.font = '800 17px "JetBrains Mono", monospace';
-  const tagW = Math.max(460, ctx.measureText(stageTag).width + 44);
+  // Stage Tag
   ctx.fillStyle = col;
-  ctx.strokeStyle = PAL.ink;
-  ctx.lineWidth = 2.5;
   ctx.beginPath();
-  ctx.roundRect(92, sy + 24, tagW, 42, 12);
+  ctx.roundRect(74, 248, 410, 42, 12);
+  ctx.fill();
+  ctx.strokeStyle = PAL.ink;
+  ctx.lineWidth = 3;
+  ctx.stroke();
+  ctx.fillStyle = '#17100b';
+  ctx.font = '800 16px ui-monospace, monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(stageTag, 279, 269, 390);
+
+  ctx.restore();
+}
+
+/**
+ * Camera helper for dynamic zoom & focus in stickman-caveman
+ */
+export function withCamera(ctx, { zoom = 1, fx = 540, fy = 850, dx = 0, dy = 0 } = {}, fn) {
+  ctx.save();
+  ctx.translate(540 + dx, 850 + dy);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
+/**
+ * Prehistoric Floating Callout Card on the lower area (y: 1485, h: 165)
+ */
+export function cavemanCallout(ctx, x, y, w, h, {
+  tag = 'EVOLUSI OTAK',
+  title = '',
+  desc = '',
+  stat = '',
+  statSub = '',
+  col = PAL.ochre,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(0.92 + 0.08 * a, 0.92 + 0.08 * a);
+  ctx.globalAlpha = clamp(a, 0, 1);
+
+  ctx.fillStyle = PAL.stoneCard;
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.roundRect(-w / 2, -h / 2, w, h, 20);
   ctx.fill();
   ctx.stroke();
 
+  // Tag pill
+  ctx.fillStyle = col;
+  ctx.beginPath();
+  ctx.roundRect(-w / 2 + 22, -h / 2 + 18, 280, 30, 8);
+  ctx.fill();
   ctx.fillStyle = '#17100b';
+  ctx.font = '900 14px "JetBrains Mono", monospace';
   ctx.textAlign = 'left';
-  ctx.fillText(stageTag, 112, sy + 51);
+  ctx.textBaseline = 'middle';
+  ctx.fillText(tag, -w / 2 + 34, -h / 2 + 33, 256);
+
+  const textW = stat ? w - 240 : w - 56;
+  ctx.fillStyle = PAL.ink;
+  ctx.font = '900 25px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(title, -w / 2 + 22, -h / 2 + 76, textW);
+
+  ctx.fillStyle = PAL.muted;
+  ctx.font = '600 18px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(desc, -w / 2 + 22, -h / 2 + 116, textW);
+
+  if (stat) {
+    ctx.fillStyle = 'rgba(230, 138, 46, 0.18)';
+    ctx.beginPath();
+    ctx.roundRect(w / 2 - 192, -h / 2 + 20, 170, h - 40, 14);
+    ctx.fill();
+    ctx.strokeStyle = col;
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+
+    ctx.fillStyle = col;
+    ctx.font = '900 28px "Plus Jakarta Sans", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(stat, w / 2 - 107, -4, 150);
+    if (statSub) {
+      ctx.fillStyle = PAL.bone;
+      ctx.font = '800 13px "JetBrains Mono", monospace';
+      ctx.fillText(statSub, w / 2 - 107, 26, 150);
+    }
+  }
+
   ctx.restore();
 }
 

@@ -1,12 +1,12 @@
-// 73 · STICKMAN DUO — Demo 1: Mager Sendirian vs Gas Bareng (Studi ASTD 95% Partner Akuntabilitas)
+// 73 · STICKMAN DUO — Demo 1: Mager Sendirian vs Gas Bareng (Full-Screen 1080x1920 8-Beat Standard)
 import * as K from '/styles/stickman-duo/kit.js';
 const { clamp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -15,140 +15,119 @@ export async function setup(AM) {
 
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
-  const floorY = 760;
+  const floorY = 1230;
 
-  let phase = 0;
-  if (t >= C.ringan.start) phase = 3;
-  else if (t >= C.sosial.start) phase = 2;
-  else if (t >= C.astd.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral?.start) beat = 7;
+  else if (t >= C.ringan?.start) beat = 6;
+  else if (t >= C.aturan?.start) beat = 5;
+  else if (t >= C.sosial?.start) beat = 4;
+  else if (t >= C.janji?.start) beat = 3;
+  else if (t >= C.astd?.start) beat = 2;
+  else if (t >= C.batal?.start) beat = 1;
+
+  let zoom = 1.0, fx = 540, fy = 880;
+  if (beat === 2 || beat === 3) {
+    zoom = 1.14; fx = 540; fy = 910;
+  } else if (beat >= 4) {
+    zoom = 1.15; fx = 540; fy = 930;
+  }
 
   const tags = [
     'EPISODE 01 • JANJI SENDIRIAN MUDAH BATAL',
-    'EPISODE 02 • RISET ASTD: 10% vs 95% SUKSES',
-    'EPISODE 03 • KEKUATAN KOMITMEN SOSIAL DUA SAHABAT',
-    'EPISODE 04 • SISTEM LAPORAN PAGI & MALAM',
+    'EPISODE 02 • TANPA SAKSI, RENCANA HILANG',
+    'EPISODE 03 • RISET ASTD: CUMA 10% JIKA NIAT SAJA',
+    'EPISODE 04 • LONJAKAN 95% DENGAN PARTNER RUTIN',
+    'EPISODE 05 • OTAK MENJAGA REPUTASI SOSIAL',
+    'EPISODE 06 • PROTOKOL 3 TARGET PAGI & LAPOR MALAM',
+    'EPISODE 07 • SALING MENOPANG SAAT SEMANGAT TURUN',
+    'EPISODE 08 • GAS BARENG, SUKSES BERSAMA!',
   ];
 
-  K.duoBg(ctx, t, { floorY, episodeTag: tags[phase], col: phase >= 2 ? K.PAL.teal : K.PAL.blue });
+  K.withCamera(ctx, { zoom, fx, fy }, () => {
+    K.duoBg(ctx, t, { floorY, episodeTag: tags[beat], col: beat >= 4 ? K.PAL.teal : (beat === 2 || beat === 3 ? K.PAL.blue : K.PAL.red) });
 
-  const headers = [
-    ['10% vs 95%', 'MAGER SENDIRIAN vs GAS BARENG', 'Mengapa Janji di Dalam Kepala Sendiri Sangat Mudah Dilanggar?'],
-    ['95% GOAL', 'EFEK PARTNER AKUNTABILITAS (ASTD)', 'Laporan Rutin ke Sahabat Menaikkan Peluang Sukses 9,5x Lipat'],
-    ['KOMITMEN', 'SEGAN MENGECEWAKAN TEMAN SEPERJUANGAN', 'Gunakan Naluri Sosial Otak untuk Mengunci Konsistensi Harian'],
-    ['KOMPAK!', 'KIRIM 3 TARGET PAGI, LAPOR MALAM HARI', 'Saat Satu Lelah, Sahabat Menarik Kembali ke Jalur Juara!'],
-  ][phase];
+    const props = [
+      ['SOLO', 'RAWAN BATAL', 'Tanpa saksi mudah mundur', K.PAL.red],
+      ['SENDIRI', 'BATAL DIAM-DIAM', 'Negosiasi rasa malas', K.PAL.red],
+      ['ASTD STUDI', 'CUMA 10%', 'Niat saja sangat rapuh', K.PAL.blue],
+      ['DUO GOAL', '95% SUKSES', 'Jadwal lapor = tuntas!', K.PAL.teal],
+      ['SOSIAL', 'REPUTASI AMAN', 'Segan bikin sahabat kecewa', K.PAL.teal],
+      ['PROTOKOL', '3 TARGET/HARI', 'Pagi setor, malam cek', K.PAL.blue],
+      ['SINERGI', '2x LEBIH KUAT', 'Tarik saat teman lelah', K.PAL.teal],
+      ['GAS BARENG!', '100% TUNTAS', 'Raka & Bima tembus target!', K.PAL.teal],
+    ][beat];
+    K.duoCenterProp(ctx, floorY, props[0], props[1], props[2], { col: props[3] });
 
-  K.duoHeader(ctx, headers[0], headers[1], headers[2], {
-    col: phase >= 2 ? K.PAL.teal : K.PAL.blue,
+    // Left: Raka (Red Cap), Right: Bima (Blue Shades)
+    const rakaPose = beat === 0 ? 'shock' : beat === 1 ? 'shock' : beat === 2 ? 'talk' : beat === 3 ? 'point' : beat <= 5 ? 'talk' : 'highfive';
+    const bimaPose = beat === 0 ? 'talk' : beat === 1 ? 'point' : beat === 2 ? 'point' : beat === 3 ? 'talk' : beat <= 5 ? 'point' : 'highfive';
+
+    K.duoStickman(ctx, 280, floorY, 'raka', rakaPose, { facing: 1, t });
+    K.duoStickman(ctx, 800, floorY, 'bima', bimaPose, { facing: -1, t });
+
+    const rakaBubbles = [
+      'Alarm bunyi langsung kumatiin, mager!',
+      'Iya sih, ga ada yang tahu kalau batal...',
+      'Hah?! Cuma 10% kalau niat sendirian?!',
+      'Seriusan bisa lonjak sampai 95%?!',
+      'Bener juga, malu dong kalau Bima nunggu!',
+      'Oke! Pagi kirim 3 target, malam lapor!',
+      'Pas lagi lelah, Bima narik semangatku!',
+      'Gak ada lagi mager, kita gas bareng!',
+    ];
+    const bimaBubbles = [
+      'Soalnya kamu janji sendirian di kamar!',
+      'Tanpa saksi, rasa malas gampang menang!',
+      'Betul! Riset ASTD buktiin niat doang rapuh!',
+      'Jadwalin lapor bareng, langsung 95%!',
+      'Otak manusia jaga komitmen ke sahabat!',
+      'Siap Rak! Aku pantau targetmu tiap hari!',
+      'Sahabat sejati gak biarin kamu menyerah!',
+      'Tos dulu Rak! Kita tuntaskan bersama!',
+    ];
+
+    const activeSpeaker = beat % 2 === 0 ? 'bima' : 'raka';
+    K.duoBubble(ctx, 280, floorY - 390, 'RAKA', rakaBubbles[beat], {
+      tailX: 280, tailY: floorY - 310, col: K.PAL.red,
+    });
+    K.duoBubble(ctx, 800, floorY - 390, 'BIMA', bimaBubbles[beat], {
+      tailX: 800, tailY: floorY - 310, col: K.PAL.blue,
+    });
   });
 
-  // Center Scoreboard Prop
-  const props = [
-    ['SOLO vs DUO', 'RAWAN BATAL', 'Tanpa saksi = mudah menunda', K.PAL.red],
-    ['STUDI ASTD', '10% → 95%', 'Naik drastis dengan jadwal lapor', K.PAL.blue],
-    ['CHECK-IN', '3 TARGET/HARI', 'Saling pantau progres harian', K.PAL.teal],
-    ['GAS BARENG!', '100% TUNTAS', 'Maju bersama sampai garis akhir', K.PAL.teal],
-  ][phase];
-  K.duoCenterProp(ctx, floorY, props[0], props[1], props[2], { col: props[3] });
+  const headers = [
+    ['10% vs 95%', 'MAGER SENDIRIAN vs GAS BARENG', 'Mengapa Janji di Dalam Kepala Sangat Mudah Dilanggar?'],
+    ['TANPA SAKSI', 'ILUSI JANJI SENDIRIAN', 'Tidak Ada Konsekuensi Sosial Saat Membatalkan Rencana'],
+    ['STUDI ASTD', 'NIAT SAJA CUMA 10% SUKSES', 'Kemauan Pikiran Terlalu Lemah Melawan Godaan Malas'],
+    ['95% SUKSES', 'PARTNER AKUNTABILITAS RUTIN', 'Punya Jadwal Lapor Spesifik Melejitkan Peluang Sukses'],
+    ['KOMITMEN', 'PSIKOLOGI REPUTASI SOSIAL', 'Kita Segan Mengecewakan Sahabat yang Sudah Menunggu'],
+    ['3 TARGET', 'PROTOKOL PAGI & MALAM', 'Kirim 3 Sasaran Tiap Pagi, Laporkan Buktinya Tiap Malam'],
+    ['SINERGI', 'SALING MENARIK SAAT LELAH', 'Beban Terasa Jauh Lebih Ringan Saat Berlari Berdua'],
+    ['GAS BARENG!', 'JANGAN BERJUANG SENDIRIAN', 'Gandeng Sahabat Akuntabilitasmu & Raih Impian Bersama!'],
+  ][beat];
 
-  // Left: Raka (Red Cap + Vest 01), Right: Bima (Blue Shades + Zip Jacket)
-  const rakaPose = phase === 0 ? 'shock' : phase === 1 ? 'talk' : phase === 2 ? 'point' : 'highfive';
-  const bimaPose = phase === 0 ? 'talk' : phase === 1 ? 'point' : phase === 2 ? 'talk' : 'highfive';
+  K.duoHeader(ctx, headers[0], headers[1], headers[2], {
+    col: beat >= 4 ? K.PAL.teal : (beat === 2 || beat === 3 ? K.PAL.blue : K.PAL.red),
+  });
 
-  K.duoStickman(ctx, 275, floorY, 'raka', rakaPose, { facing: 1, t });
-  K.duoStickman(ctx, 805, floorY, 'bima', bimaPose, { facing: -1, t });
+  const callouts = [
+    { tag: 'SILENT PROMISE', title: 'Janji Rahasia ke Diri Sendiri Mudah Dinegosiasi', desc: 'Saat tidak ada saksi, otak mencari alasan termudah untuk rebahan', stat: 'RAWAN', col: K.PAL.red, c: C.hook },
+    { tag: 'ISOLASI AKSI', title: 'Tanpa Akuntabilitas, Rencana Besar Cepat Menguap', desc: 'Batal di dalam pikiran terasa aman karena tidak ada rasa malu', stat: 'BATAL', col: K.PAL.red, c: C.batal },
+    { tag: 'TEMUAN ASTD', title: 'Riset: Sekadar Punya Ide Cuma 10% Peluang Berhasil', desc: 'Rencana tertulis pun hanya mencapai tingkat keberhasilan 40-50%', stat: '10% SAJA', col: K.PAL.blue, c: C.astd },
+    { tag: 'LONJAKAN DRASTIS', title: 'Punya Janji Lapor Rutin ke Partner = 95% Sukses!', desc: 'Komitmen waktu yang pasti mengubah angan-angan menjadi aksi konkret', stat: '95% GOAL', col: K.PAL.teal, c: C.janji },
+    { tag: 'SOCIAL BRAIN', title: 'Naluri Menjaga Kepercayaan Mengalahkan Rasa Malas', desc: 'Otak manusia secara biologis menghindari rasa bersalah kepada teman', stat: 'SOSIAL', col: K.PAL.teal, c: C.sosial },
+    { tag: 'RUTINITAS MIKRO', title: 'Kirim 3 Sasaran Pagi, Lapor Hasil Singkat di Malam Hari', desc: 'Hanya butuh 2 menit per hari untuk menjaga akuntabilitas tetap aktif', stat: '3 TARGET', col: K.PAL.blue, c: C.aturan },
+    { tag: 'EFEK PENGUNGKIT', title: 'Ketika Satu Sedang Drop, Sahabat Menarik Kembali', desc: 'Tidak ada hari yang terbuang sia-sia jika saling menyemangati', stat: 'SINERGI', col: K.PAL.teal, c: C.ringan },
+    { tag: 'PESAN JUARA', title: 'Temukan Partner Perjuanganmu Sekarang Juga', desc: 'Gandeng sahabatmu hari ini dan buktikan kekuatan 95% keberhasilan!', stat: 'JUARA', col: K.PAL.teal, c: C.moral },
+  ][beat];
 
-  const rakaLines = [
-    'Bim, aku matiin alarm lagi tadi pagi!',
-    'Cuma 10% kalau niat sendirian?!',
-    'Iya juga, malu dong kalau belum ngerjain!',
-    'Target hari ini beres semua, tos dulu!',
-  ];
-  const bimaLines = [
-    'Soalnya nggak ada yang nagih janji kamu!',
-    'Makanya kita jadwalin lapor bareng: 95%!',
-    'Besok jam 8 pagi kirim 3 targetmu ya!',
-    'Mantap Rak! Besok kita gas lagi bareng!',
-  ];
-
-  K.duoBubble(ctx, 285, 345, 'RAKA', rakaLines[phase], { tailX: 275, tailY: 420, col: K.PAL.red });
-  K.duoBubble(ctx, 795, 345, 'BIMA', bimaLines[phase], { tailX: 805, tailY: 420, col: K.PAL.blue });
-
-  if (phase === 0) {
-    K.duoCard(ctx, 540, 995, 960, 175, {
-      tag: 'KELEMAHAN JANJI RAHASIA (SILENT PROMISE)',
-      titleStr: 'Janji yang Hanya Diketahui Diri Sendiri Mudah Dinegosiasi',
-      subStr: 'Tidak ada konsekuensi sosial saat kita membatalkan rencana di dalam pikiran',
-      stat: 'MUDAH BATAL',
-      statSub: 'TANPA SAKSI',
-      col: K.PAL.red,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.duoCard(ctx, 540, 1210, 960, 175, {
-      tag: 'JEBAKAN ISOLASI PRODUKTIVITAS',
-      titleStr: 'Berjuang Sendirian Membuat Rasa Malas Terasa Lebih Berat',
-      subStr: 'Saat motivasi turun, tidak ada rekan yang mengingatkan alasan kita memulai',
-      stat: 'SENDIRI',
-      statSub: 'RAWAN MENYERAH',
-      col: K.PAL.blue,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.duoCard(ctx, 540, 995, 960, 175, {
-      tag: 'TEMUAN RISET ASTD TENTANG PENCAPAIAN TARGET',
-      titleStr: 'Punya Ide/Niat Saja Hanya Memiliki Peluang 10% Tercapai',
-      subStr: 'Bahkan setelah membuat rencana tertulis, peluangnya baru naik ke kisaran 40–50%',
-      stat: '10% SAJA',
-      statSub: 'SEKADAR NIAT',
-      col: K.PAL.red,
-      a: pop(t, C.astd.start),
-    });
-    K.duoCard(ctx, 540, 1210, 960, 175, {
-      tag: 'LONJAKAN 95% DENGAN JADWAL AKUNTABILITAS',
-      titleStr: 'Punya Janji Lapor Spesifik ke Partner = 95% Berhasil!',
-      subStr: 'Bukan sekadar cerita target, melainkan menjadwalkan waktu evaluasi rutin berdua',
-      stat: '95% SUKSES',
-      statSub: 'PARTNER RUTIN',
-      col: K.PAL.blue,
-      a: pop(t, C.astd.start + 0.5),
-    });
-  } else if (phase === 2) {
-    K.duoCard(ctx, 540, 995, 960, 175, {
-      tag: 'PSIKOLOGI SOCIAL COMMITMENT',
-      titleStr: 'Kita Jauh Lebih Disiplin Saat Ada Sahabat yang Menunggu',
-      subStr: 'Keinginan menjaga kepercayaan teman mengalahkan rasa malas di pagi hari',
-      stat: 'TERJAGA',
-      statSub: 'EFEK SOSIAL',
-      col: K.PAL.teal,
-      a: pop(t, C.sosial.start),
-    });
-    K.duoCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PROTOKOL PAGI & MALAM RAKA-BIMA',
-      titleStr: 'Pagi Kirim 3 Prioritas • Malam Kirim Bukti Selesai',
-      subStr: 'Cukup pesan singkat 1 menit setiap hari untuk menjaga api konsistensi menyala',
-      stat: '2x CHECK-IN',
-      statSub: 'PAGI & MALAM',
-      col: K.PAL.blue,
-      a: pop(t, C.sosial.start + 0.5),
-    });
-  } else {
-    K.duoCard(ctx, 540, 995, 960, 175, {
-      tag: 'SALING MENOPANG SAAT ENERGI TURUN',
-      titleStr: 'Ketika Satu Sedang Lelah, Sahabat Menjadi Pengingat',
-      subStr: 'Perjalanan panjang terasa dua kali lebih ringan saat ditempuh bersama sahabat',
-      stat: '2x RINGAN',
-      statSub: 'ENERGI BERSAMA',
-      col: K.PAL.teal,
-      a: pop(t, C.ringan.start),
-    });
-    K.duoCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PESAN DUO RAKA & BIMA',
-      titleStr: 'Hubungi Satu Sahabatmu Hari Ini & Buat Kesepakatan Maju!',
-      subStr: 'Ingin cepat jalan sendiri, ingin jauh dan konsisten jalanlah berdua',
-      stat: 'GAS BARENG!',
-      statSub: '95% TERCAPAI',
-      col: K.PAL.red,
-      a: pop(t, C.ringan.start + 0.5),
-    });
-  }
+  K.duoCallout(ctx, 540, 1485, 960, 165, {
+    tag: callouts.tag,
+    title: callouts.title,
+    desc: callouts.desc,
+    stat: callouts.stat,
+    col: callouts.col,
+    a: pop(t, callouts.c ? callouts.c.start + 0.15 : 0),
+  });
 }

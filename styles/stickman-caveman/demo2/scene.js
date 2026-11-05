@@ -1,12 +1,12 @@
-// 71 · STICKMAN CAVEMAN — Demo 2: Harimau Sabertooth vs Notifikasi (Pembajakan Amigdala)
+// 71 · STICKMAN CAVEMAN — Demo 2: Harimau Sabertooth vs Notifikasi (Full-Screen 1080x1920 8-Beat Standard)
 import * as K from '/styles/stickman-caveman/kit.js';
 const { clamp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -15,125 +15,90 @@ export async function setup(AM) {
 
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
-  const floorY = 760;
+  const floorY = 1240;
 
-  let phase = 0;
-  if (t >= C.label.start) phase = 3;
-  else if (t >= C.napas.start) phase = 2;
-  else if (t >= C.buta.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral?.start) beat = 7;
+  else if (t >= C.label?.start) beat = 6;
+  else if (t >= C.vagus?.start) beat = 5;
+  else if (t >= C.napas?.start) beat = 4;
+  else if (t >= C.bajak?.start) beat = 3;
+  else if (t >= C.buta?.start) beat = 2;
+  else if (t >= C.sabertooth?.start) beat = 1;
+
+  let zoom = 1.0, fx = 540, fy = 880;
+  if (beat === 1 || beat === 2) {
+    zoom = 1.15; fx = 580; fy = 920;
+  } else if (beat >= 4) {
+    zoom = 1.16; fx = 520; fy = 940;
+  }
 
   const tags = [
-    'GUA 01 • DEBAR JANTUNG SAAT NOTIFIKASI BUNYI',
-    'GUA 02 • AMIGDALA HIJACK (PIKIRAN MENDADAK BUNTU)',
-    'GUA 03 • NAPAS PANJANG & AKTIVASI SARAF VAGUS',
-    'GUA 04 • AFFECT LABELING & LOGIKA KEMBALI PULIH',
+    'GUA 01 • JANTUNG BERDEBAR KARENA CHAT',
+    'GUA 02 • ALARM PURBA: HARIMAU SABERTOOTH',
+    'GUA 03 • AMIGDALA BUTA: PREDATOR VS NOTIF',
+    'GUA 04 • AMYGDALA HIJACK: DARAH KABUR KE KAKI',
+    'GUA 05 • RESET PROTOKOL: TARIK 4S, HEMBUS 8S',
+    'GUA 06 • AKTIVASI SARAF VAGUS TUBUH',
+    'GUA 07 • LABELING EMOSI: NAME IT TO TAME IT',
+    'GUA 08 • TENANGKAN SI UGA, BERPIKIR JERNIH!',
   ];
 
-  K.cavemanBg(ctx, t, { floorY, stageTag: tags[phase], col: phase >= 2 ? K.PAL.teal : K.PAL.fire });
+  K.withCamera(ctx, { zoom, fx, fy }, () => {
+    K.cavemanBg(ctx, t, { floorY, stageTag: tags[beat], col: beat >= 4 ? K.PAL.teal : (beat === 2 || beat === 3 ? K.PAL.fire : K.PAL.ochre) });
+    K.cavemanProps(ctx, floorY, beat >= 4 ? 'fire' : 'painting', { phase: beat >= 4 ? 2 : 0, t });
+
+    const charX = beat <= 3 ? 380 : 470;
+    const pose = beat === 0 ? 'scratch' : beat === 1 ? 'push' : beat <= 3 ? 'push' : beat <= 5 ? 'scratch' : 'triumph';
+    K.cavemanStickman(ctx, charX, floorY, pose, { facing: 1, t });
+
+    const bubbles = [
+      'Deg-degan cuma gara-gara notif chat?!',
+      'Awas harimau bertaring menyerang!',
+      'Amigdala buta: chat dikira predator!',
+      'Darah ke kaki, kepala mendadak buntu!',
+      'Tarik napas 4 detik, embus 8 detik...',
+      'Saraf vagus aktif, tubuh kembali aman!',
+      'Sebut nama emosimu: Aku cemas!',
+      'Penjaga gua tenang, pikiran kembali jernih!',
+    ];
+    K.cavemanBubble(ctx, charX + 50, floorY - 380, bubbles[beat], {
+      tailX: charX + 15, tailY: floorY - 300, col: beat >= 4 ? K.PAL.teal : (beat === 2 || beat === 3 ? K.PAL.fire : K.PAL.ochre),
+    });
+  });
 
   const headers = [
-    ['BAHAYA?!', 'HARIMAU SABERTOOTH vs EMAIL KERJA', 'Mengapa Pesan Revisi Terasa Seperti Serangan Predator?'],
-    ['BUNTU!', 'PEMBAJAKAN AMIGDALA (FIGHT OR FLIGHT)', 'Saat Panik, Darah Ditarik dari Otak Logis Menuju Otot'],
-    ['4-7-8', 'AKTIFKAN REM SARAF VAGUS', 'Embusan Napas Panjang Mematikan Alarm Darurat Purba'],
-    ['JERNIH!', 'BERI NAMA EMOSIMU & HADAPI TENANG', 'Tenangkan Penjaga Gua, Kembalikan Kendali Korteks Prefrontal'],
-  ][phase];
+    ['PANIK?', 'JANTUNG BERDEBAR KARENA CHAT', 'Mengapa Notifikasi Kerja Memicu Alarm Bahaya Tubuh?'],
+    ['SABERTOOTH', 'PENJAGA PURBA 200.000 TAHUN', 'Amigdala Berevolusi Menyelamatkan Kita dari Predator'],
+    ['BUTA!', 'NOTIFIKASI DIKIRA AUMAN PREDATOR', 'Otak Bawah Sadar Belum Mengenal Layar Ponsel Modern'],
+    ['HIJACK!', 'DARAH KABUR KE OTOT KAKI', 'Saat Mode Fight-or-Flight Aktif, Otak Logis Melemah'],
+    ['NAPAS 4:8', 'PHYSIOLOGICAL SIGH PROTOCOL', 'Tarik 4 Detik, Buang 8 Detik untuk Mematikan Sirene'],
+    ['VAGUS', 'AKTIVASI SISTEM SARAF PARASIMPATIK', 'Kirim Sinyal Fisiologis Bahwa Dirimu Aman Terkendali'],
+    ['NAME IT', 'LABELING EMOSI SECARA SADAR', 'Tuliskan Emosimu: Memberi Nama Langsung Meredam Panik'],
+    ['JERNIH!', 'TENANGKAN DULU PENJAGA GUAMU', 'Kendalikan Tubuh Terlebih Dahulu, Baru Selesaikan Masalah'],
+  ][beat];
 
   K.cavemanHeader(ctx, headers[0], headers[1], headers[2], {
-    col: phase >= 2 ? K.PAL.teal : K.PAL.fire,
+    col: beat >= 4 ? K.PAL.teal : (beat === 2 || beat === 3 ? K.PAL.fire : K.PAL.ochre),
   });
 
-  K.cavemanProps(ctx, floorY, 'tiger', { phase, t });
+  const callouts = [
+    { tag: 'RESPON FISIK', title: 'Jantung Berdegup & Tangan Dingin Saat Notif Masuk', desc: 'Respon amigdala memicu sekresi hormon adrenalin dan kortisol', stat: 'ALARM', col: K.PAL.amber, c: C.hook },
+    { tag: 'FUNGSI AMIGDALA', title: 'Penjaga Gua Otomatis Menghadapi Ancaman Nyata', desc: 'Di alam liar purba, lambat bereaksi berarti jadi mangsa predator', stat: 'SURVIVAL', col: K.PAL.ochre, c: C.sabertooth },
+    { tag: 'ANALOGI DIGITAL', title: 'Amigdala Tidak Bisa Membedakan Chat vs Predator', desc: 'Pesan "Revisi sekarang!" diterjemahkan sebagai ancaman nyawa', stat: 'BUTA', col: K.PAL.fire, c: C.buta },
+    { tag: 'AMYGDALA HIJACK', title: 'Aliran Darah Dialihkan ke Kaki, Otak Logis Lumpuh', desc: 'Prefrontal cortex mati rasa, kamu kesulitan berpikir objektif', stat: 'HIJACK', col: K.PAL.fire, c: C.bajak },
+    { tag: 'TEKNIK PERNAPASAN', title: 'Tarik 4 Detik, Buang Perlahan 8 Detik', desc: 'Embusan napas lebih panjang memicu pelepasan neurotransmitter relaks', stat: '4 : 8 DETIK', col: K.PAL.teal, c: C.napas },
+    { tag: 'SARAF VAGUS', title: 'Stimulasi Vagal Menurunkan Detak Jantung Cepat', desc: 'Tubuh memberi perintah balik ke otak bahwa keadaan sudah aman', stat: 'PARASIMPATIK', col: K.PAL.teal, c: C.vagus },
+    { tag: 'NAME IT TO TAME IT', title: 'Tuliskan Emosimu: Mengurangi Reaktivitas Otak', desc: 'Penelitian UCLA: Melabeli emosi mematikan alarm amigdala', stat: 'LABELING', col: K.PAL.amber, c: C.label },
+    { tag: 'PESAN UTAMA', title: 'Kendalikan Fisiologi Dulu Sebelum Bertindak', desc: 'Tarik napas panjang, amankan pikiran, dan selesaikan tugas jernih!', stat: 'TENANG', col: K.PAL.ochre, c: C.moral },
+  ][beat];
 
-  const charX = 420;
-  const pose = phase <= 1 ? 'panic' : phase === 2 ? 'think' : 'victory';
-  K.cavemanStickman(ctx, charX, floorY, pose, { facing: 1, t });
-
-  const bubbles = [
-    'Suara chat bunyi! Ada harimau di semak-semak?!',
-    'Jantung ngebut, kepala malah kosong melompong!',
-    'Tarik napas... buang pelan... aman kok, bukan harimau!',
-    'Otak jernih lagi, siap balas pesan dengan tenang!',
-  ];
-  K.cavemanBubble(ctx, charX, 360, bubbles[phase], {
-    tailX: charX, tailY: 445, col: phase >= 2 ? K.PAL.teal : K.PAL.fire,
+  K.cavemanCallout(ctx, 540, 1485, 960, 165, {
+    tag: callouts.tag,
+    title: callouts.title,
+    desc: callouts.desc,
+    stat: callouts.stat,
+    col: callouts.col,
+    a: pop(t, callouts.c ? callouts.c.start + 0.15 : 0),
   });
-
-  if (phase === 0) {
-    K.cavemanCard(ctx, 540, 995, 960, 175, {
-      tag: 'DETEKTOR ANCAMAN PURBA (AMIGDALA)',
-      titleStr: 'Dirancang Bereaksi Dalam Hitungan Milidetik',
-      subStr: 'Di padang savana, lebih baik salah mengira ranting sebagai harimau daripada terlambat lari',
-      stat: 'ALARM!',
-      statSub: 'REAKSI INSTAN',
-      col: K.PAL.fire,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.cavemanCard(ctx, 540, 1210, 960, 175, {
-      tag: 'POSITIF PALSU DI ERA DIGITAL',
-      titleStr: 'Notifikasi Merah & Pesan Singkat Memicu Respons Serupa',
-      subStr: 'Tubuh memompa kortisol dan adrenalin meski kita hanya duduk di kursi kerja',
-      stat: 'KORTISOL',
-      statSub: 'STRES FISIK',
-      col: K.PAL.ochre,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.cavemanCard(ctx, 540, 995, 960, 175, {
-      tag: 'FENOMENA AMYGDALA HIJACK (DANIEL GOLEMAN)',
-      titleStr: 'Korteks Prefrontal (Pusat Logika) Dimatikan Sementara',
-      subStr: 'Itulah sebabnya saat panik atau gugup, kita sulit menyusun kalimat dan berpikir jernih',
-      stat: 'LOGIKA OFF',
-      statSub: 'MODE DARURAT',
-      col: K.PAL.fire,
-      a: pop(t, C.buta.start),
-    });
-    K.cavemanCard(ctx, 540, 1210, 960, 175, {
-      tag: 'RESPON FIGHT, FLIGHT, OR FREEZE',
-      titleStr: 'Membalas Emosional, Kabur Menunda, atau Membeku Diam',
-      subStr: 'Jangan mengambil keputusan penting saat tubuh masih dikuasai alarm gua',
-      stat: 'FREEZE',
-      statSub: 'BEKU CEMAS',
-      col: K.PAL.amber,
-      a: pop(t, C.buta.start + 0.5),
-    });
-  } else if (phase === 2) {
-    K.cavemanCard(ctx, 540, 995, 960, 175, {
-      tag: 'REM BIOLOGIS: SARAF VAGUS & PARASIMPATIS',
-      titleStr: 'Embusan Napas Lebih Panjang dari Tarikan Napas (4–8 Detik)',
-      subStr: 'Saat kita mengembuskan napas perlahan, detak jantung otomatis melambat',
-      stat: '4s / 8s',
-      statSub: 'NAPAS TENANG',
-      col: K.PAL.teal,
-      a: pop(t, C.napas.start),
-    });
-    K.cavemanCard(ctx, 540, 1210, 960, 175, {
-      tag: 'SINYAL FISIK KE BAWAH SADAR',
-      titleStr: 'Tidak Mungkin Bernapas Lambat Saat Dikejar Harimau',
-      subStr: 'Oleh karena itu, napas lambat meyakinkan amigdala bahwa situasi 100% aman',
-      stat: 'AMAN!',
-      statSub: 'SIRENE MATI',
-      col: K.PAL.amber,
-      a: pop(t, C.napas.start + 0.5),
-    });
-  } else {
-    K.cavemanCard(ctx, 540, 995, 960, 175, {
-      tag: 'TEKNIK AFFECT LABELING (MATTHEW LIEBERMAN)',
-      titleStr: '"Name It to Tame It" — Tuliskan Kekhawatiranmu di Kertas',
-      subStr: 'Mengubah emosi abstrak menjadi kata-kata mengaktifkan kembali pusat logika otak',
-      stat: 'TULISKAN',
-      statSub: 'PULIHKAN LOGIKA',
-      col: K.PAL.teal,
-      a: pop(t, C.label.start),
-    });
-    K.cavemanCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PESAN SI UGA MANUSIA GUA',
-      titleStr: 'Tarik Napas Dulu Sebelum Membuka atau Membalas Pesan',
-      subStr: 'Jeda 30 detik menyelamatkanmu dari kepanikan yang tidak perlu',
-      stat: 'TENANG!',
-      statSub: 'KENDALI PENUH',
-      col: K.PAL.ochre,
-      a: pop(t, C.label.start + 0.5),
-    });
-  }
 }
-

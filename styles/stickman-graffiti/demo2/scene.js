@@ -1,12 +1,12 @@
-// 74 · STICKMAN GRAFFITI — Demo 2: Jangan Hapus Gagalmu, Timpa dengan Karya (Seni Layering & Resiliensi)
+// 74 · STICKMAN GRAFFITI — Demo 2: Jangan Hapus Gagalmu, Timpa dengan Karya (Full-Screen 1080x1920 8-Beat Standard)
 import * as K from '/styles/stickman-graffiti/kit.js';
 const { clamp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -15,128 +15,101 @@ export async function setup(AM) {
 
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
-  const floorY = 760;
+  const floorY = 1230;
 
-  let phase = 0;
-  if (t >= C.tebal.start) phase = 3;
-  else if (t >= C.hidup.start) phase = 2;
-  else if (t >= C.rahasia.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral?.start) beat = 7;
+  else if (t >= C.tebal?.start) beat = 6;
+  else if (t >= C.lapisan?.start) beat = 5;
+  else if (t >= C.hidup?.start) beat = 4;
+  else if (t >= C.lelehan?.start) beat = 3;
+  else if (t >= C.rahasia?.start) beat = 2;
+  else if (t >= C.panik?.start) beat = 1;
+
+  let zoom = 1.0, fx = 540, fy = 880;
+  if (beat === 1 || beat === 2) {
+    zoom = 1.14; fx = 520; fy = 910;
+  } else if (beat >= 4) {
+    zoom = 1.15; fx = 560; fy = 930;
+  }
 
   const tags = [
-    'TEMBOK 01 • TIDAK ADA TOMBOL CTRL+Z DI TEMBOK',
-    'TEMBOK 02 • TEKNIK OVERPAINTING (TIMPA LAPISAN BARU)',
-    'TEMBOK 03 • UBAH KESALAHAN JADI DIMENSI KARYA',
-    'TEMBOK 04 • TIMPA GAGALMU DENGAN KARYA BARU!',
+    'TEMBOK 01 • TIDAK ADA TOMBOL UNDO',
+    'TEMBOK 02 • PANIK SAAT CAT MELELEH',
+    'TEMBOK 03 • RAHASIA MURAL: TIMPA DENGAN WARNA BARU',
+    'TEMBOK 04 • LELEHAN CAT JADI EFEK SHADOW 3D',
+    'TEMBOK 05 • GAGAL PROYEK BUKAN NODA PERMANEN',
+    'TEMBOK 06 • JADIKAN DASAR KARYA LEBIH MATANG',
+    'TEMBOK 07 • KEKAYAAN LAPISAN PERBAIKAN',
+    'TEMBOK 08 • TIMPA GAGALMU DENGAN KARYA BARU!',
   ];
 
-  const col = phase >= 2 ? K.PAL.cyan : K.PAL.pink;
-  K.graffitiBg(ctx, t, { floorY, wallTag: tags[phase], col });
+  const col = beat >= 4 ? K.PAL.cyan : (beat === 2 || beat === 3 ? K.PAL.yellow : K.PAL.pink);
+
+  K.withCamera(ctx, { zoom, fx, fy }, () => {
+    K.graffitiBg(ctx, t, { floorY, wallTag: tags[beat], col });
+
+    const murals = [
+      ['NO UNDO', 'CAT MELELEH', 'Tidak ada penghapus di jalanan', K.PAL.pink, K.PAL.yellow],
+      ['PANIK PEMULA', 'KABUR DARI TEMBOK', 'Merasa satu noda merusak segalanya', K.PAL.pink, K.PAL.pink],
+      ['TIMPA WARNA', 'LAPISAN BARU', 'Tutup kesalahan dengan warna tegas', K.PAL.yellow, K.PAL.cyan],
+      ['EFEK 3D', 'SERAP KESALAHAN', 'Ubah lelehan cat jadi bayangan hidup', K.PAL.yellow, K.PAL.pink],
+      ['KARIER NYATA', 'BUKAN NODA TETAP', 'Satu kegagalan bukan akhir masa depan', K.PAL.cyan, K.PAL.yellow],
+      ['PONDASI BARU', 'BELAJAR DARI SALAH', 'Jadikan batu loncatan karya matang', K.PAL.cyan, K.PAL.pink],
+      ['BERKARAKTER', 'BERLAPIS-LAPIS', 'Karya kaya lahir dari banyak perbaikan', K.PAL.cyan, K.PAL.yellow],
+      ['MAHAKARYA!', 'JANGAN BERHENTI', 'Timpa dengan karya lebih berani!', K.PAL.cyan, K.PAL.pink],
+    ][beat];
+    K.graffitiWallArt(ctx, floorY, murals[0], murals[1], murals[2], { col: murals[3], accent: murals[4] });
+
+    const charX = beat <= 2 ? 330 : 360;
+    const pose = beat === 0 ? 'hesitate' : beat === 1 ? 'hesitate' : beat <= 4 ? 'spray' : 'victory';
+    K.graffitiStickman(ctx, charX, floorY, pose, { facing: 1, t, sprayCol: col });
+
+    const bubbles = [
+      'Gak ada tombol Undo di jalanan pas catnya belepotan!',
+      'Waduh belepotan! Mau kabur tinggalin temboknya aja!',
+      'Tenang! Cat salah selalu bisa ditimpa warna baru!',
+      'Malah lelehan cat ini bisa kujadiin efek bayangan 3D!',
+      'Satu proyek gagal bukan berarti karierku tamat!',
+      'Gunakan kesalahan kemarin sebagai warna dasar karya baru!',
+      'Makin banyak lapisan perbaikan, karyaku makin berkarakter!',
+      'Jangan hapus gagalmu, timpa dengan karya lebih keren!',
+    ];
+    K.graffitiBubble(ctx, charX + 50, floorY - 390, bubbles[beat], {
+      tailX: charX + 15, tailY: floorY - 310, col,
+    });
+  });
 
   const headers = [
-    ['TANPA UNDO', 'SAAT CAT SEMPROTMU MELELEH KELUAR GARIS', 'Mengapa Kesalahan Pertama Sering Membuat Pemula Berhenti?'],
-    ['LAYER 02', 'RAHASIA MURAL: TIMPA DENGAN WARNA BARU', 'Tidak Perlu Merobohkan Tembok Hanya Karena Satu Noda Kecil'],
-    ['ITERASI', 'JADIKAN KEGAGALAN SEBAGAI LAPISAN DASAR', 'Setiap Kesalahan Memberi Tekstur dan Kedalaman Pengalaman'],
-    ['MAHAKARYA', 'TIMPA GAGALMU DENGAN KARYA HARI INI!', 'Lapisan Baru yang Berani Mengubah Noda Menjadi Keindahan'],
-  ][phase];
+    ['NO UNDO', 'SENI GRAFITI JALANAN', 'Ketika Cat Semprot Meleleh, Tidak Ada Tombol Kembali'],
+    ['PANIK', 'JEBAKAN PEMULA: MUDAH MENYERAH', 'Menganggap Satu Kesalahan Kecil Merusak Seluruh Perjalanan'],
+    ['TIMPA!', 'RAHASIA SENIMAN MURAL BERPENGALAMAN', 'Cat Semprot yang Salah Selalu Bisa Ditimpa Warna Baru'],
+    ['EFEK 3D', 'UBAH CACAT MENJADI DAYA TARIK', 'Lelehan Cat Spontan Disulap Menjadi Dimensi Bayangan'],
+    ['KARIER', 'GAGAL BUKAN NODA PERMANEN', 'Satu Proyek yang Meleset Bukan Akhir dari Kemampuanmu'],
+    ['LAPISAN', 'PONDASI UNTUK KARYA LEBIH MATANG', 'Jadikan Kegagalan Kemarin Lapisan Dasar untuk Melompat'],
+    ['KARAKTER', 'KEDALAMAN DARI PROSES PERBAIKAN', 'Mural Terbaik Selalu Memiliki Banyak Lapisan Eksperimen'],
+    ['BANGKIT', 'TIMPA DENGAN KARYA BARU', 'Jangan Berhenti! Lanjutkan Langkahmu dengan Warna Lebih Berani!'],
+  ][beat];
 
   K.graffitiHeader(ctx, headers[0], headers[1], headers[2], { col });
 
-  const murals = [
-    ['CAT MELELEH!', 'JANGAN KABUR', 'Satu noda bukan akhir segalanya', K.PAL.pink, K.PAL.yellow],
-    ['OVERPAINTING', 'LAPISAN BARU', 'Tutup garis salah dengan warna tegas', K.PAL.cyan, K.PAL.pink],
-    ['EFEK 3D DRIP', 'JADI KARAKTER!', 'Ubah noda menjadi bayangan estetik', K.PAL.cyan, K.PAL.yellow],
-    ['MASTERPIECE!', '10x LEBIH KAYA', 'Tumpukan proses melahirkan karya kuat', K.PAL.pink, K.PAL.cyan],
-  ][phase];
-  K.graffitiWallArt(ctx, floorY, murals[0], murals[1], murals[2], { col: murals[3], accent: murals[4] });
+  const callouts = [
+    { tag: 'REALITAS JALANAN', title: 'Di Atas Tembok Tidak Ada Tombol Backspace', desc: 'Dunia nyata menuntut keberanian menghadapi hasil yang tidak terduga', stat: 'NO UNDO', col: K.PAL.pink, c: C.hook },
+    { tag: 'REAKSI PANIK', title: 'Pemula Cenderung Menyerah Saat Menemukan Noda', desc: 'Merasa malu dan ingin meninggalkan kanvas sebelum karyanya selesai', stat: 'PANIK', col: K.PAL.pink, c: C.panik },
+    { tag: 'TEKNIK OVERLAY', title: 'Cat yang Salah Bisa Ditimpa Lapisan Warna Tegas', desc: 'Prinsip grafiti: Lapisan baru yang kontras menutup goresan sebelumnya', stat: 'TIMPA WARNA', col: K.PAL.yellow, c: C.rahasia },
+    { tag: 'HAPPY ACCIDENTS', title: 'Bob Ross Effect: Ubah Kesalahan Jadi Elemen Unik', desc: 'Lelehan cat yang menetes memberi tekstur organik yang sulit ditiru', stat: 'EFEK 3D', col: K.PAL.yellow, c: C.lelehan },
+    { tag: 'PERSPEKTIF HIDUP', title: 'Gagal Satu Proyek Bukan Tanda Kamu Tidak Mampu', desc: 'Setiap profesional besar pernah memiliki portofolio yang berantakan di awal', stat: 'KARIER', col: K.PAL.cyan, c: C.hidup },
+    { tag: 'LAYERED LEARNING', title: 'Gunakan Pengalaman Lama Sebagai Undercoat', desc: 'Pelajaran dari masa sulit membentuk intuisi yang tajam untuk proyek berikutnya', stat: 'LAPISAN', col: K.PAL.cyan, c: C.lapisan },
+    { tag: 'NILAI KARAKTER', title: 'Karya Berkarakter Memiliki Sejarah Perjuangan', desc: 'Tembok yang tebal dengan lapisan warna memiliki resonansi visual yang kuat', stat: 'BERMUTU', col: K.PAL.yellow, c: C.tebal },
+    { tag: 'PESAN JUARA', title: 'Timpa Kegagalanmu dengan Karya Baru Hari Ini', desc: 'Angkat kaleng catmu kembali dan ciptakan mahakaryamu yang sebenarnya!', stat: 'BANGKIT!', col: K.PAL.cyan, c: C.moral },
+  ][beat];
 
-  const charX = phase <= 1 ? 330 : 350;
-  const pose = phase === 0 ? 'hesitate' : phase <= 2 ? 'spray' : 'victory';
-  K.graffitiStickman(ctx, charX, floorY, pose, { facing: 1, t, sprayCol: col });
-
-  const bubbles = [
-    'Waduh catnya meleber! Nggak ada tombol Undo lagi!',
-    'Tenang, tinggal kita timpa pakai warna sian yang tegas!',
-    'Eh lelehan catnya malah bikin efek bayangan 3D keren!',
-    'Jangan hapus gagalmu, timpa terus dengan karya baru!',
-  ];
-  K.graffitiBubble(ctx, charX + 20, 355, bubbles[phase], { tailX: charX, tailY: 430, col });
-
-  if (phase === 0) {
-    K.graffitiCard(ctx, 540, 995, 960, 175, {
-      tag: 'REALITA DUNIA NYATA TANPA TOMBOL UNDO',
-      titleStr: 'Kita Tidak Bisa Memutar Waktu, Tapi Bisa Melukis Lagi',
-      subStr: 'Berhenti berkarya karena satu kesalahan sama dengan membuang seluruh tembok',
-      stat: 'NO UNDO',
-      statSub: 'HADAPI NYATA',
-      col: K.PAL.pink,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.graffitiCard(ctx, 540, 1210, 960, 175, {
-      tag: 'EFEK ALL-OR-NOTHING THINKING',
-      titleStr: 'Menganggap Satu Cacat Kecil Merusak Seluruh Usaha',
-      subStr: 'Pola pikir perfeksionis membuat banyak proyek ditinggalkan setengah jalan',
-      stat: 'JANGAN BATAL',
-      statSub: 'TERUSKAN PROSES',
-      col: K.PAL.yellow,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.graffitiCard(ctx, 540, 995, 960, 175, {
-      tag: 'TEKNIK OVERPAINTING PARA MURALIS',
-      titleStr: 'Cat yang Mengering Selalu Bisa Ditimpa Warna Baru',
-      subStr: 'Lapisan bawah yang kasar justru membuat lapisan cat berikutnya menempel lebih kuat',
-      stat: 'OVERPAINT',
-      statSub: 'TIMPA TEGAS',
-      col: K.PAL.cyan,
-      a: pop(t, C.rahasia.start),
-    });
-    K.graffitiCard(ctx, 540, 1210, 960, 175, {
-      tag: 'HAPPY ACCIDENTS (SENI IMPROVISASI)',
-      titleStr: 'Mengubah Lelehan Cat Menjadi Aksen Bayangan 3D',
-      subStr: 'Kreativitas sejati diuji dari cara kita merangkul ketidaksengajaan menjadi keunikan',
-      stat: 'ADAPTASI',
-      statSub: 'SENI JALANAN',
-      col: K.PAL.pink,
-      a: pop(t, C.rahasia.start + 0.5),
-    });
-  } else if (phase === 2) {
-    K.graffitiCard(ctx, 540, 995, 960, 175, {
-      tag: 'FILOSOFI PENTIMENTO DALAM SENI LUKIS',
-      titleStr: 'Jejak Sketsa Lama Memberi Kedalaman pada Karya Akhir',
-      subStr: 'Kegagalan masa lalu bukan aib, melainkan bukti bahwa kamu pernah berani mencoba',
-      stat: 'LAPISAN',
-      statSub: 'KAYA MAKNA',
-      col: K.PAL.cyan,
-      a: pop(t, C.hidup.start),
-    });
-    K.graffitiCard(ctx, 540, 1210, 960, 175, {
-      tag: 'RESILIENSI KREATOR & PROFESIONAL',
-      titleStr: 'Jawab Kritik dan Kegagalan dengan Karya Berikutnya',
-      subStr: 'Satu produk atau konten yang kurang berhasil langsung ditutupi oleh sepuluh karya baru',
-      stat: '10x BARU',
-      statSub: 'JAWAB LEWAT KARYA',
-      col: K.PAL.yellow,
-      a: pop(t, C.hidup.start + 0.5),
-    });
-  } else {
-    K.graffitiCard(ctx, 540, 995, 960, 175, {
-      tag: 'AKUMULASI LAPISAN PENGALAMAN',
-      titleStr: 'Tembok Terbaik Memiliki Puluhan Lapisan Belajar',
-      subStr: 'Semakin tebal jam terbang dan perbaikanmu, semakin kokoh mentalitas karyamu',
-      stat: 'MATANG!',
-      statSub: 'JAM TERBANG',
-      col: K.PAL.cyan,
-      a: pop(t, C.tebal.start),
-    });
-    K.graffitiCard(ctx, 540, 1210, 960, 175, {
-      tag: 'MANIFESTO SI ZAKI STREET-ART',
-      titleStr: 'Jangan Hapus Masa Lalumu, Timpa dengan Karya Terbaikmu!',
-      subStr: 'Hari ini adalah lapisan warna baru yang siap membuat ceritamu bersinar',
-      stat: 'TIMPA!',
-      statSub: 'KARYA BARU',
-      col: K.PAL.pink,
-      a: pop(t, C.tebal.start + 0.5),
-    });
-  }
+  K.graffitiCallout(ctx, 540, 1485, 960, 165, {
+    tag: callouts.tag,
+    title: callouts.title,
+    desc: callouts.desc,
+    stat: callouts.stat,
+    col: callouts.col,
+    a: pop(t, callouts.c ? callouts.c.start + 0.15 : 0),
+  });
 }
-

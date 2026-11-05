@@ -1,12 +1,12 @@
-// 75 · STICKMAN LECTURE — Demo 3: Rahasia Efek Zeigarnik & Jembatan Hemingway
+// 75 · STICKMAN LECTURE — Demo 3: Rahasia Efek Zeigarnik di Ruang Kelas (Full-Screen 1080x1920 8-Beat Standard)
 import * as K from '/styles/stickman-lecture/kit.js';
 const { clamp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -15,128 +15,101 @@ export async function setup(AM) {
 
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
-  const floorY = 760;
+  const floorY = 1240;
 
-  let phase = 0;
-  if (t >= C.hemingway.start) phase = 3;
-  else if (t >= C.buka.start) phase = 2;
-  else if (t >= C.loop.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral?.start) beat = 7;
+  else if (t >= C.hemingway?.start) beat = 6;
+  else if (t >= C.bawah?.start) beat = 5;
+  else if (t >= C.buka?.start) beat = 4;
+  else if (t >= C.nol?.start) beat = 3;
+  else if (t >= C.loop?.start) beat = 2;
+  else if (t >= C.pelayan?.start) beat = 1;
+
+  let zoom = 1.0, fx = 540, fy = 880;
+  if (beat === 1 || beat === 2) {
+    zoom = 1.14; fx = 520; fy = 910;
+  } else if (beat >= 4) {
+    zoom = 1.15; fx = 560; fy = 930;
+  }
 
   const tags = [
-    'KULIAH 01 • PENEMUAN BLUMA ZEIGARNIK (1927)',
-    'KULIAH 02 • OPEN LOOP DI MEMORI KERJA OTAK',
-    'KULIAH 03 • UBAH 0% MENJADI 5% UNTUK PEMICU',
-    'KULIAH 04 • TEKNIK JEMBATAN ERNEST HEMINGWAY',
+    'KULIAH 01 • RASA PENASARAN FILM BERSAMBUNG',
+    'KULIAH 02 • BLUMA ZEIGARNIK & PELAYAN RESTORAN',
+    'KULIAH 03 • OPEN LOOP: KETEGANGAN KOGNITIF ALAMI',
+    'KULIAH 04 • TITIK NOL PERSEN: ALASAN PROKRASTINASI',
+    'KULIAH 05 • ATURAN 5 MENIT MENYALAKAN SISTEM',
+    'KULIAH 06 • ALAM BAWAH SADAR MERANGKAI IDE',
+    'KULIAH 07 • STRATEGI MENULIS ERNEST HEMINGWAY',
+    'KULIAH 08 • BUKA 5 MENIT, TUNTASKAN SEMUANYA!',
   ];
 
-  const col = phase >= 2 ? K.PAL.chalkBlue : K.PAL.chalkYellow;
-  K.lectureBg(ctx, t, { floorY, courseTag: tags[phase], col });
+  const col = beat >= 4 ? K.PAL.chalkBlue : (beat === 2 || beat === 3 ? K.PAL.chalkPink : K.PAL.chalkYellow);
+
+  K.withCamera(ctx, { zoom, fx, fy }, () => {
+    K.lectureBg(ctx, t, { floorY, courseTag: tags[beat], col });
+
+    const diagrams = [
+      ['CLIFFHANGER', 'FILM GANTUNG', 'Mengapa otak terobsesi hal gantung', K.PAL.chalkYellow],
+      ['ZEIGARNIK 1927', 'PESANAN RESTO', 'Ingat saat belum bayar, lupa saat lunas', K.PAL.chalkPink],
+      ['OPEN LOOPS', 'TAB DI LATAR', 'Ketegangan mental menuntut selesai', K.PAL.chalkPink],
+      ['TITIK 0%', 'BELUM TERSENTUH', 'Efek Zeigarnik belum menyala di kepala', K.PAL.chalkYellow],
+      ['5 MENIT MIKRO', 'NYALAKAN SISTEM', 'Kerjakan no 1, otak langsung tancap', K.PAL.chalkBlue],
+      ['BACKGROUND MIND', 'IDE BAWAH SADAR', 'Otak tetap merangkai solusi saat tidur', K.PAL.chalkBlue],
+      ['TEKNIK HEMINGWAY', 'BERHENTI DI PUNCAK', 'Simpan kalimat berikutnya buat besok', K.PAL.chalkYellow],
+      ['NILAI A+', 'SUKSES TUNTAS', 'Nyalakan loop dan selesaikan tugas!', K.PAL.chalkYellow],
+    ][beat];
+    K.lectureBoardDiagram(ctx, floorY, diagrams[0], diagrams[1], diagrams[2], { col: diagrams[3] });
+
+    const charX = beat <= 2 ? 330 : 360;
+    const pose = beat === 0 ? 'teach' : beat <= 2 ? 'think' : beat <= 4 ? 'teach' : beat <= 6 ? 'teach' : 'eureka';
+    K.lectureStickman(ctx, charX, floorY, pose, { facing: 1, t });
+
+    const bubbles = [
+      'Kenapa kita penasaran sama film bersambung yang gantung?',
+      'Bluma Zeigarnik meneliti pelayan restoran sejak tahun 1927!',
+      'Otak manusia benci hal gantung, kayak tab kebuka di latar!',
+      'Kalau tugas masih 0% belum dibuka, alarm otak belum nyala!',
+      'Cukup sentuh 5 menit: buat judul atau isi nomor satu dulu!',
+      'Bahkan pas istirahat, alam bawah sadar lanjut mikirin ide!',
+      'Ernest Hemingway sengaja stop nulis pas tau kalimat lanjutannya!',
+      'Buka tugasmu 5 menit hari ini, biarkan otak bekerja!',
+    ];
+    K.lectureBubble(ctx, charX + 50, floorY - 390, bubbles[beat], {
+      tailX: charX + 15, tailY: floorY - 310, col,
+    });
+  });
 
   const headers = [
-    ['ZEIGARNIK', 'MENGAPA KITA PENASARAN HAL BERSAMBUNG?', 'Temuan Psikolog Bluma Zeigarnik tentang Tugas yang Belum Selesai'],
-    ['OPEN LOOP', 'TAB MEMORI KERJA DI DALAM OTAKMU', 'Tugas yang Sudah Dimulai Menciptakan Dorongan Alami untuk Tuntas'],
-    ['MULAI 5%', 'AKTIFKAN PEMICU LIMA MENIT PERTAMA', 'Selama Masih 0% Otak Diam • Begitu 5% Otak Ikut Membantu'],
-    ['HEMINGWAY', 'BERHENTI SAAT TAHU LANGKAH BERIKUTNYA', 'Rahasia Melanjutkan Pekerjaan Esok Pagi Tanpa Rasa Macet!'],
-  ][phase];
+    ['BERSAMBUNG?', 'RAHASIA EFEK ZEIGARNIK', 'Mengapa Hal yang Belum Selesai Terus Terngiang di Pikiran?'],
+    ['ZEIGARNIK', 'PENELITIAN RESTORAN BERSEJARAH', 'Pelayan Hafal Pesanan yang Belum Lunas, Lupa Begitu Bayar'],
+    ['OPEN LOOP', 'KETEGANGAN KOGNITIF OTAK', 'Pikiran Manusia Secara Biologis Menuntut Penutupan Siklus'],
+    ['TITIK NOL', 'MENGAPA MEMULAI BEGITU BERAT?', 'Selama Belum Disentuh, Sirkuit Zeigarnik Belum Menyala'],
+    ['5 MENIT', 'CARA MERETAS ENERGI INISIASI', 'Kerjakan Satu Baris Saja untuk Mengaktifkan Memori Kerja'],
+    ['BAWAH SADAR', 'PROSES INKUBASI PIKIRAN', 'Otak Terus Bekerja Menyusun Solusi Bahkan Saat Kamu Rehat'],
+    ['HEMINGWAY', 'STRATEGI HENTI DI PUNCAK', 'Tinggalkan Pekerjaan Saat Tahu Langkah Berikutnya'],
+    ['TUNTAS!', 'MANFAATKAN SIKLUS ALAMI OTAK', 'Buka Tugasmu 5 Menit Sekarang & Saksikan Keajaibannya!'],
+  ][beat];
 
   K.lectureHeader(ctx, headers[0], headers[1], headers[2], { col });
 
-  const diagrams = [
-    ['OBSERVASI 1927', 'PESANAN BELUM LUNAS', 'Diingat tajam sampai tugas selesai', K.PAL.chalkYellow],
-    ['TUGAS 0%', 'BELUM AKTIF', 'Mudah ditunda karena belum dibuka', K.PAL.chalkPink],
-    ['TUGAS 5% (5 MNT)', 'OPEN LOOP ON!', 'Otak otomatis ingin menuntaskan', K.PAL.chalkBlue],
-    ['HEMINGWAY BRIDGE', 'SISAKAN 1 KALIMAT', 'Esok pagi langsung lanjut lancar', K.PAL.chalkYellow],
-  ][phase];
-  K.lectureBoardDiagram(ctx, floorY, diagrams[0], diagrams[1], diagrams[2], { col: diagrams[3] });
+  const callouts = [
+    { tag: 'CLIFFHANGER EFFECT', title: 'Rasa Gatal Otak Terhadap Cerita yang Bersambung', desc: 'Mekanisme perhatian manusia terpaku pada narasi yang belum tuntas', stat: 'GANTUNG', col: K.PAL.chalkYellow, c: C.hook },
+    { tag: 'STUDI ZEIGARNIK', title: 'Eksperimen Klasik Bluma Zeigarnik (1927)', desc: 'Tugas yang diinterupsi diingat 90% lebih baik dibanding tugas yang sudah selesai', stat: '1927', col: K.PAL.chalkPink, c: C.pelayan },
+    { tag: 'COGNITIVE TENSION', title: 'Open Loops Menghabiskan Ram Pikiran', desc: 'Setiap tugas yang tertunda menghasilkan sinyal bawah sadar yang meminta ditutup', stat: 'OPEN LOOP', col: K.PAL.chalkPink, c: C.loop },
+    { tag: 'FRICTION AT ZERO', title: 'Hambatan Terbesar Ada di Titik Nol Persen', desc: 'Otak menolak membayangkan seluruh beban pekerjaan yang masih abstrak', stat: 'TITIK 0%', col: K.PAL.chalkYellow, c: C.nol },
+    { tag: 'FIVE-MINUTE RULE', title: 'Inisiasi Mikro Mengaktifkan Jalur Kognitif', desc: 'Membuat satu outline kecil sudah cukup memicu dorongan internal menuntaskan', stat: '5 MENIT', col: K.PAL.chalkBlue, c: C.buka },
+    { tag: 'INCUBATION EFFECT', title: 'Alam Bawah Sadar Bekerja Sebagai Prosesor Latar', desc: 'Begitu tab tugas terbuka, ide-ide kreatif akan mengalir spontan di sela aktivitas', stat: 'INKUBASI', col: K.PAL.chalkBlue, c: C.bawah },
+    { tag: 'HEMINGWAY HACK', title: 'Berhenti Saat Sedang Lancar untuk Hari Esok', desc: 'Menghindari rasa frustrasi menghadapi kertas putih kosong keesokan paginya', stat: 'HEMINGWAY', col: K.PAL.chalkYellow, c: C.hemingway },
+    { tag: 'PESAN JUARA', title: 'Mulai Hari Ini, Biarkan Otak Menuntaskan Tugasmu', desc: 'Buka file kerjamu selama 5 menit sekarang dan rasakan kemudahannya!', stat: 'A+ JUARA', col: K.PAL.chalkYellow, c: C.moral },
+  ][beat];
 
-  const charX = phase <= 1 ? 330 : 350;
-  const pose = phase === 0 ? 'teach' : phase === 1 ? 'think' : phase === 2 ? 'teach' : 'eureka';
-  K.lectureStickman(ctx, charX, floorY, pose, { facing: 1, t });
-
-  const bubbles = [
-    'Kenapa pelayan hafal pesanan rumit sebelum bonnya dibayar?',
-    'Karena otak kita selalu menyimpan tab terbuka buat tugas yang belum beres!',
-    'Makanya buka dulu tugasmu 5 menit biar tab otakmu menyala!',
-    'Saat efek Zeigarnik aktif, otakmu sendiri yang nagih minta selesai!',
-  ];
-  K.lectureBubble(ctx, charX + 20, 355, bubbles[phase], { tailX: charX, tailY: 430, col });
-
-  if (phase === 0) {
-    K.lectureCard(ctx, 540, 995, 960, 175, {
-      tag: 'OBSERVASI KAFE WINA (BLUMA ZEIGARNIK, 1927)',
-      titleStr: 'Tugas yang Belum Selesai Diingat 90% Lebih Kuat',
-      subStr: 'Begitu tugas dinyatakan selesai, ketegangan memori langsung dilepaskan oleh otak',
-      stat: '90% INGAT',
-      statSub: 'BELUM SELESAI',
-      col: K.PAL.chalkYellow,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.lectureCard(ctx, 540, 1210, 960, 175, {
-      tag: 'RAHASIA CLIFFHANGER FILM & SERIAL',
-      titleStr: 'Otak Benci Cerita yang Menggantung di Tengah Jalan',
-      subStr: 'Kita bisa memanfaatkan mekanisme psikologis yang sama untuk menyelesaikan pekerjaan',
-      stat: 'PENASARAN',
-      statSub: 'DORONGAN ALAMI',
-      col: K.PAL.chalkBlue,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.lectureCard(ctx, 540, 995, 960, 175, {
-      tag: 'PERBEDAAN TUGAS 0% vs TUGAS 5%',
-      titleStr: 'Efek Zeigarnik Tidak Bekerja Sebelum Kamu Memulai',
-      subStr: 'Tugas yang belum pernah dibuka sama sekali tidak masuk ke radar memori kerja',
-      stat: '0% = DIAM',
-      statSub: 'RAWAN LUPA',
-      col: K.PAL.chalkPink,
-      a: pop(t, C.loop.start),
-    });
-    K.lectureCard(ctx, 540, 1210, 960, 175, {
-      tag: 'KETEGANGAN KOGNITIF POSITIF',
-      titleStr: 'Membuka File & Membuat Kerangka Menyalakan Mesin Otak',
-      subStr: 'Setelah langkah pertama dibuat, pikiran otomatis mencari cara melengkapinya',
-      stat: 'AKTIF!',
-      statSub: 'TAB TERBUKA',
-      col: K.PAL.chalkYellow,
-      a: pop(t, C.loop.start + 0.5),
-    });
-  } else if (phase === 2) {
-    K.lectureCard(ctx, 540, 995, 960, 175, {
-      tag: 'TRIK PEMICU 5 MENIT (THE 5-MINUTE STARTER)',
-      titleStr: 'Kerjakan Bagian Paling Mudah Selama 5 Menit Pertama',
-      subStr: 'Beri judul dokumen, buat 3 poin outline, atau selesaikan satu soal pembuka',
-      stat: '5 MENIT',
-      statSub: 'BUKA KUNCI',
-      col: K.PAL.chalkBlue,
-      a: pop(t, C.buka.start),
-    });
-    K.lectureCard(ctx, 540, 1210, 960, 175, {
-      tag: 'INKUBASI BAWAH SADAR SAAT ISTIRAHAT',
-      titleStr: 'Otak Tetap Memproses Solusi Meski Kamu Sedang Rehat',
-      subStr: 'Itulah sebabnya ide brilian sering muncul saat mandi setelah kita sempat memulai tugas',
-      stat: 'INKUBASI',
-      statSub: 'IDE MUNCUL',
-      col: K.PAL.chalkYellow,
-      a: pop(t, C.buka.start + 0.5),
-    });
-  } else {
-    K.lectureCard(ctx, 540, 995, 960, 175, {
-      tag: 'TEKNIK JEMBATAN HEMINGWAY (HEMINGWAY BRIDGE)',
-      titleStr: 'Akhiri Sesi Kerja Saat Kamu Tahu Kalimat Selanjutnya',
-      subStr: 'Tinggalkan satu catatan kecil untuk besok pagi agar kamu langsung menyambung momentum',
-      stat: 'JEMBATAN',
-      statSub: 'ANTI MACET',
-      col: K.PAL.chalkBlue,
-      a: pop(t, C.hemingway.start),
-    });
-    K.lectureCard(ctx, 540, 1210, 960, 175, {
-      tag: 'KESIMPULAN PROFESOR KAPUR',
-      titleStr: 'Ubah 0% Menjadi 5% Hari Ini & Biarkan Otakmu Menuntaskannya!',
-      subStr: 'Memulai sedikit saja jauh lebih sakti daripada merencanakan seharian tanpa menyentuh',
-      stat: 'TUNTAS!',
-      statSub: 'EFEK ZEIGARNIK',
-      col: K.PAL.chalkYellow,
-      a: pop(t, C.hemingway.start + 0.5),
-    });
-  }
+  K.lectureCallout(ctx, 540, 1485, 960, 165, {
+    tag: callouts.tag,
+    title: callouts.title,
+    desc: callouts.desc,
+    stat: callouts.stat,
+    col: callouts.col,
+    a: pop(t, callouts.c ? callouts.c.start + 0.15 : 0),
+  });
 }
-

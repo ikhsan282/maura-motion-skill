@@ -1,12 +1,12 @@
-// 72 · STICKMAN CINEMATIC — Demo 2: Juara Ditempa Saat Lampu Panggung Mati (Disiplin di Saat Sepi)
+// 72 · STICKMAN CINEMATIC — Demo 2: Juara Ditempa Saat Lampu Panggung Mati (Full-Screen 1080x1920 8-Beat Standard)
 import * as K from '/styles/stickman-cinematic/kit.js';
 const { clamp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -15,124 +15,90 @@ export async function setup(AM) {
 
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
-  const floorY = 760;
+  const floorY = 1230;
 
-  let phase = 0;
-  if (t >= C.fokus.start) phase = 3;
-  else if (t >= C.disiplin.start) phase = 2;
-  else if (t >= C.sunyi.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral?.start) beat = 7;
+  else if (t >= C.fokus?.start) beat = 6;
+  else if (t >= C.akar?.start) beat = 5;
+  else if (t >= C.disiplin?.start) beat = 4;
+  else if (t >= C.lelah?.start) beat = 3;
+  else if (t >= C.sunyi?.start) beat = 2;
+  else if (t >= C.pujian?.start) beat = 1;
 
-  const scenes = [
-    'SCENE 01 • PANGGUNG GEMERLAP vs RUANG LATIHAN',
-    'SCENE 02 • UJIAN KESUNYIAN TANPA TEPUK TANGAN',
-    'SCENE 03 • DISIPLIN ADALAH BAHAN BAKAR UTAMA',
-    'SCENE 04 • AKAR BAMBU YANG MENGUAT DI BALIK LAYAR',
+  let zoom = 1.0, fx = 540, fy = 880;
+  if (beat === 1 || beat === 2) {
+    zoom = 1.15; fx = 500; fy = 920;
+  } else if (beat >= 4) {
+    zoom = 1.16; fx = 560; fy = 940;
+  }
+
+  const tags = [
+    'SCENE 01 • GEMERLAP PANGGUNG VS RUANG LATIHAN',
+    'SCENE 02 • JEBAKAN PUJIAN & VALIDASI INSTAN',
+    'SCENE 03 • UJIAN KESUNYIAN TANPA PENONTON',
+    'SCENE 04 • KETAHANAN MELANGKAH SAAT LELAH',
+    'SCENE 05 • DISIPLIN ADALAH BAHAN BAKAR HAKIKI',
+    'SCENE 06 • AKAR BAMBU: KEKUATAN DI BAWAH TANAH',
+    'SCENE 07 • FOKUS PADA PROSES, BUKAN TEPUK TANGAN',
+    'SCENE 08 • JUARA SEJATI LAHIR DARI KESUNYIAN!',
   ];
 
-  K.cinematicBg(ctx, t, { floorY, sceneCode: scenes[phase], col: phase >= 2 ? K.PAL.sunsetGold : K.PAL.rimCyan });
+  K.withCamera(ctx, { zoom, fx, fy }, () => {
+    K.cinematicBg(ctx, t, { floorY, sceneCode: tags[beat], col: beat >= 4 ? K.PAL.rimCyan : K.PAL.sunsetOrange });
+    K.cinematicProps(ctx, floorY, beat >= 4 ? 'desk' : 'streetlamp', { phase: beat >= 4 ? 2 : 0, t });
+
+    const charX = beat <= 2 ? 380 : 480;
+    const pose = beat === 0 ? 'gaze' : beat === 1 ? 'walk' : beat <= 3 ? 'think' : beat <= 5 ? 'walk' : 'look-up';
+    K.cinematicStickman(ctx, charX, floorY, pose, { facing: 1, t });
+
+    const bubbles = [
+      'Semua ingin panggung, tapi siapa yang betah latihan?',
+      'Mudah semangat kalau lagi banyak yang tepuk tangan!',
+      'Ujian sejati saat ruangan sunyi tanpa penonton...',
+      'Capek itu wajar, tapi pemenang tetap melangkah!',
+      'Motivasi pemantik awal, disiplin penjaga malam!',
+      'Bambu menumbuhkan akar diam-diam bertahun-tahun!',
+      'Berhenti cari validasi instan, buktikan lewat karya!',
+      'Cintai proses sepimu, di sanalah sang juara lahir!',
+    ];
+    K.cinematicBubble(ctx, charX + 50, floorY - 420, bubbles[beat], {
+      tailX: charX + 15, tailY: floorY - 340, col: beat >= 4 ? K.PAL.rimCyan : K.PAL.sunsetOrange,
+    });
+  });
 
   const headers = [
-    ['SOROT', 'JUARA DITEMPA SAAT LAMPU MATI', 'Mengapa Proses di Balik Layar Menentukan Puncak Prestasi?'],
-    ['SEPI', 'SAAT TIDAK ADA YANG BERTEPUK TANGAN', 'Bertahan Berlatih Ketika Karya Belum Dilirik Siapa Pun'],
-    ['DISIPLIN', 'MOTIVASI MEMULAI, DISIPLIN MENUNTASKAN', 'Jangan Bergantung pada Mood untuk Melakukan Hal Penting'],
-    ['JUARA!', 'BIARKAN KARYAMU YANG BERBICARA', 'Akar yang Kuat di Saat Sepi Akan Menjulang Tinggi'],
-  ][phase];
+    ['PANGGUNG', 'GEMERLAP KEMENANGAN VS LATIHAN', 'Banyak yang Menginginkan Hasil, Sedikit yang Bertahan di Proses'],
+    ['PUJIAN', 'ILUSI SEMANGAT KARENA PENONTON', 'Tepuk Tangan Luar Bersifat Fana dan Cepat Menghilang'],
+    ['SUNYI', 'UJIAN SEJATI DI RUANG LATIHAN', 'Ketika Karya Pertamamu Belum Ada yang Melirik'],
+    ['KETAHANAN', 'MELANGKAH TANPA PENONTON', 'Bukan Tak Pernah Bosan, Tapi Memilih Tetap Berkomitmen'],
+    ['DISIPLIN', 'BAHAN BAKAR PENEMBUS MALAM', 'Percikan Motivasi Membakar Cepat, Disiplin Membawa Sampai Tujuan'],
+    ['AKAR BAMBU', 'PERTUMBUHAN DI BALIK LAYAR', 'Menguatkan Pondasi di Bawah Tanah Sebelum Menjulang Tinggi'],
+    ['FOKUS KARYA', 'KUALITAS BERBICARA SENDIRI', 'Lepaskan Kebutuhan Pengakuan, Biarkan Jam Terbang Membuktikan'],
+    ['SANG JUARA', 'DITEMPA DALAM KEHENINGAN', 'Kemenangan Terbesar Adalah Mengalahkan Rasa Malas Dirimu Sendiri!'],
+  ][beat];
 
   K.cinematicHeader(ctx, headers[0], headers[1], headers[2], {
-    col: phase >= 2 ? K.PAL.sunsetGold : K.PAL.rimCyan,
+    col: beat >= 4 ? K.PAL.rimCyan : K.PAL.sunsetOrange,
   });
 
-  K.cinematicProps(ctx, floorY, 'spotlight', { phase, t });
+  const callouts = [
+    { tag: 'PARADOKS PRESTASI', title: 'Sorotan Panggung Hanya Berlangsung Beberapa Menit', desc: 'Ribuan jam di ruang sunyi adalah tempat di mana keahlian sejati diukir', stat: 'PANGGUNG', col: K.PAL.sunsetOrange, c: C.hook },
+    { tag: 'VALIDASI EKSTERNAL', title: 'Mudah Termotivasi Saat Didukung Orang Banyak', desc: 'Ketergantungan pada pujian membuat langkahmu rapuh saat kritik datang', stat: 'PUJIAN', col: K.PAL.sunsetGold, c: C.pujian },
+    { tag: 'THE LONELY MILE', title: 'Fase Sepi: Karya Masih Sepi dan Latihan Berulang', desc: '90% orang berhenti di fase ini karena mengharapkan hasil instan', stat: 'SUNYI', col: K.PAL.rimCyan, c: C.sunyi },
+    { tag: 'MENTAL JUARA', title: 'Konsistensi Mengalahkan Bakat Alami yang Malas', desc: 'Pemenang tetap hadir dan menyelesaikan porsinya di hari yang paling berat', stat: 'GUGUR VS BANGKIT', col: K.PAL.sunsetOrange, c: C.lelah },
+    { tag: 'DISIPLIN VS MOTIVASI', title: 'Motivasi Emosional vs Sistem Kerja Terukur', desc: 'Membangun rutinitas otomatis yang tidak bergantung pada mood harian', stat: 'DISIPLIN', col: K.PAL.rimCyan, c: C.disiplin },
+    { tag: 'CHINESE BAMBOO', title: '5 Tahun Menghunjam ke Dalam, 6 Minggu Menjulang', desc: 'Setiap latihan yang terasa sia-sia sebenarnya memperkokoh mentalmu', stat: 'AKAR BAMBU', col: K.PAL.sunsetGold, c: C.akar },
+    { tag: 'KUALITAS MURNI', title: 'Biarkan Penguasaan Bicara Lebih Keras dari Kata-kata', desc: 'Fokus 100% pada perbaikan teknis harian tanpa terdistraksi angka metrik', stat: 'MASTERY', col: K.PAL.rimCyan, c: C.fokus },
+    { tag: 'PESAN JUARA', title: 'Peluklah Proses Sepimu Malam Ini', desc: 'Di sanalah pondasi kehebatan masa depanmu sedang dibangun dengan kokoh!', stat: 'JUARA SEJATI', col: K.PAL.sunsetOrange, c: C.moral },
+  ][beat];
 
-  const charX = phase <= 1 ? 370 : 430;
-  const pose = phase === 0 ? 'stand' : phase === 1 ? 'focus' : phase === 2 ? 'walk' : 'triumph';
-  K.cinematicStickman(ctx, charX, floorY, pose, { facing: 1, t });
-
-  const bubbles = [
-    'Semua ingin piala, tapi siapa yang tahan latihan sepi?',
-    'Belum ada yang lihat karyaku... tetap lanjut nggak ya?',
-    'Mood boleh naik turun, tapi jadwal latihan tetap jalan!',
-    'Saat waktunya tiba, hasil tidak pernah mengkhianati proses!',
-  ];
-  K.cinematicBubble(ctx, charX, 360, bubbles[phase], {
-    tailX: charX, tailY: 435, col: phase >= 2 ? K.PAL.sunsetGold : K.PAL.rimCyan,
+  K.cinematicCallout(ctx, 540, 1485, 960, 165, {
+    tag: callouts.tag,
+    title: callouts.title,
+    desc: callouts.desc,
+    stat: callouts.stat,
+    col: callouts.col,
+    a: pop(t, callouts.c ? callouts.c.start + 0.15 : 0),
   });
-
-  if (phase === 0) {
-    K.cinematicCard(ctx, 540, 995, 960, 175, {
-      tag: 'ILUSI GUNUNG ES KESUKSESAN (ICEBERG ILLUSION)',
-      titleStr: 'Publik Hanya Melihat 10% Puncak, Bukan 90% Latihan',
-      subStr: 'Ribuan jam pengulangan di ruang sepi tidak pernah masuk ke sorotan kamera',
-      stat: '90% PROSES',
-      statSub: 'DI BALIK LAYAR',
-      col: K.PAL.rimCyan,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.cinematicCard(ctx, 540, 1210, 960, 175, {
-      tag: 'JEBAKAN HAUS PUJIAN CEPAT',
-      titleStr: 'Berhenti Berkarya Hanya Karena Sepi Penonton Awal',
-      subStr: 'Jika semangatmu bergantung pada tepuk tangan, kamu akan berhenti saat panggung sepi',
-      stat: 'RAPUH',
-      statSub: 'VALIDASI LUAR',
-      col: K.PAL.sunsetOrange,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.cinematicCard(ctx, 540, 995, 960, 175, {
-      tag: 'FASE KESUNYIAN PARA PERINTIS',
-      titleStr: 'Semua Maestro Pernah Melewati Masa Tidak Dikenal',
-      subStr: 'Kebosanan dalam latihan rutin adalah saringan alami antara amatir dan profesional',
-      stat: 'SARINGAN',
-      statSub: 'MENTAL BAJA',
-      col: K.PAL.sunsetOrange,
-      a: pop(t, C.sunyi.start),
-    });
-    K.cinematicCard(ctx, 540, 1210, 960, 175, {
-      tag: 'KETAHANAN MENGHADAPI RASA LELAH',
-      titleStr: 'Istirahat Saat Lelah, Namun Jangan Pernah Berhenti',
-      subStr: 'Kurangi kecepatannya bila perlu, asalkan kakimu tidak berbalik arah',
-      stat: 'BERTAHAN',
-      statSub: 'TETAP JALAN',
-      col: K.PAL.rimCyan,
-      a: pop(t, C.sunyi.start + 0.5),
-    });
-  } else if (phase === 2) {
-    K.cinematicCard(ctx, 540, 995, 960, 175, {
-      tag: 'PERCIKAN API vs BAHAN BAKAR',
-      titleStr: 'Motivasi Itu Emosi Sesaat, Disiplin Itu Komitmen',
-      subStr: 'Profesional tetap hadir di meja kerja meski cuaca hati sedang mendung',
-      stat: 'KOMITMEN',
-      statSub: 'DI ATAS MOOD',
-      col: K.PAL.sunsetGold,
-      a: pop(t, C.disiplin.start),
-    });
-    K.cinematicCard(ctx, 540, 1210, 960, 175, {
-      tag: 'FILOSOFI AKAR POHON BAMBU',
-      titleStr: 'Menumbuhkan Fondasi Kuat di Bawah Tanah Terlebih Dahulu',
-      subStr: 'Saat akar keahlianmu sudah dalam, pertumbuhanmu tidak akan mudah tumbang',
-      stat: 'FONDASI',
-      statSub: 'AKAR KUAT',
-      col: K.PAL.rimCyan,
-      a: pop(t, C.disiplin.start + 0.5),
-    });
-  } else {
-    K.cinematicCard(ctx, 540, 995, 960, 175, {
-      tag: 'MOTIVASI INTRINSIK (KEBANGGAAN PRIBADI)',
-      titleStr: 'Berkaryalah dengan Standar Terbaik Meski Tanpa Saksi',
-      subStr: 'Kualitas yang ditempa dalam kesunyian akan bersinar terang saat waktunya tiba',
-      stat: 'STANDAR',
-      statSub: 'KUALITAS TINGGI',
-      col: K.PAL.sunsetGold,
-      a: pop(t, C.fokus.start),
-    });
-    K.cinematicCard(ctx, 540, 1210, 960, 175, {
-      tag: 'MONOLOG AKHIR MALAM INI',
-      titleStr: 'Cintai Ruang Latihanmu Sebagaimana Kamu Mencintai Impianmu',
-      subStr: 'Panggung hanya memamerkan piala, tetapi kesunyianlah yang melahirkan sang juara',
-      stat: 'JUARA!',
-      statSub: 'MENTAL SEJATI',
-      col: K.PAL.rimCyan,
-      a: pop(t, C.fokus.start + 0.5),
-    });
-  }
 }

@@ -1,6 +1,15 @@
 // 74 · STICKMAN GRAFFITI — Kit: "Si Zaki Street-Art Bomber" (Masker Respirator Filter Neon, Goggles Dahi, Rompi Splatter & Kaleng Pilox)
 import { clamp } from '/engine/lib/core.js';
 
+export function withCamera(ctx, { zoom = 1, panX = 0, panY = 0, fx = 540, fy = 880 } = {}, fn) {
+  ctx.save();
+  ctx.translate(fx + panX, fy + panY);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
 export const PAL = {
   wall0: '#0b0b12',
   wall1: '#151522',
@@ -15,7 +24,7 @@ export const PAL = {
 };
 
 export function graffitiBg(ctx, t, {
-  floorY = 760,
+  floorY = 1230,
   wallTag = 'TEMBOK 01 • CORETAN PERTAMA',
   col = PAL.pink,
 } = {}) {
@@ -27,8 +36,8 @@ export function graffitiBg(ctx, t, {
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, 1080, 1920);
 
-  // Main Urban Brick Wall Stage (x: 60, y: 225, w: 960, h: 610)
-  const sx = 60, sy = 225, sw = 960, sh = 610;
+  // Main Urban Brick Wall Stage (x: 60, y: 225, w: 960, h: 1180)
+  const sx = 60, sy = 225, sw = 960, sh = 1180;
   ctx.fillStyle = 'rgba(0,0,0,0.6)';
   ctx.beginPath();
   ctx.roundRect(sx + 8, sy + 12, sw, sh, 26);
@@ -46,7 +55,7 @@ export function graffitiBg(ctx, t, {
   ctx.strokeStyle = 'rgba(255, 255, 255, 0.045)';
   ctx.lineWidth = 2;
   const bh = 42, bw = 96;
-  for (let row = 0; row < 13; row++) {
+  for (let row = 0; row < 26; row++) {
     const by = sy + 60 + row * bh;
     if (by >= floorY) break;
     ctx.beginPath();
@@ -562,6 +571,78 @@ export function graffitiCard(ctx, cx, cy, w, h, {
     ctx.fillStyle = PAL.cyan;
     ctx.font = '800 13.5px "JetBrains Mono", monospace';
     ctx.fillText(statSub, sx + sw / 2, sy + 98, sw - 16);
+  }
+  ctx.restore();
+}
+
+export function graffitiCallout(ctx, cx, cy, w, h, {
+  tag = 'STREET MANIFESTO',
+  title = '',
+  desc = '',
+  stat = '',
+  col = PAL.pink,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.globalAlpha = clamp(a, 0, 1);
+  const x = cx - w / 2, y = cy - h / 2;
+
+  // Drop Shadow
+  ctx.fillStyle = 'rgba(0,0,0,0.6)';
+  ctx.beginPath();
+  ctx.roundRect(x + 7, y + 8, w, h, 20);
+  ctx.fill();
+
+  // Dark Card Surface
+  ctx.fillStyle = PAL.cardBg;
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 3.5;
+  ctx.beginPath();
+  ctx.roundRect(x, y, w, h, 20);
+  ctx.fill();
+  ctx.stroke();
+
+  // Left Neon Bar
+  ctx.fillStyle = col;
+  ctx.beginPath();
+  ctx.roundRect(x + 18, y + 20, 10, h - 40, 5);
+  ctx.fill();
+
+  const maxTextW = stat ? w - 260 : w - 70;
+  ctx.textAlign = 'left';
+
+  // Tag
+  ctx.fillStyle = col;
+  ctx.font = '800 15px "JetBrains Mono", monospace';
+  ctx.fillText(tag, x + 44, y + 42, maxTextW);
+
+  // Title
+  ctx.fillStyle = PAL.ink;
+  ctx.font = '800 23px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(title, x + 44, y + 84, maxTextW);
+
+  // Desc
+  ctx.fillStyle = PAL.muted;
+  ctx.font = '600 15px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(desc, x + 44, y + 124, maxTextW);
+
+  // Right Stat Box
+  if (stat) {
+    const sw = 185, sh = h - 34;
+    const sx = x + w - sw - 20, sy = y + 17;
+    ctx.fillStyle = 'rgba(255, 47, 179, 0.12)';
+    ctx.strokeStyle = col;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.roundRect(sx, sy, sw, sh, 14);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = PAL.yellow;
+    ctx.font = '900 26px "JetBrains Mono", monospace';
+    ctx.fillText(stat, sx + sw / 2, sy + sh / 2 + 9, sw - 16);
   }
   ctx.restore();
 }

@@ -1,6 +1,15 @@
 // 76 · STICKMAN MINIMAL DARK — Kit: "Si Hening Jubah Geometri & Lentera Pikiran" (OLED Pitch-Black + Benang Kusut Merah vs Lingkaran Zen Biru)
 import { clamp } from '/engine/lib/core.js';
 
+export function withCamera(ctx, { zoom = 1, panX = 0, panY = 0, fx = 540, fy = 880 } = {}, fn) {
+  ctx.save();
+  ctx.translate(fx + panX, fy + panY);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
 export const PAL = {
   black: '#040407',
   stageBg: '#09090f',
@@ -14,7 +23,7 @@ export const PAL = {
 };
 
 export function minimalDarkBg(ctx, t, {
-  floorY = 760,
+  floorY = 1240,
   modeTag = 'MODE 01 • DETOKS OVERTHINKING MALAM HARI',
   col = PAL.red,
 } = {}) {
@@ -35,8 +44,8 @@ export function minimalDarkBg(ctx, t, {
     }
   }
 
-  // Main Minimalist Dark Stage Frame (x: 60, y: 225, w: 960, h: 610)
-  const sx = 60, sy = 225, sw = 960, sh = 610;
+  // Main Minimalist Dark Stage Frame (x: 60, y: 225, w: 960, h: 1180)
+  const sx = 60, sy = 225, sw = 960, sh = 1180;
   ctx.fillStyle = PAL.stageBg;
   ctx.strokeStyle = col;
   ctx.lineWidth = 3.5;
@@ -433,6 +442,85 @@ export function minimalDarkCard(ctx, cx, cy, w, h, {
     ctx.fillStyle = PAL.white;
     ctx.font = '800 13.5px "JetBrains Mono", monospace';
     ctx.fillText(statSub, sx + sw / 2, sy + 98, sw - 16);
+  }
+  ctx.restore();
+}
+
+export function minimalDarkCallout(ctx, cx, cy, w, h, {
+  tag = 'KEJERNIHAN MENTAL',
+  title = '',
+  desc = '',
+  stat = '',
+  col = PAL.blue,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.globalAlpha = clamp(a, 0, 1);
+  const x = cx - w / 2, y = cy - h / 2;
+
+  // Pitch-Black Shadow
+  ctx.fillStyle = '#000000';
+  ctx.beginPath();
+  ctx.roundRect(x + 7, y + 8, w, h, 20);
+  ctx.fill();
+
+  // Dark Stage Card Surface
+  ctx.fillStyle = PAL.stageBg;
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 3.5;
+  ctx.beginPath();
+  ctx.roundRect(x, y, w, h, 20);
+  ctx.fill();
+  ctx.stroke();
+
+  // Fine White Hairline
+  ctx.strokeStyle = PAL.dimLine;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.roundRect(x + 6, y + 6, w - 12, h - 12, 16);
+  ctx.stroke();
+
+  // Left Color Accent Bar
+  ctx.fillStyle = col;
+  ctx.beginPath();
+  ctx.roundRect(x + 18, y + 20, 8, h - 40, 4);
+  ctx.fill();
+
+  const maxTextW = stat ? w - 260 : w - 70;
+  ctx.textAlign = 'left';
+
+  // Tag
+  ctx.fillStyle = col;
+  ctx.font = '800 15px "JetBrains Mono", monospace';
+  ctx.fillText(tag, x + 42, y + 42, maxTextW);
+
+  // Title
+  ctx.fillStyle = PAL.white;
+  ctx.font = '800 23px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(title, x + 42, y + 84, maxTextW);
+
+  // Desc
+  ctx.fillStyle = PAL.muted;
+  ctx.font = '600 15px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(desc, x + 42, y + 124, maxTextW);
+
+  // Right Stat Box
+  if (stat) {
+    const sw = 185, sh = h - 34;
+    const sx = x + w - sw - 20, sy = y + 17;
+    ctx.fillStyle = PAL.black;
+    ctx.strokeStyle = col;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.roundRect(sx, sy, sw, sh, 14);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = col;
+    ctx.font = '900 26px "JetBrains Mono", monospace';
+    ctx.fillText(stat, sx + sw / 2, sy + sh / 2 + 9, sw - 16);
   }
   ctx.restore();
 }

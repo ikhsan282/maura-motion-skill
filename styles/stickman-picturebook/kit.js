@@ -1,5 +1,14 @@
 import { clamp, lerp } from '/engine/lib/core.js';
 
+export function withCamera(ctx, { zoom = 1, panX = 0, panY = 0, fx = 540, fy = 880 } = {}, fn) {
+  ctx.save();
+  ctx.translate(fx + panX, fy + panY);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
 export const PAL = {
   bgTop: '#fcf0d2',
   bgBot: '#f3d9a4',
@@ -550,5 +559,77 @@ export function drawPicturebookFooter(ctx, W, H, moralText, accent = PAL.crimson
   ctx.font = '800 19px "Plus Jakarta Sans", "Inter", sans-serif';
   ctx.textAlign = 'left';
   ctx.fillText(moralText, 122, y + 40, W - 196);
+  ctx.restore();
+}
+
+export function picturebookCallout(ctx, cx, cy, w, h, {
+  tag = 'HIKMAH DONGENG',
+  title = '',
+  desc = '',
+  stat = '',
+  col = PAL.crimson,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.globalAlpha = clamp(a, 0, 1);
+  const x = cx - w / 2, y = cy - h / 2;
+
+  // Drop Shadow
+  ctx.fillStyle = 'rgba(45, 35, 24, 0.22)';
+  ctx.beginPath();
+  ctx.roundRect(x + 7, y + 8, w, h, 20);
+  ctx.fill();
+
+  // Paper Card Surface
+  ctx.fillStyle = '#fffdf6';
+  ctx.strokeStyle = '#c8a972';
+  ctx.lineWidth = 3.5;
+  ctx.beginPath();
+  ctx.roundRect(x, y, w, h, 20);
+  ctx.fill();
+  ctx.stroke();
+
+  // Left Bookmark Ribbon Bar
+  ctx.fillStyle = col;
+  ctx.beginPath();
+  ctx.roundRect(x + 18, y + 20, 8, h - 40, 4);
+  ctx.fill();
+
+  const maxTextW = stat ? w - 260 : w - 70;
+  ctx.textAlign = 'left';
+
+  // Tag
+  ctx.fillStyle = col;
+  ctx.font = '800 15px "JetBrains Mono", monospace';
+  ctx.fillText(tag, x + 42, y + 42, maxTextW);
+
+  // Title
+  ctx.fillStyle = PAL.ink;
+  ctx.font = '800 23px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(title, x + 42, y + 84, maxTextW);
+
+  // Desc
+  ctx.fillStyle = PAL.inkMuted;
+  ctx.font = '600 15px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(desc, x + 42, y + 124, maxTextW);
+
+  // Right Stat Box
+  if (stat) {
+    const sw = 185, sh = h - 34;
+    const sx = x + w - sw - 20, sy = y + 17;
+    ctx.fillStyle = PAL.paperWarm;
+    ctx.strokeStyle = col;
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.roundRect(sx, sy, sw, sh, 14);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = col;
+    ctx.font = '900 24px "Plus Jakarta Sans", sans-serif';
+    ctx.fillText(stat, sx + sw / 2, sy + sh / 2 + 8, sw - 16);
+  }
   ctx.restore();
 }

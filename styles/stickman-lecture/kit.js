@@ -17,7 +17,7 @@ export const PAL = {
 };
 
 export function lectureBg(ctx, t, {
-  floorY = 760,
+  floorY = 1240,
   courseTag = 'KULIAH 101 • PSIKOLOGI BELAJAR & MEMORI',
   col = PAL.chalkYellow,
 } = {}) {
@@ -39,11 +39,11 @@ export function lectureBg(ctx, t, {
     ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(1080, y); ctx.stroke();
   }
 
-  // Main Wooden-Framed Classroom Chalkboard (x: 60, y: 225, w: 960, h: 610)
-  const sx = 60, sy = 225, sw = 960, sh = 610;
+  // Main Wooden-Framed Classroom Chalkboard (Full-Screen height y: 225..1390)
+  const sx = 46, sy = 225, sw = 988, sh = floorY - sy + 155;
   ctx.fillStyle = 'rgba(0,0,0,0.5)';
   ctx.beginPath();
-  ctx.roundRect(sx + 8, sy + 12, sw, sh, 24);
+  ctx.roundRect(sx + 8, sy + 12, sw, sh, 26);
   ctx.fill();
 
   // Outer Wooden Frame
@@ -51,38 +51,32 @@ export function lectureBg(ctx, t, {
   ctx.strokeStyle = PAL.woodDark;
   ctx.lineWidth = 4;
   ctx.beginPath();
-  ctx.roundRect(sx, sy, sw, sh, 24);
+  ctx.roundRect(sx, sy, sw, sh, 26);
   ctx.fill();
   ctx.stroke();
 
   // Inner Green Slate Chalkboard Surface
   const bx = sx + 18, by = sy + 18, bw = sw - 36, bh = sh - 36;
-  const bg = ctx.createRadialGradient(540, sy + 300, 40, 540, sy + 300, 520);
+  const bg = ctx.createRadialGradient(540, sy + 400, 40, 540, sy + 400, 680);
   bg.addColorStop(0, '#225e49');
   bg.addColorStop(1, PAL.boardDark);
   ctx.fillStyle = bg;
   ctx.beginPath();
-  ctx.roundRect(bx, by, bw, bh, 16);
+  ctx.roundRect(bx, by, bw, bh, 18);
   ctx.fill();
 
   // Chalk dust smudge texture on blackboard
   ctx.fillStyle = 'rgba(248, 250, 252, 0.04)';
   ctx.beginPath();
-  ctx.ellipse(380, 480, 210, 90, -0.15, 0, Math.PI * 2);
-  ctx.ellipse(720, 520, 180, 80, 0.2, 0, Math.PI * 2);
+  ctx.ellipse(380, 560, 260, 120, -0.15, 0, Math.PI * 2);
+  ctx.ellipse(740, 680, 220, 110, 0.2, 0, Math.PI * 2);
   ctx.fill();
-
-  // Faint chalk math equations in background upper right
-  ctx.fillStyle = 'rgba(248, 250, 252, 0.14)';
-  ctx.font = '700 18px "JetBrains Mono", monospace';
-  ctx.textAlign = 'right';
-  ctx.fillText('R = e^(-t/S) • Ebbinghaus Curve', bx + bw - 28, by + 48);
 
   // Chalkboard Floor / Wooden Ledge at floorY
   ctx.fillStyle = PAL.woodDark;
-  ctx.fillRect(bx + 20, floorY, bw - 40, 14);
+  ctx.fillRect(bx + 20, floorY, bw - 40, 16);
   ctx.strokeStyle = PAL.chalkYellow;
-  ctx.lineWidth = 3;
+  ctx.lineWidth = 3.5;
   ctx.beginPath();
   ctx.moveTo(bx + 20, floorY);
   ctx.lineTo(bx + bw - 20, floorY);
@@ -90,16 +84,16 @@ export function lectureBg(ctx, t, {
 
   // Pieces of Colored Chalk & Felt Eraser sitting on the ledge
   ctx.fillStyle = PAL.chalkWhite;
-  ctx.fillRect(150, floorY - 8, 34, 8);
+  ctx.fillRect(150, floorY - 10, 38, 10);
   ctx.fillStyle = PAL.chalkYellow;
-  ctx.fillRect(195, floorY - 8, 30, 8);
+  ctx.fillRect(205, floorY - 10, 34, 10);
   ctx.fillStyle = PAL.chalkPink;
-  ctx.fillRect(235, floorY - 8, 28, 8);
+  ctx.fillRect(250, floorY - 10, 32, 10);
   // Chalkboard eraser on right ledge
   ctx.fillStyle = '#334155';
-  ctx.fillRect(860, floorY - 18, 56, 18);
+  ctx.fillRect(860, floorY - 22, 64, 22);
   ctx.fillStyle = PAL.woodFrame;
-  ctx.fillRect(860, floorY - 18, 56, 7);
+  ctx.fillRect(860, floorY - 22, 64, 8);
 
   // Top-left Course Syllabus Tag on Blackboard
   ctx.font = '800 16px "JetBrains Mono", monospace';
@@ -115,6 +109,87 @@ export function lectureBg(ctx, t, {
   ctx.fillStyle = col;
   ctx.textAlign = 'left';
   ctx.fillText(courseTag, 120, sy + 58);
+  ctx.restore();
+}
+
+/**
+ * Camera zoom & pan helper for stickman-lecture
+ */
+export function withCamera(ctx, { zoom = 1, fx = 540, fy = 850, dx = 0, dy = 0 } = {}, fn) {
+  ctx.save();
+  ctx.translate(540 + dx, 850 + dy);
+  ctx.scale(zoom, zoom);
+  ctx.translate(-fx, -fy);
+  fn();
+  ctx.restore();
+}
+
+/**
+ * Educational Floating Callout Card on the lower area (y: 1485, h: 165)
+ */
+export function lectureCallout(ctx, x, y, w, h, {
+  tag = 'KULIAH UMUM',
+  title = '',
+  desc = '',
+  stat = '',
+  statSub = '',
+  col = PAL.chalkYellow,
+  a = 1,
+} = {}) {
+  if (a <= 0.01) return;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(0.92 + 0.08 * a, 0.92 + 0.08 * a);
+  ctx.globalAlpha = clamp(a, 0, 1);
+
+  ctx.fillStyle = 'rgba(19, 56, 43, 0.95)';
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 3.5;
+  ctx.beginPath();
+  ctx.roundRect(-w / 2, -h / 2, w, h, 20);
+  ctx.fill();
+  ctx.stroke();
+
+  // Tag pill
+  ctx.fillStyle = col;
+  ctx.beginPath();
+  ctx.roundRect(-w / 2 + 22, -h / 2 + 18, 290, 30, 8);
+  ctx.fill();
+  ctx.fillStyle = '#0e241c';
+  ctx.font = '900 13px "JetBrains Mono", monospace';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(tag, -w / 2 + 34, -h / 2 + 33, 266);
+
+  const textW = stat ? w - 240 : w - 56;
+  ctx.fillStyle = PAL.chalkWhite;
+  ctx.font = '900 25px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(title, -w / 2 + 22, -h / 2 + 76, textW);
+
+  ctx.fillStyle = PAL.muted;
+  ctx.font = '600 18px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText(desc, -w / 2 + 22, -h / 2 + 116, textW);
+
+  if (stat) {
+    ctx.fillStyle = 'rgba(253, 224, 71, 0.18)';
+    ctx.beginPath();
+    ctx.roundRect(w / 2 - 192, -h / 2 + 20, 170, h - 40, 14);
+    ctx.fill();
+    ctx.strokeStyle = col;
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+
+    ctx.fillStyle = col;
+    ctx.font = '900 28px "Plus Jakarta Sans", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(stat, w / 2 - 107, -4, 150);
+    if (statSub) {
+      ctx.fillStyle = PAL.chalkWhite;
+      ctx.font = '800 13px "JetBrains Mono", monospace';
+      ctx.fillText(statSub, w / 2 - 107, 26, 150);
+    }
+  }
+
   ctx.restore();
 }
 

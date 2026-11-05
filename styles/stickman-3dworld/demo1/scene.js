@@ -1,12 +1,12 @@
-// 69 · STICKMAN 3D WORLD — Demo 1: Hukum Bunga Majemuk Kebiasaan (1% Lebih Baik = 37,78x)
+// 69 · STICKMAN 3D WORLD — Demo 1: Hukum Bunga Majemuk Kebiasaan (Full-Screen 1080x1920 8-Beat Standard)
 import * as K from '/styles/stickman-3dworld/kit.js';
-const { clamp, ease } = AM.lib;
+const { clamp, lerp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -15,133 +15,112 @@ export async function setup(AM) {
 
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
-  const floorY = 770;
+  const floorY = 1240;
 
-  let phase = 0;
-  if (t >= C.sistem.start) phase = 3;
-  else if (t >= C.lembah.start) phase = 2;
-  else if (t >= C.matematika.start) phase = 1;
+  // Determine active beat from story.json lines
+  let beat = 0;
+  if (t >= C.moral?.start) beat = 8;
+  else if (t >= C.praktik?.start) beat = 7;
+  else if (t >= C.sistem?.start) beat = 6;
+  else if (t >= C.tangga?.start) beat = 5;
+  else if (t >= C.es?.start) beat = 4;
+  else if (t >= C.lembah?.start) beat = 3;
+  else if (t >= C.turun?.start) beat = 2;
+  else if (t >= C.matematika?.start) beat = 1;
 
-  K.world3dBg(ctx, t, { horizonY: 480, floorY, accent: K.PAL.cyan });
+  // Camera zoom & pan per beat
+  let zoom = 1.0, fx = 540, fy = 880;
+  if (beat === 1 || beat === 2) {
+    zoom = 1.15; fx = 520; fy = 920;
+  } else if (beat === 3 || beat === 4) {
+    zoom = 1.12; fx = 480; fy = 900;
+  } else if (beat === 5 || beat === 6) {
+    zoom = 1.18; fx = 680; fy = 940;
+  }
 
+  K.withCamera(ctx, { zoom, fx, fy }, () => {
+    K.world3dBg(ctx, t, { horizonY: 540, floorY, accent: beat >= 5 ? K.PAL.gold : K.PAL.cyan });
+
+    // 3D Staircase progression
+    const steps = [
+      { x: 260, h: 56, col: K.PAL.cyan, lbl: 'H-1' },
+      { x: 410, h: 110, col: K.PAL.cyan, lbl: 'H-30' },
+      { x: 560, h: 185, col: K.PAL.emerald, lbl: 'H-90' },
+      { x: 710, h: 280, col: K.PAL.emerald, lbl: 'H-180' },
+      { x: 870, h: 410, col: K.PAL.gold, lbl: '37,8x' },
+    ];
+
+    const activeStepMax = Math.min(4, Math.floor(beat / 2));
+    for (let i = 0; i < steps.length; i++) {
+      const st = steps[i];
+      const active = i <= activeStepMax;
+      K.draw3dBox(ctx, st.x, floorY, 124, st.h, 38, {
+        col: active ? st.col : K.PAL.muted,
+        label: st.lbl,
+        a: active ? 1 : 0.4,
+      });
+    }
+
+    // Left comparison: Shrinking -1% block (0.03x)
+    K.draw3dBox(ctx, 110, floorY, 115, beat >= 2 ? 48 : 82, 32, {
+      col: K.PAL.coral, label: '-1%', subLabel: '0,03x',
+    });
+
+    // 3D Exponential Line in upper stage area
+    ctx.strokeStyle = K.rgba(K.PAL.emerald, 0.75);
+    ctx.lineWidth = 4;
+    ctx.setLineDash([8, 8]);
+    ctx.beginPath();
+    ctx.moveTo(260, floorY - 56);
+    ctx.quadraticCurveTo(560, floorY - 140, 870, floorY - 410);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // 3D Mannequin climbing the steps
+    const curStep = steps[activeStepMax];
+    const pose = beat >= 7 ? 'victory' : beat === 2 ? 'push-cube' : 'climb';
+    K.mannequin3DStickman(ctx, curStep.x, floorY - curStep.h, pose, {
+      facing: 1, col: beat >= 6 ? K.PAL.gold : K.PAL.cyan, t,
+    });
+  });
+
+  // Top Full Banner
   const headers = [
-    ['+1%', 'KEKUATAN 1% SETIAP HARI', 'Mengapa Perubahan Kecil Mengalahkan Ambisi Sesaat?', 'HARI 1–7'],
-    ['37,78x', 'MATEMATIKA BUNGA MAJEMUK', '1,01^365 = 37,78x Lebih Baik • 0,99^365 = 0,03x Menyusut', '365 HARI'],
-    ['0°C', 'MELEWATI LEMBAH KEKECEWAAN', 'Usaha Tidak Hilang, Melainkan Tersimpan Seperti Es Mencair', 'TITIK TEMBUS'],
-    ['SISTEM', 'FOKUS SISTEM, BUKAN SEKADAR TARGET', 'Setiap Anak Tangga 3D Membangun Masa Depanmu', 'JUARA!'],
-  ][phase];
+    ['+1%', 'KEKUATAN 1% SETIAP HARI', 'Mengapa Perubahan Kecil Mengalahkan Ambisi Sesaat?'],
+    ['37,78x', 'RUMUS BUNGA MAJEMUK 365 HARI', '1,01^365 = 37,78x Lebih Unggul Secara Eksponensial'],
+    ['0,03x', 'BAHAYA KEMUNDURAN MIKRO (-1%)', '0,99^365 = Tergerus Habis Menyusut Hingga 3%'],
+    ['SABAR', 'LEMBAH KEKECEWAAN DI BULAN 1', 'Kurva Hasil Tertunda Membuat Banyak Orang Menyerah'],
+    ['0°C', 'ANALOGI ES BATU MENCAIR PADA 0°C', 'Energi Usaha Tersimpan Hingga Menyentuh Titik Terobosan'],
+    ['TANGGA', 'TIAP ANAK TANGGA MENYIMPAN POTENSI', 'Langkah Mikro Harian Membangun Momentum Raksasa'],
+    ['SISTEM', 'FOKUS PADA SISTEM, BUKAN TARGET', 'Pemenang & Pecundang Punya Target Sama, Sistemnya Beda'],
+    ['AKSI', 'MULAI DARI HAL SANGAT MUDAH', '2 Halaman Buku • 5 Menit Bereskan Meja • 10 Menit Jalan'],
+    ['JUARA', 'JALAN PANJANG DIMULAI DARI HARI INI', 'Jangan Remehkan Perubahan 1% yang Dilakukan Berulang!'],
+  ][beat];
 
   K.world3dHeader(ctx, headers[0], headers[1], headers[2], {
-    rightStat: headers[3], col: phase === 3 ? K.PAL.gold : K.PAL.cyan,
+    col: beat >= 6 ? K.PAL.gold : K.PAL.cyan,
   });
 
-  // 3D Staircase of 5 progressive 3D blocks from left to right
-  const steps = [
-    { x: 350, h: 42, col: K.PAL.cyan, lbl: 'H-1' },
-    { x: 485, h: 86, col: K.PAL.cyan, lbl: 'H-30' },
-    { x: 620, h: 142, col: K.PAL.emerald, lbl: 'H-90' },
-    { x: 755, h: 215, col: K.PAL.emerald, lbl: 'H-180' },
-    { x: 890, h: 310, col: K.PAL.gold, lbl: '37,8x' },
-  ];
+  // Single floating educational callout card at y = 1485 (h = 165)
+  const callouts = [
+    { tag: 'KESALAHAN AWAL', title: 'Target 100% Instan Memicu Burnout di Hari Ketiga', desc: 'Otak menolak beban kebiasaan yang dinaikkan terlalu ekstrem', stat: 'BURNOUT', col: K.PAL.coral, c: C.hook },
+    { tag: 'MATEMATIKA 365 HARI', title: '1,01 Pangkat 365 = 37,78 Kali Lipat Lebih Baik', desc: 'Bunga majemuk kemampuan menghasilkan lonjakan hasil di akhir tahun', stat: '37,78x', col: K.PAL.emerald, c: C.matematika },
+    { tag: 'KEMUNDURAN 1%', title: '0,99 Pangkat 365 = Menyusut Tersisa 0,03 (3%)', desc: 'Menunda sedikit demi sedikit mengikis masa depan tanpa kita sadari', stat: '0,03x', col: K.PAL.coral, c: C.turun },
+    { tag: 'VALLEY OF DISAPPOINTMENT', title: 'Bulan Pertama: Ekspektasi Lurus vs Realita Melengkung', desc: 'Hasil nyata sering baru terlihat setelah melewati ambang batas tertentu', stat: 'SABAR', col: K.PAL.gold, c: C.lembah },
+    { tag: 'TERMODINAMIKA', title: 'Dari -5°C ke -1°C Es Belum Cair, Tapi Suhu Terus Naik', desc: 'Derajat terakhir yang mencairkan es membutuhkan akumulasi panas sebelumnya', stat: '0°C', col: K.PAL.cyan, c: C.es },
+    { tag: 'ENERGI POTENSIAL', title: 'Setiap Langkah Kecil Memadatkan Keterampilanmu', desc: 'Tidak ada anak tangga yang sia-sia jika terus dilangkahi setiap hari', stat: 'TANGGA 3D', col: K.PAL.emerald, c: C.tangga },
+    { tag: 'ATOMIC HABITS', title: 'Kita Jatuh ke Level Sistem, Bukan Naik ke Target', desc: 'Target hanya memberi arah, sistem harian yang menentukan apakah kita sampai', stat: 'SISTEM', col: K.PAL.gold, c: C.sistem },
+    { tag: 'LANGKAH MIKRO', title: 'Buat Sangat Mudah Hingga Tidak Bisa Ditolak', desc: 'Dua halaman buku atau 5 menit jalan kaki membangun identitas disiplin baru', stat: 'MULAI', col: K.PAL.cyan, c: C.praktik },
+    { tag: 'PESAN JUARA', title: 'Kuasai Hari Ini dengan Konsistensi Satu Persen', desc: 'Langkah kecil hari ini adalah terobosan besar di masa depanmu!', stat: '37,8x', col: K.PAL.gold, c: C.moral },
+  ][beat];
 
-  for (let i = 0; i < steps.length; i++) {
-    const st = steps[i];
-    const active = i <= phase + 1;
-    K.draw3dBox(ctx, st.x, floorY, 108, st.h, 34, {
-      col: active ? st.col : K.PAL.muted,
-      label: st.lbl,
-      a: active ? 1 : 0.45,
-    });
-  }
-
-  // Left comparison: Shrinking -1% block on far left
-  K.draw3dBox(ctx, 165, floorY, 115, phase >= 1 ? 58 : 74, 30, {
-    col: K.PAL.coral, label: '-1%', subLabel: '0,03x',
+  K.world3dCallout(ctx, 540, 1485, 960, 165, {
+    tag: callouts.tag,
+    title: callouts.title,
+    desc: callouts.desc,
+    stat: callouts.stat,
+    col: callouts.col,
+    a: pop(t, callouts.c ? callouts.c.start + 0.15 : 0),
   });
-
-  // 3D Ball-Joint Mannequin Stickman climbing the 3D staircase!
-  const stepIdx = Math.min(4, phase + 1);
-  const curStep = steps[stepIdx];
-  K.mannequin3DStickman(ctx, curStep.x, floorY - curStep.h, phase === 3 ? 'victory' : 'climb', {
-    facing: 1, col: phase === 3 ? K.PAL.gold : K.PAL.cyan, t,
-  });
-
-  // Lower Section Cards
-  if (phase === 0) {
-    K.world3dCard(ctx, 540, 995, 960, 175, {
-      tag: 'KESALAHAN UMUM PERUBAHAN DIRI',
-      titleStr: 'Mengincar Lompatan Drastis Lalu Burnout di Minggu Pertama',
-      subStr: 'Otak menolak perubahan mendadak yang terlalu berat bagi rutinitas harian',
-      stat: 'GAGAL',
-      statSub: 'AMBISI SESAAT',
-      col: K.PAL.coral,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.world3dCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PRINSIP ATOMIC HABITS (JAMES CLEAR)',
-      titleStr: 'Perbaikan 1% Setiap Hari Terasa Ringan Tanpa Beban',
-      subStr: 'Mulai dari langkah yang sangat mudah hingga tidak ada alasan untuk menunda',
-      stat: '+1% / HARI',
-      statSub: 'LANGKAH MIKRO',
-      col: K.PAL.cyan,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.world3dCard(ctx, 540, 995, 960, 175, {
-      tag: 'RUMUS EKSPONENSIAL 365 HARI',
-      titleStr: '1,01 Pangkat 365 = 37,78 Kali Lipat Lebih Unggul',
-      subStr: 'Bunga majemuk tidak hanya berlaku pada uang, tetapi juga pada keahlian',
-      stat: '37,78x',
-      statSub: 'NAIK EKSPONENSIAL',
-      col: K.PAL.emerald,
-      a: pop(t, C.matematika.start),
-    });
-    K.world3dCard(ctx, 540, 1210, 960, 175, {
-      tag: 'BAHAYA KEMUNDURAN KECIL (-1%)',
-      titleStr: '0,99 Pangkat 365 = Menyusut Tersisa 0,03 (3%)',
-      subStr: 'Menunda sedikit demi sedikit setiap hari menggerus potensi tanpa disadari',
-      stat: '0,03x',
-      statSub: 'TERGERUS HABIS',
-      col: K.PAL.coral,
-      a: pop(t, C.turun.start),
-    });
-  } else if (phase === 2) {
-    K.world3dCard(ctx, 540, 995, 960, 175, {
-      tag: 'FASE KRITIS: VALLEY OF DISAPPOINTMENT',
-      titleStr: 'Bulan Pertama Adalah Fase Paling Rawan Menyerah',
-      subStr: 'Kita berharap hasil naik lurus, padahal kurva pertumbuhan bersifat melengkung',
-      stat: 'SABAR',
-      statSub: 'FASE AKUMULASI',
-      col: K.PAL.gold,
-      a: pop(t, C.lembah.start),
-    });
-    K.world3dCard(ctx, 540, 1210, 960, 175, {
-      tag: 'ANALOGI ES BATU MENCAIR PADA 0°C',
-      titleStr: 'Dari -5°C ke -1°C Belum Cair, Namun Energi Terkumpul',
-      subStr: 'Derajat terakhir yang mencairkan es dibangun oleh seluruh derajat sebelumnya',
-      stat: '0°C',
-      statSub: 'TITIK TEROBOSAN',
-      col: K.PAL.cyan,
-      a: pop(t, C.es.start),
-    });
-  } else {
-    K.world3dCard(ctx, 540, 995, 960, 175, {
-      tag: 'SISTEM KEBIASAAN vs TARGET SEMATA',
-      titleStr: 'Kita Jatuh ke Level Sistem Kita, Bukan Naik ke Target',
-      subStr: 'Bangun rutinitas harian yang otomatis membawa kakimu naik satu anak tangga',
-      stat: 'SISTEM',
-      statSub: 'RUTINITAS PASTI',
-      col: K.PAL.emerald,
-      a: pop(t, C.sistem.start),
-    });
-    K.world3dCard(ctx, 540, 1210, 960, 175, {
-      tag: 'AKSI HARI INI DI DUNIA NYATA',
-      titleStr: '2 Halaman Buku • 5 Menit Rapikan Meja • 10 Menit Jalan',
-      subStr: 'Biarkan waktu menjadi sekutu terbaikmu lewat konsistensi tanpa putus',
-      stat: 'MULAI 1%',
-      statSub: 'KONSISTENSI',
-      col: K.PAL.gold,
-      a: pop(t, C.praktik.start),
-    });
-  }
 }
+

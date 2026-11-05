@@ -1,12 +1,12 @@
-// 75 · STICKMAN LECTURE — Demo 2: Jebakan Stabilo vs Active Recall (Studi Prof. John Dunlosky)
+// 75 · STICKMAN LECTURE — Demo 2: Jebakan Stabilo Warna-Warni & Active Recall (Full-Screen 1080x1920 8-Beat Standard)
 import * as K from '/styles/stickman-lecture/kit.js';
 const { clamp, ease } = AM.lib;
 
-export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1620, size: 48 } };
+export const meta = { fps: 30, width: 1080, height: 1920, captions: { preset: 'clean', y: 1700, size: 48 } };
 
 let ctx;
 const C = {};
-const pop = (t, a, d = 0.4) => ease.outBack(clamp((t - a) / d), 1.8);
+const pop = (t, a, d = 0.45) => ease.outBack(clamp((t - a) / d), 1.7);
 
 export async function setup(AM) {
   ctx = AM.layer('world');
@@ -15,128 +15,101 @@ export async function setup(AM) {
 
 export function render(t) {
   ctx.clearRect(0, 0, 1080, 1920);
-  const floorY = 760;
+  const floorY = 1240;
 
-  let phase = 0;
-  if (t >= C.kartu.start) phase = 3;
-  else if (t >= C.kertas.start) phase = 2;
-  else if (t >= C.pasif.start) phase = 1;
+  let beat = 0;
+  if (t >= C.moral?.start) beat = 7;
+  else if (t >= C.kartu?.start) beat = 6;
+  else if (t >= C.berat?.start) beat = 5;
+  else if (t >= C.kertas?.start) beat = 4;
+  else if (t >= C.recall?.start) beat = 3;
+  else if (t >= C.pasif?.start) beat = 2;
+  else if (t >= C.stabilo?.start) beat = 1;
+
+  let zoom = 1.0, fx = 540, fy = 880;
+  if (beat === 1 || beat === 2) {
+    zoom = 1.14; fx = 520; fy = 910;
+  } else if (beat >= 4) {
+    zoom = 1.15; fx = 560; fy = 930;
+  }
 
   const tags = [
-    'KULIAH 01 • ILUSI STABILO WARNA-WARNI',
-    'KULIAH 02 • STUDI DUNLOSKY: PASIF vs AKTIF',
-    'KULIAH 03 • METODE ACTIVE RECALL (TUTUP BUKU)',
-    'KULIAH 04 • UBAH SUBJUDUL JADI PERTANYAAN',
+    'KULIAH 01 • BUKU PENUH WARNA STABILO',
+    'KULIAH 02 • RISET PROF DUNLOSKY: EFEKTIVITAS TERENDAH',
+    'KULIAH 03 • ILUSI BELAJAR MODE PASIF',
+    'KULIAH 04 • ACTIVE RECALL: TARIK KELUAR INGATAN',
+    'KULIAH 05 • BLURTING METHOD: SELEMBAR KERTAS KOSONG',
+    'KULIAH 06 • RASA BERAT MEMBENTUK OTOT MEMORI',
+    'KULIAH 07 • UBAH SUBJUDUL JADI DAFTAR PERTANYAAN',
+    'KULIAH 08 • TUTUP BUKU, UJI DIRIMU SECARA AKTIF!',
   ];
 
-  const col = phase >= 2 ? K.PAL.chalkBlue : K.PAL.chalkYellow;
-  K.lectureBg(ctx, t, { floorY, courseTag: tags[phase], col });
+  const col = beat >= 4 ? K.PAL.chalkBlue : (beat === 2 || beat === 3 ? K.PAL.chalkPink : K.PAL.chalkYellow);
+
+  K.withCamera(ctx, { zoom, fx, fy }, () => {
+    K.lectureBg(ctx, t, { floorY, courseTag: tags[beat], col });
+
+    const diagrams = [
+      ['STABILO NEON', 'WARNA-WARNI', 'Buku terang benderang tapi ingatan kosong', K.PAL.chalkYellow],
+      ['DUNLOSKY 2013', 'EFEKTIVITAS RENDAH', 'Riset: Menandai teks paling tidak efektif', K.PAL.chalkPink],
+      ['MODE PASIF', 'ILUSI RAJIN', 'Mata terbiasa teks, otak tidur pulas', K.PAL.chalkPink],
+      ['ACTIVE RECALL', 'TARIK MEMORI', '2x lebih kuat menancap di ingatan', K.PAL.chalkBlue],
+      ['BLURTING METHOD', '3 POIN KERTAS', 'Tulis tanpa mengintip buku sedikitpun', K.PAL.chalkBlue],
+      ['DESIRABLE DIFFICULTY', 'OTOT MEMORI', 'Rasa memeras otak memperkuat ingatan', K.PAL.chalkYellow],
+      ['FLASHCARD TANYA', 'LATIHAN UJIAN', 'Ubah judul materi jadi pertanyaan ujian', K.PAL.chalkBlue],
+      ['NILAI A+', 'UJI AKTIF!', 'Tutup bukumu dan kuasai materi!', K.PAL.chalkYellow],
+    ][beat];
+    K.lectureBoardDiagram(ctx, floorY, diagrams[0], diagrams[1], diagrams[2], { col: diagrams[3] });
+
+    const charX = beat <= 2 ? 330 : 360;
+    const pose = beat === 0 ? 'teach' : beat <= 2 ? 'think' : beat <= 4 ? 'teach' : beat <= 6 ? 'teach' : 'eureka';
+    K.lectureStickman(ctx, charX, floorY, pose, { facing: 1, t });
+
+    const bubbles = [
+      'Siapa di sini yang bukunya kayak pelangi penuh stabilo?',
+      'Riset Prof Dunlosky: stabilo itu metode paling tidak efektif!',
+      'Mewarnai buku cuma bikin puas mata, tapi otak pasif!',
+      'Gunakan Active Recall: tutup buku, tarik isi ingatanmu!',
+      'Tulis 3 poin penting di kertas kosong tanpa mengintip!',
+      'Makin berat kamu memeras otak, makin kuat otot memorimu!',
+      'Ubah semua subjudul buku jadi format pertanyaan ujian!',
+      'Simpan stabilomu, tutup buku dan uji kemampuanmu!',
+    ];
+    K.lectureBubble(ctx, charX + 50, floorY - 390, bubbles[beat], {
+      tailX: charX + 15, tailY: floorY - 310, col,
+    });
+  });
 
   const headers = [
-    ['STABILO?', 'JEBAKAN BUKU PENUH WARNA STABILO', 'Mengapa Menandai Buku Sering Menipu Kita Merasa Sudah Paham?'],
-    ['RENDAH!', 'RISET PROF. JOHN DUNLOSKY (2013)', 'Membaca Ulang & Stabilo Adalah Metode Berefektivitas Rendah'],
-    ['TUTUP BUKU', 'KEKUATAN ACTIVE RECALL (2x AMPUH)', 'Tarik Keluar Informasi dari Ingatan di Atas Kertas Kosong'],
-    ['KUASAI!', 'UBAH CATATAN MENJADI KUIS AKTIF', 'Rasa Berat Saat Mengingat Adalah Tanda Otot Memori Terbentuk!'],
-  ][phase];
+    ['PELANGI?', 'JEBAKAN STABILO WARNA-WARNI', 'Mengapa Mewarnai Buku Tidak Menjamin Paham Saat Ujian?'],
+    ['DUNLOSKY', 'RISET EFEKTIVITAS BELAJAR (2013)', 'Studi Menunjukkan Menandai & Baca Ulang Paling Tidak Efektif'],
+    ['ILUSI', 'KEPUASAN VISUAL BELAKA', 'Otak Mengira Sudah Rajin Belajar, Padahal Pasif Total'],
+    ['RECALL!', 'KEKUATAN ACTIVE RETRIEVAL', 'Menarik Informasi dari Memori Memberi Efek Retensi 2 Kali Lipat'],
+    ['BLURTING', 'METODE SELEMBAR KERTAS KOSONG', 'Tulis 3 Poin Inti Tanpa Mengintip Buku Sedikit Pun'],
+    ['OTOT OTAK', 'DESIRABLE DIFFICULTY PRINCIPLE', 'Rasa Berat Saat Memanggil Memori Justru Memperkuat Saraf'],
+    ['PERTANYAAN', 'UBAH SUBJUDUL JADI SOAL UJIAN', 'Latih Otak Menjawab Pertanyaan Sejak Pertama Kali Belajar'],
+    ['A+ JUARA', 'TUTUP BUKU & UJI DIRIMU!', 'Tinggalkan Stabilo, Praktikkan Active Recall Hari Ini!'],
+  ][beat];
 
   K.lectureHeader(ctx, headers[0], headers[1], headers[2], { col });
 
-  const diagrams = [
-    ['HIGHLIGHTING', ' EFEKTIVITAS RENDAH', 'Sibuk mewarnai tanpa memproses', K.PAL.chalkPink],
-    ['MODE PASIF', 'INPUT ≠ INGAT', 'Hanya menyalin dari mata ke tangan', K.PAL.chalkYellow],
-    ['ACTIVE RECALL', 'TUTUP & TULIS!', 'Tarik paksa memori dari kepala', K.PAL.chalkBlue],
-    ['TESTING EFFECT', '2x LEBIH KUAT', 'Siap tempur menghadapi ujian', K.PAL.chalkYellow],
-  ][phase];
-  K.lectureBoardDiagram(ctx, floorY, diagrams[0], diagrams[1], diagrams[2], { col: diagrams[3] });
+  const callouts = [
+    { tag: 'PARADOKS STABILO', title: 'Halaman Warna-Warni Tapi Kepala Mendadak Buntu', desc: 'Siswa sering menyamakan aktivitas mewarnai kertas dengan proses berpikir kritis', stat: 'STABILO', col: K.PAL.chalkYellow, c: C.hook },
+    { tag: 'DUNLOSKY STUDY', title: 'Riset Komprehensif 10 Teknik Belajar Populer', desc: 'Highlighting dan rereading berada di peringkat terbawah efektivitas belajar', stat: 'TERENDAH', col: K.PAL.chalkPink, c: C.stabilo },
+    { tag: 'PASSIVE ENCODING', title: 'Ilusi Pengenalan (Recognition Illusion)', desc: 'Melihat teks yang sudah diwarnai menipu otak bahwa kita sudah memahaminya', stat: 'ILUSI', col: K.PAL.chalkPink, c: C.pasif },
+    { tag: 'ACTIVE RETRIEVAL', title: 'Tarik Informasi Keluar, Jangan Cuma Dimasukkan', desc: 'Proses recall memaksa neuron membangun jalur asosiasi informasi yang kokoh', stat: '2x RETENSI', col: K.PAL.chalkBlue, c: C.recall },
+    { tag: 'BLURTING PROTOCOL', title: 'Tuliskan Inti Pelajaran di Kertas Kosong', desc: 'Begitu selesai 1 bab, langsung uji diri dengan menuliskan apa yang diingat', stat: '3 POIN', col: K.PAL.chalkBlue, c: C.kertas },
+    { tag: 'EFFORTFUL LEARNING', title: 'Kunci Penguatan Ingatan Ada pada Rasa Berat', desc: 'Robert Bjork: Semakin sulit memanggil ingatan, semakin awet ingatan tersebut disimpan', stat: 'OTOT MEMORI', col: K.PAL.chalkYellow, c: C.berat },
+    { tag: 'INQUIRY METHOD', title: 'Ubah Catatan Pasif Menjadi Soal Latihan Mandiri', desc: 'Belajar dengan menjawab pertanyaan mensimulasikan situasi ujian yang sesungguhnya', stat: 'SOAL MANDIRI', col: K.PAL.chalkBlue, c: C.kartu },
+    { tag: 'PESAN JUARA', title: 'Tutup Bukumu & Buktikan Pemahamanmu Hari Ini', desc: 'Beralihlah ke active recall dan rasakan lonjakan pemahaman yang sesungguhnya!', stat: 'A+ JUARA', col: K.PAL.chalkYellow, c: C.moral },
+  ][beat];
 
-  const charX = phase <= 1 ? 330 : 350;
-  const pose = phase === 0 ? 'teach' : phase === 1 ? 'think' : phase === 2 ? 'teach' : 'eureka';
-  K.lectureStickman(ctx, charX, floorY, pose, { facing: 1, t });
-
-  const bubbles = [
-    'Bukunya warna-warni kayak pelangi, tapi isinya ingat nggak?',
-    'Mewarnai buku itu enak karena otak kita nggak perlu mikir berat!',
-    'Coba tutup bukumu, lalu tulis 3 poin tadi di kertas kosong!',
-    'Ubah judul bab jadi pertanyaan, dijamin langsung nempel!',
-  ];
-  K.lectureBubble(ctx, charX + 20, 355, bubbles[phase], { tailX: charX, tailY: 430, col });
-
-  if (phase === 0) {
-    K.lectureCard(ctx, 540, 995, 960, 175, {
-      tag: 'KEBIASAAN BELAJAR PALING POPULER NAMUN KELIRU',
-      titleStr: 'Menstabilo Kalimat & Membaca Ulang Berjam-jam',
-      subStr: 'Memberikan perasaan produktif palsu tanpa menguji kemampuan mengingat',
-      stat: 'SEMU',
-      statSub: 'PRODUKTIF PALSU',
-      col: K.PAL.chalkPink,
-      a: pop(t, C.hook.start + 0.2),
-    });
-    K.lectureCard(ctx, 540, 1210, 960, 175, {
-      tag: 'EVALUASI 10 TEKNIK BELAJAR (DUNLOSKY ET AL.)',
-      titleStr: 'Highlighting & Re-Reading Mendapat Skor Utility Rendah',
-      subStr: 'Sedangkan Practice Testing (uji mandiri) meraih predikat efektivitas tertinggi',
-      stat: 'SKOR RENDAH',
-      statSub: 'BACA ULANG',
-      col: K.PAL.chalkYellow,
-      a: pop(t, C.hook.start + 0.6),
-    });
-  } else if (phase === 1) {
-    K.lectureCard(ctx, 540, 995, 960, 175, {
-      tag: 'MENGAPA MEMBACA ULANG TIDAK EFEKTIF?',
-      titleStr: 'Otak Hanya Mengenali Teks, Bukan Memanggil Memori',
-      subStr: 'Saat ujian nanti, buku tidak ada di depan mata — yang diuji adalah penarikan ingatan',
-      stat: 'PASIF',
-      statSub: 'NOL LATIHAN',
-      col: K.PAL.chalkYellow,
-      a: pop(t, C.pasif.start),
-    });
-    K.lectureCard(ctx, 540, 1210, 960, 175, {
-      tag: 'PRINSIP RETRIEVAL PRACTICE (ACTIVE RECALL)',
-      titleStr: 'Memori Diperkuat Saat Kita Menarik Informasi Keluar',
-      subStr: 'Bukan saat kita terus-menerus memasukkan informasi secara pasif ke kepala',
-      stat: 'TARIK KELUAR',
-      statSub: 'KUNCI INGATAN',
-      col: K.PAL.chalkBlue,
-      a: pop(t, C.pasif.start + 0.5),
-    });
-  } else if (phase === 2) {
-    K.lectureCard(ctx, 540, 995, 960, 175, {
-      tag: 'TEKNIK BLURTING (KERTAS KOSONG)',
-      titleStr: 'Baca 1 Halaman → Tutup Buku → Tulis Semua yang Diingat',
-      subStr: 'Buka kembali bukumu hanya untuk mengecek bagian mana yang terlewat',
-      stat: 'BLURTING',
-      statSub: 'UJI KERTAS KOSONG',
-      col: K.PAL.chalkBlue,
-      a: pop(t, C.kertas.start),
-    });
-    K.lectureCard(ctx, 540, 1210, 960, 175, {
-      tag: 'KONSEP DESIRABLE DIFFICULTY (ROBERT BJORK)',
-      titleStr: 'Makin Keras Otak Berusaha Mengingat, Makin Kuat Hasilnya',
-      subStr: 'Sama seperti mengangkat beban di gym, sedikit kesulitan menumbuhkan kekuatan saraf',
-      stat: 'OTOT OTAK',
-      statSub: 'LATIHAN AKTIF',
-      col: K.PAL.chalkYellow,
-      a: pop(t, C.kertas.start + 0.5),
-    });
-  } else {
-    K.lectureCard(ctx, 540, 995, 960, 175, {
-      tag: 'METODE CORNELL & FLASHCARD PERTANYAAN',
-      titleStr: 'Catat Dalam Bentuk Pertanyaan, Bukan Sekadar Salinan Kalimat',
-      subStr: 'Contoh: jangan catat definisi, melainkan tulis "Apa perbedaan mitosis dan meiosis?"',
-      stat: 'KUIS MANDIRI',
-      statSub: 'AKTIF 100%',
-      col: K.PAL.chalkBlue,
-      a: pop(t, C.kartu.start),
-    });
-    K.lectureCard(ctx, 540, 1210, 960, 175, {
-      tag: 'KESIMPULAN PROFESOR KAPUR',
-      titleStr: '30 Menit Active Recall Mengalahkan 3 Jam Menstabilo Buku!',
-      subStr: 'Tutup bukumu sekarang dan buktikan seberapa banyak yang benar-benar kamu kuasai',
-      stat: '2x AMPUH',
-      statSub: 'ACTIVE RECALL',
-      col: K.PAL.chalkYellow,
-      a: pop(t, C.kartu.start + 0.5),
-    });
-  }
+  K.lectureCallout(ctx, 540, 1485, 960, 165, {
+    tag: callouts.tag,
+    title: callouts.title,
+    desc: callouts.desc,
+    stat: callouts.stat,
+    col: callouts.col,
+    a: pop(t, callouts.c ? callouts.c.start + 0.15 : 0),
+  });
 }
-
